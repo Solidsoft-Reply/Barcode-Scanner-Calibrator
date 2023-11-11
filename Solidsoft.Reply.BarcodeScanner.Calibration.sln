@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Calibration", "Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj", "{4B6A2608-1A71-4DF5-9F6A-3DA417C26EBE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.Parsers.Common", "..\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common.csproj", "{DA1FB5D4-001A-43AC-AAF0-EE6680199D21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solidsoft.Reply.BarcodeScanner.Calibration.Tests", "Solidsoft.Reply.BarcodeScanner.Calibration.Tests\Solidsoft.Reply.BarcodeScanner.Calibration.Tests.csproj", "{2182E129-562E-4F88-BB1D-82C91B9ED939}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B6A2608-1A71-4DF5-9F6A-3DA417C26EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6A2608-1A71-4DF5-9F6A-3DA417C26EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6A2608-1A71-4DF5-9F6A-3DA417C26EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6A2608-1A71-4DF5-9F6A-3DA417C26EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA1FB5D4-001A-43AC-AAF0-EE6680199D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1FB5D4-001A-43AC-AAF0-EE6680199D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1FB5D4-001A-43AC-AAF0-EE6680199D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1FB5D4-001A-43AC-AAF0-EE6680199D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2182E129-562E-4F88-BB1D-82C91B9ED939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2182E129-562E-4F88-BB1D-82C91B9ED939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2182E129-562E-4F88-BB1D-82C91B9ED939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2182E129-562E-4F88-BB1D-82C91B9ED939}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {620F3E78-3211-4980-8C1D-1AE6303F0F43}
+	EndGlobalSection
+EndGlobal

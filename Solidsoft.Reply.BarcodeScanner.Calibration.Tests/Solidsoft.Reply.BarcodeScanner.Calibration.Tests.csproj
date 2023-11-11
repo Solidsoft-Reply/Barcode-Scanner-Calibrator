@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>net7.0</TargetFramework>
+    <DebugType>Full</DebugType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dom3KeyboardEVentCodesPreprocessorTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="System.CodeDom" Version="7.0.0" />
+    <!--PackageReference Include="StyleCop.StyleCop" Version="2019.3.1" /-->
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
+  </ItemGroup>
+
+</Project>
