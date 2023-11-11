@@ -2,8 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	<LangVersion>11.0</LangVersion>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Title>Barcode Scanner Calibration Library</Title>
+	<Copyright>©2023 Solidsoft Reply</Copyright>
+	<Description>A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.</Description>
+	<Company>Solidsoft Reply Ltd.</Company>
+	<Authors>cnayoung</Authors>
+	<RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.BarcodeScanner.Calibration</RepositoryUrl>
+	<PackageProjectUrl>https://www.reply.com/solidsoft-reply/en/</PackageProjectUrl>
+	<PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
+	<PackageReleaseNotes>Initial release</PackageReleaseNotes>
+	<Version>1.0.0</Version>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,38 +28,52 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common.csproj" />
-  </ItemGroup>
-
- <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+	  <ProjectReference Include="..\..\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common\Solidsoft.Reply.Parsers.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+	  <Compile Update="Properties\Resources.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Compile Update="Properties\Advice.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Advice.resx</DependentUpon>
+	  </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <EmbeddedResource Update="Properties\Advice.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>Advice.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
   </ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Properties\Advice.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Advice.resx</DependentUpon>
-		</Compile>
+		<None Include="Solidsoft Reply - LOGO Square_small.jpg">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Update="Properties\Advice.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Advice.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-
 
 </Project>
