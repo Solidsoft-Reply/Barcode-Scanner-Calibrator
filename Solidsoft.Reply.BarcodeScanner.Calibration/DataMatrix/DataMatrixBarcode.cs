@@ -193,6 +193,12 @@ public class DataMatrixBarcode : IDisposable
 
             var (modulesX, modulesY) = CalculateDataMatrixModuleSize(barcodeData);
 
+            // Workaround for issues with zXing
+            if (modulesY != modulesX)
+            {
+                modulesX = modulesY = Convert.ToInt32((modulesY > modulesX ? modulesY : modulesX) * 0.85);
+            }
+
             // Create a Data Matrix barcode writer
             var barcodeWriter = new BarcodeWriterPixelData
             {
