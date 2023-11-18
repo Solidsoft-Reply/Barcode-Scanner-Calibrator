@@ -551,6 +551,10 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   A value indicating whether a Format 05 or 06 barcode may be unreadable due
     ///   to non-representation of ASCII 30 character.
     /// </param>
+    /// <param name="potentialIsoIec15434EdiUnreadable">
+    ///   A value indicating whether an EDI barcode may be unreadable due
+    ///   to non-representation of ASCII 28 or ASCII 31 characters.
+    /// </param>
     /// <param name="testSupportForFormat06">
     ///   A value indicating whether to test for Format 06 and Format 05 support.
     /// </param>

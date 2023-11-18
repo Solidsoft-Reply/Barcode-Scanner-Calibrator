@@ -5741,7 +5741,7 @@ public partial class Calibrator {
                                             CalibrationInformationType
                                                 .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}") // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                         // EDI data cannot be reliably read.
                                     };
                             }

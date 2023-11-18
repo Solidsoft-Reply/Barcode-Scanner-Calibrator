@@ -39,7 +39,7 @@ internal static class Extensions {
     }
 
     /// <summary>
-    ///   Maps from one Nullable<T> to another. This operation creates a functor over nullable structs.
+    ///   Maps from one Nullable&lt;T&gt; to another. This operation creates a functor over nullable structs.
     /// </summary>
     /// <typeparam name="TSource">The non-nullable source type.</typeparam>
     /// <typeparam name="TResult">The non-nullable resulting type.</typeparam>
