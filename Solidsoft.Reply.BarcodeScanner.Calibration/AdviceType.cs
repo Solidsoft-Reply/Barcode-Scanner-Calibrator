@@ -37,7 +37,7 @@ public enum AdviceType
     /// <p>The test failed.</p>
     /// <p>You may have scanned a wrong barcode. Try again, making sure you scan the correct barcode(s).</p>
     /// </summary>
-    TestsFailed = 300,
+    TestFailed = 300,
 
     /// <summary>
     /// <p>No data was reported for the barcode.</p>
@@ -97,17 +97,19 @@ public enum AdviceType
 
     /// <summary>
     /// <p>Your barcode scanner and computer keyboard layouts are different.</p>
-    /// <p>Your software may be able to compensate, but cannot read ANSI MH 10.8.2 barcodes reliably. If necessary,
-    ///   configure your barcode scanner to match your computer keyboard layout or emulate a numeric keypad.</p>
+    /// <p>Your software may be able to compensate. However, your system cannot read characters correctly
+    /// for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for
+    /// this by analysing key codes rather than characters.</p>
     /// </summary>
-    LayoutsDoNotMatchForGs1Only = 315,
+    LayoutsDoNotMatchNoFormat0506 = 315,
 
     /// <summary>
     /// <p>Hidden characters in barcodes are not reported correctly.</p>
-    /// <p>Your software may be able to compensate, but cannot read ANSI MH 10.8.2 barcodes reliably.
-    ///   If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
+    /// <p>Your software may be able to compensate. However, your system cannot read barcode characters
+    /// correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to
+    /// compensate for this by analysing key codes rather than characters.</p>
     /// </summary>
-    HiddenCharactersNotRepresentedCorrectlyForGs1Only = 316,
+    HiddenCharactersNotReportedCorrectlyNoFormat0506 = 316,
 
     /// <summary>
     /// <p>Your system cannot read barcode characters reliably.</p>
@@ -248,31 +250,31 @@ public enum AdviceType
     CannotReadAim = 235,
 
     /// <summary>
-    /// <p>Your system may not be able to read ANSI MH 10.8.2 barcodes reliably.</p>
-    /// <p>If you experience problems when scanning barcodes that contain ANSI MH 10.8.2 Data Identifiers,
+    /// <p>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</p>
+    /// <p>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data,
     /// enter data manually into your software. If necessary, configure your barcode scanner to emulate a
     /// numeric keypad.</p>
     /// </summary>
-    MayNotReadAnsiMh1082 = 240,
+    MayNotReadFormat0506 = 240,
 
     /// <summary>
-    /// <p>Your system cannot read ANSI MH 10.8.2 barcodes reliably.</p>
-    /// <p>Enter data manually into your software for ANSI MH 10.8.2 Data Identifiers. If necessary,
-    /// configure your barcode scanner to emulate a numeric keypad.</p>
+    /// <p>Your system cannot read Format 05 or Format 06 barcodes reliably.</p>
+    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. 
+    /// If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
-    MayNotReadAnsiMh1082NoCalibration = 241,
+    MayNotReadFormat0506NoCalibration = 241,
 
     /// <summary>
-    /// <p>Your system cannot read ANSI MH 10.8.2 barcodes reliably.</p>
-    /// <p>Enter data manually into your software for ANSI MH 10.8.2 Data Identifiers. If necessary,
-    /// configure your barcode scanner to emulate a numeric keypad.</p>
+    /// <p>Your system cannot read Format 05 or Format 06 barcodes reliably.</p>
+    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. 
+    /// If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     CannotReadAnsiMh1082Reliably = 245,
 
     /// <summary>
-    /// <p>You did not test compatibility for ANSI MH 10.8.2 barcodes.</p>
-    /// <p>If you expect to scan barcodes that contain ANSI MH 10.8.2 Data Identifiers, run the test
-    /// again, this time including the ANSI MH 10.8.2 compatibility test.</p>
+    /// <p>You did not test compatibility for compatibility with ISO/IEC 15434.</p>
+    /// <p>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, 
+    /// run the test again, this time including the ISO/IEC 15434 data compatibility test.</p>
     /// </summary>
     Gs1OnlyTest = 250,
 
@@ -307,7 +309,7 @@ public enum AdviceType
     MayNotReadNonInvariantCharactersNoCalibration = 261,
 
     /// <summary>
-    /// <p>Your system may not read barcodes reliably if they contain ANSI MH 10.8.2 Data Identifiers.</p>
+    /// <p>Your system cannot read non-invariant characters reliably.</p>
     /// <p>Some barcodes may contain non-invariant characters.</p>
     /// <p>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to
     /// emulate a numeric keypad.</p>
@@ -315,31 +317,58 @@ public enum AdviceType
     CannotReadNonInvariantCharacters = 265,
 
     /// <summary>
-    /// <p>Your system reads invariant characters reliably.</p>
+    /// <p>Your system cannot read EDI data reliably.</p>
+    /// <p>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
+    ///   emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadEdiCharactersReliably = 270,
+
+    /// <summary>
+    /// <p>Your system may not read EDI characters reliably.</p>
+    /// <p>Some barcodes may contain EDI characters.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner
+    ///   to emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadEdiCharactersNoCalibration = 271,
+
+    /// <summary>
+    /// <p>Your system cannot read EDI characters reliably.</p>
+    /// <p>Some barcodes may contain EDI data.</p>
+    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
+    /// emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadEdiCharacters = 275,
+
+    /// <summary>
+    /// <p>Your system reads most barcodes reliably.</p>
     /// </summary>
     ReadsInvariantCharactersReliably = 100,
 
     /// <summary>
-    /// <p>Your system reads invariant characters reliably.</p>
-    /// <p>However, you did not test compatibility for barcodes that contain non-invariant characters. Your
-    /// system may not be able to read barcodes reliably if they contain non-invariant characters. </p>
-    /// <p>You may need to enter data manually into your software for barcodes that contain non-invariant
-    /// characters.</p>
+    /// <p>Your system reads most barcodes reliably.</p>
+    /// <p>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read
+    /// barcodes reliably if they contain data formatted according to ISO/IEC 15434.</p>
+    /// <p>You may need to enter data manually into your software for barcodes that contain data formatted
+    /// according to ISO/IEC 15434 characters.</p>
     /// </summary>
-    ReadsInvariantCharactersReliablyForGs1OnlyTest = 105,
+    ReadsInvariantCharactersReliablyNoFormatnnTest = 105,
 
     /// <summary>
-    /// <p>Your system reads most barcodes reliably.</p>
-    /// <p>However, if you experience problems when scanning barcodes that contain ANSI MH 10.8.2 Data Identifiers,
-    /// enter data manually into your software. If necessary, configure your barcode scanner to emulate a
-    /// numeric keypad.</p>
+    /// <p>Your system reads GS1 barcodes reliably.</p>
+    /// <p>However, your verification software may not read barcodes reliably if the contain data formatted
+    /// according to ISO/IEC 15434.</p>
+    /// <p>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter
+    /// data manually into your software. If necessary, configure your barcode scanner to emulate a numeric
+    /// keypad.</p>
     /// </summary>
-    ReadsInvariantCharactersReliablyMayNotReadAnsiMh1082 = 110,
+    ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably = 110,
 
     /// <summary>
-    /// <p>Your system reads most barcodes reliably.</p>
-    /// <p>However, enter data manually into your software for barcodes that contain ANSI MH 10.8.2 Data Identifiers.
-    /// If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
+    /// <p>Your system reads GS1 barcodes reliably.</p>
+    /// <p>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</p>
+    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If
+    /// necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
-    ReadsInvariantCharactersReliablyExceptAnsiMh1082 = 115
+    ReadsInvariantCharactersReliablyExceptFormat0506 = 115
 }

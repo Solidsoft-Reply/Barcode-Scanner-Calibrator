@@ -70,7 +70,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You may need to enter data manually into your software for barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters..
         /// </summary>
         internal static string Advice_105 {
             get {
@@ -79,7 +79,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, if you experience problems when scanning barcodes that contain ANSI MH 10.8.2 Data Identifiers, enter data manually into your software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         internal static string Advice_110 {
             get {
@@ -88,7 +88,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, enter data manually into your software for barcodes that contain ANSI MH 10.8.2 Data Identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         internal static string Advice_115 {
             get {
@@ -196,7 +196,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you experience problems when scanning barcodes that contain non-invariant characters, enter data manually into your software.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         internal static string Advice_240 {
             get {
@@ -205,7 +205,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter data manually into your software for non-invariant characters.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         internal static string Advice_241 {
             get {
@@ -214,7 +214,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter data manually into your software for non-invariant characters.;;If necessary, configure your barcode scanner to emulate a numeric keypad..
+        ///   Looks up a localized string similar to Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad..
         /// </summary>
         internal static string Advice_245 {
             get {
@@ -223,7 +223,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you expect to scan barcodes that contain non-invariant characters, run the test again, this time including the non-invariant character compatibility test..
+        ///   Looks up a localized string similar to If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test..
         /// </summary>
         internal static string Advice_250 {
             get {
@@ -273,6 +273,33 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Advice_265 {
             get {
                 return ResourceManager.GetString("Advice_265", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_270 {
+            get {
+                return ResourceManager.GetString("Advice_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_271 {
+            get {
+                return ResourceManager.GetString("Advice_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_275 {
+            get {
+                return ResourceManager.GetString("Advice_275", resourceCulture);
             }
         }
         
@@ -466,7 +493,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system reads invariant characters reliably..
+        ///   Looks up a localized string similar to Your system reads most barcodes reliably..
         /// </summary>
         internal static string Condition_100 {
             get {
@@ -475,7 +502,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system reads invariant characters reliably..
+        ///   Looks up a localized string similar to Your system reads most barcodes reliably..
         /// </summary>
         internal static string Condition_105 {
             get {
@@ -484,7 +511,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system reads most barcodes reliably..
+        ///   Looks up a localized string similar to Your system reads GS1 barcodes reliably..
         /// </summary>
         internal static string Condition_110 {
             get {
@@ -493,7 +520,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system reads most barcodes reliably..
+        ///   Looks up a localized string similar to Your system reads GS1 barcodes reliably..
         /// </summary>
         internal static string Condition_115 {
             get {
@@ -592,7 +619,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read AIM identifier characters reliably..
+        ///   Looks up a localized string similar to Your system cannot read the barcode type identifier..
         /// </summary>
         internal static string Condition_235 {
             get {
@@ -601,7 +628,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read characters reliably for barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to Your system may not be able to read Format 05 or Format 06 barcodes reliably..
         /// </summary>
         internal static string Condition_240 {
             get {
@@ -610,7 +637,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read characters for barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to Your system cannot read Format 05 or Format 06 barcodes reliably..
         /// </summary>
         internal static string Condition_241 {
             get {
@@ -619,7 +646,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read characters for barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to Your system cannot read Format 05 or Format 06 barcodes reliably..
         /// </summary>
         internal static string Condition_245 {
             get {
@@ -628,7 +655,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You did not test compatibility for barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to You did not test compatibility for compatibility with ISO/IEC 15434..
         /// </summary>
         internal static string Condition_250 {
             get {
@@ -664,7 +691,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes that contain non-invariant characters..
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain non-invariant characters..
         /// </summary>
         internal static string Condition_261 {
             get {
@@ -673,11 +700,38 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system may not read barcodes reliably if they contain non-invariant characters..
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain non-invariant characters..
         /// </summary>
         internal static string Condition_265 {
             get {
                 return ResourceManager.GetString("Condition_265", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_270 {
+            get {
+                return ResourceManager.GetString("Condition_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_271 {
+            get {
+                return ResourceManager.GetString("Condition_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain EDI data..
+        /// </summary>
+        internal static string Condition_275 {
+            get {
+                return ResourceManager.GetString("Condition_275", resourceCulture);
             }
         }
         
@@ -871,7 +925,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, you did not test compatibility for barcodes that contain non-invariant characters. Your system may not be able to read barcodes reliably if they contain non-invariant characters. .
+        ///   Looks up a localized string similar to However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434..
         /// </summary>
         internal static string Description_105 {
             get {
@@ -880,7 +934,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, your software may not read barcodes that contain non-invariant characters correctly..
+        ///   Looks up a localized string similar to However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434..
         /// </summary>
         internal static string Description_110 {
             get {
@@ -889,7 +943,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, it cannot read barcodes reliably if they contain non-invariant characters..
+        ///   Looks up a localized string similar to However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434..
         /// </summary>
         internal static string Description_115 {
             get {
@@ -1060,6 +1114,33 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably..
+        /// </summary>
+        internal static string Description_270 {
+            get {
+                return ResourceManager.GetString("Description_270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data..
+        /// </summary>
+        internal static string Description_271 {
+            get {
+                return ResourceManager.GetString("Description_271", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcodes may contain EDI data..
+        /// </summary>
+        internal static string Description_275 {
+            get {
+                return ResourceManager.GetString("Description_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred..
         /// </summary>
         internal static string Description_300 {
@@ -1105,7 +1186,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain non-invariant characters. Some software may be able to compensate for this by analysing key codes rather than characters..
+        ///   Looks up a localized string similar to Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
         internal static string Description_315 {
             get {
@@ -1114,7 +1195,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain non-invariant characters. Some software may be able to compensate for this by analysing key codes rather than characters..
+        ///   Looks up a localized string similar to Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters..
         /// </summary>
         internal static string Description_316 {
             get {

@@ -68,7 +68,7 @@ public enum CalibrationInformationType
     /// <summary>
     ///   INFORMATION: EDI separator characters are supported.
     /// </summary>
-    EdiSeparatorSupported = 162,
+    EdiSeparatorsSupported = 162,
 
     /// <summary>
     ///   INFORMATION: The barcode scanner may be configured to compensate for Caps Lock.
@@ -237,7 +237,7 @@ public enum CalibrationInformationType
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsEdiSeparator = 265,
+    NonCorrespondingKeyboardLayoutsEdiSeparators = 265,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.

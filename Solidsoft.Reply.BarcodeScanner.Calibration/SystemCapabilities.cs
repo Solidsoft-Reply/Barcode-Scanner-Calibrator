@@ -109,7 +109,7 @@ using Properties;
 ///   sufficient information in those messages to explicitly record an ASCII 30 without the need
 ///   for character-mapping.
 /// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentEdiSeparator">
+/// <param name="KeyboardLayoutsCanRepresentEdiSeparators">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   EDI separator control characters without mapping.
 /// </param>
@@ -143,6 +143,10 @@ using Properties;
 /// <param name="CanReadFormat05AndFormat06Reliably">
 ///   Gets a value indicating whether the calibrated system can read Format 05 and
 ///   Format 06 barcodes reliably, using a mapping if necessary.
+/// </param>
+/// <param name="CanReadEdiReliably">
+///   Gets a value indicating whether the calibrated system can read EDI barcode data
+///   formatted in accordance with ISO/IEC 15434 reliably, using a mapping if necessary.
 /// </param>
 /// <remarks>
 /// <p></p>
@@ -269,7 +273,7 @@ public sealed record SystemCapabilities (
     bool? KeyboardLayoutsCanRepresentRecordSeparator = true,
 
     [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 9)]
-    bool? KeyboardLayoutsCanRepresentEdiSeparator = true,
+    bool? KeyboardLayoutsCanRepresentEdiSeparators = true,
 
     [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 10)]
     bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
@@ -280,97 +284,100 @@ public sealed record SystemCapabilities (
     [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 12)]
     bool? CanReadFormat05AndFormat06Reliably = true,
 
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 13)]
+    [property: JsonProperty("canReadEdiReliably", Order = 13)]
+    bool? CanReadEdiReliably = true,
+
+    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 14)]
     bool? CanReadGroupSeparatorReliably = true,
 
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 14)]
+    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 15)]
     bool? CanReadRecordSeparatorReliably = true,
 
-    [property: JsonProperty("canReadEdiSeparatorsReliably", Order = 15)]
+    [property: JsonProperty("canReadEdiSeparatorsReliably", Order = 16)]
     bool? CanReadEdiSeparatorsReliably = true,
 
-    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 16)]
+    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 17)]
     bool? CanReadAimIdentifiersReliably = true,
 
-    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 17)]
+    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 18)]
     bool? CanReadAdditionalAsciiCharactersReliably = true,
 
-    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 18)]
+    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 19)]
     bool? ScannerTransmitsAimIdentifiers = true,
 
-    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 19)]
+    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 20)]
     bool? ScannerTransmitsEndOfLineSequence = true,
 
-    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 20)]
+    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 21)]
     bool ScannerTransmitsAdditionalPrefix = false,
 
-    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 21)]
+    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 22)]
     bool ScannerTransmitsAdditionalCode = false,
 
-    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 22)]
+    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 23)]
     bool ScannerTransmitsAdditionalSuffix = false,
 
-    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 23)]
+    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 24)]
     bool? ScannerMayConvertToUpperCase = null,
 
-    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 24)]
+    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 25)]
     bool? ScannerMayConvertToLowerCase = null,
 
-    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 25)]
+    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 26)]
     bool? KeyboardScriptDoesNotSupportCase = null,
 
-    [property: JsonProperty("capsLockIndicator", Order = 26)]
+    [property: JsonProperty("capsLockIndicator", Order = 27)]
     bool CapsLockIndicator = false,
 
-    [property: JsonProperty("scannerKeyboardPerformance", Order = 27)]
+    [property: JsonProperty("scannerKeyboardPerformance", Order = 28)]
     ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
 
-    [property: JsonProperty("formatnnSupportAssessed", Order = 28)]
+    [property: JsonProperty("formatnnSupportAssessed", Order = 29)]
     bool FormatnnSupportAssessed = false,
 
-    [property: JsonProperty("aimIdentifier", Order = 29)]
+    [property: JsonProperty("aimIdentifier", Order = 30)]
     string? AimIdentifier = null,
 
-    [property: JsonProperty("aimIdentifierUncertain", Order = 30)]
+    [property: JsonProperty("aimIdentifierUncertain", Order = 31)]
     bool AimIdentifierUncertain = false,
 
-    [property: JsonProperty("endOfLineSequence", Order = 31)]
+    [property: JsonProperty("endOfLineSequence", Order = 32)]
     string? EndOfLineSequence = null,
 
-    [property: JsonProperty("additionalPrefix", Order = 32)]
+    [property: JsonProperty("additionalPrefix", Order = 33)]
     string AdditionalPrefix = "",
 
-    [property: JsonProperty("additionalCode", Order = 33)]
+    [property: JsonProperty("additionalCode", Order = 34)]
     string AdditionalCode = "",
 
-    [property: JsonProperty("additionalSuffix", Order = 34)]
+    [property: JsonProperty("additionalSuffix", Order = 35)]
     string AdditionalSuffix = "",
 
-    [property: JsonProperty("keyboardScript", Order = 35)]
+    [property: JsonProperty("keyboardScript", Order = 36)]
     string KeyboardScript = "",
 
-    [property: JsonProperty("platform", Order = 36)]
+    [property: JsonProperty("platform", Order = 37)]
     SupportedPlatform Platform = SupportedPlatform.Windows,
 
-    [property: JsonProperty("deadKeys", Order = 37)]
+    [property: JsonProperty("deadKeys", Order = 38)]
     bool DeadKeys = false,
 
-    [property: JsonProperty("characterMappings", Order = 38)]
+    [property: JsonProperty("characterMappings", Order = 39)]
     IList<CalibrationCharacterMapping>? CharacterMappings = null,
 
-    [property: JsonProperty("deadKeyMappings", Order = 39)]
+    [property: JsonProperty("deadKeyMappings", Order = 40)]
     IList<CalibrationDeadKeyMapping>? DeadKeyMappings = null,
 
-    [property: JsonProperty("ambiguities", Order = 40)]
+    [property: JsonProperty("ambiguities", Order = 41)]
     IList<CalibrationAmbiguity>? Ambiguities = null,
 
-    [property: JsonProperty("unrecognisedCharacters", Order = 41)]
+    [property: JsonProperty("unrecognisedCharacters", Order = 42)]
     IList<CalibrationUnrecognisedCharacter>? UnrecognisedCharacters = null,
 
-    [property: JsonProperty("ligatureMappings", Order = 42)]
+    [property: JsonProperty("ligatureMappings", Order = 43)]
     IList<CalibrationLigatureMapping>? LigatureMappings = null,
 
-    [property: JsonProperty("calibrationAssumption", Order = 43)]
+    [property: JsonProperty("calibrationAssumption", Order = 44)]
     CalibrationAssumption CalibrationAssumption = CalibrationAssumption.Agnostic)
      
 : CalibrationBaseRecord {
@@ -436,7 +443,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.RecordSeparatorSupported:
                     CanReadRecordSeparatorReliably = true;
                     break;
-                case CalibrationInformationType.EdiSeparatorSupported:
+                case CalibrationInformationType.EdiSeparatorsSupported:
                     CanReadEdiSeparatorsReliably = true;
                     break;
                 case CalibrationInformationType.ScannerMayCompensateForCapsLock:
@@ -485,7 +492,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparator:
+                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence:
                 case CalibrationInformationType.CapsLockOn:
@@ -540,9 +547,11 @@ public sealed record SystemCapabilities (
                     CanReadAdditionalAsciiCharactersReliably = false;
                     break;
                 case CalibrationInformationType.IsoIec15434SyntaxNotRecognised:
-                case CalibrationInformationType.IsoIec15434EdiNotReliablyReadable:
                 case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
                     CanReadFormat05AndFormat06Reliably = false;
+                    break;
+                case CalibrationInformationType.IsoIec15434EdiNotReliablyReadable:
+                    CanReadEdiReliably = false;
                     break;
                 case CalibrationInformationType.AimNotTransmitted:
                     ScannerTransmitsAimIdentifiers = false;
@@ -588,8 +597,8 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCanRepresentRecordSeparator = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparator:
-                    KeyboardLayoutsCanRepresentEdiSeparator = false;
+                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
+                    KeyboardLayoutsCanRepresentEdiSeparators = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
@@ -615,7 +624,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.EndOfLineTransmitted:
                 case CalibrationInformationType.GroupSeparatorSupported:
                 case CalibrationInformationType.RecordSeparatorSupported:
-                case CalibrationInformationType.EdiSeparatorSupported:
+                case CalibrationInformationType.EdiSeparatorsSupported:
                 case CalibrationInformationType.ScannerMayCompensateForCapsLock:
                 case CalibrationInformationType.KeyboardScript:
                 case CalibrationInformationType.Platform:
@@ -664,6 +673,7 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
+                    CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
                 case CalibrationInformationType.IncorrectCalibrationDataReported:
@@ -673,6 +683,7 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
+                    CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
                 case CalibrationInformationType.NoCalibrationDataReported:
@@ -683,6 +694,7 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
+                    CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     ScannerTransmitsAdditionalPrefix = false;
                     ScannerTransmitsAdditionalSuffix = false;
@@ -704,6 +716,7 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
+                    CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     ScannerTransmitsAdditionalPrefix = false;
                     ScannerTransmitsAdditionalSuffix = false;
@@ -731,6 +744,7 @@ public sealed record SystemCapabilities (
                     KeyboardLayoutsCorrespondForInvariants = false;
                     CanReadInvariantsReliably = false;
                     CanReadFormat05AndFormat06Reliably = false;
+                    CanReadEdiReliably = false;
                     break;
                 case CalibrationInformationType.None:
                 case CalibrationInformationType.AimSupported:
@@ -739,7 +753,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.EndOfLineTransmitted:
                 case CalibrationInformationType.GroupSeparatorSupported:
                 case CalibrationInformationType.RecordSeparatorSupported:
-                case CalibrationInformationType.EdiSeparatorSupported:
+                case CalibrationInformationType.EdiSeparatorsSupported:
                 case CalibrationInformationType.ScannerMayCompensateForCapsLock:
                 case CalibrationInformationType.KeyboardScript:
                 case CalibrationInformationType.Platform:
@@ -767,7 +781,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparator:
+                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
                 case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence:
                 case CalibrationInformationType.CapsLockOn:

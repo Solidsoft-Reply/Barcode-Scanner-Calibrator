@@ -580,9 +580,9 @@ public partial class Calibrator {
     }
 
     /// <summary>
-    ///   Gets or sets a value indicating whether to assess Format 06 and Format 05 support.
+    ///   Gets or sets a value indicating whether to assess Format nn support.
     /// </summary>
-    public bool AssessFormat06Support {
+    public bool AssessFormatnnSupport {
         // ReSharper disable once UnusedMember.Global
         get;
         set;
@@ -604,7 +604,7 @@ public partial class Calibrator {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
         // non-invariant printable characters and additional ASCII control characters.
         var barcodeDataEx = _baselineBarcodeData
-                          + (AssessFormat06Support
+                          + (AssessFormatnnSupport
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                  : SegmentDelimiter);
 
@@ -646,7 +646,7 @@ public partial class Calibrator {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
         // non-invariant printable characters and additional ASCII control characters.
         var barcodeDataEx = _baselineBarcodeData
-                          + (AssessFormat06Support
+                          + (AssessFormatnnSupport
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                  : SegmentDelimiter);
 
@@ -834,7 +834,7 @@ public partial class Calibrator {
             _calibrationAssumption,
             capsLock,
             _tokenExtendedDataScannerKeyboardPerformance,
-            AssessFormat06Support,
+            AssessFormatnnSupport,
             _tokenExtendedDataDeadKeyCharacterMap.Count > 0,
             _tokenExtendedDataCharacterMap,
             _tokenExtendedDataDeadKeyCharacterMap,
@@ -1252,7 +1252,7 @@ public partial class Calibrator {
             // Yield the initial baseline barcode containing segments of character sequences for invariant characters,
             // non-invariant printable characters and additional ASCII control characters.
             _tokenDataBarcodeData = _baselineBarcodeData
-                                        + (AssessFormat06Support
+                                        + (AssessFormatnnSupport
                                             ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                             : SegmentDelimiter);
             _tokenDataCalibrationsRemaining = 1;
@@ -1438,7 +1438,7 @@ public partial class Calibrator {
             // Return the initial baseline barcode containing segments of character sequences for invariant characters,
             // non-invariant printable characters and additional ASCII control characters.
             _tokenDataBarcodeData = _baselineBarcodeData
-                                      + (AssessFormat06Support
+                                      + (AssessFormatnnSupport
                                              ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                              : SegmentDelimiter);
             _tokenDataCalibrationsRemaining = 1;
@@ -2354,7 +2354,7 @@ public partial class Calibrator {
                            };
 
         // If we did not include tests for Format 06, then we need to insert some empty entries between the suffix and the rest of the data.
-        if (!AssessFormat06Support) {
+        if (!AssessFormatnnSupport) {
             var adjustedSegments = new string[segments.Count + 3];
             var toAscii28 = segments.Count - 1;
             segments.ToArray()[..toAscii28].CopyTo(adjustedSegments, 0);
@@ -4789,7 +4789,7 @@ public partial class Calibrator {
             _tokenExtendedDataDeadKeyFixUp = new Dictionary<string, string>();
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = default;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = default;
-            AssessFormat06Support = true;
+            AssessFormatnnSupport = true;
             _tokenExtendedDataUnrecognisedKeys = new List<char>();
         }
         else {
@@ -4813,7 +4813,7 @@ public partial class Calibrator {
             _tokenExtendedDataDeadKeyFixUp = token.ExtendedData.DeadKeyFixUp;
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = token.ExtendedData.PotentialIsoIec15434Unreadable;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = token.ExtendedData.PotentialIsoIec15434EdiUnreadable;
-            AssessFormat06Support = token.ExtendedData.AssessFormat06Support;
+            AssessFormatnnSupport = token.ExtendedData.AssessFormat06Support;
             _tokenExtendedDataUnrecognisedKeys = token.ExtendedData.UnrecognisedKeys;
         }
 
@@ -4870,7 +4870,7 @@ public partial class Calibrator {
             _tokenExtendedDataReportedCharacters ?? string.Empty,
             _tokenExtendedDataPotentialIsoIec15434Unreadable30,
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadable,
-            AssessFormat06Support,
+            AssessFormatnnSupport,
             _tokenExtendedDataNonInvariantAmbiguities,
             _tokenExtendedDataInvariantGs1Ambiguities,
             _tokenExtendedDataNonInvariantUnrecognisedCharacters,
@@ -5775,7 +5775,7 @@ public partial class Calibrator {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
                 4 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparator),
+                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
                 5 => LogCalibrationInformation(
                     calibrationToken,
@@ -5783,7 +5783,7 @@ public partial class Calibrator {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
                 6 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparator),
+                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
                 _ => calibrationToken
             };
         }
@@ -5797,7 +5797,7 @@ public partial class Calibrator {
                 // Information: EDI separator characters are supported.
                 4 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.EdiSeparatorSupported),
+                    CalibrationInformationType.EdiSeparatorsSupported),
                 // Information: Record Separator characters are supported.
                 5 => LogCalibrationInformation(
                     calibrationToken,
@@ -5805,7 +5805,7 @@ public partial class Calibrator {
                 // Information: EDI separator characters are supported.
                 6 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.EdiSeparatorSupported),
+                    CalibrationInformationType.EdiSeparatorsSupported),
                 _ => calibrationToken
             };
         }

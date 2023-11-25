@@ -119,14 +119,14 @@ public class StatelessCalibrator
     public SystemCapabilities? SystemCapabilities(bool? capsLock = null) => _calibrator.SystemCapabilities(capsLock);
 
     /// <summary>
-    ///   Gets or sets a value indicating whether to assess Format 06 and Format 05 support.
+    ///   Gets or sets a value indicating whether to assess Format nn support.
     /// </summary>
-    public bool AssessFormat06Support
+    public bool AssessFormatnnSupport
     {
         // ReSharper disable once UnusedMember.Global
-        get => _calibrator.AssessFormat06Support;
+        get => _calibrator.AssessFormatnnSupport;
 
-        set => _calibrator.AssessFormat06Support = value;
+        set => _calibrator.AssessFormatnnSupport = value;
     }
 
     /// <summary>

@@ -29,12 +29,12 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Solidsoft.Reply.BarcodeScanner.Calibration.ProcessFlow;
 
 /// <summary>
 ///   Represents an individual item of advice for a given condition.
 /// </summary>
-public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
-{
+public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType> {
     /// <summary>
     ///   Initializes a new instance of the <see cref="AdviceItem"/> class;
     /// </summary>

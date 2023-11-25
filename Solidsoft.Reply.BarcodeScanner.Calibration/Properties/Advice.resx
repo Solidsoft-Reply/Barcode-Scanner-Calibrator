@@ -122,15 +122,15 @@
     <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain non-invariant characters.</value>
+    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
     <comment>Low</comment>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>However, if you experience problems when scanning barcodes that contain ANSI MH 10.8.2 Data Identifiers, enter data manually into your software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>However, enter data manually into your software for barcodes that contain ANSI MH 10.8.2 Data Identifiers.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>Medium</comment>
   </data>
   <data name="Advice_200" xml:space="preserve">
@@ -178,19 +178,19 @@
     <comment>High</comment>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain non-invariant characters, enter data manually into your software.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for non-invariant characters.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for non-invariant characters.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
+    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain non-invariant characters, run the test again, this time including the non-invariant character compatibility test.</value>
+    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_255" xml:space="preserve">
@@ -211,6 +211,18 @@
   </data>
   <data name="Advice_265" xml:space="preserve">
     <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_270" xml:space="preserve">
+    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_271" xml:space="preserve">
+    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_275" xml:space="preserve">
+    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_300" xml:space="preserve">
@@ -298,19 +310,19 @@
     <comment>High</comment>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads invariant characters reliably.</value>
+    <value>Your system reads most barcodes reliably.</value>
     <comment>Low</comment>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads invariant characters reliably.</value>
+    <value>Your system reads most barcodes reliably.</value>
     <comment>Low</comment>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
+    <value>Your system reads GS1 barcodes reliably.</value>
     <comment>Medium</comment>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
+    <value>Your system reads GS1 barcodes reliably.</value>
     <comment>Medium</comment>
   </data>
   <data name="Condition_200" xml:space="preserve">
@@ -354,23 +366,23 @@
     <comment>Medium</comment>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters reliably.</value>
+    <value>Your system cannot read the barcode type identifier.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system cannot read characters reliably for barcodes that contain non-invariant characters.</value>
+    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read characters for barcodes that contain non-invariant characters.</value>
+    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read characters for barcodes that contain non-invariant characters.</value>
+    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for barcodes that contain non-invariant characters.</value>
+    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_255" xml:space="preserve">
@@ -386,11 +398,23 @@
     <comment>High</comment>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes that contain non-invariant characters.</value>
+    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system may not read barcodes reliably if they contain non-invariant characters.</value>
+    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_270" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_271" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_275" xml:space="preserve">
+    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">
@@ -478,15 +502,15 @@
     <comment>High</comment>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility for barcodes that contain non-invariant characters. Your system may not be able to read barcodes reliably if they contain non-invariant characters. </value>
+    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
     <comment>Low</comment>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your software may not read barcodes that contain non-invariant characters correctly.</value>
+    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if they contain non-invariant characters.</value>
+    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_200" xml:space="preserve">
@@ -561,6 +585,18 @@
     <value>Some barcodes may contain non-invariant characters.</value>
     <comment>High</comment>
   </data>
+  <data name="Description_270" xml:space="preserve">
+    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_271" xml:space="preserve">
+    <value>Some barcodes may contain EDI data.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_275" xml:space="preserve">
+    <value>Some barcodes may contain EDI data.</value>
+    <comment>High</comment>
+  </data>
   <data name="Description_300" xml:space="preserve">
     <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
     <comment>Low</comment>
@@ -582,11 +618,11 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain non-invariant characters. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
+    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
     <comment>High</comment>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain non-invariant characters. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
+    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
     <comment>High</comment>
   </data>
   <data name="Description_320" xml:space="preserve">
