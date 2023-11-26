@@ -62,8 +62,9 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
         ScannerKeyboardPerformance = ScannerKeyboardPerformance.High ;
         AimFlagCharacterSequence = string.Empty;
         ReportedCharacters = string.Empty;
-        PotentialIsoIec15434Unreadable = false;
-        PotentialIsoIec15434EdiUnreadable = false;
+        PotentialIsoIec15434Unreadable30 = false;
+        PotentialIsoIec15434EdiUnreadableFs = false;
+        PotentialIsoIec15434EdiUnreadableUs = false;
         AssessFormat06Support = true;
         NonInvariantAmbiguities = new Dictionary<string, IList<string>>();
         InvariantGs1Ambiguities = new Dictionary<string, IList<string>>();
@@ -131,7 +132,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     /// <param name="reportedCharacters">
     ///   A regular expression for reported characters.
     /// </param>
-    /// <param name="potentialIsoIec15434Unreadable">
+    /// <param name="potentialIsoIec15434Unreadable30">
     ///   A value indicating whether an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 30.
     ///   character.
     /// </param>
@@ -177,8 +178,9 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
         ScannerKeyboardPerformance scannerKeyboardPerformance,
         string aimFlagCharacterSequence,
         string reportedCharacters,
-        bool potentialIsoIec15434Unreadable,
-        bool potentialIsoIec15434EdiUnreadable,
+        bool potentialIsoIec15434Unreadable30,
+        bool potentialIsoIec15434EdiUnreadableFs,
+        bool potentialIsoIec15434EdiUnreadableUs,
         bool assessFormat06Support,
         IDictionary<string, IList<string>> nonInvariantAmbiguities,
         IDictionary<string, IList<string>> invariantGs1Ambiguities,
@@ -203,8 +205,9 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
         ScannerKeyboardPerformance = scannerKeyboardPerformance;
         AimFlagCharacterSequence = aimFlagCharacterSequence;
         ReportedCharacters = reportedCharacters;
-        PotentialIsoIec15434Unreadable = potentialIsoIec15434Unreadable;
-        PotentialIsoIec15434EdiUnreadable = potentialIsoIec15434EdiUnreadable;
+        PotentialIsoIec15434Unreadable30 = potentialIsoIec15434Unreadable30;
+        PotentialIsoIec15434EdiUnreadableFs = potentialIsoIec15434EdiUnreadableFs;
+        PotentialIsoIec15434EdiUnreadableUs = potentialIsoIec15434EdiUnreadableUs;
         AssessFormat06Support = assessFormat06Support;
         NonInvariantAmbiguities = nonInvariantAmbiguities;
         InvariantGs1Ambiguities = invariantGs1Ambiguities;
@@ -338,43 +341,50 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     ///   character.
     /// </summary>
     [JsonProperty("potentialFormat06Unreadable30", Order = 18)]
-    public bool PotentialIsoIec15434Unreadable { get; private set; }
+    public bool PotentialIsoIec15434Unreadable30 { get; private set; }
 
     /// <summary>
-    ///   Gets a value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28 and/or ASCII 31.
+    ///   Gets a value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28.
     ///   character.
     /// </summary>
-    [JsonProperty("potentialIsoIec15434EdiUnreadable", Order = 19)]
-    public bool PotentialIsoIec15434EdiUnreadable { get; private set; }
+    [JsonProperty("potentialIsoIec15434EdiUnreadableFs", Order = 19)]
+    public bool PotentialIsoIec15434EdiUnreadableFs { get; private set; }
 
+    /// <summary>
+    ///   Gets a value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31.
+    ///   character.
+    /// </summary>
+    [JsonProperty("potentialIsoIec15434EdiUnreadableUs", Order = 20)]
+
+    public bool PotentialIsoIec15434EdiUnreadableUs { get; private set; }
     /// <summary>
     ///   Gets a value indicating whether to assess Format 06 and Format 05 support.
     /// </summary>
-    [JsonProperty("testSupportForFormat06", Order = 20)]
+    [JsonProperty("testSupportForFormat06", Order = 21)]
     public bool AssessFormat06Support { get; private set; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous non-invariant ASCII character sequences that map to a reported character.
     /// </summary>
-    [JsonProperty("nonInvariantAmbiguities", Order = 21)]
+    [JsonProperty("nonInvariantAmbiguities", Order = 22)]
     public IDictionary<string, IList<string>> NonInvariantAmbiguities { get; private set; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1Ambiguities", Order = 22)]
+    [JsonProperty("invariantGs1Ambiguities", Order = 23)]
     public IDictionary<string, IList<string>> InvariantGs1Ambiguities { get; private set; }
 
     /// <summary>
     ///   Gets a list of unrecognised non-invariant character sequences.
     /// </summary>
-    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 23)]
+    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 24)]
     public IList<string> NonInvariantUnrecognisedCharacters { get; private set; }
 
     /// <summary>
     ///   Gets a list of unrecognised invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 24)]
+    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 25)]
     public IList<string> InvariantGs1UnrecognisedCharacters { get; private set; }
 
     /// <summary>
@@ -417,8 +427,9 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
             calibrationTokenExtendedData.ScannerKeyboardPerformance,
             calibrationTokenExtendedData.AimFlagCharacterSequence,
             calibrationTokenExtendedData.ReportedCharacters,
-            calibrationTokenExtendedData.PotentialIsoIec15434Unreadable,
-            calibrationTokenExtendedData.PotentialIsoIec15434EdiUnreadable,
+            calibrationTokenExtendedData.PotentialIsoIec15434Unreadable30,
+            calibrationTokenExtendedData.PotentialIsoIec15434EdiUnreadableFs,
+            calibrationTokenExtendedData.PotentialIsoIec15434EdiUnreadableUs,
             calibrationTokenExtendedData.AssessFormat06Support,
             calibrationTokenExtendedData.NonInvariantAmbiguities,
             calibrationTokenExtendedData.InvariantGs1Ambiguities,
@@ -487,10 +498,11 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
                               AimFlagCharacterSequence,
                               other.AimFlagCharacterSequence,
                               StringComparison.Ordinal) &&
-                          PotentialIsoIec15434Unreadable.Equals(other.PotentialIsoIec15434Unreadable) &&
-                          PotentialIsoIec15434EdiUnreadable.Equals(other.PotentialIsoIec15434EdiUnreadable) &&
+                          PotentialIsoIec15434Unreadable30.Equals(other.PotentialIsoIec15434Unreadable30) &&
+                          PotentialIsoIec15434EdiUnreadableFs.Equals(other.PotentialIsoIec15434EdiUnreadableFs) &&
+                          PotentialIsoIec15434EdiUnreadableUs.Equals(other.PotentialIsoIec15434EdiUnreadableUs) &&
                           AssessFormat06Support.Equals(other.AssessFormat06Support)  &&
-                          PotentialIsoIec15434Unreadable.Equals(other.PotentialIsoIec15434Unreadable) &&
+                          PotentialIsoIec15434Unreadable30.Equals(other.PotentialIsoIec15434Unreadable30) &&
                           Equals(NonInvariantAmbiguities, other.NonInvariantAmbiguities) &&
                           Equals(InvariantGs1Ambiguities, other.InvariantGs1Ambiguities) &&
                           Equals(NonInvariantUnrecognisedCharacters, other.NonInvariantUnrecognisedCharacters) &&
@@ -533,8 +545,9 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
             KeyboardScript,
             ReportedCharacters,
             AimFlagCharacterSequence,
-            PotentialIsoIec15434Unreadable,
-            PotentialIsoIec15434EdiUnreadable,
+            PotentialIsoIec15434Unreadable30,
+            PotentialIsoIec15434EdiUnreadableFs,
+            PotentialIsoIec15434EdiUnreadableUs,
             AssessFormat06Support,
             NonInvariantAmbiguities,
             InvariantGs1Ambiguities,

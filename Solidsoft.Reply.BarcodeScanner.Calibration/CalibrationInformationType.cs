@@ -66,9 +66,14 @@ public enum CalibrationInformationType
     RecordSeparatorSupported = 161,
 
     /// <summary>
-    ///   INFORMATION: EDI separator characters are supported.
+    ///   INFORMATION: File separator characters are supported.
     /// </summary>
-    EdiSeparatorsSupported = 162,
+    FileSeparatorSupported = 162,
+
+    /// <summary>
+    ///   INFORMATION: Unit separator characters are supported.
+    /// </summary>
+    UnitSeparatorSupported = 163,
 
     /// <summary>
     ///   INFORMATION: The barcode scanner may be configured to compensate for Caps Lock.
@@ -280,6 +285,11 @@ public enum CalibrationInformationType
     SubOptimalScannerKeyboardPerformance = 280,
 
     /// <summary>
+    /// ERROR: A pre-processing reported a warning during calibration. {0}
+    /// </summary>
+    PreProcessorWarning= 299,
+
+    /// <summary>
     ///   ERROR: No calibration data was reported.
     /// </summary>
     NoCalibrationDataReported = 300,
@@ -395,5 +405,10 @@ public enum CalibrationInformationType
     /// <summary>
     ///   ERROR: Calibration failed. {0}
     /// </summary>
-    CalibrationFailed = 390
+    CalibrationFailed = 390,
+
+    /// <summary>
+    /// ERROR: Calibration failed due to a pre-processing error. {0}
+    /// </summary>
+    PreProcessorError = 399,
 }

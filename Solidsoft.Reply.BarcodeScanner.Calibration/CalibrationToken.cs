@@ -248,7 +248,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                                           oldToken.SystemCapabilities.CanReadEdiReliably,
                                           oldToken.SystemCapabilities.CanReadGroupSeparatorReliably,
                                           oldToken.SystemCapabilities.CanReadRecordSeparatorReliably,
-                                          oldToken.SystemCapabilities.CanReadEdiSeparatorsReliably,
+                                          oldToken.SystemCapabilities.CanReadFileSeparatorsReliably,
+                                          oldToken.SystemCapabilities.CanReadUnitSeparatorsReliably,
                                           oldToken.SystemCapabilities.CanReadAimIdentifiersReliably,
                                           oldToken.SystemCapabilities.CanReadAdditionalAsciiCharactersReliably,
                                           oldToken.SystemCapabilities.ScannerTransmitsAimIdentifiers,
@@ -306,8 +307,9 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                                       oldToken.ExtendedData?.ScannerKeyboardPerformance ?? ScannerKeyboardPerformance.High,
                                       oldToken.ExtendedData?.AimFlagCharacterSequence ?? string.Empty,
                                       oldToken.ExtendedData?.ReportedCharacters ?? string.Empty,
-                                      oldToken.ExtendedData?.PotentialIsoIec15434Unreadable ?? false,
-                                      oldToken.ExtendedData?.PotentialIsoIec15434EdiUnreadable ?? false,
+                                      oldToken.ExtendedData?.PotentialIsoIec15434Unreadable30 ?? false,
+                                      oldToken.ExtendedData?.PotentialIsoIec15434EdiUnreadableFs ?? false,
+                                      oldToken.ExtendedData?.PotentialIsoIec15434EdiUnreadableUs ?? false,
                                       oldToken.ExtendedData?.AssessFormat06Support ?? false,
                                       oldToken.ExtendedData?.NonInvariantAmbiguities ?? new Dictionary<string, IList<string>>(),
                                       oldToken.ExtendedData?.InvariantGs1Ambiguities ?? new Dictionary<string, IList<string>>(),
@@ -552,9 +554,13 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   A value indicating whether a Format 05 or 06 barcode may be unreadable due
     ///   to non-representation of ASCII 30 character.
     /// </param>
-    /// <param name="potentialIsoIec15434EdiUnreadable">
+    /// <param name="potentialIsoIec15434EdiUnreadableFs">
     ///   A value indicating whether an EDI barcode may be unreadable due
-    ///   to non-representation of ASCII 28 or ASCII 31 characters.
+    ///   to non-representation of ASCII 28 characters.
+    /// </param>
+    /// <param name="potentialIsoIec15434EdiUnreadableUs">
+    ///   A value indicating whether an EDI barcode may be unreadable due
+    ///   to non-representation of ASCII 31 characters.
     /// </param>
     /// <param name="testSupportForFormat06">
     ///   A value indicating whether to test for Format 06 and Format 05 support.
@@ -594,7 +600,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         string aimFlagCharacterSequence,
         string reportedCharacters,
         bool potentialIsoIec15434Unreadable30,
-        bool potentialIsoIec15434EdiUnreadable,
+        bool potentialIsoIec15434EdiUnreadableFs,
+        bool potentialIsoIec15434EdiUnreadableUs,
         bool testSupportForFormat06,
         IDictionary<string, IList<string>> nonInvariantAmbiguities,
         IDictionary<string, IList<string>> invariantGs1Ambiguities,
@@ -621,7 +628,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             aimFlagCharacterSequence,
             reportedCharacters,
             potentialIsoIec15434Unreadable30,
-            potentialIsoIec15434EdiUnreadable,
+            potentialIsoIec15434EdiUnreadableFs,
+            potentialIsoIec15434EdiUnreadableUs,
             testSupportForFormat06,
             nonInvariantAmbiguities,
             invariantGs1Ambiguities,

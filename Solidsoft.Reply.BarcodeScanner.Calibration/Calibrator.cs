@@ -469,9 +469,14 @@ public partial class Calibrator {
     private bool _tokenExtendedDataPotentialIsoIec15434Unreadable30;
 
     /// <summary>
-    ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28 and/or ASCII 31 characters.
+    ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28 character.
     /// </summary>
-    private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadable;
+    private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs;
+
+    /// <summary>
+    ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31 character.
+    /// </summary>
+    private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs;
 
     private CalibrationToken _lastToken;
 
@@ -717,13 +722,20 @@ public partial class Calibrator {
                 })
             : data;
 
-        // Trace any barcode exceptions returned by a pre-processor.
         if (preprocessorExceptions is { Count: > 0 }) {
+
+            // Add list of preprocessor exceptions to token.
             foreach (var barcodeException in preprocessorExceptions) {
-                System.Diagnostics.Trace.WriteLine(barcodeException);
+                token.AddInformation(
+                    barcodeException.IsFatal 
+                        ? CalibrationInformationLevel.Error 
+                        : CalibrationInformationLevel.Warning, 
+                    barcodeException.IsFatal
+                        ? CalibrationInformationType.PreProcessorError
+                        : CalibrationInformationType.PreProcessorWarning,
+                    barcodeException.Message);
             }
 
-            // TODO: Add list of exceptions to token.
             _lastToken = token;
             return token;
         }
@@ -1798,7 +1810,8 @@ public partial class Calibrator {
     ///   submitting the data.
     /// </param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken CalibrateBaseLine(string data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default) {
+    private CalibrationToken CalibrateBaseLine(string data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default)
+    {
         // Resolve the data entry time span to a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
             < (double)ScannerKeyboardPerformance.Medium => ScannerKeyboardPerformance.High,
@@ -2588,6 +2601,7 @@ public partial class Calibrator {
             .Do(DetermineAnyIssuesForAsciiControlCharacters)
             .Do(CheckForAnyMissedAmbiguities)
             .Do(DetermineCompatibilityWithFormat05AndFormat06Barcodes)
+            .Do(DetermineCompatibilityWithFEdiBarcodes)
 
             .If(AmbiguousLigatureStringsWereDetected)
             .Then(LogTheAmbiguousLigatureCharacters)
@@ -2897,6 +2911,11 @@ public partial class Calibrator {
             () =>
                 new Lazy<CalibrationToken>(DoProcessForIsoIec15434MessageHeaderIncompatibility(localToken));
 
+        // Check for EDI incompatibility
+        Token DetermineCompatibilityWithFEdiBarcodes(CalibrationToken localToken) =>
+            () =>
+                new Lazy<CalibrationToken>(DoProcessForIsoIec15434EdiIncompatibility(localToken));
+
         Token LogTheAmbiguousLigatureCharacters(CalibrationToken localToken) =>
 
             // Error - Some reported characters are ambiguous. They can be reported individually
@@ -3155,6 +3174,13 @@ public partial class Calibrator {
                                     reportedCharacterSequence.ToControlPictures(),
                                     expectedCharacter[0].ToControlPictureString());
 
+                                // If ASCII 38 and/or ASCII 31 characters are not being emitted,
+                                // test if EDI barcodes can be read reliably. 
+                                token = DetermineIfEdiUnreadableWhenNoAscii28Or31(
+                                    token,
+                                    reportedCharacterSequence.ToControlPictures(),
+                                    expectedCharacter[0].ToControlPictureString());
+
                                 _tokenExtendedDataDeadKeysMap.Add(
                                     reportedCharacterSequence,
                                     token.Data?.Value + expectedCharacter);
@@ -3235,6 +3261,7 @@ public partial class Calibrator {
         CalibrationToken token,
         string reportedCharacterSequence,
         string expectedCharacter) {
+
         // If ASCII 30 characters are not being emitted, there may be a warning. 
         return _tokenExtendedDataPotentialIsoIec15434Unreadable30
 
@@ -3281,6 +3308,71 @@ public partial class Calibrator {
 
                 // If the reported sequence is \00 and the character map does not map a reported 0 to
                 // another character, then we can't disambiguate \00 from <RS>0 in the barcode which
+                // is also reported as \00.
+                : TestIfDeadKeySequence0NoMap();
+    }
+
+    /// <summary>
+    ///   Determine if EDI barcodes are unreadable when the scanner does not report an
+    /// ASCII 28 or an ASCII 31.
+    /// </summary>
+    /// <param name="token">The current calibration token.</param>
+    /// <param name="reportedCharacterSequence">A reported character sequence.</param>
+    /// <param name="expectedCharacter">The expected character.</param>
+    /// <returns>The calibration token.</returns>
+    private CalibrationToken DetermineIfEdiUnreadableWhenNoAscii28Or31(
+        CalibrationToken token,
+        string reportedCharacterSequence,
+        string expectedCharacter) {
+
+        // If ASCII 28 and/or ASCII 31 characters are not being emitted, there may be a warning. 
+        return _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs || 
+               _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs
+
+                   // Is there a potential conflict with the character map?
+                   ? TestPotentialConflictWithCharacterMap()
+                   : token;
+
+        // Test if the reported sequence is \00 and the character map does not map
+        // a reported 0 to another character.
+        CalibrationToken TestIfDeadKeySequence0NoMap() =>
+            reportedCharacterSequence[1] == 48
+
+                // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+                ? LogCalibrationInformation(
+                    InitializeTokenData(),
+                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable)
+                : token;
+
+        // Test if the reported dead key sequence (e.g., \0à) reports a character (e.g., à)
+        // that maps to a 0.
+        CalibrationToken TestIfDeadKeySequenceCharacterMapsTo0() =>
+            _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
+
+                // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+                ? LogCalibrationInformation(
+                    InitializeTokenData(),
+                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable)
+
+                // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements
+                // included in a barcode.
+                : LogCalibrationInformation(
+                    InitializeTokenData(),
+                    CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                    reportedCharacterSequence[1].ToControlPictureString(),
+                    $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {_tokenExtendedDataCharacterMap[reportedCharacterSequence[1]]}");
+
+        // Test for a potential conflict with the character map.
+        CalibrationToken TestPotentialConflictWithCharacterMap() =>
+            _tokenExtendedDataCharacterMap.ContainsKey(reportedCharacterSequence[1])
+
+                // If the reported dead key sequence (e.g. \0à) reports a character (à) that maps to a 0,
+                // we can't disambiguate \0à from <FS>0 and/or <US>0 in the barcode which is also reported
+                // as \00.
+                ? TestIfDeadKeySequenceCharacterMapsTo0()
+
+                // If the reported sequence is \00 and the character map does not map a reported 0 to
+                // another character, then we can't disambiguate \00 from <FS>0 and/or <US>0 in the barcode which
                 // is also reported as \00.
                 : TestIfDeadKeySequence0NoMap();
     }
@@ -4788,7 +4880,8 @@ public partial class Calibrator {
             _tokenExtendedDataDeadKeyCharacterMap = new Dictionary<string, char>();
             _tokenExtendedDataDeadKeyFixUp = new Dictionary<string, string>();
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = default;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = default;
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = default;
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = default;
             AssessFormatnnSupport = true;
             _tokenExtendedDataUnrecognisedKeys = new List<char>();
         }
@@ -4811,8 +4904,9 @@ public partial class Calibrator {
             _tokenExtendedDataCharacterMap = token.ExtendedData.CharacterMap;
             _tokenExtendedDataDeadKeyCharacterMap = token.ExtendedData.DeadKeyCharacterMap;
             _tokenExtendedDataDeadKeyFixUp = token.ExtendedData.DeadKeyFixUp;
-            _tokenExtendedDataPotentialIsoIec15434Unreadable30 = token.ExtendedData.PotentialIsoIec15434Unreadable;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = token.ExtendedData.PotentialIsoIec15434EdiUnreadable;
+            _tokenExtendedDataPotentialIsoIec15434Unreadable30 = token.ExtendedData.PotentialIsoIec15434Unreadable30;
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs;
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs;
             AssessFormatnnSupport = token.ExtendedData.AssessFormat06Support;
             _tokenExtendedDataUnrecognisedKeys = token.ExtendedData.UnrecognisedKeys;
         }
@@ -4869,7 +4963,8 @@ public partial class Calibrator {
             _tokenExtendedDataAimFlagCharacterSequence ?? string.Empty,
             _tokenExtendedDataReportedCharacters ?? string.Empty,
             _tokenExtendedDataPotentialIsoIec15434Unreadable30,
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadable,
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs,
+            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs,
             AssessFormatnnSupport,
             _tokenExtendedDataNonInvariantAmbiguities,
             _tokenExtendedDataInvariantGs1Ambiguities,
@@ -5226,8 +5321,9 @@ public partial class Calibrator {
                     scannerKeyboardPerformance: token.ExtendedData.ScannerKeyboardPerformance,
                     aimFlagCharacterSequence: token.ExtendedData.AimFlagCharacterSequence,
                     reportedCharacters: token.ExtendedData.ReportedCharacters,
-                    potentialIsoIec15434Unreadable: token.ExtendedData.PotentialIsoIec15434Unreadable,
-                    potentialIsoIec15434EdiUnreadable: token.ExtendedData.PotentialIsoIec15434EdiUnreadable,
+                    potentialIsoIec15434Unreadable30: token.ExtendedData.PotentialIsoIec15434Unreadable30,
+                    potentialIsoIec15434EdiUnreadableFs: token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs,
+                    potentialIsoIec15434EdiUnreadableUs: token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs,
                     assessFormat06Support: token.ExtendedData.AssessFormat06Support,
                     nonInvariantAmbiguities: token.ExtendedData.NonInvariantAmbiguities,
                     invariantGs1Ambiguities: token.ExtendedData.InvariantGs1Ambiguities,
@@ -5316,8 +5412,9 @@ public partial class Calibrator {
                 scannerKeyboardPerformance: currentToken.ExtendedData.ScannerKeyboardPerformance,
                 aimFlagCharacterSequence: currentToken.ExtendedData.AimFlagCharacterSequence,
                 reportedCharacters: currentToken.ExtendedData.ReportedCharacters,
-                potentialIsoIec15434Unreadable: currentToken.ExtendedData.PotentialIsoIec15434Unreadable,
-                potentialIsoIec15434EdiUnreadable: currentToken.ExtendedData.PotentialIsoIec15434EdiUnreadable,
+                potentialIsoIec15434Unreadable30: currentToken.ExtendedData.PotentialIsoIec15434Unreadable30,
+                potentialIsoIec15434EdiUnreadableFs: currentToken.ExtendedData.PotentialIsoIec15434EdiUnreadableFs,
+                potentialIsoIec15434EdiUnreadableUs: currentToken.ExtendedData.PotentialIsoIec15434EdiUnreadableUs,
                 assessFormat06Support: currentToken.ExtendedData.AssessFormat06Support,
                 nonInvariantAmbiguities: currentToken.ExtendedData.NonInvariantAmbiguities,
                 invariantGs1Ambiguities: currentToken.ExtendedData.InvariantGs1Ambiguities,
@@ -5580,6 +5677,9 @@ public partial class Calibrator {
                             // If the keyboard represents ASCII 29s as \0, we will use this in thе map.
                             _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
                             break;
+                        case 4:
+                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
+                            break;
                         case 5:
                             var key = _tokenExtendedDataCharacterMap.FirstOrDefault(x => x.Value == '\u001D').Key;
 
@@ -5598,17 +5698,8 @@ public partial class Calibrator {
 
                             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                             break;
-
-                        default:
-                            /* We will not attempt to take this further here, but simply record that EDI data cannot be reliably read.
-                               The code could be improved. If there is no ambiguity for case 3 and 5, and if \0 is only 
-                               reported for case 4 or case 6 and not for case 3 or 5, then we could map \0 to either ASCII 28 or 31.
-                             */
-
-                            // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                            token = LogCalibrationInformation(
-                                token,
-                                CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+                        case 6:
+                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
                             break;
                     }
                 }
@@ -5621,11 +5712,14 @@ public partial class Calibrator {
                                 return LogCalibrationInformation(
                                 token,
                                 CalibrationInformationType.NoGroupSeparatorMapping);
+                            case 4:
+                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
+                                break;
                             case 5:
                                 _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                                 break;
-                            default:
-                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = true;
+                            case 6:
+                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
                                 break;
                         }
 
@@ -5766,8 +5860,9 @@ public partial class Calibrator {
 
         return token;
 
-        CalibrationToken LogNonCorrespondenceForIsoIec15434Separators(CalibrationToken calibrationToken, int idx) {
-            return idx switch {
+        CalibrationToken LogNonCorrespondenceForIsoIec15434Separators(CalibrationToken calibrationToken, int idx) =>
+            idx switch
+            {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
                 3 => LogCalibrationInformation(
                     calibrationToken,
@@ -5786,29 +5881,28 @@ public partial class Calibrator {
                     CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
                 _ => calibrationToken
             };
-        }
 
-        CalibrationToken LogIsoIec15434SeparatorSupport(CalibrationToken calibrationToken, int idx) {
-            return idx switch {
+        CalibrationToken LogIsoIec15434SeparatorSupport(CalibrationToken calibrationToken, int idx) =>
+            idx switch
+            {
                 // Information: Group Separator characters are supported.
                 3 => LogCalibrationInformation(
                     calibrationToken,
                     CalibrationInformationType.GroupSeparatorSupported),
-                // Information: EDI separator characters are supported.
+                // Information: File separator characters are supported.
                 4 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.EdiSeparatorsSupported),
+                    CalibrationInformationType.FileSeparatorSupported),
                 // Information: Record Separator characters are supported.
                 5 => LogCalibrationInformation(
                     calibrationToken,
                     CalibrationInformationType.RecordSeparatorSupported),
-                // Information: EDI separator characters are supported.
+                // Information: Unit separator characters are supported.
                 6 => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.EdiSeparatorsSupported),
+                    CalibrationInformationType.UnitSeparatorSupported),
                 _ => calibrationToken
             };
-        }
     }
 
     /// <summary>
@@ -5828,6 +5922,42 @@ public partial class Calibrator {
             // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
             ? LogCalibrationInformation(token, CalibrationInformationType.IsoIec15434SyntaxNotRecognised)
             : token;
+
+    /// <summary>
+    ///   Process the input for any incompatibility with the ISO/IEC 15434 EDI barcodes.
+    /// </summary>
+    /// <param name="token">The current calibration token.</param>
+    /// <returns>The calibration token.</returns>
+    private CalibrationToken DoProcessForIsoIec15434EdiIncompatibility(CalibrationToken token)
+    {
+        switch (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs)
+        {
+            case false when 
+                !_tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs:
+                return token;
+            case true when
+                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs:
+                // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+                return LogCalibrationInformation(
+                    InitializeTokenData(),
+                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+        }
+
+        // One of the ASCII 28 and ASCII 31 characters is reported as null.  We will only treat this as
+        // unreliable read for EDI data is there is already a mapping for ASCII NULL.
+        if (_tokenExtendedDataCharacterMap.ContainsKey('\0')) {
+
+            // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+            return LogCalibrationInformation(
+                InitializeTokenData(),
+                CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+        }
+
+        // Add mapping for ASCII 28 or ASCII 31
+        _tokenExtendedDataCharacterMap.Add('\0', _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs ? '\u001c' : '\u001f');
+
+        return token;
+    }
 
     /// <summary>
     ///   Process the input for any ambiguities which have been missed by previous processing.
@@ -5956,7 +6086,8 @@ public partial class Calibrator {
         _tokenExtendedDataReportedSuffix = default;
         _tokenExtendedDataKeyboardScript = default;
         _tokenExtendedDataPotentialIsoIec15434Unreadable30 = false;
-        _tokenExtendedDataPotentialIsoIec15434EdiUnreadable = false;
+        _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = false;
+        _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = false;
         _tokenCalibrationData = null;
         _tokenSystemCapabilities = null;
         _invariantMappedCharacters = null;
