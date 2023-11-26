@@ -435,7 +435,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
                 mediumSeverity.Remove(mayNotReadAim);
             }
 
-            var mayNotReadAimNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.MayNotReadAimNoCalibration);
+            var mayNotReadAimNoCalibration = mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
             if (mayNotReadAimNoCalibration is not null)
             {
                 mediumSeverity.Remove(mayNotReadAimNoCalibration);
@@ -524,6 +524,16 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
             {
                 // Remove any report about AIM identifiers, additional characters or control characters.
             }
+        }
+
+        // If the calibrator determines that your system cannot read AIM identifier characters, then it
+        // should not report that your barcode scanner does not transmit AIM identifiers, as it cannot
+        // determine this for certain.
+        var cannotReadAimNoCalibrationx = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
+        var notTransmittingAimy = highSeverity.Find(a => a.AdviceType == AdviceType.NotTransmittingAim);
+
+        if (cannotReadAimNoCalibrationx is not null) {
+            highSeverity.Remove(notTransmittingAimy);
         }
 
         if (highSeverity.Any())
@@ -684,7 +694,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // 231
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadAimNoCalibration);
+            new(AdviceType.CannotReadAimNoCalibration);
         
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() => 

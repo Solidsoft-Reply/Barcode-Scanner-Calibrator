@@ -354,7 +354,7 @@
     <comment>Medium</comment>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
+    <value>Your system may not read AIM identifier characters.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_231" xml:space="preserve">

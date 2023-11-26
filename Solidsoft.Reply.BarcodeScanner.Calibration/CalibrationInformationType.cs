@@ -285,7 +285,7 @@ public enum CalibrationInformationType
     SubOptimalScannerKeyboardPerformance = 280,
 
     /// <summary>
-    /// ERROR: A pre-processing reported a warning during calibration. {0}
+    /// WARNING: A pre-processing reported a warning during calibration.
     /// </summary>
     PreProcessorWarning= 299,
 
@@ -408,7 +408,7 @@ public enum CalibrationInformationType
     CalibrationFailed = 390,
 
     /// <summary>
-    /// ERROR: Calibration failed due to a pre-processing error. {0}
+    /// ERROR: Calibration failed due to a pre-processing error.
     /// </summary>
     PreProcessorError = 399,
 }

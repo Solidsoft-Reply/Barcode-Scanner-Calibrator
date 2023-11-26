@@ -221,18 +221,23 @@ public enum AdviceType
     TransmittingSuffix = 225,
 
     /// <summary>
-    /// <p>Your system cannot read AIM identifier characters.</p>
+    /// <p>Your system may not read AIM identifier characters.</p>
+    /// <p>AIM identifiers represent the barcode type. Your verification software may use them to
+    /// eliminate unnecessary alerts. However, the software must implement character mapping to
+    /// read AIM identifiers reliably.</p>
     /// <p>Make sure your keyboard layouts match. If necessary, configure your barcode scanner to
-    ///   emulate a numeric keypad.</p>
+    /// emulate a numeric keypad.&lt;/p&gt;
     /// </summary>
     MayNotReadAim = 230,
 
     /// <summary>
     /// <p>Your system cannot read AIM identifier characters.</p>
+    /// <p>AIM identifiers represent the barcode type. Your verification software may use them to
+    /// eliminate unnecessary alerts.</p>
     /// <p>Make sure your keyboard layouts match. If necessary, configure your barcode scanner to
-    ///   emulate a numeric keypad.</p>
+    /// emulate a numeric keypad.</p>
     /// </summary>
-    MayNotReadAimNoCalibration = 231,
+    CannotReadAimNoCalibration = 231,
 
     /// <summary>
     /// <p>Your barcode scanner may not transmit AIM identifiers.</p>
