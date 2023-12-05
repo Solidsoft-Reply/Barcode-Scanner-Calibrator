@@ -102,7 +102,6 @@ public partial class Calibrator {
     /// </summary>
     private readonly string _baselineBarcodeData =
         $"  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` {{ | }} ~{SegmentDelimiter}{(char)29}";
-
     /// <summary>
     ///   The baseline barcode data.
     /// </summary>
@@ -607,7 +606,9 @@ public partial class Calibrator {
     /// </remarks>
     public IList<Stream> BaselineBarcodes(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
-        // non-invariant printable characters and additional ASCII control characters.
+        // non-invariant printable characters and additional ASCII control characters.  It is very important that
+        // the final four characters are a segment delimiter because the scanner may add characters beyond this
+        // such as CR and LF characters and/or a suffix.
         var barcodeDataEx = _baselineBarcodeData
                           + (AssessFormatnnSupport
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
@@ -2208,7 +2209,7 @@ public partial class Calibrator {
                         trailingCrLfChars)
                     : LogCalibrationInformation(token, CalibrationInformationType.EndOfLineNotTransmitted);
 
-        // Set the reported character deemed to represent an line feed (LF) character. Return an ASCII 0 if no
+        // Set the reported character deemed to represent a line feed (LF) character. Return an ASCII 0 if no
         // such character is reported.
         lineFeedChar = trailingCrLfChars.Length > 0
             ? TestLineFeedChar()

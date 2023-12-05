@@ -20,6 +20,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using ZXing.Common;
+
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
@@ -27,14 +29,29 @@ using System.Linq;
 using System.Diagnostics.Contracts;
 using System.Text;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 /// <summary>
 ///   Extension methods for calibration.
 /// </summary>
-
 // ReSharper disable once UnusedMember.Global
-internal static class CalibrationExtensions
+internal static partial class CalibrationExtensions
 {
+
+    /// <summary>
+    ///   Returns a regular expression for matching line terminators and providing a stripped string.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"^(?<strippedData>.*)(?<lineTerminators>[\r\n]+)$", RegexOptions.None, "en-US")]
+    private static partial Regex LineTerminators();
+
+    /// <summary>
+    ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None, "en-US")]
+    private static partial Regex ControlCharTerminators();
+
     /// <summary>
     ///   Strips off any trailing carriage return and line feed characters.
     /// </summary>
@@ -46,41 +63,45 @@ internal static class CalibrationExtensions
     {
         trailingCrLfChars = string.Empty;
 
-        // Remove any trailing CR or LF. This will almost certainly have been added by the scanner, which will be assumed.
-        while (true) {
-            if (!input.EndsWith("\r", StringComparison.Ordinal) && !input.EndsWith("\n", StringComparison.Ordinal)) {
-                if (input.Length == 0) return input;
+        if (input.Length == 0) return input;
 
-                if (!input[..^1].EndsWith("\r", StringComparison.Ordinal)) {
-                    // If this is the baseline and the last reported character is not an LF character, but is a control 
-                    // character greater than ASCII 0, and the fifth- to second-to-last characters are spaces, then we 
-                    // will assume it represents an LF. This is not reliable because the scanner may be outputting some 
-                    // other control character as the last character in the sequence, but it is very unlikely that a space 
-                    // will be represented by a control character, and if it is, everything else will be broken anyway. We 
-                    // are also assuming that barcode scanners use the ENTER key to enter CRs. If these two assumptions 
-                    // are correct, then a sequence of four spaces followed by a non-0 control character is almost 
-                    // certainly a representation of an LF terminator, and even if not, we can assume that it is safe to 
-                    // interpret the last character as if it was an LF. This approach will not work if there are other 
-                    // suffix characters before the LF. In this case, the calibrator may mistakenly report the suffix with 
-                    // the final character and conclude there is no end-of-line sequence.
-                    if (baseline && input.Length > 4 && input[^5..^1] == "    " && (int)input.Last() is > 0 and < 32) {
-                        trailingCrLfChars = "LF";
-                    }
+        var matchLineTerminators = LineTerminators().Match(input);
 
-                    return input;
-                }
+        if (!matchLineTerminators.Success)
+        {
+            // We will look specifically for any situation where four spaces (the segment delimiter) are followed by 
+            // ASCII control characters at the end of the string.  In this case, we will assume that the control
+            // characters represent line terminators.  This is a best-endeavours approach.  It cannot handle 
+            // suffixes (unless they end with four spaces, in which case the assumption of line terminators may not be
+            // valid) and it assumes that the space character is reported without change.  This approach not 100%
+            // reliable, but can only be defeated in highly unusual circumstances.
+            var matchControlChars = ControlCharTerminators().Match(input);
 
-                // If the second to last reported character is a CR, then we will assume the last character is an LF. Again
-                // this is not reliable, but it is a reasonable assumption. At worst, the CR will act as a line terminator
-                // anyway, so it won't generally be a problem if the last character is incorrectly interpreted as an LF.
-                trailingCrLfChars = "LF";
-                input = input[..^1];
-                continue;
+            if (!matchControlChars.Success) return input;
+            var trailingCrLfCharsSpan = matchLineTerminators.Groups["lineTerminators"].ValueSpan;
+
+            // Are there more than two control characters represented in the trailing characters?
+            var characters = new List<char>();
+
+            foreach (var c in trailingCrLfCharsSpan)
+            {
+                if (characters.Contains(c)) continue;
+                characters.Add(c);
             }
 
-            trailingCrLfChars = (input.Last() == '\r' ? "CR" : "LF") + trailingCrLfChars;
-            if (input.Length >= 1) input = input[..^1];
+            if (characters.Count > 2) return input;
+
+            for (var idx = 0; idx < characters.Count; idx++)
+            {
+                var c = characters[idx];
+                trailingCrLfChars += idx == 0 ? "CR" : "LF";
+            }
+
+            return matchLineTerminators.Groups["strippedData"].Value;
         }
+
+        trailingCrLfChars = matchLineTerminators.Groups["lineTerminators"].Value.Replace("\r", "CR").Replace("\n", "LF");
+        return matchLineTerminators.Groups["strippedData"].Value;
     }
 
     /// <summary>
