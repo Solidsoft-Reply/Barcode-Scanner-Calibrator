@@ -16,7 +16,7 @@
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-	<PackageReleaseNotes>1) Improved handling of AIM identifiers.</PackageReleaseNotes>
+	<PackageReleaseNotes>1) Added trace feature to the Calibration() method to aid debugging of deployed code. The code can now optionally trace the data and other parameters.</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
 
@@ -24,7 +24,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.0.1</Version>
+	<Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

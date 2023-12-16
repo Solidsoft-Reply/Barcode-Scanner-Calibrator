@@ -751,6 +751,7 @@ public partial class Calibrator {
                 // Do nothing here
             }
         }
+        
         if (token == default) {
             _lastToken = token;
             return LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported);
