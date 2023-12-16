@@ -22,6 +22,8 @@
 
 ////#define Diagnostics
 
+using System.Diagnostics;
+
 #pragma warning disable S1751
 #pragma warning disable S3626
 
@@ -685,10 +687,17 @@ public partial class Calibrator {
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
+    /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    public CalibrationToken Calibrate(int[] data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default, Preprocessor? preProcessors = null) {
+    public CalibrationToken Calibrate(
+        int[] data, CalibrationToken token, 
+        bool? capsLock = null, 
+        SupportedPlatform platform = SupportedPlatform.Windows, 
+        TimeSpan dataEntryTimeSpan = default, 
+        Preprocessor? preProcessors = null,
+        bool trace = false) {
         if (data is null) {
             throw new ArgumentNullException(nameof(data));
         }
@@ -699,7 +708,7 @@ public partial class Calibrator {
             charOut[idx] = (char)data[idx];
         }
 
-        return Calibrate(new string(charOut), token, capsLock, platform, dataEntryTimeSpan, preProcessors);
+        return Calibrate(new string(charOut), token, capsLock, platform, dataEntryTimeSpan, preProcessors, trace);
     }
 
     /// <summary>
@@ -711,10 +720,37 @@ public partial class Calibrator {
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
+    /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
-    public CalibrationToken Calibrate(string? data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default, Preprocessor? preProcessors = null) {
- 
-        Console.WriteLine(data);
+    public CalibrationToken Calibrate(
+        string? data, 
+        CalibrationToken token, 
+        bool? capsLock = null, 
+        SupportedPlatform platform = SupportedPlatform.Windows, 
+        TimeSpan dataEntryTimeSpan = default,
+        Preprocessor? preProcessors = null,
+        bool trace = false) {
+
+        if (trace)
+        {
+            var basicCapsLockValue = capsLock ?? false ? "true" : "false";
+            var capsLockValue = capsLock == null ? "unknown" : basicCapsLockValue;
+            var additionalData = (string.IsNullOrEmpty(data) ? string.Empty : "\r\n") + $"Caps Lock: {capsLockValue}\r\nSupported Platform: {platform}\r\n";
+            
+            try {
+                Console.WriteLine(data + additionalData);
+            }
+            catch { 
+                // Do nothing here
+            }
+
+            try {
+                Trace.WriteLine(data + additionalData);
+            }
+            catch {
+                // Do nothing here
+            }
+        }
         if (token == default) {
             _lastToken = token;
             return LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported);
