@@ -713,6 +713,8 @@ public partial class Calibrator {
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>The updated calibration token.</returns>
     public CalibrationToken Calibrate(string? data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default, Preprocessor? preProcessors = null) {
+ 
+        Console.WriteLine(data);
         if (token == default) {
             _lastToken = token;
             return LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported);
