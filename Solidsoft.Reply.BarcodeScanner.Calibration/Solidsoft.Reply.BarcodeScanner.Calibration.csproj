@@ -8,7 +8,6 @@
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>Barcode Scanner Calibration Library</Title>
 	<Copyright>©2023 Solidsoft Reply</Copyright>
-	<Description>A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.</Description>
 	<Company>Solidsoft Reply Ltd.</Company>
 	<Authors>cnayoung</Authors>
 	<RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.BarcodeScanner.Calibration</RepositoryUrl>
@@ -16,9 +15,16 @@
 	<PackageIcon>Solidsoft Reply - LOGO Square_small.jpg</PackageIcon>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
-	<PackageReleaseNotes>Initial release</PackageReleaseNotes>
-	<Version>1.0.0</Version>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<PackageReleaseNotes>1) Improved handling of AIM identifiers.</PackageReleaseNotes>
+	<Description>
+		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
+
+		Latest Release Notes:
+		--------------
+		$(PackageReleaseNotes)
+	</Description>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
