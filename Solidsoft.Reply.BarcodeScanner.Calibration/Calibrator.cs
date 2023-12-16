@@ -2397,9 +2397,9 @@ public partial class Calibrator {
                 // Pad the segment list with empty segments if necessary.
                 reportedSegments.Add(new List<string>());
             }
-            else if (segmentIdx > 6) {
+            else if (segmentIdx > (int)CalibrationSegments.UnitSeparatorSegment) {
                 // If the barcode scanner included a suffix that has split into segments, concatenate the into a single suffix segment.
-                reportedSegments[7][0] = reportedSegments[7][0] += $"{new string(' ', 3)}{segments[segmentIdx]}";
+                reportedSegments[(int)CalibrationSegments.SuffixSegment][0] = reportedSegments[(int)CalibrationSegments.SuffixSegment][0] += $"{new string(' ', 3)}{segments[segmentIdx]}";
             }
             else {
                 // Add the segment.
@@ -2408,7 +2408,7 @@ public partial class Calibrator {
         }
 
         // Fix up the space holders in data segments.
-        for (var segmentIdx = 0; segmentIdx <= 2; segmentIdx++) {
+        for (var segmentIdx = (int)CalibrationSegments.PrefixSegment; segmentIdx <= (int)CalibrationSegments.AdditionalAsciiSegment; segmentIdx++) {
             var sequences = reportedSegments[segmentIdx];
             var expectedSequences = expectedSegments[segmentIdx];
             var fixedUpReportedSegment = new List<string>();
@@ -2485,8 +2485,10 @@ public partial class Calibrator {
 
         // Replace temporary space holders in suffix and fix up.
 
-        if (reportedSegments[7].Count > 0 && !string.IsNullOrEmpty(reportedSegments[7][0])) {
-            reportedSegments[7][0] = reportedSegments[7][0].Replace(tempSpaceHolder, '\u0020');
+        if (reportedSegments[(int)CalibrationSegments.SuffixSegment].Count > 0 
+            && !string.IsNullOrEmpty(reportedSegments[(int)CalibrationSegments.SuffixSegment][0])) {
+            reportedSegments[(int)CalibrationSegments.SuffixSegment][0] = 
+                reportedSegments[(int)CalibrationSegments.SuffixSegment][0].Replace(tempSpaceHolder, '\u0020');
         }
 
         return token;
