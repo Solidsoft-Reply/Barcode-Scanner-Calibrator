@@ -358,8 +358,8 @@ public static class UnicodeBlocks
         IEnumerable<string>? upperCaseSequences,
         IEnumerable<string>? lowerCaseSequences)
     {
-        var scriptUpper = "<unknown";
-        var scriptLower = "<unknown";
+        var scriptUpper = "<unknown>";
+        var scriptLower = "<unknown>";
 
         if (upperCaseSequences is null || lowerCaseSequences is null)
         {
@@ -531,6 +531,7 @@ public static class UnicodeBlocks
             return reachedThreshold;
         }
 
+
         // On a Hebrew keyboard, SHIFT (and CAPS LOCK) provide access to Latin characters. This is very unusual. The 
         // Sinhala Wij 9 keyboard, for example, provides access to Latin characters on CAPS LOCK, but not on SHIFT.
         bool CheckForHebrew()
@@ -561,6 +562,7 @@ public static class UnicodeBlocks
             scriptLower = Flatten(scriptLower);
         }
 
+
         string TestUnknownScripts() =>
             scriptLower == "<unknown>"
                 ? scriptUpper
@@ -576,5 +578,6 @@ public static class UnicodeBlocks
 
         string TestScriptsEqual() =>
             scriptUpper == scriptLower ? scriptUpper : TestForHebrew();
+
     }
 }

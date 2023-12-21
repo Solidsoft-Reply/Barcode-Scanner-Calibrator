@@ -154,7 +154,6 @@ public class CalibrationBarcodeData
                             workingMaxCharacter = _maximumCharacters;
                             adjustingLastSegments = remainingLength <= workingMaxCharacter;
 
-                            System.Diagnostics.Debug.WriteLine(segmentDataBuilder.ToString().Replace('\u0000', '¬'));
                             return segmentDataBuilder.ToString();
                         }
                     }

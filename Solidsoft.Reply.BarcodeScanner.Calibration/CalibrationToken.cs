@@ -76,8 +76,11 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="smallBarcodeSequenceCount">
     ///   The number of small barcodes that encode the current calibration data.
     /// </param>
-    /// <param name="smallBarcodeSequencePrefix">
-    ///   The prefix for each small barcode in a sequence.
+    /// <param name="prefix">
+    ///   The detected prefix.
+    /// </param>
+    /// <param name="suffix">
+    ///   The detected suffix.
     /// </param>
     /// <param name="reportedCharacters">
     ///   The reported characters for the current calibration barcode.
@@ -112,7 +115,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         int calibrationRemaining = -1,
         int smallBarcodeSequenceIndex = -1,
         int smallBarcodeSequenceCount = -1,
-        string? smallBarcodeSequencePrefix = "",
+        string? prefix = "",
+        string? suffix = "",
         string? reportedCharacters = "",
         Stream? bitmapStream = null,
         int remaining = -1,
@@ -131,7 +135,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             calibrationRemaining,
             smallBarcodeSequenceIndex,
             smallBarcodeSequenceCount,
-            smallBarcodeSequencePrefix ?? string.Empty,
+            prefix ?? string.Empty,
+            suffix ?? string.Empty,
             reportedCharacters ?? string.Empty);
         BitmapStream = bitmapStream;
         Remaining = remaining;
@@ -156,7 +161,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   The unsegmented barcode data for the current calibration barcode.
     /// </param>
     /// <param name="extendedData">Optional extended data to add to the token.</param>
-    public CalibrationToken(CalibrationToken oldToken, CalibrationTokenExtendedData? extendedData = null)
+    public CalibrationToken(CalibrationToken oldToken, CalibrationTokenExtendedData? extendedData = null, string? prefix = "", string? suffix = "")
     {
         Data = oldToken.Data is null
                         ? null
@@ -167,7 +172,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                             oldToken.Data?.CalibrationsRemaining ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceIndex ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceCount ?? 0,
-                            oldToken.Data?.SmallBarcodeSequencePrefix ?? string.Empty,
+                            string.IsNullOrEmpty(prefix) ? oldToken.Data?.Prefix ?? string.Empty : prefix ?? string.Empty,
+                            string.IsNullOrEmpty(suffix) ? oldToken.Data?.Suffix ?? string.Empty : suffix ?? string.Empty,
                             oldToken.Data?.ReportedCharacters ?? string.Empty);
 
         BitmapStream = oldToken.BitmapStream is null
@@ -497,7 +503,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             calibrationToken.Data?.CalibrationsRemaining ?? 0,
             calibrationToken.Data?.SmallBarcodeSequenceIndex ?? 0,
             calibrationToken.Data?.SmallBarcodeSequenceCount ?? 0,
-            calibrationToken.Data?.SmallBarcodeSequencePrefix ?? string.Empty,
+            calibrationToken.Data?.Prefix ?? string.Empty,
+            calibrationToken.Data?.Suffix ?? string.Empty,
             calibrationToken.Data?.ReportedCharacters ?? string.Empty,
             calibrationToken.BitmapStream,
             calibrationToken.Remaining,

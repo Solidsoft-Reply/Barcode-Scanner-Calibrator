@@ -225,6 +225,23 @@ public partial class Calibrator {
     private static partial Regex ChainedDeadKeysFilter2Regex();
 
     /// <summary>
+    ///   Returns a regular expression to detect suffixes.  This is relevant during small barcode processing where
+    ///   it is used to remove repeated suffixes from the reported data. It is a best-endeavours approach that
+    ///   assumes that the suffix never contains a sequence of four or more spaces.
+    /// </summary>
+    /// <returns></returns>
+    [GeneratedRegex(@"\s{4}(?!.*\s{4})(?<s>\s{0,3}.*)$", RegexOptions.None, "en-US")]
+    private static partial Regex SuffixRegex();
+
+    /// <summary>
+    ///   Returns a regular expression to detect prefixes.  It is a best-endeavours approach that
+    ///   assumes that the prefix never contains a sequence of two or more spaces, unless they appear at the end of prefix.
+    /// </summary>
+    /// <returns></returns>
+    [GeneratedRegex(@"^(?<prefix>.*?)(?=\u0020\u0020[^\u0020]).*$", RegexOptions.None, "en-US")]
+    private static partial Regex PrefixRegex();
+
+    /// <summary>
     ///   The assumption made concerning the use of calibration in client systems.
     /// </summary>
     private readonly CalibrationAssumption _calibrationAssumption;
@@ -344,7 +361,12 @@ public partial class Calibrator {
     /// <summary>
     ///   The prefix for each small barcode in a sequence.
     /// </summary>
-    private string? _tokenDataSmallBarcodeSequencePrefix;
+    private string? _tokenDataPrefix;
+
+    /// <summary>
+    ///   The detetcted suffix. 
+    /// </summary>
+    private string? _tokenDataSuffix;
 
     /// <summary>
     ///   The reported characters for the current calibration barcode.
@@ -488,6 +510,11 @@ public partial class Calibrator {
     ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31 character.
     /// </summary>
     private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs;
+
+    /// <summary>
+    /// Any suffix and end-of-line sequence recorded while processing small barcodes.
+    /// </summary>
+    private (string suffix, string endOfLine) _tokenSmallBarcodeSuffixData = (string.Empty, string.Empty);
 
     /// <summary>
     /// The last token. This value is recorded to aid recovery from failures.
@@ -803,10 +830,22 @@ public partial class Calibrator {
             ? CalibrationBarcodeType.Baseline
             : CalibrationBarcodeType.DeadKey;
 
-        // Perform calibration
-        var @out = token.Data?.Key?.Length == 0
-                           ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan)
-                           : CalibrateDeadKey(data, token, dataEntryTimeSpan);
+        (CalibrationToken token, string suffix, string endOfLine) extendedToken = (token, string.Empty , string.Empty);
+
+        try
+        {
+            // Perform calibration
+            extendedToken = token.Data?.Key?.Length == 0
+                            ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan)
+                            : CalibrateDeadKey(data, token, dataEntryTimeSpan, _tokenSmallBarcodeSuffixData.suffix, _tokenSmallBarcodeSuffixData.endOfLine);
+    }
+        catch (Exception)
+        {
+            LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
+        }
+
+        _tokenSmallBarcodeSuffixData = (extendedToken.suffix, extendedToken.endOfLine);
+        var @out = extendedToken.token;
 
         _tokenDataKey = @out.Data?.Key;
         _tokenDataValue = @out.Data?.Value ?? char.MinValue;
@@ -815,7 +854,8 @@ public partial class Calibrator {
         _tokenSize = @out.Size;
         _tokenDataSmallBarcodeSequenceIndex = @out.Data?.SmallBarcodeSequenceIndex ?? 0;
         _tokenDataSmallBarcodeSequenceCount = @out.Data?.SmallBarcodeSequenceCount ?? 0;
-        _tokenDataSmallBarcodeSequencePrefix = @out.Data?.SmallBarcodeSequencePrefix is not null ? _tokenDataSmallBarcodeSequencePrefix : string.Empty;
+        _tokenDataPrefix = @out.Data?.Prefix is not null ? _tokenDataPrefix : string.Empty;
+        _tokenDataSuffix = @out.Data?.Suffix is not null ? _tokenDataSuffix : string.Empty;
 
         _tokenInformation?.Clear();
         _tokenWarnings?.Clear();
@@ -1332,7 +1372,8 @@ public partial class Calibrator {
                     _tokenDataCalibrationsRemaining,
                     ++_tokenDataSmallBarcodeSequenceIndex,
                     _tokenDataSmallBarcodeSequenceCount,
-                    _tokenDataSmallBarcodeSequencePrefix,
+                    _tokenDataPrefix,
+                    _tokenDataSuffix,
                     _tokenDataReportedCharacters,
                     barcode?.CreateBarcode(barcodeDataSegment),
                     --_tokenRemaining,
@@ -1372,6 +1413,8 @@ public partial class Calibrator {
                     --_tokenRemaining,
                     _tokenDataCalibrationsRemaining,
                     bitmapStream: barcode?.CreateBarcode(_tokenDataBarcodeData),
+                    prefix: _tokenDataPrefix,
+                    suffix: _tokenDataSuffix,
                     size: _tokenSize);
                 SetInformation();
                 yield return token;
@@ -1398,7 +1441,8 @@ public partial class Calibrator {
                         _tokenDataCalibrationsRemaining,
                         ++_tokenDataSmallBarcodeSequenceIndex,
                         _tokenDataSmallBarcodeSequenceCount,
-                        _tokenDataSmallBarcodeSequencePrefix,
+                        _tokenDataPrefix,
+                        _tokenDataSuffix,
                         _tokenDataReportedCharacters,
                         barcode?.CreateBarcode(barcodeDataSegment),
                         --_tokenRemaining,
@@ -1517,7 +1561,8 @@ public partial class Calibrator {
                 _tokenDataCalibrationsRemaining,
                 ++_tokenDataSmallBarcodeSequenceIndex,
                 _tokenDataSmallBarcodeSequenceCount,
-                _tokenDataSmallBarcodeSequencePrefix,
+                _tokenDataPrefix,
+                _tokenDataSuffix,
                 _tokenDataReportedCharacters,
                 barcode?.CreateBarcode(_barcodeDataSegments?.Segments.FirstOrDefault() ?? string.Empty),
                 --_tokenRemaining,
@@ -1561,7 +1606,8 @@ public partial class Calibrator {
                 _tokenDataCalibrationsRemaining,
                 _tokenDataSmallBarcodeSequenceIndex + 1,
                 _tokenDataSmallBarcodeSequenceCount,
-                _tokenDataSmallBarcodeSequencePrefix,
+                _tokenDataPrefix,
+                _tokenDataSuffix,
                 _tokenDataReportedCharacters,
                 barcode?.CreateBarcode(_barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex++)),
                 --_tokenRemaining,
@@ -1781,13 +1827,23 @@ public partial class Calibrator {
     /// </returns>
     private static string ResolveKeyboardScript(IReadOnlyList<string> segmentCharacters, bool capsLockIndicator = false) {
         var adjustment = 82 - segmentCharacters.Count;
-        var upperCaseSequences = Enumerable.Range(1, 26).Select(idx => segmentCharacters[idx + 28 - adjustment]);
-        var lowerCaseSequences = Enumerable.Range(1, 26).Select(idx => segmentCharacters[idx + 55 - adjustment]);
-        return capsLockIndicator
-                   ? UnicodeBlocks.ResolveScript(upperCaseSequences, lowerCaseSequences)
+        try
+        {
+            var upperCaseSequences = Enumerable.Range(1, 26).Select(idx => segmentCharacters[idx + 28 - adjustment]);
+            var lowerCaseSequences = Enumerable.Range(1, 26).Select(idx => segmentCharacters[idx + 55 - adjustment]);
+
+            return capsLockIndicator
+                ? UnicodeBlocks.ResolveScript(upperCaseSequences, lowerCaseSequences)
 #pragma warning disable S2234
-                   : UnicodeBlocks.ResolveScript(lowerCaseSequences, upperCaseSequences);
+                : UnicodeBlocks.ResolveScript(lowerCaseSequences, upperCaseSequences);
 #pragma warning restore S2234
+        }
+        catch (ArgumentOutOfRangeException argEx)
+        {
+            Console.WriteLine($"Error while resolving keyboard scripts: {argEx.Message}");
+            return "<unknown>";
+            
+        }
     }
 
     /// <summary>
@@ -1862,8 +1918,8 @@ public partial class Calibrator {
     ///   The time span specifying how long it took from the start of the scan to
     ///   submitting the data.
     /// </param>
-    /// <returns>The calibration token.</returns>
-    private CalibrationToken CalibrateBaseLine(string data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default)
+    /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
+    private (CalibrationToken token, string suffix, string endOfLine) CalibrateBaseLine(string data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default)
     {
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
@@ -1873,14 +1929,28 @@ public partial class Calibrator {
         };
 
         // If this is a small barcode within a sequence, but not the last barcode, return the token.
-        if (TryInSmallBarcodeSequence(ref data, ref token)) return token;
+        if (TryInSmallBarcodeSequence(ref data, ref token)) return (token, string.Empty, string.Empty);
+
+        // Strip out any suffix. For small barcode processing, any suffix will be repeated several times.
+        var detectedSuffix = DetectSuffixAndStripRepeats(data);
+        data = detectedSuffix.data;
+        _tokenDataSuffix = detectedSuffix.suffix;
+        var strippedData = data[..^((detectedSuffix.suffix?.Length ?? 0) + (detectedSuffix.endOfLine?.Length ?? 0))];
+
+        // Strip off any prefix. For small barcode processing, any prefix will be repeated several times.
+        strippedData = _tokenDataPrefix?.Length > 0 &&
+                       strippedData.StartsWith(_tokenDataPrefix, StringComparison.Ordinal)
+            ? strippedData[_tokenDataPrefix.Length..]
+            : strippedData[BarcodePrefix(strippedData).Length..];
+
+        token = new CalibrationToken(token, prefix: _tokenDataPrefix, suffix: _tokenDataSuffix);
 
         // Determine if the user has scanned the correct baseline barcode and if it is fully or partially reported.
-        token = DetermineBarcodeProvenance(token, data, out var immediateReturn);
+        token = DetermineBarcodeProvenance(token, strippedData, out var immediateReturn);
 
         // If there is an issue with the barcode provenance or reported data, then return immediately.
         if (immediateReturn) {
-            return token;
+            return (token, detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
         }
 
         ResetStateForBaselineCalibration();
@@ -1893,7 +1963,7 @@ public partial class Calibrator {
         token = ConvertToSegments(token, data, expectedSegments, out var reportedSegments, out var lineFeedChar);
 
         // If there are not at least three reported segments, calibration has failed, so exit.
-        if (reportedSegments.Count <= (int)CalibrationSegments.AdditionalAsciiSegment) return token;
+        if (reportedSegments.Count <= (int)CalibrationSegments.AdditionalAsciiSegment) return (token, detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
 
         // Record the prefix segment, if a prefix is reported.
         _tokenReportedPrefixSegment =
@@ -1906,7 +1976,7 @@ public partial class Calibrator {
         _tokenReportedSuffix = reportedSegments.Count > (int)CalibrationSegments.SuffixSegment &&
                                   reportedSegments[(int)CalibrationSegments.SuffixSegment].Count > 0 &&
                                   reportedSegments[(int)CalibrationSegments.SuffixSegment][0].Length != 0
-            ? reportedSegments[(int)CalibrationSegments.SuffixSegment][0]
+            ? reportedSegments[(int)CalibrationSegments.SuffixSegment][0].TrimEnd('\r', '\n')
             : string.Empty;
 
         /* We have two clean sets of sequences of characters - one for the data reported from scanning
@@ -1935,7 +2005,7 @@ public partial class Calibrator {
         // Set the current barcode type to Dead Key here. This will be validated on each further calibration call. 
         CurrentBarcodeType = CalibrationBarcodeType.DeadKey;
 
-        return InitializeTokenData();
+        return (InitializeTokenData(), detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
     }
 
     /// <summary>
@@ -1944,8 +2014,16 @@ public partial class Calibrator {
     /// <param name="data">The reported input after scanning the calibration barcode.</param>
     /// <param name="token">The current calibration token.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
+    /// <param name="suffix">A known suffix, discovered during </param>
+    /// <param name="endOfLine"></param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken CalibrateDeadKey(string data, CalibrationToken token, TimeSpan dataEntryTimeSpan = default) {
+    private (CalibrationToken token, string suffix, string endOfLine) CalibrateDeadKey(
+        string data, 
+        CalibrationToken token, 
+        TimeSpan dataEntryTimeSpan = default, 
+        string? suffix = null, 
+        string? endOfLine = null) {
+
         // Resolve the data entry time span to a barcode scanner keyboard performance assessment value.
         var candidateAssessmentValue =
             dataEntryTimeSpan.TotalMilliseconds < (double)ScannerKeyboardPerformance.Medium
@@ -1969,41 +2047,44 @@ public partial class Calibrator {
             // Strip off any prefixes on second and subsequent barcodes. This assumes that the prefix is the
             // same as any detected when processing the baseline calibration barcode.
             data = token.Data.SmallBarcodeSequenceIndex > 1 &&
-                   _tokenDataSmallBarcodeSequencePrefix?.Length > 0 &&
-                   data.StartsWith(_tokenDataSmallBarcodeSequencePrefix, StringComparison.Ordinal)
-                       ? data[_tokenDataSmallBarcodeSequencePrefix.Length..]
+                   _tokenDataPrefix?.Length > 0 &&
+                   data.StartsWith(_tokenDataPrefix, StringComparison.Ordinal)
+                       ? data[_tokenDataPrefix.Length..]
                        : data;
 
             _tokenDataReportedCharacters += data;
 
             if (token.Data.SmallBarcodeSequenceIndex > 0 && token.Data.SmallBarcodeSequenceIndex < token.Data.SmallBarcodeSequenceCount) {
-                return token;
+                return (token, suffix ?? string.Empty, endOfLine ?? string.Empty);
             }
 
             data = _tokenDataReportedCharacters;
         }
 
-        // Strip off any trailing Carriage Return or Line Feed characters. These are assumed to have been
-        // added by the barcode scanner
-        data = data.StripTrailingCrLfs();
+        // Detect the suffix and strip out any repeated suffix.  For small barcode processing, any suffix will be repeated several times.
+        var detectedSuffix = DetectSuffixAndStripRepeats(data, _tokenDataSuffix);
+        data = detectedSuffix.data;
+        data = detectedSuffix.data[..^((detectedSuffix.suffix?.Length ?? 0) + (detectedSuffix.endOfLine?.Length ?? 0))];
+        
+        // Strip off any prefix. For small barcode processing, any prefix will be repeated several times.
+        data = _tokenDataPrefix?.Length > 0 &&
+               data.StartsWith(_tokenDataPrefix, StringComparison.Ordinal)
+            ? data[_tokenDataPrefix.Length..]
+            : data[BarcodePrefix(data).Length..];
 
-        var dataWithoutPrefix =
-            _tokenDataSmallBarcodeSequencePrefix?.Length > 0 &&
-            data.StartsWith(_tokenDataSmallBarcodeSequencePrefix, StringComparison.Ordinal)
-                ? data[_tokenDataSmallBarcodeSequencePrefix.Length..]
-                : data;
+        Console.WriteLine(data);
 
-        var barcodeProvenance = BarcodeProvenance(dataWithoutPrefix, true);
+        var provenance = BarcodeProvenance(data, true);
 
-        switch (barcodeProvenance) {
+        switch (provenance) {
             case CalibrationBarcodeProvenance.PartialDeadkey:
                 // Error - Partial data reported for calibration barcode.
                 LogCalibrationInformation(token, CalibrationInformationType.PartialCalibrationDataReported);
 
                 // Error - Calibration failed.
-                return LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
+                return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed), suffix ?? string.Empty, endOfLine ?? string.Empty);
             case CalibrationBarcodeProvenance.Unknown:
-                var provenance = BarcodeProvenance(data);
+                provenance = BarcodeProvenance(data);
                 switch (provenance) {
                     case CalibrationBarcodeProvenance.Baseline:
                     case CalibrationBarcodeProvenance.PartialBaseline:
@@ -2012,11 +2093,11 @@ public partial class Calibrator {
                         LogCalibrationInformation(token, CalibrationInformationType.IncorrectCalibrationDataReported);
 
                         // Error - Calibration failed.
-                        return LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
+                        return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed), suffix ?? string.Empty, endOfLine ?? string.Empty);
                     case CalibrationBarcodeProvenance.Unknown:
 
                         // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
-                        return LogCalibrationInformation(token, CalibrationInformationType.UnrecognisedData);
+                        return (LogCalibrationInformation(token, CalibrationInformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
                     case CalibrationBarcodeProvenance.DeadKey:
                         break;
                     case CalibrationBarcodeProvenance.PartialDeadkey:
@@ -2033,7 +2114,7 @@ public partial class Calibrator {
             case CalibrationBarcodeProvenance.NoData:
 
                 // Error - No calibration data was reported.
-                return LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported);
+                return (LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported), suffix ?? string.Empty, endOfLine ?? string.Empty);
             case CalibrationBarcodeProvenance.Baseline:
             case CalibrationBarcodeProvenance.DeadKey:
             case CalibrationBarcodeProvenance.PartialBaseline:
@@ -2041,7 +2122,7 @@ public partial class Calibrator {
             default:
                 throw new ArgumentOutOfRangeException(
                     nameof(data),
-                    barcodeProvenance,
+                    provenance,
                     Resources.CalibrateDeadKeyIncorrectBarcodeProvenance);
         }
 
@@ -2165,9 +2246,9 @@ public partial class Calibrator {
         if (!data.TryUnusedExtendedAsciiCharacter(out var tempSpaceCharacter)) {
             // Error - The reported calibration data cannot be processed. No character can be determined
             // to act as a temporary delimiter.
-            return LogCalibrationInformation(
+            return (LogCalibrationInformation(
                 InitializeTokenData(),
-                CalibrationInformationType.NoTemporaryDelimiterCandidate);
+                CalibrationInformationType.NoTemporaryDelimiterCandidate), suffix ?? string.Empty, endOfLine ?? string.Empty);
         }
 
         try {
@@ -2187,9 +2268,9 @@ public partial class Calibrator {
         }
         catch (InvalidOperationException) {
             // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
-            return LogCalibrationInformation(
+            return (LogCalibrationInformation(
                 InitializeTokenData(),
-                CalibrationInformationType.UnrecognisedData);
+                CalibrationInformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
         }
         catch (ArgumentException argumentException) {
             throw new CalibrationException(
@@ -2206,14 +2287,14 @@ public partial class Calibrator {
         --_tokenDataCalibrationsRemaining;
 
         // If no sequence types are detected, then return.
-        return !DetectSequenceTypes(
+        return (!DetectSequenceTypes(
                    data.Split(new[] { splitKeyCharacter }, StringSplitOptions.None).ToList(),
                    reportedCharacterList,
                    tempSpaceCharacter)
                    ? InitializeTokenData()
 
                    // Process the reported character sequences.
-                   : ProcessDeadKeyReportedCharacterList(token, reportedCharacterList);
+                   : ProcessDeadKeyReportedCharacterList(token, reportedCharacterList), suffix ?? string.Empty, endOfLine ?? string.Empty);
 
         // Test for medium or low scanner performance.
         ScannerKeyboardPerformance TestForMediumOrLowPerformance() =>
@@ -4881,7 +4962,8 @@ public partial class Calibrator {
             _tokenDataCalibrationsRemaining = default;
             _tokenDataSmallBarcodeSequenceIndex = default;
             _tokenDataSmallBarcodeSequenceCount = default;
-            _tokenDataSmallBarcodeSequencePrefix = default;
+            _tokenDataPrefix = default;
+            _tokenDataSuffix = default;
             _tokenDataReportedCharacters = default;
         }
         else {
@@ -4892,7 +4974,8 @@ public partial class Calibrator {
             _tokenDataCalibrationsRemaining = token.Data?.CalibrationsRemaining ?? 0;
             _tokenDataSmallBarcodeSequenceIndex = token.Data?.SmallBarcodeSequenceIndex ?? 0;
             _tokenDataSmallBarcodeSequenceCount = token.Data?.SmallBarcodeSequenceCount ?? 0;
-            _tokenDataSmallBarcodeSequencePrefix = token.Data?.SmallBarcodeSequencePrefix ?? string.Empty;
+            _tokenDataPrefix = (token.Data?.Prefix ?? string.Empty) == string.Empty ? _tokenDataPrefix : token.Data?.Prefix;
+            _tokenDataSuffix = (token.Data?.Suffix ?? string.Empty) == string.Empty ? _tokenDataSuffix : token.Data?.Suffix;
             _tokenDataReportedCharacters = token.Data?.ReportedCharacters ?? string.Empty;
         }
 
@@ -4984,7 +5067,8 @@ public partial class Calibrator {
             _tokenDataCalibrationsRemaining,
             _tokenDataSmallBarcodeSequenceIndex,
             _tokenDataSmallBarcodeSequenceCount,
-            _tokenDataSmallBarcodeSequencePrefix,
+            _tokenDataPrefix,
+            _tokenDataSuffix,
             _tokenDataReportedCharacters,
             _tokenBitmapStream,
             _tokenRemaining,
@@ -6161,7 +6245,12 @@ public partial class Calibrator {
     /// <param name="token">The current token.</param>
     /// <returns>True, if currently processing a small barcode sequence, but not yet at the last barcode; otherwise false.</returns>
     private bool TryInSmallBarcodeSequence(ref string data, ref CalibrationToken token) {
-        if (!(token.Data?.SmallBarcodeSequenceCount > 0)) return false;
+        if (!(token.Data?.SmallBarcodeSequenceCount > 0))
+        {
+            return false;
+        }
+
+        if (_tokenDataPrefix is null) _tokenDataPrefix = string.Empty;
 
         data = token.Data.SmallBarcodeSequenceIndex < token.Data.SmallBarcodeSequenceCount
 
@@ -6172,7 +6261,7 @@ public partial class Calibrator {
 
         // Strip off any identical prefixes on second and subsequent barcodes. We are forced to
         // assume that there are no spaces in the prefix.
-        data = token.Data.SmallBarcodeSequenceIndex > 1 && _tokenDataSmallBarcodeSequencePrefix is not null
+        data = token.Data.SmallBarcodeSequenceIndex > 1 && _tokenDataPrefix is not null
             ? SmallBarcodeSequencePrefix(data)
             : data;
 
@@ -6187,15 +6276,16 @@ public partial class Calibrator {
             _tokenDataBarcodeData,
             string.Empty,
             size: _tokenSize,
-            smallBarcodeSequencePrefix: _tokenDataSmallBarcodeSequencePrefix);
+            prefix: _tokenDataPrefix,
+            suffix: _tokenDataSuffix);
 
         return false;
 
         // Get the small barcode sequence prefix.
         string SmallBarcodeSequencePrefix(string localData) =>
-            _tokenDataSmallBarcodeSequencePrefix.Length == 0
+            _tokenDataPrefix.Length == 0
                 ? localData[CalculateSmallBarcodeSequencePrefix(localData)..]
-                : localData[_tokenDataSmallBarcodeSequencePrefix.Length..];
+                : localData[_tokenDataPrefix.Length..];
 
         // Calculate the small barcode sequence prefix.
         int CalculateSmallBarcodeSequencePrefix(string localData) {
@@ -6214,8 +6304,66 @@ public partial class Calibrator {
                 }
             }
 
-            _tokenDataSmallBarcodeSequencePrefix = localData[..smallBarcodeSequencePrefix];
+            _tokenDataPrefix = localData[..smallBarcodeSequencePrefix];
             return smallBarcodeSequencePrefix;
         }
+    }
+
+
+    /// <summary>
+    ///   Calculate the length of any prefix.
+    /// </summary>
+    /// <param name="data">The reported barcode data.</param>
+    /// <returns>The length of the prefix.</returns>
+    private string BarcodePrefix(string data) => PrefixRegex().Match(data).Groups["prefix"].Value;
+
+    /// <summary>
+    /// Removes repeated suffixes from reported data.  This is relevant when small barcode processing
+    /// is used. This is a best-endeavours approach that assumes that the suffix does not contain
+    /// any sequence of four or more spaces.
+    /// </summary>
+    /// <param name="data">The reported data.</param>
+    /// <param name="knownSuffix">A suffix, if already known.</param>
+    /// <param name="knownEndOfLine">An end-of-line sequence, if known.</param>
+    /// <returns>The reported data with any internal suffixes stripped out, together with the suffix and end-of-line terminator.</returns>
+    private static (string data, string? suffix, string? endOfLine) DetectSuffixAndStripRepeats(string? data, string? knownSuffix = null, string? knownEndOfLine = null)
+    {
+        if (string.IsNullOrEmpty(data)) return (string.Empty, knownSuffix, knownEndOfLine);
+
+        var reportedData = data;
+        var suffixValue = knownSuffix;
+        var endOfLine = knownEndOfLine;
+        var idx = 0;
+
+        if (suffixValue is null)
+        {
+            // Find any suffix
+            var suffix = SuffixRegex().Match(reportedData).Groups["s"];
+
+            if (suffix is not { Success: true, Length: > 0 }) return (reportedData, knownSuffix, knownEndOfLine);
+            suffixValue = suffix.Value.TrimEnd('\n', '\r');
+            endOfLine = suffix.Value[suffixValue.Length..];
+        }
+
+        if (suffixValue == string.Empty) return (reportedData, knownSuffix, knownEndOfLine);
+        
+        while (idx >= 0 && idx < reportedData.Length - suffixValue.Length)
+        {
+            idx = reportedData.IndexOf(suffixValue, idx, StringComparison.InvariantCulture);
+
+            if (idx < 0) continue;
+
+            if (suffixValue.Length == 1 && idx > 0 && reportedData[idx - 1] == ' ' 
+                && ((idx < reportedData.Length - 1 && reportedData[idx + 1] == ' ')
+                    || (idx < reportedData.Length - 2 && reportedData[idx + 1] != ' ' && reportedData[idx + 2] == ' '))) {
+                idx++;
+                continue;
+            }
+
+            reportedData = (reportedData[..idx] + reportedData[(idx + suffixValue.Length)..]);
+            idx += suffixValue.Length;
+        }
+        
+        return (reportedData.TrimEnd('\n', '\r') + suffixValue + endOfLine, suffixValue, endOfLine);
     }
 }

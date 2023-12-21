@@ -42,7 +42,7 @@ internal static partial class CalibrationExtensions
     ///   Returns a regular expression for matching line terminators and providing a stripped string.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    [GeneratedRegex(@"^(?<strippedData>.*)(?<lineTerminators>[\r\n]+)$", RegexOptions.None, "en-US")]
+    [GeneratedRegex(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None, "en-US")]
     private static partial Regex LineTerminators();
 
     /// <summary>

@@ -25,6 +25,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 
@@ -65,8 +66,11 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     /// <param name="smallBarcodeSequenceCount">
     ///   The number of small barcodes that encode the current calibration data.
     /// </param>
-    /// <param name="smallBarcodeSequencePrefix">
+    /// <param name="prefix">
     ///   The prefix for each small barcode in a sequence.
+    /// </param>
+    /// <param name="suffix">
+    ///   The detected suffix.
     /// </param>
     /// <param name="reportedCharacters">
     ///   The reported characters for the current calibration barcode.
@@ -78,7 +82,8 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
         int calibrationsRemaining = -1,
         int smallBarcodeSequenceIndex = -1,
         int smallBarcodeSequenceCount = -1,
-        string smallBarcodeSequencePrefix = "",
+        string prefix = "",
+        string suffix = "",
         string reportedCharacters = "")
     {
         BarcodeData = barcodeData;
@@ -87,7 +92,8 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
         CalibrationsRemaining = calibrationsRemaining;
         SmallBarcodeSequenceIndex = smallBarcodeSequenceIndex;
         SmallBarcodeSequenceCount = smallBarcodeSequenceCount;
-        SmallBarcodeSequencePrefix = smallBarcodeSequencePrefix;
+        Prefix = prefix;
+        Suffix = suffix;
         ReportedCharacters = reportedCharacters;
     }
 
@@ -152,15 +158,21 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     public int SmallBarcodeSequenceCount { get; private set; }
 
     /// <summary>
-    ///   Gets the prefix for each small barcode in a sequence.
+    ///   Gets the prefix, if any, transmitted by the barcode scanner.
     /// </summary>
-    [JsonProperty("smallBarcodeSequencePrefix", Order = 8)]
-    public string? SmallBarcodeSequencePrefix { get; private set; }
+    [JsonProperty("prefix", Order = 8)]
+    public string? Prefix { get; private set; }
 
+    /// <summary>
+    ///   Gets the suffix, if any, transmitted by the barcode scanner.
+    /// </summary>
+    [JsonProperty("suffix", Order = 9)]
+    public string? Suffix { get; private set; }
+    
     /// <summary>
     ///   Gets the expected character for the current dead key being calibrated.
     /// </summary>
-    [JsonProperty("value", Order = 9)]
+    [JsonProperty("value", Order = 10)]
     public char Value { get; private set; }
 
     /// <summary>
@@ -193,7 +205,8 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
             calibrationTokenData.CalibrationsRemaining,
             calibrationTokenData.SmallBarcodeSequenceIndex,
             calibrationTokenData.SmallBarcodeSequenceCount,
-            calibrationTokenData.SmallBarcodeSequencePrefix ?? string.Empty,
+            calibrationTokenData.Prefix ?? string.Empty,
+            calibrationTokenData.Suffix ?? string.Empty,
             calibrationTokenData.ReportedCharacters ?? string.Empty);
     }
 
@@ -237,8 +250,12 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
          SmallBarcodeSequenceIndex == other.SmallBarcodeSequenceIndex &&
          SmallBarcodeSequenceCount == other.SmallBarcodeSequenceCount &&
          string.Equals(
-             SmallBarcodeSequencePrefix,
-             other.SmallBarcodeSequencePrefix,
+             Prefix,
+             other.Prefix,
+             StringComparison.Ordinal) &&
+         string.Equals(
+             Suffix,
+             other.Suffix,
              StringComparison.Ordinal) &&
          string.Equals(
              ReportedCharacters,
@@ -269,7 +286,8 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
             AdditionalBarcode,
             SmallBarcodeSequenceIndex,
             SmallBarcodeSequenceCount,
-            SmallBarcodeSequencePrefix,
+            Prefix,
+            Suffix,
             ReportedCharacters);
 
     /// <summary>
@@ -318,5 +336,14 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);
         errorContext.Handled = true;
+    }
+
+    /// <summary>
+    /// Amend the reported characters.  This may be necessary in order to remove repeated suffixes in the
+    /// reported character sequence when small barcode processing is used.
+    /// </summary>
+    /// <param name="amendedReportedCharacters">The amended reported characters.</param>
+    internal void AmendReportedCharacters(string amendedReportedCharacters) {
+        this.ReportedCharacters = amendedReportedCharacters;
     }
 }
