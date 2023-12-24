@@ -882,8 +882,6 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
     private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
-        Debug.WriteLine(layoutName);
-
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
 

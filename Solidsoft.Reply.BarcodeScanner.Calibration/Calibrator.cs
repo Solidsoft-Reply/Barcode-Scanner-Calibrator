@@ -102,7 +102,7 @@ public partial class Calibrator {
     /// <summary>
     /// Value for ASCII Null character'
     /// </summary>
-    private const int AsciiNullChar = 10;
+    private const int AsciiNullChar = 0;
 
     /// <summary>
     /// Value for ASCII Line Feed character.
@@ -225,19 +225,29 @@ public partial class Calibrator {
     private static partial Regex ChainedDeadKeysFilter2Regex();
 
     /// <summary>
-    ///   Returns a regular expression to detect suffixes.  This is relevant during small barcode processing where
+    ///   Returns a regular expression to detect suffixes. This is relevant during small barcode processing where
     ///   it is used to remove repeated suffixes from the reported data. It is a best-endeavours approach that
-    ///   assumes that the suffix never contains a sequence of four or more spaces.
+    ///   assumes that the suffix never contains a sequence of four or more spaces. It also takes into account 
+    ///   that in some cases, an ASCII 0 may not be reported for a Control CHaracter that the barcodes scanner 
+    ///   does not support. It assumes that Control Characters never result in Dead Key activations.
     /// </summary>
-    /// <returns></returns>
-    [GeneratedRegex(@"\s{4}(?!.*\s{4})(?<s>\s{0,3}.*)$", RegexOptions.None, "en-US")]
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"(([^\s]\s{4})|([^\s]\s{8})|([^\s]\s{12})|([^\s]\s{16})|([^\s]\s{19})|([^\s]\s{20}))(?!.*\s{4})(?<s>\s{0,3}.*)$", RegexOptions.None, "en-US")]
     private static partial Regex SuffixRegex();
+
+    /// <summary>
+    /// Returne a regular expression to detect any character except a space.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"[^ ]", RegexOptions.None, "en-US")]
+
+    private static partial Regex AllSpaces();
 
     /// <summary>
     ///   Returns a regular expression to detect prefixes.  It is a best-endeavours approach that
     ///   assumes that the prefix never contains a sequence of two or more spaces, unless they appear at the end of prefix.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>A regular expression.</returns>
     [GeneratedRegex(@"^(?<prefix>.*?)(?=\u0020\u0020[^\u0020]).*$", RegexOptions.None, "en-US")]
     private static partial Regex PrefixRegex();
 
@@ -839,9 +849,10 @@ public partial class Calibrator {
                             ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan)
                             : CalibrateDeadKey(data, token, dataEntryTimeSpan, _tokenSmallBarcodeSuffixData.suffix, _tokenSmallBarcodeSuffixData.endOfLine);
     }
-        catch (Exception)
+        catch (Exception ex)
         {
             LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
+            Console.WriteLine(ex.Message);
         }
 
         _tokenSmallBarcodeSuffixData = (extendedToken.suffix, extendedToken.endOfLine);
@@ -904,7 +915,66 @@ public partial class Calibrator {
                 : _tokenExtendedDataReportedPrefix;
 
             if (_tokenExtendedDataAimFlagCharacterSequence is "\0") {
-                _tokenExtendedDataCharacterMap.Add('\u0000', ']');
+                // Null may already been mapped to another character.  We favour AIM flag sequences over 
+                // control characters used in EDI data or any additional character mapped to null
+                if (_tokenExtendedDataCharacterMap.TryGetValue('\u0000', out var existingMap)) {
+                    var addMap = existingMap switch {
+                        '\u001C' or '\u001F' => ReplaceExistingMapForEdiControlCharacter(),
+                        '#' or '$' or '@' or '[' or '\\' or '^' or '`' or '{' or '|' or '}' or '~' => ReplaceExistingMapForAdditionalCharacter(),
+                        ']' => char.MinValue,
+                        _ => DoNotReplaceExistingMap()
+                    };
+
+                    if (addMap is not char.MinValue) {
+                        _tokenExtendedDataCharacterMap.Add('\u0000', addMap);
+                    }
+
+                    char ReplaceExistingMapForEdiControlCharacter() {
+                        _tokenExtendedDataCharacterMap.Remove('\u0000');
+                        _tokenWarnings?.RemoveAll(
+                            ci => ci.InformationType == ((existingMap == '\u001C')
+                                ? CalibrationInformationType.FileSeparatorSupported
+                                : CalibrationInformationType.UnitSeparatorSupported));
+
+                        LogCalibrationInformation(
+                            @out,
+                            CalibrationInformationType.IsoIec15434EdiNotReliablyReadable,
+                            char.MinValue.ToControlPictureString(),
+                            existingMap.ToControlPictureString());
+
+                        LogCalibrationInformation(
+                            @out,
+                            CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                            char.MinValue.ToControlPictureString(),
+                            existingMap.ToControlPictureString());
+
+                        LogCalibrationInformation(
+                            @out,
+                            CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
+
+                        return ']';
+                    }
+
+                    char ReplaceExistingMapForAdditionalCharacter() {
+                        _tokenExtendedDataCharacterMap.Remove('\u0000');
+
+                        LogCalibrationInformation(
+                            @out,
+                            CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                            char.MinValue.ToControlPictureString(),
+                            existingMap.ToControlPictureString());
+
+                        LogCalibrationInformation(
+                            @out,
+                            CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+
+                        return ']';
+                    }
+
+                    char DoNotReplaceExistingMap() {
+                        return char.MinValue;
+                    }
+                }
             }
         }
 
@@ -2331,7 +2401,7 @@ public partial class Calibrator {
         // Strip off any trailing Carriage Return or Line Feed characters. We assume these have been added by the barcode scanner. Typically, this
         // is done as a 'suffix' setting in the barcode scanner configuration, but we won't treat these as normal reportable suffixes, although we 
         // will report these separately.
-        var strippedData = data.StripTrailingCrLfs(out var trailingCrLfChars, baseline: true);
+        var strippedData = data.StripTrailingCrLfs(out var trailingCrLfChars);
 
         // Record if any trailing CR or LF characters were found. Configuring scanners to add these characters is generally beneficial as they allow
         // client software to detect the end of transmission without the need for timers.
@@ -3196,7 +3266,7 @@ public partial class Calibrator {
                                  * */
                                 if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out var value) && value == '\u001D') {
                                     // Is there a potential conflict with the character map?
-                                    if (_tokenExtendedDataCharacterMap.ContainsKey(reportedCharacterSequence[1])) {
+                                    if (_tokenExtendedDataCharacterMap.TryGetValue(reportedCharacterSequence[1], out var conflictingExpectedCharacter)) {
                                         // Return the reported dead key character for an expected character.
                                         char ReportedDeadKeyCharacter(char deadKeyExpectedCharacter) {
                                             var dkExpectedCharacterString = deadKeyExpectedCharacter.ToInvariantString();
@@ -3213,7 +3283,6 @@ public partial class Calibrator {
                                         var reportedSequence =
                                             $"{ReportedDeadKeyCharacter(_tokenDataValue)}{reportedCharacterSequence[1].ToControlPictureString()}";
                                         var expectedCharacterReportedAsDeadKey = _tokenDataValue.ToControlPictureString();
-                                        var conflictingExpectedCharacter = _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]];
                                         var expectedSequence =
                                             $"{expectedCharacterReportedAsDeadKey}{'\u001D'.ToControlPictureString()}{conflictingExpectedCharacter} {expectedCharacterReportedAsDeadKey}{conflictingExpectedCharacter}";
 
@@ -3236,12 +3305,10 @@ public partial class Calibrator {
                                          * this makes no difference in this scenario, it is an example of the way that characters
                                          * can logically be reported out of sequence in certain dead key scenarios.
                                          * */
-                                        if (RecognisedDataElements is { Count: > 0 })
-                                        {
+                                        if (RecognisedDataElements is { Count: > 0 }) {
                                             if (RecognisedDataElements.Any(e =>
-                                                    _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] ==
-                                                    e.Identifier[0]))
-                                            {
+                                                    conflictingExpectedCharacter ==
+                                                    e.Identifier[0])) {
                                                 // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                                 return LogCalibrationInformation(
                                                     InitializeTokenData(),
@@ -3258,8 +3325,7 @@ public partial class Calibrator {
                                                 reportedSequence,
                                                 expectedSequence);
                                         }
-                                        else
-                                        {
+                                        else {
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                             return LogCalibrationInformation(
                                                 InitializeTokenData(),
@@ -3450,7 +3516,7 @@ public partial class Calibrator {
 
     /// <summary>
     ///   Determine if EDI barcodes are unreadable when the scanner does not report an
-    /// ASCII 28 or an ASCII 31.
+    ///   ASCII 28 or an ASCII 31.
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <param name="reportedCharacterSequence">A reported character sequence.</param>
@@ -4603,8 +4669,8 @@ public partial class Calibrator {
 
             if (reportedChar == expectedChar) continue;
 
-            if (differences.ContainsKey(reportedChar)) {
-                if (differences[reportedChar] == expectedChar) {
+            if (differences.TryGetValue(reportedChar, out var differencesValue)) {
+                if (differencesValue == expectedChar) {
                     continue;
                 }
 
@@ -4702,7 +4768,7 @@ public partial class Calibrator {
                 if (sequence is not ['\u0000', '\u0020']) {
                     // If any two sequences are identical, it will not be possible to disambiguate them. Detect any ambiguities, and
                     // return immediately if they are detected for invariant characters.
-                    if (validSequences.ContainsKey(sequence)) {
+                    if (validSequences.TryGetValue(sequence, out var sequenceValue)) {
                         if (invariant) {
                             return LogCalibrationInformation(
                                 token,
@@ -4710,7 +4776,7 @@ public partial class Calibrator {
                                     ? CalibrationInformationType.MultipleKeys
                                     : CalibrationInformationType.MultipleSequences,
                                 sequence.ToControlPictures(),
-                                $"{validSequences[sequence].ToControlPictures()} {expectedSegment[sequenceIdx + offsetRight].ToControlPictures()}");
+                                $"{sequenceValue.ToControlPictures()} {expectedSegment[sequenceIdx + offsetRight].ToControlPictures()}");
                         }
 
                         // Warning - Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}
@@ -5841,7 +5907,7 @@ public partial class Calibrator {
                             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                             break;
                         case CalibrationSegments.UnitSeparatorSegment:
-                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
+                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
                             break;
                     }
                 }
@@ -5869,8 +5935,9 @@ public partial class Calibrator {
                     case 1: {
                             var key = reportedControl.First();
 
-                            if (_tokenExtendedDataCharacterMap.ContainsKey(key)) {
-                                if (InvariantsMatchRegex().IsMatch(_tokenExtendedDataCharacterMap[key].ToInvariantString())) {
+                            
+                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue)) {
+                                if (InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString())) {
                                     switch (idx) {
                                         case CalibrationSegments.GroupSeparatorSegment:
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
@@ -5878,7 +5945,7 @@ public partial class Calibrator {
                                             token,
                                             CalibrationInformationType.GroupSeparatorMapping,
                                             key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
+                                            $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                         case CalibrationSegments.RecordSeparatorSegment:
                                             // The ambiguity is resolved by the parser by inferring the ASCII 30.
                                             break;
@@ -5889,7 +5956,7 @@ public partial class Calibrator {
                                             token,
                                             CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
+                                            $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             break;
                                     }
                                 }
@@ -6250,7 +6317,7 @@ public partial class Calibrator {
             return false;
         }
 
-        if (_tokenDataPrefix is null) _tokenDataPrefix = string.Empty;
+        _tokenDataPrefix ??= string.Empty;
 
         data = token.Data.SmallBarcodeSequenceIndex < token.Data.SmallBarcodeSequenceCount
 
@@ -6340,9 +6407,18 @@ public partial class Calibrator {
             // Find any suffix
             var suffix = SuffixRegex().Match(reportedData).Groups["s"];
 
+
             if (suffix is not { Success: true, Length: > 0 }) return (reportedData, knownSuffix, knownEndOfLine);
+
             suffixValue = suffix.Value.TrimEnd('\n', '\r');
             endOfLine = suffix.Value[suffixValue.Length..];
+
+            // As a safety measure, if all characters are spaces, then return.  This caters for situations where 
+            // ASCII control characters are not reported as nulls if not supported by scanner keyboard layout.
+            // NB. this situation kshould be detetcted already using SuffixRegex(), but if for any reason it is 
+            // not, this acts as a backstop.
+            var suffixFirstNonSpaceCharacter = AllSpaces().Match(suffixValue);
+            if (suffixFirstNonSpaceCharacter is not { Success: true }) return (reportedData, knownSuffix, knownEndOfLine);
         }
 
         if (suffixValue == string.Empty) return (reportedData, knownSuffix, knownEndOfLine);

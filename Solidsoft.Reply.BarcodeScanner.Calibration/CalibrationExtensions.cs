@@ -57,9 +57,7 @@ internal static partial class CalibrationExtensions
     /// </summary>
     /// <param name="input">The input data from which trailing CR and LF characters will be stripped</param>
     /// <param name="trailingCrLfChars">The trailing CR and LF characters, if any; Otherwise, and empty string.</param>
-    /// <param name="baseline">Indicates if this is the baseline barcode or the last small barcode in the baseline sequence.</param>
-    /// <returns>The input data without any trailing CR or LF characters.</returns>
-    public static string StripTrailingCrLfs(this string input, out string trailingCrLfChars, bool baseline = false)
+    public static string StripTrailingCrLfs(this string input, out string trailingCrLfChars)
     {
         trailingCrLfChars = string.Empty;
 
@@ -93,7 +91,7 @@ internal static partial class CalibrationExtensions
 
             for (var idx = 0; idx < characters.Count; idx++)
             {
-                var c = characters[idx];
+                _ = characters[idx];
                 trailingCrLfChars += idx == 0 ? "CR" : "LF";
             }
 
@@ -111,7 +109,7 @@ internal static partial class CalibrationExtensions
     /// <param name="baseline">Indicates if this is the baseline barcode or the last small barcode in the baseline sequence.</param>
     /// <returns>The input data without any trailing CR or LF characters.</returns>
     public static string StripTrailingCrLfs(this string input, bool baseline = false) =>
-        StripTrailingCrLfs(input, out _, baseline);
+        StripTrailingCrLfs(input, out _);
 
     /// <summary>
     ///   Finds an extended ASCII character that is not being used in the input string.

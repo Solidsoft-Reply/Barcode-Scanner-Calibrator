@@ -4,5 +4,3 @@
 // a specific target and scoped to a namespace, type, member, etc.
 
 using System.Diagnostics.CodeAnalysis;
-
-[assembly: SuppressMessage("Major Code Smell", "S3358:Ternary operators should not be nested", Justification = "<Pending>", Scope = "member", Target = "~M:Solidsoft.Reply.BarcodeScanner.Calibration.Advice.#ctor(Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities,System.Boolean)")]

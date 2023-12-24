@@ -178,13 +178,13 @@ public enum CalibrationInformationType
 
     /// <summary>
     ///   WARNING: The reported character {0} is ambiguous. There are multiple keys for the same character, each representing
-    /// a different expected character. However, at most, only one of the expected characters is invariant.
+    ///   a different expected character. However, at most, only one of the expected characters is invariant.
     /// </summary>
     MultipleKeysNonInvariantCharacters = 250,
 
     /// <summary>
     ///   WARNING: Some reported characters are ambiguous. There are multiple keys for the same character, each representing a
-    /// different non-invariant expected ASCII character: {0}
+    ///   different non-invariant expected ASCII character: {0}
     /// </summary>
     MultipleKeysMultipleNonInvariantCharacters = 251,
 
