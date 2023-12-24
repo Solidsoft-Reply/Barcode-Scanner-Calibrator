@@ -2142,8 +2142,6 @@ public partial class Calibrator {
             ? data[_tokenDataPrefix.Length..]
             : data[BarcodePrefix(data).Length..];
 
-        Console.WriteLine(data);
-
         var provenance = BarcodeProvenance(data, true);
 
         switch (provenance) {
