@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
+    <value>Hay discrepancias en los elementos de consejo restantes.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>El sufijo {0} no coincide con el sufijo esperado {1}.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Procedencia del código de barras incorrecta.</value>
+  </data>
+  <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
+    <value>Tipo de información de error incorrecto.</value>
+  </data>
+  <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
+    <value>Tipo de información informativa incorrecta.</value>
+  </data>
+  <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
+    <value>Tipo de información de advertencia incorrecto.</value>
+  </data>
+  <data name="CalibrationInformation_130" xml:space="preserve">
+    <value>Los identificadores AIM son compatibles.</value>
+  </data>
+  <data name="CalibrationInformation_131" xml:space="preserve">
+    <value>El escáner de códigos de barras está transmitiendo un identificador AIM: {0}</value>
+  </data>
+  <data name="CalibrationInformation_132" xml:space="preserve">
+    <value>El escáner de códigos de barras puede estar transmitiendo un identificador AIM: {0}</value>
+  </data>
+  <data name="CalibrationInformation_150" xml:space="preserve">
+    <value>El escáner de códigos de barras está transmitiendo una secuencia de caracteres de fin de línea: {0}</value>
+  </data>
+  <data name="CalibrationInformation_160" xml:space="preserve">
+    <value>Los caracteres separadores de grupo son compatibles.</value>
+  </data>
+  <data name="CalibrationInformation_161" xml:space="preserve">
+    <value>Los caracteres separadores de registro son compatibles.</value>
+  </data>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Los caracteres separadores EDI son compatibles.</value>
+  </data>
+  <data name="CalibrationInformation_170" xml:space="preserve">
+    <value>El escáner de códigos de barras puede estar configurado para compensar el bloqueo de mayúsculas.</value>
+  </data>
+  <data name="CalibrationInformation_180" xml:space="preserve">
+    <value>El teclado de la computadora admite el siguiente script: {0}</value>
+  </data>
+  <data name="CalibrationInformation_190" xml:space="preserve">
+    <value>El teclado de la computadora está configurado para la siguiente plataforma: {0}</value>
+  </data>
+  <data name="CalibrationInformation_200" xml:space="preserve">
+    <value>Algunos caracteres ASCII no invariantes no pueden ser detectados.</value>
+  </data>
+  <data name="CalibrationInformation_201" xml:space="preserve">
+    <value>Algunos caracteres ASCII no invariantes no son reconocidos: {0}</value>
+  </data>
+  <data name="CalibrationInformation_202" xml:space="preserve">
+    <value>Algunas combinaciones de caracteres ASCII no invariantes no son reconocidas: {0}</value>
+  </data>
+  <data name="CalibrationInformation_210" xml:space="preserve">
+    <value>No se pueden reconocer los códigos de barras que utilizan la sintaxis ISO/IEC 15434.</value>
+  </data>
+  <data name="CalibrationInformation_211" xml:space="preserve">
+    <value>Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 para representar datos EDI no pueden ser leídos de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_212" xml:space="preserve">
+    <value>El carácter reportado {0} es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 no pueden leerse de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>El escáner de códigos de barras no está transmitiendo un Identificador AIM.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>El Identificador AIM no puede ser reconocido.</value>
+  </data>
+  <data name="CalibrationInformation_230" xml:space="preserve">
+    <value>El escáner de códigos de barras está transmitiendo un prefijo: {0}</value>
+  </data>
+  <data name="CalibrationInformation_231" xml:space="preserve">
+    <value>El escáner de códigos de barras está transmitiendo un código: {0}</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>El escáner de códigos de barras está transmitiendo un sufijo: {0}</value>
+  </data>
+  <data name="CalibrationInformation_240" xml:space="preserve">
+    <value>El escáner de códigos de barras no está transmitiendo una secuencia de caracteres de fin de línea (por ejemplo, un retorno de carro).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>El carácter reportado {0} es ambiguo. Hay múltiples teclas para el mismo carácter, cada una representando un carácter esperado diferente. Sin embargo, como máximo, solo uno de los caracteres esperados es invariante.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Algunos caracteres reportados son ambiguos. Hay múltiples teclas para el mismo carácter, cada una representando un diferente carácter ASCII no invariante esperado: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Los Identificadores AIM no pueden ser reconocidos. El carácter reportado {0} es ambiguo. Hay múltiples teclas para este carácter que representa el carácter de bandera AIM así como otros carácter(es) esperados.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Algunos caracteres ASCII no invariantes reportados son ambiguos: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>El carácter reportado {0} es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 para representar datos EDI no pueden leerse de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Algunas secuencias de caracteres reportadas son ambiguas. Estos caracteres no representan caracteres invariantes: {0}</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. Esto puede impedir la lectura de cualquier elemento de datos adicional incluido en un código de barras.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden para caracteres invariantes.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden para caracteres ASCII no invariantes.</value>
+  </data>
+  <data name="CalibrationInformation_263" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar Separadores de Grupo.</value>
+  </data>
+  <data name="CalibrationInformation_264" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar Separadores de Registro.</value>
+  </data>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar separadores EDI.</value>
+  </data>
+  <data name="CalibrationInformation_266" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar identificadores AIM.</value>
+  </data>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>No se puede determinar la correspondencia de los diseños del escáner de códigos de barras y del teclado de la computadora.</value>
+  </data>
+  <data name="CalibrationInformation_270" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado.</value>
+  </data>
+  <data name="CalibrationInformation_271" xml:space="preserve">
+    <value>El bloqueo de mayúsculas puede estar activado.</value>
+  </data>
+  <data name="CalibrationInformation_272" xml:space="preserve">
+    <value>El escáner de códigos de barras puede estar configurado para convertir caracteres a mayúsculas.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>El escáner de códigos de barras puede estar configurado para convertir caracteres a minúsculas.</value>
+  </data>
+  <data name="CalibrationInformation_274" xml:space="preserve">
+    <value>El escáner de códigos de barras puede estar configurado para invertir el caso de los caracteres.</value>
+  </data>
+  <data name="CalibrationInformation_280" xml:space="preserve">
+    <value>El mejor tiempo de entrada de datos de teclado reportado durante la calibración indica que el escáner de códigos de barras no funciona de manera óptima.</value>
+  </data>
+  <data name="CalibrationInformation_300" xml:space="preserve">
+    <value>No se informaron datos de calibración.</value>
+  </data>
+  <data name="CalibrationInformation_301" xml:space="preserve">
+    <value>Los datos reportados no son reconocidos. Se puede haber escaneado el código de barras incorrecto.</value>
+  </data>
+  <data name="CalibrationInformation_302" xml:space="preserve">
+    <value>Se detectaron demasiados caracteres. Se puede haber escaneado el código de barras incorrecto.</value>
+  </data>
+  <data name="CalibrationInformation_303" xml:space="preserve">
+    <value>Se informaron datos parciales para el código de barras de calibración.</value>
+  </data>
+  <data name="CalibrationInformation_304" xml:space="preserve">
+    <value>Los datos reportados son para el código de barras de calibración incorrecto.</value>
+  </data>
+  <data name="CalibrationInformation_310" xml:space="preserve">
+    <value>Algunos caracteres invariantes no pueden ser detectados.</value>
+  </data>
+  <data name="CalibrationInformation_311" xml:space="preserve">
+    <value>Algunos caracteres invariantes no son reconocidos por el escáner de códigos de barras en su configuración actual: {0}</value>
+  </data>
+  <data name="CalibrationInformation_312" xml:space="preserve">
+    <value>Algunas combinaciones de teclas que incluyen caracteres invariantes no son reconocidas: {0}</value>
+  </data>
+  <data name="CalibrationInformation_320" xml:space="preserve">
+    <value>No se informa ningún separador de grupo.</value>
+  </data>
+  <data name="CalibrationInformation_360" xml:space="preserve">
+    <value>El carácter reportado {0} es ambiguo. Hay múltiples teclas para el mismo carácter, cada una representando un carácter esperado diferente.</value>
+  </data>
+  <data name="CalibrationInformation_361" xml:space="preserve">
+    <value>El carácter reportado {0} es ambiguo. El mismo carácter se informa para múltiples secuencias de teclas muertas que representan diferentes caracteres esperados.</value>
+  </data>
+  <data name="CalibrationInformation_362" xml:space="preserve">
+    <value>El carácter de tecla muerta reportado {0} es ambiguo. Hay múltiples teclas muertas para el mismo carácter, cada una representando un carácter esperado diferente.</value>
+  </data>
+  <data name="CalibrationInformation_363" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. La misma secuencia se informa para múltiples secuencias de caracteres esperadas.</value>
+  </data>
+  <data name="CalibrationInformation_364" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. La misma secuencia se informa para múltiples teclas muertas en la disposición del teclado del escáner de códigos de barras.</value>
+  </data>
+  <data name="CalibrationInformation_365" xml:space="preserve">
+    <value>El carácter {0} no puede representarse de manera confiable debido a la incompatibilidad con la disposición del teclado.</value>
+  </data>
+  <data name="CalibrationInformation_366" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. Esto representa el carácter separador de grupo.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Algunos caracteres reportados son ambiguos. Pueden ser informados individualmente pero también se utilizan para componer ligaduras: {0}</value>
+  </data>
+  <data name="CalibrationInformation_370" xml:space="preserve">
+    <value>Los datos de calibración reportados no pueden procesarse. No incluyen delimitadores esperados.</value>
+  </data>
+  <data name="CalibrationInformation_371" xml:space="preserve">
+    <value>Los datos de calibración reportados no pueden procesarse. No se puede determinar ningún carácter para actuar como delimitador temporal.</value>
+  </data>
+  <data name="CalibrationInformation_390" xml:space="preserve">
+    <value>La calibración falló. {0}</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Elemento de consejo inválido.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Nivel de información inválido.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Falló al insertar marcadores de posición de espacio.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Argumento inválido proporcionado al método Replace de expresión regular.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>La expresión regular agotó el tiempo mientras realizaba una coincidencia.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>No se puede encontrar un carácter adecuado para el marcador de posición temporal. Todos los caracteres ASCII extendidos ya están utilizados en la cadena de entrada.</value>
+  </data>
+</root>

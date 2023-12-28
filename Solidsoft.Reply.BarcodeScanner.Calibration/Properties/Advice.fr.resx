@@ -119,7 +119,6 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Vous devrez peut-être saisir les données manuellement dans votre logiciel pour les codes-barres qui contiennent des données formatées selon les caractères ISO/IEC 15434.</value>
@@ -163,11 +162,9 @@
   </data>
   <data name="Advice_230" xml:space="preserve">
     <value>Assurez-vous que vos dispositions de clavier correspondent.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_231" xml:space="preserve">
     <value>Assurez-vous que vos dispositions de clavier correspondent.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_232" xml:space="preserve">
     <value>Vérifiez que votre lecteur de code-barres est configuré pour transmettre les identifiants AIM.</value>
@@ -175,55 +172,42 @@
   </data>
   <data name="Advice_235" xml:space="preserve">
     <value>Assurez-vous que vos dispositions de clavier correspondent.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique et transmettre les identifiants AIM.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_240" xml:space="preserve">
     <value>Si vous rencontrez des problèmes lors du scan de codes-barres contenant des données de Format 05 ou Format 06, saisissez les données manuellement dans votre logiciel. Si nécessaire, configurez votre lecteur de code.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_241" xml:space="preserve">
     <value>Saisissez manuellement les données dans votre logiciel pour les codes-barres qui contiennent des données de Format 05 ou Format 06. Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_245" xml:space="preserve">
     <value>Saisissez manuellement les données dans votre logiciel pour les codes-barres qui contiennent des données de Format 05 ou Format 06. Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_250" xml:space="preserve">
     <value>Si vous prévoyez de scanner des codes-barres contenant des données formatées selon l'ISO/IEC 15434, relancez le test, cette fois en incluant le test de compatibilité des données ISO/IEC 15434.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_255" xml:space="preserve">
     <value>Si le problème persiste, vérifiez la configuration de votre lecteur de code-barres. Cherchez des paramètres qui amélioreront la performance de saisie au clavier.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_256" xml:space="preserve">
     <value>Si le problème persiste, vérifiez la configuration de votre lecteur de code-barres. Cherchez des paramètres qui amélioreront la performance de saisie au clavier.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_260" xml:space="preserve">
     <value>Si vous scannez d'autres codes-barres et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_261" xml:space="preserve">
     <value>Si vous scannez d'autres codes-barres et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_265" xml:space="preserve">
     <value>Si vous scannez d'autres codes-barres et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_270" xml:space="preserve">
     <value>Si vous scannez des codes-barres EDI et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_271" xml:space="preserve">
     <value>Si vous scannez des codes-barres EDI et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_275" xml:space="preserve">
     <value>Si vous scannez des codes-barres EDI et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Essayez à nouveau, en vous assurant de scanner le(s) bon(s) code(s)-barres.</value>
@@ -267,47 +251,36 @@
   </data>
   <data name="Advice_315" xml:space="preserve">
     <value>Configurez votre lecteur de code-barres pour correspondre à la disposition de votre clavier d'ordinateur.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_316" xml:space="preserve">
     <value>Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_320" xml:space="preserve">
     <value>Si votre logiciel ne peut pas compenser, configurez votre lecteur de code-barres pour correspondre à la disposition de votre clavier d'ordinateur.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_325" xml:space="preserve">
     <value>Désactivez le verrouillage des majuscules et testez à nouveau.;;Si vous devez garder le verrouillage des majuscules activé lors du scan de codes-barres, vous pourrez peut-être configurer votre lecteur de code-barres pour compenser.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_326" xml:space="preserve">
     <value>Désactivez le verrouillage des majuscules et testez à nouveau.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_327" xml:space="preserve">
     <value>Vérifiez votre lecteur de code-barres, clavier et configuration informatique et reconfigurez-les si nécessaire.;;Désactivez le verrouillage des majuscules et testez à nouveau.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_328" xml:space="preserve">
     <value>Vérifiez votre lecteur de code-barres, clavier et configuration informatique et reconfigurez-les si nécessaire.;;Désactivez le verrouillage des majuscules et testez à nouveau.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_330" xml:space="preserve">
     <value>Vérifiez votre lecteur de code-barres, clavier et configuration informatique et reconfigurez-les si nécessaire.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_331" xml:space="preserve">
     <value>Vérifiez votre lecteur de code-barres, clavier et configuration informatique et reconfigurez-les si nécessaire.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_332" xml:space="preserve">
     <value>Vérifiez votre lecteur de code-barres, clavier et configuration informatique et reconfigurez-les si nécessaire.</value>
-    <comment>High</comment>
   </data>
   <data name="Advice_335" xml:space="preserve">
     <value>Si possible, configurez votre ordinateur pour utiliser une disposition de clavier différente.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Votre système lit la plupart des codes-barres de manière fiable.</value>
@@ -355,11 +328,9 @@
   </data>
   <data name="Condition_230" xml:space="preserve">
     <value>Votre système peut ne pas lire les caractères des identifiants AIM.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_231" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des identifiants AIM.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_232" xml:space="preserve">
     <value>Votre scanner de code-barres peut ne pas transmettre les identifiants AIM.</value>
@@ -367,55 +338,42 @@
   </data>
   <data name="Condition_235" xml:space="preserve">
     <value>Votre système ne peut pas lire l'identifiant de type de code-barres.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_240" xml:space="preserve">
     <value>Votre système peut ne pas être en mesure de lire de manière fiable les codes-barres de Format 05 ou Format 06.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_241" xml:space="preserve">
     <value>Votre système ne peut pas lire de manière fiable les codes-barres de Format 05 ou Format 06.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_245" xml:space="preserve">
     <value>Votre système ne peut pas lire de manière fiable les codes-barres de Format 05 ou Format 06.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_250" xml:space="preserve">
     <value>Vous n'avez pas testé la compatibilité pour la compatibilité avec l'ISO/IEC 15434.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>La performance de saisie des données est plus lente que prévue.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_256" xml:space="preserve">
     <value>La performance de saisie des données est très médiocre.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_260" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_261" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_265" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>
@@ -459,47 +417,36 @@
   </data>
   <data name="Condition_315" xml:space="preserve">
     <value>Votre scanner de code-barres et votre ordinateur ont des dispositions de clavier différentes.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_316" xml:space="preserve">
     <value>Les caractères cachés dans les codes-barres ne sont pas signalés correctement.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_320" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_325" xml:space="preserve">
     <value>Le verrouillage des majuscules est activé.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_326" xml:space="preserve">
     <value>Le verrouillage des majuscules est activé.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_327" xml:space="preserve">
     <value>Votre scanner de code-barres peut être configuré pour convertir les caractères en majuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_328" xml:space="preserve">
     <value>Votre scanner de code-barres peut être configuré pour convertir les caractères en minuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_330" xml:space="preserve">
     <value>Votre scanner de code-barres peut être configuré pour simuler le verrouillage des majuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_331" xml:space="preserve">
     <value>Votre scanner de code-barres peut être configuré pour convertir les caractères en majuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_332" xml:space="preserve">
     <value>Votre scanner de code-barres peut être configuré pour convertir les caractères en minuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Condition_335" xml:space="preserve">
     <value>Votre disposition de clavier prend en charge {0} caractères et ne peut pas lire les codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_105" xml:space="preserve">
     <value>Cependant, vous n'avez pas testé la compatibilité avec l'ISO/IEC 15434. Votre système peut ne pas être capable de lire les codes-barres de manière fiable s'ils contiennent des données formatées selon l'ISO/IEC 15434.</value>
@@ -543,11 +490,9 @@
   </data>
   <data name="Description_230" xml:space="preserve">
     <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles. Cependant, le logiciel doit mettre en œuvre une cartographie des caractères pour lire les identifiants AIM de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_231" xml:space="preserve">
     <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_232" xml:space="preserve">
     <value>Votre scanner de code-barres peut transmettre les identifiants AIM, mais ce n'est pas certain. Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
@@ -555,47 +500,36 @@
   </data>
   <data name="Description_235" xml:space="preserve">
     <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_240" xml:space="preserve">
     <value>Votre logiciel doit implémenter une cartographie des caractères pour lire les codes-barres de manière fiable s'ils contiennent des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_245" xml:space="preserve">
     <value>Certains logiciels peuvent être en mesure de compenser cela en analysant les codes clés plutôt que les caractères.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_255" xml:space="preserve">
     <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_256" xml:space="preserve">
     <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_260" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des caractères non invariants. Votre logiciel doit mettre en œuvre une cartographie des caractères pour lire ces codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_261" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_265" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des caractères non invariants.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_270" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des données EDI. Votre logiciel doit mettre en œuvre une cartographie des caractères pour lire ces codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_271" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des données EDI.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des données EDI.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Vous avez peut-être scanné un mauvais code-barres ou saisi des données incorrectes à l'aide du clavier. Votre lecteur de code-barres ou système peut être lent, ou un problème inattendu ou intermittent peut être survenu.</value>
@@ -619,35 +553,27 @@
   </data>
   <data name="Description_315" xml:space="preserve">
     <value>Votre logiciel peut être en mesure de compenser. Cependant, votre système ne peut pas lire correctement les caractères pour les codes-barres contenant des données de Format 05 ou Format 06. Certains logiciels peuvent compenser cela en analysant les codes clés plutôt que les caractères.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_316" xml:space="preserve">
     <value>Votre logiciel peut être en mesure de compenser. Cependant, votre système ne peut pas lire correctement les caractères des codes-barres contenant des données de Format 05 ou Format 06. Certains logiciels peuvent compenser cela en analysant les codes clés plutôt que les caractères.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_320" xml:space="preserve">
     <value>Certains logiciels peuvent être en mesure de compenser cela en analysant les codes clés plutôt que les caractères.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_326" xml:space="preserve">
     <value>Lorsque le verrouillage des majuscules est activé, le comportement par défaut est de signaler tous les caractères en majuscules.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_327" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_328" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_331" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="Description_332" xml:space="preserve">
     <value>Votre système ne peut pas lire les caractères des codes-barres de manière fiable.</value>
-    <comment>High</comment>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Erreur lors de la résolution des scripts clavier : {0}</value>

@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Advice_100" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Advice_105" xml:space="preserve">
+    <value>Puede que necesite ingresar datos manualmente en su software para códigos de barras que contengan datos formateados según los caracteres de ISO/IEC 15434.</value>
+  </data>
+  <data name="Advice_110" xml:space="preserve">
+    <value>Si experimenta problemas al escanear códigos de barras que contienen datos de Formato 05 o Formato 06, ingrese datos manualmente en su software. Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_115" xml:space="preserve">
+    <value>Ingrese datos manualmente en su software para códigos de barras que contienen datos de Formato 05 o Formato 06. Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_200" xml:space="preserve">
+    <value>Configure su escáner de códigos de barras para transmitir identificadores AIM. Si tiene problemas al transmitir identificadores AIM, vuelva a la configuración actual.</value>
+  </data>
+  <data name="Advice_205" xml:space="preserve">
+    <value>Puede que quiera apagar el bloqueo de mayúsculas y probar de nuevo.</value>
+  </data>
+  <data name="Advice_206" xml:space="preserve">
+    <value>Verifique sus configuraciones de escáner de códigos de barras, teclado y computadora y reconfigúrelos si es necesario.;;Puede querer apagar el bloqueo de mayúsculas y probar de nuevo.</value>
+  </data>
+  <data name="Advice_210" xml:space="preserve">
+    <value>Puede que quiera apagar el bloqueo de mayúsculas.</value>
+  </data>
+  <data name="Advice_215" xml:space="preserve">
+    <value>Configure su escáner de códigos de barras para transmitir secuencias de fin de línea y pruebe de nuevo. Si tiene problemas al transmitir secuencias de fin de línea, vuelva a la configuración actual.</value>
+  </data>
+  <data name="Advice_220" xml:space="preserve">
+    <value>Si tiene problemas para escanear datos de códigos de barras, configure su escáner de códigos de barras para que no transmita un prefijo.</value>
+  </data>
+  <data name="Advice_225" xml:space="preserve">
+    <value>Si tiene problemas para escanear datos de códigos de barras, configure su escáner de códigos de barras para que no transmita ningún sufijo.</value>
+  </data>
+  <data name="Advice_230" xml:space="preserve">
+    <value>Asegúrese de que las disposiciones de su teclado coincidan.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_231" xml:space="preserve">
+    <value>Asegúrese de que las disposiciones de su teclado coincidan.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_232" xml:space="preserve">
+    <value>Verifique que su escáner de códigos de barras esté configurado para transmitir identificadores AIM.</value>
+  </data>
+  <data name="Advice_235" xml:space="preserve">
+    <value>Asegúrese de que las disposiciones de su teclado coincidan.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico y transmitir identificadores AIM.</value>
+  </data>
+  <data name="Advice_240" xml:space="preserve">
+    <value>Si experimenta problemas al escanear códigos de barras que contienen datos de Formato 05 o Formato 06, ingrese datos manualmente en su software. Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_241" xml:space="preserve">
+    <value>Ingrese datos manualmente en su software para códigos de barras que contienen datos de Formato 05 o Formato 06. Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_245" xml:space="preserve">
+    <value>Ingrese datos manualmente en su software para códigos de barras que contienen datos de Formato 05 o Formato 06. Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_250" xml:space="preserve">
+    <value>Si espera escanear códigos de barras que contengan datos formateados según ISO/IEC 15434, ejecute la prueba de nuevo, esta vez incluyendo la prueba de compatibilidad de datos ISO/IEC 15434.</value>
+  </data>
+  <data name="Advice_255" xml:space="preserve">
+    <value>Si el problema persiste, verifique la configuración de su escáner de códigos de barras. Busque configuraciones que mejoren el rendimiento de entrada del teclado.</value>
+  </data>
+  <data name="Advice_256" xml:space="preserve">
+    <value>Si el problema persiste, verifique la configuración de su escáner de códigos de barras. Busque configuraciones que mejoren el rendimiento de entrada del teclado.</value>
+  </data>
+  <data name="Advice_260" xml:space="preserve">
+    <value>Si escanea otros códigos de barras y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_261" xml:space="preserve">
+    <value>Si escanea otros códigos de barras y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_265" xml:space="preserve">
+    <value>Si escanea otros códigos de barras y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_270" xml:space="preserve">
+    <value>Si escanea códigos de barras EDI y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_271" xml:space="preserve">
+    <value>Si escanea códigos de barras EDI y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_275" xml:space="preserve">
+    <value>Si escanea códigos de barras EDI y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_300" xml:space="preserve">
+    <value>Intente de nuevo, asegurándose de escanear el(los) código(s) de barras correcto(s).</value>
+  </data>
+  <data name="Advice_301" xml:space="preserve">
+    <value>Intente de nuevo, asegurándose de escanear el código de barras correcto.</value>
+  </data>
+  <data name="Advice_303" xml:space="preserve">
+    <value>Intente de nuevo.;;Asegúrese de que las disposiciones de su teclado coincidan.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_304" xml:space="preserve">
+    <value>Intente de nuevo, asegurándose de escanear el(los) código(s) de barras correcto(s).</value>
+  </data>
+  <data name="Advice_305" xml:space="preserve">
+    <value>Intente de nuevo, asegurándose de escanear el código de barras correcto.;;Si se le pide escanear varios códigos de barras, asegúrese de escanearlos en el orden correcto.</value>
+  </data>
+  <data name="Advice_306" xml:space="preserve">
+    <value>Intente de nuevo.</value>
+  </data>
+  <data name="Advice_307" xml:space="preserve">
+    <value>Si su software no puede compensar, configure su escáner de códigos de barras para que coincida con la disposición del teclado de su computadora.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_308" xml:space="preserve">
+    <value>Configure su escáner de códigos de barras para que coincida con la disposición del teclado de su computadora.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_309" xml:space="preserve">
+    <value>Si su software no puede compensar, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_310" xml:space="preserve">
+    <value>Configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_315" xml:space="preserve">
+    <value>Configure su escáner de códigos de barras para que coincida con la disposición del teclado de su computadora.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_316" xml:space="preserve">
+    <value>Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_320" xml:space="preserve">
+    <value>Si su software no puede compensar, configure su escáner de códigos de barras para que coincida con la disposición del teclado de su computadora.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_325" xml:space="preserve">
+    <value>Apague el bloqueo de mayúsculas y pruebe de nuevo.;;Si debe mantener el bloqueo de mayúsculas activado mientras escanea códigos de barras, es posible que pueda configurar su escáner de códigos de barras para compensar.</value>
+  </data>
+  <data name="Advice_326" xml:space="preserve">
+    <value>Apague el bloqueo de mayúsculas y pruebe de nuevo.</value>
+  </data>
+  <data name="Advice_327" xml:space="preserve">
+    <value>Verifique su escáner de códigos de barras, teclado y configuración de la computadora y reconfigúrelos si es necesario.;;Apague el bloqueo de mayúsculas y pruebe de nuevo.</value>
+  </data>
+  <data name="Advice_328" xml:space="preserve">
+    <value>Verifique su escáner de códigos de barras, teclado y configuración de la computadora y reconfigúrelos si es necesario.;;Apague el bloqueo de mayúsculas y pruebe de nuevo.</value>
+  </data>
+  <data name="Advice_330" xml:space="preserve">
+    <value>Verifique su escáner, teclado y configuración de la computadora y reconfigúrelos si es necesario.</value>
+  </data>
+  <data name="Advice_331" xml:space="preserve">
+    <value>Verifique su escáner de códigos de barras, teclado y configuración de la computadora y reconfigúrelos si es necesario.</value>
+  </data>
+  <data name="Advice_332" xml:space="preserve">
+    <value>Verifique su escáner de códigos de barras, teclado y configuración de la computadora y reconfigúrelos si es necesario.</value>
+  </data>
+  <data name="Advice_335" xml:space="preserve">
+    <value>Si es posible, configure su computadora para usar una disposición de teclado diferente.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Condition_100" xml:space="preserve">
+    <value>Su sistema lee la mayoría de los códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Condition_105" xml:space="preserve">
+    <value>Su sistema lee la mayoría de los códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Condition_110" xml:space="preserve">
+    <value>Su sistema lee códigos de barras GS1 de manera confiable.</value>
+  </data>
+  <data name="Condition_115" xml:space="preserve">
+    <value>Su sistema lee códigos de barras GS1 de manera confiable.</value>
+  </data>
+  <data name="Condition_200" xml:space="preserve">
+    <value>Su escáner de códigos de barras no transmite identificadores AIM.</value>
+  </data>
+  <data name="Condition_205" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado, pero la capitalización de las letras se informa correctamente.</value>
+  </data>
+  <data name="Condition_206" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado, pero la capitalización de las letras se preserva.</value>
+  </data>
+  <data name="Condition_210" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado.</value>
+  </data>
+  <data name="Condition_215" xml:space="preserve">
+    <value>Su escáner de códigos de barras no transmite una secuencia de fin de línea.</value>
+  </data>
+  <data name="Condition_220" xml:space="preserve">
+    <value>Su escáner de códigos de barras transmite un prefijo.</value>
+  </data>
+  <data name="Condition_225" xml:space="preserve">
+    <value>Su escáner de códigos de barras transmite un sufijo.</value>
+  </data>
+  <data name="Condition_230" xml:space="preserve">
+    <value>Su sistema puede no leer caracteres de identificadores AIM.</value>
+  </data>
+  <data name="Condition_231" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de identificadores AIM.</value>
+  </data>
+  <data name="Condition_232" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede no transmitir identificadores AIM.</value>
+  </data>
+  <data name="Condition_235" xml:space="preserve">
+    <value>Su sistema no puede leer el identificador del tipo de código de barras.</value>
+  </data>
+  <data name="Condition_240" xml:space="preserve">
+    <value>Su sistema puede no ser capaz de leer códigos de barras de Formato 05 o Formato 06 de manera confiable.</value>
+  </data>
+  <data name="Condition_241" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de Formato 05 o Formato 06 de manera confiable.</value>
+  </data>
+  <data name="Condition_245" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de Formato 05 o Formato 06 de manera confiable.</value>
+  </data>
+  <data name="Condition_250" xml:space="preserve">
+    <value>No probó la compatibilidad con ISO/IEC 15434.</value>
+  </data>
+  <data name="Condition_255" xml:space="preserve">
+    <value>El rendimiento de entrada de datos es más lento de lo esperado.</value>
+  </data>
+  <data name="Condition_256" xml:space="preserve">
+    <value>El rendimiento de entrada de datos es muy deficiente.</value>
+  </data>
+  <data name="Condition_260" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen caracteres no invariantes.</value>
+  </data>
+  <data name="Condition_261" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen caracteres no invariantes.</value>
+  </data>
+  <data name="Condition_265" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen caracteres no invariantes.</value>
+  </data>
+  <data name="Condition_270" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen datos EDI.</value>
+  </data>
+  <data name="Condition_271" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen datos EDI.</value>
+  </data>
+  <data name="Condition_275" xml:space="preserve">
+    <value>Su sistema no puede leer códigos de barras de manera confiable si contienen datos EDI.</value>
+  </data>
+  <data name="Condition_300" xml:space="preserve">
+    <value>La prueba falló.</value>
+  </data>
+  <data name="Condition_301" xml:space="preserve">
+    <value>No se informaron datos para el código de barras.</value>
+  </data>
+  <data name="Condition_303" xml:space="preserve">
+    <value>Algunos datos no se informaron cuando escaneó el código de barras.</value>
+  </data>
+  <data name="Condition_304" xml:space="preserve">
+    <value>No se informaron datos para uno o más códigos de barras.</value>
+  </data>
+  <data name="Condition_305" xml:space="preserve">
+    <value>Escaneó un código de barras fuera de secuencia.</value>
+  </data>
+  <data name="Condition_306" xml:space="preserve">
+    <value>Algunos datos no se informaron cuando escaneó uno o más códigos de barras.</value>
+  </data>
+  <data name="Condition_307" xml:space="preserve">
+    <value>Su escáner de códigos de barras y su computadora tienen disposiciones de teclado diferentes.</value>
+  </data>
+  <data name="Condition_308" xml:space="preserve">
+    <value>Su escáner de códigos de barras y su computadora tienen disposiciones de teclado diferentes.</value>
+  </data>
+  <data name="Condition_309" xml:space="preserve">
+    <value>Los caracteres ocultos en los códigos de barras no se informan correctamente.</value>
+  </data>
+  <data name="Condition_310" xml:space="preserve">
+    <value>Los caracteres ocultos en los códigos de barras no se informan correctamente.</value>
+  </data>
+  <data name="Condition_315" xml:space="preserve">
+    <value>Su escáner de códigos de barras y su computadora tienen disposiciones de teclado diferentes.</value>
+  </data>
+  <data name="Condition_316" xml:space="preserve">
+    <value>Los caracteres ocultos en los códigos de barras no se informan correctamente.</value>
+  </data>
+  <data name="Condition_320" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Condition_325" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado.</value>
+  </data>
+  <data name="Condition_326" xml:space="preserve">
+    <value>El bloqueo de mayúsculas está activado.</value>
+  </data>
+  <data name="Condition_327" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede estar configurado para convertir caracteres a mayúsculas.</value>
+  </data>
+  <data name="Condition_328" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede estar configurado para convertir caracteres a minúsculas.</value>
+  </data>
+  <data name="Condition_330" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede estar configurado para simular el bloqueo de mayúsculas.</value>
+  </data>
+  <data name="Condition_331" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede estar configurado para convertir caracteres a mayúsculas.</value>
+  </data>
+  <data name="Condition_332" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede estar configurado para convertir caracteres a minúsculas.</value>
+  </data>
+  <data name="Condition_335" xml:space="preserve">
+    <value>Su disposición de teclado admite {0} caracteres y no puede leer códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_105" xml:space="preserve">
+    <value>Sin embargo, no probó la compatibilidad con ISO/IEC 15434. Su sistema puede no ser capaz de leer códigos de barras de manera confiable si contienen datos formateados según ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_110" xml:space="preserve">
+    <value>Sin embargo, su software de verificación puede no leer códigos de barras de manera confiable si contienen datos formateados según ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_115" xml:space="preserve">
+    <value>Sin embargo, no puede leer códigos de barras de manera confiable si contienen datos formateados según ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_200" xml:space="preserve">
+    <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
+  </data>
+  <data name="Description_205" xml:space="preserve">
+    <value>Su escáner de códigos de barras probablemente esté configurado para compensar automáticamente el bloqueo de mayúsculas.</value>
+  </data>
+  <data name="Description_206" xml:space="preserve">
+    <value>Su tecla de bloqueo de mayúsculas puede estar desactivada o reasignada.</value>
+  </data>
+  <data name="Description_210" xml:space="preserve">
+    <value>Sin embargo, la disposición del teclado de su computadora es para un script que no admite letras mayúsculas y minúsculas.</value>
+  </data>
+  <data name="Description_215" xml:space="preserve">
+    <value>Esto puede ralentizar su rendimiento de escaneo. Sin embargo, su software puede no admitir secuencias de fin de línea.</value>
+  </data>
+  <data name="Description_220" xml:space="preserve">
+    <value>Su software puede no reconocer el prefijo.</value>
+  </data>
+  <data name="Description_225" xml:space="preserve">
+    <value>Su software puede no reconocer el sufijo.</value>
+  </data>
+  <data name="Description_230" xml:space="preserve">
+    <value>Los identificadores AIM representan el tipo de código de barras. Sin embargo, el software debe implementar mapeo de caracteres para leer los identificadores AIM de manera confiable.</value>
+  </data>
+  <data name="Description_231" xml:space="preserve">
+    <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
+  </data>
+  <data name="Description_232" xml:space="preserve">
+    <value>Su escáner de códigos de barras puede transmitir identificadores AIM, pero no es seguro. Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
+  </data>
+  <data name="Description_235" xml:space="preserve">
+    <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
+  </data>
+  <data name="Description_240" xml:space="preserve">
+    <value>Su software debe implementar mapeo de caracteres para leer códigos de barras de manera confiable si contienen caracteres no invariantes.</value>
+  </data>
+  <data name="Description_245" xml:space="preserve">
+    <value>Algunos software pueden compensar esto analizando códigos de tecla en lugar de caracteres.</value>
+  </data>
+  <data name="Description_255" xml:space="preserve">
+    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo.</value>
+  </data>
+  <data name="Description_256" xml:space="preserve">
+    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo.</value>
+  </data>
+  <data name="Description_260" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener caracteres no invariantes. Su software debe implementar mapeo de caracteres para leer estos códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_261" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener caracteres no invariantes.</value>
+  </data>
+  <data name="Description_265" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener caracteres no invariantes.</value>
+  </data>
+  <data name="Description_270" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener datos EDI. Su software debe implementar mapeo de caracteres para leer estos códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_271" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener datos EDI.</value>
+  </data>
+  <data name="Description_275" xml:space="preserve">
+    <value>Algunos códigos de barras pueden contener datos EDI.</value>
+  </data>
+  <data name="Description_300" xml:space="preserve">
+    <value>Puede haber escaneado un código de barras incorrecto o ingresado datos incorrectos usando el teclado. Su escáner de códigos de barras o sistema puede ser lento, o puede haber ocurrido algún problema inesperado o intermitente.</value>
+  </data>
+  <data name="Description_303" xml:space="preserve">
+    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora pueden no corresponder. Puede haber escaneado un código de barras incorrecto o ingresado datos incorrectos usando el teclado. Su escáner de códigos de barras o sistema puede ser lento, o puede haber ocurrido algún problema inesperado o intermitente.</value>
+  </data>
+  <data name="Description_306" xml:space="preserve">
+    <value>Puede haber escaneado un código de barras incorrecto o ingresado datos incorrectos usando el teclado. Su escáner de códigos de barras o sistema puede ser lento, o puede haber ocurrido algún problema inesperado o intermitente.</value>
+  </data>
+  <data name="Description_307" xml:space="preserve">
+    <value>Su software debe implementar mapeo de caracteres para leer códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_309" xml:space="preserve">
+    <value>Su software puede ser capaz de compensar.</value>
+  </data>
+  <data name="Description_315" xml:space="preserve">
+    <value>Su software puede ser capaz de compensar. Sin embargo, su sistema no puede leer caracteres correctamente para códigos de barras que contienen datos de Formato 05 o Formato 06. Algunos software pueden compensar esto analizando códigos de tecla en lugar de caracteres.</value>
+  </data>
+  <data name="Description_316" xml:space="preserve">
+    <value>Su software puede ser capaz de compensar. Sin embargo, su sistema no puede leer correctamente los caracteres de códigos de barras para códigos de barras que contienen datos de Formato 05 o Formato 06. Algunos software pueden compensar esto analizando códigos de tecla en lugar de caracteres.</value>
+  </data>
+  <data name="Description_320" xml:space="preserve">
+    <value>Algunos software pueden compensar esto analizando códigos de tecla en lugar de caracteres.</value>
+  </data>
+  <data name="Description_326" xml:space="preserve">
+    <value>Cuando el bloqueo de mayúsculas está activo, el comportamiento predeterminado es informar todos los caracteres en mayúsculas.</value>
+  </data>
+  <data name="Description_327" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_328" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_331" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_332" xml:space="preserve">
+    <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>Error al resolver scripts de teclado: {0}</value>
+  </data>
+</root>
