@@ -48,6 +48,18 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <EmbeddedResource Update="Properties\Advice.de.resx">
+	    <DependentUpon>Advice.resx</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Properties\Advice.fr.resx">
+	    <DependentUpon>Advice.resx</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Properties\Resources.de.resx">
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Properties\Resources.fr.resx">
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Properties\Resources.resx">
 		  <Generator>ResXFileCodeGenerator</Generator>
 		  <LastGenOutput>Resources.Designer.cs</LastGenOutput>

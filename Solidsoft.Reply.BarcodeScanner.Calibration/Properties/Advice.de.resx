@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Advice_100" xml:space="preserve">
+    <value />
+    <comment>Low</comment>
+  </data>
+  <data name="Advice_105" xml:space="preserve">
+    <value>Möglicherweise müssen Sie Daten manuell in Ihre Software für Barcodes eingeben, die Daten im Format gemäß ISO/IEC 15434 enthalten.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Advice_110" xml:space="preserve">
+    <value>Wenn Sie Probleme beim Scannen von Barcodes haben, die Daten im Format 05 oder Format 06 enthalten, geben Sie die Daten manuell in Ihre Software ein. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_115" xml:space="preserve">
+    <value>Geben Sie Daten manuell in Ihre Software für Barcodes ein, die Daten im Format 05 oder Format 06 enthalten. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_200" xml:space="preserve">
+    <value>Konfigurieren Sie Ihren Barcodescanner zur Übertragung von AIM-Identifikatoren. Sollten Probleme bei der Übertragung von AIM-Identifikatoren auftreten, kehren Sie zur aktuellen Konfiguration zurück.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_205" xml:space="preserve">
+    <value>Sie möchten vielleicht die Feststelltaste ausschalten und es erneut testen.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_206" xml:space="preserve">
+    <value>Überprüfen Sie Ihre Scanner-, Tastatur- und Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.;;Möglicherweise möchten Sie die Feststelltaste ausschalten und erneut testen.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_210" xml:space="preserve">
+    <value>Sie möchten vielleicht die Feststelltaste ausschalten.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_215" xml:space="preserve">
+    <value>Konfigurieren Sie Ihren Barcodescanner zur Übertragung von Zeilenende-Sequenzen und testen Sie erneut. Sollten Probleme bei der Übertragung von Zeilenende-Sequenzen auftreten, kehren Sie zur aktuellen Konfiguration zurück.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_220" xml:space="preserve">
+    <value>Wenn Sie Probleme beim Scannen von Barcode-Daten haben, konfigurieren Sie Ihren Barcodescanner so, dass er kein Präfix überträgt.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_225" xml:space="preserve">
+    <value>Wenn Sie Probleme beim Scannen von Barcode-Daten haben, konfigurieren Sie Ihren Barcodescanner so, dass er kein Suffix überträgt.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_230" xml:space="preserve">
+    <value>Stellen Sie sicher, dass Ihre Tastaturlayouts übereinstimmen.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_231" xml:space="preserve">
+    <value>Stellen Sie sicher, dass Ihre Tastaturlayouts übereinstimmen.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_232" xml:space="preserve">
+    <value>Überprüfen Sie, ob Ihr Barcodescanner so konfiguriert ist, dass er AIM-Identifikatoren überträgt.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_235" xml:space="preserve">
+    <value>Stellen Sie sicher, dass Ihre Tastaturlayouts übereinstimmen.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert und AIM-Identifikatoren überträgt.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_240" xml:space="preserve">
+    <value>Wenn Sie Probleme beim Scannen von Barcodes haben, die Daten im Format 05 oder Format 06 enthalten, geben Sie die Daten manuell in Ihre Software ein. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_241" xml:space="preserve">
+    <value>Geben Sie Daten manuell in Ihre Software für Barcodes ein, die Daten im Format 05 oder Format 06 enthalten. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_245" xml:space="preserve">
+    <value>Geben Sie Daten manuell in Ihre Software für Barcodes ein, die Daten im Format 05 oder Format 06 enthalten. Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_250" xml:space="preserve">
+    <value>Wenn Sie erwarten, Barcodes zu scannen, die Daten enthalten, die gemäß ISO/IEC 15434 formatiert sind, führen Sie den Test erneut durch, diesmal einschließlich des Kompatibilitätstests für ISO/IEC 15434-Daten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_255" xml:space="preserve">
+    <value>Sollte das Problem weiterhin bestehen, überprüfen Sie die Konfiguration Ihres Barcodescanners. Suchen Sie nach Einstellungen, die die Leistung der Tastatureingabe verbessern könnten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_256" xml:space="preserve">
+    <value>Sollte das Problem weiterhin bestehen, überprüfen Sie die Konfiguration Ihres Barcodescanners. Suchen Sie nach Einstellungen, die die Leistung der Tastatureingabe verbessern könnten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_260" xml:space="preserve">
+    <value>Wenn Sie andere Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_261" xml:space="preserve">
+    <value>Wenn Sie andere Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_265" xml:space="preserve">
+    <value>Wenn Sie andere Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_270" xml:space="preserve">
+    <value>Wenn Sie EDI-Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_271" xml:space="preserve">
+    <value>Wenn Sie EDI-Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_275" xml:space="preserve">
+    <value>Wenn Sie EDI-Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_300" xml:space="preserve">
+    <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Advice_301" xml:space="preserve">
+    <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode scannen.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Advice_303" xml:space="preserve">
+    <value>Versuchen Sie es erneut.;;Stellen Sie sicher, dass Ihre Tastaturlayouts übereinstimmen.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_304" xml:space="preserve">
+    <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Advice_305" xml:space="preserve">
+    <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode scannen.;;Wenn Sie aufgefordert werden, mehrere Barcodes zu scannen, stellen Sie sicher, dass Sie sie in der richtigen Reihenfolge scannen.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_306" xml:space="preserve">
+    <value>Versuchen Sie es erneut.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_307" xml:space="preserve">
+    <value>Wenn Ihre Software nicht kompensieren kann, konfigurieren Sie Ihren Barcodescanner entsprechend dem Tastaturlayout Ihres Computers.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_308" xml:space="preserve">
+    <value>Konfigurieren Sie Ihren Barcodescanner entsprechend dem Tastaturlayout Ihres Computers.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_309" xml:space="preserve">
+    <value>Wenn Ihre Software nicht kompensieren kann, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_310" xml:space="preserve">
+    <value>Konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_315" xml:space="preserve">
+    <value>Konfigurieren Sie Ihren Barcodescanner entsprechend dem Tastaturlayout Ihres Computers.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_316" xml:space="preserve">
+    <value>Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_320" xml:space="preserve">
+    <value>Wenn Ihre Software nicht kompensieren kann, konfigurieren Sie Ihren Barcodescanner entsprechend dem Tastaturlayout Ihres Computers.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_325" xml:space="preserve">
+    <value>Schalten Sie die Feststelltaste aus und testen Sie erneut.;;Wenn Sie die Feststelltaste beim Scannen von Barcodes eingeschaltet lassen müssen, können Sie möglicherweise Ihren Barcodescanner so konfigurieren, dass er kompensiert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_326" xml:space="preserve">
+    <value>Schalten Sie die Feststelltaste aus und testen Sie erneut.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_327" xml:space="preserve">
+    <value>Überprüfen Sie Ihren Barcodescanner, Ihre Tastatur und die Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.;;Schalten Sie die Feststelltaste aus und testen Sie erneut.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_328" xml:space="preserve">
+    <value>Überprüfen Sie Ihren Barcodescanner, Ihre Tastatur und die Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.;;Schalten Sie die Feststelltaste aus und testen Sie erneut.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_330" xml:space="preserve">
+    <value>Überprüfen Sie Ihren Scanner, Ihre Tastatur und die Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_331" xml:space="preserve">
+    <value>Überprüfen Sie Ihren Barcodescanner, Ihre Tastatur und die Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_332" xml:space="preserve">
+    <value>Überprüfen Sie Ihren Barcodescanner, Ihre Tastatur und die Computerkonfiguration und konfigurieren Sie sie bei Bedarf neu.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Advice_335" xml:space="preserve">
+    <value>Falls möglich, konfigurieren Sie Ihren Computer für ein anderes Tastaturlayout.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_100" xml:space="preserve">
+    <value>Ihr System liest die meisten Barcodes zuverlässig.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Condition_105" xml:space="preserve">
+    <value>Ihr System liest die meisten Barcodes zuverlässig.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Condition_110" xml:space="preserve">
+    <value>Ihr System liest GS1-Barcodes zuverlässig.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_115" xml:space="preserve">
+    <value>Ihr System liest GS1-Barcodes zuverlässig.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_200" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt keine AIM-Identifikatoren.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_205" xml:space="preserve">
+    <value>Die Feststelltaste ist aktiviert, aber die Groß- und Kleinschreibung wird korrekt gemeldet.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_206" xml:space="preserve">
+    <value>Die Feststelltaste ist aktiviert, aber die Groß- und Kleinschreibung bleibt erhalten.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_210" xml:space="preserve">
+    <value>Die Feststelltaste ist eingeschaltet.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_215" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt keine End-of-Line-Sequenzen.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_220" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt ein Präfix.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_225" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt ein Suffix.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_230" xml:space="preserve">
+    <value>Ihr System liest möglicherweise AIM-Identifikatorzeichen nicht.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_231" xml:space="preserve">
+    <value>Ihr System kann AIM-Identifikatorzeichen nicht lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_232" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt möglicherweise keine AIM-Identifikatoren.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_235" xml:space="preserve">
+    <value>Ihr System kann den Barcode-Typ-Identifikator nicht lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_240" xml:space="preserve">
+    <value>Ihr System ist möglicherweise nicht in der Lage, Format 05 oder Format 06 Barcodes zuverlässig zu lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_241" xml:space="preserve">
+    <value>Ihr System kann Format 05 oder Format 06 Barcodes nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_245" xml:space="preserve">
+    <value>Ihr System kann Format 05 oder Format 06 Barcodes nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_250" xml:space="preserve">
+    <value>Sie haben die Kompatibilität für die Kompatibilität mit ISO/IEC 15434 nicht getestet.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_255" xml:space="preserve">
+    <value>Die Leistung der Dateneingabe ist langsamer als erwartet.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_256" xml:space="preserve">
+    <value>Die Leistung der Dateneingabe ist sehr schlecht.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_260" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_261" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_265" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_270" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_271" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_275" xml:space="preserve">
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_300" xml:space="preserve">
+    <value>Der Test ist fehlgeschlagen.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Condition_301" xml:space="preserve">
+    <value>Für den Barcode wurden keine Daten gemeldet.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Condition_303" xml:space="preserve">
+    <value>Einige Daten wurden nicht gemeldet, als Sie den Barcode gescannt haben.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_304" xml:space="preserve">
+    <value>Für einen oder mehrere Barcodes wurden keine Daten gemeldet.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Condition_305" xml:space="preserve">
+    <value>Sie haben einen Barcode in falscher Reihenfolge gescannt.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_306" xml:space="preserve">
+    <value>Einige Daten wurden nicht gemeldet, als Sie einen oder mehrere Barcodes gescannt haben.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_307" xml:space="preserve">
+    <value>Ihr Barcode-Scanner und Computer haben unterschiedliche Tastaturlayouts.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_308" xml:space="preserve">
+    <value>Ihr Barcode-Scanner und Computer haben unterschiedliche Tastaturlayouts.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_309" xml:space="preserve">
+    <value>Versteckte Zeichen in Barcodes werden nicht korrekt gemeldet.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_310" xml:space="preserve">
+    <value>Versteckte Zeichen in Barcodes werden nicht korrekt gemeldet.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_315" xml:space="preserve">
+    <value>Ihr Barcode-Scanner und Computer haben unterschiedliche Tastaturlayouts.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_316" xml:space="preserve">
+    <value>Versteckte Zeichen in Barcodes werden nicht korrekt gemeldet.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_320" xml:space="preserve">
+    <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_325" xml:space="preserve">
+    <value>Die Feststelltaste ist eingeschaltet.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_326" xml:space="preserve">
+    <value>Die Feststelltaste ist eingeschaltet.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_327" xml:space="preserve">
+    <value>Ihr Barcode-Scanner kann so konfiguriert sein, dass er Zeichen in Großbuchstaben umwandelt.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_328" xml:space="preserve">
+    <value>Ihr Barcode-Scanner kann so konfiguriert sein, dass er Zeichen in Kleinbuchstaben umwandelt.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_330" xml:space="preserve">
+    <value>Ihr Barcode-Scanner kann so konfiguriert sein, dass er die Feststelltaste simuliert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_331" xml:space="preserve">
+    <value>Ihr Barcode-Scanner kann so konfiguriert sein, dass er Zeichen in Großbuchstaben umwandelt.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_332" xml:space="preserve">
+    <value>Ihr Barcode-Scanner kann so konfiguriert sein, dass er Zeichen in Kleinbuchstaben umwandelt.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Condition_335" xml:space="preserve">
+    <value>Ihr Tastaturlayout unterstützt {0} Zeichen und kann Barcodes nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_105" xml:space="preserve">
+    <value>Sie haben jedoch die Kompatibilität mit ISO/IEC 15434 nicht getestet. Ihr System kann möglicherweise Barcodes nicht zuverlässig lesen, wenn sie Daten enthalten, die gemäß ISO/IEC 15434 formatiert sind.</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Description_110" xml:space="preserve">
+    <value>Allerdings kann Ihre Überprüfungssoftware Barcodes möglicherweise nicht zuverlässig lesen, wenn sie Daten enthalten, die gemäß ISO/IEC 15434 formatiert sind.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_115" xml:space="preserve">
+    <value>Allerdings kann es Barcodes nicht zuverlässig lesen, wenn sie Daten enthalten, die gemäß ISO/IEC 15434 formatiert sind.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_200" xml:space="preserve">
+    <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_205" xml:space="preserve">
+    <value>Ihr Barcode-Scanner ist wahrscheinlich so konfiguriert, dass er automatisch für die Feststelltaste kompensiert.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_206" xml:space="preserve">
+    <value>Ihre Feststelltaste könnte deaktiviert oder umbelegt sein.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_210" xml:space="preserve">
+    <value>Allerdings ist das Tastaturlayout Ihres Computers für ein Skript, das keine Groß- und Kleinschreibung unterstützt.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_215" xml:space="preserve">
+    <value>Dies könnte Ihre Scanleistung verlangsamen. Allerdings unterstützt Ihre Software möglicherweise keine Zeilenende-Sequenzen.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_220" xml:space="preserve">
+    <value>Ihre Software erkennt möglicherweise das Präfix nicht.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_225" xml:space="preserve">
+    <value>Ihre Software erkennt möglicherweise das Suffix nicht.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_230" xml:space="preserve">
+    <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren. Allerdings muss die Software Zeichenabbildung implementieren, um AIM-Identifikatoren zuverlässig zu lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_231" xml:space="preserve">
+    <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_232" xml:space="preserve">
+    <value>Ihr Barcode-Scanner überträgt möglicherweise AIM-Identifikatoren, aber das ist nicht sicher. AIM-Identifikatoren repräsentieren den Barcodetyp. Ihre Software kann sie verwenden, um unnötige Warnungen zu eliminieren.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_235" xml:space="preserve">
+    <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_240" xml:space="preserve">
+    <value>Ihre Software muss eine Zeichenabbildung implementieren, um Barcodes zuverlässig lesen zu können, wenn sie nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_245" xml:space="preserve">
+    <value>Einige Software kann dies möglicherweise kompensieren, indem sie Schlüsselcodes statt Zeichen analysiert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_255" xml:space="preserve">
+    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_256" xml:space="preserve">
+    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_260" xml:space="preserve">
+    <value>Einige Barcodes können nicht-invariante Zeichen enthalten. Ihre Software muss Zeichenabbildung implementieren, um diese Barcodes zuverlässig zu lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_261" xml:space="preserve">
+    <value>Einige Barcodes können nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_265" xml:space="preserve">
+    <value>Einige Barcodes können nicht-invariante Zeichen enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_270" xml:space="preserve">
+    <value>Einige Barcodes können EDI-Daten enthalten. Ihre Software muss Zeichenabbildung implementieren, um diese Barcodes zuverlässig zu lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_271" xml:space="preserve">
+    <value>Einige Barcodes können EDI-Daten enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_275" xml:space="preserve">
+    <value>Einige Barcodes können EDI-Daten enthalten.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_300" xml:space="preserve">
+    <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner</value>
+    <comment>Low</comment>
+  </data>
+  <data name="Description_303" xml:space="preserve">
+    <value>Die Tastaturlayouts von Barcodescanner und Computer entsprechen möglicherweise nicht. Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner oder System ist möglicherweise langsam, oder es ist ein unerwartetes oder intermittierendes Problem aufgetreten.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_306" xml:space="preserve">
+    <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcode-Scanner oder System könnte langsam sein, oder es könnte ein unerwartetes oder intermittierendes Problem aufgetreten sein.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_307" xml:space="preserve">
+    <value>Ihre Software muss eine Zeichenabbildung implementieren, um Barcodes zuverlässig lesen zu können.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_309" xml:space="preserve">
+    <value>Ihre Software könnte in der Lage sein, dies zu kompensieren.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_315" xml:space="preserve">
+    <value>Ihre Software könnte in der Lage sein, dies zu kompensieren. Allerdings kann Ihr System Zeichen für Barcodes, die Format 05 oder Format 06 Daten enthalten, nicht korrekt lesen. Einige Software könnte dies kompensieren, indem sie Schlüsselcodes statt Zeichen analysiert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_316" xml:space="preserve">
+    <value>Ihre Software könnte in der Lage sein, dies zu kompensieren. Allerdings kann Ihr System Barcode-Zeichen für Barcodes, die Format 05 oder Format 06 Daten enthalten, nicht korrekt lesen. Einige Software könnte dies kompensieren, indem sie Schlüsselcodes statt Zeichen analysiert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_320" xml:space="preserve">
+    <value>Einige Software kann dies möglicherweise kompensieren, indem sie Schlüsselcodes statt Zeichen analysiert.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_326" xml:space="preserve">
+    <value>Wenn die Feststelltaste aktiviert ist, ist das Standardverhalten, alle Zeichen in Großbuchstaben zu melden.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_327" xml:space="preserve">
+    <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_328" xml:space="preserve">
+    <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_331" xml:space="preserve">
+    <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="Description_332" xml:space="preserve">
+    <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+    <comment>High</comment>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>Fehler bei der Auflösung von Tastaturskripten: {0}</value>
+  </data>
+</root>

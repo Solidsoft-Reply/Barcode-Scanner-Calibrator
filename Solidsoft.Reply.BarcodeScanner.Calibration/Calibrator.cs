@@ -1263,7 +1263,7 @@ public partial class Calibrator {
             string AppendInvalidSuffixException() {
                 preprocessorExceptions.Add(new PreprocessorException(1100,
                     string.Format(
-                        CultureInfo.CurrentCulture,
+                        Thread.CurrentThread.CurrentUICulture,
                         Resources.Barcodes_Error_100,
                         invalidSuffix,
                         _tokenExtendedDataReportedSuffix), false));
@@ -5191,7 +5191,7 @@ public partial class Calibrator {
         string? expectedData = null) {
         var description = Resources.ResourceManager.GetString(
             $"CalibrationInformation_{(int)type}",
-            CultureInfo.CurrentCulture);
+            Thread.CurrentThread.CurrentUICulture);
 
         ProcessReportedLogData(type, reportedData, expectedData);
 
@@ -5263,7 +5263,7 @@ public partial class Calibrator {
                  && token.Errors.All(ci => ci.InformationType != CalibrationInformationType.CalibrationFailed)) {
                     var errorDescription = Resources.ResourceManager.GetString(
                         $"CalibrationInformation_{(int)CalibrationInformationType.CalibrationFailed}",
-                        CultureInfo.CurrentCulture);
+                        Thread.CurrentThread.CurrentUICulture);
                     errorDescription = string.Format(
                         CultureInfo.InvariantCulture,
                         errorDescription ?? string.Empty,
