@@ -20,8 +20,6 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using ZXing.Common;
-
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
@@ -161,7 +159,7 @@ internal static partial class CalibrationExtensions
     }
 
     /// <summary>
-    ///   Processes a string, normalising it according the the calibration character map,
+    ///   Processes a string, normalising it according to the calibration character map,
     ///   converting into the correct sequence of characters.
     /// </summary>
     /// <param name="characters">
@@ -258,7 +256,7 @@ internal static partial class CalibrationExtensions
 
 
     /// <summary>
-    ///   Converts a an ASCII control character to a Unicode Control Picture character.
+    ///   Converts an ASCII control character to a Unicode Control Picture character.
     /// </summary>
     /// <param name="originalChar">The original character.</param>
     /// <returns>
@@ -274,7 +272,7 @@ internal static partial class CalibrationExtensions
         };
 
     /// <summary>
-    ///   Converts a an ASCII control character to a Unicode Control Picture string.
+    ///   Converts an ASCII control character to a Unicode Control Picture string.
     /// </summary>
     /// <param name="originalChar">The original character.</param>
     /// <returns>

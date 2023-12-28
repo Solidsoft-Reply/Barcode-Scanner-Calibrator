@@ -410,5 +410,5 @@ public enum CalibrationInformationType
     /// <summary>
     /// ERROR: Calibration failed due to a pre-processing error.
     /// </summary>
-    PreProcessorError = 399,
+    PreProcessorError = 399
 }

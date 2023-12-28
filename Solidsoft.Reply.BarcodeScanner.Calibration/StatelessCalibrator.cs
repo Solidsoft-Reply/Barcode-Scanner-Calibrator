@@ -77,7 +77,7 @@ public class StatelessCalibrator
     /// <summary>
     ///   Gets the type of calibration barcode currently being processed.
     /// </summary>
-    public CalibrationBarcodeType CurrentBarcodeType { get; private set; }
+    public CalibrationBarcodeType CurrentBarcodeType => _calibrator.CurrentBarcodeType;
 
     /// <summary>
     ///   Gets or sets the Calibration configuration data.
@@ -269,7 +269,7 @@ public class StatelessCalibrator
     public bool IsProcessingRequired => _calibrator.IsProcessingRequired;
 
     /// <summary>
-    ///   Processes input, normalizing it according the the calibration character map, converting into
+    ///   Processes input, normalizing it according the calibration character map, converting into
     ///   the correct sequence of characters.
     /// </summary>
     /// <param name="input">

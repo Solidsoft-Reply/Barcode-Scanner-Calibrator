@@ -61,7 +61,7 @@ internal sealed class If<TEnv> where TEnv : IEnvironment<TEnv>
     ///   condition value is true. 
     /// </summary>
     /// <param name="func">
-    ///   Any function that takes a a data object and returns
+    ///   Any function that takes a data object and returns
     ///   an Environment for the data object type.
     /// </param>
     /// <returns>A Then block for the If condition in the Environment monad.</returns>

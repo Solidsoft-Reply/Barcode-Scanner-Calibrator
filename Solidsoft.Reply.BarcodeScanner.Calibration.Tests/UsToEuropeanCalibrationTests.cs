@@ -191,7 +191,7 @@ public class UsToEuropeanCalibrationTests
     }
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout
+    /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -354,7 +354,7 @@ public class UsToEuropeanCalibrationTests
     }
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout
+    /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -364,7 +364,7 @@ public class UsToEuropeanCalibrationTests
     }
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout
+    /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -374,7 +374,7 @@ public class UsToEuropeanCalibrationTests
     }
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout
+    /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -384,7 +384,7 @@ public class UsToEuropeanCalibrationTests
     }
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout
+    /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]

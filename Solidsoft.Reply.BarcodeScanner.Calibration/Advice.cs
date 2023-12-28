@@ -529,11 +529,11 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         // If the calibrator determines that your system cannot read AIM identifier characters, then it
         // should not report that your barcode scanner does not transmit AIM identifiers, as it cannot
         // determine this for certain.
-        var cannotReadAimNoCalibrationx = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
-        var notTransmittingAimy = highSeverity.Find(a => a.AdviceType == AdviceType.NotTransmittingAim);
+        var cannotReadAimNoCalibration = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAimNoCalibration);
+        var notTransmittingAim = highSeverity.Find(a => a.AdviceType == AdviceType.NotTransmittingAim);
 
-        if (cannotReadAimNoCalibrationx is not null) {
-            highSeverity.Remove(notTransmittingAimy);
+        if (cannotReadAimNoCalibration is not null && notTransmittingAim is not null) {
+            _ = highSeverity.Remove(notTransmittingAim);
         }
 
         if (highSeverity.Any())
@@ -842,6 +842,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     /// </summary>
     /// <param name="systemCapabilities"></param>
     /// <returns>An ordered sequence of advice items.</returns>
+    // ReSharper disable once UnusedMember.Global
     public static Advice CreateAdvice(SystemCapabilities systemCapabilities) {
         return new Advice(systemCapabilities);
     }

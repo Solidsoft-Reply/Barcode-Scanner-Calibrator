@@ -29,7 +29,6 @@ using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using Solidsoft.Reply.BarcodeScanner.Calibration.ProcessFlow;
 
 /// <summary>
 ///   Represents an individual item of advice for a given condition.

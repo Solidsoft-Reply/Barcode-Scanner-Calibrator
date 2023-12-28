@@ -66,8 +66,12 @@ public class CalibrationDataIgnoreEmptyEnumerableResolver : DefaultContractResol
                                      _ => null
                                  };
 
-                return enumerable is null ||
-                       enumerable.GetEnumerator().MoveNext();
+                var enumerator = enumerable?.GetEnumerator();
+                using var disposableEnumerator = enumerator as IDisposable;
+
+                return enumerable is null 
+                       || enumerator is null
+                       || enumerator.MoveNext();
                 // if the list is null, we defer the decision to NullValueHandling
             };
         }

@@ -41,7 +41,7 @@ public enum SupportedPlatform
     Linux,
 
     /// <summary>
-    ///   The Apple Macintosh MacOS. NB. This does not include iOS
+    ///   The Apple Macintosh macOS. NB. This does not include iOS
     /// </summary>
     Macintosh,
 

@@ -6,7 +6,7 @@
     Version 2.0
     
     The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
+    that is mostly human-readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
     associated with the data types.
     
@@ -648,5 +648,8 @@
   <data name="Description_332" xml:space="preserve">
     <value>Your system cannot read barcode characters reliably.</value>
     <comment>High</comment>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+	  <value>Error while resolving keyboard scripts: {0}</value>
   </data>
 </root>

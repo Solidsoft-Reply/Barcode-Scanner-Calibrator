@@ -90,7 +90,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     ///   Initializes a new instance of the <see cref="CalibrationData" /> class.
     /// </summary>
     /// <param name="aimFlagCharacterSequence">
-    ///   The first (flag) character of an AIM identifier. By default this is "]".
+    ///   The first (flag) character of an AIM identifier. By default, this is "]".
     ///   If a dead key is used, the sequence will contain two characters.
     /// </param>
     /// <param name="characterMap">
@@ -167,7 +167,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     }
 
     /// <summary>
-    ///   Gets the first (flag) character of an AIM identifier. By default this is "]".
+    ///   Gets the first (flag) character of an AIM identifier. By default, this is "]".
     ///   If a dead key is used, the sequence will contain two characters.
     /// </summary>
     [JsonProperty("aimFlagCharacterSequence", Order = 0)]

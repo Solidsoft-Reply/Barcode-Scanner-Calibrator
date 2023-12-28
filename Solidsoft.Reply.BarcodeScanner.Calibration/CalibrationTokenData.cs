@@ -25,7 +25,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 
@@ -136,7 +135,7 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     public bool ResetBarcodesRemainingCount { get; private set; }
 
     /// <summary>
-    ///   Gets the index number of the current small barcode barcode.
+    ///   Gets the index number of the current small barcode.
     /// </summary>
     /// <remarks>
     ///   Small barcodes are used when the calibrator limits the maximum number of characters in any one
@@ -336,14 +335,5 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);
         errorContext.Handled = true;
-    }
-
-    /// <summary>
-    /// Amend the reported characters.  This may be necessary in order to remove repeated suffixes in the
-    /// reported character sequence when small barcode processing is used.
-    /// </summary>
-    /// <param name="amendedReportedCharacters">The amended reported characters.</param>
-    internal void AmendReportedCharacters(string amendedReportedCharacters) {
-        this.ReportedCharacters = amendedReportedCharacters;
     }
 }

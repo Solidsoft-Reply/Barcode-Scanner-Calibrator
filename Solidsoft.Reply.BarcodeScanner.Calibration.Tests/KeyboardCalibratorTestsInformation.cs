@@ -497,7 +497,7 @@ public class KeyboardCalibratorTestsInformation {
     }
 
     /// <summary>
-    /// Test that the Caps Lock button was probably on (or off) during the test..
+    /// Test that the Caps Lock button was probably on (or off) during the test.
     /// </summary>
     [Fact]
     public void WarningCapsLockProbablyOn() {
@@ -2004,7 +2004,7 @@ public class KeyboardCalibratorTestsInformation {
         CalibrationToken currentToken = default;
 
         foreach (var token in calibrator.CalibrationTokens(1F, DataMatrixSize.Dm26X26)) {
-            Debug.WriteLine(token.Data.BarcodeData);
+            Debug.WriteLine(token.Data?.BarcodeData);
             var deadKeyData = computerKeyboardLayout[computerKeyboardLayout.Keys.First()];
             string data;
 

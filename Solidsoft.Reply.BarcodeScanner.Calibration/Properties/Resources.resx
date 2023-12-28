@@ -6,7 +6,7 @@
     Version 2.0
     
     The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
+    that is mostly human-readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
     associated with the data types.
     
@@ -131,7 +131,7 @@
     <value>Incorrect warning information type.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space place holders. </value>
+    <value>Failed to insert space placeholders. </value>
     <comment>Error</comment>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
@@ -143,7 +143,7 @@
     <comment>Error</comment>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporry place holder. All extended ASCII characters are already used in the input string.</value>
+    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
     <comment>Error</comment>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">

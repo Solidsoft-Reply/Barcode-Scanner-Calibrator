@@ -1256,5 +1256,14 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
                 return ResourceManager.GetString("Description_332", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while resolving keyboard scripts: {0}.
+        /// </summary>
+        internal static string ErrorWhileResolvingKeyboardScripts {
+            get {
+                return ResourceManager.GetString("ErrorWhileResolvingKeyboardScripts", resourceCulture);
+            }
+        }
     }
 }

@@ -68,7 +68,7 @@ using Properties;
 ///   for invariant characters.
 /// </param>
 /// <remarks>
-///   Even if the keyboard layouts do not correspond, it cam still be possible to read barcodes
+///   Even if the keyboard layouts do not correspond, it can still be possible to read barcodes
 ///   reliably using a map. See the MappingPossible property.
 /// </remarks>
 /// <param name="KeyboardLayoutsCorrespondForNonInvariantCharacters">
@@ -76,7 +76,7 @@ using Properties;
 ///   for non-invariant characters.
 /// </param>
 /// <remarks>
-///   Even if the keyboard layouts do not correspond, it cam still be possible to read additional
+///   Even if the keyboard layouts do not correspond, it can still be possible to read additional
 ///   reliably using a map. See the MappingPossible property.
 /// </remarks>
 /// <param name="KeyboardLayoutsCanRepresentGroupSeparator">
@@ -438,6 +438,7 @@ public sealed record SystemCapabilities (
         // Process information
         foreach (var info in calibrationToken.Information)
         {
+            // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (info.InformationType)
             {
                 case CalibrationInformationType.KeyboardScript:
@@ -541,6 +542,7 @@ public sealed record SystemCapabilities (
 
         foreach (var info in calibrationToken.Warnings)
         {
+            // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (info.InformationType)
             {
                 case CalibrationInformationType.SomeNonInvariantCharactersUnreported:
@@ -673,6 +675,7 @@ public sealed record SystemCapabilities (
 
         foreach (var informationType in calibrationToken.Errors.Select(info => info.InformationType))
         {
+            // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (informationType)
             {
                 // We got a partial result, so retain all the knowledge we have gained.

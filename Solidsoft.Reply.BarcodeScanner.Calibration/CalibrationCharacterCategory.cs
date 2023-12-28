@@ -16,14 +16,14 @@
 // limitations under the License.
 // </license>
 // <summary>
-// The category of the a character.
+// The category of the character.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 /// <summary>
-/// The category of the a character.
+/// The category of the character.
 /// </summary>
 [Flags]
 public enum CalibrationCharacterCategory

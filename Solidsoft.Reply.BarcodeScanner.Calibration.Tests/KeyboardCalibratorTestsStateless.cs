@@ -466,7 +466,7 @@ public class KeyboardCalibratorTestsStateless
     public void ToDutch() => PerformCalibrationTest("Dutch");
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout.
+    /// Test calibration for an Estonian computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToEstonian() => PerformCalibrationTest("Estonian");
@@ -520,25 +520,25 @@ public class KeyboardCalibratorTestsStateless
     public void ToHungarian101Key() => PerformCalibrationTest("Hungarian 101-key");
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout.
+    /// Test calibration for an Icelandic computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToIcelandic() => PerformCalibrationTest("Icelandic");
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout.
+    /// Test calibration for an Irish computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToIrish() => PerformCalibrationTest("Irish");
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout.
+    /// Test calibration for an Italian computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToItalian() => PerformCalibrationTest("Italian");
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout.
+    /// Test calibration for an Italian (142) computer keyboard layout.
     /// </summary>
     [Fact]
     public void ToItalian142() => PerformCalibrationTest("Italian (142)");

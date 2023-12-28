@@ -100,7 +100,7 @@ public partial class Calibrator {
     private const string SegmentDelimiter = "    ";
 
     /// <summary>
-    /// Value for ASCII Null character'
+    /// Value for ASCII Null character.
     /// </summary>
     private const int AsciiNullChar = 0;
 
@@ -228,7 +228,7 @@ public partial class Calibrator {
     ///   Returns a regular expression to detect suffixes. This is relevant during small barcode processing where
     ///   it is used to remove repeated suffixes from the reported data. It is a best-endeavours approach that
     ///   assumes that the suffix never contains a sequence of four or more spaces. It also takes into account 
-    ///   that in some cases, an ASCII 0 may not be reported for a Control CHaracter that the barcodes scanner 
+    ///   that in some cases, an ASCII 0 may not be reported for a Control Character that the barcodes scanner 
     ///   does not support. It assumes that Control Characters never result in Dead Key activations.
     /// </summary>
     /// <returns>A regular expression.</returns>
@@ -236,7 +236,7 @@ public partial class Calibrator {
     private static partial Regex SuffixRegex();
 
     /// <summary>
-    /// Returne a regular expression to detect any character except a space.
+    /// Return a regular expression to detect any character except a space.
     /// </summary>
     /// <returns>A regular expression.</returns>
     [GeneratedRegex(@"[^ ]", RegexOptions.None, "en-US")]
@@ -374,7 +374,7 @@ public partial class Calibrator {
     private string? _tokenDataPrefix;
 
     /// <summary>
-    ///   The detetcted suffix. 
+    ///   The detected suffix. 
     /// </summary>
     private string? _tokenDataSuffix;
 
@@ -848,7 +848,7 @@ public partial class Calibrator {
             extendedToken = token.Data?.Key?.Length == 0
                             ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan)
                             : CalibrateDeadKey(data, token, dataEntryTimeSpan, _tokenSmallBarcodeSuffixData.suffix, _tokenSmallBarcodeSuffixData.endOfLine);
-    }
+        }
         catch (Exception ex)
         {
             LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
@@ -932,7 +932,7 @@ public partial class Calibrator {
                     char ReplaceExistingMapForEdiControlCharacter() {
                         _tokenExtendedDataCharacterMap.Remove('\u0000');
                         _tokenWarnings?.RemoveAll(
-                            ci => ci.InformationType == ((existingMap == '\u001C')
+                            ci => ci.InformationType == (existingMap == '\u001C'
                                 ? CalibrationInformationType.FileSeparatorSupported
                                 : CalibrationInformationType.UnitSeparatorSupported));
 
@@ -981,20 +981,20 @@ public partial class Calibrator {
         // Only set the calibration data if there are no errors to report.
         if (_tokenRemaining == 0 && !@out.Errors.Any()) {
             _tokenCalibrationData = new CalibrationData(
-                 _tokenExtendedDataAimFlagCharacterSequence,
-                 _tokenExtendedDataCharacterMap,
-                 _tokenExtendedDataDeadKeysMap,
-                 _tokenExtendedDataDeadKeyCharacterMap,
-                 _tokenExtendedDataLigatureMap,
-                 _tokenExtendedDataScannerDeadKeysMap,
-                 _tokenExtendedDataScannerUnassignedKeys,
-                 _tokenExtendedDataReportedCharacters,
-                 _tokenExtendedDataReportedPrefix,
-                 _tokenExtendedDataReportedCode,
-                 _tokenExtendedDataReportedSuffix,
-                 _tokenExtendedDataKeyboardScript,
-                 _tokenExtendedDataScannerKeyboardPerformance,
-                 _tokenExtendedDataLineFeedCharacter);
+                _tokenExtendedDataAimFlagCharacterSequence,
+                _tokenExtendedDataCharacterMap,
+                _tokenExtendedDataDeadKeysMap,
+                _tokenExtendedDataDeadKeyCharacterMap,
+                _tokenExtendedDataLigatureMap,
+                _tokenExtendedDataScannerDeadKeysMap,
+                _tokenExtendedDataScannerUnassignedKeys,
+                _tokenExtendedDataReportedCharacters,
+                _tokenExtendedDataReportedPrefix,
+                _tokenExtendedDataReportedCode,
+                _tokenExtendedDataReportedSuffix,
+                _tokenExtendedDataKeyboardScript,
+                _tokenExtendedDataScannerKeyboardPerformance,
+                _tokenExtendedDataLineFeedCharacter);
         }
 
         if (_tokenRemaining != 0 && !@out.Errors.Any()) {
@@ -1910,7 +1910,7 @@ public partial class Calibrator {
         }
         catch (ArgumentOutOfRangeException argEx)
         {
-            Console.WriteLine($"Error while resolving keyboard scripts: {argEx.Message}");
+            Console.WriteLine(Properties.Advice.ErrorWhileResolvingKeyboardScripts, argEx.Message);
             return "<unknown>";
             
         }
@@ -1920,7 +1920,7 @@ public partial class Calibrator {
     ///   Splits a sequence of reported characters where the sequence contains multiple entries.
     /// </summary>
     /// <param name="sequence">The sequence to be split.</param>
-    /// <returns>An list of sequences.</returns>
+    /// <returns>A list of sequences.</returns>
     private static List<string> SplitSequence(string sequence) {
         // If a dead key sequence is followed by an unrecognised character, it will be just two characters, and there is no need to
         // process it. We only need to process longer sequences.
@@ -1948,7 +1948,7 @@ public partial class Calibrator {
                          * adjacent literals), either:
                          *
                          *   a)  followed by a non-dead key character where the two sequences have effectively
-                         *       been concatenated by the the consumption of the space delimiter in the barcode.
+                         *       been concatenated by the consumption of the space delimiter in the barcode.
                          *   b)  a space, representing a corresponding literal dead key used on the scanner keyboard.
                          *       At the end of sequence, there is a non-dead key character, as for a).
                          *
@@ -2013,7 +2013,7 @@ public partial class Calibrator {
             ? strippedData[_tokenDataPrefix.Length..]
             : strippedData[BarcodePrefix(strippedData).Length..];
 
-        token = new CalibrationToken(token, prefix: _tokenDataPrefix, suffix: _tokenDataSuffix);
+        token = new CalibrationToken(token, prefix: _tokenDataPrefix ?? string.Empty, suffix: _tokenDataSuffix ?? string.Empty);
 
         // Determine if the user has scanned the correct baseline barcode and if it is fully or partially reported.
         token = DetermineBarcodeProvenance(token, strippedData, out var immediateReturn);
@@ -2133,7 +2133,6 @@ public partial class Calibrator {
 
         // Detect the suffix and strip out any repeated suffix.  For small barcode processing, any suffix will be repeated several times.
         var detectedSuffix = DetectSuffixAndStripRepeats(data, _tokenDataSuffix);
-        data = detectedSuffix.data;
         data = detectedSuffix.data[..^((detectedSuffix.suffix?.Length ?? 0) + (detectedSuffix.endOfLine?.Length ?? 0))];
         
         // Strip off any prefix. For small barcode processing, any prefix will be repeated several times.
@@ -3397,7 +3396,7 @@ public partial class Calibrator {
                         // Test to see if the character that maps to the dead key and unrecognised character are both invariant.
                         if (InvariantsMatchRegex().IsMatch(token.Data?.Value.ToInvariantString() + unrecognisedCharacter)) {
                             /* For keyboards that modify the space bar to produce a character that is not the literal dead
-                             * key character (e.g., produce a " instead of a ¨), this may not be an issue. We will ignore,
+                             * key character (e.g., produce " instead of ¨), this may not be an issue. We will ignore,
                              * if the unrecognised character has been detected as a dead key.
                              * */
                             if (_tokenExtendedDataDeadKeyCharacterMap.ContainsKey("\0" + unrecognisedCharacter)) {
@@ -3615,7 +3614,7 @@ public partial class Calibrator {
     }
 
     /// <summary>
-    /// Resolve the warnings information for situations where we know there is a keyboard layout mismatch but
+    /// Resolve the warnings information for situations where we know there is a keyboard layout mismatch, but
     /// we don't know if this affects invariant or non-invariant characters.  This can specifically happen
     /// where keys on the barcode scanner keyboard layout map to dead keys on the computer keyboard layout, but
     /// no other mismatches are detected.
@@ -4561,10 +4560,7 @@ public partial class Calibrator {
                 if (reportedSequence[0] == '\0') {
                     if (reportedSequence.Length > 1) {
                         _tokenExtendedDataAimFlagCharacterSequence = reportedChar.ToInvariantString() + reportedSequence[1..];
-
-                        if (!_tokenExtendedDataDeadKeysMap.ContainsKey(reportedSequence)) {
-                            _tokenExtendedDataDeadKeysMap.Add(reportedSequence, "]");
-                        }
+                        _tokenExtendedDataDeadKeysMap.TryAdd(reportedSequence, "]");
 
                         // Information - AIM identifiers are supported.
                         token = LogCalibrationInformation(token, CalibrationInformationType.AimSupported);
@@ -5294,6 +5290,8 @@ public partial class Calibrator {
 
             if (!string.IsNullOrWhiteSpace(descriptionData) && calibrationInformation.Length == 1) {
                 var enumerator = calibrationInformation.GetEnumerator();
+                using var disposableEnumerator = enumerator as IDisposable;
+                
                 if (enumerator.MoveNext() && enumerator.Current is not null) {
                     ((CalibrationInformation)enumerator.Current).Description += $" {descriptionData}";
                 }
@@ -5878,6 +5876,7 @@ public partial class Calibrator {
                     }
                 }
                 else {
+                    // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                     switch (idx) {
                         case CalibrationSegments.GroupSeparatorSegment:
                             // If the keyboard represents ASCII 29s as \0, we will use this in thе map.
@@ -5912,6 +5911,7 @@ public partial class Calibrator {
             }
             else switch (reportedControl.Length) {
                     case 0:
+                        // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                         switch (idx) {
                             case CalibrationSegments.GroupSeparatorSegment:
                                 // Error - No group separator is reported.
@@ -5936,6 +5936,7 @@ public partial class Calibrator {
                             
                             if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue)) {
                                 if (InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString())) {
+                                    // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
                                     switch (idx) {
                                         case CalibrationSegments.GroupSeparatorSegment:
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
@@ -6380,7 +6381,7 @@ public partial class Calibrator {
     /// </summary>
     /// <param name="data">The reported barcode data.</param>
     /// <returns>The length of the prefix.</returns>
-    private string BarcodePrefix(string data) => PrefixRegex().Match(data).Groups["prefix"].Value;
+    private static string BarcodePrefix(string data) => PrefixRegex().Match(data).Groups["prefix"].Value;
 
     /// <summary>
     /// Removes repeated suffixes from reported data.  This is relevant when small barcode processing
@@ -6413,7 +6414,7 @@ public partial class Calibrator {
 
             // As a safety measure, if all characters are spaces, then return.  This caters for situations where 
             // ASCII control characters are not reported as nulls if not supported by scanner keyboard layout.
-            // NB. this situation kshould be detetcted already using SuffixRegex(), but if for any reason it is 
+            // NB. this situation should be detected already using SuffixRegex(), but if for any reason it is 
             // not, this acts as a backstop.
             var suffixFirstNonSpaceCharacter = AllSpaces().Match(suffixValue);
             if (suffixFirstNonSpaceCharacter is not { Success: true }) return (reportedData, knownSuffix, knownEndOfLine);
@@ -6434,7 +6435,7 @@ public partial class Calibrator {
                 continue;
             }
 
-            reportedData = (reportedData[..idx] + reportedData[(idx + suffixValue.Length)..]);
+            reportedData = reportedData[..idx] + reportedData[(idx + suffixValue.Length)..];
             idx += suffixValue.Length;
         }
         

@@ -161,7 +161,13 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   The unsegmented barcode data for the current calibration barcode.
     /// </param>
     /// <param name="extendedData">Optional extended data to add to the token.</param>
-    public CalibrationToken(CalibrationToken oldToken, CalibrationTokenExtendedData? extendedData = null, string? prefix = "", string? suffix = "")
+    /// <param name="prefix">A prefix reported by the barcode scanner, if it exists.</param>
+    /// <param name="suffix">A suffix reported by the barcode scanner, if it exists.</param>
+    public CalibrationToken(
+        CalibrationToken oldToken, 
+        CalibrationTokenExtendedData? extendedData = null, 
+        string prefix = "", 
+        string suffix = "")
     {
         Data = oldToken.Data is null
                         ? null
@@ -172,8 +178,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                             oldToken.Data?.CalibrationsRemaining ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceIndex ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceCount ?? 0,
-                            string.IsNullOrEmpty(prefix) ? oldToken.Data?.Prefix ?? string.Empty : prefix ?? string.Empty,
-                            string.IsNullOrEmpty(suffix) ? oldToken.Data?.Suffix ?? string.Empty : suffix ?? string.Empty,
+                            string.IsNullOrEmpty(prefix) ? oldToken.Data?.Prefix ?? string.Empty : prefix,
+                            string.IsNullOrEmpty(suffix) ? oldToken.Data?.Suffix ?? string.Empty : suffix,
                             oldToken.Data?.ReportedCharacters ?? string.Empty);
 
         BitmapStream = oldToken.BitmapStream is null
@@ -553,7 +559,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="keyboardScript">The Unicode name of the keyboard script.</param>
     /// <param name="scannerKeyboardPerformance">The 'Traffic Light' assessment of the performance of the barcode scanner keyboard input.</param>
     /// <param name="aimFlagCharacterSequence">
-    ///   The first (flag) character. By default this is "]". If a dead key is used, the
+    ///   The first (flag) character. By default, this is "]". If a dead key is used, the
     ///   sequence will contain two characters.
     /// </param>
     /// <param name="reportedCharacters">A regular expression for matching reported characters.</param>

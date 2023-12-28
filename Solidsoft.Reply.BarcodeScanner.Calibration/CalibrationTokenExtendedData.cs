@@ -126,7 +126,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     ///   'Traffic Light' assessment of the performance of the barcode scanner keyboard input.
     /// </param>
     /// <param name="aimFlagCharacterSequence">
-    ///   The first (flag) character. By default this is "]". If a dead key is used, the sequence will contain two
+    ///   The first (flag) character. By default, this is "]". If a dead key is used, the sequence will contain two
     ///   characters.
     /// </param>
     /// <param name="reportedCharacters">
@@ -136,9 +136,11 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     ///   A value indicating whether an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 30.
     ///   character.
     /// </param>
-    /// <param name="potentialIsoIec15434EdiUnreadable">
-    ///   A value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28 and/or ASCII 31.
-    ///   character.
+    /// <param name="potentialIsoIec15434EdiUnreadableFs">
+    ///   A value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28.
+    /// </param>
+    /// <param name="potentialIsoIec15434EdiUnreadableUs">
+    ///   A value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31.
     /// </param>
     /// <param name="assessFormat06Support">
     ///   A value indicating whether to assess Format 06 and Format 05 support.
@@ -216,7 +218,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     }
 
     /// <summary>
-    ///   Gets the first (flag) character. By default this is "]".
+    ///   Gets the first (flag) character. By default, this is "]".
     ///   If a dead key is used, the sequence will contain two characters.
     /// </summary>
     [JsonProperty("aimFlagCharacterSequence", Order = 0)]

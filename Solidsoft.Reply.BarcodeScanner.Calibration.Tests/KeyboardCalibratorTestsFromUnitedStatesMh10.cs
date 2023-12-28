@@ -231,7 +231,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     // Test in the case that the ASCII 30 is reported correctly, and not as an ASCII 0.
     private const string UnitedKingdomVariant1Baseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \0    \x001E    \0    \x000D";
 
-    // Test in the case that the ASCII 30 as an variant ASCII character.
+    // Test in the case that the ASCII 30 as a variant ASCII character.
     private const string UnitedKingdomVariant2Baseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \0    \"    \0    \x000D";
 
     // Test in the case that the ASCII 30 as an invariant character.
@@ -464,7 +464,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     }
 
     /// <summary>
-    /// Test calibration for a Estonian computer keyboard layout
+    /// Test calibration for an Estonian computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -545,7 +545,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     }
 
     /// <summary>
-    /// Test calibration for a Icelandic computer keyboard layout
+    /// Test calibration for an Icelandic computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -554,7 +554,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     }
 
     /// <summary>
-    /// Test calibration for a Irish computer keyboard layout
+    /// Test calibration for an Irish computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -563,7 +563,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     }
 
     /// <summary>
-    /// Test calibration for a Italian computer keyboard layout
+    /// Test calibration for an Italian computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
@@ -572,7 +572,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     }
 
     /// <summary>
-    /// Test calibration for a Italian (142) computer keyboard layout
+    /// Test calibration for an Italian (142) computer keyboard layout
     /// </summary>
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]

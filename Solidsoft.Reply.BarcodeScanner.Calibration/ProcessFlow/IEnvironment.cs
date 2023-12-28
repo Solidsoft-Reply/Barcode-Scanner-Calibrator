@@ -23,7 +23,7 @@
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.ProcessFlow;
 
 /// <summary>
-///   Marks a type as an environment data object, for use with the Environment monad..
+///   Marks a type as an environment data object, for use with the Environment monad.
 /// </summary>
 /// <typeparam name="T">The type of the environment data object.</typeparam>
 // ReSharper disable once UnusedTypeParameter

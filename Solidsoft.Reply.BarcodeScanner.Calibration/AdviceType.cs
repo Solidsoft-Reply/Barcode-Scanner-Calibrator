@@ -226,7 +226,7 @@ public enum AdviceType
     /// eliminate unnecessary alerts. However, the software must implement character mapping to
     /// read AIM identifiers reliably.</p>
     /// <p>Make sure your keyboard layouts match. If necessary, configure your barcode scanner to
-    /// emulate a numeric keypad.&lt;/p&gt;
+    /// emulate a numeric keypad.</p>;
     /// </summary>
     MayNotReadAim = 230,
 

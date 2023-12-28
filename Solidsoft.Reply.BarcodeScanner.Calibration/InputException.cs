@@ -71,7 +71,7 @@ public class InputException : Exception
     ///   The message.
     /// </param>
     /// <param name="isFatal">
-    ///   Indicates whether the exception is fatal..
+    ///   Indicates whether the exception is fatal.
     /// </param>
     public InputException(int errorNumber, string message, bool isFatal)
         : base(message)
@@ -90,7 +90,7 @@ public class InputException : Exception
     ///   The message.
     /// </param>
     /// <param name="isFatal">
-    ///   Indicates whether the exception is fatal..
+    ///   Indicates whether the exception is fatal.
     /// </param>
     /// <param name="innerException">
     ///   The inner exception.

@@ -88,7 +88,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to insert space place holders. .
+        ///   Looks up a localized string similar to Failed to insert space placeholders. .
         /// </summary>
         internal static string Calibration_Error_001 {
             get {
@@ -727,7 +727,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find suitable character for temporry place holder. All extended ASCII characters are already used in the input string..
+        ///   Looks up a localized string similar to Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string..
         /// </summary>
         internal static string UnusedExtendedAsciiCharacterNotFound {
             get {
