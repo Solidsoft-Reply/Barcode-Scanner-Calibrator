@@ -1291,7 +1291,7 @@ public partial class Calibrator {
                         ? input[..^_tokenExtendedDataReportedSuffix.Length]
                         : TestSuffixBeforeEoT();
         }
-
+        
         for (var idx = 0; idx < input.Length; idx++) {
             if (idx < _tokenExtendedDataAimFlagCharacterSequence?.Length + 2 && !string.IsNullOrEmpty(aimId)) {
                 if (idx < 3) {
