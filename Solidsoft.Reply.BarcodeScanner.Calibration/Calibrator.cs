@@ -4969,8 +4969,9 @@ public partial class Calibrator {
             deadKeyCharacters.Append(key[1]);
         }
 
+        if (deadKeyCharacters.Length <= 0) return input;
         var matches = Regex.Matches(input, $"\u0000(?<cc>[\u0000-\u001F]*)(?<dkc>[{deadKeyCharacters}])");
-
+            
         foreach (var match in matches.OfType<Match>()) {
             var reversed = $"\u0000{match.Groups["dkc"]}{match.Groups["cc"]}";
             input = $"{input[..match.Index]}{reversed}{input[(match.Index + match.Length)..]}";
