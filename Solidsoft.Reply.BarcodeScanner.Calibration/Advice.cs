@@ -36,7 +36,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
     /// <summary>
     ///   An ordered list of advice items.
     /// </summary>
-    private readonly List<AdviceItem> _adviceItems = new();
+    private readonly List<AdviceItem> _adviceItems = [];
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Advice"/> class.

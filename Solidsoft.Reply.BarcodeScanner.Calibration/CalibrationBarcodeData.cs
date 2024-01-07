@@ -175,7 +175,7 @@ public class CalibrationBarcodeData
     private static IEnumerable<string> ParseData(string data)
     {
         return string.IsNullOrWhiteSpace(data) 
-            ? new List<string>() 
+            ? []
             : data.Select(char.ToString).ToList();
     }
 }

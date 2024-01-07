@@ -123,7 +123,7 @@ public partial class Calibrator {
     /// <summary>
     ///   Split characters that require escaping.
     /// </summary>
-    private readonly char[] _unescapedSplitChars = { '[', '\\', '^', '$', '.', '|', '?', '*', '+', '(', ')' };
+    private readonly char[] _unescapedSplitChars = ['[', '\\', '^', '$', '.', '|', '?', '*', '+', '(', ')'];
 
     /// <summary>
     ///   Returns a regular expression for matching AIM identifiers.
@@ -407,7 +407,7 @@ public partial class Calibrator {
     /// <summary>
     ///   The reported prefix segment for the current calibration barcode.
     /// </summary>
-    private List<string>? _tokenReportedPrefixSegment = new();
+    private List<string>? _tokenReportedPrefixSegment = [];
 
     /// <summary>
     ///   The reported suffix characters for the current calibration barcode.
@@ -500,12 +500,12 @@ public partial class Calibrator {
     /// <summary>
     ///   A list of unrecognised non-invariant characters.
     /// </summary>
-    private readonly List<string> _tokenExtendedDataNonInvariantUnrecognisedCharacters = new();
+    private readonly List<string> _tokenExtendedDataNonInvariantUnrecognisedCharacters = [];
 
     /// <summary>
     ///   A list of unrecognised invariant or other characters that may be used in GS1-compliant barcodes.
     /// </summary>
-    private readonly List<string> _tokenExtendedDataInvariantGs1UnrecognisedCharacters = new();
+    private readonly List<string> _tokenExtendedDataInvariantGs1UnrecognisedCharacters = [];
 
     /// <summary>
     ///   Indicates whether an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 30 character.
@@ -1956,12 +1956,12 @@ public partial class Calibrator {
         // If a dead key sequence is followed by an unrecognised character, it will be just two characters, and there is no need to
         // process it. We only need to process longer sequences.
         if (sequence.Length < 2 || sequence is ['\u0000', _]) {
-            return new List<string> { sequence };
+            return [sequence];
         }
 
         // If the sequence starts with an ASCII 0 then it needs to be split into inner sequences.
         if (sequence[0] != '\u0000') {
-            return new List<string> { sequence };
+            return [sequence];
         }
 
         // Split the sequence by ASCII 0 and add to split sequences list.
@@ -2386,7 +2386,7 @@ public partial class Calibrator {
 
         // If no sequence types are detected, then return.
         return (!DetectSequenceTypes(
-                   data.Split(new[] { splitKeyCharacter }, StringSplitOptions.None).ToList(),
+                   data.Split([splitKeyCharacter], StringSplitOptions.None).ToList(),
                    reportedCharacterList,
                    tempSpaceCharacter)
                    ? InitializeTokenData()
@@ -2424,7 +2424,7 @@ public partial class Calibrator {
         IReadOnlyList<List<string>> expectedSegments,
         out List<List<string>> reportedSegments,
         out char lineFeedChar) {
-        reportedSegments = new List<List<string>>();
+        reportedSegments = [];
 
         // Strip off any trailing Carriage Return or Line Feed characters. We assume these have been added by the barcode scanner. Typically, this
         // is done as a 'suffix' setting in the barcode scanner configuration, but we won't treat these as normal reportable suffixes, although we 
@@ -2504,7 +2504,7 @@ public partial class Calibrator {
         data = TwoSpaceTempSpaceHolderRegex().Replace(data, $"${{c}}{tempSpaceHolder}\u0020");
 
         // Split into segments around delimiter sequences of three spaces.
-        var segments = data.Split(new[] { new string('\u0020', 3) }, StringSplitOptions.None).ToList();
+        var segments = data.Split([new string('\u0020', 3)], StringSplitOptions.None).ToList();
 
         // We should have at least two segments. If not, then the wrong barcode was scanned or the reported data is incorrect.
         // This test is not conclusive, but is likely to report any problems.
@@ -2584,19 +2584,19 @@ public partial class Calibrator {
          * barcode data. However, this is not absolutely certain. We have to assume this is the case. Any issues should be
          * detected later. We will start to build the list of reported segments.
          * */
-        reportedSegments = new List<List<string>>
-                           {
-                               // Add the prefix segment.
-                               headerDelimiterIdx > 0
-                                   ? new List<string> { segments[0][..headerDelimiterIdx] }
-                                   : new List<string>(),
+        reportedSegments =
+        [
+            headerDelimiterIdx > 0
+                ? [segments[0][..headerDelimiterIdx]]
+                : [],
 
-                               // Add the first data segment (for invariant characters), splitting by space delimiters.
-                               segments[0][(headerDelimiterIdx + 2)..].Split('\u0020').ToList(),
+            // Add the first data segment (for invariant characters), splitting by space delimiters.
 
-                               // Add the second data segment (for non-invariant characters), splitting by space delimiters.
-                               segments[1].Split('\u0020').ToList()
-                           };
+            segments[0][(headerDelimiterIdx + 2)..].Split('\u0020').ToList(),
+
+            // Add the second data segment (for non-invariant characters), splitting by space delimiters.
+            segments[1].Split('\u0020').ToList()
+        ];
 
         // If we did not include tests for Format 06, then we need to insert some empty entries between the suffix and the rest of the data.
         if (!AssessFormatnnSupport) {
@@ -2613,7 +2613,7 @@ public partial class Calibrator {
         for (var segmentIdx = 2; segmentIdx < (segments.Count > 7 ? segments.Count : 7); segmentIdx++) {
             if (segmentIdx >= segments.Count) {
                 // Pad the segment list with empty segments if necessary.
-                reportedSegments.Add(new List<string>());
+                reportedSegments.Add([]);
             }
             else if (segmentIdx > (int)CalibrationSegments.UnitSeparatorSegment) {
                 // If the barcode scanner included a suffix that has split into segments, concatenate the into a single suffix segment.
@@ -2621,7 +2621,7 @@ public partial class Calibrator {
             }
             else {
                 // Add the segment.
-                reportedSegments.Add(new List<string> { segments[segmentIdx] });
+                reportedSegments.Add([segments[segmentIdx]]);
             }
         }
 
@@ -3024,7 +3024,7 @@ public partial class Calibrator {
                             _processedNonInvariantCharacters?
                                 .Where(m => m.Key == '\0')
                                 .Select(m => m.Value) ?? new List<char>())
-                        .ToList() ?? new List<char>();
+                        .ToList() ?? [];
 
                 return new Lazy<CalibrationToken>(localToken);
             };
@@ -4507,7 +4507,7 @@ public partial class Calibrator {
             segment,
             reportedSegmentsIndex < expectedSegments.Count
                 ? expectedSegments[reportedSegmentsIndex]
-                : new List<string>(),
+                : [],
             chainedSequences,
             splitSequences,
             invariant);
@@ -4530,7 +4530,7 @@ public partial class Calibrator {
             return token;
         }
 
-        segmentOut = new List<string>();
+        segmentOut = [];
 
         for (var sequenceIdx = 0; sequenceIdx < segment.Count; sequenceIdx++) {
             if (splitSequences.TryGetValue(sequenceIdx, out var value)) {
@@ -4983,7 +4983,7 @@ public partial class Calibrator {
          * to immediately after the first ASCII 0.
          * */
         var deadKeyCharacters = new StringBuilder();
-        char[] charsForEscape = { '.', '$', '^', '{', '[', '(', '|', ')', '*', '+', '?', '\\' };
+        char[] charsForEscape = ['.', '$', '^', '{', '[', '(', '|', ')', '*', '+', '?', '\\'];
 
         if (_tokenExtendedDataDeadKeysMap.Keys.Count <= 0) {
             return input;
@@ -5076,17 +5076,17 @@ public partial class Calibrator {
         _tokenErrors?.Clear();
 
         foreach (var information in token.Information) {
-            _tokenInformation ??= new List<CalibrationInformation>();
+            _tokenInformation ??= [];
             _tokenInformation.Add(information);
         }
 
         foreach (var warning in token.Warnings) {
-            _tokenWarnings ??= new List<CalibrationInformation>();
+            _tokenWarnings ??= [];
             _tokenWarnings.Add(warning);
         }
 
         foreach (var error in token.Errors) {
-            _tokenErrors ??= new List<CalibrationInformation>();
+            _tokenErrors ??= [];
             _tokenErrors.Add(error);
         }
 

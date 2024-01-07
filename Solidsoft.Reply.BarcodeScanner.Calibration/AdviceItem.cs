@@ -71,7 +71,7 @@ public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
                 $"Advice_{(int)adviceType}",
                 Thread.CurrentThread.CurrentUICulture)
             ?.Split(";;", StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
-            .ToList() ?? new List<string>();
+            .ToList() ?? [];
 
         Severity = (int)adviceType switch
         {
