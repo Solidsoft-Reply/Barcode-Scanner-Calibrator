@@ -766,13 +766,16 @@ public partial class Calibrator {
         SupportedPlatform platform = SupportedPlatform.Windows, 
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
-        bool trace = false) {
-
+        bool trace = false)
+    {
+        var tempDataForTrace = string.Empty;
+        
         if (trace)
         {
             var basicCapsLockValue = capsLock ?? false ? "true" : "false";
             var capsLockValue = capsLock == null ? "unknown" : basicCapsLockValue;
             var additionalData = (string.IsNullOrEmpty(data) ? string.Empty : "\r\n") + $"Caps Lock: {capsLockValue}\r\nSupported Platform: {platform}\r\n";
+            tempDataForTrace = data;
             
             try {
                 Console.WriteLine(data + additionalData);
@@ -833,6 +836,32 @@ public partial class Calibrator {
         if (data is null) {
             _lastToken = token;
             return token;
+        }
+
+        if (trace 
+            && !string.IsNullOrEmpty(tempDataForTrace) 
+            && !string.IsNullOrEmpty(data) 
+            && tempDataForTrace != data)
+        {
+            try
+            {
+                Console.WriteLine(data);
+            }
+            catch
+            {
+                // Do nothing here
+            }
+
+            try
+            {
+                Trace.WriteLine(data);
+            }
+            catch
+            {
+                // Do nothing here
+            }
+
+            tempDataForTrace = string.Empty;
         }
 
         // Set the current calibration barcode type.
