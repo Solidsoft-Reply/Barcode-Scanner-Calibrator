@@ -27,6 +27,4 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.ProcessFlow;
 /// </summary>
 /// <typeparam name="T">The type of the environment data object.</typeparam>
 // ReSharper disable once UnusedTypeParameter
-internal interface IEnvironment<T>
-{
-}
+internal interface IEnvironment<T>;

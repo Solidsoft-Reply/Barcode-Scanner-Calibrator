@@ -960,21 +960,21 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Lexon Error A",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LexonErrorABaseline }, new List<string>() }
+                                               { [LexonErrorABaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lexon Error B",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LexonErrorBBaseline }, new List<string>() }
+                                               { [LexonErrorBBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lexon Error C",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LexonErrorCBaseline }, new List<string>() }
+                                               { [LexonErrorCBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -982,7 +982,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { BelgianFrenchBaseline },
+                                                   [BelgianFrenchBaseline],
                                                    new List<string>
                                                    {
                                                        BelgianFrenchDeadKey1, BelgianFrenchDeadKey2
@@ -995,7 +995,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { BelgianCommaBaseline },
+                                                   [BelgianCommaBaseline],
                                                    new List<string>
                                                    {
                                                        BelgianCommaDeadKey1, BelgianCommaDeadKey2
@@ -1008,7 +1008,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { BelgianPeriodBaseline },
+                                                   [BelgianPeriodBaseline],
                                                    new List<string>
                                                    {
                                                        BelgianPeriodDeadKey1, BelgianPeriodDeadKey2
@@ -1021,7 +1021,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { FrenchBaseline },
+                                                   [FrenchBaseline],
                                                    new List<string> { FrenchDeadKey1, FrenchDeadKey2 }
                                                }
                                            }
@@ -1031,7 +1031,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SwissFrenchBaseline },
+                                                   [SwissFrenchBaseline],
                                                    new List<string>
                                                    {
                                                        SwissFrenchDeadKey1,
@@ -1046,7 +1046,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { CroatianStandardBaseline },
+                                                   [CroatianStandardBaseline],
                                                    new List<string>
                                                    {
                                                        CroatianStandardDeadKey1,
@@ -1059,14 +1059,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Bulgarian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { BulgarianBaseline }, new List<string>() }
+                                               { [BulgarianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Bulgarian (Latin)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { BulgarianLatinBaseline }, new List<string>() }
+                                               { [BulgarianLatinBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1074,7 +1074,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { BulgarianPhoneticTraditionalBaseline },
+                                                   [BulgarianPhoneticTraditionalBaseline],
                                                    new List<string>()
                                                }
                                            }
@@ -1083,14 +1083,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Bulgarian (Phonetic)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { BulgarianPhoneticBaseline }, new List<string>() }
+                                               { [BulgarianPhoneticBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Bulgarian (Typewriter)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { BulgarianTypewriterBaseline }, new List<string>() }
+                                               { [BulgarianTypewriterBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1098,7 +1098,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SwedishBaseline },
+                                                   [SwedishBaseline],
                                                    new List<string>
                                                    {
                                                        SwedishDeadKey1,
@@ -1114,7 +1114,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SwedishWithSamiBaseline },
+                                                   [SwedishWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        SwedishWithSamiDeadKey1,
@@ -1130,7 +1130,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { GreekBaseline },
+                                                   [GreekBaseline],
                                                    new List<string>
                                                    {
                                                        GreekDeadKey1, GreekDeadKey2, GreekDeadKey3
@@ -1142,7 +1142,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Greek (220)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { Greek220Baseline }, new List<string>() }
+                                               { [Greek220Baseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1150,7 +1150,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { Greek319Baseline },
+                                                   [Greek319Baseline],
                                                    new List<string> { Greek319DeadKey1, Greek319DeadKey2 }
                                                }
                                            }
@@ -1160,7 +1160,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { GreekPolytonicBaseline },
+                                                   [GreekPolytonicBaseline],
                                                    new List<string>
                                                    {
                                                        GreekPolytonicDeadKey1,
@@ -1179,7 +1179,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { CzechBaseline },
+                                                   [CzechBaseline],
                                                    new List<string>
                                                    {
                                                        CzechDeadKey1,
@@ -1195,7 +1195,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { CzechQwertyBaseline },
+                                                   [CzechQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        CzechQwertyDeadKey1,
@@ -1210,7 +1210,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Czech Programmers",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { CzechProgrammersBaseline }, new List<string>() }
+                                               { [CzechProgrammersBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1218,7 +1218,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { DutchBaseline },
+                                                   [DutchBaseline],
                                                    new List<string>
                                                    {
                                                        DutchDeadKey1,
@@ -1235,7 +1235,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { EstonianBaseline },
+                                                   [EstonianBaseline],
                                                    new List<string>
                                                    {
                                                        EstonianDeadKey1,
@@ -1251,7 +1251,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { FinnishBaseline },
+                                                   [FinnishBaseline],
                                                    new List<string>
                                                    {
                                                        FinnishDeadKey1,
@@ -1267,7 +1267,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { FinnishWithSamiBaseline },
+                                                   [FinnishWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        FinnishWithSamiDeadKey1,
@@ -1283,7 +1283,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { GermanBaseline },
+                                                   [GermanBaseline],
                                                    new List<string>
                                                    {
                                                        GermanDeadKey1, GermanDeadKey2, GermanDeadKey3
@@ -1296,7 +1296,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { GermanIbmBaseline },
+                                                   [GermanIbmBaseline],
                                                    new List<string>
                                                    {
                                                        GermanIbmDeadKey1,
@@ -1311,7 +1311,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SwissGermanBaseline },
+                                                   [SwissGermanBaseline],
                                                    new List<string>
                                                    {
                                                        SwissGermanDeadKey1,
@@ -1326,7 +1326,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { DanishBaseline },
+                                                   [DanishBaseline],
                                                    new List<string>
                                                    {
                                                        DanishDeadKey1,
@@ -1341,14 +1341,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Hungarian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { HungarianBaseline }, new List<string>() }
+                                               { [HungarianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Hungarian 101-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { Hungarian101KeyBaseline }, new List<string>() }
+                                               { [Hungarian101KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1356,7 +1356,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { IcelandicBaseline },
+                                                   [IcelandicBaseline],
                                                    new List<string>
                                                    {
                                                        IcelandicDeadKey1,
@@ -1371,7 +1371,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { IrishBaseline },
+                                                   [IrishBaseline],
                                                    new List<string> { IrishDeadKey1 }
                                                }
                                            }
@@ -1380,14 +1380,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Italian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { ItalianBaseline }, new List<string>() }
+                                               { [ItalianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Italian (142)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { Italian142Baseline }, new List<string>() }
+                                               { [Italian142Baseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1395,7 +1395,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { LatvianStandardBaseline },
+                                                   [LatvianStandardBaseline],
                                                    new List<string> { LatvianStandardDeadKey1 }
                                                }
                                            }
@@ -1405,7 +1405,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { LatvianQwertyBaseline },
+                                                   [LatvianQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        LatvianQwertyDeadKey1, LatvianQwertyDeadKey2
@@ -1418,7 +1418,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { LatvianBaseline },
+                                                   [LatvianBaseline],
                                                    new List<string> { LatvianDeadKey1, LatvianDeadKey2 }
                                                }
                                            }
@@ -1427,21 +1427,21 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Lithuanian",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LithuanianBaseline }, new List<string>() }
+                                               { [LithuanianBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lithuanian (IBM)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LithuanianIbmBaseline }, new List<string>() }
+                                               { [LithuanianIbmBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Lithuanian (Standard)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { LithuanianStandardBaseline }, new List<string>() }
+                                               { [LithuanianStandardBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1449,7 +1449,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SorbianBaseline },
+                                                   [SorbianBaseline],
                                                    new List<string>
                                                    {
                                                        SorbianDeadKey1, SorbianDeadKey2, SorbianDeadKey3
@@ -1462,7 +1462,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { NorwegianWithSamiBaseline },
+                                                   [NorwegianWithSamiBaseline],
                                                    new List<string>
                                                    {
                                                        NorwegianWithSamiDeadKey1,
@@ -1477,7 +1477,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { LuxembourgishBaseline },
+                                                   [LuxembourgishBaseline],
                                                    new List<string>
                                                    {
                                                        LuxembourgishDeadKey1,
@@ -1492,7 +1492,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { NorwegianBaseline },
+                                                   [NorwegianBaseline],
                                                    new List<string>
                                                    {
                                                        NorwegianDeadKey1,
@@ -1506,14 +1506,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Maltese 47-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { Maltese47KeyBaseline }, new List<string>() }
+                                               { [Maltese47KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Maltese 48-key",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { Maltese48KeyBaseline }, new List<string>() }
+                                               { [Maltese48KeyBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1521,7 +1521,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { PolishProgrammersBaseline },
+                                                   [PolishProgrammersBaseline],
                                                    new List<string> { PolishProgrammersDeadKey1 }
                                                }
                                            }
@@ -1531,7 +1531,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { Polish214Baseline },
+                                                   [Polish214Baseline],
                                                    new List<string> { Polish214DeadKey1, Polish214DeadKey2 }
                                                }
                                            }
@@ -1541,7 +1541,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { PortugueseBaseline },
+                                                   [PortugueseBaseline],
                                                    new List<string>
                                                    {
                                                        PortugueseDeadKey1,
@@ -1556,21 +1556,21 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Romanian (Standard)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { RomanianStandardBaseline }, new List<string>() }
+                                               { [RomanianStandardBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Romanian (Legacy)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { RomanianLegacyBaseline }, new List<string>() }
+                                               { [RomanianLegacyBaseline], new List<string>() }
                                            }
                                        },
                                        {
                                            "Romanian (Programmers)",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { RomanianProgrammersBaseline }, new List<string>() }
+                                               { [RomanianProgrammersBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1578,7 +1578,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { ScottishGaelicBaseline },
+                                                   [ScottishGaelicBaseline],
                                                    new List<string>
                                                    {
                                                        ScottishGaelicDeadKey1, ScottishGaelicDeadKey2
@@ -1591,7 +1591,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SlovakBaseline },
+                                                   [SlovakBaseline],
                                                    new List<string> { SlovakDeadKey1 }
                                                }
                                            }
@@ -1601,7 +1601,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SlovakQwertyBaseline },
+                                                   [SlovakQwertyBaseline],
                                                    new List<string>
                                                    {
                                                        SlovakQwertyDeadKey1,
@@ -1616,7 +1616,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SlovenianBaseline },
+                                                   [SlovenianBaseline],
                                                    new List<string> { SlovenianDeadKey1, SlovenianDeadKey2 }
                                                }
                                            }
@@ -1626,7 +1626,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SpanishBaseline },
+                                                   [SpanishBaseline],
                                                    new List<string>
                                                    {
                                                        SpanishDeadKey1,
@@ -1641,7 +1641,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "Spanish Variation",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { SpanishVariationBaseline }, new List<string>() }
+                                               { [SpanishVariationBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1649,7 +1649,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SorbianStandardBaseline },
+                                                   [SorbianStandardBaseline],
                                                    new List<string>
                                                    {
                                                        SorbianStandardDeadKey1,
@@ -1664,7 +1664,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SorbianExtendedBaseline },
+                                                   [SorbianExtendedBaseline],
                                                    new List<string>
                                                    {
                                                        SorbianExtendedDeadKey1,
@@ -1680,7 +1680,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { SorbianStandardLegacyBaseline },
+                                                   [SorbianStandardLegacyBaseline],
                                                    new List<string>
                                                    {
                                                        SorbianStandardLegacyDeadKey1,
@@ -1695,7 +1695,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            "United Kingdom",
                                            new Dictionary<string[], IList<string>>
                                            {
-                                               { new[] { UnitedKingdomBaseline }, new List<string>() }
+                                               { [UnitedKingdomBaseline], new List<string>() }
                                            }
                                        },
                                        {
@@ -1703,7 +1703,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[] { UnitedKingdomExtendedBaseline },
+                                                   [UnitedKingdomExtendedBaseline],
                                                    new List<string> { UnitedKingdomExtendedDeadKey1 }
                                                }
                                            }
@@ -1713,8 +1713,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            new Dictionary<string[], IList<string>>
                                            {
                                                {
-                                                   new[]
-                                                   {
+                                                   [
                                                        SwissFrench2424BaselineA,
                                                        SwissFrench2424BaselineB,
                                                        SwissFrench2424BaselineC,
@@ -1722,7 +1721,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                                        SwissFrench2424BaselineE,
                                                        SwissFrench2424BaselineF,
                                                        SwissFrench2424BaselineG
-                                                   },
+                                                   ],
                                                    new List<string>
                                                    {
                                                        SwissFrench2424DeadKey1A,

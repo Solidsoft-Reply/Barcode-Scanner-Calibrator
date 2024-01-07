@@ -38,27 +38,20 @@ using SixLabors.ImageSharp.Formats.Pbm;
 using SixLabors.ImageSharp.Formats.Tga;
 using SixLabors.ImageSharp.Formats.Tiff;
 using SixLabors.ImageSharp.Formats.Webp;
-
-namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
+using Color = SixLabors.ImageSharp.Color;
+using Image = SixLabors.ImageSharp.Image;
 
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.Formats.Png;
-
-using Color = Color;
-using Image = Image;
-
-using System;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
 
 using SixLabors.ImageSharp.PixelFormats;
-
+using SixLabors.ImageSharp.Processing;
+using ZXing;
 using ZXing.Datamatrix;
 
-using ZXing;
-using SixLabors.ImageSharp.Processing;
-
+namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// <summary>
 ///   Creates a data matrix EC200 barcode as a stream of image data.
 /// </summary>

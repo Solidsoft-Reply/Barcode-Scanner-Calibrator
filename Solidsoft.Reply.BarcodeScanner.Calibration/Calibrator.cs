@@ -48,6 +48,7 @@ using ProcessFlow;
 using Properties;
 
 using Token = ProcessFlow.Environment<CalibrationToken>;
+using SixLabors.ImageSharp;
 
 /// <summary>
 ///   Delegate for pre-processor functions.
@@ -861,6 +862,7 @@ public partial class Calibrator {
                 // Do nothing here
             }
 
+            // ReSharper disable once RedundantAssignment
             tempDataForTrace = string.Empty;
         }
 
