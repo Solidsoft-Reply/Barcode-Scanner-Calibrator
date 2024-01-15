@@ -493,6 +493,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Try again..
+        /// </summary>
+        internal static string Advice_390 {
+            get {
+                return ResourceManager.GetString("Advice_390", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your system reads most barcodes reliably..
         /// </summary>
         internal static string Condition_100 {
@@ -925,6 +934,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The test failed unexpectedly..
+        /// </summary>
+        internal static string Condition_390 {
+            get {
+                return ResourceManager.GetString("Condition_390", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434..
         /// </summary>
         internal static string Description_105 {
@@ -1254,6 +1272,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Description_332 {
             get {
                 return ResourceManager.GetString("Description_332", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue..
+        /// </summary>
+        internal static string Description_390 {
+            get {
+                return ResourceManager.GetString("Description_390", resourceCulture);
             }
         }
         

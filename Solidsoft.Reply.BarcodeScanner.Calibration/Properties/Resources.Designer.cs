@@ -727,6 +727,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to unspecified.
+        /// </summary>
+        internal static string Unspecified {
+            get {
+                return ResourceManager.GetString("Unspecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string..
         /// </summary>
         internal static string UnusedExtendedAsciiCharacterNotFound {

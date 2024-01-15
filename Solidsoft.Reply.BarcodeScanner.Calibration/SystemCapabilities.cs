@@ -21,6 +21,8 @@
 // --------------------------------------------------------------------------------------------------------------------
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
+using System.Reflection;
+
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
@@ -34,6 +36,9 @@ using Properties;
 /// <summary>
 ///   The capabilities of the combination of the barcode scanner and the system.
 /// </summary>
+/// <param name="UnexpectedError">
+///   Gets a value indicating whether an unexpected error occurred.
+/// </param>
 /// <param name="TestsSucceeded">
 ///   Gets a value indicating whether the tests succeeded.
 /// </param>
@@ -248,142 +253,145 @@ using Properties;
 ///   Gets a list of unrecognised characters.
 /// </param>
 public sealed record SystemCapabilities (
-    [property: JsonProperty("testsSucceeded", Order = 0)]
+    [property: JsonProperty("unexpectedError", Order = 0)]
+    bool UnexpectedError = false,
+
+    [property: JsonProperty("testsSucceeded", Order = 1)]
     bool TestsSucceeded = true,
 
-    [property: JsonProperty("dataReported", Order = 1)]
+    [property: JsonProperty("dataReported", Order = 2)]
     bool DataReported = true,
 
-    [property: JsonProperty("correctSequenceReported", Order = 2)]
+    [property: JsonProperty("correctSequenceReported", Order = 3)]
     bool CorrectSequenceReported = true,
 
-    [property: JsonProperty("completeDataReported", Order = 3)]
+    [property: JsonProperty("completeDataReported", Order = 4)]
     bool CompleteDataReported = true,
 
-    [property: JsonProperty("keyboardLayoutsCorrespond", Order = 4)]
+    [property: JsonProperty("keyboardLayoutsCorrespond", Order = 5)]
     bool? KeyboardLayoutsCorrespond = true,
 
-    [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 5)]
+    [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 6)]
     bool? KeyboardLayoutsCorrespondForInvariants = true,
 
-    [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 6)]
+    [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 7)]
     bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true,
 
-    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparator", Order = 7)]
+    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparator", Order = 8)]
     bool? KeyboardLayoutsCanRepresentGroupSeparator = true,
 
-    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparator", Order = 8)]
+    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparator", Order = 9)]
     bool? KeyboardLayoutsCanRepresentRecordSeparator = true,
 
-    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 9)]
+    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 10)]
     bool? KeyboardLayoutsCanRepresentEdiSeparators = true,
 
-    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 10)]
+    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 11)]
     bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
 
-    [property: JsonProperty("canReadInvariantsReliably", Order = 11)]
+    [property: JsonProperty("canReadInvariantsReliably", Order = 12)]
     bool? CanReadInvariantsReliably = true,
 
-    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 12)]
+    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 13)]
     bool? CanReadFormat05AndFormat06Reliably = true,
 
-    [property: JsonProperty("canReadEdiReliably", Order = 13)]
+    [property: JsonProperty("canReadEdiReliably", Order = 14)]
     bool? CanReadEdiReliably = true,
 
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 14)]
+    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 15)]
     bool? CanReadGroupSeparatorReliably = true,
 
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 15)]
+    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 16)]
     bool? CanReadRecordSeparatorReliably = true,
 
-    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 16)]
+    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 17)]
     bool? CanReadFileSeparatorsReliably = true,
 
-    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 17)]
+    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 18)]
     bool? CanReadUnitSeparatorsReliably = true,
 
-    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 18)]
+    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 19)]
     bool? CanReadAimIdentifiersReliably = true,
 
-    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 19)]
+    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 20)]
     bool? CanReadAdditionalAsciiCharactersReliably = true,
 
-    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 20)]
+    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 21)]
     bool? ScannerTransmitsAimIdentifiers = true,
 
-    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 21)]
+    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 22)]
     bool? ScannerTransmitsEndOfLineSequence = true,
 
-    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 22)]
+    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 23)]
     bool ScannerTransmitsAdditionalPrefix = false,
 
-    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 23)]
+    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 24)]
     bool ScannerTransmitsAdditionalCode = false,
 
-    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 24)]
+    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 25)]
     bool ScannerTransmitsAdditionalSuffix = false,
 
-    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 25)]
+    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 26)]
     bool? ScannerMayConvertToUpperCase = null,
 
-    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 26)]
+    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 27)]
     bool? ScannerMayConvertToLowerCase = null,
 
-    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 27)]
+    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 28)]
     bool? KeyboardScriptDoesNotSupportCase = null,
 
-    [property: JsonProperty("capsLockIndicator", Order = 28)]
+    [property: JsonProperty("capsLockIndicator", Order = 29)]
     bool CapsLockIndicator = false,
 
-    [property: JsonProperty("scannerKeyboardPerformance", Order = 29)]
+    [property: JsonProperty("scannerKeyboardPerformance", Order = 30)]
     ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
 
-    [property: JsonProperty("formatnnSupportAssessed", Order = 30)]
+    [property: JsonProperty("formatnnSupportAssessed", Order = 31)]
     bool FormatnnSupportAssessed = false,
 
-    [property: JsonProperty("aimIdentifier", Order = 31)]
+    [property: JsonProperty("aimIdentifier", Order = 32)]
     string? AimIdentifier = null,
 
-    [property: JsonProperty("aimIdentifierUncertain", Order = 32)]
+    [property: JsonProperty("aimIdentifierUncertain", Order = 33)]
     bool AimIdentifierUncertain = false,
 
-    [property: JsonProperty("endOfLineSequence", Order = 33)]
+    [property: JsonProperty("endOfLineSequence", Order = 34)]
     string? EndOfLineSequence = null,
 
-    [property: JsonProperty("additionalPrefix", Order = 34)]
+    [property: JsonProperty("additionalPrefix", Order = 35)]
     string AdditionalPrefix = "",
 
-    [property: JsonProperty("additionalCode", Order = 35)]
+    [property: JsonProperty("additionalCode", Order = 36)]
     string AdditionalCode = "",
 
-    [property: JsonProperty("additionalSuffix", Order = 36)]
+    [property: JsonProperty("additionalSuffix", Order = 37)]
     string AdditionalSuffix = "",
 
-    [property: JsonProperty("keyboardScript", Order = 37)]
+    [property: JsonProperty("keyboardScript", Order = 38)]
     string KeyboardScript = "",
 
-    [property: JsonProperty("platform", Order = 38)]
+    [property: JsonProperty("platform", Order = 39)]
     SupportedPlatform Platform = SupportedPlatform.Windows,
 
-    [property: JsonProperty("deadKeys", Order = 39)]
+    [property: JsonProperty("deadKeys", Order = 40)]
     bool DeadKeys = false,
 
-    [property: JsonProperty("characterMappings", Order = 40)]
+    [property: JsonProperty("characterMappings", Order = 41)]
     IList<CalibrationCharacterMapping>? CharacterMappings = null,
 
-    [property: JsonProperty("deadKeyMappings", Order = 41)]
+    [property: JsonProperty("deadKeyMappings", Order = 42)]
     IList<CalibrationDeadKeyMapping>? DeadKeyMappings = null,
 
-    [property: JsonProperty("ambiguities", Order = 42)]
+    [property: JsonProperty("ambiguities", Order = 43)]
     IList<CalibrationAmbiguity>? Ambiguities = null,
 
-    [property: JsonProperty("unrecognisedCharacters", Order = 43)]
+    [property: JsonProperty("unrecognisedCharacters", Order = 44)]
     IList<CalibrationUnrecognisedCharacter>? UnrecognisedCharacters = null,
 
-    [property: JsonProperty("ligatureMappings", Order = 44)]
+    [property: JsonProperty("ligatureMappings", Order = 45)]
     IList<CalibrationLigatureMapping>? LigatureMappings = null,
 
-    [property: JsonProperty("calibrationAssumption", Order = 45)]
+    [property: JsonProperty("calibrationAssumption", Order = 46)]
     CalibrationAssumption CalibrationAssumption = CalibrationAssumption.Agnostic)
      
 : CalibrationBaseRecord {
@@ -700,30 +708,16 @@ public sealed record SystemCapabilities (
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
                 case CalibrationInformationType.NoCalibrationDataReported:
-                    TestsSucceeded = false;
                     DataReported = false;
-                    KeyboardLayoutsCorrespond = null;
-                    KeyboardLayoutsCorrespondForInvariants = null;
-                    KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
-                    CanReadInvariantsReliably = null;
-                    CanReadFormat05AndFormat06Reliably = null;
-                    CanReadEdiReliably = null;
-                    CanReadAdditionalAsciiCharactersReliably = null;
-                    ScannerTransmitsAdditionalPrefix = false;
-                    ScannerTransmitsAdditionalSuffix = false;
-                    AdditionalPrefix = string.Empty;
-                    AdditionalCode = string.Empty;
-                    AdditionalSuffix = string.Empty;
-                    KeyboardScript = string.Empty;
-                    CompleteDataReported = false;
-                    CorrectSequenceReported = true;
-                    break;
+                    goto case CalibrationInformationType.UnrecognisedData;
+                case CalibrationInformationType.CalibrationFailed:
+                    UnexpectedError = true;
+                    goto case CalibrationInformationType.UnrecognisedData;
                 case CalibrationInformationType.UnrecognisedData:
                 case CalibrationInformationType.TooManyCharactersDetected:
                 case CalibrationInformationType.NoTemporaryDelimiterCandidate:
                 case CalibrationInformationType.NoDelimiters:
                     TestsSucceeded = false;
-                    KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespondForInvariants = null;
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
@@ -806,7 +800,6 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.ScannerMayConvertToLowerCase:
                 case CalibrationInformationType.ScannerMayInvertCase:
                 case CalibrationInformationType.SubOptimalScannerKeyboardPerformance:
-                case CalibrationInformationType.CalibrationFailed:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(

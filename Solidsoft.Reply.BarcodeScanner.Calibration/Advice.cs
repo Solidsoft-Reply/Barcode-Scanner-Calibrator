@@ -66,6 +66,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Get boolean values
 #pragma warning disable CA1062 // Validate arguments of public methods
+        var unexpectedError = systemCapabilities.UnexpectedError;
         var testsSucceeded = systemCapabilities.TestsSucceeded;
         var dataReported = systemCapabilities.DataReported;
         var correctSequenceReported = systemCapabilities.CorrectSequenceReported;
@@ -204,7 +205,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 240, 241, 245
         AddAdviceItemToList(
-            IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+            IfDataWasFullyReported()
+            && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
                     ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() || IfWeKnowIfWeCanReadInvariantCharactersReliably())
                       && IfTheKeyboardLayoutsCannotRepresentRecordSeparators() 
@@ -227,7 +229,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 260, 261, 265
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForNonInvariantCharacters()
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForNonInvariantCharacters()
                 ? IfWeCannotReadNonInvariantCharactersReliably()
                     ? ReportThatTheSystemCannotReadNonInvariantCharactersReliably()                                         // 265
                     : IfWeAssumeAgnosticism()
@@ -239,7 +242,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 270, 271, 275
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()                                             // 275
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()                                             // 275
                 ? IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably()
                     : IfWeAssumeAgnosticism()
@@ -251,7 +255,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 300
         AddAdviceItemToList(
-            IfTestDidNotSucceed() 
+            IfNoUnexpectedErrorOccurred()
+            && IfTestDidNotSucceed() 
             && IfDataWasReported() 
                 ? ReportThatTheTestFailed()                                                                                 // 300
                 : null);
@@ -266,7 +271,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 303, 306
         AddAdviceItemToList(
-            IfDataWasOnlyPartiallyReported()
+            IfNoUnexpectedErrorOccurred()
+            && IfDataWasOnlyPartiallyReported()
                 ? IfDeadKeyBarcodesWereGeneratedDuringCalibration()
                     ? ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes()                                         // 306
                     : ReportThatScannedDataWasPartiallyReportedForBaselineBarcode()                                         // 303
@@ -280,7 +286,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 307, 308
         AddAdviceItemToList(
-            IfTheKeyboardLayoutsDoNotCorrespondForInvariantCharacters()
+            IfDataWasFullyReported()
+            && IfTheKeyboardLayoutsDoNotCorrespondForInvariantCharacters()
                 ? IfWeAssumeAgnosticism()
                     ? IfWeKnowIfWeCanReadInvariantCharactersReliably() 
                       || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
@@ -298,7 +305,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceTypes: 309, 310
         AddAdviceItemToList(
-            IfTheKeyboardLayoutsCorrespondForInvariantCharacters()
+            IfDataWasFullyReported()
+            && IfTheKeyboardLayoutsCorrespondForInvariantCharacters()
             && IfTheKeyboardLayoutsCannotRepresentGroupSeparators()
                 ? IfWeAssumeAgnosticism()
                     ? IfWeKnowIfWeCanReadInvariantCharactersReliably() 
@@ -317,7 +325,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // AdviceType: 315, 316
         AddAdviceItemToList(
-            IfWeAssumeAgnosticism()
+            IfDataWasFullyReported()
+            && IfWeAssumeAgnosticism()
             && IfWeCanReadInvariantCharactersReliably()
             && IfWeCannotReadFormat05AndFormat06Reliably()
                 ? IfWeKnowIfKeyboardLayoutsCorrespondForInvariants()
@@ -333,7 +342,8 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Advice Type: 320
         AddAdviceItemToList(
-            IfWeDoNotAscertainThatWeCanReadVariantCharactersReliably()
+            IfDataWasFullyReported()
+            && IfWeDoNotAscertainThatWeCanReadVariantCharactersReliably()
                 ? ReportThatSystemCannotReadBarcodesReliably()                                                              // 320
                 : null);
 
@@ -365,8 +375,16 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
 
         // Advice Type 335
         AddAdviceItemToList(
-            IfWeCannotReadVariantCharactersReliably()
+            IfDataWasFullyReported()
+            && IfWeCannotReadVariantCharactersReliably()
+            && IfTheKeyboardScriptDoesNotSupportCase()
                 ? ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase()                               // 335
+                : null);
+
+        // AdviceType: 390
+        AddAdviceItemToList(
+            IfUnexpectedErrorOccurred()
+                ? ReportThatAnUnexpectedErrorWasReported()
                 : null);
 
         // General fix-up for other issues
@@ -635,8 +653,11 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForNonInvariantCharacters() => !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
         bool IfWeCannotReadNonInvariantCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
         bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
+        bool IfUnexpectedErrorOccurred() => unexpectedError;
+        bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;
         bool IfNoDataWasReported() => !dataReported;
+        bool IfDataWasFullyReported() => completeDataReported;
         bool IfDataWasOnlyPartiallyReported() => !completeDataReported;
         bool IfDeadKeyBarcodesWereGeneratedDuringCalibration() => deadKeys;
         bool IfBarcodesWereScannedInAnIncorrectSequence() => !correctSequenceReported;
@@ -835,6 +856,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType>
         // 335
         AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
             new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+
+        // 390
+        AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
+            new(AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

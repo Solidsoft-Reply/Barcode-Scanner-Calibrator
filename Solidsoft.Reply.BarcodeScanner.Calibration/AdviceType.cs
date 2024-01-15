@@ -172,6 +172,12 @@ public enum AdviceType
     NoSupportForCase = 335,
 
     /// <summary>
+    /// <p>An unexpected error was reported.</p>
+    /// <p>Try again.</p>
+    /// </summary>
+    UnexpectedErrorReported = 390,
+
+    /// <summary>
     /// <p>Your barcode scanner does not transmit AIM identifiers.</p>
     /// <p>Configure your barcode scanner to transmit AIM identifiers. Your software can then determine
     ///   what kind of barcode you scanned and do a better job if you scan the wrong barcode.</p>

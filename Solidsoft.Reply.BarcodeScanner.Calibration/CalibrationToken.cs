@@ -244,6 +244,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         SystemCapabilities = oldToken.SystemCapabilities is null
                                       ? null
                                       : new SystemCapabilities(
+                                          oldToken.SystemCapabilities.UnexpectedError,
                                           oldToken.SystemCapabilities.TestsSucceeded,
                                           oldToken.SystemCapabilities.DataReported,
                                           oldToken.SystemCapabilities.CorrectSequenceReported,

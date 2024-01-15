@@ -261,6 +261,9 @@
   <data name="Advice_335" xml:space="preserve">
     <value>Si es posible, configure su computadora para usar una disposición de teclado diferente.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Intente de nuevo.</value>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Su sistema lee la mayoría de los códigos de barras de manera confiable.</value>
   </data>
@@ -405,6 +408,9 @@
   <data name="Condition_335" xml:space="preserve">
     <value>Su disposición de teclado admite {0} caracteres y no puede leer códigos de barras de manera confiable.</value>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>La prueba falló inesperadamente.</value>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>Sin embargo, no probó la compatibilidad con ISO/IEC 15434. Su sistema puede no ser capaz de leer códigos de barras de manera confiable si contienen datos formateados según ISO/IEC 15434.</value>
   </data>
@@ -515,6 +521,9 @@
   </data>
   <data name="Description_332" xml:space="preserve">
     <value>Su sistema no puede leer caracteres de códigos de barras de manera confiable.</value>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Su escáner de códigos de barras o sistema puede ser lento o puede verse afectado por software antivirus o algún otro problema inesperado o intermitente.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Error al resolver scripts de teclado: {0}</value>

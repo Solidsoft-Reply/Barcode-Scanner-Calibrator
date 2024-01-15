@@ -70,7 +70,7 @@ public class CalibrationException : Exception
     /// </summary>
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
-    [Obsolete(DiagnosticId = "SYSLIB0051")]
+    [Obsolete("Formatter serialisation has been deprecated in .NET.", DiagnosticId = "SYSLIB0051")]
     protected CalibrationException(SerializationInfo info, StreamingContext context) : base(info, context)
     {
     }

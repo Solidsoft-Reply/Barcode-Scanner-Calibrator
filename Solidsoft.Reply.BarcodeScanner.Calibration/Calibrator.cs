@@ -770,7 +770,7 @@ public partial class Calibrator {
         bool trace = false)
     {
         var tempDataForTrace = string.Empty;
-        
+
         if (trace)
         {
             var basicCapsLockValue = capsLock ?? false ? "true" : "false";
@@ -779,14 +779,14 @@ public partial class Calibrator {
             tempDataForTrace = data;
             
             try {
-                Console.WriteLine(data + additionalData);
+                Console.WriteLine(data?.ToControlPictures() + additionalData);
             }
             catch { 
                 // Do nothing here
             }
 
             try {
-                Trace.WriteLine(data + additionalData);
+                Trace.WriteLine(data?.ToControlPictures() + additionalData);
             }
             catch {
                 // Do nothing here
@@ -846,7 +846,7 @@ public partial class Calibrator {
         {
             try
             {
-                Console.WriteLine(data);
+                Console.WriteLine(data.ToControlPictures());
             }
             catch
             {
@@ -855,7 +855,7 @@ public partial class Calibrator {
 
             try
             {
-                Trace.WriteLine(data);
+                Trace.WriteLine(data.ToControlPictures());
             }
             catch
             {
@@ -1943,7 +1943,6 @@ public partial class Calibrator {
         {
             Console.WriteLine(Properties.Advice.ErrorWhileResolvingKeyboardScripts, argEx.Message);
             return "<unknown>";
-            
         }
     }
 
@@ -2278,6 +2277,13 @@ public partial class Calibrator {
 
             _tokenDataKey = $"\0{correctDeadKey}";
 
+            // Check AIM identifier
+            _tokenExtendedDataAimFlagCharacterSequence =
+                token.Data?.Key != null &&
+                _tokenExtendedDataAimFlagCharacterSequence == token.Data.Key
+                    ? ProcessPrefix()
+                    : _tokenExtendedDataAimFlagCharacterSequence;
+
             // In some cases, the issue with dead keys may have affected the AIM Identifier. We need to check if the AIM
             // flag sequence is correct. If not, we change it and process or remove any prefix that has been recorded.
             string? ProcessPrefix() {
@@ -2310,13 +2316,6 @@ public partial class Calibrator {
                 Match Match1() =>
                     match = aimIdentifierRegEx.Match(_tokenExtendedDataPrefix);
             }
-
-            // Check AIM identifier
-            _tokenExtendedDataAimFlagCharacterSequence =
-                token.Data?.Key != null &&
-                _tokenExtendedDataAimFlagCharacterSequence == token.Data.Key
-                    ? ProcessPrefix()
-                    : _tokenExtendedDataAimFlagCharacterSequence;
         }
 
         // Get the character used to split the data
@@ -2342,6 +2341,7 @@ public partial class Calibrator {
          * the splitting is correct.
          * */
         if (!data.TryUnusedExtendedAsciiCharacter(out var tempSpaceCharacter)) {
+
             // Error - The reported calibration data cannot be processed. No character can be determined
             // to act as a temporary delimiter.
             return (LogCalibrationInformation(

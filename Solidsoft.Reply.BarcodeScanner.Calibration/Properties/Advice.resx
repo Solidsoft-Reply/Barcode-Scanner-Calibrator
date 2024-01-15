@@ -6,7 +6,7 @@
     Version 2.0
     
     The primary goals of this format is to allow a simple XML format 
-    that is mostly human-readable. The generation and parsing of the 
+    that is mostly human readable. The generation and parsing of the 
     various data types are done through the TypeConverter classes 
     associated with the data types.
     
@@ -309,6 +309,10 @@
     <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
     <comment>High</comment>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Try again.</value>
+    <comment>High</comment>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Your system reads most barcodes reliably.</value>
     <comment>Low</comment>
@@ -501,6 +505,10 @@
     <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
     <comment>High</comment>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>The test failed unexpectedly.</value>
+    <comment>High</comment>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
     <comment>Low</comment>
@@ -649,7 +657,11 @@
     <value>Your system cannot read barcode characters reliably.</value>
     <comment>High</comment>
   </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
+    <comment>High</comment>
+  </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-	  <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Error while resolving keyboard scripts: {0}</value>
   </data>
 </root>

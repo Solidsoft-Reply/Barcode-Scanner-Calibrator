@@ -261,6 +261,9 @@
   <data name="Advice_335" xml:space="preserve">
     <value>Falls möglich, konfigurieren Sie Ihren Computer für ein anderes Tastaturlayout.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert.</value>
   </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Versuchen Sie es erneut.</value>
+  </data>
   <data name="Condition_100" xml:space="preserve">
     <value>Ihr System liest die meisten Barcodes zuverlässig.</value>
   </data>
@@ -405,6 +408,9 @@
   <data name="Condition_335" xml:space="preserve">
     <value>Ihr Tastaturlayout unterstützt {0} Zeichen und kann Barcodes nicht zuverlässig lesen.</value>
   </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>Der Test ist unerwartet fehlgeschlagen.</value>
+  </data>
   <data name="Description_105" xml:space="preserve">
     <value>Sie haben jedoch die Kompatibilität mit ISO/IEC 15434 nicht getestet. Ihr System kann möglicherweise Barcodes nicht zuverlässig lesen, wenn sie Daten enthalten, die gemäß ISO/IEC 15434 formatiert sind.</value>
   </data>
@@ -515,6 +521,9 @@
   </data>
   <data name="Description_332" xml:space="preserve">
     <value>Ihr System kann Barcode-Zeichen nicht zuverlässig lesen.</value>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Ihr Barcode-Scanner oder System kann langsam sein, oder es kann von Antivirensoftware oder einem anderen unerwarteten oder intermittierenden Problem beeinträchtigt werden.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Fehler bei der Auflösung von Tastaturskripten: {0}</value>
