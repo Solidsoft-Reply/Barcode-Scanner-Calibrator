@@ -17,8 +17,7 @@
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
-		1) Fixed an issue with prefix handling for small barcodes.
-		2) Added localisation support for French, German and Spanish.
+		1) Extended traget platforms to .NET 6.0, 7.0 and 8.0.
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
@@ -27,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.0.3</Version>
+	<Version>1.0.4</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
