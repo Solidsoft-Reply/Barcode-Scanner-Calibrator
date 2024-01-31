@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="CalibrationAmbiguity.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2023 Solidsoft Reply Ltd. All rights reserved.
+//   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,7 +37,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <param name="DeadKey">Gets a value indicating whether the reported character is a dead key.</param>
 public record CalibrationAmbiguity(
         [property: JsonProperty("expected", Order = 0)]
-        IList<string>  Expected,
+        IList<string> Expected,
         [property: JsonProperty("reported", Order = 1)]
         string Reported,
         [property: JsonProperty("invariantCharactersOnly", Order = 2)]

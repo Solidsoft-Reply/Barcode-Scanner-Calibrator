@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net7.0;net6.0;</TargetFrameworks>
 	<LangVersion>12.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>Barcode Scanner Calibration Library</Title>
-	<Copyright>©2023 Solidsoft Reply</Copyright>
+	<Copyright>© 2018-2024 Solidsoft Reply</Copyright>
 	<Company>Solidsoft Reply Ltd.</Company>
 	<Authors>cnayoung</Authors>
 	<RepositoryUrl>https://github.com/Solidsoft-Reply/Solidsoft.Reply.BarcodeScanner.Calibration</RepositoryUrl>
@@ -36,8 +36,23 @@
   <ItemGroup>
 	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.2" />
     <PackageReference Include="ZXing.Net" Version="0.16.9" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+	<PackageReference Include="SixLabors.ImageSharp" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+	<PackageReference Include="SixLabors.ImageSharp" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+	<PackageReference Include="SixLabors.ImageSharp" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' ">
+	<PackageReference Include="SixLabors.ImageSharp" Version="2.1.6" />
   </ItemGroup>
 
   <ItemGroup>

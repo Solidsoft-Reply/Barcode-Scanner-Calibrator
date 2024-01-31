@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="CalibrationExtensions.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2023 Solidsoft Reply Ltd. All rights reserved.
+//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,6 +33,7 @@ using System.Text.RegularExpressions;
 ///   Extension methods for calibration.
 /// </summary>
 // ReSharper disable once UnusedMember.Global
+#if NET7_0_OR_GREATER
 internal static partial class CalibrationExtensions
 {
 
@@ -49,7 +50,20 @@ internal static partial class CalibrationExtensions
     /// <returns>A regular expression.</returns>
     [GeneratedRegex(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None, "en-US")]
     private static partial Regex ControlCharTerminators();
+#else
+internal static class CalibrationExtensions {
+    
+    /// <summary>
+    ///   Returns a regular expression for matching line terminators and providing a stripped string.
+    /// </summary>
+    private static readonly Regex LineTerminators = new (@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
 
+    /// <summary>
+    ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
+    /// </summary>
+    private static readonly Regex ControlCharTerminators = new (@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
+#endif
+    
     /// <summary>
     ///   Strips off any trailing carriage return and line feed characters.
     /// </summary>
@@ -61,7 +75,11 @@ internal static partial class CalibrationExtensions
 
         if (input.Length == 0) return input;
 
-        var matchLineTerminators = LineTerminators().Match(input);
+        var matchLineTerminators = LineTerminators
+#if NET7_0_OR_GREATER
+            ()
+#endif
+            .Match(input);
 
         if (!matchLineTerminators.Success)
         {
@@ -71,7 +89,11 @@ internal static partial class CalibrationExtensions
             // suffixes (unless they end with four spaces, in which case the assumption of line terminators may not be
             // valid) and it assumes that the space character is reported without change.  This approach not 100%
             // reliable, but can only be defeated in highly unusual circumstances.
-            var matchControlChars = ControlCharTerminators().Match(input);
+            var matchControlChars = ControlCharTerminators
+#if NET7_0_OR_GREATER
+                ()
+#endif
+                .Match(input);
 
             if (!matchControlChars.Success) return input;
             var trailingCrLfCharsSpan = matchLineTerminators.Groups["lineTerminators"].ValueSpan;

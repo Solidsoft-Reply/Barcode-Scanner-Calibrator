@@ -73,7 +73,9 @@ public class AdviceItemListException : Exception
     /// </summary>
     /// <param name="info">The serialization information.</param>
     /// <param name="context">The streaming context.</param>
+#if NET5_0_OR_GREATER
     [Obsolete("Formatter serialisation has been deprecated in .NET.", DiagnosticId = "SYSLIB0051")]
+#endif
     protected AdviceItemListException(SerializationInfo info, StreamingContext context) : base(info, context)
     {
     }
