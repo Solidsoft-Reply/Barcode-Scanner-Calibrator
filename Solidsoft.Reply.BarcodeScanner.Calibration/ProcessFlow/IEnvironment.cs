@@ -27,4 +27,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.ProcessFlow;
 /// </summary>
 /// <typeparam name="T">The type of the environment data object.</typeparam>
 // ReSharper disable once UnusedTypeParameter
+#pragma warning disable S2326
 internal interface IEnvironment<T>;
+#pragma warning restore S2326

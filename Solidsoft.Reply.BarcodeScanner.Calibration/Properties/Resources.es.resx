@@ -324,6 +324,9 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>La calibración falló. {0}</value>
   </data>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>La calibración falló. {0}</value>
+  </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
     <value>Elemento de consejo inválido.</value>
   </data>
@@ -338,6 +341,9 @@
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
     <value>La expresión regular agotó el tiempo mientras realizaba una coincidencia.</value>
+  </data>
+  <data name="Unspecified" xml:space="preserve">
+    <value>No especificado</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
     <value>No se puede encontrar un carácter adecuado para el marcador de posición temporal. Todos los caracteres ASCII extendidos ya están utilizados en la cadena de entrada.</value>

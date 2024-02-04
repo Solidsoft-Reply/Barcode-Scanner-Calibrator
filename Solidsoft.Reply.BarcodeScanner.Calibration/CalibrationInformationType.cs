@@ -408,6 +408,11 @@ public enum CalibrationInformationType
     CalibrationFailed = 390,
 
     /// <summary>
+    ///   ERROR: Calibration failed unexpectedly. {0}
+    /// </summary>
+    CalibrationFailedUnexpectedly = 391,
+
+    /// <summary>
     /// ERROR: Calibration failed due to a pre-processing error.
     /// </summary>
     PreProcessorError = 399

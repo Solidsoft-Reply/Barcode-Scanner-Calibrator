@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Advice_100" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Advice_105" xml:space="preserve">
+    <value>Potrebbe essere necessario inserire manualmente i dati nel tuo software per codici a barre che contengono dati formattati secondo i caratteri ISO/IEC 15434.</value>
+  </data>
+  <data name="Advice_110" xml:space="preserve">
+    <value>Se riscontri problemi durante la scansione di codici a barre che contengono dati Formato 05 o Formato 06, inserisci i dati manualmente nel tuo software. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_115" xml:space="preserve">
+    <value>Inserisci manualmente i dati nel tuo software per i codici a barre che contengono dati Formato 05 o Formato 06. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_200" xml:space="preserve">
+    <value>Configura il tuo scanner di codici a barre per trasmettere gli identificatori AIM. Se hai problemi nella trasmissione degli identificatori AIM, torna alla configurazione attuale.</value>
+  </data>
+  <data name="Advice_205" xml:space="preserve">
+    <value>Potresti voler disattivare il blocco maiuscole e provare di nuovo.</value>
+  </data>
+  <data name="Advice_206" xml:space="preserve">
+    <value>Controlla le configurazioni del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Potresti voler disattivare il blocco maiuscole e provare di nuovo.</value>
+  </data>
+  <data name="Advice_210" xml:space="preserve">
+    <value>Potresti voler disattivare il blocco maiuscole.</value>
+  </data>
+  <data name="Advice_215" xml:space="preserve">
+    <value>Configura il tuo scanner di codici a barre per trasmettere le sequenze di fine riga e prova di nuovo. Se hai problemi nella trasmissione delle sequenze di fine riga, torna alla configurazione attuale.</value>
+  </data>
+  <data name="Advice_220" xml:space="preserve">
+    <value>Se hai problemi a scansionare i dati dei codici a barre, configura il tuo scanner di codici a barre in modo che non trasmetta un prefisso.</value>
+  </data>
+  <data name="Advice_225" xml:space="preserve">
+    <value>Se hai problemi a scansionare i dati dei codici a barre, configura il tuo scanner di codici a barre in modo che non trasmetta alcun suffisso.</value>
+  </data>
+  <data name="Advice_230" xml:space="preserve">
+    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_231" xml:space="preserve">
+    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_232" xml:space="preserve">
+    <value>Verifica che il tuo scanner di codici a barre sia configurato per trasmettere gli identificatori AIM.</value>
+  </data>
+  <data name="Advice_235" xml:space="preserve">
+    <value>Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico e trasmettere gli identificatori AIM.</value>
+  </data>
+  <data name="Advice_240" xml:space="preserve">
+    <value>Se riscontri problemi durante la scansione di codici a barre che contengono dati Formato 05 o Formato 06, inserisci i dati manualmente nel tuo software. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_241" xml:space="preserve">
+    <value>Inserisci manualmente i dati nel tuo software per i codici a barre che contengono dati Formato 05 o Formato 06. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_245" xml:space="preserve">
+    <value>Inserisci manualmente i dati nel tuo software per i codici a barre che contengono dati Formato 05 o Formato 06. Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_250" xml:space="preserve">
+    <value>Se prevedi di scansionare codici a barre che contengono dati formattati secondo ISO/IEC 15434, esegui di nuovo il test, questa volta includendo il test di compatibilità dei dati ISO/IEC 15434.</value>
+  </data>
+  <data name="Advice_255" xml:space="preserve">
+    <value>Se il problema persiste, verifica la configurazione del tuo scanner di codici a barre. Cerca impostazioni che miglioreranno le prestazioni di inserimento da tastiera.</value>
+  </data>
+  <data name="Advice_256" xml:space="preserve">
+    <value>Se il problema persiste, verifica la configurazione del tuo scanner di codici a barre. Cerca impostazioni che miglioreranno le prestazioni di inserimento da tastiera.</value>
+  </data>
+  <data name="Advice_260" xml:space="preserve">
+    <value>Se scansioni altri codici a barre e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_261" xml:space="preserve">
+    <value>Se scansioni altri codici a barre e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_265" xml:space="preserve">
+    <value>Se scansioni altri codici a barre e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_270" xml:space="preserve">
+    <value>Se scansioni codici a barre EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_271" xml:space="preserve">
+    <value>Se scansioni codici a barre EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_275" xml:space="preserve">
+    <value>Se scansioni codici a barre EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_300" xml:space="preserve">
+    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+  </data>
+  <data name="Advice_301" xml:space="preserve">
+    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+  </data>
+  <data name="Advice_303" xml:space="preserve">
+    <value>Prova di nuovo.;;Assicurati che le disposizioni della tua tastiera corrispondano.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_304" xml:space="preserve">
+    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
+  </data>
+  <data name="Advice_305" xml:space="preserve">
+    <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.;;Se ti viene chiesto di scansionare più codici a barre, assicurati di scansionarli nell'ordine corretto.</value>
+  </data>
+  <data name="Advice_306" xml:space="preserve">
+    <value>Prova di nuovo.</value>
+  </data>
+  <data name="Advice_307" xml:space="preserve">
+    <value>Se il tuo software non può compensare, configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_308" xml:space="preserve">
+    <value>Configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_309" xml:space="preserve">
+    <value>Se il tuo software non può compensare, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_310" xml:space="preserve">
+    <value>Configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_315" xml:space="preserve">
+    <value>Configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_316" xml:space="preserve">
+    <value>Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_320" xml:space="preserve">
+    <value>Se il tuo software non può compensare, configura il tuo scanner di codici a barre per corrispondere alla disposizione della tastiera del tuo computer.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_325" xml:space="preserve">
+    <value>Disattiva il blocco maiuscole e prova di nuovo.;;Se devi mantenere il blocco maiuscole attivato durante la scansione dei codici a barre, potresti essere in grado di configurare il tuo scanner di codici a barre per compensare.</value>
+  </data>
+  <data name="Advice_326" xml:space="preserve">
+    <value>Disattiva il blocco maiuscole e prova di nuovo.</value>
+  </data>
+  <data name="Advice_327" xml:space="preserve">
+    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Disattiva il blocco maiuscole e prova di nuovo.</value>
+  </data>
+  <data name="Advice_328" xml:space="preserve">
+    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.;;Disattiva il blocco maiuscole e prova di nuovo.</value>
+  </data>
+  <data name="Advice_330" xml:space="preserve">
+    <value>Controlla la configurazione del tuo scanner, tastiera e computer e riconfigurali se necessario.</value>
+  </data>
+  <data name="Advice_331" xml:space="preserve">
+    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.</value>
+  </data>
+  <data name="Advice_332" xml:space="preserve">
+    <value>Controlla la configurazione del tuo scanner di codici a barre, tastiera e computer e riconfigurali se necessario.</value>
+  </data>
+  <data name="Advice_335" xml:space="preserve">
+    <value>Se possibile, configura il tuo computer per utilizzare una disposizione di tastiera diversa.;;Se necessario, configura il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
+  </data>
+  <data name="Advice_390" xml:space="preserve">
+    <value>Prova di nuovo.</value>
+  </data>
+  <data name="Condition_100" xml:space="preserve">
+    <value>Il tuo sistema legge la maggior parte dei codici a barre in modo affidabile.</value>
+  </data>
+  <data name="Condition_105" xml:space="preserve">
+    <value>Il tuo sistema legge la maggior parte dei codici a barre in modo affidabile.</value>
+  </data>
+  <data name="Condition_110" xml:space="preserve">
+    <value>Il tuo sistema legge in modo affidabile i codici a barre GS1.</value>
+  </data>
+  <data name="Condition_115" xml:space="preserve">
+    <value>Il tuo sistema legge in modo affidabile i codici a barre GS1.</value>
+  </data>
+  <data name="Condition_200" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre non trasmette identificatori AIM.</value>
+  </data>
+  <data name="Condition_205" xml:space="preserve">
+    <value>Il blocco maiuscole è attivo, ma la formattazione delle lettere è segnalata correttamente.</value>
+  </data>
+  <data name="Condition_206" xml:space="preserve">
+    <value>Il blocco maiuscole è attivo, ma la formattazione delle lettere è preservata.</value>
+  </data>
+  <data name="Condition_210" xml:space="preserve">
+    <value>Il blocco maiuscole è attivato.</value>
+  </data>
+  <data name="Condition_215" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre non trasmette una sequenza di fine riga.</value>
+  </data>
+  <data name="Condition_220" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre trasmette un prefisso.</value>
+  </data>
+  <data name="Condition_225" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre trasmette un suffisso.</value>
+  </data>
+  <data name="Condition_230" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non leggere i caratteri degli identificatori AIM.</value>
+  </data>
+  <data name="Condition_231" xml:space="preserve">
+    <value>Il tuo sistema non può leggere i caratteri degli identificatori AIM.</value>
+  </data>
+  <data name="Condition_232" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe non trasmettere identificatori AIM.</value>
+  </data>
+  <data name="Condition_235" xml:space="preserve">
+    <value>Il tuo sistema non può leggere l'identificatore del tipo di codice a barre.</value>
+  </data>
+  <data name="Condition_240" xml:space="preserve">
+    <value>Il tuo sistema potrebbe non essere in grado di leggere in modo affidabile i codici a barre Formato 05 o Formato 06.</value>
+  </data>
+  <data name="Condition_241" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre Formato 05 o Formato 06.</value>
+  </data>
+  <data name="Condition_245" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre Formato 05 o Formato 06.</value>
+  </data>
+  <data name="Condition_250" xml:space="preserve">
+    <value>Non hai testato la compatibilità con ISO/IEC 15434.</value>
+  </data>
+  <data name="Condition_255" xml:space="preserve">
+    <value>Le prestazioni di inserimento dei dati sono più lente del previsto.</value>
+  </data>
+  <data name="Condition_256" xml:space="preserve">
+    <value>Le prestazioni di inserimento dei dati sono molto scarse.</value>
+  </data>
+  <data name="Condition_260" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono caratteri non invarianti.</value>
+  </data>
+  <data name="Condition_261" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono caratteri non invarianti.</value>
+  </data>
+  <data name="Condition_265" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono caratteri non invarianti.</value>
+  </data>
+  <data name="Condition_270" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+  </data>
+  <data name="Condition_271" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+  </data>
+  <data name="Condition_275" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i codici a barre se contengono dati EDI.</value>
+  </data>
+  <data name="Condition_300" xml:space="preserve">
+    <value>Il test è fallito.</value>
+  </data>
+  <data name="Condition_301" xml:space="preserve">
+    <value>Nessun dato è stato segnalato per il codice a barre.</value>
+  </data>
+  <data name="Condition_303" xml:space="preserve">
+    <value>Alcuni dati non sono stati segnalati quando hai scansionato il codice a barre.</value>
+  </data>
+  <data name="Condition_304" xml:space="preserve">
+    <value>Nessun dato è stato segnalato per uno o più codici a barre.</value>
+  </data>
+  <data name="Condition_305" xml:space="preserve">
+    <value>Hai scansionato un codice a barre fuori sequenza.</value>
+  </data>
+  <data name="Condition_306" xml:space="preserve">
+    <value>Alcuni dati non sono stati segnalati quando hai scansionato uno o più codici a barre.</value>
+  </data>
+  <data name="Condition_307" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+  </data>
+  <data name="Condition_308" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+  </data>
+  <data name="Condition_309" xml:space="preserve">
+    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+  </data>
+  <data name="Condition_310" xml:space="preserve">
+    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+  </data>
+  <data name="Condition_315" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre e il computer hanno disposizioni di tastiera diverse.</value>
+  </data>
+  <data name="Condition_316" xml:space="preserve">
+    <value>I caratteri nascosti nei codici a barre non sono segnalati correttamente.</value>
+  </data>
+  <data name="Condition_320" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre.</value>
+  </data>
+  <data name="Condition_325" xml:space="preserve">
+    <value>Il blocco maiuscole è attivato.</value>
+  </data>
+  <data name="Condition_326" xml:space="preserve">
+    <value>Il blocco maiuscole è attivato.</value>
+  </data>
+  <data name="Condition_327" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in maiuscolo.</value>
+  </data>
+  <data name="Condition_328" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in minuscolo.</value>
+  </data>
+  <data name="Condition_330" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per simulare il blocco maiuscole.</value>
+  </data>
+  <data name="Condition_331" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in maiuscolo.</value>
+  </data>
+  <data name="Condition_332" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe essere configurato per convertire i caratteri in minuscolo.</value>
+  </data>
+  <data name="Condition_335" xml:space="preserve">
+    <value>La disposizione della tua tastiera supporta {0} caratteri e non può leggere i codici a barre in modo affidabile.</value>
+  </data>
+  <data name="Condition_390" xml:space="preserve">
+    <value>Il test è fallito inaspettatamente.</value>
+  </data>
+  <data name="Description_105" xml:space="preserve">
+    <value>Tuttavia, non hai testato la compatibilità con ISO/IEC 15434. Il tuo sistema potrebbe non essere in grado di leggere i codici a barre in modo affidabile se contengono dati formattati secondo ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_110" xml:space="preserve">
+    <value>Tuttavia, il tuo software di verifica potrebbe non leggere i codici a barre in modo affidabile se contengono dati formattati secondo ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_115" xml:space="preserve">
+    <value>Tuttavia, non può leggere i codici a barre in modo affidabile se contengono dati formattati secondo ISO/IEC 15434.</value>
+  </data>
+  <data name="Description_200" xml:space="preserve">
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
+  </data>
+  <data name="Description_205" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre è probabilmente configurato per compensare automaticamente il blocco maiuscole.</value>
+  </data>
+  <data name="Description_206" xml:space="preserve">
+    <value>Il tasto del blocco maiuscole potrebbe essere disabilitato o rimappato.</value>
+  </data>
+  <data name="Description_210" xml:space="preserve">
+    <value>Tuttavia, la disposizione della tastiera del tuo computer è per uno script che non supporta lettere maiuscole e minuscole.</value>
+  </data>
+  <data name="Description_215" xml:space="preserve">
+    <value>Questo potrebbe rallentare le tue prestazioni di scansione. Tuttavia, il tuo software potrebbe non supportare le sequenze di fine riga.</value>
+  </data>
+  <data name="Description_220" xml:space="preserve">
+    <value>Il tuo software potrebbe non riconoscere il prefisso.</value>
+  </data>
+  <data name="Description_225" xml:space="preserve">
+    <value>Il tuo software potrebbe non riconoscere il suffisso.</value>
+  </data>
+  <data name="Description_230" xml:space="preserve">
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari. Tuttavia, il software deve implementare la mappatura dei caratteri per leggere gli identificatori AIM in modo affidabile.</value>
+  </data>
+  <data name="Description_231" xml:space="preserve">
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
+  </data>
+  <data name="Description_232" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre potrebbe trasmettere identificatori AIM, ma non è certo. Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
+  </data>
+  <data name="Description_235" xml:space="preserve">
+    <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
+  </data>
+  <data name="Description_240" xml:space="preserve">
+    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile i codici a barre se contengono caratteri non invarianti.</value>
+  </data>
+  <data name="Description_245" xml:space="preserve">
+    <value>Alcuni software possono compensare ciò analizzando i codici chiave piuttosto che i caratteri.</value>
+  </data>
+  <data name="Description_255" xml:space="preserve">
+    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, ad esempio eseguendo un antivirus o un servizio di testo predittivo. Il tuo scanner di codici a barre potrebbe essere configurato come un tastierino numerico.</value>
+  </data>
+  <data name="Description_256" xml:space="preserve">
+    <value>Questo potrebbe essere un problema temporaneo o intermittente. Il tuo computer potrebbe essere occupato, ad esempio eseguendo un antivirus o un servizio di testo predittivo. Il tuo scanner di codici a barre potrebbe essere configurato come un tastierino numerico.</value>
+  </data>
+  <data name="Description_260" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere caratteri non invarianti. Il tuo software deve implementare la mappatura dei caratteri per leggere questi codici a barre in modo affidabile.</value>
+  </data>
+  <data name="Description_261" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere caratteri non invarianti.</value>
+  </data>
+  <data name="Description_265" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere caratteri non invarianti.</value>
+  </data>
+  <data name="Description_270" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere dati EDI. Il tuo software deve implementare la mappatura dei caratteri per leggere questi codici a barre in modo affidabile.</value>
+  </data>
+  <data name="Description_271" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere dati EDI.</value>
+  </data>
+  <data name="Description_275" xml:space="preserve">
+    <value>Alcuni codici a barre possono contenere dati EDI.</value>
+  </data>
+  <data name="Description_300" xml:space="preserve">
+    <value>Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+  </data>
+  <data name="Description_303" xml:space="preserve">
+    <value>La disposizione della tastiera dello scanner di codici a barre e del computer potrebbero non corrispondere. Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+  </data>
+  <data name="Description_306" xml:space="preserve">
+    <value>Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>
+  </data>
+  <data name="Description_307" xml:space="preserve">
+    <value>Il tuo software deve implementare la mappatura dei caratteri per leggere in modo affidabile i codici a barre.</value>
+  </data>
+  <data name="Description_309" xml:space="preserve">
+    <value>Il tuo software potrebbe essere in grado di compensare.</value>
+  </data>
+  <data name="Description_315" xml:space="preserve">
+    <value>Il tuo software potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri per i codici a barre che contengono dati Formato 05 o Formato 06. Alcuni software potrebbero essere in grado di compensare analizzando i codici chiave piuttosto che i caratteri.</value>
+  </data>
+  <data name="Description_316" xml:space="preserve">
+    <value>Il tuo software potrebbe essere in grado di compensare. Tuttavia, il tuo sistema non può leggere correttamente i caratteri dei codici a barre che contengono dati Formato 05 o Formato 06. Alcuni software potrebbero essere in grado di compensare analizzando i codici chiave piuttosto che i caratteri.</value>
+  </data>
+  <data name="Description_320" xml:space="preserve">
+    <value>Alcuni software possono compensare ciò analizzando i codici chiave piuttosto che i caratteri.</value>
+  </data>
+  <data name="Description_326" xml:space="preserve">
+    <value>Quando il blocco maiuscole è attivato, il comportamento predefinito è segnalare tutti i caratteri in maiuscolo.</value>
+  </data>
+  <data name="Description_327" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre.</value>
+  </data>
+  <data name="Description_328" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre.</value>
+  </data>
+  <data name="Description_331" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre.</value>
+  </data>
+  <data name="Description_332" xml:space="preserve">
+    <value>Il tuo sistema non può leggere in modo affidabile i caratteri dei codici a barre.</value>
+  </data>
+  <data name="Description_390" xml:space="preserve">
+    <value>Il tuo scanner di codici a barre o il sistema potrebbe essere lento o potrebbe essere influenzato da software antivirus o da qualche altro problema inaspettato o intermittente.</value>
+  </data>
+  <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
+    <value>Errore durante la risoluzione degli script di tastiera: {0}</value>
+  </data>
+</root>

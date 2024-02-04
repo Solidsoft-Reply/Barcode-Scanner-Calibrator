@@ -460,10 +460,10 @@
     <value>Algunos software pueden compensar esto analizando códigos de tecla en lugar de caracteres.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo.</value>
+    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo. Su escáner de códigos de barras puede estar configurado como un teclado numérico.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo.</value>
+    <value>Esto podría ser un problema temporal o intermitente. Su computadora puede estar ocupada, ejecutando un antivirus o un servicio de texto predictivo. Su escáner de códigos de barras puede estar configurado como un teclado numérico.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
     <value>Algunos códigos de barras pueden contener caracteres no invariantes. Su software debe implementar mapeo de caracteres para leer estos códigos de barras de manera confiable.</value>

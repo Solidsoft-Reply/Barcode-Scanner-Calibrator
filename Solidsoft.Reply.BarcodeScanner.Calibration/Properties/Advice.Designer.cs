@@ -1006,7 +1006,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This may slow your scanning performance. However, your software may not support end-of-line sequences.
+        ///   Looks up a localized string similar to This may slow your scanning performance. However, your software may not support end-of-line sequences..
         /// </summary>
         internal static string Description_215 {
             get {
@@ -1087,7 +1087,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service..
+        ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad..
         /// </summary>
         internal static string Description_255 {
             get {
@@ -1096,7 +1096,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service..
+        ///   Looks up a localized string similar to This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad..
         /// </summary>
         internal static string Description_256 {
             get {

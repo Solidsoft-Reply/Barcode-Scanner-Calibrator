@@ -118,21 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Übereinstimmungen der Hinweise bleiben ungleich.</value>
-    <comment>Error</comment>
+    <value>Unstimmigkeit bei verbleibenden Beratungselementen.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
     <value>Suffix {0} stimmt nicht mit dem erwarteten Suffix {1} überein.</value>
-    <comment>Error</comment>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
     <value>Falsche Barcode-Herkunft.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Falscher Fehlerinformationstyp.</value>
+    <value>Falscher Fehlinformationstyp.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Falscher Informationstyp für Informationen.</value>
+    <value>Falscher informativer Informationstyp.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Falscher Warnungsinformationstyp.</value>
@@ -141,25 +139,25 @@
     <value>AIM-Identifikatoren werden unterstützt.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>Der Barcode-Scanner überträgt einen AIM-Identifikator: {0}</value>
+    <value>Der Barcode-Scanner überträgt einen AIM-Identifier: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>Der Barcode-Scanner könnte einen AIM-Identifikator übertragen: {0}</value>
+    <value>Der Barcode-Scanner könnte einen AIM-Identifier übertragen: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>Der Barcode-Scanner überträgt eine End-of-Line-Zeichensequenz: {0}</value>
+    <value>Der Barcode-Scanner überträgt eine Zeichenfolge für das Zeilenende: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
     <value>Gruppentrennzeichen werden unterstützt.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Datentrennzeichen für Aufzeichnungen werden unterstützt.</value>
+    <value>Trennzeichen für Datensätze werden unterstützt.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI-Trennzeichen werden unterstützt.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>Der Barcode-Scanner könnte so konfiguriert sein, dass er für die Feststelltaste kompensiert.</value>
+    <value>Der Barcode-Scanner könnte konfiguriert sein, um Caps Lock zu kompensieren.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
     <value>Die Computertastatur unterstützt das folgende Skript: {0}</value>
@@ -174,22 +172,22 @@
     <value>Einige nicht invariante ASCII-Zeichen werden nicht erkannt: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Einige Kombinationen von nicht invarianten ASCII-Zeichen werden nicht erkannt: {0}</value>
+    <value>Einige Kombinationen nicht invarianter ASCII-Zeichen werden nicht erkannt: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
     <value>Barcodes, die die ISO/IEC 15434-Syntax verwenden, können nicht erkannt werden.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes, die die ISO/IEC 15434-Syntax zur Darstellung von EDI-Daten verwenden, können nicht zuverlässig gelesen werden.</value>
+    <value>Barcodes, die die ISO/IEC 15434-Syntax verwenden, um EDI-Daten darzustellen, können nicht zuverlässig gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, können nicht zuverlässig gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>Der Barcode-Scanner überträgt keinen AIM-Identifikator.</value>
+    <value>Der Barcode-Scanner überträgt keinen AIM-Identifier.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>Der AIM-Identifikator kann nicht erkannt werden.</value>
+    <value>Der AIM-Identifier kann nicht erkannt werden.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Der Barcode-Scanner überträgt ein Präfix: {0}</value>
@@ -201,73 +199,73 @@
     <value>Der Barcode-Scanner überträgt ein Suffix: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Der Barcode-Scanner überträgt keine End-of-Line-Zeichensequenz (z.B. Wagenrücklauf).</value>
+    <value>Der Barcode-Scanner überträgt keine Zeichenfolge für das Zeilenende (z.B. ein Wagenrücklauf).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, jedes repräsentiert einen anderen erwarteten Charakter. Allerdings ist höchstens eines der erwarteten Zeichen invariant.</value>
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, von denen jede ein anderes erwartetes Zeichen darstellt. Allerdings ist höchstens eines der erwarteten Zeichen invariant.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Einige gemeldete Zeichen sind mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, jedes repräsentiert einen anderen erwarteten nicht invarianten ASCII-Charakter: {0}</value>
+    <value>Einige gemeldete Zeichen sind mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, von denen jede ein anderes nicht invariantes erwartetes ASCII-Zeichen darstellt: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-Identifikatoren können nicht erkannt werden. Das berichtete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dieses Zeichen, welches den AIM-Flaggencharakter sowie andere erwartete Zeichen repräsentiert.</value>
+    <value>AIM-Identifikatoren können nicht erkannt werden. Der gemeldete Charakter {0} ist mehrdeutig. Es gibt mehrere Tasten für diesen Charakter, der sowohl den AIM-Flag-Charakter als auch andere erwartete Charakter(e) darstellt.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Einige gemeldete nicht invariante ASCII-Zeichen sind mehrdeutig: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax zur Darstellung von EDI-Daten verwenden, können nicht zuverlässig gelesen werden.</value>
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, um EDI-Daten darzustellen, können nicht zuverlässig gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Einige gemeldete Zeichensequenzen sind mehrdeutig. Diese Zeichen repräsentieren keine invarianten Zeichen: {0}</value>
+    <value>Einige gemeldete Zeichenfolgen sind mehrdeutig. Diese Zeichen stellen keine invarianten Zeichen dar: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Die gemeldete Zeichensequenz {0} ist mehrdeutig. Dies könnte das Lesen zusätzlicher Daten-Elemente in einem Barcode verhindern.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies kann das Lesen von zusätzlichen Datenelementen in einem Barcode verhindern.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht.</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht für invariante Zeichen.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht für invariante Zeichen.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht für nicht invariante ASCII-Zeichen.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht für nicht invariante ASCII-Zeichen.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht bei der Darstellung von Gruppentrennzeichen.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von Gruppentrennzeichen.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht bei der Darstellung von Datentrennzeichen für Aufzeichnungen.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von Datensatztrennzeichen.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht bei der Darstellung von EDI-Trennzeichen.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von EDI-Trennzeichen.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>Die Layouts des Barcode-Scanners und der Computertastatur entsprechen nicht bei der Darstellung von AIM-Identifikatoren.</value>
+    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von AIM-Identifikatoren.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Die Übereinstimmung der Layouts des Barcode-Scanners und der Computertastatur kann nicht bestimmt werden.</value>
+    <value>Die Übereinstimmung der Tastaturbelegungen von Barcode-Scanner und Computer kann nicht festgestellt werden.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Die Feststelltaste ist eingeschaltet.</value>
+    <value>Caps-Lock ist eingeschaltet.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Die Feststelltaste könnte eingeschaltet sein.</value>
+    <value>Caps-Lock könnte eingeschaltet sein.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>Der Barcode-Scanner könnte so konfiguriert sein, dass er Zeichen in Großbuchstaben umwandelt.</value>
+    <value>Der Barcode-Scanner könnte konfiguriert sein, um Zeichen in Großbuchstaben umzuwandeln.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>Der Barcode-Scanner könnte so konfiguriert sein, dass er Zeichen in Kleinbuchstaben umwandelt.</value>
+    <value>Der Barcode-Scanner könnte konfiguriert sein, um Zeichen in Kleinbuchstaben umzuwandeln.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>Der Barcode-Scanner könnte so konfiguriert sein, dass er die Zeichenfall umkehrt.</value>
+    <value>Der Barcode-Scanner könnte konfiguriert sein, um die Zeichenkassierung umzukehren.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>Die beste gemeldete Tastatureingabezeit während der Kalibrierung deutet darauf hin, dass der Barcode-Scanner nicht optimal funktioniert.</value>
+    <value>Die beste berichtete Tastatureingabezeit während der Kalibrierung deutet darauf hin, dass der Barcode-Scanner nicht optimal funktioniert.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>Es wurden keine Kalibrierungsdaten gemeldet.</value>
+    <value>Keine Kalibrierungsdaten wurden gemeldet.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
     <value>Die gemeldeten Daten sind nicht erkannt. Möglicherweise wurde der falsche Barcode gescannt.</value>
@@ -276,7 +274,7 @@
     <value>Zu viele Zeichen erkannt. Möglicherweise wurde der falsche Barcode gescannt.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Teilweise Daten wurden für den Kalibrierungsbarcode gemeldet.</value>
+    <value>Teilweise Daten für Kalibrierungsbarcode gemeldet.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Die gemeldeten Daten sind für den falschen Kalibrierungsbarcode.</value>
@@ -294,58 +292,60 @@
     <value>Kein Gruppentrennzeichen gemeldet.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, jedes repräsentiert einen anderen erwarteten Charakter.</value>
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, von denen jede ein anderes erwartetes Zeichen darstellt.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Dasselbe Zeichen wird für mehrere Dead-Key-Sequenzen gemeldet, die unterschiedliche erwartete Zeichen darstellen.</value>
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Dasselbe Zeichen wird für mehrere tote Tastenfolgen gemeldet, die verschiedene erwartete Zeichen darstellen.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>Das gemeldete Dead-Key-Zeichen {0} ist mehrdeutig. Es gibt mehrere Dead Keys für dasselbe Zeichen, jedes repräsentiert einen anderen erwarteten Charakter.</value>
+    <value>Das gemeldete tote Tastenzeichen {0} ist mehrdeutig. Es gibt mehrere tote Tasten für dasselbe Zeichen, von denen jede ein anderes erwartetes Zeichen darstellt.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>Die gemeldete Zeichensequenz {0} ist mehrdeutig. Dieselbe Sequenz wird für mehrere erwartete Zeichensequenzen gemeldet.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dasselbe Zeichen wird für mehrere erwartete Zeichenfolgen gemeldet.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>Die gemeldete Zeichensequenz {0} ist mehrdeutig. Dieselbe Sequenz wird für mehrere Dead Keys im Tastaturlayout des Barcode-Scanners gemeldet.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dasselbe Zeichen wird für mehrere tote Tasten in der Tastaturbelegung des Barcode-Scanners gemeldet.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>Das Zeichen {0} kann aufgrund von Inkompatibilität mit dem Tastaturlayout nicht zuverlässig dargestellt werden.</value>
+    <value>Das Zeichen {0} kann wegen Inkompatibilität mit der Tastaturbelegung nicht zuverlässig dargestellt werden.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Die gemeldete Zeichensequenz {0} ist mehrdeutig. Diese stellt das Gruppentrennzeichen dar.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies stellt das Gruppentrennzeichen dar.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Einige gemeldete Zeichen sind mehrdeutig. Sie können einzeln gemeldet werden, werden aber auch verwendet, um Ligaturen zu bilden: {0}</value>
+    <value>Einige gemeldete Zeichen sind mehrdeutig. Sie können einzeln gemeldet werden, werden aber auch zur Bildung von Ligaturen verwendet: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>Die gemeldeten Kalibrierungsdaten können nicht verarbeitet werden. Sie enthalten keine erwarteten Trennzeichen.</value>
+    <value>Die gemeldeten Kalibrierungsdaten können nicht verarbeitet werden. Sie enthalten nicht die erwarteten Trennzeichen.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>Die gemeldeten Kalibrierungsdaten können nicht verarbeitet werden. Kein Zeichen kann als temporäres Trennzeichen bestimmt werden.</value>
+    <value>Die gemeldeten Kalibrierungsdaten können nicht verarbeitet werden. Es kann kein Zeichen bestimmt werden, das als temporärer Trenner fungiert.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibrierung fehlgeschlagen. {0}</value>
   </data>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibrierung fehlgeschlagen. {0}</value>
+  </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Ungültiges Hinweiselement.</value>
+    <value>Ungültiges Beratungselement.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Ungültiges Informationslevel.</value>
+    <value>Ungültiger Informationslevel.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
     <value>Platzhalter für Leerzeichen konnten nicht eingefügt werden.</value>
-    <comment>Error</comment>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Ungültiges Argument für die Replace-Methode des regulären Ausdrucks bereitgestellt.</value>
-    <comment>Error</comment>
+    <value>Ungültiges Argument für die Ersetzungsmethode des regulären Ausdrucks bereitgestellt.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Der reguläre Ausdruck hat beim Ausführen eines Abgleichs ein Zeitlimit überschritten.</value>
-    <comment>Error</comment>
+    <value>Der reguläre Ausdruck hat beim Ausführen einer Übereinstimmung eine Zeitüberschreitung erfahren.</value>
+  </data>
+  <data name="Unspecified" xml:space="preserve">
+    <value>Unspezifiziert</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Kein geeignetes Zeichen für temporären Platzhalter gefunden. Alle erweiterten ASCII-Zeichen werden bereits in der Eingabezeichenkette verwendet.</value>
-    <comment>Error</comment>
+    <value>Kein geeigneter Charakter für temporären Platzhalter gefunden. Alle erweiterten ASCII-Zeichen werden bereits in der Eingabezeichenfolge verwendet.</value>
   </data>
 </root>

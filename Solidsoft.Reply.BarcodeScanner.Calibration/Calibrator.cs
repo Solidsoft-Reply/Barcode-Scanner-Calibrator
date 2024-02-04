@@ -961,7 +961,9 @@ public class Calibrator {
             }
 
             // ReSharper disable once RedundantAssignment
+#pragma warning disable S1854 // Unused assignments should be removed
             tempDataForTrace = string.Empty;
+#pragma warning restore S1854 // Unused assignments should be removed
         }
 
         // Set the current calibration barcode type.
@@ -980,7 +982,7 @@ public class Calibrator {
         }
         catch (Exception ex)
         {
-            LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed);
+            LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailedUnexpectedly);
             Console.WriteLine(ex.Message);
         }
 
@@ -1043,66 +1045,65 @@ public class Calibrator {
                 ? string.Empty
                 : _tokenExtendedDataReportedPrefix;
 
-            if (_tokenExtendedDataAimFlagCharacterSequence is "\0") {
+            if (_tokenExtendedDataAimFlagCharacterSequence is "\0" && 
+                _tokenExtendedDataCharacterMap.TryGetValue('\u0000', out var existingMap)) {
                 // Null may already been mapped to another character.  We favour AIM flag sequences over 
                 // control characters used in EDI data or any additional character mapped to null
-                if (_tokenExtendedDataCharacterMap.TryGetValue('\u0000', out var existingMap)) {
-                    var addMap = existingMap switch {
-                        '\u001C' or '\u001F' => ReplaceExistingMapForEdiControlCharacter(),
-                        '#' or '$' or '@' or '[' or '\\' or '^' or '`' or '{' or '|' or '}' or '~' => ReplaceExistingMapForAdditionalCharacter(),
-                        ']' => char.MinValue,
-                        _ => DoNotReplaceExistingMap()
-                    };
+                var addMap = existingMap switch {
+                    '\u001C' or '\u001F' => ReplaceExistingMapForEdiControlCharacter(),
+                    '#' or '$' or '@' or '[' or '\\' or '^' or '`' or '{' or '|' or '}' or '~' => ReplaceExistingMapForAdditionalCharacter(),
+                    ']' => char.MinValue,
+                    _ => DoNotReplaceExistingMap()
+                };
 
-                    if (addMap is not char.MinValue) {
-                        _tokenExtendedDataCharacterMap.Add('\u0000', addMap);
-                    }
+                if (addMap is not char.MinValue) {
+                    _tokenExtendedDataCharacterMap.Add('\u0000', addMap);
+                }
 
-                    char ReplaceExistingMapForEdiControlCharacter() {
-                        _tokenExtendedDataCharacterMap.Remove('\u0000');
-                        _tokenWarnings?.RemoveAll(
-                            ci => ci.InformationType == (existingMap == '\u001C'
-                                ? CalibrationInformationType.FileSeparatorSupported
-                                : CalibrationInformationType.UnitSeparatorSupported));
+                char ReplaceExistingMapForEdiControlCharacter() {
+                    _tokenExtendedDataCharacterMap.Remove('\u0000');
+                    _tokenWarnings?.RemoveAll(
+                        ci => ci.InformationType == (existingMap == '\u001C'
+                            ? CalibrationInformationType.FileSeparatorSupported
+                            : CalibrationInformationType.UnitSeparatorSupported));
 
-                        LogCalibrationInformation(
-                            @out,
-                            CalibrationInformationType.IsoIec15434EdiNotReliablyReadable,
-                            char.MinValue.ToControlPictureString(),
-                            existingMap.ToControlPictureString());
+                    LogCalibrationInformation(
+                        @out,
+                        CalibrationInformationType.IsoIec15434EdiNotReliablyReadable,
+                        char.MinValue.ToControlPictureString(),
+                        existingMap.ToControlPictureString());
 
-                        LogCalibrationInformation(
-                            @out,
-                            CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                            char.MinValue.ToControlPictureString(),
-                            existingMap.ToControlPictureString());
+                    LogCalibrationInformation(
+                        @out,
+                        CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                        char.MinValue.ToControlPictureString(),
+                        existingMap.ToControlPictureString());
 
-                        LogCalibrationInformation(
-                            @out,
-                            CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
+                    LogCalibrationInformation(
+                        @out,
+                        CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
 
-                        return ']';
-                    }
+                    return ']';
+                }
 
-                    char ReplaceExistingMapForAdditionalCharacter() {
-                        _tokenExtendedDataCharacterMap.Remove('\u0000');
+                char ReplaceExistingMapForAdditionalCharacter() {
+                    _tokenExtendedDataCharacterMap.Remove('\u0000');
 
-                        LogCalibrationInformation(
-                            @out,
-                            CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
-                            char.MinValue.ToControlPictureString(),
-                            existingMap.ToControlPictureString());
+                    LogCalibrationInformation(
+                        @out,
+                        CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                        char.MinValue.ToControlPictureString(),
+                        existingMap.ToControlPictureString());
 
-                        LogCalibrationInformation(
-                            @out,
-                            CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+                    LogCalibrationInformation(
+                        @out,
+                        CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
 
-                        return ']';
-                    }
+                    return ']';
+                }
 
-                    char DoNotReplaceExistingMap() {
-                        return char.MinValue;
-                    }
+                char DoNotReplaceExistingMap() {
+                    return char.MinValue;
                 }
             }
         }
@@ -2292,7 +2293,7 @@ public class Calibrator {
                 LogCalibrationInformation(token, CalibrationInformationType.PartialCalibrationDataReported);
 
                 // Error - Calibration failed.
-                return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed), suffix ?? string.Empty, endOfLine ?? string.Empty);
+                return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailedUnexpectedly), suffix ?? string.Empty, endOfLine ?? string.Empty);
             case CalibrationBarcodeProvenance.Unknown:
                 provenance = BarcodeProvenance(data);
                 switch (provenance) {
@@ -5458,6 +5459,7 @@ public class Calibrator {
                     expectedData);
                 break;
             case CalibrationInformationType.CalibrationFailed:
+            case CalibrationInformationType.CalibrationFailedUnexpectedly:
                 AppendDescription(token.Warnings.Where(ci => ci.InformationType == type));
                 break;
         }
@@ -5478,7 +5480,8 @@ public class Calibrator {
                 break;
             case < 400 and >= 300:
                 // Add the 'Calibration failed' error.
-                if (type != CalibrationInformationType.CalibrationFailed
+                if (type != CalibrationInformationType.CalibrationFailed 
+                 && type != CalibrationInformationType.CalibrationFailedUnexpectedly
                  && token.Errors.All(ci => ci.InformationType != CalibrationInformationType.CalibrationFailed)) {
                     var errorDescription = Resources.ResourceManager.GetString(
                         $"CalibrationInformation_{(int)CalibrationInformationType.CalibrationFailed}",

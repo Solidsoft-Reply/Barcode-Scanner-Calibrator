@@ -460,10 +460,10 @@
     <value>Certains logiciels peuvent être en mesure de compenser cela en analysant les codes clés plutôt que les caractères.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif.</value>
+    <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif. Votre scanner de codes-barres peut être configuré en tant que pavé numérique.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif.</value>
+    <value>Il s'agit peut-être d'un problème temporaire ou intermittent. Votre ordinateur peut être occupé, exécutant un antivirus ou un service de texte prédictif. Votre scanner de codes-barres peut être configuré en tant que pavé numérique.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
     <value>Certains codes-barres peuvent contenir des caractères non invariants. Votre logiciel doit mettre en œuvre une cartographie des caractères pour lire ces codes-barres de manière fiable.</value>

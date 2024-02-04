@@ -178,8 +178,10 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                             oldToken.Data?.CalibrationsRemaining ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceIndex ?? 0,
                             oldToken.Data?.SmallBarcodeSequenceCount ?? 0,
+#pragma warning disable S3358
                             string.IsNullOrEmpty(prefix) ? oldToken.Data?.Prefix ?? string.Empty : prefix,
                             string.IsNullOrEmpty(suffix) ? oldToken.Data?.Suffix ?? string.Empty : suffix,
+#pragma warning restore S3358
                             oldToken.Data?.ReportedCharacters ?? string.Empty);
 
         BitmapStream = oldToken.BitmapStream is null

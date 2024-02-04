@@ -709,6 +709,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calibration failed. {0}.
+        /// </summary>
+        internal static string CalibrationInformation_391 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_391", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid advice item..
         /// </summary>
         internal static string CalibrationInvalidAdviceItem {

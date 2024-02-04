@@ -326,6 +326,9 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Échec de l'étalonnage. {0}</value>
   </data>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Échec de l'étalonnage. {0}</value>
+  </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
     <value>Élément de conseil invalide.</value>
   </data>
@@ -343,6 +346,9 @@
   <data name="Calibration_Error_003" xml:space="preserve">
     <value>L'expression régulière a expiré lors de la tentative de correspondance.</value>
     <comment>Error</comment>
+  </data>
+  <data name="Unspecified" xml:space="preserve">
+    <value>Non spécifié</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
     <value>Impossible de trouver un caractère approprié pour un espace réservé temporaire. Tous les caractères ASCII étendus sont déjà utilisés dans la chaîne d'entrée.</value>

@@ -30,22 +30,26 @@ using System.Linq;
 /// <summary>
 ///   Represents barcode data for calibration.
 /// </summary>
-public class CalibrationBarcodeData
-{
+/// <remarks>
+///   Initializes a new instance of the <see cref="CalibrationBarcodeData" /> class.
+/// </remarks>
+/// <param name="data">The calibration data.</param>
+/// <param name="maximumCharacters">The maximum number of characters in each barcode.</param>
+public class CalibrationBarcodeData(string data, int maximumCharacters = -1) {
     /// <summary>
     ///   The calibration data.
     /// </summary>
-    private readonly string _data;
+    private readonly string _data = data;
 
     /// <summary>
     ///   The maximum number of characters in each barcode.
     /// </summary>
-    private readonly int _maximumCharacters;
+    private readonly int _maximumCharacters = maximumCharacters;
 
     /// <summary>
     ///   A collection of strings representing individual characters in the barcode.
     /// </summary>
-    private readonly string[] _parsedData;
+    private readonly string[] _parsedData = ParseData(data).ToArray();
 
     /// <summary>
     ///   A collection of calibration data segments for individual barcodes.
@@ -66,18 +70,6 @@ public class CalibrationBarcodeData
             _segments = ProcessSegments();
             return _segments;
         }
-    }
-
-    /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationBarcodeData" /> class.
-    /// </summary>
-    /// <param name="data">The calibration data.</param>
-    /// <param name="maximumCharacters">The maximum number of characters in each barcode.</param>
-    public CalibrationBarcodeData(string data, int maximumCharacters = -1)
-    {
-        _data = data;
-        _maximumCharacters = maximumCharacters;
-        _parsedData = ParseData(data).ToArray();
     }
 
     /// <summary>
@@ -109,7 +101,9 @@ public class CalibrationBarcodeData
                         if (remainingLength >= workingMaxCharacter * 2) {
                             yield return DoIt();
                         }
+#pragma warning disable S2589
                         else if (remainingLength <= 0) {
+#pragma warning restore S2589
                             break;
                         }
                         else if (!adjustingLastSegments && remainingLength < workingMaxCharacter * 2) {

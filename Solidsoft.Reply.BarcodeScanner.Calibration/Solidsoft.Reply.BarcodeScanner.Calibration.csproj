@@ -17,7 +17,7 @@
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
-		1) Extended traget platforms to .NET 6.0, 7.0 and 8.0.
+		1) Added Italian language support.
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
@@ -26,7 +26,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>1.0.4</Version>
+	<Version>1.0.5</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
 
@@ -59,51 +59,194 @@
   </ItemGroup>
 
   <ItemGroup>
+	  <Compile Update="Properties\Advice.it.Designer.cs">
+	    <DependentUpon>Advice.it.resx</DependentUpon>
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	  </Compile>
 	  <Compile Update="Properties\Resources.Designer.cs">
 		  <DesignTime>True</DesignTime>
 		  <AutoGen>True</AutoGen>
-		  <DependentUpon>Resources.resx</DependentUpon>
+    <DependentUpon>Resources.resx</DependentUpon>
 	  </Compile>
   </ItemGroup>
 
   <ItemGroup>
-	  <EmbeddedResource Update="Properties\Advice.de.resx">
-	    <DependentUpon>Advice.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Advice.es.resx">
-	    <DependentUpon>Advice.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Advice.fr.resx">
-	    <DependentUpon>Advice.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Resources.de.resx">
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Resources.es.resx">
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Resources.fr.resx">
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Properties\Resources.resx">
-		  <Generator>ResXFileCodeGenerator</Generator>
-		  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.de.resx">
+	  <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.es.resx">
+	  <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.fr.resx">
+	  <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.it.resx">
+	  <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Update="Properties\Advice.bg.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.cs.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.da.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.el.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.et.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.fi.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.ga.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.hr.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.hu.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.is.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.lt.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.lv.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.mt.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.nl.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.no.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.pl.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.pt.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.rm.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.ro.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.sk.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.sl.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Advice.sv.resx">
+      <DependentUpon>Advice.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.de.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.es.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.fr.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.it.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.bg.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.cs.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.da.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.el.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.et.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.fi.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.ga.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.hr.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.hu.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.is.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.lt.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.lv.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.mt.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.nl.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.no.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.pl.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.pt.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.rm.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.ro.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.sk.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.sl.resx">
+	  <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.sv.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Update="Properties\Resources.resx">
+	  <Generator>ResXFileCodeGenerator</Generator>
+	  <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	</EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
 	  <Compile Update="Properties\Advice.Designer.cs">
 		  <DesignTime>True</DesignTime>
 		  <AutoGen>True</AutoGen>
-		  <DependentUpon>Advice.resx</DependentUpon>
+    <DependentUpon>Advice.resx</DependentUpon>
 	  </Compile>
   </ItemGroup>
 
   <ItemGroup>
-	  <EmbeddedResource Update="Properties\Advice.resx">
+    <EmbeddedResource Update="Properties\Advice.resx">
 		  <Generator>ResXFileCodeGenerator</Generator>
 		  <LastGenOutput>Advice.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
+    </EmbeddedResource>
   </ItemGroup>
 
 	<ItemGroup>

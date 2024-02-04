@@ -537,6 +537,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.NoDelimiters:
                 case CalibrationInformationType.NoTemporaryDelimiterCandidate:
                 case CalibrationInformationType.CalibrationFailed:
+                case CalibrationInformationType.CalibrationFailedUnexpectedly:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
@@ -670,6 +671,7 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.NoDelimiters:
                 case CalibrationInformationType.NoTemporaryDelimiterCandidate:
                 case CalibrationInformationType.CalibrationFailed:
+                case CalibrationInformationType.CalibrationFailedUnexpectedly:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
@@ -681,6 +683,7 @@ public sealed record SystemCapabilities (
 
         foreach (var informationType in calibrationToken.Errors.Select(info => info.InformationType))
         {
+#pragma warning disable S907
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (informationType)
             {
@@ -708,13 +711,16 @@ public sealed record SystemCapabilities (
                 case CalibrationInformationType.NoCalibrationDataReported:
                     DataReported = false;
                     goto case CalibrationInformationType.UnrecognisedData;
-                case CalibrationInformationType.CalibrationFailed:
+                case CalibrationInformationType.CalibrationFailedUnexpectedly:
                     UnexpectedError = true;
                     goto case CalibrationInformationType.UnrecognisedData;
                 case CalibrationInformationType.UnrecognisedData:
                 case CalibrationInformationType.TooManyCharactersDetected:
                 case CalibrationInformationType.NoTemporaryDelimiterCandidate:
                 case CalibrationInformationType.NoDelimiters:
+                    CompleteDataReported = false;
+                    goto case CalibrationInformationType.CalibrationFailed;
+                case CalibrationInformationType.CalibrationFailed:
                     TestsSucceeded = false;
                     KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespondForInvariants = null;
@@ -729,7 +735,6 @@ public sealed record SystemCapabilities (
                     AdditionalCode = string.Empty;
                     AdditionalSuffix = string.Empty;
                     KeyboardScript = string.Empty;
-                    CompleteDataReported = false;
                     CorrectSequenceReported = true;
                     break;
                 // The following all indicate that reliable scanning is not possible, even with mapping
@@ -805,6 +810,7 @@ public sealed record SystemCapabilities (
                         informationType,
                         Resources.CalibrationIncorrectErrorInformationType);
             }
+#pragma warning restore S907
         }
 
         if (capsLock.GetValueOrDefault())

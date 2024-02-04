@@ -460,10 +460,10 @@
     <value>Einige Software kann dies möglicherweise kompensieren, indem sie Schlüsselcodes statt Zeichen analysiert.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen.</value>
+    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen. Ihr Barcode-Scanner kann als numerische Tastatur konfiguriert sein.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen.</value>
+    <value>Dies könnte ein vorübergehendes oder intermittierendes Problem sein. Ihr Computer könnte beschäftigt sein, einen Virenschutz oder einen prädiktiven Textdienst ausführen. Ihr Barcode-Scanner kann als numerische Tastatur konfiguriert sein.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
     <value>Einige Barcodes können nicht-invariante Zeichen enthalten. Ihre Software muss Zeichenabbildung implementieren, um diese Barcodes zuverlässig zu lesen.</value>

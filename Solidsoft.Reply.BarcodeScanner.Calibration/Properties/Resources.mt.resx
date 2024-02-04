@@ -121,6 +121,13 @@
     <value>Advice items remaining mismatch.</value>
     <comment>Error</comment>
   </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Suffix {0} does not match expected suffix {1}.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Incorrect barcode provenance.</value>
+  </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Incorrect error information type.</value>
   </data>
@@ -129,35 +136,6 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Incorrect warning information type.</value>
-  </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
-  </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
-  </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
-  </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM identifiers are supported.</value>
@@ -176,6 +154,9 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Record Separator characters are supported.</value>
+  </data>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Edi Separator characters are supported.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
@@ -234,11 +215,14 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
   </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
     <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>The barcode scanner and computer keyboard layouts do not correspond</value>
@@ -255,8 +239,14 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
   </data>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+  </data>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock is switched on.</value>
@@ -336,23 +326,33 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Calibration failed. {0}</value>
   </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Calibration failed. {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Invalid advice item.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Invalid information level.</value>
   </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Failed to insert space placeholders. </value>
+    <comment>Error</comment>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Invalid argument provided to regular expression Replace method.</value>
+    <comment>Error</comment>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>The regular expression timed out while performing a match.</value>
+    <comment>Error</comment>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>unspecified</value>
     <comment>new</comment>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
+    <comment>Error</comment>
   </data>
 </root>
