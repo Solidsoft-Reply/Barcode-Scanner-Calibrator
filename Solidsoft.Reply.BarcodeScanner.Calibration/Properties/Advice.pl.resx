@@ -119,549 +119,413 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
-    <comment>Low</comment>
+    <value>Możesz potrzebować wprowadzić dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane sformatowane zgodnie z ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jeśli napotkasz problemy podczas skanowania kodów kreskowych zawierających dane Formatu 05 lub Formatu 06, wprowadź dane ręcznie do swojego oprogramowania. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Wprowadź dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane Formatu 05 lub Formatu 06. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Skonfiguruj skaner kodów kreskowych tak, aby przesyłał identyfikatory AIM. Jeśli masz problemy z przesyłaniem identyfikatorów AIM, przywróć obecną konfigurację.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Możesz chcieć wyłączyć Caps Lock i spróbować ponownie.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.;;Możesz chcieć wyłączyć Caps Lock i spróbować ponownie.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>Możesz chcieć wyłączyć Caps Lock i spróbować ponownie.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Skonfiguruj skaner kodów kreskowych tak, aby przesyłał sekwencje końca linii i spróbuj ponownie. Jeśli masz problemy z przesyłaniem sekwencji końca linii, przywróć obecną konfigurację.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Jeśli masz problemy z skanowaniem danych kodów kreskowych, skonfiguruj skaner kodów kreskowych tak, aby nie przesyłał prefiksu.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Jeśli masz problemy z skanowaniem danych kodów kreskowych, skonfiguruj skaner kodów kreskowych tak, aby nie przesyłał żadnego sufiksu.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Sprawdź, czy Twój skaner kodów kreskowych jest skonfigurowany do przesyłania identyfikatorów AIM.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną i przesyłał identyfikatory AIM.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli napotkasz problemy podczas skanowania kodów kreskowych zawierających dane Formatu 05 lub Formatu 06, wprowadź dane ręcznie do swojego oprogramowania. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Wprowadź dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane Formatu 05 lub Formatu 06. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Wprowadź dane ręcznie do swojego oprogramowania dla kodów kreskowych zawierających dane Formatu 05 lub Formatu 06. W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
-    <comment>High</comment>
+    <value>Jeśli spodziewasz się skanowania kodów kreskowych zawierających dane sformatowane zgodnie z ISO/IEC 15434, uruchom test ponownie, tym razem uwzględniając test kompatybilności danych ISO/IEC 15434.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jeśli problem będzie się utrzymywał, sprawdź konfigurację skanera kodów kreskowych. Szukaj ustawień, które poprawią wydajność wprowadzania z klawiatury.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jeśli problem będzie się utrzymywał, sprawdź konfigurację skanera kodów kreskowych. Szukaj ustawień, które poprawią wydajność wprowadzania z klawiatury.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz inne kody kreskowe i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz inne kody kreskowe i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz inne kody kreskowe i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli skanujesz kody kreskowe zawierające dane EDI i napotykasz trudności, spróbuj skonfigurować skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Spróbuj ponownie, upewniając się, że skanujesz poprawny kod kreskowy/-e.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Spróbuj ponownie, upewniając się, że skanujesz poprawny kod kreskowy.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Spróbuj ponownie.;;Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Spróbuj ponownie, upewniając się, że skanujesz poprawny kod kreskowy/-e.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Spróbuj ponownie, upewniając się, że skanujesz poprawny kod kreskowy.;;Jeśli masz skanować wiele kodów kreskowych, upewnij się, że skanujesz je we właściwej kolejności.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Spróbuj ponownie.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jeśli Twoje oprogramowanie nie może kompensować, skonfiguruj skaner kodów kreskowych tak, aby pasował do układu klawiatury komputera.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Skonfiguruj skaner kodów kreskowych tak, aby pasował do układu klawiatury komputera.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jeśli Twoje oprogramowanie nie może kompensować, skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Skonfiguruj skaner kodów kreskowych tak, aby pasował do układu klawiatury komputera.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jeśli Twoje oprogramowanie nie może kompensować, skonfiguruj skaner kodów kreskowych tak, aby pasował do układu klawiatury komputera.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while scanning barcodes, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Wyłącz Caps Lock i spróbuj ponownie.;;Jeśli musisz mieć włączony Caps Lock podczas skanowania kodów kreskowych, możesz być w stanie skonfigurować skaner kodów kreskowych, aby to kompensował.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Wyłącz Caps Lock i spróbuj ponownie.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.;;Wyłącz Caps Lock i spróbuj ponownie.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.;;Wyłącz Caps Lock i spróbuj ponownie.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Sprawdź konfigurację skanera kodów kreskowych, klawiatury i komputera i w razie potrzeby skonfiguruj je ponownie.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>W razie potrzeby skonfiguruj komputer tak, aby korzystał z innego układu klawiatury.;;W razie potrzeby skonfiguruj skaner kodów kreskowych tak, aby emulował klawiaturę numeryczną.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Spróbuj ponownie.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Twój system niezawodnie odczytuje większość kodów kreskowych.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Twój system niezawodnie odczytuje większość kodów kreskowych.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Twój system niezawodnie odczytuje kody kreskowe GS1.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Twój system niezawodnie odczytuje kody kreskowe GS1.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych nie przekazuje identyfikatorów AIM.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock jest włączony, ale zachowuje się wielkość liter.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock jest włączony, ale zachowuje się wielkość liter.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock jest włączony.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych nie przekazuje sekwencji końca linii.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych przekazuje prefix.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych przekazuje suffix.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Twój system może nie odczytywać niezawodnie znaków identyfikatorów AIM.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków identyfikatorów AIM.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych może nie przekazywać identyfikatorów AIM.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read the barcode type identifier.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać identyfikatorów typu kodu kreskowego.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Twój system może nie być w stanie niezawodnie odczytywać kodów kreskowych Format 05 lub Format 06.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych Format 05 lub Format 06.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych Format 05 lub Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
-    <comment>High</comment>
+    <value>Nie przetestowano zgodności zgodności z ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>Wydajność wprowadzania danych jest wolniejsza niż oczekiwano.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>Wydajność wprowadzania danych jest bardzo słaba.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają niezmiennicze znaki.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają niezmiennicze znaki.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają niezmiennicze znaki.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>Test się nie powiódł.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Nie zgłoszono danych dla kodu kreskowego.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Nie zgłoszono danych podczas skanowania kodu kreskowego.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Nie zgłoszono danych dla jednego lub więcej kodów kreskowych.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>Zeskanowałeś kod kreskowy niezgodnie z kolejnością.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Nie zgłoszono danych podczas skanowania jednego lub więcej kodów kreskowych.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych i komputer mają różne układy klawiatur.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych i komputer mają różne układy klawiatur.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Ukryte znaki w kodach kreskowych nie są prawidłowo zgłaszane.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Ukryte znaki w kodach kreskowych nie są prawidłowo zgłaszane.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych i komputer mają różne układy klawiatur.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Ukryte znaki w kodach kreskowych nie są prawidłowo zgłaszane.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków kodów kreskowych.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock jest włączony.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock jest włączony.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych może być skonfigurowany do konwersji znaków na wielkie litery.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych może być skonfigurowany do konwersji znaków na małe litery.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych może być skonfigurowany do symulacji Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych może być skonfigurowany do konwersji znaków na wielkie litery.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych może być skonfigurowany do konwersji znaków na małe litery.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Twój układ klawiatury obsługuje {0} znaków i nie może niezawodnie odczytywać kodów kreskowych.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>Test nieoczekiwanie się nie powiódł.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Low</comment>
+    <value>Jednak nie przetestowałeś kompatybilności z ISO/IEC 15434. Twój system może nie być w stanie niezawodnie odczytać kodów kreskowych, jeśli zawierają dane sformatowane zgodnie z ISO/IEC 15434.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Jednak Twoje oprogramowanie weryfikacyjne może nie niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane sformatowane zgodnie z ISO/IEC 15434.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Jednak nie może niezawodnie odczytać kodów kreskowych, jeśli zawierają dane sformatowane zgodnie z ISO/IEC 15434.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych prawdopodobnie jest skonfigurowany, aby automatycznie kompensować włączony Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Twój klawisz Caps Lock może być wyłączony lub przemapowany.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Jednak układ klawiatury Twojego komputera jest przeznaczony dla skryptu, który nie obsługuje wielkich i małych liter.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>To może spowolnić wydajność skanowania. Jednak twoje oprogramowanie może nie obsługiwać sekwencji końca linii.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Twoje oprogramowanie może nie rozpoznawać prefixu.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Twoje oprogramowanie może nie rozpoznawać suffixu.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty. Jednak oprogramowanie musi zaimplementować mapowanie znaków, aby niezawodnie odczytać identyfikatory AIM.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Twój skaner kodów kreskowych może przekazywać identyfikatory AIM, ale nie jest to pewne. Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może ich używać, aby eliminować zbędne alerty.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Twoje oprogramowanie musi zaimplementować mapowanie znaków, aby niezawodnie odczytywać kody kreskowe, jeśli zawierają niezmiennicze znaki.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Niektóre oprogramowanie weryfikacyjne może być w stanie kompensować, analizując kody klawiszy zamiast znaków.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>To może być tymczasowy lub sporadyczny problem. Twój komputer może być zajęty, uruchamiając program antywirusowy lub usługę przewidywania tekstu. Twój skaner kodów kreskowych może być skonfigurowany jako klawiatura numeryczna.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>To może być tymczasowy lub sporadyczny problem. Twój komputer może być zajęty, uruchamiając program antywirusowy lub usługę przewidywania tekstu. Twój skaner kodów kreskowych może być skonfigurowany jako klawiatura numeryczna.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać niezmiennicze znaki. Twoje oprogramowanie musi zaimplementować mapowanie znaków, aby niezawodnie odczytać te kody kreskowe.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać niezmiennicze znaki.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać niezmiennicze znaki.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać dane EDI. Twoje oprogramowanie musi zaimplementować mapowanie znaków, aby niezawodnie odczytać te kody kreskowe.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać dane EDI.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Niektóre kody kreskowe mogą zawierać dane EDI.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>Możliwe, że zeskanowałeś zły kod kreskowy lub wprowadziłeś niepoprawne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub może wystąpić jakiś nieoczekiwany lub sporadyczny problem.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Układ klawiatury skanera kodów kreskowych i komputera może być niezgodny. Możliwe, że zeskanowałeś zły kod kreskowy lub wprowadziłeś niepoprawne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub może wystąpić jakiś nieoczekiwany lub sporadyczny problem.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Możliwe, że zeskanowałeś zły kod kreskowy lub wprowadziłeś niepoprawne dane za pomocą klawiatury. Twój skaner kodów kreskowych lub system może być wolny lub może wystąpić jakiś nieoczekiwany lub sporadyczny problem.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Twoje oprogramowanie musi zaimplementować mapowanie znaków, aby niezawodnie odczytywać kody kreskowe.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Twoje oprogramowanie może być w stanie kompensować.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Twoje oprogramowanie może być w stanie kompensować. Jednak twój system nie może poprawnie odczytywać znaków dla kodów kreskowych zawierających dane Format 05 lub Format 06. Niektóre oprogramowanie może być w stanie kompensować to, analizując kody klawiszy zamiast znaków.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Twoje oprogramowanie może być w stanie kompensować. Jednak twój system nie może poprawnie odczytywać znaków kodów kreskowych dla kodów kreskowych zawierających dane Format 05 lub Format 06. Niektóre oprogramowanie może być w stanie kompensować to, analizując kody klawiszy zamiast znaków.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Niektóre oprogramowanie weryfikacyjne może być w stanie kompensować, analizując kody klawiszy zamiast znaków.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Gdy Caps Lock jest włączony, domyślne zachowanie polega na raportowaniu wszystkich znaków z dużych liter.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków kodów kreskowych.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków kodów kreskowych.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków kodów kreskowych.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Twój system nie może niezawodnie odczytywać znaków kodów kreskowych.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>Twój skaner kodów kreskowych lub system może być wolny lub może być dotknięty przez oprogramowanie antywirusowe lub jakąś inną nieoczekiwaną lub sporadyczną sytuację.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Błąd podczas rozwiązywania skryptów klawiatury: {0}</value>
   </data>
 </root>

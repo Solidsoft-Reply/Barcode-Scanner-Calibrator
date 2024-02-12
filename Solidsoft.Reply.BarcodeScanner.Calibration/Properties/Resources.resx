@@ -337,7 +337,7 @@
     <value>Calibration failed. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>EDI separator characters are supported.</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
     <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>

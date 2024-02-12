@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Остават несъответстващи съвети.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Суфикс {0} не съответства на очаквания суфикс {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Неправилно произход на баркода.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Неправилен тип информация за грешка.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Неправилен тип информационна информация.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Неправилен тип предупредителна информация.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>Идентификаторите AIM се поддържат.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Баркод скенерът предава идентификатор AIM: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Баркод скенерът може да предава идентификатор AIM: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Баркод скенерът предава последователност от символи за край на реда: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Поддържат се символи за групови разделители.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Поддържат се символи за записващи разделители.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>Поддържат се символи за разделител EDI.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Баркод скенерът може да бъде конфигуриран да компенсира Caps Lock.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Компютърната клавиатура поддържа следния скрипт: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Компютърната клавиатура е конфигурирана за следната платформа: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Някои непостоянни символи ASCII не могат да бъдат открити.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Някои непостоянни символи ASCII не се разпознават: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Някои комбинации от непостоянни символи ASCII не се разпознават: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>Баркодове, използващи синтаксиса ISO/IEC 15434, не могат да бъдат разпознати.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Баркодове, използващи синтаксиса ISO/IEC 15434 за представяне на данни EDI, не могат да бъдат надеждно прочетени.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Докладваният символ {0} е двусмислен. Баркодове, използващи синтаксиса ISO/IEC 15434, не могат да бъдат надеждно прочетени.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Баркод скенерът не предава идентификатор AIM.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>Идентификаторът AIM не може да бъде разпознат.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Баркод скенерът предава префикс: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Баркод скенерът предава код: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Баркод скенерът предава суфикс: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Баркод скенерът не предава последователност от символи за край на реда (напр. знак за връщане на количката).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Докладваният символ {0} е двусмислен. Има множество клавиши за един и същ символ, всеки представляващ различен очакван символ. Въпреки това, най-много само един от очакваните символи е постоянен.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Някои докладвани символи са двусмислени. Има множество клавиши за един и същ символ, всеки представляващ различен очакван непостоянен символ ASCII: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>Идентификаторите AIM не могат да бъдат разпознати. Докладваният символ {0} е двусмислен. Има множество клавиши за този символ, които представят символа на знамето AIM, както и други очаквани символ(и).</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Някои докладвани непостоянни символи ASCII са двусмислени: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Докладваният символ {0} е двусмислен. Баркодове, използващи синтаксиса ISO/IEC 15434 за представяне на данни EDI, не могат да бъдат надеждно прочетени.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Някои докладвани редици от символи са двусмислени. Тези символи не представляват постоянни символи: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Докладваната редица от символи {0} е двусмислена. Това може да попречи на четенето на допълнителни елементи от данни, включени в баркода.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват.</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват за постоянни символи.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват за непостоянни символи ASCII.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на групови разделители.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на записващи разделители.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на разделители EDI.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на идентификатори AIM.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Кореспонденцията между подредбите на клавиатурите на баркод скенера и компютъра не може да бъде определена.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock е включен.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Caps Lock може да е включен.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Баркод скенерът може да бъде конфигуриран да преобразува символите в главни букви.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Баркод скенерът може да бъде конфигуриран да преобразува символите в малки букви.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Баркод скенерът може да бъде конфигуриран да инвертира регистъра на символите.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Най-доброто докладвано време за въвеждане на данни от клавиатурата по време на калибриране показва, че баркод скенерът не работи оптимално.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Не е докладвана калибрационна информация.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Докладваните данни са непознати. Може да е бил сканиран грешен баркод.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Открити са твърде много символи. Може да е бил сканиран грешен баркод.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Докладвани са частични данни за калибрационен баркод.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Докладваните данни са за грешен калибрационен баркод.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Някои постоянни символи не могат да бъдат открити.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Някои постоянни символи не се разпознават от баркод скенера в неговата текуща конфигурация: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Някои комбинации от клавиши, включващи постоянни символи, не се разпознават: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Не е докладван разделител на групи.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Докладваният символ {0} е двусмислен. Има множество клавиши за един и същ символ, всеки представляващ различен очакван символ.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Докладваният символ {0} е двусмислен. Същият символ се докладва за множество последователности с мъртва клавиша, представляващи различни очаквани символи.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Докладваният символ на мъртва клавиша {0} е двусмислен. Има множество мъртви клавиши за един и същ символ, всеки представляващ различен очакван символ.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Докладваната редица от символи {0} е двусмислена. Същата редица се докладва за множество очаквани редици от символи.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Докладваната редица от символи {0} е двусмислена. Същата редица се докладва за множество мъртви клавиши в подредбата на клавиатурата на баркод скенера.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Символът {0} не може да бъде представен надеждно поради несъответствие с подредбата на клавиатурата.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Докладваната редица от символи {0} е двусмислена. Това представлява символа за групов разделител.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Някои докладвани символи са двусмислени. Те могат да бъдат докладвани индивидуално, но се използват и за съставяне на лигатури: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Докладваните калибрационни данни не могат да бъдат обработени. Те не включват очакваните разделители.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Докладваните калибрационни данни не могат да бъдат обработени. Не може да бъде определен символ, който да действа като временен разделител.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Калибрирането е неуспешно. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Калибрирането е неуспешно. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Невалиден артикул за съвет.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Невалидно ниво на информация.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Неуспешно вмъкване на плейсхолдъри за разстояние.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Невалиден аргумент, предоставен на метода Replace на регулярен израз.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Регулярният израз изтече, докато извършва съвпадение.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Неспецифицирано</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Не може да бъде намерен подходящ символ за временен плейсхолдър. Всички разширени символи ASCII вече са използвани във входния низ.</value>
   </data>
 </root>

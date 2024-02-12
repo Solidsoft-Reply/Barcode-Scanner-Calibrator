@@ -196,7 +196,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Edi Separator characters are supported..
+        ///   Looks up a localized string similar to EDI separator characters are supported..
         /// </summary>
         internal static string CalibrationInformation_162 {
             get {
