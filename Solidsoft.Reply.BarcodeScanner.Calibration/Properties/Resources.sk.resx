@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Nesúlad zostávajúcich položiek poradenstva.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Prípona {0} nezodpovedá očakávanej prípone {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Nesprávny pôvod čiarového kódu.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Nesprávny typ informácie o chybe.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Nesprávny typ informačnej informácie.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Nesprávny typ varovnej informácie.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>Identifikátory AIM sú podporované.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Čítačka čiarových kódov prenáša identifikátor AIM: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Čítačka čiarových kódov môže prenášať identifikátor AIM: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Čítačka čiarových kódov prenáša sekvenciu znakov konca riadka: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Podporované sú znaky skupinového oddeľovača.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Podporované sú znaky oddeľovača záznamov.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>Podporované sú znaky oddeľovača EDI.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Čítačka čiarových kódov môže byť nakonfigurovaná na kompenzáciu Caps Lock.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Klávesnica počítača podporuje nasledujúci skript: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Klávesnica počítača je nakonfigurovaná pre nasledujúcu platformu: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Niektoré neinvariantné znaky ASCII nie je možné zistiť.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Niektoré neinvariantné znaky ASCII nie sú rozpoznané: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Niektoré kombinácie neinvariantných znakov ASCII nie sú rozpoznané: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>Čiarové kódy používajúce syntax ISO/IEC 15434 nie je možné rozpoznať.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Čiarové kódy používajúce syntax ISO/IEC 15434 na reprezentáciu EDI údajov nie je možné spoľahlivo čítať.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 nie je možné spoľahlivo čítať.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Čítačka čiarových kódov neprenáša identifikátor AIM.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>Identifikátor AIM nie je možné rozpoznať.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Čítačka čiarových kódov prenáša predponu: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Čítačka čiarových kódov prenáša kód: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Čítačka čiarových kódov prenáša príponu: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Čítačka čiarových kódov neprenáša sekvenciu znakov konca riadka (napr. návrat vozíka).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Nahlásený znak {0} je nejednoznačný. Existujú viaceré klávesy pre ten istý znak, každá reprezentuje iný očakávaný znak. Avšak maximálne iba jeden z očakávaných znakov je invariantný.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Niektoré nahlásené znaky sú nejednoznačné. Existujú viaceré klávesy pre ten istý znak, každá reprezentuje iný očakávaný neinvariantný znak ASCII: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>Identifikátory AIM nie je možné rozpoznať. Nahlásený znak {0} je nejednoznačný. Existuje viacero klávesov pre tento znak, ktorý reprezentuje znak vlajky AIM aj ďalšie očakávané znaky.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Niektoré nahlásené neinvariantné znaky ASCII sú nejednoznačné: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 na reprezentáciu EDI údajov nie je možné spoľahlivo čítať.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Niektoré nahlásené postupnosti znakov sú nejednoznačné. Tieto znaky nezastupujú invariantné znaky: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To môže zabrániť čítaniu akýchkoľvek ďalších údajových prvkov zahrnutých v čiarovom kóde.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá.</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pre invariantné znaky.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pre neinvariantné znaky ASCII.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii skupinových oddeľovačov.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii oddeľovačov záznamov.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii oddeľovačov EDI.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii identifikátorov AIM.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Zodpovedajúce rozloženie čítačky čiarových kódov a klávesnice počítača nie je možné určiť.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock je zapnutý.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Caps Lock môže byť zapnutý.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Čítačka čiarových kódov môže byť nakonfigurovaná na prevod znakov na veľké písmená.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Čítačka čiarových kódov môže byť nakonfigurovaná na prevod znakov na malé písmená.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Čítačka čiarových kódov môže byť nakonfigurovaná na inverziu veľkosti písmen.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Najlepší nahlásený čas zadávania údajov z klávesnice počas kalibrácie naznačuje, že čítačka čiarových kódov nepracuje optimálne.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Neboli nahlásené žiadne údaje o kalibrácii.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Nahlásené údaje nie sú rozpoznané. Mohol byť naskenovaný nesprávny čiarový kód.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Zistených príliš veľa znakov. Mohol byť naskenovaný nesprávny čiarový kód.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Boli nahlásené len čiastočné údaje pre kalibračný čiarový kód.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Nahlásené údaje sú pre nesprávny kalibračný čiarový kód.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Niektoré invariantné znaky nie je možné zistiť.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Niektoré invariantné znaky nie sú rozpoznané čítačkou čiarových kódov v jej súčasnej konfigurácii: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Niektoré kombinácie klávesov, ktoré obsahujú invariantné znaky, nie sú rozpoznané: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Nebol nahlásený žiadny skupinový oddeľovač.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Nahlásený znak {0} je nejednoznačný. Existujú viaceré klávesy pre ten istý znak, každá reprezentuje iný očakávaný znak.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Nahlásený znak {0} je nejednoznačný. Rovnaký znak je nahlásený pre viacero postupností mŕtvych kláves reprezentujúcich rôzne očakávané znaky.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Nahlásený znak mŕtvej klávesy {0} je nejednoznačný. Existujú viaceré mŕtve klávesy pre ten istý znak, každá reprezentuje iný očakávaný znak.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. Rovnaká postupnosť je nahlásená pre viacero očakávaných postupností znakov.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. Rovnaká postupnosť je nahlásená pre viacero mŕtvych kláves v rozložení klávesnice čítačky čiarových kódov.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Znak {0} nie je možné spoľahlivo reprezentovať kvôli nekompatibilite s rozložením klávesnice.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To predstavuje znak skupinového oddeľovača.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Niektoré nahlásené znaky sú nejednoznačné. Môžu byť nahlásené samostatne, ale sú tiež použité na tvorbu ligatúr: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Nahlásené údaje o kalibrácii nie je možné spracovať. Neobsahujú očakávané oddeľovače.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Nahlásené údaje o kalibrácii nie je možné spracovať. Nie je možné určiť žiadny znak, ktorý by mohol pôsobiť ako dočasný oddeľovač.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrácia zlyhala. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrácia zlyhala. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Neplatná položka poradenstva.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Neplatná úroveň informácií.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Zlyhalo vloženie zástupných symbolov pre medzery.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Neplatný argument poskytnutý metóde Replace regulárneho výrazu.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Regulárny výraz vypršal počas vykonávania zhody.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Nešpecifikované</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Nie je možné nájsť vhodný znak pre dočasný zástupný symbol. Všetky rozšírené znaky ASCII sú už použité vo vstupnom reťazci.</value>
   </data>
 </root>

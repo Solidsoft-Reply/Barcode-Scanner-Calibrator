@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Liko neatitinkančių patarimų elementų.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Priesaga {0} neatitinka laukiamos priesagos {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Neteisinga brūkšninio kodo kilmė.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Neteisingas klaidos informacijos tipas.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Neteisingas informacinis informacijos tipas.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Neteisingas įspėjimo informacijos tipas.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>AIM identifikatoriai yra palaikomi.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas siunčia AIM identifikatorių: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas gali siųsti AIM identifikatorių: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas siunčia eilutės pabaigos simbolių seką: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Palaikomi grupės skyriklio simboliai.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Palaikomi įrašų skyriklio simboliai.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>Palaikomi EDI skyrikliai.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Brūkšninių kodų skaitytuvas gali būti nustatytas kompensuoti Caps Lock.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Kompiuterio klaviatūra palaiko šią rašyseną: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Kompiuterio klaviatūra sukonfigūruota šiai platformai: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Kai kurie neinvariantiniai ASCII simboliai negali būti aptikti.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Kai kurie neinvariantiniai ASCII simboliai nėra atpažįstami: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Kai kurios neinvariantinių ASCII simbolių kombinacijos nėra atpažįstamos: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę, negali būti atpažinti.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę EDI duomenų atvaizdavimui, negali būti patikimai nuskaityti.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę, negali būti patikimai nuskaityti.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Brūkšninių kodų skaitytuvas nesiunčia AIM identifikatoriaus.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>AIM identifikatorius negali būti atpažintas.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas siunčia priešdėlį: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas siunčia kodą: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Brūkšninių kodų skaitytuvas siunčia priesagą: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Brūkšninių kodų skaitytuvas nesiunčia eilutės pabaigos simbolių sekos (pvz., krepšelio grąžinimo).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Yra keletas klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam simboliui. Tačiau daugiausiai tik vienas iš laukiamų simbolių yra invariantinis.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Kai kurių praneštų simbolių prasmė yra dviprasmiška. Yra keletas klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam neinvariantiniam ASCII simboliui: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>AIM identifikatorius negali būti atpažintas. Praneštas simbolis {0} yra dviprasmiškas. Yra keletas klavišų šiam simboliui, kuris atstovauja AIM vėliavos simboliui, taip pat ir kitiems laukiamiems simboliams.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Kai kurie pranešti neinvariantiniai ASCII simboliai yra dviprasmiški: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę EDI duomenų atvaizdavimui, negali būti patikimai nuskaityti.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Kai kurių praneštų simbolių sekų prasmė yra dviprasmiška. Šie simboliai neatstovauja invariantiniams simboliams: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai gali sutrukdyti bet kokių papildomų duomenų elementų, įtrauktų į brūkšninį kodą, nuskaitymui.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa invariantiniams simboliams.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa neinvariantiniams ASCII simboliams.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant grupės skyrikliams.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant įrašų skyrikliams.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant EDI skyrikliams.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant AIM identifikatoriams.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Negalima nustatyti brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymų atitikimo.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock įjungtas.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Gali būti įjungtas Caps Lock.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Brūkšninių kodų skaitytuvas gali būti nustatytas versti simbolius į didžiąsias raides.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Brūkšninių kodų skaitytuvas gali būti nustatytas versti simbolius į mažąsias raides.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Brūkšninių kodų skaitytuvas gali būti nustatytas invertyti simbolių registrą.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Geriausias praneštas klaviatūros duomenų įvedimo laikas kalibravimo metu rodo, kad brūkšninių kodų skaitytuvas neveikia optimaliai.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Kalibravimo duomenų nebuvo pranešta.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Pranešti duomenys yra neatpažįstami. Gali būti nuskaitytas neteisingas brūkšninis kodas.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Aptikta per daug simbolių. Gali būti nuskaitytas neteisingas brūkšninis kodas.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Pranešta tik dalinė kalibravimo brūkšninio kodo informacija.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Pranešti duomenys yra neteisingam kalibravimo brūkšniniam kodui.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Kai kurie invariantiniai simboliai negali būti aptikti.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Kai kurie invariantiniai simboliai nėra atpažįstami esamoje brūkšninių kodų skaitytuvo konfigūracijoje: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Kai kurios klavišų kombinacijos, įtraukiančios invariantinius simbolius, nėra atpažįstamos: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Nepranešta apie grupės skyriklio buvimą.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Yra keletas klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam simboliui.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Tas pats simbolis praneštas kelioms negyvųjų klavišų sekoms, atstovaujančioms skirtingiems laukiamiems simboliams.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Praneštas negyvojo klavišo simbolis {0} yra dviprasmiškas. Yra keletas negyvųjų klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam simboliui.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Ta pati seka pranešta kelioms laukiamoms simbolių sekoms.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Ta pati seka pranešta keliems negyvųjų klavišų brūkšninių kodų skaitytuvo klaviatūros išdėstyme.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Simbolis {0} negali būti patikimai atstovaujamas dėl nesuderinamumo su klaviatūros išdėstymu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai atstovauja grupės skyriklio simboliui.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Kai kurie pranešti simboliai yra dviprasmiški. Jie gali būti pranešti atskirai, tačiau taip pat naudojami komponuoti ligatūroms: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Pranešti kalibravimo duomenys negali būti apdoroti. Jame nėra laukiamų skyriklių.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Pranešti kalibravimo duomenys negali būti apdoroti. Negalima nustatyti jokio simbolio, kuris veiktų kaip laikinas skyriklis.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibravimas nepavyko. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibravimas nepavyko. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Netinkamas patarimo elementas.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Netinkamas informacijos lygis.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Nepavyko įterpti tarpų vietininkų.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Netinkamas argumentas pateiktas reguliarios išraiškos Replace metodui.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Reguliarioji išraiška nesuspėjo atlikti atitikties vykdymo metu.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Nenurodyta</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Negalima rasti tinkamo simbolio laikinam vietininkui. Visi išplėstiniai ASCII simboliai jau naudojami įvesties eilutėje.</value>
   </data>
 </root>

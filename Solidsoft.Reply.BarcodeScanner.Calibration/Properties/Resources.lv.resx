@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Padomi par palikušajiem elementiem nesakrīt.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Papildinājums {0} neatbilst gaidītajam papildinājumam {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Nepareiza svītrkoda izcelsme.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Nepareiza kļūdas informācijas veida.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Nepareiza informatīvā informācijas veida.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Nepareiza brīdinājuma informācijas veida.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>AIM identifikatori tiek atbalstīti.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Svītrkoda skeneris pārraida AIM identifikatoru: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Svītrkodu skeneris var pārraidīt AIM identifikatoru: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Svītrkoda skeneris pārraida rindas beigu rakstzīmju virkni: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Grupu atdalītāju rakstzīmes tiek atbalstītas.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Ierakstu atdalītāju rakstzīmes tiek atbalstītas.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>EDI atdalītāju rakstzīmes tiek atbalstītas.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Svītrkodu skeneris var tikt konfigurēts, lai kompensētu Caps Lock.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Datora klaviatūra atbalsta šādu rakstību: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Datora klaviatūra ir konfigurēta šādai platformai: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Dažas nemainīgās ASCII rakstzīmes nevar noteikt.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Dažas nemainīgās ASCII rakstzīmes netiek atpazītas: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Dažas kombinācijas no nemainīgajām ASCII rakstzīmēm netiek atpazītas: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>Svītrkodus, kas izmanto ISO/IEC 15434 sintaksi, nevar atpazīt.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Svītrkodus, kas izmanto ISO/IEC 15434 sintaksi EDI datu pārstāvībai, nevar uzticami lasīt.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Svītrkodi, kuri izmanto ISO/IEC 15434 sintaksi, nevar tikt uzticami nolasīti.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Svītrkoda skeneris nepārraida AIM identifikatoru.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>AIM identifikatoru nevar atpazīt.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Svītrkoda skeneris pārraida prefiksu: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Svītrkoda skeneris pārraida kodu: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Svītrkoda skeneris pārraida sufiksu: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Svītrkoda skeneris nepārraida rindas beigu rakstzīmju virkni (piemēram, atgriešanās rindas).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Ir vairākas taustiņu kombinācijas tai pašai rakstzīmei, katra pārstāv dažādu gaidīto rakstzīmi. Tomēr, vislabākajā gadījumā, tikai viena no gaidītajām rakstzīmēm ir nemainīga.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Daži ziņotie raksturi ir neskaidri. Ir vairākas taustiņu kombinācijas tam pašam raksturam, katrs pārstāvot dažādu gaidāmo nemainīgo ASCII raksturu: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>AIM identifikatorus nevar atpazīt. Ziņotais raksturs {0} ir neskaidrs. Vairākas taustiņu kombinācijas šim raksturam, kas pārstāv AIM karogu raksturu, kā arī citus gaidāmos raksturus.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Daži ziņotie nemainīgās ASCII rakstzīmes ir neskaidri: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Svītrkodi, kuri izmanto ISO/IEC 15434 sintaksi, lai pārstāvētu EDI datus, nevar tikt uzticami nolasīti.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Daži ziņotie raksturu virknes ir neskaidras. Šie raksturi nepārstāv nemainīgās rakstzīmes: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tas var traucēt jebkuru papildus datu elementu nolasīšanu, kas iekļauti svītrkodā.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst.</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst nemainīgajām rakstzīmēm.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst nemainīgajām ASCII rakstzīmēm.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot grupu atdalītājus.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot ierakstu atdalītājus.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot EDI atdalītājus.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot AIM identifikatorus.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Nevar noteikt svītrkodu skenera un datora klaviatūras izkārtojumu atbilstību.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Caps Lock var būt ieslēgts.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Svītrkodu skeneris var tikt konfigurēts, lai pārveidotu rakstzīmes par lielajiem burtiem.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Svītrkodu skeneris var tikt konfigurēts, lai pārveidotu rakstzīmes par mazajiem burtiem.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Svītrkodu skeneris var tikt konfigurēts, lai mainītu rakstzīmju reģistru.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Labākais ziņotais klaviatūras datu ievades laiks kalibrācijas laikā norāda, ka svītrkodu skeneris nedarbojas optimāli.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Netika ziņoti kalibrācijas dati.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Ziņotie dati nav atpazīti. Var būt nolasīts nepareizs svītrkods.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Noteikts pārāk liels rakstzīmju skaits. Var būt nolasīts nepareizs svītrkods.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Ziņoti daļēji dati kalibrācijas svītrkodam.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Ziņotie dati ir nepareizam kalibrācijas svītrkodam.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Dažas nemainīgās rakstzīmes nevar noteikt.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Dažas nemainīgās rakstzīmes netiek atpazītas ar svītrkoda skeneri tā pašreizējā konfigurācijā: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Dažas taustiņu kombinācijas, kas ietver nemainīgās rakstzīmes, netiek atpazītas: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Netika ziņots grupu atdalītājs.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Ir vairākas taustiņu kombinācijas tai pašai rakstzīmei, katra pārstāv dažādu gaidīto rakstzīmi.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Tā pati rakstzīme ir ziņota par vairākiem mirušo taustiņu secībām, kas pārstāv dažādas gaidītās rakstzīmes.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Ziņotā mirušā taustiņa rakstzīme {0} ir neskaidra. Ir vairāki mirušie taustiņi tai pašai rakstzīmei, katrs pārstāvot dažādu gaidīto rakstzīmi.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tā pati secība ir ziņota par vairākām gaidītajām rakstzīmju secībām.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tā pati secība ir ziņota par vairākiem mirušo taustiņu secībām svītrkodu skenera klaviatūras izkārtojumā.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Rakstzīme {0} nevar tikt uzticami reprezentēta sakarā ar neatbilstību ar klaviatūras izkārtojumu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tas pārstāv grupas atdalītāja rakstzīmi.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Daži ziņotie raksturi ir neskaidri. Tos var ziņot atsevišķi, bet tie arī tiek izmantoti ligatūru veidošanai: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Ziņotie kalibrācijas dati nevar tikt apstrādāti. Tajos nav iekļauti gaidītie atdalītāji.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Ziņotie kalibrācijas dati nevar tikt apstrādāti. Nevar noteikt rakstzīmi, kas kalpotu kā pagaidu atdalītājs.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrācija neizdevās. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrācija neizdevās. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Nederīgs padoma elements.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Nederīgs informācijas līmenis.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Neizdevās ievietot atstarpju vietturus.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Nederīgs arguments regulārās izteiksmes Aizvietošanas metodē.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Regulārā izteiksme pārtrauca darbību, veicot atbilstību.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Nenoteikts</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Nevar atrast piemērotu raksturu pagaidu vietturim. Visi paplašinātā ASCII rakstzīmes jau tiek izmantotas ievades virknē.</value>
   </data>
 </root>

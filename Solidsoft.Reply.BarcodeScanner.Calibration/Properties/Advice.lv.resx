@@ -119,549 +119,413 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
-    <comment>Low</comment>
+    <value>Jums var nākties manuāli ievadīt datus savā programmatūrā svītrkodu gadījumos, kad tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 rakstzīmēm.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ja rodas problēmas, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfigurējiet jūsu svītrkoda skeneri AIM identifikatoru pārraidīšanai. Ja rodas problēmas, pārraidot AIM identifikatorus, atgriezieties pie pašreizējās konfigurācijas.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Jums varētu gribēties izslēgt Caps Lock un mēģināt vēlreiz.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurācijas un, ja nepieciešams, konfigurējiet tos no jauna.;;Jūs varētu vēlēties izslēgt Caps Lock un veikt testēšanu vēlreiz.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>Jums varētu gribēties izslēgt Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas pārraidītu rindas beigu secības un veiciet testēšanu vēlreiz. Ja rodas problēmas, pārraidot rindas beigu secības, atgriezieties pie pašreizējās konfigurācijas.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Ja rodas problēmas, skenējot svītrkodu datus, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu prefiksu.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Ja rodas problēmas, skenējot svītrkodu datus, konfigurējiet savu svītrkodu skeneri tā, lai tas nepārraidītu sufiksu.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Pārbaudiet, vai jūsu svītrkoda skeneris ir konfigurēts AIM identifikatoru pārraidīšanai.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Pārliecinieties, vai jūsu tastatūras izkārtojumi sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru un pārraidītu AIM identifikatorus.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja rodas problēmas, skenējot svītrkodus, kas satur Formāta 05 vai Formāta 06 datus, ievadiet datus manuāli savā programmatūrā. Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ievadiet datus manuāli jūsu programmatūrā svītrkodiem, kas satur Format 05 vai Format 06 datus. Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
-    <comment>High</comment>
+    <value>Ja jūs plānojat skenēt svītrkodus, kas satur datus, formatētus atbilstoši ISO/IEC 15434, veiciet testu vēlreiz, šoreiz iekļaujot ISO/IEC 15434 datu savietojamības testu.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Ja problēma saglabājas, pārbaudiet savu svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabos tastatūras ievades veiktspēju.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Ja problēma saglabājas, pārbaudiet savu svītrkodu skenera konfigurāciju. Meklējiet iestatījumus, kas uzlabos tastatūras ievades veiktspēju.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat citus svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Mēģiniet vēlreiz.;;Pārliecinieties, ka jūsu tastatūras izkārtojums sakrīt.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizo svītrkodu.;;Ja tiek prasīts skenēt vairākus svītrkodus, pārliecinieties, ka skenējat tos pareizajā secībā.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Konfigurējiet jūsu svītrkoda skeneri, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet jūsu svītrkoda skeneri, lai tas imitētu ciparu klaviatūru.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja jūsu programmatūra nespēj kompensēt, konfigurējiet savu svītrkodu skeneri tā, lai tas atbilstu jūsu datora tastatūras izkārtojumam.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while scanning barcodes, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Izslēdziet Caps Lock un mēģiniet vēlreiz.;;Ja jums ir nepieciešams atstāt ieslēgtu Caps Lock, skenējot svītrkodus, jūs varat konfigurēt savu svītrkodu skeneri, lai tas kompensētu.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Izslēdziet Caps Lock un mēģiniet vēlreiz.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.;;Izslēdziet Caps Lock un veiciet testēšanu vēlreiz.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.;;Izslēdziet Caps Lock un veiciet testēšanu vēlreiz.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Pārbaudiet jūsu skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Pārbaudiet jūsu svītrkoda skeneri, tastatūru un datora konfigurāciju un, ja nepieciešams, konfigurējiet tos no jauna.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ja iespējams, konfigurējiet savu datoru, lai izmantotu citu tastatūras izkārtojumu.;;Ja nepieciešams, konfigurējiet savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Mēģiniet vēlreiz.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Jūsu sistēma uzticami lasa lielāko daļu svītrkodu.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Jūsu sistēma uzticami lasa lielāko daļu svītrkodu.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Jūsu sistēma uzticami lasa GS1 svītrkodus.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Jūsu sistēma uzticami lasa GS1 svītrkodus.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris nepārraida AIM identifikatorus.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock ir ieslēgts, bet burtu lielums tiek atspoguļots pareizi.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock ir ieslēgts, bet burtu lielums tiek saglabāts.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris nepārraida rindas beigu secību.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris pārraida prefiksu.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris pārraida sufiksu.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma var nelasīt AIM identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar nolasīt AIM identifikatoru rakstzīmes.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris var nepārraidīt AIM identifikatorus.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read the barcode type identifier.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar nolasīt svītrkoda tipa identifikatoru.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma var nebūt spējīga uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt Format 05 vai Format 06 svītrkodus.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
-    <comment>High</comment>
+    <value>Jūs neesat pārbaudījis saderību ar ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>Datu ievades veiktspēja ir lēnāka nekā gaidīts.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>Datu ievades veiktspēja ir ļoti slikti.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>Tests neizdevās.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Par svītrkodu dati netika ziņoti.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Skenējot svītrkodu, daži dati netika ziņoti.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Par vienu vai vairākiem svītrkodiem dati netika ziņoti.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>Jūs esat nolasis svītrkodu nepareizā secībā.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Skenējot vienu vai vairākus svītrkodus, daži dati netika ziņoti.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris un dators ir atšķirīgi tastatūras izkārtojumi.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Slēptie rakstzīmes svītrkodos netiek atspoguļoti pareizi.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock ir ieslēgts.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes lielajos burtos.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes mazajos burtos.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai simulētu Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes lielajos burtos.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris var būt konfigurēts, lai pārveidotu rakstzīmes mazajos burtos.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu tastatūras izkārtojums atbalsta {0} rakstzīmes un nespēj uzticami nolasīt svītrkodus.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>Tests neveiksmīgi neizdevās.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Low</comment>
+    <value>Tomēr jūs neesat pārbaudījis savietojamību ar ISO/IEC 15434. Jūsu sistēma var nespēt uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Tomēr jūsu pārbaudes programmatūra var nespēt uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Tomēr tas nespēj uzticami lasīt svītrkodus, ja tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 standartam.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris, visticamāk, ir konfigurēts, lai automātiski kompensētu Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Jūsu Caps Lock taustiņš var būt atspējots vai pārkonfigurēts.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Tomēr jūsu datora tastatūras izkārtojums ir rakstzīmēm, kas neatbalsta lielos un mazos burtus.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>Tas var palēnināt jūsu skenēšanas veiktspēju. Tomēr jūsu programmatūra var neatbalstīt rindas beigu secības.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Jūsu programmatūra var neatpazīt prefiksu.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Jūsu programmatūra var neatpazīt sufiksu.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus. Tomēr, lai uzticami lasītu AIM identifikatorus, programmatūrai jāievieš rakstzīmju kartēšana.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Jūsu svītrkodu skeneris var pārraidīt AIM identifikatorus, bet tas nav droši. AIM identifikatori pārstāv svītrkoda tipu. Jūsu programmatūra tos var izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jūsu programmatūrai jāievieš rakstzīmju kartēšana, lai uzticami nolasītu svītrkodus, kuros ir neinvariantas rakstzīmes.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Šī varētu būt pagaidu vai periodiska problēma. Jūsu dators var būt aizņemts, palaizot vīrusu pārbaudītāju vai prognozējošo teksta pakalpojumu. Jūsu svītrkodu skeneris var būt konfigurēts kā ciparu tastatūra.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Šī varētu būt pagaidu vai periodiska problēma. Jūsu dators var būt aizņemts, palaizot vīrusu pārbaudītāju vai prognozējošo teksta pakalpojumu. Jūsu svītrkodu skeneris var būt konfigurēts kā ciparu tastatūra.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes. Jūsu programmatūrai jārealizē rakstzīmju kartēšana, lai šos svītrkodus uzticami nolasītu.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt nemainīgas rakstzīmes.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt EDI datus. Jūsu programmatūrai jārealizē rakstzīmju kartēšana, lai šos svītrkodus uzticami nolasītu.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt EDI datus.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Daži svītrkodi var saturēt EDI datus.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Svītrkodu skenera un datora tastatūras izkārtojums var nesakrist. Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Jūsu programmatūrai jāievieš rakstzīmju kartēšana, lai uzticami nolasītu svītrkodus.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Jūsu programmatūra varētu kompensēt.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Jūsu programmatūra varētu kompensēt. Tomēr jūsu sistēma nevar pareizi nolasīt rakstzīmes svītrkodiem, kuros ir Format 05 vai Format 06 dati. Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Jūsu programmatūra varētu kompensēt. Tomēr jūsu sistēma nevar pareizi nolasīt svītrkodu rakstzīmes svītrkodiem, kuros ir Format 05 vai Format 06 dati. Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Dažas programmatūras var kompensēt to, analizējot taustiņu kodus, nevis rakstzīmes.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Kad ir ieslēgts Caps Lock, noklusējuma uzvedība ir ziņot visus rakstzīmes lielajos burtos.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodu rakstzīmes.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>Jūsu svītrkodu skeneris vai sistēma var būt lēna vai tā var būt ietekmēta no pretvīrusu programmatūras vai cita negaidīta vai periodiska traucējuma.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Kļūda, risinot tastatūras skriptus: {0}</value>
   </data>
 </root>

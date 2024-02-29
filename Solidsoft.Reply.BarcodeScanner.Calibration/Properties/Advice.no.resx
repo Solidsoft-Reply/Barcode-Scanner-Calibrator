@@ -119,549 +119,413 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
-    <comment>Low</comment>
+    <value>Du må kanskje legge inn data manuelt i programvaren din for strekkoder som inneholder data formatert i henhold til ISO/IEC 15434-tegn.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jos koet ongelmia skannatessasi viivakoodeja, jotka sisältävät muotoa 05 tai 06 olevia tietoja, syötä tietoja manuaalisesti ohjelmistoosi. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Syötä tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät muotoa 05 tai 06 olevia tietoja. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfiguroi viivakoodinlukijasi lähettämään AIM-tunnisteita. Jos sinulla on ongelmia AIM-tunnisteiden lähettämisessä, palaa nykyiseen konfiguraatioon.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Du vil kanskje slå av Caps Lock og teste på nytt.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Tarkista viivakoodinlukijasi, näppäimistösi ja tietokoneesi konfiguraatiot ja konfiguroi ne tarvittaessa uudelleen.;;Saatat haluta kytkeä Caps Lockin pois päältä ja testata uudelleen.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>Du vil kanskje slå av Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfiguroi viivakoodinlukijasi lähettämään rivinvaihtosekvenssejä ja testaa uudelleen. Jos sinulla on ongelmia rivinvaihtosekvenssien lähettämisessä, palaa nykyiseen konfiguraatioon.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Jos sinulla on ongelmia skannatessasi viivakoodidataa, konfiguroi viivakoodinlukijasi niin, että se ei lähetä etuliitettä.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Jos sinulla on ongelmia skannatessasi viivakoodidataa, konfiguroi viivakoodinlukijasi niin, että se ei lähetä mitään jälkiliitettä.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Varmista, että näppäimistöasettelusi täsmäävät.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Varmista, että näppäimistöasettelusi täsmäävät.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Tarkista, että viivakoodinlukijasi on konfiguroitu lähettämään AIM-tunnisteita.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Varmista, että näppäimistöasettelusi täsmäävät.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä ja lähettämään AIM-tunnisteita.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos koet ongelmia skannatessasi viivakoodeja, jotka sisältävät muotoa 05 tai 06 olevia tietoja, syötä tietoja manuaalisesti ohjelmistoosi. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Syötä tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät muotoa 05 tai 06 olevia tietoja. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Syötä tietoja manuaalisesti ohjelmistoosi viivakoodeille, jotka sisältävät muotoa 05 tai 06 olevia tietoja. Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
-    <comment>High</comment>
+    <value>Jos odotat skannaavasi viivakoodeja, jotka sisältävät ISO/IEC 15434 -standardin mukaisesti muotoiltua dataa, suorita testi uudelleen, tällä kertaa sisältäen ISO/IEC 15434 datan yhteensopivuustestin.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jos ongelma jatkuu, tarkista viivakoodinlukijasi konfiguraatio. Etsi asetuksia, jotka parantavat näppäimistön syöttösuorituskykyä.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jos ongelma jatkuu, tarkista viivakoodinlukijasi konfiguraatio. Etsi asetuksia, jotka parantavat näppäimistön syöttösuorituskykyä.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat muita viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat muita viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat muita viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat EDI-viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat EDI-viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos skannaat EDI-viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Prøv igjen, og sørg for at du skanner riktig strekkode(r).</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Prøv igjen, og sørg for at du skanner riktig strekkode.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Prøv igjen.;;Sørg for at tastaturoppsettene dine stemmer.;;Om nødvendig, konfigurer strekkodeskanneren din til å etterligne et numerisk tastatur.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Prøv igjen, og sørg for at du skanner riktig strekkode(r).</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Prøv igjen, og sørg for at du skanner riktig strekkode.;;Hvis du blir bedt om å skanne flere strekkoder, sørg for at du skanner dem i riktig rekkefølge.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Prøv igjen.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jos ohjelmistosi ei voi kompensoida, konfiguroi viivakoodinlukijasi vastaamaan tietokoneesi näppäimistön asettelua.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfiguroi viivakoodinlukijasi vastaamaan tietokoneesi näppäimistön asettelua.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jos ohjelmistosi ei voi kompensoida, konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Konfiguroi viivakoodinlukijasi vastaamaan tietokoneesi näppäimistön asettelua.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos ohjelmistosi ei voi kompensoida, konfiguroi viivakoodinlukijasi vastaamaan tietokoneesi näppäimistön asettelua.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while scanning barcodes, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Slå av Caps Lock og test på nytt.;;Hvis du må ha Caps Lock på mens du skanner strekkoder, kan du kanskje konfigurere strekkodeskanneren din til å kompensere.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Slå av Caps Lock og test på nytt.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Tarkista viivakoodinlukijasi, näppäimistösi ja tietokoneesi konfiguraatio ja konfiguroi ne tarvittaessa uudelleen.;;Kytke Caps Lock pois päältä ja testaa uudelleen.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Tarkista viivakoodinlukijasi, näppäimistösi ja tietokoneesi konfiguraatio ja konfiguroi ne tarvittaessa uudelleen.;;Kytke Caps Lock pois päältä ja testaa uudelleen.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Tarkista skannerisi, näppäimistösi ja tietokoneesi konfiguraatio ja konfiguroi ne tarvittaessa uudelleen.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Tarkista viivakoodinlukijasi, näppäimistösi ja tietokoneesi konfiguraatio ja konfiguroi ne tarvittaessa uudelleen.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Tarkista viivakoodinlukijasi, näppäimistösi ja tietokoneesi konfiguraatio ja konfiguroi ne tarvittaessa uudelleen.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jos mahdollista, konfiguroi tietokoneesi käyttämään eri näppäimistön asettelua.;;Tarvittaessa konfiguroi viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Prøv igjen.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Systemet ditt leser de fleste strekkoder pålitelig.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Systemet ditt leser de fleste strekkoder pålitelig.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Systemet ditt leser GS1-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Systemet ditt leser GS1-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender ikke AIM-identifikatorer.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock on päällä, mutta kirjainkoko ilmoitetaan oikein.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock on päällä, mutta kirjainkoko säilyy.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock on kytketty päälle.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender ikke en slutten-av-linje-sekvens.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender et prefiks.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender et suffiks.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan kanskje ikke lese AIM-identifikatortegn.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese AIM-identifikatortegn.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender kanskje ikke AIM-identifikatorer.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read the barcode type identifier.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetypeidentifikatoren.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan kanskje ikke lese Format 05 eller Format 06-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese Format 05 eller Format 06-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese Format 05 eller Format 06-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
-    <comment>High</comment>
+    <value>Du testet ikke kompatibilitet med ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>Tietojen syöttönopeus on odotettua hitaampi.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>Tietojen syöttönopeus on erittäin huono.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder ikke-invariante tegn.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder ikke-invariante tegn.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder ikke-invariante tegn.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>Testen feilet.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Viivakoodista ei raportoitu tietoja.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Viivakoodista ei raportoitu tietoja.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Yhdestä tai useammasta viivakoodista ei raportoitu tietoja.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>Du skannet en strekkode ut av rekkefølge.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Yhdestä tai useammasta viivakoodista ei raportoitu tietoja.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren og datamaskinen din har ulike tastaturoppsett.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren og datamaskinen din har ulike tastaturoppsett.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Viivakoodien piilotettuja merkkejä ei raportoida oikein.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Viivakoodien piilotettuja merkkejä ei raportoida oikein.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren og datamaskinen din har ulike tastaturoppsett.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Viivakoodien piilotettuja merkkejä ei raportoida oikein.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetegn pålitelig.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock on kytketty päälle.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock on kytketty päälle.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren din kan være konfigurert til å konvertere tegn til store bokstaver.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren din kan være konfigurert til å konvertere tegn til små bokstaver.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren din kan være konfigurert til å simulere Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren din kan være konfigurert til å konvertere tegn til store bokstaver.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren din kan være konfigurert til å konvertere tegn til små bokstaver.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Tastaturoppsettet ditt støtter {0} tegn og kan ikke lese strekkoder pålitelig.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>Testen feilet uventet.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Low</comment>
+    <value>Et kuitenkaan testannut yhteensopivuutta ISO/IEC 15434:n kanssa. Järjestelmäsi ei ehkä pysty lukemaan viivakoodeja luotettavasti, jos ne sisältävät ISO/IEC 15434 -standardin mukaisesti muotoiltua dataa.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Tarkastusohjelmistosi ei ehkä lue viivakoodeja luotettavasti, jos ne sisältävät ISO/IEC 15434 -standardin mukaisesti muotoiltua dataa.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Se ei kuitenkaan voi lukea viivakoodeja luotettavasti, jos ne sisältävät ISO/IEC 15434 -standardin mukaisesti muotoiltua dataa.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din er sannsynligvis konfigurert til automatisk å kompensere for Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Caps Lock-tasten din kan være deaktivert eller omkonfigurert.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Tietokoneesi näppäimistön asettelu on käsikirjoitukselle, joka ei tue isoja ja pieniä kirjaimia.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>Dette kan senke skanningsytelsen din. Imidlertid støtter programvaren din kanskje ikke slutten-av-linje-sekvenser.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Programvaren din kan kanskje ikke gjenkjenne prefikset.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Programvaren din kan kanskje ikke gjenkjenne suffikset.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen. Ohjelmiston on kuitenkin toteutettava merkkikartoitus lukeakseen AIM-tunnisteet luotettavasti.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren din sender kanskje AIM-identifikatorer, men dette er ikke sikkert. AIM-identifikatorer representerer strekkodetypen. Programvaren din kan bruke dem til å eliminere unødvendige varsler.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Programvaren din må implementere tegnkartlegging for å lese strekkoder pålitelig hvis de inneholder ikke-invariante tegn.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Jotkut ohjelmistot saattavat pystyä kompensoimaan tämän analysoimalla avainkoodeja merkkien sijaan.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dette kan være et midlertidig eller intermittent problem. Datamaskinen din kan være opptatt, kjøre et antivirusprogram eller en prediktiv teksttjeneste. Strekkodeskanneren din kan være konfigurert som et numerisk tastatur.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dette kan være et midlertidig eller intermittent problem. Datamaskinen din kan være opptatt, kjøre et antivirusprogram eller en prediktiv teksttjeneste. Strekkodeskanneren din kan være konfigurert som et numerisk tastatur.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää muuttumattomia merkkejä. Ohjelmistosi on toteutettava merkkikartoitus lukeakseen nämä viivakoodit luotettavasti.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää muuttumattomia merkkejä.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää muuttumattomia merkkejä.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää EDI-tietoja. Ohjelmistosi on toteutettava merkkikartoitus lukeakseen nämä viivakoodit luotettavasti.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää EDI-tietoja.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Jotkut viivakoodit saattavat sisältää EDI-tietoja.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>Du kan ha skannet en feil strekkode eller tastet inn feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller intermittent problem.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Strekkodeskanneren og datamaskinens tastaturoppsett samsvarer kanskje ikke. Du kan ha skannet en feil strekkode eller tastet inn feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller intermittent problem.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Du kan ha skannet en feil strekkode eller tastet inn feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller intermittent problem.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Programvaren din må implementere tegnkartlegging for å lese strekkoder pålitelig.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Programvaren din kan kanskje kompensere.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Programvaren din kan kanskje kompensere. Men systemet ditt kan ikke lese tegn korrekt for strekkoder som inneholder Format 05 eller Format 06-data. Noen programvarer kan kanskje kompensere for dette ved å analysere tastekoder i stedet for tegn.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Programvaren din kan kanskje kompensere. Men systemet ditt kan ikke lese strekkodetegn korrekt for strekkoder som inneholder Format 05 eller Format 06-data. Noen programvarer kan kanskje kompensere for dette ved å analysere tastekoder i stedet for tegn.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Jotkut ohjelmistot saattavat pystyä kompensoimaan tämän analysoimalla avainkoodeja merkkien sijaan.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Når Caps Lock er på, er standardoppførselen å rapportere alle tegn i store bokstaver.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetegn pålitelig.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetegn pålitelig.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetegn pålitelig.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Systemet ditt kan ikke lese strekkodetegn pålitelig.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>Strekkodeskanneren eller systemet ditt kan være tregt eller det kan være påvirket av antivirusprogramvare eller et annet uventet eller intermittent problem.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Virhe näppäimistöskriptien ratkaisussa: {0}</value>
   </data>
 </root>

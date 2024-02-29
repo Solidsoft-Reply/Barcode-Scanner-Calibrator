@@ -135,9 +135,6 @@
     <EmbeddedResource Update="Properties\Advice.pt.resx">
       <DependentUpon>Advice.resx</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Advice.rm.resx">
-      <DependentUpon>Advice.resx</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Advice.ro.resx">
       <DependentUpon>Advice.resx</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +208,6 @@
 	  <DependentUpon>Resources.resx</DependentUpon>
 	</EmbeddedResource>
 	<EmbeddedResource Update="Properties\Resources.pt.resx">
-	  <DependentUpon>Resources.resx</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Update="Properties\Resources.rm.resx">
 	  <DependentUpon>Resources.resx</DependentUpon>
 	</EmbeddedResource>
 	<EmbeddedResource Update="Properties\Resources.ro.resx">

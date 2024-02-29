@@ -119,549 +119,413 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
-    <comment>Low</comment>
+    <value>Jista' jkollok bżonn tidħol id-data manwalment fis-softwer tiegħek għal barcodes li fihom data ifformattjata skont karattri ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jekk tesperjenza problemi waqt li tiskennja barcodes li fihom data tal-Format 05 jew Format 06, daħħal id-data manwalment fis-softwer tiegħek. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Daħħal id-data manwalment fis-softwer tiegħek għal barcodes li fihom data tal-Format 05 jew Format 06. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Kkonfigura l-iskanner tal-barcode tiegħek biex jittrasmetti identifikaturi AIM. Jekk ikollok problemi waqt li jittrasmettu identifikaturi AIM, erġa' lura għall-konfigurazzjoni attwali.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Tista' trid titfi l-Caps Lock u ittestja mill-ġdid.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Iċċekkja l-konfigurazzjonijiet tal-iskanner tal-barcode, tat-tastiera u tal-kompjuter u kkunfigurahom mill-ġdid jekk ikun meħtieġ.;;Tista' tkun trid itfi Caps Lock u ittestja mill-ġdid.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>Tista' trid titfi l-Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Kkonfigura l-iskanner tal-barcode tiegħek biex jittrasmetti sekwenzi tal-aħħar tal-linja u ittestja mill-ġdid. Jekk ikollok problemi waqt li jittrasmettu sekwenzi tal-aħħar tal-linja, erġa' lura għall-konfigurazzjoni attwali.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Jekk ikollok problemi tiskennja data tal-barcode, kkonfigura l-iskanner tal-barcode tiegħek biex ma jittrasmettix prefiss.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Jekk ikollok problemi tiskennja data tal-barcode, kkonfigura l-iskanner tal-barcode tiegħek biex ma jittrasmettix xi suffiss.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Iċċekkja li l-iskanner tal-barcode tiegħek huwa konfigurat biex jittrasmetti identifikaturi AIM.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku u jittrasmetti identifikaturi AIM.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tesperjenza problemi waqt li tiskennja barcodes li fihom data tal-Format 05 jew Format 06, daħħal id-data manwalment fis-softwer tiegħek. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Daħħal id-data manwalment fis-softwer tiegħek għal barcodes li fihom data tal-Format 05 jew Format 06. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Daħħal id-data manwalment fis-softwer tiegħek għal barcodes li fihom data tal-Format 05 jew Format 06. Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
-    <comment>High</comment>
+    <value>Jekk tistenna li tiskennja barcodes li fihom data ifformattjata skont ISO/IEC 15434, erġa' għaddi mit-test, din id-darba tinkludi t-test tal-kompatibilità tad-data ISO/IEC 15434.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jekk il-problema tippersisti, iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode tiegħek. Fittex settings li jtejbu l-prestazzjoni tad-dħul tal-keyboard.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Jekk il-problema tippersisti, iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode tiegħek. Fittex settings li jtejbu l-prestazzjoni tad-dħul tal-keyboard.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes oħra, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes oħra, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes oħra, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk tiskennja barcodes EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode(s) korretta/i.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode korretta.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ipprova mill-ġdid.;;Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode(s) korretta/i.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode korretta.;;Jekk inti mitlub tiskennja barcodes multipli, kun żgur li tiskennjahom fl-ordni korretta.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Ipprova mill-ġdid.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jekk is-softwer tiegħek ma jistax jikkumpensa, kkonfigura l-iskanner tal-barcode tiegħek biex jaqbel mal-layout tal-keyboard tal-kompjuter tiegħek.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ikkonfigura l-iskanner tal-barcode tiegħek biex jaqbel mal-konfigurazzjoni tat-tastiera tal-kompjuter tiegħek.;;Jekk ikun meħtieġ, ikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Jekk is-softwer tiegħek ma jistax jikkumpensa, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ikkonfigura l-iskanner tal-barcode tiegħek biex jaqbel mal-konfigurazzjoni tat-tastiera tal-kompjuter tiegħek.;;Jekk ikun meħtieġ, ikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk is-softwer tiegħek ma jistax jikkumpensa, kkonfigura l-iskanner tal-barcode tiegħek biex jaqbel mal-layout tal-keyboard tal-kompjuter tiegħek.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while scanning barcodes, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Itfi l-Caps Lock u ittestja mill-ġdid.;;Jekk ikollok bżonn iżżomm il-Caps Lock mixgħul waqt li tiskennja barcodes, jista' jkun li tista' tikkonfigura l-iskanner tal-barcode tiegħek biex jikkumpensa.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Itfi l-Caps Lock u ittestja mill-ġdid.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode, tat-tastiera u tal-kompjuter u kkunfigurahom mill-ġdid jekk ikun meħtieġ.;;Itfi Caps Lock u ittestja mill-ġdid.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode, tat-tastiera u tal-kompjuter u kkunfigurahom mill-ġdid jekk ikun meħtieġ.;;Itfi Caps Lock u ittestja mill-ġdid.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Iċċekkja l-konfigurazzjoni tal-iskanner, tat-tastiera u tal-kompjuter tiegħek u kkunfigurahom mill-ġdid jekk ikun meħtieġ.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode, tat-tastiera u tal-kompjuter u kkunfigurahom mill-ġdid jekk ikun meħtieġ.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Iċċekkja l-konfigurazzjoni tal-iskanner tal-barcode, tat-tastiera u tal-kompjuter u kkunfigurahom mill-ġdid jekk ikun meħtieġ.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Jekk possibbli, kkonfigura l-kompjuter tiegħek biex juża layout differenti tal-keyboard.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Ipprova mill-ġdid.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Is-sistema tiegħek taqra l-biċċa l-kbira tal-barcodes b'mod affidabbli.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Is-sistema tiegħek taqra l-biċċa l-kbira tal-barcodes b'mod affidabbli.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Is-sistema tiegħek taqra barcodes GS1 b'mod affidabbli.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Is-sistema tiegħek taqra barcodes GS1 b'mod affidabbli.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek ma jittrasmettix identifikaturi AIM.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock mixgħul, iżda l-kaxxa tal-ittri hija rrappurtata korrettament.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock mixgħul, iżda l-kaxxa tal-ittri hija ppreservata.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock mixgħul.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek ma jittrasmettix sekwenza tal-aħħar tal-linja.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek jittrasmetti prefiss.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek jittrasmetti suffiss.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek jista' ma taqra karattri identifikaturi AIM.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri identifikaturi AIM.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' ma jittrasmettix identifikaturi AIM.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read the barcode type identifier.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra l-identifikatur tat-tip tal-barcode.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek jista' ma tkunx kapaċi taqra barcodes tal-Format 05 jew Format 06 b'mod affidabbli.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes tal-Format 05 jew Format 06 b'mod affidabbli.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes tal-Format 05 jew Format 06 b'mod affidabbli.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
-    <comment>High</comment>
+    <value>Inti ma ttestjajtx il-kompatibilità għall-kompatibilità ma' ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>Il-prestazzjoni tad-dħul tad-data hija aktar bil-mod milli mistenni.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>Il-prestazzjoni tad-dħul tad-data hija ħażina ħafna.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom karattri mhux invarianti.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom karattri mhux invarianti.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom karattri mhux invarianti.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>It-test falla.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Ebda data ma ġiet irrappurtata għall-barcode.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Xi data ma ġietx irrappurtata meta skannejt il-barcode.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Ebda data ma ġiet irrappurtata għal barcode jew aktar.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>Inti skannejt barcode barra mis-sekwenza.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Xi data ma ġietx irrappurtata meta skannejt barcode jew aktar.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek u l-kompjuter għandhom layouts differenti tal-keyboard.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek u l-kompjuter għandhom layouts differenti tal-keyboard.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Karattri moħbija f'barcodes mhumiex irrappurtati korrettament.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Karattri moħbija f'barcodes mhumiex irrappurtati korrettament.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek u l-kompjuter għandhom layouts differenti tal-keyboard.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Karattri moħbija f'barcodes mhumiex irrappurtati korrettament.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod affidabbli.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock mixgħul.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock mixgħul.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri kbar.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri żgħar.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat biex jissimula l-Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri kbar.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri żgħar.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Il-layout tal-keyboard tiegħek jappoġġja {0} karattri u ma jistax jaqra barcodes b'mod affidabbli.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>It-test falla b'mod mhux mistenni.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Low</comment>
+    <value>Madankollu, int ma ttestjajtx il-kompatibilità ma' ISO/IEC 15434. Is-sistema tiegħek tista' ma tkunx kapaċi taqra barcodes b'mod affidabbli jekk fihom data ifformattjata skont ISO/IEC 15434.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Madankollu, is-softwer tal-verifika tiegħek jista' ma jaqra barcodes b'mod affidabbli jekk fihom data ifformattjata skont ISO/IEC 15434.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Madankollu, ma jistax jaqra barcodes b'mod affidabbli jekk fihom data ifformattjata skont ISO/IEC 15434.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek probabbilment ikkonfigurat biex jikkumpensa awtomatikament għall-Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Iċ-ċavetta Caps Lock tiegħek tista' tkun diżattivata jew rikunfigurata.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Madankollu, il-layout tal-keyboard tal-kompjuter tiegħek huwa għal skrittura li ma tappoġġjax ittri kbar u żgħar.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>Dan jista' jnaqqas il-prestazzjoni tat-tiskannjar tiegħek. Madankollu, is-softwer tiegħek jista' ma jappoġġjax sekwenzi tal-aħħar tal-linja.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Is-softwer tiegħek jista' ma jagħrafhx il-prefiss.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Is-softwer tiegħek jista' ma jagħrafhx is-suffiss.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa. Madankollu, is-softwer irid jimplimenta mappjar tal-karattri biex jaqra identifikaturi AIM b'mod affidabbli.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>L-iskanner tal-barcode tiegħek jista' jittrasmetti identifikaturi AIM, iżda dan mhux ċert. L-identifikaturi AIM jirrappreżentaw it-tip tal-barcode. Is-softwer tiegħek jista' jużahom biex jevita allerti mhux meħtieġa.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra barcodes b'mod affidabbli jekk fihom karattri mhux invarianti.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Xi softwer jista' jkun kapaċi jikkumpensa għal dan billi janalizza kodiċijiet ewlenin minflok karattri.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dan jista' jkun problema temporanja jew intermittenti. Il-kompjuter tiegħek jista' jkun okkupat, qed jaħdem virus checker jew servizz ta' test predittiv. L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat bħala keypad numeriku.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Dan jista' jkun problema temporanja jew intermittenti. Il-kompjuter tiegħek jista' jkun okkupat, qed jaħdem virus checker jew servizz ta' test predittiv. L-iskanner tal-barcode tiegħek jista' jkun ikkonfigurat bħala keypad numeriku.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom karattri mhux invarianti. Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra dawn il-barcodes b'mod affidabbli.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom karattri mhux invarianti.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom karattri mhux invarianti.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom data EDI. Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra dawn il-barcodes b'mod affidabbli.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom data EDI.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Xi barcodes jistgħu jkun fihom data EDI.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter jistgħu ma jaqblux. Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Is-softwer tiegħek irid jimplimenta mappjar tal-karattri biex jaqra barcodes b'mod affidabbli.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Is-softwer tiegħek jista' jkun kapaċi jikkumpensa.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Is-softwer tiegħek jista' jkun kapaċi jikkumpensa. Madankollu, is-sistema tiegħek ma tistax taqra karattri b'mod korrett għal barcodes li fihom data tal-Format 05 jew Format 06. Xi softwer jista' jkun kapaċi jikkumpensa għal dan billi janalizza kodiċijiet ewlenin minflok karattri.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Is-softwer tiegħek jista' jkun kapaċi jikkumpensa. Madankollu, is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod korrett għal barcodes li fihom data tal-Format 05 jew Format 06. Xi softwer jista' jkun kapaċi jikkumpensa għal dan billi janalizza kodiċijiet ewlenin minflok karattri.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Xi softwer jista' jkun kapaċi jikkumpensa għal dan billi janalizza kodiċijiet ewlenin minflok karattri.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Meta l-Caps Lock ikun mixgħul, l-imġieba default hija li jirrapporta l-karattri kollha f'ittri kbar.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod affidabbli.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod affidabbli.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod affidabbli.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Is-sistema tiegħek ma tistax taqra karattri tal-barcode b'mod affidabbli.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod jew affettwati minn software ta' anti-virus jew xi problema oħra mhux mistennija jew intermittenti.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Żball waqt li qed tissolva skripts tal-keyboard: {0}</value>
   </data>
 </root>

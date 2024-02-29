@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Neuvontakohteiden jäljellä oleva määrä ei täsmää.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Suffiksi {0} ei vastaa odotettua suffiksia {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Virheellinen viivakoodin alkuperä.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Virheellinen virhetiedon tyyppi.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Virheellinen tiedollisen tiedon tyyppi.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Virheellinen varoituksen tiedon tyyppi.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>AIM-tunnisteet ovat tuettuja.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Viivakoodinlukija lähettää AIM-tunnisteen: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Viivakoodinlukija saattaa lähettää AIM-tunnisteen: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Viivakoodinlukija lähettää rivin lopetusmerkkijonon: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Ryhmän erottajamerkit ovat tuettuja.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Tallenteen erottajamerkit ovat tuettuja.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>EDI-erotinmerkit ovat tuettuja.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Viivakoodinlukija voidaan konfiguroida kompensoimaan Caps Lockin.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Tietokoneen näppäimistö tukee seuraavaa kirjoitusjärjestelmää: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Tietokoneen näppäimistö on konfiguroitu seuraavalle alustalle: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Joitain ei-invariantteja ASCII-merkkejä ei voida havaita.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Joitain ei-invariantteja ASCII-merkkejä ei tunnisteta: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Jotkut ei-invarianttien ASCII-merkkien yhdistelmät eivät ole tunnistettavissa: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>ISO/IEC 15434 -syntaksia käyttäviä viivakoodeja ei voida tunnistaa.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>ISO/IEC 15434 -syntaksia käyttäviä EDI-tietoja sisältäviä viivakoodeja ei voida lukea luotettavasti.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä viivakoodeja ei voida lukea luotettavasti.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Viivakoodinlukija ei lähetä AIM-tunnistetta.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>AIM-tunnistetta ei voida tunnistaa.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Viivakoodinlukija lähettää etuliitteen: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Viivakoodinlukija lähettää koodin: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Viivakoodinlukija lähettää jälkiliitteen: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Viivakoodinlukija ei lähetä rivin lopetusmerkkijonoa (esim. rivinvaihtoa).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Raportoitu merkki {0} on epäselvä. Samalle merkille on useita näppäimiä, joista jokainen edustaa eri odotettua merkkiä. Kuitenkin korkeintaan vain yksi odotetuista merkeistä on invariantti.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Joitakin raportoituja merkkejä on epäselviä. Samalle merkille on useita näppäimiä, joista jokainen edustaa eri ei-invarianttia odotettua ASCII-merkkiä: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>AIM-tunnisteita ei voida tunnistaa. Raportoitu merkki {0} on epäselvä. Tälle merkille on useita näppäimiä, jotka edustavat AIM-lippumerkkiä sekä muita odotettuja merkkejä.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Joitakin raportoituja ei-invariantteja ASCII-merkkejä on epäselviä: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä EDI-tietoja sisältäviä viivakoodeja ei voida lukea luotettavasti.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Joitakin raportoituja merkkijonoja on epäselviä. Nämä merkit eivät edusta invarianteja merkkejä: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Tämä saattaa estää viivakoodissa olevien lisädatan elementtien lukemisen.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan invarianteille merkeille.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan ei-invarianteille ASCII-merkeille.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan ryhmän erottajaa esitettäessä.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan tallenteen erottajaa esitettäessä.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan EDI-erotinta esitettäessä.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan AIM-tunnisteita esitettäessä.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelujen yhteenkuuluvuutta ei voida määrittää.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock on kytketty päälle.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Caps Lock saattaa olla kytketty päälle.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Viivakoodinlukija voidaan konfiguroida muuntamaan merkit isoiksi kirjaimiksi.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Viivakoodinlukija voidaan konfiguroida muuntamaan merkit pieniksi kirjaimiksi.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Viivakoodinlukija voidaan konfiguroida kääntämään merkkien kirjainkoko.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Kalibroinnin aikana raportoidut parhaat näppäimistön syöttöajat osoittavat, että viivakoodinlukija ei toimi optimaalisesti.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Kalibrointidataa ei raportoitu.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Raportoitu data on tunnistamaton. Väärä viivakoodi on saattanut tulla skannatuksi.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Liian monta merkkiä havaittu. Väärä viivakoodi on saattanut tulla skannatuksi.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Osittainen data raportoitiin kalibrointiviivakoodista.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Raportoitu data on väärälle kalibrointiviivakoodille.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Joitain invarianteja merkkejä ei voida havaita.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Jotkut invariantit merkit eivät ole viivakoodinlukijan nykyisessä konfiguraatiossa tunnistettavissa: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Joitain näppäinyhdistelmiä, jotka sisältävät invarianteja merkkejä, ei tunnisteta: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Ryhmäerottajaa ei raportoitu.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Raportoitu merkki {0} on epäselvä. Samalle merkille on useita näppäimiä, joista jokainen edustaa eri odotettua merkkiä.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Raportoitu merkki {0} on epäselvä. Samaa merkkiä raportoidaan useille eri kuolleille näppäinyhdistelmille, jotka edustavat erilaisia odotettuja merkkejä.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Raportoitu kuollut näppäinmerkki {0} on epäselvä. Samalle merkille on useita kuolleita näppäimiä, joista jokainen edustaa eri odotettua merkkiä.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Samaa jonoa raportoidaan useille odotetuille merkkijonoille.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Samaa jonoa raportoidaan useille eri kuolleille näppäimille viivakoodinlukijan näppäimistöasettelussa.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Merkkiä {0} ei voida esittää luotettavasti näppäimistöasettelun yhteensopimattomuuden vuoksi.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Tämä edustaa ryhmän erottajamerkkiä.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Joitakin raportoituja merkkejä on epäselviä. Ne voidaan raportoida yksittäin, mutta niitä käytetään myös ligatuurien muodostamiseen: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Raportoitua kalibrointidataa ei voida käsitellä. Siinä ei ole odotettuja erotinmerkkejä.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Raportoitua kalibrointidataa ei voida käsitellä. Mikään merkki ei voi toimia väliaikaisena erotinmerkkinä.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrointi epäonnistui. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibrointi epäonnistui. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Virheellinen neuvontakohde.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Virheellinen tietotaso.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Väliaikaisten välilyöntimerkkien lisääminen epäonnistui.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Virheellinen argumentti säännöllisen lausekkeen Replace-metodille.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Säännöllinen lauseke aikakatkaistiin suoritettaessa vastaavuutta.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Määrittelemätön</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Sopivaa merkkiä väliaikaiseen paikkamerkkiin ei löydy. Kaikki laajennetun ASCII:n merkit on jo käytetty syötteessä.</value>
   </data>
 </root>

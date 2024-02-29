@@ -117,242 +117,235 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
-    <value>Advice items remaining mismatch.</value>
-    <comment>Error</comment>
+  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+    <value>Nõuannete elementide jääkide mittevastavus.</value>
   </data>
   <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffix {0} does not match expected suffix {1}.</value>
-    <comment>Error</comment>
+    <value>Sufiks {0} ei ühti oodatud sufiksiga {1}.</value>
   </data>
   <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Incorrect barcode provenance.</value>
+    <value>Vale vöötkoodi päritolu.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Incorrect error information type.</value>
+    <value>Vale veateabe tüüp.</value>
   </data>
   <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Incorrect informational information type.</value>
+    <value>Vale informatiivse teabe tüüp.</value>
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Incorrect warning information type.</value>
+    <value>Vale hoiatusteabe tüüp.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM identifiers are supported.</value>
+    <value>AIM identifikaatorid on toetatud.</value>
   </data>
   <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>The barcode scanner is transmitting an AIM identifier: {0}</value>
+    <value>Vöötkoodiskanner edastab AIM identifikaatori: {0}</value>
   </data>
   <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>The barcode scanner may be transmitting an AIM identifier: {0}</value>
+    <value>Vöötkoodiskanner võib edastada AIM identifikaatori: {0}</value>
   </data>
   <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>The barcode scanner is transmitting an end-of-line character sequence: {0}</value>
+    <value>Vöötkoodiskanner edastab rea lõpu tähemärkide järjestuse: {0}</value>
   </data>
   <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Group Separator characters are supported.</value>
+    <value>Grupi eraldaja tähemärgid on toetatud.</value>
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Record Separator characters are supported.</value>
+    <value>Rekordi eraldaja tähemärgid on toetatud.</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Edi Separator characters are supported.</value>
+    <value>EDI eraldaja tähemärgid on toetatud.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>The barcode scanner may be configured to compensate for Caps Lock.</value>
+    <value>Vöötkoodiskanner võib olla konfigureeritud kompenseerima Caps Lock'i.</value>
   </data>
   <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>The computer keyboard supports the following script: {0}</value>
+    <value>Arvuti klaviatuur toetab järgmist skripti: {0}</value>
   </data>
   <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>The computer keyboard is configured for the following platform: {0}</value>
+    <value>Arvuti klaviatuur on konfigureeritud järgmisele platvormile: {0}</value>
   </data>
   <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Some non-invariant ASCII characters cannot be detected.</value>
+    <value>Mõningaid mitteinvariantseid ASCII tähemärke ei saa tuvastada.</value>
   </data>
   <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Some non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Mõningaid mitteinvariantseid ASCII tähemärke ei tunnustata: {0}</value>
   </data>
   <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Some combinations of non-invariant ASCII characters are not recognised: {0}</value>
+    <value>Mõningaid mitteinvariantseid ASCII tähemärkide kombinatsioone ei tunnustata: {0}</value>
   </data>
   <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax cannot be recognised.</value>
+    <value>Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit, ei tunnustata.</value>
   </data>
   <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit EDI andmete esitamiseks, ei saa usaldusväärselt lugeda.</value>
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.</value>
+    <value>Teatatud tähemärk {0} on mitmetähenduslik. Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit, ei saa usaldusväärselt lugeda.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an AIM Identifier.</value>
+    <value>Vöötkoodiskanner ei edasta AIM identifikaatorit.</value>
   </data>
   <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>The AIM Identifier cannot be recognised.</value>
+    <value>AIM identifikaatorit ei tunnustata.</value>
   </data>
   <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>The barcode scanner is transmitting a prefix: {0}</value>
+    <value>Vöötkoodiskanner edastab prefiksi: {0}</value>
   </data>
   <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>The barcode scanner is transmitting a code: {0}</value>
+    <value>Vöötkoodiskanner edastab koodi: {0}</value>
   </data>
   <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>The barcode scanner is transmitting a suffix: {0}</value>
+    <value>Vöötkoodiskanner edastab sufiksi: {0}</value>
   </data>
   <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).</value>
+    <value>Vöötkoodiskanner ei edasta rea lõpu tähemärkide järjestust (nt kärusõidu tagastust).</value>
   </data>
   <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character. However, at most, only one of the expected characters is invariant.</value>
+    <value>Teatatud tähemärk {0} on mitmetähenduslik. Sama tähemärgi jaoks on mitu klahvi, igaüks esindades erinevat oodatavat tähemärki. Siiski on maksimaalselt üks oodatavatest tähemärkidest invariantne.</value>
   </data>
   <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Some reported characters are ambiguous. There are multiple keys for the same character, each representing a different non-invariant expected ASCII character: {0}</value>
+    <value>Mõningaid teatatud tähemärke on mitmetähenduslikud. Sama tähemärgi jaoks on mitu klahvi, igaüks esindades erinevat mitteinvariantset eeldatavat ASCII tähemärki: {0}</value>
   </data>
   <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for this character which represents the AIM flag character as well as other expected character(s).</value>
+    <value>AIM identifikaatoreid ei tunnustata. Teatatud tähemärk {0} on mitmetähenduslik. Sellele tähemärgile, mis esindab AIM lipu tähemärki ja ka muid oodatavaid tähemärke, vastab mitu klahvi.</value>
   </data>
   <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Some reported non-invariant ASCII characters are ambiguous: {0}</value>
+    <value>Mõningaid teatatud mitteinvariantseid ASCII tähemärke on mitmetähenduslikud: {0}</value>
   </data>
   <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.</value>
+    <value>Teatatud tähemärk {0} on mitmetähenduslik. Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit EDI andmete esitamiseks, ei saa usaldusväärselt lugeda.</value>
   </data>
   <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}</value>
+    <value>Mõningaid teatatud tähemärkide järjestusi on mitmetähenduslikud. Need tähemärgid ei esinda invariante tähemärke: {0}</value>
   </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.</value>
+    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See võib takistada vöötkoodis sisalduvate täiendavate andmeelementide lugemist.</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti.</value>
   </data>
   <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti invariante tähemärkide puhul.</value>
   </data>
   <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti mitteinvariantsete ASCII tähemärkide puhul.</value>
   </data>
   <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti grupi eraldajate esitamisel.</value>
   </data>
   <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti rekordi eraldajate esitamisel.</value>
   </data>
   <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti EDI eraldajate esitamisel.</value>
   </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti AIM identifikaatorite esitamisel.</value>
   </data>
   <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.</value>
+    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutuste vastavust ei saa kindlaks määrata.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
+    <value>Caps Lock on sisse lülitatud.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock may be switched on.</value>
+    <value>Caps Lock võib olla sisse lülitatud.</value>
   </data>
   <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to upper case.</value>
+    <value>Vöötkoodiskanner võib olla konfigureeritud tähemärke suurtähtedeks teisendama.</value>
   </data>
   <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>The barcode scanner may be configured to convert characters to lower case.</value>
+    <value>Vöötkoodiskanner võib olla konfigureeritud tähemärke väiketähtedeks teisendama.</value>
   </data>
   <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>The barcode scanner may be configured to invert character case.</value>
+    <value>Vöötkoodiskanner võib olla konfigureeritud tähemärkide tähemärkide pööramiseks.</value>
   </data>
   <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.</value>
+    <value>Kalibreerimise käigus teatatud parim klaviatuuri andmesisestuse aeg näitab, et vöötkoodiskanner ei tööta optimaalselt.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>No calibration data was reported.</value>
+    <value>Kalibreerimisandmeid ei teatatud.</value>
   </data>
   <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>The reported data is unrecognised. The wrong barcode may have been scanned.</value>
+    <value>Teatatud andmed on tuvastamata. Võib-olla skaneeriti vale vöötkood.</value>
   </data>
   <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>Too many characters detected. The wrong barcode may have been scanned.</value>
+    <value>Liiga palju tähemärke tuvastatud. Võib-olla skaneeriti vale vöötkood.</value>
   </data>
   <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Partial data was reported for calibration barcode.</value>
+    <value>Osalist andmeid teatati kalibreerimisvöötkoodi kohta.</value>
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>The reported data is for the wrong calibration barcode.</value>
+    <value>Teatatud andmed on vale kalibreerimisvöötkoodi jaoks.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Some invariant characters cannot be detected.</value>
+    <value>Mõningaid invariante tähemärke ei saa tuvastada.</value>
   </data>
   <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}</value>
+    <value>Mõningaid invariante tähemärke ei tunnusta vöötkoodiskanner praeguses konfiguratsioonis: {0}</value>
   </data>
   <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Some key combinations that include invariant characters are not recognised: {0}</value>
+    <value>Mõningaid klahvikombinatsioone, mis sisaldavad invariante tähemärke, ei tunnustata: {0}</value>
   </data>
   <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>No group separator is reported.</value>
+    <value>Grupi eraldajat ei teatatud.</value>
   </data>
   <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. There are multiple keys for the same character, each representing a different expected character.</value>
+    <value>Teatatud tähemärk {0} on mitmetähenduslik. Sama tähemärgi jaoks on mitu klahvi, igaüks esindades erinevat oodatavat tähemärki.</value>
   </data>
   <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>The reported character {0} is ambiguous. The same character is reported for multiple dead key sequences representing different expected characters.</value>
+    <value>Teatatud tähemärk {0} on mitmetähenduslik. Sama tähemärki teatatakse mitme erineva surnud klahvi järjestuse jaoks, mis esindavad erinevaid oodatavaid tähemärke.</value>
   </data>
   <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>The reported dead key character {0} is ambiguous. There are multiple dead keys for the same character, each representing a different expected character.</value>
+    <value>Teatatud surnud klahvi tähemärk {0} on mitmetähenduslik. Sama tähemärgi jaoks on mitu surnud klahvi, igaüks esindades erinevat oodatavat tähemärki.</value>
   </data>
   <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple expected character sequences.</value>
+    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. Sama järjestust teatatakse mitme erineva oodatava tähemärkide järjestuse jaoks.</value>
   </data>
   <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. The same sequence is reported for multiple dead keys in the barcode scanner's keyboard layout.</value>
+    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. Sama järjestust teatatakse mitme erineva surnud klahvi jaoks vöötkoodiskanneri klaviatuuri paigutuses.</value>
   </data>
   <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.</value>
+    <value>Tähemärki {0} ei saa usaldusväärselt esitada klaviatuuri paigutuse mittevastavuse tõttu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>The reported character sequence {0} is ambiguous. This represents the group separator character.</value>
+    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See esindab grupi eraldaja tähemärki.</value>
   </data>
   <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}</value>
+    <value>Mõningaid teatatud tähemärke on mitmetähenduslikud. Neid saab teatada individuaalselt, kuid neid kasutatakse ka liitumistähtede koostamiseks: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. It does not include expected delimiters.</value>
+    <value>Teatatud kalibreerimisandmeid ei saa töödelda. See ei sisalda oodatud eraldajaid.</value>
   </data>
   <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.</value>
+    <value>Teatatud kalibreerimisandmeid ei saa töödelda. Ühtegi tähemärki ei saa määrata ajutiseks eraldajaks.</value>
   </data>
   <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibreerimine ebaõnnestus. {0}</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibration failed. {0}</value>
+    <value>Kalibreerimine ebaõnnestus. {0}</value>
   </data>
   <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Invalid advice item.</value>
+    <value>Vigane nõuande element.</value>
   </data>
   <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Invalid information level.</value>
+    <value>Vigane teabe tase.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
-    <comment>Error</comment>
+    <value>Ebaõnnestus tühikute kohatäidete sisestamine.</value>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Invalid argument provided to regular expression Replace method.</value>
-    <comment>Error</comment>
+    <value>Vigane argument regulaaravaldise asendusmeetodile.</value>
   </data>
   <data name="Calibration_Error_003" xml:space="preserve">
-    <value>The regular expression timed out while performing a match.</value>
-    <comment>Error</comment>
+    <value>Regulaaravaldise töötlemine aegus sobiva vastavuse otsimisel.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>unspecified</value>
-    <comment>new</comment>
+    <value>Täpsustamata</value>
   </data>
   <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Cannot find suitable character for temporary placeholder. All extended ASCII characters are already used in the input string.</value>
-    <comment>Error</comment>
+    <value>Sobiva ajutise kohatäite tähemärgi leidmine ebaõnnestus. Kõik laiendatud ASCII tähemärgid on juba sisendstringis kasutusel.</value>
   </data>
 </root>

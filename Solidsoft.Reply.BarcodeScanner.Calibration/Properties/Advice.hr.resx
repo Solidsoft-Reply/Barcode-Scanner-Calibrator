@@ -119,549 +119,413 @@
   </resheader>
   <data name="Advice_100" xml:space="preserve">
     <value />
-    <comment>Low</comment>
   </data>
   <data name="Advice_105" xml:space="preserve">
-    <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
-    <comment>Low</comment>
+    <value>Možda ćete morati ručno unijeti podatke u vaš softver za bar kodove koji sadrže podatke formatirane prema znakovima ISO/IEC 15434.</value>
   </data>
   <data name="Advice_110" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ako imate problema pri skeniranju bar kodova koji sadrže podatke Formata 05 ili Formata 06, unesite podatke ručno u vaš softver. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_115" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ručno unesite podatke u vaš softver za bar kodove koji sadrže podatke Formata 05 ili Formata 06. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_200" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit AIM identifiers. If you have problems when transmitting AIM identifiers, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfigurirajte vaš skener bar kodova za prijenos identifikatora AIM. Ako imate problema s prijenosom identifikatora AIM, vratite se na trenutnu konfiguraciju.</value>
   </data>
   <data name="Advice_205" xml:space="preserve">
-    <value>You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Možda ćete htjeti isključiti Caps Lock i ponovno testirati.</value>
   </data>
   <data name="Advice_206" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configurations and reconfigure them if necessary.;;You may want to switch off Caps Lock and test again.</value>
-    <comment>Medium</comment>
+    <value>Provjerite konfiguraciju vašeg skenera bar kodova, tipkovnice i računala te ih po potrebi rekonfigurirajte.;;Možda ćete htjeti isključiti Caps Lock i ponovno testirati.</value>
   </data>
   <data name="Advice_210" xml:space="preserve">
-    <value>You may want to switch Caps Lock off.</value>
-    <comment>Medium</comment>
+    <value>Možda ćete htjeti isključiti Caps Lock.</value>
   </data>
   <data name="Advice_215" xml:space="preserve">
-    <value>Configure your barcode scanner to transmit end-of-line sequences and test again. If you have problems when transmitting end-of-line sequences, revert to the current configuration.</value>
-    <comment>Medium</comment>
+    <value>Konfigurirajte vaš skener bar kodova za prijenos sekvenci završetka linije i ponovno testirajte. Ako imate problema s prijenosom sekvenci završetka linije, vratite se na trenutnu konfiguraciju.</value>
   </data>
   <data name="Advice_220" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit a prefix.</value>
-    <comment>Medium</comment>
+    <value>Ako imate problema sa skeniranjem podataka bar kodova, konfigurirajte vaš skener bar kodova tako da ne prenosi prefiks.</value>
   </data>
   <data name="Advice_225" xml:space="preserve">
-    <value>If you have problems scanning barcode data, configure your barcode scanner so that it does not transmit any suffix.</value>
-    <comment>Medium</comment>
+    <value>Ako imate problema sa skeniranjem podataka bar kodova, konfigurirajte vaš skener bar kodova tako da ne prenosi nikakav sufiks.</value>
   </data>
   <data name="Advice_230" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Provjerite da li se rasporedi tipki na vašoj tipkovnici i tipkovnici skenera bar kodova podudaraju.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_231" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Provjerite da li se rasporedi tipki na vašoj tipkovnici i tipkovnici skenera bar kodova podudaraju.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_232" xml:space="preserve">
-    <value>Check that your barcode scanner is configured to transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Provjerite je li vaš skener bar kodova konfiguriran za prijenos identifikatora AIM.</value>
   </data>
   <data name="Advice_235" xml:space="preserve">
-    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
-    <comment>High</comment>
+    <value>Provjerite da li se rasporedi tipki na vašoj tipkovnici i tipkovnici skenera bar kodova podudaraju.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu i prenosi AIM identifikatore.</value>
   </data>
   <data name="Advice_240" xml:space="preserve">
-    <value>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data, enter data manually into your software. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako imate problema pri skeniranju bar kodova koji sadrže podatke Formata 05 ili Formata 06, unesite podatke ručno u vaš softver. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_241" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ručno unesite podatke u vaš softver za bar kodove koji sadrže podatke Formata 05 ili Formata 06. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_245" xml:space="preserve">
-    <value>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ručno unesite podatke u vaš softver za bar kodove koji sadrže podatke Formata 05 ili Formata 06. Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_250" xml:space="preserve">
-    <value>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, run the test again, this time including the ISO/IEC 15434 data compatibility test.</value>
-    <comment>High</comment>
+    <value>Ako očekujete skeniranje bar kodova koji sadrže podatke formatirane prema ISO/IEC 15434, ponovno izvedite test, ovaj put uključujući test kompatibilnosti s podacima ISO/IEC 15434.</value>
   </data>
   <data name="Advice_255" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Ako problem i dalje postoji, provjerite konfiguraciju vašeg skenera bar kodova. Potražite postavke koje će poboljšati performanse unosanja podataka preko tipkovnice.</value>
   </data>
   <data name="Advice_256" xml:space="preserve">
-    <value>If the problem persists, check the configuration of your barcode scanner. Look for settings that will improve keyboard entry performance.</value>
-    <comment>High</comment>
+    <value>Ako problem i dalje postoji, provjerite konfiguraciju vašeg skenera bar kodova. Potražite postavke koje će poboljšati performanse unosanja podataka preko tipkovnice.</value>
   </data>
   <data name="Advice_260" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate druge bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_261" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate druge bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_265" xml:space="preserve">
-    <value>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate druge bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_270" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate EDI bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_271" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate EDI bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_275" xml:space="preserve">
-    <value>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako skenirate EDI bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.</value>
   </data>
   <data name="Advice_301" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.</value>
-    <comment>Low</comment>
+    <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.</value>
   </data>
   <data name="Advice_303" xml:space="preserve">
-    <value>Try again.;;Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Pokušajte ponovno.;;Provjerite da li se raspored tipki vaše tipkovnice podudara.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_304" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode(s).</value>
-    <comment>Low</comment>
+    <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.</value>
   </data>
   <data name="Advice_305" xml:space="preserve">
-    <value>Try again, making sure you scan the correct barcode.;;If you are asked to scan multiple barcodes, make sure you scan them in the correct order.</value>
-    <comment>Medium</comment>
+    <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.;;Ako se od vas traži da skenirate više bar kodova, pobrinite se da ih skenirate u ispravnom redoslijedu.</value>
   </data>
   <data name="Advice_306" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>Medium</comment>
+    <value>Pokušajte ponovno.</value>
   </data>
   <data name="Advice_307" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ako vaš softver ne može kompenzirati, konfigurirajte vaš skener bar kodova da odgovara rasporedu tipki na tipkovnici vašeg računala.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_308" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfigurirajte vaš skener bar kodova da odgovara rasporedu tipki na tipkovnici vašeg računala.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_309" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Ako vaš softver ne može kompenzirati, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_310" xml:space="preserve">
-    <value>Configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>Medium</comment>
+    <value>Konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_315" xml:space="preserve">
-    <value>Configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Konfigurirajte vaš skener bar kodova da odgovara rasporedu tipki na tipkovnici vašeg računala.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_316" xml:space="preserve">
-    <value>If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_320" xml:space="preserve">
-    <value>If your software cannot compensate, configure your barcode scanner to match your computer keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako vaš softver ne može kompenzirati, konfigurirajte vaš skener bar kodova da odgovara rasporedu tipki na tipkovnici vašeg računala.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_325" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.;;If you must keep Caps Lock switched on while scanning barcodes, you may be able to configure your barcode scanner to compensate.</value>
-    <comment>High</comment>
+    <value>Isključite Caps Lock i ponovno testirajte.;;Ako morate držati Caps Lock uključenim prilikom skeniranja bar kodova, možda ćete moći konfigurirati vaš skener bar kodova da kompenzira.</value>
   </data>
   <data name="Advice_326" xml:space="preserve">
-    <value>Switch Caps Lock off and test again.</value>
-    <comment>High</comment>
+    <value>Isključite Caps Lock i ponovno testirajte.</value>
   </data>
   <data name="Advice_327" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Provjerite konfiguraciju vašeg skenera bar kodova, tipkovnice i računala te ih po potrebi rekonfigurirajte.;;Isključite Caps Lock i ponovno testirajte.</value>
   </data>
   <data name="Advice_328" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.;;Switch off Caps Lock and test again.</value>
-    <comment>High</comment>
+    <value>Provjerite konfiguraciju vašeg skenera bar kodova, tipkovnice i računala te ih po potrebi rekonfigurirajte.;;Isključite Caps Lock i ponovno testirajte.</value>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
-    <comment>High</comment>
+    <value>Provjerite konfiguraciju vašeg skenera, tipkovnice i računala te ih po potrebi rekonfigurirajte.</value>
   </data>
   <data name="Advice_331" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Provjerite konfiguraciju vašeg skenera bar kodova, tipkovnice i računala te ih po potrebi rekonfigurirajte.</value>
   </data>
   <data name="Advice_332" xml:space="preserve">
-    <value>Check your barcode scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
-    <comment>High</comment>
+    <value>Provjerite konfiguraciju vašeg skenera bar kodova, tipkovnice i računala te ih po potrebi rekonfigurirajte.</value>
   </data>
   <data name="Advice_335" xml:space="preserve">
-    <value>If possible, configure your computer to use a different keyboard layout.;;If necessary, configure your barcode scanner to emulate a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ako je moguće, konfigurirajte vaše računalo da koristi drugačiji raspored tipki na tipkovnici.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_390" xml:space="preserve">
-    <value>Try again.</value>
-    <comment>High</comment>
+    <value>Pokušajte ponovno.</value>
   </data>
   <data name="Condition_100" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Vaš sustav pouzdano čita većinu bar kodova.</value>
   </data>
   <data name="Condition_105" xml:space="preserve">
-    <value>Your system reads most barcodes reliably.</value>
-    <comment>Low</comment>
+    <value>Vaš sustav pouzdano čita većinu bar kodova.</value>
   </data>
   <data name="Condition_110" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Vaš sustav pouzdano čita GS1 bar kodove.</value>
   </data>
   <data name="Condition_115" xml:space="preserve">
-    <value>Your system reads GS1 barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Vaš sustav pouzdano čita GS1 bar kodove.</value>
   </data>
   <data name="Condition_200" xml:space="preserve">
-    <value>Your barcode scanner does not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova ne prenosi AIM identifikatore.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock je uključen, ali se ispravno prijavljuje veličina slova.</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
-    <value>Caps Lock is on, but the letter casing is preserved.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock je uključen, ali se čuva veličina slova.</value>
   </data>
   <data name="Condition_210" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>Medium</comment>
+    <value>Caps Lock je uključen.</value>
   </data>
   <data name="Condition_215" xml:space="preserve">
-    <value>Your barcode scanner does not transmit an end-of-line sequence.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova ne prenosi sekvencu završetka reda.</value>
   </data>
   <data name="Condition_220" xml:space="preserve">
-    <value>Your barcode scanner transmits a prefix.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova prenosi prefiks.</value>
   </data>
   <data name="Condition_225" xml:space="preserve">
-    <value>Your barcode scanner transmits a suffix.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova prenosi sufiks.</value>
   </data>
   <data name="Condition_230" xml:space="preserve">
-    <value>Your system may not read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Vaš sustav možda neće čitati AIM identifikatore.</value>
   </data>
   <data name="Condition_231" xml:space="preserve">
-    <value>Your system cannot read AIM identifier characters.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati AIM identifikatore.</value>
   </data>
   <data name="Condition_232" xml:space="preserve">
-    <value>Your barcode scanner may not transmit AIM identifiers.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova možda ne prenosi AIM identifikatore.</value>
   </data>
   <data name="Condition_235" xml:space="preserve">
-    <value>Your system cannot read the barcode type identifier.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati identifikator tipa bar koda.</value>
   </data>
   <data name="Condition_240" xml:space="preserve">
-    <value>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav možda neće moći pouzdano čitati bar kodove Format 05 ili Format 06.</value>
   </data>
   <data name="Condition_241" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove Format 05 ili Format 06.</value>
   </data>
   <data name="Condition_245" xml:space="preserve">
-    <value>Your system cannot read Format 05 or Format 06 barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove Format 05 ili Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
-    <comment>High</comment>
+    <value>Niste testirali kompatibilnost za kompatibilnost s ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
-    <value>Data input performance is slower than expected.</value>
-    <comment>High</comment>
+    <value>Performanse unosa podataka su sporije od očekivanih.</value>
   </data>
   <data name="Condition_256" xml:space="preserve">
-    <value>Data input performance is very poor.</value>
-    <comment>High</comment>
+    <value>Performanse unosa podataka su vrlo slabe.</value>
   </data>
   <data name="Condition_260" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže neinvarijantne znakove.</value>
   </data>
   <data name="Condition_261" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže neinvarijantne znakove.</value>
   </data>
   <data name="Condition_265" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže neinvarijantne znakove.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
-    <value>The test failed.</value>
-    <comment>Low</comment>
+    <value>Test nije uspio.</value>
   </data>
   <data name="Condition_301" xml:space="preserve">
-    <value>No data was reported for the barcode.</value>
-    <comment>Low</comment>
+    <value>Nije prijavljeni podaci za bar kod.</value>
   </data>
   <data name="Condition_303" xml:space="preserve">
-    <value>Some data was not reported when you scanned the barcode.</value>
-    <comment>Medium</comment>
+    <value>Nisu prijavljeni podaci prilikom skeniranja bar koda.</value>
   </data>
   <data name="Condition_304" xml:space="preserve">
-    <value>No data was reported for one or more barcodes.</value>
-    <comment>Low</comment>
+    <value>Nije prijavljeni podaci za jedan ili više bar kodova.</value>
   </data>
   <data name="Condition_305" xml:space="preserve">
-    <value>You scanned a barcode out of sequence.</value>
-    <comment>Medium</comment>
+    <value>Skenirali ste bar kod izvan redoslijeda.</value>
   </data>
   <data name="Condition_306" xml:space="preserve">
-    <value>Some data was not reported when you scanned one or more barcodes.</value>
-    <comment>Medium</comment>
+    <value>Nisu prijavljeni podaci prilikom skeniranja jednog ili više bar kodova.</value>
   </data>
   <data name="Condition_307" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova i računalo imaju različite rasporede tipki na tipkovnici.</value>
   </data>
   <data name="Condition_308" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova i računalo imaju različite rasporede tipki na tipkovnici.</value>
   </data>
   <data name="Condition_309" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Skriveni znakovi u bar kodovima nisu prijavljeni ispravno.</value>
   </data>
   <data name="Condition_310" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>Medium</comment>
+    <value>Skriveni znakovi u bar kodovima nisu prijavljeni ispravno.</value>
   </data>
   <data name="Condition_315" xml:space="preserve">
-    <value>Your barcode scanner and computer have different keyboard layouts.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova i računalo imaju različite rasporede tipki na tipkovnici.</value>
   </data>
   <data name="Condition_316" xml:space="preserve">
-    <value>Hidden characters in barcodes are not reported correctly.</value>
-    <comment>High</comment>
+    <value>Skriveni znakovi u bar kodovima nisu prijavljeni ispravno.</value>
   </data>
   <data name="Condition_320" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati znakove bar kodova.</value>
   </data>
   <data name="Condition_325" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock je uključen.</value>
   </data>
   <data name="Condition_326" xml:space="preserve">
-    <value>Caps Lock is switched on.</value>
-    <comment>High</comment>
+    <value>Caps Lock je uključen.</value>
   </data>
   <data name="Condition_327" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova može biti konfiguriran da pretvara znakove u velika slova.</value>
   </data>
   <data name="Condition_328" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova može biti konfiguriran da pretvara znakove u mala slova.</value>
   </data>
   <data name="Condition_330" xml:space="preserve">
-    <value>Your barcode scanner may be configured to simulate Caps Lock.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova može biti konfiguriran da simulira Caps Lock.</value>
   </data>
   <data name="Condition_331" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to upper case.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova može biti konfiguriran da pretvara znakove u velika slova.</value>
   </data>
   <data name="Condition_332" xml:space="preserve">
-    <value>Your barcode scanner may be configured to convert characters to lower case.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova može biti konfiguriran da pretvara znakove u mala slova.</value>
   </data>
   <data name="Condition_335" xml:space="preserve">
-    <value>Your keyboard layout supports {0} characters and cannot read barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Vaš raspored tipki na tipkovnici podržava {0} znakova i ne može pouzdano čitati bar kodove.</value>
   </data>
   <data name="Condition_390" xml:space="preserve">
-    <value>The test failed unexpectedly.</value>
-    <comment>High</comment>
+    <value>Test je neočekivano propao.</value>
   </data>
   <data name="Description_105" xml:space="preserve">
-    <value>However, you did not test compatibility with ISO/IEC 15434. Your system may not be able to read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Low</comment>
+    <value>Međutim, niste testirali kompatibilnost s ISO/IEC 15434. Vaš sustav možda neće moći pouzdano čitati bar kodove ako sadrže podatke formatirane prema standardu ISO/IEC 15434.</value>
   </data>
   <data name="Description_110" xml:space="preserve">
-    <value>However, your verification software may not read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Međutim, vaš softver za provjeru možda neće moći pouzdano čitati bar kodove ako sadrže podatke formatirane prema standardu ISO/IEC 15434.</value>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
-    <comment>Medium</comment>
+    <value>Međutim, ne može pouzdano čitati bar kodove ako sadrže podatke formatirane prema standardu ISO/IEC 15434.</value>
   </data>
   <data name="Description_200" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova vjerojatno je konfiguriran da automatski kompenzira Caps Lock.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
-    <comment>Medium</comment>
+    <value>Vaša Caps Lock tipka može biti onemogućena ili preusmjerena.</value>
   </data>
   <data name="Description_210" xml:space="preserve">
-    <value>However, your computer keyboard layout is for a script that does not support upper- and lower-case letters.</value>
-    <comment>Medium</comment>
+    <value>Međutim, raspored tipki vaše tipkovnice računala je za skriptu koja ne podržava velika i mala slova.</value>
   </data>
   <data name="Description_215" xml:space="preserve">
-    <value>This may slow your scanning performance. However, your software may not support end-of-line sequences.</value>
-    <comment>Medium</comment>
+    <value>To može usporiti vaše skeniranje. Međutim, vaš softver možda ne podržava sekvence završetka reda.</value>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
-    <comment>Medium</comment>
+    <value>Vaš softver možda ne prepoznaje prefiks.</value>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
-    <comment>Medium</comment>
+    <value>Vaš softver možda ne prepoznaje sufiks.</value>
   </data>
   <data name="Description_230" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts. However, the software must implement character mapping to read AIM identifiers reliably.</value>
-    <comment>High</comment>
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja. Međutim, softver mora implementirati mapiranje znakova za pouzdano čitanje identifikatora AIM.</value>
   </data>
   <data name="Description_231" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
   <data name="Description_232" xml:space="preserve">
-    <value>Your barcode scanner may transmit AIM identifiers, but this is not certain.  AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>Medium</comment>
+    <value>Vaš skener bar kodova možda prenosi AIM identifikatore, ali to nije sigurno. AIM identifikatori predstavljaju tip bar koda. Vaš softver ih može koristiti da eliminira nepotrebne upozorenja.</value>
   </data>
   <data name="Description_235" xml:space="preserve">
-    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
-    <comment>High</comment>
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
   <data name="Description_240" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably if they contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Vaš softver mora implementirati preslikavanje znakova za pouzdano čitanje bar kodova ako sadrže neinvarijantne znakove.</value>
   </data>
   <data name="Description_245" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Neki softveri mogu kompenzirati ovo analiziranjem kodova tipki umjesto znakova.</value>
   </data>
   <data name="Description_255" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ovo bi mogao biti privremeni ili povremeni problem. Vaše računalo može biti zauzeto, pokreće se provjera virusa ili usluga prediktivnog teksta. Vaš skener bar kodova može biti konfiguriran kao numerička tipkovnica.</value>
   </data>
   <data name="Description_256" xml:space="preserve">
-    <value>This could be a temporary or intermittent problem. Your computer may be busy, running a virus checker or a predictive text service. Your barcode scanner may be configured as a numeric keypad.</value>
-    <comment>High</comment>
+    <value>Ovo bi mogao biti privremeni ili povremeni problem. Vaše računalo može biti zauzeto, pokreće se provjera virusa ili usluga prediktivnog teksta. Vaš skener bar kodova može biti konfiguriran kao numerička tipkovnica.</value>
   </data>
   <data name="Description_260" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati neinvarijantne znakove. Vaš softver mora implementirati preslikavanje znakova za pouzdano čitanje ovih bar kodova.</value>
   </data>
   <data name="Description_261" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati neinvarijantne znakove.</value>
   </data>
   <data name="Description_265" xml:space="preserve">
-    <value>Some barcodes may contain non-invariant characters.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati neinvarijantne znakove.</value>
   </data>
   <data name="Description_270" xml:space="preserve">
-    <value>Some barcodes may contain EDI data. Your software must implement character mapping to read these barcodes reliably.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati EDI podatke. Vaš softver mora implementirati preslikavanje znakova za pouzdano čitanje ovih bar kodova.</value>
   </data>
   <data name="Description_271" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati EDI podatke.</value>
   </data>
   <data name="Description_275" xml:space="preserve">
-    <value>Some barcodes may contain EDI data.</value>
-    <comment>High</comment>
+    <value>Neki bar kodovi mogu sadržavati EDI podatke.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Low</comment>
+    <value>Možda ste skenirali krivi bar kod ili unijeli netočne podatke koristeći tipkovnicu. Vaš skener bar kodova ili sustav može biti spor, ili se može pojaviti neki neočekivani ili povremeni problem.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts may not correspond. You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Raspored tipki na skeneru bar kodova i računalnoj tipkovnici možda se ne podudaraju. Možda ste skenirali krivi bar kod ili unijeli netočne podatke koristeći tipkovnicu. Vaš skener bar kodova ili sustav može biti spor, ili se može pojaviti neki neočekivani ili povremeni problem.</value>
   </data>
   <data name="Description_306" xml:space="preserve">
-    <value>You may have scanned a wrong barcode or entered incorrect data using the keyboard. Your barcode scanner or system may be slow, or some unexpected or intermittent issue may have occurred.</value>
-    <comment>Medium</comment>
+    <value>Možda ste skenirali krivi bar kod ili unijeli netočne podatke koristeći tipkovnicu. Vaš skener bar kodova ili sustav može biti spor, ili se može pojaviti neki neočekivani ili povremeni problem.</value>
   </data>
   <data name="Description_307" xml:space="preserve">
-    <value>Your software must implement character mapping to read barcodes reliably.</value>
-    <comment>Medium</comment>
+    <value>Vaš softver mora implementirati preslikavanje znakova za pouzdano čitanje bar kodova.</value>
   </data>
   <data name="Description_309" xml:space="preserve">
-    <value>Your software may be able to compensate.</value>
-    <comment>Medium</comment>
+    <value>Vaš softver može kompenzirati.</value>
   </data>
   <data name="Description_315" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Vaš softver može kompenzirati. Međutim, vaš sustav ne može ispravno čitati znakove za bar kodove koji sadrže podatke Format 05 ili Format 06. Neki softveri mogu kompenzirati za to analiziranjem kodova tipki umjesto znakova.</value>
   </data>
   <data name="Description_316" xml:space="preserve">
-    <value>Your software may be able to compensate. However, your system cannot read barcode characters correctly for barcodes that contain Format 05 or Format 06 data. Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Vaš softver može kompenzirati. Međutim, vaš sustav ne može ispravno čitati znakove bar kodova za bar kodove koji sadrže podatke Format 05 ili Format 06. Neki softveri mogu kompenzirati za to analiziranjem kodova tipki umjesto znakova.</value>
   </data>
   <data name="Description_320" xml:space="preserve">
-    <value>Some software may be able to compensate for this by analysing key codes rather than characters.</value>
-    <comment>High</comment>
+    <value>Neki softveri mogu kompenzirati ovo analiziranjem kodova tipki umjesto znakova.</value>
   </data>
   <data name="Description_326" xml:space="preserve">
-    <value>When Caps Lock is on, the default behaviour is to report all characters in upper-case.</value>
-    <comment>High</comment>
+    <value>Kada je Caps Lock uključen, zadano ponašanje je prijaviti sve znakove velikim slovima.</value>
   </data>
   <data name="Description_327" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati znakove bar kodova.</value>
   </data>
   <data name="Description_328" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati znakove bar kodova.</value>
   </data>
   <data name="Description_331" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati znakove bar kodova.</value>
   </data>
   <data name="Description_332" xml:space="preserve">
-    <value>Your system cannot read barcode characters reliably.</value>
-    <comment>High</comment>
+    <value>Vaš sustav ne može pouzdano čitati znakove bar kodova.</value>
   </data>
   <data name="Description_390" xml:space="preserve">
-    <value>Your barcode scanner or system may be slow or it may be affected by anti-virus software or some other unexpected or intermittent issue.</value>
-    <comment>High</comment>
+    <value>Vaš skener bar kodova ili sustav može biti spor ili može biti pod utjecajem antivirusnog softvera ili nekog drugog neočekivanog ili povremenog problema.</value>
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
-    <value>Error while resolving keyboard scripts: {0}</value>
+    <value>Pogreška prilikom razrješavanja skripti tipkovnice: {0}</value>
   </data>
 </root>

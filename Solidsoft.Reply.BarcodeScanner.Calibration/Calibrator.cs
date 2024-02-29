@@ -23,6 +23,7 @@
 ////#define Diagnostics
 
 using System.Diagnostics;
+using SixLabors.ImageSharp.PixelFormats;
 
 #pragma warning disable S1751
 #pragma warning disable S3626
@@ -393,6 +394,11 @@ public class Calibrator {
     private Stream? _tokenBitmapStream;
 
     /// <summary>
+    ///   The SVG content of the image of the current calibration barcode.
+    /// </summary>
+    private string? _tokenSvg;
+
+    /// <summary>
     ///   A count of the estimated number of barcodes that still need to be scanned during this session.
     /// </summary>
     private int _tokenRemaining;
@@ -757,7 +763,7 @@ public class Calibrator {
     /// </remarks>
     public IList<Stream> BaselineBarcodes(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
-        // non-invariant printable characters and additional ASCII control characters.  It is very important that
+        // non-invariant printable characters and additional ASCII control characters. It is very important that
         // the final four characters are a segment delimiter because the scanner may add characters beyond this
         // such as CR and LF characters and/or a suffix.
         var barcodeDataEx = _baselineBarcodeData
@@ -782,6 +788,47 @@ public class Calibrator {
                 select barcode.CreateBarcode(t));
 
             return barcodeSegmentStreams;
+        }
+    }
+
+    /// <summary>
+    ///   Get the baseline calibration barcode(s) in SVG format for the current calibration.
+    /// </summary>
+    /// <param name="multiplier">The size multiplier.</param>
+    /// <param name="size">The size of data matrix required.</param>
+    /// <returns>
+    ///   A list of baseline calibration barcodes for the current calibration.
+    /// </returns>
+    /// <remarks>
+    ///   If multiple strings are returned, each string is a barcode containing a segment of the
+    ///   calibration data. Multiple strings are returned when smaller barcode sizes are required.
+    /// </remarks>
+    public IList<string> BaselineBarcodesSvg(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
+        // Return the initial baseline barcode containing segments of character sequences for invariant characters,
+        // non-invariant printable characters and additional ASCII control characters. It is very important that
+        // the final four characters are a segment delimiter because the scanner may add characters beyond this
+        // such as CR and LF characters and/or a suffix.
+        var barcodeDataEx = _baselineBarcodeData
+                          + (AssessFormatnnSupport
+                                 ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
+                                 : SegmentDelimiter);
+
+        return SegmentStrings(new CalibrationBarcodeData(barcodeDataEx, size.MaxCapacity()));
+
+        IList<string> SegmentStrings(CalibrationBarcodeData barcodeSegments) {
+            var segments = barcodeSegments.Segments.ToList();
+            var barcodeSegmentStrings = new List<string>(segments.Count);
+
+            barcodeSegmentStrings.AddRange(
+                from t in segments
+                let barcode = new DataMatrixBarcode {
+                    ForegroundColor = Color.Black,
+                    BackgroundColor = Color.White,
+                    Multiplier = multiplier
+                }
+                select barcode.CreateBarcodeSvg(t));
+
+            return barcodeSegmentStrings;
         }
     }
 
@@ -992,6 +1039,7 @@ public class Calibrator {
         _tokenDataKey = @out.Data?.Key;
         _tokenDataValue = @out.Data?.Value ?? char.MinValue;
         _tokenBitmapStream = @out.BitmapStream;
+        _tokenSvg = @out.Svg;
         _tokenRemaining = @out.Remaining < 0 ? 0 : @out.Remaining;
         _tokenSize = @out.Size;
         _tokenDataSmallBarcodeSequenceIndex = @out.Data?.SmallBarcodeSequenceIndex ?? 0;
@@ -1185,24 +1233,46 @@ public class Calibrator {
     /// </summary>
     /// <param name="multiplier">The size multiplier.</param>
     /// <param name="size">The size of data matrix required.</param>
+    /// <param name="backgroundColour">Background colour (hex - use #nnnnnn format).</param>
+    /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
     public IEnumerable<CalibrationToken> CalibrationTokens(
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) {
-        return CalibrationTokens(true, multiplier, size);
+        DataMatrixSize size = DataMatrixSize.Automatic,
+        string backgroundColour = "#FFFFFF",
+        string foregroundColour = "#000000") {
+        return CalibrationTokens(
+            true,
+            true, 
+            multiplier, 
+            size);
     }
 
     /// <summary>
     ///   A collection of calibration tokens.
     /// </summary>
     /// <param name="generateImages">Indicates whether the library should generate barcode images.</param>
+    /// <param name="generateSvg">Indicates whether the library should generate SVG content.</param>
+    /// <param name="multiplier">The size multiplier.</param>
     /// <param name="size">The size of any data matrix generated by other means.</param>
+    /// <param name="backgroundColour">Background colour (hex - use #nnnnnn format).</param>
+    /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
     // ReSharper disable once UnusedMember.Global
     public IEnumerable<CalibrationToken> CalibrationTokens(
         bool generateImages,
-        DataMatrixSize size = DataMatrixSize.Automatic) {
-        return CalibrationTokens(generateImages, 1F, size);
+        bool generateSvg,
+        float multiplier = 1F,
+        DataMatrixSize size = DataMatrixSize.Automatic,
+        string backgroundColour = "#FFFFFF",
+        string foregroundColour = "#000000") {
+        return GetCalibrationTokens(
+            generateImages,
+            generateSvg,
+            multiplier,
+            size,
+            backgroundColour,
+            foregroundColour);
     }
 
     /// <summary>
@@ -1247,6 +1317,52 @@ public class Calibrator {
                     ImageFormat = SixLabors.ImageSharp.Formats.Png.PngFormat.Instance
                 }
                 select barcode.CreateBarcode(s));
+
+            return barcodeSegmentStreams;
+        }
+    }
+
+    /// <summary>
+    ///   Get a dictionary of supplementary calibration barcodes for the current calibration.
+    /// </summary>
+    /// <param name="multiplier">The size multiplier.</param>
+    /// <param name="size">The size of data matrix required.</param>
+    /// <returns>
+    ///   A dictionary of calibration barcodes for the current calibration.
+    /// </returns>
+    /// <remarks>
+    ///   The values represent additional barcodes used to calibrate for dead keys on the computer
+    ///   keyboard. The dictionary key for these additional barcodes is the dead key character.
+    ///   Each value in the dictionary is a list of one or more streams. If multiple streams are
+    ///   returned, each stream is a barcode containing a segment of the calibration data.
+    ///   Multiple streams are returned when smaller barcode sizes are required. The full
+    ///   list of barcode streams is only available once the baseline barcode has been scanned and
+    ///   the data has been processed.
+    /// </remarks>
+    public IDictionary<char, IList<string>> SupplementalBarcodesSvg(
+        float multiplier = 1F,
+        DataMatrixSize size = DataMatrixSize.Automatic) {
+        // Return the supplemental calibration barcodes containing character combinations for relevant dead keys.
+        return (
+           from k in _tokenExtendedDataDeadKeyCharacterMap.Keys
+           select k[1])
+           .ToDictionary(
+                value => value,
+                value => SegmentStreamsSvg(
+                    new CalibrationBarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
+
+        IList<string> SegmentStreamsSvg(CalibrationBarcodeData barcodeSegments) {
+            var segments = barcodeSegments.Segments.ToList();
+            var barcodeSegmentStreams = new List<string>(segments.Count);
+
+            barcodeSegmentStreams.AddRange(
+                from s in segments
+                let barcode = new DataMatrixBarcode {
+                    ForegroundColor = Color.Black,
+                    BackgroundColor = Color.White,
+                    Multiplier = multiplier
+                }
+                select barcode.CreateBarcodeSvg(s));
 
             return barcodeSegmentStreams;
         }
@@ -1550,20 +1666,47 @@ public class Calibrator {
     ///   A collection of calibration tokens.
     /// </summary>
     /// <param name="generateImages">Indicates whether the library should generate barcode images.</param>
+    /// <param name="generateSvg">Indicates whether the library should generate SVG content.</param>
     /// <param name="multiplier">The size multiplier.</param>
     /// <param name="size">The size of data matrix required.</param>
+    /// <param name="backgroundColour">Background colour (hex - use #nnnnnn format).</param>
+    /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
-    private IEnumerable<CalibrationToken> CalibrationTokens(
+    private IEnumerable<CalibrationToken> GetCalibrationTokens(
         bool generateImages,
+        bool generateSvg,
         float multiplier,
-        DataMatrixSize size
-    ) {
-        using var barcode = generateImages ? new DataMatrixBarcode {
-            ForegroundColor = Color.Black,
-            BackgroundColor = Color.White,
+        DataMatrixSize size,
+        string backgroundColour,
+        string foregroundColour) {
+        using var barcode = generateImages || generateSvg ? new DataMatrixBarcode {
+            ForegroundColor = GetColour(foregroundColour),
+            BackgroundColor = GetColour(backgroundColour),
             Multiplier = multiplier,
             ImageFormat = SixLabors.ImageSharp.Formats.Png.PngFormat.Instance
         } : null;
+
+        Color GetColour(string hexColor)
+        {
+            if (hexColor.Length is < 6 or > 7) {
+                return Color.Black;
+            }
+            
+            // Remove #
+#if NET6_0_OR_GREATER
+            if (hexColor.First() == '#') hexColor = hexColor[1..];
+            return Color.FromRgb(
+                Convert.ToByte(hexColor[..2], 16),
+                Convert.ToByte(hexColor[2..4], 16),
+                Convert.ToByte(hexColor[4..], 16));
+#else
+            if (hexColor.First() == '#') hexColor = hexColor.Substring(1);
+            return Color.FromRgb(
+                Convert.ToByte(hexColor.Substring(0, 2), 16),
+                Convert.ToByte(hexColor.Substring(2, 2), 16),
+                Convert.ToByte(hexColor.Substring(4, 2), 16));
+#endif
+        }
 
         var maximumCharacters = size.MaxCapacity();
         CalibrationToken token;
@@ -1590,7 +1733,8 @@ public class Calibrator {
                     _tokenDataPrefix,
                     _tokenDataSuffix,
                     _tokenDataReportedCharacters,
-                    barcode?.CreateBarcode(barcodeDataSegment),
+                    generateImages ? barcode?.CreateBarcode(barcodeDataSegment) : null,
+                    generateSvg ? barcode?.CreateBarcodeSvg(barcodeDataSegment) : null,
                     --_tokenRemaining,
                     _tokenSize,
                     _tokenKeyboardMatch,
@@ -1627,7 +1771,8 @@ public class Calibrator {
                     value,
                     --_tokenRemaining,
                     _tokenDataCalibrationsRemaining,
-                    bitmapStream: barcode?.CreateBarcode(_tokenDataBarcodeData),
+                    bitmapStream: generateImages ? barcode?.CreateBarcode(_tokenDataBarcodeData) : null,
+                    svg: generateSvg ? barcode?.CreateBarcodeSvg(_tokenDataBarcodeData) : null,
                     prefix: _tokenDataPrefix,
                     suffix: _tokenDataSuffix,
                     size: _tokenSize);
@@ -1659,7 +1804,8 @@ public class Calibrator {
                         _tokenDataPrefix,
                         _tokenDataSuffix,
                         _tokenDataReportedCharacters,
-                        barcode?.CreateBarcode(barcodeDataSegment),
+                        generateImages ? barcode?.CreateBarcode(barcodeDataSegment) : null,
+                        generateSvg ? barcode?.CreateBarcodeSvg(barcodeDataSegment) : null,
                         --_tokenRemaining,
                         _tokenSize,
                         _tokenKeyboardMatch,
@@ -1780,6 +1926,7 @@ public class Calibrator {
                 _tokenDataSuffix,
                 _tokenDataReportedCharacters,
                 barcode?.CreateBarcode(_barcodeDataSegments?.Segments.FirstOrDefault() ?? string.Empty),
+                barcode?.CreateBarcodeSvg(_barcodeDataSegments?.Segments.FirstOrDefault() ?? string.Empty),
                 --_tokenRemaining,
                 _tokenSize,
                 _tokenKeyboardMatch,
@@ -1824,7 +1971,8 @@ public class Calibrator {
                 _tokenDataPrefix,
                 _tokenDataSuffix,
                 _tokenDataReportedCharacters,
-                barcode?.CreateBarcode(_barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex++)),
+                barcode?.CreateBarcode(_barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex)),
+                barcode?.CreateBarcodeSvg(_barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex++)),
                 --_tokenRemaining,
                 _tokenSize,
                 _tokenKeyboardMatch,
@@ -1883,6 +2031,8 @@ public class Calibrator {
             }
 
             _tokenBitmapStream = barcode?.CreateBarcode(
+                _barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex));
+            _tokenSvg = barcode?.CreateBarcodeSvg(
                 _barcodeDataSegments.Segments.ElementAt(_tokenDataSmallBarcodeSequenceIndex++));
             --_tokenRemaining;
 
@@ -5228,6 +5378,7 @@ public class Calibrator {
     private CalibrationToken DoInitializeFromTokenData(CalibrationToken token) {
         // Store token state
         _tokenBitmapStream = token.BitmapStream;
+        _tokenSvg = token.Svg;
         _tokenRemaining = token.Remaining;
         _tokenSize = token.Size;
         _tokenKeyboardMatch = token.KeyboardMatch;
@@ -5351,6 +5502,7 @@ public class Calibrator {
             _tokenDataSuffix,
             _tokenDataReportedCharacters,
             _tokenBitmapStream,
+            _tokenSvg,
             _tokenRemaining,
             _tokenSize,
             _tokenKeyboardMatch,

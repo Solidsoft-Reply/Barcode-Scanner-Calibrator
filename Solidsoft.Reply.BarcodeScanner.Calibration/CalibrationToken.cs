@@ -88,6 +88,9 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="bitmapStream">
     ///   The stream containing the bitmap image of the current calibration barcode.
     /// </param>
+    /// <param name="svg">
+    ///   The SVG content of the image of the current calibration barcode.
+    /// </param>
     /// <param name="remaining">
     ///   A count of the estimated number of barcodes that will be generated during this session.
     /// </param>
@@ -119,6 +122,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         string? suffix = "",
         string? reportedCharacters = "",
         Stream? bitmapStream = null,
+        string? svg = null,
         int remaining = -1,
         DataMatrixSize size = DataMatrixSize.Automatic,
         bool? keyboardMatch = null,
@@ -139,6 +143,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             suffix ?? string.Empty,
             reportedCharacters ?? string.Empty);
         BitmapStream = bitmapStream;
+        Svg = svg;
         Remaining = remaining;
         Size = size;
         KeyboardMatch = keyboardMatch;
@@ -187,6 +192,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         BitmapStream = oldToken.BitmapStream is null
                                 ? null
                                 : new MemoryStream(((MemoryStream)oldToken.BitmapStream).ToArray()) { Position = 0 };
+
+        Svg = oldToken.Svg;
 
         Remaining = oldToken.Remaining;
         Size = oldToken.Size;
@@ -427,6 +434,12 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     public Stream? BitmapStream { get; }
 
     /// <summary>
+    ///   Gets the SVG content of the image of the current calibration barcode.
+    /// </summary>
+    [JsonIgnore]
+    public string? Svg { get; }
+
+    /// <summary>
     ///   Gets the system capabilities and advice items.
     /// </summary>
     [JsonProperty("systemCapabilities", Order = 3)]
@@ -516,6 +529,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             calibrationToken.Data?.Suffix ?? string.Empty,
             calibrationToken.Data?.ReportedCharacters ?? string.Empty,
             calibrationToken.BitmapStream,
+            calibrationToken.Svg,
             calibrationToken.Remaining,
             calibrationToken.Size,
             calibrationToken.KeyboardMatch,
@@ -748,6 +762,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         Remaining.Equals(other.Remaining) &&
         Size.Equals(other.Size) &&
         Equals(BitmapStream, other.BitmapStream) &&
+        Equals(Svg, other.Svg) &&
         Equals(SystemCapabilities, other.SystemCapabilities) &&
         Equals(Data, other.Data) &&
         Equals(CalibrationData, other.CalibrationData) &&
@@ -771,6 +786,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             Remaining,
             Size,
             BitmapStream,
+            Svg,
             SystemCapabilities,
             Data,
             CalibrationData,

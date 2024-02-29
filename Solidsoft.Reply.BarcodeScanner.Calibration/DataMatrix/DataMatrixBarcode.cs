@@ -50,6 +50,7 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using ZXing;
 using ZXing.Datamatrix;
+using System.Xml.Linq;
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// <summary>
@@ -105,20 +106,30 @@ public class DataMatrixBarcode : IDisposable
     // ReSharper disable once PropertyCanBeMadeInitOnly.Global
     public IImageFormat ImageFormat { get; set; } = PngFormat.Instance;
 
+    /// <summary>
+    ///   Gets or sets the size multiplier factor.
+    /// </summary>
     public float Multiplier
     {
         // ReSharper disable once UnusedMember.Global
-        get => _multiplier;
+        get
+        {
+            lock (CreateBarcodeLockObject) {
+                return _multiplier;
+            }
+        }
+
         set
         {
-            value = value switch
-            {
+            value = value switch {
                 < 0.8f => 0.8f,
                 > 20.0f => 20,
                 _ => (float)Math.Round(value, 2)
             };
 
-            _multiplier = value;
+            lock (CreateBarcodeLockObject) {
+                _multiplier = value;
+            }
         }
     }
 
@@ -141,7 +152,7 @@ public class DataMatrixBarcode : IDisposable
     /// </summary>
     /// <param name="barcodeData">The barcode data. Encoded using Zint rules.</param>
     /// <param name="imageFormat">The image format.</param>
-    /// <returns>A stream containing PNG content.</returns>
+    /// <returns>A stream containing the image content.</returns>
     // ReSharper disable once UnusedMember.Global
     public Stream CreateBarcode(string barcodeData, IImageFormat imageFormat)
     {
@@ -151,7 +162,7 @@ public class DataMatrixBarcode : IDisposable
     /// <summary>
     ///   Creates a barcode and returns it as a readonly stream.
     /// </summary>
-    /// <param name="barcodeData">The barcode data. Encoded using Zint rules.</param>
+    /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
     /// <param name="backgroundColor">The background colour of the barcode</param>
     /// <param name="foregroundColor">The foreground colour of the barcode</param>
     /// <returns>A stream containing PNG content.</returns>
@@ -164,11 +175,11 @@ public class DataMatrixBarcode : IDisposable
     /// <summary>
     ///   Creates a barcode and returns it as a readonly stream.
     /// </summary>
-    /// <param name="barcodeData">The barcode data. Encoded using Zint rules.</param>
+    /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
     /// <param name="backgroundColor">The background colour of the barcode.</param>
     /// <param name="foregroundColor">The foreground colour of the barcode.</param>
     /// <param name="imageFormat">The image format.</param>
-    /// <returns>A stream containing PNG content.</returns>
+    /// <returns>A stream containing the image content.</returns>
     // ReSharper disable once MemberCanBePrivate.Global
     public Stream CreateBarcode(
         string barcodeData, 
@@ -260,7 +271,102 @@ public class DataMatrixBarcode : IDisposable
     }
 
     /// <summary>
-    ///   Public implementation of Dispose method for the ZintNetLib object.
+    ///   Creates a barcode and returns it as SVG content.
+    /// </summary>
+    /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
+    /// <returns>A stream containing SVG content.</returns>
+    [SuppressMessage(
+        "StyleCop.CSharp.DocumentationRules",
+        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
+        Justification = "Reviewed. Suppression is OK here.")]
+    public string CreateBarcodeSvg(string barcodeData) {
+        return CreateBarcodeSvg(barcodeData, BackgroundColor, ForegroundColor);
+    }
+
+    /// <summary>
+    ///   Creates a barcode and returns it as SVG content.
+    /// </summary>
+    /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
+    /// <param name="backgroundColor">The background colour of the barcode.</param>
+    /// <param name="foregroundColor">The foreground colour of the barcode.</param>
+    /// <returns>A stream containing SVG content.</returns>
+    // ReSharper disable once MemberCanBePrivate.Global
+    public string CreateBarcodeSvg(
+        string barcodeData,
+        Color backgroundColor,
+        Color foregroundColor) {
+        // Creating a barcode is not thread-safe, so this method is synchronized.
+        lock (CreateBarcodeLockObject)
+        {
+            if (string.IsNullOrEmpty(barcodeData)) return string.Empty;
+
+            var (modulesX, modulesY) = CalculateDataMatrixModuleSize(barcodeData);
+
+            // Workaround for issues with ZXing
+            if (modulesY != modulesX) {
+                modulesX = modulesY = Convert.ToInt32((modulesY > modulesX ? modulesY : modulesX) * 0.85);
+            }
+
+            // Create a Data Matrix barcode writer
+            var barcodeWriter = new BarcodeWriterSvg {
+                Format = BarcodeFormat.DATA_MATRIX,
+                Options = new DatamatrixEncodingOptions {
+                    Width = (modulesX + 2) * (int)_multiplier,
+                    Height = (modulesY + 2) * (int)_multiplier,
+                    Margin = 1,
+                    SymbolShape = ZXing.Datamatrix.Encoder.SymbolShapeHint.FORCE_SQUARE,
+                }
+            };
+
+            var svgContent = barcodeWriter.Write(barcodeData).Content;
+
+            var backgroundColourHex = backgroundColor.ToHex();
+            var foregroundColorHex = foregroundColor.ToHex();
+
+            if (backgroundColourHex != "#FFFFFF") {
+                var xDoc = XDocument.Parse(svgContent);
+                xDoc.Root?.Add(new XAttribute("preserveAspectRatio", "xMidYMid meet"));
+
+                if (foregroundColorHex != "#000000" && xDoc.Root is not null) {
+                    if (xDoc.Root.Attribute("fill") is null) {
+                        xDoc.Root.Add(new XAttribute("fill", $"#{foregroundColorHex}"));
+                    }
+                    else {
+                        xDoc.Root.Attribute("fill")!.Value = $"#{foregroundColorHex}";
+                    }
+                }
+
+                if (xDoc.Root is null) return xDoc.ToString();
+
+                if (xDoc.Root.Attribute("style") is null) {
+                    xDoc.Root.Add(new XAttribute("style", $"background-color:#{backgroundColourHex};"));
+                }
+                else {
+                    xDoc.Root.Attribute("style")!.Value = $"background-color:#{backgroundColourHex};";
+                }
+
+                return xDoc.Root.ToString(SaveOptions.DisableFormatting);
+            }
+
+            if (foregroundColorHex == "#000000") return svgContent;
+            var xDocForegroundColor = XDocument.Parse(svgContent);
+            xDocForegroundColor.Root?.Add(new XAttribute("preserveAspectRatio", "xMidYMid meet"));
+
+            if (xDocForegroundColor.Root is null) return xDocForegroundColor.ToString();
+
+            if (xDocForegroundColor.Root.Attribute("fill") is null) {
+                xDocForegroundColor.Root.Add(new XAttribute("fill", $"#{foregroundColorHex}"));
+            }
+            else {
+                xDocForegroundColor.Root.Attribute("fill")!.Value = $"#{foregroundColorHex}";
+            }
+
+            return xDocForegroundColor.ToString();
+        }
+    }
+
+    /// <summary>
+    ///   Public implementation of Dispose method for the <see cref="DataMatrixBarcode"/> class.
     /// </summary>
     [SuppressMessage(
         "StyleCop.CSharp.DocumentationRules",
@@ -273,7 +379,7 @@ public class DataMatrixBarcode : IDisposable
     }
 
     /// <summary>
-    ///   Protected implementation of Dispose method for the ZintNetLib object.
+    ///   Protected implementation of Dispose method for the <see cref="DataMatrixBarcode"/> class.
     /// </summary>
     /// <param name="disposing">Indicates whether the object is being disposed explicitly.</param>
     [SuppressMessage(
