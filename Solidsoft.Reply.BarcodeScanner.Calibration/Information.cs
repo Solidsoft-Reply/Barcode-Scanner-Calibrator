@@ -32,17 +32,17 @@ using Newtonsoft.Json.Serialization;
 /// <summary>
 ///   Information provided during keyboard calibration.
 /// </summary>
-public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
+public sealed class Information : IEquatable<Information>
 {
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationInformation" /> class.
+    ///   Initializes a new instance of the <see cref="Information" /> class.
     /// </summary>
     /// <param name="level">The calibration information level.</param>
     /// <param name="type">The additional advisory information for the calibration information.</param>
     /// <param name="description">The calibration information.</param>
-    public CalibrationInformation(
-        CalibrationInformationLevel level,
-        CalibrationInformationType type,
+    public Information(
+        InformationLevel level,
+        InformationType type,
         string? description)
     {
         (Level, InformationType, Description) 
@@ -53,13 +53,13 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
     ///   Gets or sets the calibration information level.
     /// </summary>
     [JsonProperty("level", Order = 0)]
-    public CalibrationInformationLevel Level { get; private set; }
+    public InformationLevel Level { get; private set; }
 
     /// <summary>
     ///   Gets or sets the calibration information type.
     /// </summary>
     [JsonProperty("informationType", Order = 1)]
-    public CalibrationInformationType InformationType { get; private set; }
+    public InformationType InformationType { get; private set; }
 
     /// <summary>
     ///   Gets or sets the calibration information.
@@ -80,15 +80,15 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
     /// </summary>
     /// <param name="json">A JSON string representing the serialized data.</param>
     // ReSharper disable once UnusedMember.Global
-    public static CalibrationInformation? FromJson(string json)
+    public static Information? FromJson(string json)
     {
         if (string.IsNullOrWhiteSpace(json)) return null;
 
-        var adviceItemToken = JsonConvert.DeserializeObject<CalibrationInformation>(json);
+        var adviceItemToken = JsonConvert.DeserializeObject<Information>(json);
 
         if (adviceItemToken is null) return null;
 
-        return new CalibrationInformation(
+        return new Information(
             adviceItemToken.Level,
             adviceItemToken.InformationType,
             adviceItemToken.Description);
@@ -97,27 +97,27 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
     /// <summary>
     ///   Override for the equality operator.
     /// </summary>
-    /// <param name="calibrationInformation1">The first calibration information.</param>
-    /// <param name="calibrationInformation2">The second calibration information.</param>
+    /// <param name="information1">The first calibration information.</param>
+    /// <param name="information2">The second calibration information.</param>
     /// <returns>True, if the calibration information is equal; otherwise false.</returns>
-    public static bool operator ==(CalibrationInformation? calibrationInformation1, CalibrationInformation calibrationInformation2) =>
-        calibrationInformation1?.Equals(calibrationInformation2) ?? false;
+    public static bool operator ==(Information? information1, Information information2) =>
+        information1?.Equals(information2) ?? false;
 
     /// <summary>
     ///   Override for the inequality operator.
     /// </summary>
-    /// <param name="calibrationInformation1">The first calibration information.</param>
-    /// <param name="calibrationInformation2">The second calibration information.</param>
+    /// <param name="information1">The first calibration information.</param>
+    /// <param name="information2">The second calibration information.</param>
     /// <returns>True, if the calibration information is not equal; otherwise false.</returns>
-    public static bool operator !=(CalibrationInformation? calibrationInformation1, CalibrationInformation calibrationInformation2) =>
-        !calibrationInformation1?.Equals(calibrationInformation2) ?? false;
+    public static bool operator !=(Information? information1, Information information2) =>
+        !information1?.Equals(information2) ?? false;
 
     /// <summary>
     ///   Tests the equality of this calibration information with another.
     /// </summary>
     /// <param name="other">The calibration information to be tested.</param>
     /// <returns>True, if the calibration information is not equal; otherwise false.</returns>
-    public bool Equals(CalibrationInformation? other) =>
+    public bool Equals(Information? other) =>
         other is not null &&
         (ReferenceEquals(this, other) || (Level.Equals(other.Level) &&
                                           InformationType.Equals(other.InformationType)));
@@ -129,7 +129,7 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
     /// <returns>True, if the calibration information is not equal; otherwise false.</returns>
     public override bool Equals(object? obj) =>
         obj is not null && 
-        (ReferenceEquals(this, obj) || (obj is CalibrationInformation token && Equals(token)));
+        (ReferenceEquals(this, obj) || (obj is Information token && Equals(token)));
 
     /// <summary>
     ///   Returns a hash value for the current calibration information.
@@ -165,7 +165,7 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
@@ -185,7 +185,7 @@ public sealed class CalibrationInformation : IEquatable<CalibrationInformation>
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

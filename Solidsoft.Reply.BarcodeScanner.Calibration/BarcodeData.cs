@@ -31,11 +31,11 @@ using System.Linq;
 ///   Represents barcode data for calibration.
 /// </summary>
 /// <remarks>
-///   Initializes a new instance of the <see cref="CalibrationBarcodeData" /> class.
+///   Initializes a new instance of the <see cref="BarcodeData" /> class.
 /// </remarks>
 /// <param name="data">The calibration data.</param>
 /// <param name="maximumCharacters">The maximum number of characters in each barcode.</param>
-public class CalibrationBarcodeData(string data, int maximumCharacters = -1) {
+public class BarcodeData(string data, int maximumCharacters = -1) {
     /// <summary>
     ///   The calibration data.
     /// </summary>

@@ -33,15 +33,15 @@ using Newtonsoft.Json.Serialization;
 /// <summary>
 ///   Calibration maps and data.
 /// </summary>
-public sealed class CalibrationData : IEquatable<CalibrationData>
+public sealed class Data : IEquatable<Data>
 {
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationData" /> class.
+    ///   Initializes a new instance of the <see cref="Data" /> class.
     /// </summary>
     /// <param name="json">
     ///   The calibration JSON.
     /// </param>
-    public CalibrationData(string json)
+    public Data(string json)
     {
         if (string.IsNullOrWhiteSpace(json) || json.Length <= 1)
         {
@@ -63,7 +63,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
             return;
         }
 
-        var calibration = JsonConvert.DeserializeObject<CalibrationData>(json);
+        var calibration = JsonConvert.DeserializeObject<Data>(json);
 
         if (calibration is null)
         {
@@ -87,7 +87,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     }
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationData" /> class.
+    ///   Initializes a new instance of the <see cref="Data" /> class.
     /// </summary>
     /// <param name="aimFlagCharacterSequence">
     ///   The first (flag) character of an AIM identifier. By default, this is "]".
@@ -134,7 +134,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     ///   The control character that naps to the line feed character.
     /// </param>
     [JsonConstructor]
-    public CalibrationData(
+    public Data(
         string? aimFlagCharacterSequence,
         IDictionary<char, char>? characterMap,
         IDictionary<string, string>? deadKeysMap,
@@ -272,15 +272,15 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     /// </summary>
     /// <param name="json">A JSON string representing the serialized data.</param>
     // ReSharper disable once UnusedMember.Global
-    public static CalibrationData FromJson(string json)
+    public static Data FromJson(string json)
     {
-        if (string.IsNullOrWhiteSpace(json)) return new CalibrationData(string.Empty);
+        if (string.IsNullOrWhiteSpace(json)) return new Data(string.Empty);
 
-        var calibrationData = JsonConvert.DeserializeObject<CalibrationData>(json);
+        var calibrationData = JsonConvert.DeserializeObject<Data>(json);
 
-        if (calibrationData is null) return new CalibrationData(string.Empty);
+        if (calibrationData is null) return new Data(string.Empty);
 
-        return new CalibrationData(
+        return new Data(
             calibrationData.AimFlagCharacterSequence,
             calibrationData.CharacterMap,
             calibrationData.ScannerDeadKeysMap,
@@ -301,26 +301,26 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     ///   Override for the equality operator.
     /// </summary>
     /// <param name="calibrationData1">The first calibration data.</param>
-    /// <param name="calibrationData2">The second calibration data.</param>
+    /// <param name="data2">The second calibration data.</param>
     /// <returns>True, if the calibration data are equal; otherwise false.</returns>
-    public static bool operator ==(CalibrationData? calibrationData1, CalibrationData calibrationData2) =>
-        calibrationData1?.Equals(calibrationData2) ?? false;
+    public static bool operator ==(Data? calibrationData1, Data data2) =>
+        calibrationData1?.Equals(data2) ?? false;
 
     /// <summary>
     ///   Override for the inequality operator.
     /// </summary>
-    /// <param name="calibrationData1">The first calibration data.</param>
-    /// <param name="calibrationData2">The second calibration data.</param>
+    /// <param name="data1">The first calibration data.</param>
+    /// <param name="data2">The second calibration data.</param>
     /// <returns>True, if the calibration data are not equal; otherwise false.</returns>
-    public static bool operator !=(CalibrationData? calibrationData1, CalibrationData calibrationData2) =>
-        !calibrationData1?.Equals(calibrationData2) ?? false;
+    public static bool operator !=(Data? data1, Data data2) =>
+        !data1?.Equals(data2) ?? false;
 
     /// <summary>
     ///   Indicates whether the current calibration data is equal to another calibration data object.
     /// </summary>
     /// <param name="other">A calibration data object to compare with this current calibration data object.</param>
     /// <returns>true if the current calibration data object is equal to the other parameter; otherwise, false.</returns>
-    public bool Equals(CalibrationData? other) =>
+    public bool Equals(Data? other) =>
         other is not null && (ReferenceEquals(this, other) || string.Equals(
                              AimFlagCharacterSequence,
                              other.AimFlagCharacterSequence,
@@ -346,7 +346,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
     /// <returns>true if the current calibration data object is equal to the other parameter; otherwise, false.</returns>
     public override bool Equals(object? obj) =>
         obj is not null && 
-        (ReferenceEquals(this, obj) || obj is CalibrationData data && Equals(data));
+        (ReferenceEquals(this, obj) || obj is Data data && Equals(data));
 
     /// <summary>
     ///   Returns a hash value for the current token.
@@ -390,7 +390,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
@@ -410,7 +410,7 @@ public sealed class CalibrationData : IEquatable<CalibrationData>
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

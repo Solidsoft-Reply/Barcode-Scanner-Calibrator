@@ -42,21 +42,21 @@ using Newtonsoft.Json.Serialization;
 ///   A token passed within the keyboard calibration code to represent the current calibration session. The token
 ///   provides calibration state and results.
 /// </summary>
-public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<CalibrationToken>
+public struct Token : IEquatable<Token>, IEnvironment<Token>
 {
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationToken" /> struct.
+    ///   Initializes a new instance of the <see cref="Token" /> struct.
     /// </summary>
-    public CalibrationToken()
+    public Token()
     {
-        Errors = new List<CalibrationInformation>();
-        Warnings = new List<CalibrationInformation>();
-        Information = new List<CalibrationInformation>();
+        Errors = new List<Information>();
+        Warnings = new List<Information>();
+        Information = new List<Information>();
         LatestError = string.Empty;
     }
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationToken" /> struct.
+    ///   Initializes a new instance of the <see cref="Token" /> struct.
     /// </summary>
     /// <param name="barcodeData">
     ///   The unsegmented barcode data for the current calibration barcode.
@@ -67,7 +67,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="value">
     ///   The expected character for the current dead key being calibrated.
     /// </param>
-    /// <param name="calibrationRemaining">
+    /// <param name="calibrationsRemaining">
     ///   A count of the estimated number of calibrations that still need to be performed during this session.
     /// </param>
     /// <param name="smallBarcodeSequenceIndex">
@@ -111,11 +111,11 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// </param>
     /// <param name="reportedPrefixSegment">The reported prefix segment.</param>
     /// <param name="reportedSuffix">The reported suffix segment.</param>
-    public CalibrationToken(
+    public Token(
         string barcodeData,
         string? key = null,
         char value = default,
-        int calibrationRemaining = -1,
+        int calibrationsRemaining = -1,
         int smallBarcodeSequenceIndex = -1,
         int smallBarcodeSequenceCount = -1,
         string? prefix = "",
@@ -124,19 +124,19 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         Stream? bitmapStream = null,
         string? svg = null,
         int remaining = -1,
-        DataMatrixSize size = DataMatrixSize.Automatic,
+        Size size = Size.Automatic,
         bool? keyboardMatch = null,
-        CalibrationData? calibrationData = null,
+        Data? calibrationData = null,
         SystemCapabilities? systemCapabilities = null,
         bool? calibrationSessionAbandoned = false,
         List<string>? reportedPrefixSegment = null,
         string? reportedSuffix = "")
     {
-        Data = new CalibrationTokenData(
+        Data = new TokenData(
             barcodeData,
             key,
             value,
-            calibrationRemaining,
+            calibrationsRemaining,
             smallBarcodeSequenceIndex,
             smallBarcodeSequenceCount,
             prefix ?? string.Empty,
@@ -149,9 +149,9 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         KeyboardMatch = keyboardMatch;
         CalibrationData = calibrationData;
         SystemCapabilities = systemCapabilities;
-        Errors = new List<CalibrationInformation>();
-        Warnings = new List<CalibrationInformation>();
-        Information = new List<CalibrationInformation>();
+        Errors = new List<Information>();
+        Warnings = new List<Information>();
+        Information = new List<Information>();
         ExtendedData = null;
         LatestError = string.Empty;
         CalibrationSessionAbandoned = calibrationSessionAbandoned;
@@ -160,7 +160,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     }
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationToken" /> struct by cloning an existing token.
+    ///   Initializes a new instance of the <see cref="Token" /> struct by cloning an existing token.
     /// </summary>
     /// <param name="oldToken">
     ///   The unsegmented barcode data for the current calibration barcode.
@@ -168,15 +168,15 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="extendedData">Optional extended data to add to the token.</param>
     /// <param name="prefix">A prefix reported by the barcode scanner, if it exists.</param>
     /// <param name="suffix">A suffix reported by the barcode scanner, if it exists.</param>
-    public CalibrationToken(
-        CalibrationToken oldToken, 
-        CalibrationTokenExtendedData? extendedData = null, 
+    public Token(
+        Token oldToken, 
+        TokenExtendedData? extendedData = null, 
         string prefix = "", 
         string suffix = "")
     {
         Data = oldToken.Data is null
                         ? null
-                        : new CalibrationTokenData(
+                        : new TokenData(
                             oldToken.Data?.BarcodeData ?? string.Empty,
                             oldToken.Data?.Key,
                             oldToken.Data?.Value ?? char.MinValue,
@@ -201,7 +201,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
 
         CalibrationData = oldToken.CalibrationData is null
                                    ? null
-                                   : new CalibrationData(
+                                   : new Data(
                                        oldToken.CalibrationData.AimFlagCharacterSequence,
                                        new Dictionary<char, char>(),
                                        new Dictionary<string, string>(),
@@ -299,18 +299,18 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                                           oldToken.SystemCapabilities.Ambiguities,
                                           oldToken.SystemCapabilities.UnrecognisedCharacters,
                                           oldToken.SystemCapabilities.LigatureMappings,
-                                          oldToken.SystemCapabilities.CalibrationAssumption);
+                                          oldToken.SystemCapabilities.Assumption);
 
         if (SystemCapabilities is not null && oldToken.SystemCapabilities is not null)
             SystemCapabilities.CapsLock = oldToken.SystemCapabilities.CapsLock;
 
-        Errors = new List<CalibrationInformation>();
-        Warnings = new List<CalibrationInformation>();
-        Information = new List<CalibrationInformation>();
+        Errors = new List<Information>();
+        Warnings = new List<Information>();
+        Information = new List<Information>();
         ExtendedData = oldToken.ExtendedData is null && 
                             extendedData is null
                                 ? null
-                                : extendedData ?? new CalibrationTokenExtendedData(
+                                : extendedData ?? new TokenExtendedData(
                                       new Dictionary<string, string>(),
                                       new Dictionary<string, char>(),
                                       new Dictionary<string, string>(),
@@ -387,17 +387,17 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
 
         foreach (var error in oldToken.Errors)
         {
-            AddInformation(new CalibrationInformation(error.Level, error.InformationType, error.Description));
+            AddInformation(new Information(error.Level, error.InformationType, error.Description));
         }
 
         foreach (var warning in oldToken.Warnings)
         {
-            AddInformation(new CalibrationInformation(warning.Level, warning.InformationType, warning.Description));
+            AddInformation(new Information(warning.Level, warning.InformationType, warning.Description));
         }
 
         foreach (var info in oldToken.Information)
         {
-            AddInformation(new CalibrationInformation(info.Level, info.InformationType, info.Description));
+            AddInformation(new Information(info.Level, info.InformationType, info.Description));
         }
 
         CalibrationSessionAbandoned = oldToken.CalibrationSessionAbandoned;
@@ -413,7 +413,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   Gets the maximum characters allowed in a barcode image.
     /// </summary>
     [JsonProperty("size", Order = 1)]
-    public DataMatrixSize Size { get; private set; }
+    public Size Size { get; private set; }
 
     /// <summary>
     ///   Gets a value indicating whether the scanner emulates a keyboard that corresponds with the current computer
@@ -449,37 +449,37 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   Gets the collection or calibration errors.
     /// </summary>
     [JsonProperty("errors", Order = 4)]
-    public IEnumerable<CalibrationInformation> Errors { get; private set; }
+    public IEnumerable<Information> Errors { get; private set; }
 
     /// <summary>
     ///   Gets the collection of calibration warnings.
     /// </summary>
     [JsonProperty("warnings", Order = 5)]
-    public IEnumerable<CalibrationInformation> Warnings { get; private set; }
+    public IEnumerable<Information> Warnings { get; private set; }
 
     /// <summary>
     ///   Gets the collection of calibration information.
     /// </summary>
     [JsonProperty("information", Order = 6)]
-    public IEnumerable<CalibrationInformation> Information { get; private set; }
+    public IEnumerable<Information> Information { get; private set; }
 
     /// <summary>
     ///   Gets data for tokens that is primarily intended for internal calibration use only.
     /// </summary>c
     [JsonProperty("data", Order = 7)]
-    public CalibrationTokenData? Data { get; private set; }
+    public TokenData? Data { get; private set; }
 
     /// <summary>
     ///   Gets the Calibration configuration.
     /// </summary>
     [JsonProperty("calibrationData", Order = 8)]
-    public CalibrationData? CalibrationData { get; private set; }
+    public Data? CalibrationData { get; private set; }
 
     /// <summary>
     ///   Gets extended token data that must be used in stateless interactions.
     /// </summary>
     [JsonProperty("extendedData", Order = 9)]
-    public CalibrationTokenExtendedData? ExtendedData { get; private set; }
+    public TokenExtendedData? ExtendedData { get; private set; }
 
     /// <summary>
     ///   Gets a value indicating whether the calibration session has been abandoned.
@@ -512,13 +512,13 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// </summary>
     /// <param name="json">A JSON string representing the serialized data.</param>
     // ReSharper disable once UnusedMember.Global
-    public static CalibrationToken FromJson(string json)
+    public static Token FromJson(string json)
     {
         if (string.IsNullOrWhiteSpace(json)) return default;
 
-        var calibrationToken = JsonConvert.DeserializeObject<CalibrationToken>(json);
+        var calibrationToken = JsonConvert.DeserializeObject<Token>(json);
 
-        return new CalibrationToken(
+        return new Token(
             calibrationToken.Data?.BarcodeData ?? string.Empty,
             calibrationToken.Data?.Key ?? string.Empty,
             calibrationToken.Data?.Value ?? char.MinValue,
@@ -609,8 +609,8 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// </param>
 
     // ReSharper disable once StyleCop.SA1650
-    public static CalibrationToken SetExtendedData(
-        CalibrationToken token,
+    public static Token SetExtendedData(
+        Token token,
         IDictionary<string, string>? deadKeysMap,
         IDictionary<string, char>? deadKeyCharacterMap,
         IDictionary<string, string>? deadKeyFixUp,
@@ -638,7 +638,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
         IList<string> nonInvariantUnrecognisedCharacters,
         IList<string> invariantGs1UnrecognisedCharacters)
     {
-        var extendedData = new CalibrationTokenExtendedData(
+        var extendedData = new TokenExtendedData(
             new Dictionary<string, string>(),
             new Dictionary<string, char>(),
             new Dictionary<string, string>(),
@@ -724,7 +724,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
 
         if (unrecognisedKeys is null)
         {
-            return new CalibrationToken(token, extendedData);
+            return new Token(token, extendedData);
         }
 
         foreach (var value in unrecognisedKeys)
@@ -732,7 +732,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             extendedData.UnrecognisedKeys.Add(value);
         }
 
-        return new CalibrationToken(token, extendedData);
+        return new Token(token, extendedData);
     }
 
     /// <summary>
@@ -741,7 +741,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="token1">The first calibration token.</param>
     /// <param name="token2">The second calibration token.</param>
     /// <returns>True, if the calibration tokens are equal; otherwise false.</returns>
-    public static bool operator ==(CalibrationToken token1, CalibrationToken token2) =>
+    public static bool operator ==(Token token1, Token token2) =>
         token1.Equals(token2);
 
     /// <summary>
@@ -750,7 +750,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="token1">The first calibration token.</param>
     /// <param name="token2">The second calibration token.</param>
     /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
-    public static bool operator !=(CalibrationToken token1, CalibrationToken token2) =>
+    public static bool operator !=(Token token1, Token token2) =>
         !token1.Equals(token2);
 
     /// <summary>
@@ -758,7 +758,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// </summary>
     /// <param name="other">The token to be tested.</param>
     /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
-    public readonly bool Equals(CalibrationToken other) =>
+    public readonly bool Equals(Token other) =>
         Remaining.Equals(other.Remaining) &&
         Size.Equals(other.Size) &&
         Equals(BitmapStream, other.BitmapStream) &&
@@ -774,7 +774,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="obj">The token to be tested.</param>
     /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
     public readonly override bool Equals(object? obj) =>
-        obj is CalibrationToken token && Equals(token);
+        obj is Token token && Equals(token);
 
     /// <summary>
     ///   Returns a hash value for the current token.
@@ -813,13 +813,13 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
     ///   Marks the abandonment of the current calibration session.
     /// </summary>
-    internal CalibrationToken AbandonCalibrationSession()
+    internal Token AbandonCalibrationSession()
     {
         CalibrationSessionAbandoned = true;
         return this;
@@ -832,31 +832,31 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     /// <param name="type">The information type.</param>
     /// <param name="description">The description of the information.</param>
     internal void AddInformation(
-        CalibrationInformationLevel level,
-        CalibrationInformationType type,
+        InformationLevel level,
+        InformationType type,
         string? description) =>
-        AddInformation(new CalibrationInformation(level, type, description));
+        AddInformation(new Information(level, type, description));
 
     /// <summary>
     ///   Adds an information record to the correct collection.
     /// </summary>
     /// <param name="information">The calibration information.</param>
-    internal void AddInformation(CalibrationInformation information)
+    internal void AddInformation(Information information)
     {
         switch (information.Level)
         {
-            case CalibrationInformationLevel.Information:
-                Information ??= new List<CalibrationInformation>();
+            case InformationLevel.Information:
+                Information ??= new List<Information>();
 
                 ((IList)Information).Add(information);
                 break;
-            case CalibrationInformationLevel.Warning:
-                Warnings ??= new List<CalibrationInformation>();
+            case InformationLevel.Warning:
+                Warnings ??= new List<Information>();
 
                 ((IList)Warnings).Add(information);
                 break;
-            case CalibrationInformationLevel.Error:
-                Errors ??= new List<CalibrationInformation>();
+            case InformationLevel.Error:
+                Errors ??= new List<Information>();
 
                 ((IList)Errors).Add(information);
                 break;
@@ -872,22 +872,22 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
     ///   Removes an information record from the correct collection.
     /// </summary>
     /// <param name="information"></param>
-    internal void RemoveInformation(CalibrationInformation information)
+    internal void RemoveInformation(Information information)
     {
         switch (information.Level)
         {
-            case CalibrationInformationLevel.Information:
-                Information ??= new List<CalibrationInformation>();
+            case InformationLevel.Information:
+                Information ??= new List<Information>();
 
                 ((IList)Information).Remove(information);
                 break;
-            case CalibrationInformationLevel.Warning:
-                Warnings ??= new List<CalibrationInformation>();
+            case InformationLevel.Warning:
+                Warnings ??= new List<Information>();
 
                 ((IList)Warnings).Remove(information);
                 break;
-            case CalibrationInformationLevel.Error:
-                Errors ??= new List<CalibrationInformation>();
+            case InformationLevel.Error:
+                Errors ??= new List<Information>();
 
                 ((IList)Errors).Remove(information);
                 break;
@@ -916,7 +916,7 @@ public struct CalibrationToken : IEquatable<CalibrationToken>, IEnvironment<Cali
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

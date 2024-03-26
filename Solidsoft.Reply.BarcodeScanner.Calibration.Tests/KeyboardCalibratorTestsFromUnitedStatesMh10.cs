@@ -433,7 +433,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     public void ToCzech() {
         var token = PerformCalibrationTest("Czech");
         // Check warning for German PPN packs not recognised.
-        Assert.Contains(token.Warnings, ci => ci.InformationType == CalibrationInformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
     }
 
     /// <summary>
@@ -874,7 +874,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     /// Performs a calibration test.
     /// </summary>
     /// <param name="layoutName">The name of the computer keyboard layout</param>
-    private static CalibrationToken PerformCalibrationTest(string layoutName) {
+    private static Token PerformCalibrationTest(string layoutName) {
         Debug.WriteLine(layoutName);
 
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
@@ -882,7 +882,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
 
         var calibrator = new Calibrator();
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         var recognisedDataElements = new List<RecognisedDataElement>
         {

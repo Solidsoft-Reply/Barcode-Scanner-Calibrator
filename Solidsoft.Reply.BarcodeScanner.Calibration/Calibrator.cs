@@ -23,8 +23,8 @@
 ////#define Diagnostics
 
 using System.Diagnostics;
-using SixLabors.ImageSharp.PixelFormats;
 
+#pragma warning disable S3358
 #pragma warning disable S1751
 #pragma warning disable S3626
 
@@ -48,7 +48,7 @@ using ProcessFlow;
 
 using Properties;
 
-using Token = ProcessFlow.Environment<CalibrationToken>;
+using EnvToken = ProcessFlow.Environment<Token>;
 using SixLabors.ImageSharp;
 
 /// <summary>
@@ -354,7 +354,7 @@ public class Calibrator {
     /// <summary>
     ///   The assumption made concerning the use of calibration in client systems.
     /// </summary>
-    private readonly CalibrationAssumption _calibrationAssumption;
+    private readonly Assumption _assumption;
 
     /// <summary>
     ///   A list of the reported characters mapped to invariant characters.
@@ -369,7 +369,7 @@ public class Calibrator {
     /// <summary>
     ///   The current barcode data.
     /// </summary>
-    private CalibrationBarcodeData? _barcodeDataSegments;
+    private BarcodeData? _barcodeDataSegments;
 
     /// <summary>
     ///   The expected value of the prefix reported by a barcode scanner during calibration.
@@ -406,7 +406,7 @@ public class Calibrator {
     /// <summary>
     ///   The size of data matrix required.
     /// </summary>
-    private DataMatrixSize _tokenSize;
+    private DataMatrix.Size _tokenSize;
 
     /// <summary>
     ///   Indicates whether the barcode scanner and computer keyboard layouts correspond.
@@ -421,7 +421,7 @@ public class Calibrator {
     /// <summary>
     ///   The calibration data.
     /// </summary>
-    private CalibrationData? _tokenCalibrationData;
+    private Data? _tokenCalibrationData;
 
     /// <summary>
     ///   The system capabilities.
@@ -431,17 +431,17 @@ public class Calibrator {
     /// <summary>
     ///   The collection of calibration information.
     /// </summary>
-    private List<CalibrationInformation>? _tokenInformation;
+    private List<Information>? _tokenInformation;
 
     /// <summary>
     ///   The collection of calibration warnings.
     /// </summary>
-    private List<CalibrationInformation>? _tokenWarnings;
+    private List<Information>? _tokenWarnings;
 
     /// <summary>
     ///   The collection or calibration errors.
     /// </summary>
-    private List<CalibrationInformation>? _tokenErrors;
+    private List<Information>? _tokenErrors;
 
     /// <summary>
     ///   The current barcode data.
@@ -496,7 +496,7 @@ public class Calibrator {
     /// <summary>
     ///   A list of expected characters where the barcode scanner keyboard layout key maps to an unassigned key on the computer keyboard layout.
     /// </summary>
-    private IList<string> _tokenExtendedDataScannerUnassignedKeys = new List<string>();
+    private IList<string> _tokenExtendedDataScannerUnassignedKeys = [];
 
     /// <summary>
     ///   A dictionary of candidate ligatures.
@@ -594,12 +594,12 @@ public class Calibrator {
     /// <summary>
     ///   A dictionary of ambiguous non-invariant character sequences that map to a reported character sequence.
     /// </summary>
-    private readonly Dictionary<string, IList<string>> _tokenExtendedDataNonInvariantAmbiguities = new();
+    private readonly Dictionary<string, IList<string>> _tokenExtendedDataNonInvariantAmbiguities = [];
 
     /// <summary>
     ///   A dictionary of ambiguous invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    private readonly Dictionary<string, IList<string>> _tokenExtendedDataInvariantGs1Ambiguities = new();
+    private readonly Dictionary<string, IList<string>> _tokenExtendedDataInvariantGs1Ambiguities = [];
 
     /// <summary>
     ///   A list of unrecognised non-invariant characters.
@@ -634,7 +634,7 @@ public class Calibrator {
     /// <summary>
     /// The last token. This value is recorded to aid recovery from failures.
     /// </summary>
-    private CalibrationToken _lastToken;
+    private Token _lastToken;
 
     /// <summary>
     ///   A list of characters that are not recognised by the barcode scanner keyboard layout.
@@ -643,44 +643,44 @@ public class Calibrator {
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    private IList<char> _tokenExtendedDataUnrecognisedKeys = new List<char>();
+    private IList<char> _tokenExtendedDataUnrecognisedKeys = [];
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Calibrator" /> class.
     /// </summary>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public Calibrator(
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration) {
-        _calibrationAssumption = calibrationAssumption;
+        Assumption assumption = Assumption.Calibration) {
+        _assumption = assumption;
     }
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Calibrator" /> class.
     /// </summary>
-    /// <param name="calibrationsData">The calibration data.</param>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="calibrationData">The calibration data.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     // ReSharper disable once UnusedMember.Global
     public Calibrator(
-        CalibrationData? calibrationsData,
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration) {
-        if (calibrationsData is null) {
+        Data? calibrationData,
+        Assumption assumption = Assumption.Calibration) {
+        if (calibrationData is null) {
             return;
         }
 
-        CalibrationData = calibrationsData;
-        _calibrationAssumption = calibrationAssumption;
+        CalibrationData = calibrationData;
+        _assumption = assumption;
     }
 
     /// <summary>
     ///   Gets the type of calibration barcode currently being processed.
     /// </summary>
-    public CalibrationBarcodeType CurrentBarcodeType { get; private set; }
+    public BarcodeType CurrentBarcodeType { get; private set; }
 
     /// <summary>
     ///   Gets or sets the Calibration configuration data.
     /// </summary>
-    public CalibrationData? CalibrationData {
-        get => _tokenCalibrationData ?? new CalibrationData(string.Empty);
+    public Data? CalibrationData {
+        get => _tokenCalibrationData ?? new Data(string.Empty);
 
         set {
             if (value is null) {
@@ -692,7 +692,7 @@ public class Calibrator {
             _tokenExtendedDataDeadKeysMap = value.DeadKeysMap ?? new Dictionary<string, string>();
             _tokenExtendedDataDeadKeyCharacterMap = value.DeadKeyCharacterMap ?? new Dictionary<string, char>();
             _tokenExtendedDataScannerDeadKeysMap = value.ScannerDeadKeysMap ?? new Dictionary<string, string>();
-            _tokenExtendedDataScannerUnassignedKeys = value.ScannerUnassignedKeys ?? new List<string>();
+            _tokenExtendedDataScannerUnassignedKeys = value.ScannerUnassignedKeys ?? [];
             _tokenExtendedDataLigatureMap = value.LigatureMap ?? new Dictionary<string, char>();
             _tokenExtendedDataReportedCharacters = value.ReportedCharacters;
             _tokenExtendedDataReportedPrefix = value.ReportedPrefix;
@@ -761,7 +761,7 @@ public class Calibrator {
     ///   If multiple streams are returned, each stream is a barcode containing a segment of the
     ///   calibration data. Multiple streams are returned when smaller barcode sizes are required.
     /// </remarks>
-    public IList<Stream> BaselineBarcodes(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
+    public IList<Stream> BaselineBarcodes(float multiplier = 1F, DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
         // non-invariant printable characters and additional ASCII control characters. It is very important that
         // the final four characters are a segment delimiter because the scanner may add characters beyond this
@@ -771,15 +771,15 @@ public class Calibrator {
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                  : SegmentDelimiter);
 
-        return SegmentStreams(new CalibrationBarcodeData(barcodeDataEx, size.MaxCapacity()));
+        return SegmentStreams(new BarcodeData(barcodeDataEx, size.MaxCapacity()));
 
-        IList<Stream> SegmentStreams(CalibrationBarcodeData barcodeSegments) {
+        IList<Stream> SegmentStreams(BarcodeData barcodeSegments) {
             var segments = barcodeSegments.Segments.ToList();
             var barcodeSegmentStreams = new List<Stream>(segments.Count);
 
             barcodeSegmentStreams.AddRange(
                 from t in segments
-                let barcode = new DataMatrixBarcode {
+                let barcode = new Barcode {
                     ForegroundColor = Color.Black,
                     BackgroundColor = Color.White,
                     Multiplier = multiplier,
@@ -803,7 +803,7 @@ public class Calibrator {
     ///   If multiple strings are returned, each string is a barcode containing a segment of the
     ///   calibration data. Multiple strings are returned when smaller barcode sizes are required.
     /// </remarks>
-    public IList<string> BaselineBarcodesSvg(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
+    public IList<string> BaselineBarcodesSvg(float multiplier = 1F, DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
         // non-invariant printable characters and additional ASCII control characters. It is very important that
         // the final four characters are a segment delimiter because the scanner may add characters beyond this
@@ -813,15 +813,15 @@ public class Calibrator {
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                  : SegmentDelimiter);
 
-        return SegmentStrings(new CalibrationBarcodeData(barcodeDataEx, size.MaxCapacity()));
+        return SegmentStrings(new BarcodeData(barcodeDataEx, size.MaxCapacity()));
 
-        IList<string> SegmentStrings(CalibrationBarcodeData barcodeSegments) {
+        IList<string> SegmentStrings(BarcodeData barcodeSegments) {
             var segments = barcodeSegments.Segments.ToList();
             var barcodeSegmentStrings = new List<string>(segments.Count);
 
             barcodeSegmentStrings.AddRange(
                 from t in segments
-                let barcode = new DataMatrixBarcode {
+                let barcode = new Barcode {
                     ForegroundColor = Color.Black,
                     BackgroundColor = Color.White,
                     Multiplier = multiplier
@@ -846,7 +846,7 @@ public class Calibrator {
     ///   depending on the Calibration library.</p>
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
-    public IList<string> BaselineBarcodeData(DataMatrixSize size = DataMatrixSize.Automatic) {
+    public IList<string> BaselineBarcodeData(DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the initial baseline barcode containing segments of character sequences for invariant characters,
         // non-invariant printable characters and additional ASCII control characters.
         var barcodeDataEx = _baselineBarcodeData
@@ -854,9 +854,9 @@ public class Calibrator {
                                  ? SegmentDelimiter + _baselineBarcodeDataFormat06 + SegmentDelimiter
                                  : SegmentDelimiter);
 
-        return SegmentStreams(new CalibrationBarcodeData(barcodeDataEx, size.MaxCapacity()));
+        return SegmentStreams(new BarcodeData(barcodeDataEx, size.MaxCapacity()));
 
-        static IList<string> SegmentStreams(CalibrationBarcodeData barcodeSegments) {
+        static IList<string> SegmentStreams(BarcodeData barcodeSegments) {
             return barcodeSegments.Segments.ToList();
         }
     }
@@ -874,16 +874,14 @@ public class Calibrator {
     /// <returns>The updated calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    public CalibrationToken Calibrate(
-        int[] data, CalibrationToken token, 
+    public Token Calibrate(
+        int[] data, Token token, 
         bool? capsLock = null, 
         SupportedPlatform platform = SupportedPlatform.Windows, 
         TimeSpan dataEntryTimeSpan = default, 
         Preprocessor? preProcessors = null,
         bool trace = false) {
-        if (data is null) {
-            throw new ArgumentNullException(nameof(data));
-        }
+        ArgumentNullException.ThrowIfNull(data);
 
         Span<char> charOut = stackalloc char[data.Length];
 
@@ -905,9 +903,9 @@ public class Calibrator {
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
-    public CalibrationToken Calibrate(
+    public Token Calibrate(
         string? data, 
-        CalibrationToken token, 
+        Token token, 
         bool? capsLock = null, 
         SupportedPlatform platform = SupportedPlatform.Windows, 
         TimeSpan dataEntryTimeSpan = default,
@@ -940,7 +938,7 @@ public class Calibrator {
         
         if (token == default) {
             _lastToken = token;
-            return LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported);
+            return LogCalibrationInformation(token, InformationType.NoCalibrationDataReported);
         }
 
         DoInitializeFromTokenData(token);
@@ -956,7 +954,7 @@ public class Calibrator {
                 (current, preProcessor) => {
                     var processedData = ((Preprocessor)preProcessor).Invoke(current, out var exceptions)?.ToString() ??
                                         string.Empty;
-                    preprocessorExceptions.AddRange(exceptions ?? new List<PreprocessorException>());
+                    preprocessorExceptions.AddRange(exceptions ?? []);
                     return processedData;
                 })
             : data;
@@ -967,11 +965,11 @@ public class Calibrator {
             foreach (var barcodeException in preprocessorExceptions) {
                 token.AddInformation(
                     barcodeException.IsFatal 
-                        ? CalibrationInformationLevel.Error 
-                        : CalibrationInformationLevel.Warning, 
+                        ? InformationLevel.Error 
+                        : InformationLevel.Warning, 
                     barcodeException.IsFatal
-                        ? CalibrationInformationType.PreProcessorError
-                        : CalibrationInformationType.PreProcessorWarning,
+                        ? InformationType.PreProcessorError
+                        : InformationType.PreProcessorWarning,
                     barcodeException.Message);
             }
 
@@ -1015,10 +1013,10 @@ public class Calibrator {
 
         // Set the current calibration barcode type.
         CurrentBarcodeType = token.Data?.Key?.Length == 0
-            ? CalibrationBarcodeType.Baseline
-            : CalibrationBarcodeType.DeadKey;
+            ? BarcodeType.Baseline
+            : BarcodeType.DeadKey;
 
-        (CalibrationToken token, string suffix, string endOfLine) extendedToken = (token, string.Empty , string.Empty);
+        (Token token, string suffix, string endOfLine) extendedToken = (token, string.Empty , string.Empty);
 
         try
         {
@@ -1029,7 +1027,7 @@ public class Calibrator {
         }
         catch (Exception ex)
         {
-            LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailedUnexpectedly);
+            LogCalibrationInformation(token, InformationType.CalibrationFailedUnexpectedly);
             Console.WriteLine(ex.Message);
         }
 
@@ -1076,13 +1074,13 @@ public class Calibrator {
         // representation of ASCII 29 or ASCII 30, and if the only ambiguities (if any) concern non-invariant characters, then 
         // we will map ASCII 0 to ]. In addition, we will remove the AimNotRecognised warning.
         if (_tokenExtendedDataAimFlagCharacterSequence is { Length: 0 } or "\0" &&
-            @out.Warnings.Any(w => w.InformationType == CalibrationInformationType.AimNotRecognised) &&
+            @out.Warnings.Any(w => w.InformationType == InformationType.AimNotRecognised) &&
             !_tokenExtendedDataDeadKeysMap.Any() &&
             !_tokenExtendedDataCharacterMap.Any(kvp => kvp.Key == '\u0000' && kvp.Value.IsInvariant()) &&
             !_tokenExtendedDataCharacterMap.Any(kvp => kvp is { Key: '\u0000', Value: '\u001d' }) &&
             !_tokenExtendedDataCharacterMap.Any(kvp => kvp is { Key: '\u0000', Value: '\u001e' })) {
             foreach (var aimNotRecognised in @out.Warnings.Where(
-                         w => w.InformationType == CalibrationInformationType.AimNotRecognised).ToList()) {
+                         w => w.InformationType == InformationType.AimNotRecognised).ToList()) {
                 @out.RemoveInformation(aimNotRecognised);
                 _tokenWarnings?.RemoveAll(ci => ci == aimNotRecognised);
             }
@@ -1112,24 +1110,24 @@ public class Calibrator {
                     _tokenExtendedDataCharacterMap.Remove('\u0000');
                     _tokenWarnings?.RemoveAll(
                         ci => ci.InformationType == (existingMap == '\u001C'
-                            ? CalibrationInformationType.FileSeparatorSupported
-                            : CalibrationInformationType.UnitSeparatorSupported));
+                            ? InformationType.FileSeparatorSupported
+                            : InformationType.UnitSeparatorSupported));
 
                     LogCalibrationInformation(
                         @out,
-                        CalibrationInformationType.IsoIec15434EdiNotReliablyReadable,
+                        InformationType.IsoIec15434EdiNotReliablyReadable,
                         char.MinValue.ToControlPictureString(),
                         existingMap.ToControlPictureString());
 
                     LogCalibrationInformation(
                         @out,
-                        CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                        InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                         char.MinValue.ToControlPictureString(),
                         existingMap.ToControlPictureString());
 
                     LogCalibrationInformation(
                         @out,
-                        CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
+                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
 
                     return ']';
                 }
@@ -1139,13 +1137,13 @@ public class Calibrator {
 
                     LogCalibrationInformation(
                         @out,
-                        CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                        InformationType.SomeNonInvariantCharactersUnrecognised,
                         char.MinValue.ToControlPictureString(),
                         existingMap.ToControlPictureString());
 
                     LogCalibrationInformation(
                         @out,
-                        CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+                        InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
 
                     return ']';
                 }
@@ -1158,7 +1156,7 @@ public class Calibrator {
 
         // Only set the calibration data if there are no errors to report.
         if (_tokenRemaining == 0 && !@out.Errors.Any()) {
-            _tokenCalibrationData = new CalibrationData(
+            _tokenCalibrationData = new Data(
                 _tokenExtendedDataAimFlagCharacterSequence,
                 _tokenExtendedDataCharacterMap,
                 _tokenExtendedDataDeadKeysMap,
@@ -1184,7 +1182,7 @@ public class Calibrator {
         // Process the calibration results to determine the system capabilities.
         _tokenSystemCapabilities = new SystemCapabilities(
             @out,
-            _calibrationAssumption,
+            _assumption,
             capsLock,
             _tokenExtendedDataScannerKeyboardPerformance,
             AssessFormatnnSupport,
@@ -1205,7 +1203,7 @@ public class Calibrator {
             case ScannerKeyboardPerformance.Medium:
             case ScannerKeyboardPerformance.Low:
                 // Warning - The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.
-                @out = LogCalibrationInformation(@out, CalibrationInformationType.SubOptimalScannerKeyboardPerformance);
+                @out = LogCalibrationInformation(@out, InformationType.SubOptimalScannerKeyboardPerformance);
                 break;
             case ScannerKeyboardPerformance.High:
             default:
@@ -1214,12 +1212,12 @@ public class Calibrator {
 
         _lastToken = token;
 
-        var failedCalibrationErrors = new List<CalibrationInformationType>
+        var failedCalibrationErrors = new List<InformationType>
         {
-            CalibrationInformationType.PartialCalibrationDataReported,
-            CalibrationInformationType.IncorrectCalibrationDataReported,
-            CalibrationInformationType.UnrecognisedData,
-            CalibrationInformationType.NoCalibrationDataReported
+            InformationType.PartialCalibrationDataReported,
+            InformationType.IncorrectCalibrationDataReported,
+            InformationType.UnrecognisedData,
+            InformationType.NoCalibrationDataReported
         };
 
         var abandonCalibrationSession =
@@ -1236,9 +1234,9 @@ public class Calibrator {
     /// <param name="backgroundColour">Background colour (hex - use #nnnnnn format).</param>
     /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
-    public IEnumerable<CalibrationToken> CalibrationTokens(
+    public IEnumerable<Token> CalibrationTokens(
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic,
+        DataMatrix.Size size = DataMatrix.Size.Automatic,
         string backgroundColour = "#FFFFFF",
         string foregroundColour = "#000000") {
         return CalibrationTokens(
@@ -1259,11 +1257,11 @@ public class Calibrator {
     /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
     // ReSharper disable once UnusedMember.Global
-    public IEnumerable<CalibrationToken> CalibrationTokens(
+    public IEnumerable<Token> CalibrationTokens(
         bool generateImages,
         bool generateSvg,
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic,
+        DataMatrix.Size size = DataMatrix.Size.Automatic,
         string backgroundColour = "#FFFFFF",
         string foregroundColour = "#000000") {
         return GetCalibrationTokens(
@@ -1294,7 +1292,7 @@ public class Calibrator {
     /// </remarks>
     public IDictionary<char, IList<Stream>> SupplementalBarcodes(
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) {
+        DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the supplemental calibration barcodes containing character combinations for relevant dead keys.
         return (
            from k in _tokenExtendedDataDeadKeyCharacterMap.Keys
@@ -1302,15 +1300,15 @@ public class Calibrator {
            .ToDictionary(
                 value => value,
                 value => SegmentStreams(
-                    new CalibrationBarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
+                    new BarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
 
-        IList<Stream> SegmentStreams(CalibrationBarcodeData barcodeSegments) {
+        IList<Stream> SegmentStreams(BarcodeData barcodeSegments) {
             var segments = barcodeSegments.Segments.ToList();
             var barcodeSegmentStreams = new List<Stream>(segments.Count);
 
             barcodeSegmentStreams.AddRange(
                 from s in segments
-                let barcode = new DataMatrixBarcode {
+                let barcode = new Barcode {
                     ForegroundColor = Color.Black,
                     BackgroundColor = Color.White,
                     Multiplier = multiplier,
@@ -1341,7 +1339,7 @@ public class Calibrator {
     /// </remarks>
     public IDictionary<char, IList<string>> SupplementalBarcodesSvg(
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) {
+        DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the supplemental calibration barcodes containing character combinations for relevant dead keys.
         return (
            from k in _tokenExtendedDataDeadKeyCharacterMap.Keys
@@ -1349,15 +1347,15 @@ public class Calibrator {
            .ToDictionary(
                 value => value,
                 value => SegmentStreamsSvg(
-                    new CalibrationBarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
+                    new BarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
 
-        IList<string> SegmentStreamsSvg(CalibrationBarcodeData barcodeSegments) {
+        IList<string> SegmentStreamsSvg(BarcodeData barcodeSegments) {
             var segments = barcodeSegments.Segments.ToList();
             var barcodeSegmentStreams = new List<string>(segments.Count);
 
             barcodeSegmentStreams.AddRange(
                 from s in segments
-                let barcode = new DataMatrixBarcode {
+                let barcode = new Barcode {
                     ForegroundColor = Color.Black,
                     BackgroundColor = Color.White,
                     Multiplier = multiplier
@@ -1388,7 +1386,7 @@ public class Calibrator {
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
     public IDictionary<char, IList<string>> SupplementalBarcodeData(
-        DataMatrixSize size = DataMatrixSize.Automatic) {
+        DataMatrix.Size size = DataMatrix.Size.Automatic) {
         // Return the supplemental calibration barcodes containing character combinations for relevant dead keys.
         return (
            from k in _tokenExtendedDataDeadKeyCharacterMap.Keys
@@ -1396,9 +1394,9 @@ public class Calibrator {
            .ToDictionary(
                 value => value,
                 value => SegmentStreams(
-                    new CalibrationBarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
+                    new BarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
 
-        static IList<string> SegmentStreams(CalibrationBarcodeData barcodeSegments) {
+        static IList<string> SegmentStreams(BarcodeData barcodeSegments) {
             return barcodeSegments.Segments.ToList();
         }
     }
@@ -1637,7 +1635,7 @@ public class Calibrator {
                     : TestForSpaceCharacter();
 
             string TestIfReportedCharacterIsRecognised() =>
-                _tokenExtendedDataReportedCharacters.Contains(reportedChar.ToInvariantString(), StringComparison.Ordinal)
+                _tokenExtendedDataReportedCharacters!.Contains(reportedChar.ToInvariantString(), StringComparison.Ordinal)
                     ? reportedChar.ToInvariantString()
                     : TestIfNoMappingRequired();
 
@@ -1660,7 +1658,7 @@ public class Calibrator {
     /// /extend the range of transformation strategies that the calibrator can identify.
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
-    public IList<RecognisedDataElement> RecognisedDataElements { get; set; } = new List<RecognisedDataElement>();
+    public IList<RecognisedDataElement> RecognisedDataElements { get; set; } = [];
 
     /// <summary>
     ///   A collection of calibration tokens.
@@ -1672,14 +1670,14 @@ public class Calibrator {
     /// <param name="backgroundColour">Background colour (hex - use #nnnnnn format).</param>
     /// <param name="foregroundColour">Foreground colour (hex - use #nnnnnn format).</param>
     /// <returns>The collection of calibration tokens.</returns>
-    private IEnumerable<CalibrationToken> GetCalibrationTokens(
+    private IEnumerable<Token> GetCalibrationTokens(
         bool generateImages,
         bool generateSvg,
         float multiplier,
-        DataMatrixSize size,
+        DataMatrix.Size size,
         string backgroundColour,
         string foregroundColour) {
-        using var barcode = generateImages || generateSvg ? new DataMatrixBarcode {
+        using var barcode = generateImages || generateSvg ? new Barcode {
             ForegroundColor = GetColour(foregroundColour),
             BackgroundColor = GetColour(backgroundColour),
             Multiplier = multiplier,
@@ -1709,7 +1707,7 @@ public class Calibrator {
         }
 
         var maximumCharacters = size.MaxCapacity();
-        CalibrationToken token;
+        Token token;
 
         if (_tokenDataBarcodeData.Length == 0) {
             // Yield the initial baseline barcode containing segments of character sequences for invariant characters,
@@ -1722,8 +1720,8 @@ public class Calibrator {
 
             InitialiseForYield();
 
-            foreach (var barcodeDataSegment in _barcodeDataSegments?.Segments ?? new List<string>()) {
-                token = new CalibrationToken(
+            foreach (var barcodeDataSegment in _barcodeDataSegments?.Segments ?? []) {
+                token = new Token(
                     barcodeDataSegment,
                     string.Empty,
                     default,
@@ -1765,7 +1763,7 @@ public class Calibrator {
             InitialiseForYield();
 
             if (_barcodeDataSegments?.Count == 0) {
-                token = new CalibrationToken(
+                token = new Token(
                     _tokenDataBarcodeData,
                     key,
                     value,
@@ -1780,21 +1778,21 @@ public class Calibrator {
                 yield return token;
             }
             else {
-                var failedCalibrationErrors = new List<CalibrationInformationType>
+                var failedCalibrationErrors = new List<InformationType>
                 {
-                    CalibrationInformationType.PartialCalibrationDataReported,
-                    CalibrationInformationType.IncorrectCalibrationDataReported,
-                    CalibrationInformationType.UnrecognisedData,
-                    CalibrationInformationType.NoCalibrationDataReported
+                    InformationType.PartialCalibrationDataReported,
+                    InformationType.IncorrectCalibrationDataReported,
+                    InformationType.UnrecognisedData,
+                    InformationType.NoCalibrationDataReported
                 };
 
-                foreach (var barcodeDataSegment in _barcodeDataSegments?.Segments ?? new List<string>()) {
+                foreach (var barcodeDataSegment in _barcodeDataSegments?.Segments ?? []) {
                     var calibrationSessionAbandoned =
                         _tokenErrors?.Exists(e => failedCalibrationErrors.Contains(e.InformationType)) ?? false;
 
                     // If the calibration failed because of an issue related to (the) scanned barcode, then return the last token
                     // that was submitted for calibration. Otherwise, return the next token.
-                    token = calibrationSessionAbandoned ? _lastToken.AbandonCalibrationSession() : new CalibrationToken(
+                    token = calibrationSessionAbandoned ? _lastToken.AbandonCalibrationSession() : new Token(
                         barcodeDataSegment,
                         key,
                         value,
@@ -1829,7 +1827,7 @@ public class Calibrator {
         }
 
         void InitialiseForYield() {
-            _barcodeDataSegments = new CalibrationBarcodeData(_tokenDataBarcodeData, maximumCharacters);
+            _barcodeDataSegments = new BarcodeData(_tokenDataBarcodeData, maximumCharacters);
 
             _tokenRemaining = _barcodeDataSegments.Count > 0
                 ? _barcodeDataSegments.Count * _tokenDataCalibrationsRemaining
@@ -1858,10 +1856,10 @@ public class Calibrator {
     /// <returns>The next calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    internal CalibrationToken NextCalibrationToken(
-        CalibrationToken token = default,
+    internal Token NextCalibrationToken(
+        Token token = default,
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) {
+        DataMatrix.Size size = DataMatrix.Size.Automatic) {
         return NextCalibrationToken(true, token, multiplier, size);
     }
 
@@ -1873,10 +1871,10 @@ public class Calibrator {
     /// <returns>The next calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    internal CalibrationToken NextCalibrationToken(
+    internal Token NextCalibrationToken(
         bool generateImages,
-        CalibrationToken token = default) {
-        return NextCalibrationToken(generateImages, token, 1F, DataMatrixSize.Automatic);
+        Token token = default) {
+        return NextCalibrationToken(generateImages, token, 1F, DataMatrix.Size.Automatic);
     }
 
     /// <summary>
@@ -1889,15 +1887,15 @@ public class Calibrator {
     /// <returns>The next calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    private CalibrationToken NextCalibrationToken(
+    private Token NextCalibrationToken(
         bool generateImages,
-        CalibrationToken token,
+        Token token,
         float multiplier,
-        DataMatrixSize size) {
-        _tokenSize = size == DataMatrixSize.Automatic ? token.Size : size;
+        DataMatrix.Size size) {
+        _tokenSize = size == DataMatrix.Size.Automatic ? token.Size : size;
         var baselineKey = string.Empty;
 
-        using var barcode = generateImages ? new DataMatrixBarcode {
+        using var barcode = generateImages ? new Barcode {
             ForegroundColor = Color.Black,
             BackgroundColor = Color.White,
             Multiplier = multiplier,
@@ -1915,7 +1913,7 @@ public class Calibrator {
 
             Initialise();
 
-            return new CalibrationToken(
+            return new Token(
                 _tokenDataBarcodeData,
                 baselineKey,
                 default,
@@ -1939,12 +1937,12 @@ public class Calibrator {
 
         DoInitializeFromTokenData(token);
 
-        var failedCalibrationErrors = new List<CalibrationInformationType>
+        var failedCalibrationErrors = new List<InformationType>
         {
-            CalibrationInformationType.PartialCalibrationDataReported,
-            CalibrationInformationType.IncorrectCalibrationDataReported,
-            CalibrationInformationType.UnrecognisedData,
-            CalibrationInformationType.NoCalibrationDataReported
+            InformationType.PartialCalibrationDataReported,
+            InformationType.IncorrectCalibrationDataReported,
+            InformationType.UnrecognisedData,
+            InformationType.NoCalibrationDataReported
         };
 
         var hasCalibrationFailed =
@@ -1958,10 +1956,10 @@ public class Calibrator {
             return default;
         }
 
-        _barcodeDataSegments = new CalibrationBarcodeData(_tokenDataBarcodeData, _tokenSize.MaxCapacity());
+        _barcodeDataSegments = new BarcodeData(_tokenDataBarcodeData, _tokenSize.MaxCapacity());
 
         if (_tokenExtendedDataDeadKeyCharacterMap.Count == 0) {
-            return new CalibrationToken(
+            return new Token(
                 _tokenDataBarcodeData,
                 baselineKey,
                 default,
@@ -1998,7 +1996,7 @@ public class Calibrator {
         return InitializeTokenData();
 
         void Initialise() {
-            _barcodeDataSegments = new CalibrationBarcodeData(_tokenDataBarcodeData, _tokenSize.MaxCapacity());
+            _barcodeDataSegments = new BarcodeData(_tokenDataBarcodeData, _tokenSize.MaxCapacity());
 
             _tokenRemaining = _barcodeDataSegments.Count > 0
                 ? _barcodeDataSegments.Count * _tokenDataCalibrationsRemaining
@@ -2023,7 +2021,7 @@ public class Calibrator {
             _tokenDataValue = c;
 
             if (_barcodeDataSegments.Count == -1 || _tokenDataSmallBarcodeSequenceIndex == _barcodeDataSegments.Count) {
-                _barcodeDataSegments = new CalibrationBarcodeData(
+                _barcodeDataSegments = new BarcodeData(
                     _tokenDataBarcodeData,
                     _tokenSize.MaxCapacity());
                 _tokenDataSmallBarcodeSequenceIndex = 0;
@@ -2283,7 +2281,7 @@ public class Calibrator {
     ///   submitting the data.
     /// </param>
     /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
-    private (CalibrationToken token, string suffix, string endOfLine) CalibrateBaseLine(string data, CalibrationToken token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default)
+    private (Token token, string suffix, string endOfLine) CalibrateBaseLine(string data, Token token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default)
     {
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
@@ -2307,7 +2305,7 @@ public class Calibrator {
             ? strippedData[_tokenDataPrefix.Length..]
             : strippedData[BarcodePrefix(strippedData).Length..];
 
-        token = new CalibrationToken(token, prefix: _tokenDataPrefix ?? string.Empty, suffix: _tokenDataSuffix ?? string.Empty);
+        token = new Token(token, prefix: _tokenDataPrefix ?? string.Empty, suffix: _tokenDataSuffix ?? string.Empty);
 
         // Determine if the user has scanned the correct baseline barcode and if it is fully or partially reported.
         token = DetermineBarcodeProvenance(token, strippedData, out var immediateReturn);
@@ -2327,20 +2325,16 @@ public class Calibrator {
         token = ConvertToSegments(token, data, expectedSegments, out var reportedSegments, out var lineFeedChar);
 
         // If there are not at least three reported segments, calibration has failed, so exit.
-        if (reportedSegments.Count <= (int)CalibrationSegments.AdditionalAsciiSegment) return (token, detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
+        if (reportedSegments.Count <= (int)Segments.AdditionalAsciiSegment) return (token, detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
 
         // Record the prefix segment, if a prefix is reported.
-        _tokenReportedPrefixSegment =
-            reportedSegments.Count > (int)CalibrationSegments.PrefixSegment &&
-            reportedSegments[(int)CalibrationSegments.PrefixSegment].Count > 0
-                ? reportedSegments[(int)CalibrationSegments.PrefixSegment]
-                : null;
+        _tokenReportedPrefixSegment = reportedSegments[(int)Segments.PrefixSegment];
 
         // Record the suffix segment, if a suffix is reported.
-        _tokenReportedSuffix = reportedSegments.Count > (int)CalibrationSegments.SuffixSegment &&
-                                  reportedSegments[(int)CalibrationSegments.SuffixSegment].Count > 0 &&
-                                  reportedSegments[(int)CalibrationSegments.SuffixSegment][0].Length != 0
-            ? reportedSegments[(int)CalibrationSegments.SuffixSegment][0].TrimEnd('\r', '\n')
+        _tokenReportedSuffix = reportedSegments.Count > (int)Segments.SuffixSegment &&
+                                  reportedSegments[(int)Segments.SuffixSegment].Count > 0 &&
+                                  reportedSegments[(int)Segments.SuffixSegment][0].Length != 0
+            ? reportedSegments[(int)Segments.SuffixSegment][0].TrimEnd('\r', '\n')
             : string.Empty;
 
         /* We have two clean sets of sequences of characters - one for the data reported from scanning
@@ -2367,7 +2361,7 @@ public class Calibrator {
         _tokenExtendedDataLineFeedCharacter = lineFeedChar == 0 ? null : lineFeedChar.ToString();
 
         // Set the current barcode type to Dead Key here. This will be validated on each further calibration call. 
-        CurrentBarcodeType = CalibrationBarcodeType.DeadKey;
+        CurrentBarcodeType = BarcodeType.DeadKey;
 
         return (InitializeTokenData(), detectedSuffix.suffix ?? string.Empty, detectedSuffix.endOfLine ?? string.Empty);
     }
@@ -2381,9 +2375,9 @@ public class Calibrator {
     /// <param name="suffix">A known suffix, discovered during </param>
     /// <param name="endOfLine"></param>
     /// <returns>The calibration token.</returns>
-    private (CalibrationToken token, string suffix, string endOfLine) CalibrateDeadKey(
+    private (Token token, string suffix, string endOfLine) CalibrateDeadKey(
         string data, 
-        CalibrationToken token, 
+        Token token, 
         TimeSpan dataEntryTimeSpan = default, 
         string? suffix = null, 
         string? endOfLine = null) {
@@ -2438,31 +2432,31 @@ public class Calibrator {
         var provenance = BarcodeProvenance(data, true);
 
         switch (provenance) {
-            case CalibrationBarcodeProvenance.PartialDeadkey:
+            case Calibration.BarcodeProvenance.PartialDeadkey:
                 // Error - Partial data reported for calibration barcode.
-                LogCalibrationInformation(token, CalibrationInformationType.PartialCalibrationDataReported);
+                LogCalibrationInformation(token, InformationType.PartialCalibrationDataReported);
 
                 // Error - Calibration failed.
-                return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailedUnexpectedly), suffix ?? string.Empty, endOfLine ?? string.Empty);
-            case CalibrationBarcodeProvenance.Unknown:
+                return (LogCalibrationInformation(token, InformationType.CalibrationFailedUnexpectedly), suffix ?? string.Empty, endOfLine ?? string.Empty);
+            case Calibration.BarcodeProvenance.Unknown:
                 provenance = BarcodeProvenance(data);
                 switch (provenance) {
-                    case CalibrationBarcodeProvenance.Baseline:
-                    case CalibrationBarcodeProvenance.PartialBaseline:
+                    case Calibration.BarcodeProvenance.Baseline:
+                    case Calibration.BarcodeProvenance.PartialBaseline:
 
                         // Error - The reported data is for the wrong calibration barcode.
-                        LogCalibrationInformation(token, CalibrationInformationType.IncorrectCalibrationDataReported);
+                        LogCalibrationInformation(token, InformationType.IncorrectCalibrationDataReported);
 
                         // Error - Calibration failed.
-                        return (LogCalibrationInformation(token, CalibrationInformationType.CalibrationFailed), suffix ?? string.Empty, endOfLine ?? string.Empty);
-                    case CalibrationBarcodeProvenance.Unknown:
+                        return (LogCalibrationInformation(token, InformationType.CalibrationFailed), suffix ?? string.Empty, endOfLine ?? string.Empty);
+                    case Calibration.BarcodeProvenance.Unknown:
 
                         // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
-                        return (LogCalibrationInformation(token, CalibrationInformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
-                    case CalibrationBarcodeProvenance.DeadKey:
+                        return (LogCalibrationInformation(token, InformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
+                    case Calibration.BarcodeProvenance.DeadKey:
                         break;
-                    case CalibrationBarcodeProvenance.PartialDeadkey:
-                    case CalibrationBarcodeProvenance.NoData:
+                    case Calibration.BarcodeProvenance.PartialDeadkey:
+                    case Calibration.BarcodeProvenance.NoData:
                         break;
                     default:
                         throw new ArgumentOutOfRangeException(
@@ -2472,13 +2466,13 @@ public class Calibrator {
                 }
 
                 break;
-            case CalibrationBarcodeProvenance.NoData:
+            case Calibration.BarcodeProvenance.NoData:
 
                 // Error - No calibration data was reported.
-                return (LogCalibrationInformation(token, CalibrationInformationType.NoCalibrationDataReported), suffix ?? string.Empty, endOfLine ?? string.Empty);
-            case CalibrationBarcodeProvenance.Baseline:
-            case CalibrationBarcodeProvenance.DeadKey:
-            case CalibrationBarcodeProvenance.PartialBaseline:
+                return (LogCalibrationInformation(token, InformationType.NoCalibrationDataReported), suffix ?? string.Empty, endOfLine ?? string.Empty);
+            case Calibration.BarcodeProvenance.Baseline:
+            case Calibration.BarcodeProvenance.DeadKey:
+            case Calibration.BarcodeProvenance.PartialBaseline:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(
@@ -2614,7 +2608,7 @@ public class Calibrator {
             // to act as a temporary delimiter.
             return (LogCalibrationInformation(
                 InitializeTokenData(),
-                CalibrationInformationType.NoTemporaryDelimiterCandidate), suffix ?? string.Empty, endOfLine ?? string.Empty);
+                InformationType.NoTemporaryDelimiterCandidate), suffix ?? string.Empty, endOfLine ?? string.Empty);
         }
 
         try {
@@ -2636,7 +2630,7 @@ public class Calibrator {
             // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
             return (LogCalibrationInformation(
                 InitializeTokenData(),
-                CalibrationInformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
+                InformationType.UnrecognisedData), suffix ?? string.Empty, endOfLine ?? string.Empty);
         }
         catch (ArgumentException argumentException) {
             throw new CalibrationException(
@@ -2654,7 +2648,7 @@ public class Calibrator {
 
         // If no sequence types are detected, then return.
         return (!DetectSequenceTypes(
-                   data.Split([splitKeyCharacter], StringSplitOptions.None).ToList(),
+                   [.. data.Split([splitKeyCharacter], StringSplitOptions.None)],
                    reportedCharacterList,
                    tempSpaceCharacter)
                    ? InitializeTokenData()
@@ -2686,8 +2680,8 @@ public class Calibrator {
     /// <param name="reportedSegments">The reported segments of character sequences.</param>
     /// <param name="lineFeedChar">The reported character deemed to map to an LF character.</param>
     /// <returns>The amended calibration token.</returns>
-    private CalibrationToken ConvertToSegments(
-        CalibrationToken token,
+    private Token ConvertToSegments(
+        Token token,
         string data,
         IReadOnlyList<List<string>> expectedSegments,
         out List<List<string>> reportedSegments,
@@ -2704,9 +2698,9 @@ public class Calibrator {
         token = trailingCrLfChars.Length > 0
                     ? LogCalibrationInformation(
                         token,
-                        CalibrationInformationType.EndOfLineTransmitted,
+                        InformationType.EndOfLineTransmitted,
                         trailingCrLfChars)
-                    : LogCalibrationInformation(token, CalibrationInformationType.EndOfLineNotTransmitted);
+                    : LogCalibrationInformation(token, InformationType.EndOfLineNotTransmitted);
 
         // Set the reported character deemed to represent a line feed (LF) character. Return an ASCII 0 if no
         // such character is reported.
@@ -2720,7 +2714,7 @@ public class Calibrator {
         // barcode scanner dead keys.
         if (!data.TryUnusedExtendedAsciiCharacter(out var tempSpaceHolder)) {
             // Error - The reported calibration data cannot be processed. No character can be determined to act as a temporary delimiter.
-            return LogCalibrationInformation(token, CalibrationInformationType.NoTemporaryDelimiterCandidate);
+            return LogCalibrationInformation(token, InformationType.NoTemporaryDelimiterCandidate);
         }
 
         /* If a dead key on the barcode scanner keyboard layout matches a dead key on the computer keyboard layout, and assuming that
@@ -2740,7 +2734,7 @@ public class Calibrator {
             ()
 #endif
                 .Matches(data) is { Count: > 0 }) {
-            token = LogCalibrationInformation(token, CalibrationInformationType.NonCorrespondingKeyboardLayouts);
+            token = LogCalibrationInformation(token, InformationType.NonCorrespondingKeyboardLayouts);
         }
 
         /* If there are non-matching reported dead keys, the keyboard layouts do not match, so we will record this.
@@ -2798,7 +2792,7 @@ public class Calibrator {
         // This test is not conclusive, but is likely to report any problems.
         if (segments.Count < 2) {
             // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
-            return LogCalibrationInformation(token, CalibrationInformationType.UnrecognisedData);
+            return LogCalibrationInformation(token, InformationType.UnrecognisedData);
         }
 
         // The use of prefixes can lead to edge conditions where the prefix is segmented prematurely. We should only do this check when the 
@@ -2862,7 +2856,7 @@ public class Calibrator {
 
         if (headerDelimiterIdx < 0 && prefixOffsetIndex == 0) {
             // Error - The reported calibration data cannot be processed. It does not include expected delimiters.
-            return LogCalibrationInformation(token, CalibrationInformationType.NoDelimiters);
+            return LogCalibrationInformation(token, InformationType.NoDelimiters);
         }
 
         // If the first occurrence of the delimiter is the start of a run of spaces, Find the end of the run.
@@ -2884,10 +2878,10 @@ public class Calibrator {
 
             // Add the first data segment (for invariant characters), splitting by space delimiters.
 
-            segments[0][(headerDelimiterIdx + 2)..].Split('\u0020').ToList(),
+            [.. segments[0][(headerDelimiterIdx + 2)..].Split('\u0020')],
 
             // Add the second data segment (for non-invariant characters), splitting by space delimiters.
-            segments[1].Split('\u0020').ToList()
+            [.. segments[1].Split('\u0020')]
         ];
 
         // If we did not include tests for Format 06, then we need to insert some empty entries between the suffix and the rest of the data.
@@ -2917,9 +2911,9 @@ public class Calibrator {
                 // Pad the segment list with empty segments if necessary.
                 reportedSegments.Add([]);
             }
-            else if (segmentIdx > (int)CalibrationSegments.UnitSeparatorSegment) {
+            else if (segmentIdx > (int)Segments.UnitSeparatorSegment) {
                 // If the barcode scanner included a suffix that has split into segments, concatenate the into a single suffix segment.
-                reportedSegments[(int)CalibrationSegments.SuffixSegment][0] = reportedSegments[(int)CalibrationSegments.SuffixSegment][0] += $"{new string(' ', 3)}{segments[segmentIdx]}";
+                reportedSegments[(int)Segments.SuffixSegment][0] = reportedSegments[(int)Segments.SuffixSegment][0] += $"{new string(' ', 3)}{segments[segmentIdx]}";
             }
             else {
                 // Add the segment.
@@ -2928,7 +2922,7 @@ public class Calibrator {
         }
 
         // Fix up the space holders in data segments.
-        for (var segmentIdx = (int)CalibrationSegments.PrefixSegment; segmentIdx <= (int)CalibrationSegments.AdditionalAsciiSegment; segmentIdx++) {
+        for (var segmentIdx = (int)Segments.PrefixSegment; segmentIdx <= (int)Segments.AdditionalAsciiSegment; segmentIdx++) {
             var sequences = reportedSegments[segmentIdx];
             var expectedSequences = expectedSegments[segmentIdx];
             var fixedUpReportedSegment = new List<string>();
@@ -3017,10 +3011,10 @@ public class Calibrator {
 
         // Replace temporary space holders in suffix and fix up.
 
-        if (reportedSegments[(int)CalibrationSegments.SuffixSegment].Count > 0 
-            && !string.IsNullOrEmpty(reportedSegments[(int)CalibrationSegments.SuffixSegment][0])) {
-            reportedSegments[(int)CalibrationSegments.SuffixSegment][0] = 
-                reportedSegments[(int)CalibrationSegments.SuffixSegment][0].Replace(tempSpaceHolder, '\u0020');
+        if (reportedSegments[(int)Segments.SuffixSegment].Count > 0 
+            && !string.IsNullOrEmpty(reportedSegments[(int)Segments.SuffixSegment][0])) {
+            reportedSegments[(int)Segments.SuffixSegment][0] = 
+                reportedSegments[(int)Segments.SuffixSegment][0].Replace(tempSpaceHolder, '\u0020');
         }
 
         return token;
@@ -3067,7 +3061,7 @@ public class Calibrator {
     /// <param name="platform">Operating system platform.</param>
     /// <returns>The calibration token.</returns>
     private void ProcessReportedSegments(
-        CalibrationToken token,
+        Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments,
         bool? capsLock,
@@ -3174,68 +3168,68 @@ public class Calibrator {
                         current + $"{ambiguousCharacter}, ");
 
         // Log information.
-        Token LogInformation(
-            CalibrationToken localToken,
-            CalibrationInformationType informationType,
+        EnvToken LogInformation(
+            Token localToken,
+            InformationType informationType,
             string data = "") =>
             () =>
-                new Lazy<CalibrationToken>(
+                new Lazy<Token>(
                     LogCalibrationInformation(
                         localToken,
                         informationType,
                         data));
 
         // Determine the Unicode block name for the script represented by the OS-configured keyboard layout.
-        Token DetermineTheUnicodeBlockNameForTheKeyboardScript(CalibrationToken localToken) =>
+        EnvToken DetermineTheUnicodeBlockNameForTheKeyboardScript(Token localToken) =>
             () => {
                 _tokenExtendedDataKeyboardScript =
-                    ResolveKeyboardScript(reportedSegments[(int)CalibrationSegments.InvariantSegment], capsLock.GetValueOrDefault());
+                    ResolveKeyboardScript(reportedSegments[(int)Segments.InvariantSegment], capsLock.GetValueOrDefault());
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Obtain the computed case conversion characteristics of the system based on observations.
-        Token ObtainTheSystemCaseConversionCharacteristics(CalibrationToken localToken) =>
+        EnvToken ObtainTheSystemCaseConversionCharacteristics(Token localToken) =>
             () => {
                 caseConversionCharacteristics = new CaseConversionCharacteristics(
-                    reportedSegments[(int)CalibrationSegments.InvariantSegment],
+                    reportedSegments[(int)Segments.InvariantSegment],
                     _tokenExtendedDataKeyboardScript ?? "Latin",
                     capsLock);
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Log information - The computer keyboard supports the following script: {0}
-        Token RecordTheKeyboardScript(CalibrationToken localToken) =>
+        EnvToken RecordTheKeyboardScript(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.KeyboardScript,
+                InformationType.KeyboardScript,
                 _tokenExtendedDataKeyboardScript ?? "<unknown>");
 
         // Log Information - The computer keyboard is configured for the following platform: {0}
-        Token RecordTheOperatingSystemPlatform(CalibrationToken localToken) =>
+        EnvToken RecordTheOperatingSystemPlatform(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.Platform,
+                InformationType.Platform,
                 platform.ToString());
 
         // Log warning - Caps Lock may be switched on.
-        Token LogCapsLockProbablyOn(CalibrationToken localToken) =>
+        EnvToken LogCapsLockProbablyOn(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.CapsLockProbablyOn);
+                InformationType.CapsLockProbablyOn);
 
         // Infer the case conversion characteristics of the scanner and keyboard.
-        Token DetermineTheBarcodeScannerCaseConversionBehaviourForCapsLockOn(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
+        EnvToken DetermineTheBarcodeScannerCaseConversionBehaviourForCapsLockOn(Token localToken) =>
+            () => new Lazy<Token>(
                 InferCaseConversionCapsLockOn(
                     localToken,
                     caseConversionCharacteristics!,
                     platform));
 
         // Infer the case conversion characteristics of the scanner and keyboard.
-        Token DetermineTheBarcodeScannerCaseConversionBehaviourForCapsLockOffOrUnknown(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
+        EnvToken DetermineTheBarcodeScannerCaseConversionBehaviourForCapsLockOffOrUnknown(Token localToken) =>
+            () => new Lazy<Token>(
                 InferCaseConversionCapsLockOffOrUnknown(
                     localToken,
                     caseConversionCharacteristics!,
@@ -3244,91 +3238,91 @@ public class Calibrator {
                     LogCapsLockProbablyOn));
 
         // Test invariant characters for issues.
-        Token DetectAnyInvariantCharacterIssues(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
+        EnvToken DetectAnyInvariantCharacterIssues(Token localToken) =>
+            () => new Lazy<Token>(
                 DetectCharacterIssues(localToken, reportedSegments, expectedSegments, 1, true));
 
         // Test additional characters for issues.
-        Token DetectAnyAdditionalAsciiCharacterIssues(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
+        EnvToken DetectAnyAdditionalAsciiCharacterIssues(Token localToken) =>
+            () => new Lazy<Token>(
                 DetectCharacterIssues(localToken, reportedSegments, expectedSegments, 2));
 
         // Compare the counts of reported and expected characters.
 #pragma warning disable S2589 // Boolean expressions should not be gratuitous
-        Token DetectAnyCharacterCountMismatches(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
-                reportedSegments[(int)CalibrationSegments.InvariantSegment].Count switch {
-                    var count when expectedSegments[(int)CalibrationSegments.InvariantSegment].Count == count =>
+        EnvToken DetectAnyCharacterCountMismatches(Token localToken) =>
+            () => new Lazy<Token>(
+                reportedSegments[(int)Segments.InvariantSegment].Count switch {
+                    var count when expectedSegments[(int)Segments.InvariantSegment].Count == count =>
 
                         // Detect differences between reported and expected characters
                         DetectDifferences(
                             localToken,
-                            reportedSegments[(int)CalibrationSegments.InvariantSegment],
-                            expectedSegments[(int)CalibrationSegments.InvariantSegment],
+                            reportedSegments[(int)Segments.InvariantSegment],
+                            expectedSegments[(int)Segments.InvariantSegment],
                             true,
                             out _processedInvariantCharacters),
-                    var count when expectedSegments[(int)CalibrationSegments.InvariantSegment].Count > count =>
+                    var count when expectedSegments[(int)Segments.InvariantSegment].Count > count =>
 
                         // Error - Some invariant characters cannot be detected.
                         LogCalibrationInformation(
                             localToken,
-                            CalibrationInformationType.UndetectedInvariantCharacters),
+                            InformationType.UndetectedInvariantCharacters),
                     _ =>
 
                         // Error - Too many characters detected. The wrong barcode may have been scanned.
                         LogCalibrationInformation(
                             localToken,
-                            CalibrationInformationType.TooManyCharactersDetected)
+                            InformationType.TooManyCharactersDetected)
                 });
 #pragma warning restore S2589 // Boolean expressions should not be gratuitous
 
         // Log warning - The barcode scanner is not transmitting AIM Identifiers.
-        Token LogAWarningThatTheScannerDoesNotTransmitAimIdentifiers(CalibrationToken localToken) =>
-            LogInformation(localToken, CalibrationInformationType.AimNotTransmitted);
+        EnvToken LogAWarningThatTheScannerDoesNotTransmitAimIdentifiers(Token localToken) =>
+            LogInformation(localToken, InformationType.AimNotTransmitted);
 
         // Initialise the processed invariant characters and return the token.
-        Token InitialiseProcessedInvariantCharacters(CalibrationToken localToken) =>
+        EnvToken InitialiseProcessedInvariantCharacters(Token localToken) =>
             () => {
                 _processedInvariantCharacters = new Dictionary<char, char>();
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Log error - Some invariant characters cannot be detected.
-        Token LogAnErrorThatSomeInvariantCharactersWereNotDetected(CalibrationToken localToken) =>
+        EnvToken LogAnErrorThatSomeInvariantCharactersWereNotDetected(Token localToken) =>
             LogInformation(
                 InitialiseProcessedInvariantCharacters(localToken)().Value,
-                CalibrationInformationType.UndetectedInvariantCharacters);
+                InformationType.UndetectedInvariantCharacters);
 
 
         // Compare the counts of reported and expected non-invariant characters.
 #pragma warning disable S2589 // Boolean expressions should not be gratuitous
-        Token DetectAnyNonInvariantCharacterCountMismatches(CalibrationToken localToken) =>
-            () => new Lazy<CalibrationToken>(
-                reportedSegments[(int)CalibrationSegments.AdditionalAsciiSegment].Count switch {
-                    var count when expectedSegments[(int)CalibrationSegments.AdditionalAsciiSegment].Count == count =>
+        EnvToken DetectAnyNonInvariantCharacterCountMismatches(Token localToken) =>
+            () => new Lazy<Token>(
+                reportedSegments[(int)Segments.AdditionalAsciiSegment].Count switch {
+                    var count when expectedSegments[(int)Segments.AdditionalAsciiSegment].Count == count =>
                         DetectDifferences(
-                            new CalibrationToken(localToken),
-                            reportedSegments[(int)CalibrationSegments.AdditionalAsciiSegment],
-                            expectedSegments[(int)CalibrationSegments.AdditionalAsciiSegment],
+                            new Token(localToken),
+                            reportedSegments[(int)Segments.AdditionalAsciiSegment],
+                            expectedSegments[(int)Segments.AdditionalAsciiSegment],
                             false,
                             out _processedNonInvariantCharacters),
-                    var count when expectedSegments[(int)CalibrationSegments.AdditionalAsciiSegment].Count > count =>
+                    var count when expectedSegments[(int)Segments.AdditionalAsciiSegment].Count > count =>
 
                         // Warning - Cannot detect all non-invariant characters.
                         LogCalibrationInformation(
                             localToken,
-                            CalibrationInformationType.SomeNonInvariantCharactersUnreported),
+                            InformationType.SomeNonInvariantCharactersUnreported),
                     _ =>
 
                         // Error - Too many characters detected. The wrong barcode may have been scanned.
                         LogCalibrationInformation(
                             localToken,
-                            CalibrationInformationType.TooManyCharactersDetected)
+                            InformationType.TooManyCharactersDetected)
                 });
 #pragma warning restore S2589 // Boolean expressions should not be gratuitous
 
         // Detect unrecognised characters.
-        Token DetectUnrecognisedCharacters(CalibrationToken localToken) =>
+        EnvToken DetectUnrecognisedCharacters(Token localToken) =>
             () => {
                 _tokenExtendedDataUnrecognisedKeys =
                     _processedInvariantCharacters?
@@ -3337,30 +3331,30 @@ public class Calibrator {
                         .Concat(
                             _processedNonInvariantCharacters?
                                 .Where(m => m.Key == '\0')
-                                .Select(m => m.Value) ?? new List<char>())
+                                .Select(m => m.Value) ?? [])
                         .ToList() ?? [];
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // A single unrecognised character can be encoded successfully.
-        Token EncodeTheSingleUnrecognisedCharacter(CalibrationToken localToken) =>
+        EnvToken EncodeTheSingleUnrecognisedCharacter(Token localToken) =>
             () => {
                 _tokenExtendedDataCharacterMap.Add(new KeyValuePair<char, char>('\0',
                     _tokenExtendedDataUnrecognisedKeys[0]));
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Add ASCII control characters to the reported character set.
-        Token AddAsciiControlCharactersToTheReportedCharacterSet(CalibrationToken localToken) =>
+        EnvToken AddAsciiControlCharactersToTheReportedCharacterSet(Token localToken) =>
             () => {
                 _tokenExtendedDataReportedCharacters += "\0\u001C\u001D\u001E\u001F\u0004";
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Create a collection of dictionary entries for all processed characters.
-        Token CreateEntriesForAllProcessedCharacters(CalibrationToken localToken) =>
+        EnvToken CreateEntriesForAllProcessedCharacters(Token localToken) =>
             () => {
                 // Create a collection of dictionary entries for all processed characters.
                 selectedCharacterKeyValuePairs =
@@ -3372,11 +3366,11 @@ public class Calibrator {
                         .Where(m => m.Key != '\0')
                         .Select(m => m)).ToList();
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Check for ambiguities between the character map and the ligature map.
-        Token CheckForAmbiguitiesBetweenCharacterAndLigatureMaps(CalibrationToken localToken) =>
+        EnvToken CheckForAmbiguitiesBetweenCharacterAndLigatureMaps(Token localToken) =>
             () => {
                 ambiguousLigatureStrings =
                     (from k in
@@ -3385,138 +3379,138 @@ public class Calibrator {
                      where k.All(c => _tokenExtendedDataCharacterMap.ContainsKey(c))
                      select k).ToList<string>();
 
-                return new Lazy<CalibrationToken>(localToken);
+                return new Lazy<Token>(localToken);
             };
 
         // Set an indicator in the token representing if the barcode scanner and
         // computer keyboards are in correspondence.
-        Token DetermineIfKeyboardsMatch(CalibrationToken localToken) =>
+        EnvToken DetermineIfKeyboardsMatch(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(
+                new Lazy<Token>(
                     DoDetermineIfKeyboardsMatch(
                         localToken,
                         caseConversionCharacteristics!));
 
         // Log information that the scanner and operating system keyboard layouts do not match.
-        Token LogNonCorrespondingKeyboardLayouts(CalibrationToken localToken) =>
+        EnvToken LogNonCorrespondingKeyboardLayouts(Token localToken) =>
 
             // Warning - The barcode scanner and computer keyboard layouts do not correspond.
             LogInformation(
                 localToken,
-                CalibrationInformationType.NonCorrespondingKeyboardLayouts);
+                InformationType.NonCorrespondingKeyboardLayouts);
 
         // Log a warning that the barcode scanner and computer keyboard layouts do not correspond
         // for invariant characters.
-        Token LogNonCorrespondingKeyboardLayoutsForInvariantCharacters(CalibrationToken localToken) =>
+        EnvToken LogNonCorrespondingKeyboardLayoutsForInvariantCharacters(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants);
+                InformationType.NonCorrespondingKeyboardLayoutsForInvariants);
 
         // Log a warning that the barcode scanner and computer keyboard layouts do not correspond
         // for non-invariant characters.
-        Token LogNonCorrespondingKeyboardLayoutsForAdditionalAsciiCharacters(CalibrationToken localToken) =>
+        EnvToken LogNonCorrespondingKeyboardLayoutsForAdditionalAsciiCharacters(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+                InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
 
         // Log information that the scanner and operating system keyboard layouts do not match.
-        Token LogNonDeterminationOfKeyboardLayoutCorrespondence(CalibrationToken localToken) =>
+        EnvToken LogNonDeterminationOfKeyboardLayoutCorrespondence(Token localToken) =>
 
             // Warning - The correspondence of the barcode scanner and computer keyboard layouts
             // cannot be determined.
             LogInformation(
                 localToken,
-                CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence);
+                InformationType.NonDeterminableKeyboardLayoutCorrespondence);
 
         // Resolve keyboard mismatches for dead keys, determining if they affect invariant or 
         // non-invariant characters.
-        Token ResolveAnyKeyboardMismatches(CalibrationToken localToken) =>
+        EnvToken ResolveAnyKeyboardMismatches(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(ResolveUnspecifiedKeyboardMismatches(localToken));
+                new Lazy<Token>(ResolveUnspecifiedKeyboardMismatches(localToken));
 
         // Gets a de-duplicated character mapping between
         // reported and expected characters.
-        Token RetrieveTheDeduplicatedCharacterMap(CalibrationToken localToken) =>
+        EnvToken RetrieveTheDeduplicatedCharacterMap(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(
+                new Lazy<Token>(
                     CreateDeduplicatedCharacterMap(
                         localToken,
                         selectedCharacterKeyValuePairs));
 
         // Process the reported data to determine any issues with ASCII control characters (ASCII 29, 28, 30 and 31).
-        Token DetermineAnyIssuesForAsciiControlCharacters(CalibrationToken localToken) =>
+        EnvToken DetermineAnyIssuesForAsciiControlCharacters(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(
+                new Lazy<Token>(
                     DoProcessAsciiControlCharacters(localToken, reportedSegments, expectedSegments));
 
         // Check for missed ambiguities
-        Token CheckForAnyMissedAmbiguities(CalibrationToken localToken) =>
+        EnvToken CheckForAnyMissedAmbiguities(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(DoProcessMissedAmbiguities(localToken));
+                new Lazy<Token>(DoProcessMissedAmbiguities(localToken));
 
         // Check for Format 05 and 06 incompatibility
-        Token DetermineCompatibilityWithFormat05AndFormat06Barcodes(CalibrationToken localToken) =>
+        EnvToken DetermineCompatibilityWithFormat05AndFormat06Barcodes(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(DoProcessForIsoIec15434MessageHeaderIncompatibility(localToken));
+                new Lazy<Token>(DoProcessForIsoIec15434MessageHeaderIncompatibility(localToken));
 
         // Check for EDI incompatibility
-        Token DetermineCompatibilityWithFEdiBarcodes(CalibrationToken localToken) =>
+        EnvToken DetermineCompatibilityWithFEdiBarcodes(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(DoProcessForIsoIec15434EdiIncompatibility(localToken));
+                new Lazy<Token>(DoProcessForIsoIec15434EdiIncompatibility(localToken));
 
-        Token LogTheAmbiguousLigatureCharacters(CalibrationToken localToken) =>
+        EnvToken LogTheAmbiguousLigatureCharacters(Token localToken) =>
 
             // Error - Some reported characters are ambiguous. They can be reported individually
             // but are also used to compose ligatures: {0}
             LogInformation(
                 localToken,
-                CalibrationInformationType.LigatureCharacters,
+                InformationType.LigatureCharacters,
                 AmbiguousLigatureText()[..^2].ToControlPictures());
 
         // Initialise the calibrator from the processed calibration token.
-        Token InitializeFromTokenData(CalibrationToken localToken) =>
+        EnvToken InitializeFromTokenData(Token localToken) =>
             () =>
-                new Lazy<CalibrationToken>(DoInitializeFromTokenData(localToken));
+                new Lazy<Token>(DoInitializeFromTokenData(localToken));
 
         // Test to see if a keyboard script was inferred.
-        bool TheKeyboardScriptWasDetermined(CalibrationToken localToken)
+        bool TheKeyboardScriptWasDetermined(Token localToken)
             => !string.IsNullOrWhiteSpace(_tokenExtendedDataKeyboardScript);
 
         // Test to see if Caps Lock is reported to be on.
-        bool CapsLockWasReportedToBeOn(CalibrationToken localToken)
+        bool CapsLockWasReportedToBeOn(Token localToken)
             => capsLock.GetValueOrDefault();
 
         // Test to see if the scanner is not transmitting an AIM identifier 
-        bool TheScannerDidNotTransmitAnAimIdentifier(CalibrationToken localToken)
-            => reportedSegments[(int)CalibrationSegments.PrefixSegment].Count == 0;
+        bool TheScannerDidNotTransmitAnAimIdentifier(Token localToken)
+            => reportedSegments[(int)Segments.PrefixSegment].Count == 0;
 
         // Test to see if there are any undetected invariant characters.
-        bool AnyInvariantCharactersWereNotDetected(CalibrationToken localToken)
+        bool AnyInvariantCharactersWereNotDetected(Token localToken)
             => _processedInvariantCharacters is null;
 
-        bool ThereIsASingleUnrecognisedCharacter(CalibrationToken localToken)
+        bool ThereIsASingleUnrecognisedCharacter(Token localToken)
             => _tokenExtendedDataUnrecognisedKeys.Count == 1;
 
         // Test to see if the match or mismatch of the scanner and keyboard layouts was determined.
-        bool TheMatchBetweenTheScannerAndComputerKeyboardLayoutsWasDetermined(CalibrationToken localToken) =>
+        bool TheMatchBetweenTheScannerAndComputerKeyboardLayoutsWasDetermined(Token localToken) =>
             localToken.KeyboardMatch.HasValue;
 
         // Test to see if the match or mismatch of the scanner and keyboard layouts do not match.
-        bool TheScannerAndComputerKeyboardLayoutsDoNotMatch(CalibrationToken localToken) =>
+        bool TheScannerAndComputerKeyboardLayoutsDoNotMatch(Token localToken) =>
             localToken.KeyboardMatch == false;
 
         // Test to see if any character mismatches were detected for invariant characters.
-        bool MismatchesWereDetectedForInvariantCharacters(CalibrationToken localToken) =>
+        bool MismatchesWereDetectedForInvariantCharacters(Token localToken) =>
             _processedInvariantCharacters?.Count > 0;
 
         // Test to see if any character mismatches were detected for non-invariant characters.
-        bool MismatchesWereDetectedForAdditionalAsciiCharacters(CalibrationToken localToken) =>
+        bool MismatchesWereDetectedForAdditionalAsciiCharacters(Token localToken) =>
             _processedNonInvariantCharacters?.Count > 0;
 
         // ReSharper restore BadParensLineBreaks
 
         // Test to see if any ambiguous ligature strings were detected.
-        bool AmbiguousLigatureStringsWereDetected(CalibrationToken localToken) =>
+        bool AmbiguousLigatureStringsWereDetected(Token localToken) =>
             ambiguousLigatureStrings.Any();
     }
 
@@ -3526,7 +3520,7 @@ public class Calibrator {
     /// <param name="token">The current calibration token.</param>
     /// <param name="reportedCharacterList">The reported character sequences.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken ProcessDeadKeyReportedCharacterList(CalibrationToken token, IReadOnlyList<string> reportedCharacterList) {
+    private Token ProcessDeadKeyReportedCharacterList(Token token, IReadOnlyList<string> reportedCharacterList) {
         // Flag to record a first error, where we only fail on a second.
         var firstError = false;
 
@@ -3574,7 +3568,7 @@ public class Calibrator {
                                         // multiple dead key sequences representing different expected characters.
                                         return LogCalibrationInformation(
                                             InitializeTokenData(),
-                                            CalibrationInformationType.DeadKeyMultiMapping,
+                                            InformationType.DeadKeyMultiMapping,
                                             reportedCharacterSequence.ToControlPictures(),
                                             $"{expectedSequence} {_tokenDataValue.ToControlPictureString()}{expectedCharacter[0].ToControlPicture()}");
                                     }
@@ -3583,7 +3577,7 @@ public class Calibrator {
                                     // represent invariant characters: {0}
                                     token = LogCalibrationInformation(
                                         InitializeTokenData(),
-                                        CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters,
+                                        InformationType.DeadKeyMultiMappingNonInvariantCharacters,
                                         reportedCharacterSequence.ToControlPictures(),
                                         $"{expectedSequence} {_tokenDataValue.ToControlPictureString()}{expectedCharacter[0].ToControlPicture()}");
                                 }
@@ -3605,7 +3599,7 @@ public class Calibrator {
                                     // represent invariant characters: {0}
                                     token = LogCalibrationInformation(
                                         InitializeTokenData(),
-                                        CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters,
+                                        InformationType.DeadKeyMultiMappingNonInvariantCharacters,
                                         reportedCharacterSequence.ToControlPictures(),
                                         $"{expectedSequence} {_tokenDataValue.ToControlPictureString()}{expectedCharacter[0].ToControlPicture()}");
                                 }
@@ -3666,7 +3660,7 @@ public class Calibrator {
                                                 // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                                 return LogCalibrationInformation(
                                                     InitializeTokenData(),
-                                                    CalibrationInformationType.GroupSeparatorMapping,
+                                                    InformationType.GroupSeparatorMapping,
                                                     reportedSequence,
                                                     expectedSequence);
                                             }
@@ -3675,7 +3669,7 @@ public class Calibrator {
                                             // elements included in a barcode.
                                             token = LogCalibrationInformation(
                                                 InitializeTokenData(),
-                                                CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                                                InformationType.ControlCharacterMappingAdditionalDataElements,
                                                 reportedSequence,
                                                 expectedSequence);
                                         }
@@ -3683,7 +3677,7 @@ public class Calibrator {
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                             return LogCalibrationInformation(
                                                 InitializeTokenData(),
-                                                CalibrationInformationType.GroupSeparatorMapping,
+                                                InformationType.GroupSeparatorMapping,
                                                 reportedSequence,
                                                 expectedSequence);
                                         }
@@ -3701,7 +3695,7 @@ public class Calibrator {
                                         // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                         return LogCalibrationInformation(
                                             InitializeTokenData(),
-                                            CalibrationInformationType.GroupSeparatorMapping,
+                                            InformationType.GroupSeparatorMapping,
                                             reportedCharacterSequence.ToControlPictures(),
                                             $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {'\u001D'.ToControlPictureString()}{reportedCharacterSequence[1].ToControlPictureString()}");
                                     }
@@ -3718,7 +3712,7 @@ public class Calibrator {
                                         // included in a barcode.
                                         token = LogCalibrationInformation(
                                             InitializeTokenData(),
-                                            CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                                            InformationType.ControlCharacterMappingAdditionalDataElements,
                                             reportedCharacterSequence.ToControlPictures(),
                                             $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter[0].ToControlPictureString()} {'\u001D'.ToControlPictureString()}{reportedCharacterSequence[1].ToControlPictureString()}");
                                 }
@@ -3775,7 +3769,7 @@ public class Calibrator {
                                 // Error - Some key combinations that include invariant characters are not recognised: {0}
                                 return LogCalibrationInformation(
                                     InitializeTokenData(),
-                                    CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants,
+                                    InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants,
                                     null,
 
                                     // ReSharper disable once StyleCop.SA1118
@@ -3795,7 +3789,7 @@ public class Calibrator {
                             // Warning - Some combinations of non-invariant characters are not recognised: {0}
                             token = LogCalibrationInformation(
                                 InitializeTokenData(),
-                                CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised,
+                                InformationType.SomeNonInvariantCharacterCombinationsUnrecognised,
                                 null,
                                 _tokenDataValue.ToControlPictureString() +
                                 unrecognisedCharacter[0].ToControlPictureString());
@@ -3817,8 +3811,8 @@ public class Calibrator {
     /// <param name="reportedCharacterSequence">A reported character sequence.</param>
     /// <param name="expectedCharacter">The expected character.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DetermineIfFormat0605UnreadableWhenNoAscii30(
-        CalibrationToken token,
+    private Token DetermineIfFormat0605UnreadableWhenNoAscii30(
+        Token token,
         string reportedCharacterSequence,
         string expectedCharacter) {
 
@@ -3831,35 +3825,35 @@ public class Calibrator {
 
         // Test if the reported sequence is \00 and the character map does not map
         // a reported 0 to another character.
-        CalibrationToken TestIfDeadKeySequence0NoMap() =>
+        Token TestIfDeadKeySequence0NoMap() =>
             reportedCharacterSequence[1] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.IsoIec15434SyntaxNotRecognised)
+                    InformationType.IsoIec15434SyntaxNotRecognised)
                 : token;
 
         // Test if the reported dead key sequence (e.g., \0à) reports a character (e.g., à)
         // that maps to a 0.
-        CalibrationToken TestIfDeadKeySequenceCharacterMapsTo0() =>
+        Token TestIfDeadKeySequenceCharacterMapsTo0() =>
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.IsoIec15434SyntaxNotRecognised)
+                    InformationType.IsoIec15434SyntaxNotRecognised)
 
                 // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements
                 // included in a barcode.
                 : LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                    InformationType.ControlCharacterMappingAdditionalDataElements,
                     reportedCharacterSequence[1].ToControlPictureString(),
                     $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {_tokenExtendedDataCharacterMap[reportedCharacterSequence[1]]}");
 
         // Test for a potential conflict with the character map.
-        CalibrationToken TestPotentialConflictWithCharacterMap() =>
+        Token TestPotentialConflictWithCharacterMap() =>
             _tokenExtendedDataCharacterMap.ContainsKey(reportedCharacterSequence[1])
 
                 // If the reported dead key sequence (e.g. \0à) reports a character (à) that maps to a 0,
@@ -3880,8 +3874,8 @@ public class Calibrator {
     /// <param name="reportedCharacterSequence">A reported character sequence.</param>
     /// <param name="expectedCharacter">The expected character.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DetermineIfEdiUnreadableWhenNoAscii28Or31(
-        CalibrationToken token,
+    private Token DetermineIfEdiUnreadableWhenNoAscii28Or31(
+        Token token,
         string reportedCharacterSequence,
         string expectedCharacter) {
 
@@ -3895,35 +3889,35 @@ public class Calibrator {
 
         // Test if the reported sequence is \00 and the character map does not map
         // a reported 0 to another character.
-        CalibrationToken TestIfDeadKeySequence0NoMap() =>
+        Token TestIfDeadKeySequence0NoMap() =>
             reportedCharacterSequence[1] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable)
+                    InformationType.IsoIec15434EdiNotReliablyReadable)
                 : token;
 
         // Test if the reported dead key sequence (e.g., \0à) reports a character (e.g., à)
         // that maps to a 0.
-        CalibrationToken TestIfDeadKeySequenceCharacterMapsTo0() =>
+        Token TestIfDeadKeySequenceCharacterMapsTo0() =>
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable)
+                    InformationType.IsoIec15434EdiNotReliablyReadable)
 
                 // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements
                 // included in a barcode.
                 : LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                    InformationType.ControlCharacterMappingAdditionalDataElements,
                     reportedCharacterSequence[1].ToControlPictureString(),
                     $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {_tokenExtendedDataCharacterMap[reportedCharacterSequence[1]]}");
 
         // Test for a potential conflict with the character map.
-        CalibrationToken TestPotentialConflictWithCharacterMap() =>
+        Token TestPotentialConflictWithCharacterMap() =>
             _tokenExtendedDataCharacterMap.ContainsKey(reportedCharacterSequence[1])
 
                 // If the reported dead key sequence (e.g. \0à) reports a character (à) that maps to a 0,
@@ -3982,8 +3976,8 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken ResolveUnspecifiedKeyboardMismatches(CalibrationToken token) {
-        if (token.Warnings.All(w => w.InformationType != CalibrationInformationType.NonCorrespondingKeyboardLayouts)) {
+    private Token ResolveUnspecifiedKeyboardMismatches(Token token) {
+        if (token.Warnings.All(w => w.InformationType != InformationType.NonCorrespondingKeyboardLayouts)) {
             return token;
         }
 
@@ -4001,7 +3995,7 @@ public class Calibrator {
             _ => false
         })) {
             token = LogCalibrationInformation(token,
-                CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants);
+                InformationType.NonCorrespondingKeyboardLayoutsForInvariants);
         }
 
         if (_tokenExtendedDataDeadKeysMap.Any(map => map.Value.Length == 1 && map.Value[0] switch {
@@ -4014,7 +4008,7 @@ public class Calibrator {
             _ => false
         })) {
             token = LogCalibrationInformation(token,
-                CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
+                InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
         }
 #pragma warning restore S2589 // Boolean expressions should not be gratuitous
 
@@ -4029,8 +4023,8 @@ public class Calibrator {
     ///   A collection of dictionary entries for all processed characters.
     /// </param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken CreateDeduplicatedCharacterMap(
-        CalibrationToken token,
+    private Token CreateDeduplicatedCharacterMap(
+        Token token,
         IEnumerable<KeyValuePair<char, char>> selectedCharacterKeyValuePairs) {
         var characterKeyValuePairs =
             selectedCharacterKeyValuePairs as KeyValuePair<char, char>[] ??
@@ -4038,9 +4032,9 @@ public class Calibrator {
 
         var keyValuePairs =
             selectedCharacterKeyValuePairs as KeyValuePair<char, char>[]
-         ?? characterKeyValuePairs.ToArray();
+         ?? [.. characterKeyValuePairs];
 
-        if (!keyValuePairs.Any()) {
+        if (keyValuePairs.Length == 0) {
             return token;
         }
 
@@ -4062,7 +4056,7 @@ public class Calibrator {
             duplicateNonInvariantPairs as KeyValuePair<char, char>[]
          ?? duplicateNonInvariantPairs.ToArray();
 
-        if (nonInvariantPairs.Any()) {
+        if (nonInvariantPairs.Length != 0) {
             // Remove the duplicates from the processed non-invariant characters
             nonInvariantPairs.ToList().ForEach(kvp => _processedNonInvariantCharacters?.Remove(kvp.Key));
 
@@ -4098,7 +4092,7 @@ public class Calibrator {
             // character, each representing a different expected character.
             LogCalibrationInformation(
                 token,
-                CalibrationInformationType.MultipleKeys,
+                InformationType.MultipleKeys,
                 reportedChar.ToControlPictureString(),
                 expectedString);
         }
@@ -4114,8 +4108,8 @@ public class Calibrator {
     ///   The case conversion characteristics of the system based on observations.
     /// </param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoDetermineIfKeyboardsMatch(
-        CalibrationToken token,
+    private Token DoDetermineIfKeyboardsMatch(
+        Token token,
         CaseConversionCharacteristics caseConversionCharacteristics) {
         // Set an indicator representing if the barcode scanner and computer keyboards are in correspondence.
         token.KeyboardMatch =
@@ -4253,14 +4247,14 @@ public class Calibrator {
     /// <param name="caseConversionCharacteristics">The case conversion characteristics.</param>
     /// <param name="platform">The operating system platform.</param>
     /// <returns>The calibration token, populated to inferred information.</returns>
-    private CalibrationToken InferCaseConversionCapsLockOn(
-        CalibrationToken token,
+    private Token InferCaseConversionCapsLockOn(
+        Token token,
         CaseConversionCharacteristics caseConversionCharacteristics,
         SupportedPlatform platform) {
         // Warning - Caps Lock is switched on.
         token = LogCalibrationInformation(
             token,
-            CalibrationInformationType.CapsLockOn);
+            InformationType.CapsLockOn);
 
         // CAPS LOCK is on. Test that lower case characters are reported as upper case.
         return caseConversionCharacteristics.UpperCaseConversionDetected
@@ -4278,7 +4272,7 @@ public class Calibrator {
 
         // CAPS LOCK is on. However, the case of inverted characters is not inverted. This
         // may be because the scanner is compensating for CAPS LOCK.
-        CalibrationToken TestForScannerCompensation() =>
+        Token TestForScannerCompensation() =>
             platform == SupportedPlatform.Macintosh
 
                 // This is an unusual scenario. It could occur on a Mac for a keyboard that
@@ -4293,11 +4287,11 @@ public class Calibrator {
                 // Information - Scanner may be configured to compensate for Caps Lock.
                 : LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayCompensateForCapsLock);
+                    InformationType.ScannerMayCompensateForCapsLock);
 
         // CAPS LOCK is on. However, lower case characters are not reported as upper case.
         // Test that upper case characters are reported as lower case.
-        CalibrationToken TestForScannerUpperCaseConversion() =>
+        Token TestForScannerUpperCaseConversion() =>
             caseConversionCharacteristics.LowerCaseConversionDetected
 
                 // Upper case characters are reported as lower case. This suggests that the
@@ -4307,7 +4301,7 @@ public class Calibrator {
                 // Warning - Scanner may be configured to convert characters to upper case.
                 ? LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayConvertToUpperCase)
+                    InformationType.ScannerMayConvertToUpperCase)
 
                 // For most platforms, the scanner appears to be compensating to CAPS LOCK by
                 // inverting case. Test the platform to infer the behaviour of the scanner.
@@ -4315,7 +4309,7 @@ public class Calibrator {
 
         // CAPS LOCK is on. Test the platform to infer if the scanner is configured to convert
         // characters to lower case.
-        CalibrationToken TestPlatformForScannerLowerCaseConversion() =>
+        Token TestPlatformForScannerLowerCaseConversion() =>
             platform == SupportedPlatform.Macintosh
 
                 // Apple Mac implements CAPS LOCK to perform lower-to-upper case conversion, only.
@@ -4324,10 +4318,10 @@ public class Calibrator {
                 // Warning - Scanner may be configured to convert characters to lower case.
                 : LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayConvertToLowerCase);
+                    InformationType.ScannerMayConvertToLowerCase);
 
         // CAPS LOCK is on. Test that upper case characters are reported as lower case.
-        CalibrationToken TestForLowerCaseConversion() =>
+        Token TestForLowerCaseConversion() =>
             caseConversionCharacteristics.LowerCaseConversionDetected
 
                 // Character case is being inverted as expected.
@@ -4351,12 +4345,12 @@ public class Calibrator {
     ///   A function that sets the CAPS LOCK indicator as well as a warning message.
     /// </param>
     /// <returns>The calibration token, populated to inferred information.</returns>
-    private CalibrationToken InferCaseConversionCapsLockOffOrUnknown(
-        CalibrationToken token,
+    private Token InferCaseConversionCapsLockOffOrUnknown(
+        Token token,
         CaseConversionCharacteristics caseConversionCharacteristics,
         SupportedPlatform platform,
         bool? capsLock,
-        Func<CalibrationToken, Token> setCapLockWarningAndIndicator) {
+        Func<Token, EnvToken> setCapLockWarningAndIndicator) {
         // CAPS LOCK is off or unknown. Test if lower case characters are reported as
         // upper case.
         return caseConversionCharacteristics.UpperCaseConversionDetected
@@ -4372,7 +4366,7 @@ public class Calibrator {
         // CAPS LOCK is unknown. However, the case of reported characters is being inverted.
         // Test the platform to determine if this is probably due to scanner configuration
         // or if it is more likely that CAPS LOCK may be switched on.
-        CalibrationToken TestPlatformForUnknownCapsLock() =>
+        Token TestPlatformForUnknownCapsLock() =>
             platform == SupportedPlatform.Macintosh
 
                 // Most keyboards on Apple Mac implement CAPS LOCK to only convert lower case
@@ -4384,7 +4378,7 @@ public class Calibrator {
                 // Warning - Scanner may be configured to invert character case.
                 ? LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayInvertCase)
+                    InformationType.ScannerMayInvertCase)
 
                 // One scenario here is that CAPS LOCK is switched on, but the state has not
                 // been reported to the calibration library. However, CAPS LOCK could be
@@ -4396,7 +4390,7 @@ public class Calibrator {
 
         // CAPS LOCK is off or unknown. However, the case of reported characters is being inverted.
         // Test if the CAPS LOCK state is known. 
-        CalibrationToken TestIfCapsLockKnownForCharacterInversion() =>
+        Token TestIfCapsLockKnownForCharacterInversion() =>
             capsLock is null
 
                 // The CAPS LOCK state is unknown. Test the platform to infer the scanner behaviour. 
@@ -4410,11 +4404,11 @@ public class Calibrator {
                 // Warning - Scanner may be configured to invert character case.
                 : LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayInvertCase);
+                    InformationType.ScannerMayInvertCase);
 
         // CAPS LOCK is off or unknown. Lower case characters are reported as upper case. Test if
         // upper case characters are reported as lower case.
-        CalibrationToken TestForCaseInversion() =>
+        Token TestForCaseInversion() =>
             caseConversionCharacteristics.LowerCaseConversionDetected
 
                 // CAPS LOCK may be on or the scanner may be configured to invert the case of
@@ -4424,11 +4418,11 @@ public class Calibrator {
                 // Warning - Scanner may be configured to convert characters to upper case.
                 : LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayConvertToUpperCase);
+                    InformationType.ScannerMayConvertToUpperCase);
 
         // CAPS LOCK is off or unknown. Lower case characters are not reported as upper case.
         // Test to see if upper case characters are being reported as lower case.
-        CalibrationToken TestForLowerCaseConversion() =>
+        Token TestForLowerCaseConversion() =>
             caseConversionCharacteristics.LowerCaseConversionDetected
 
                 // The scanner may be configured to convert upper case characters to lower case.
@@ -4439,7 +4433,7 @@ public class Calibrator {
                 // Warning - Scanner may be configured to convert characters to lower case.
                 ? LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.ScannerMayConvertToLowerCase)
+                    InformationType.ScannerMayConvertToLowerCase)
 
                 // The most likely scenario here is that CAPS LOCK is off and the scanner is not
                 // performing any case conversion. It is possible that CAPS LOCK is on and the 
@@ -4457,21 +4451,21 @@ public class Calibrator {
     ///   Indicates if the calibrator should return immediately on error.
     /// </param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DetermineBarcodeProvenance(CalibrationToken token, string data, out bool returnImmediately) {
+    private Token DetermineBarcodeProvenance(Token token, string data, out bool returnImmediately) {
         var immediateReturn = false;
 
         // Test the provenance of the calibration barcode.
         token = BarcodeProvenance(data) switch {
-            CalibrationBarcodeProvenance.PartialBaseline =>
+            Calibration.BarcodeProvenance.PartialBaseline =>
 
                 // Warning - Partial data reported for calibration barcode.
-                LogCalibrationInformation(token, CalibrationInformationType.PartialCalibrationDataReported),
-            CalibrationBarcodeProvenance.Unknown =>
+                LogCalibrationInformation(token, InformationType.PartialCalibrationDataReported),
+            Calibration.BarcodeProvenance.Unknown =>
                 BarcodeProvenanceForDeadKey(),
-            CalibrationBarcodeProvenance.NoData =>
+            Calibration.BarcodeProvenance.NoData =>
 
                 // Error - No calibration data was reported.
-                LogErrorForImmediateReturn(token, CalibrationInformationType.NoCalibrationDataReported),
+                LogErrorForImmediateReturn(token, InformationType.NoCalibrationDataReported),
             _ => token
         };
 
@@ -4479,24 +4473,24 @@ public class Calibrator {
         return token;
 
         // Log an error and flag for immediate return.
-        CalibrationToken LogErrorForImmediateReturn(CalibrationToken localToken, CalibrationInformationType calibrationInformationType) {
+        Token LogErrorForImmediateReturn(Token localToken, InformationType informationType) {
             immediateReturn = true;
-            return LogCalibrationInformation(localToken, calibrationInformationType);
+            return LogCalibrationInformation(localToken, informationType);
         }
 
         // Test the provenance of a deadkey calibration barcode.
-        CalibrationToken BarcodeProvenanceForDeadKey() =>
+        Token BarcodeProvenanceForDeadKey() =>
             BarcodeProvenance(data, true) switch {
-                CalibrationBarcodeProvenance.DeadKey or CalibrationBarcodeProvenance.PartialDeadkey =>
+                Calibration.BarcodeProvenance.DeadKey or Calibration.BarcodeProvenance.PartialDeadkey =>
 
                     // Warning - The reported data is for the wrong calibration barcode.
                     LogCalibrationInformation(
                         token,
-                        CalibrationInformationType.IncorrectCalibrationDataReported),
-                CalibrationBarcodeProvenance.Unknown =>
+                        InformationType.IncorrectCalibrationDataReported),
+                Calibration.BarcodeProvenance.Unknown =>
 
                     // Error - The reported data is unrecognised. The wrong barcode may have been scanned.
-                    LogErrorForImmediateReturn(token, CalibrationInformationType.UnrecognisedData),
+                    LogErrorForImmediateReturn(token, InformationType.UnrecognisedData),
                 _ => token
             };
     }
@@ -4508,10 +4502,10 @@ public class Calibrator {
     /// <param name="data">The reported barcode data.</param>
     /// <param name="isDeadKey">If true, the barcode data should be for a deadkey barcode; otherwise it should be for a baseline barcode.</param>
     /// <returns>A provenance value.</returns>
-    private CalibrationBarcodeProvenance BarcodeProvenance(string data, bool isDeadKey = false) {
+    private BarcodeProvenance BarcodeProvenance(string data, bool isDeadKey = false) {
         if (string.IsNullOrWhiteSpace(data)) {
             // No calibration data was reported.
-            return CalibrationBarcodeProvenance.NoData;
+            return Calibration.BarcodeProvenance.NoData;
         }
 
         var testData = data;
@@ -4573,7 +4567,7 @@ public class Calibrator {
         // It should not be possible for Split to yield no entries, but we 
         // will retain this as a defensive measure.
         if (splitData.Length == 0) {
-            return CalibrationBarcodeProvenance.NoData;
+            return Calibration.BarcodeProvenance.NoData;
         }
 
         var longestIdx = 0;
@@ -4649,7 +4643,7 @@ public class Calibrator {
         return TestProvenance(' ');
 
         // Test the provenance of the barcode.
-        CalibrationBarcodeProvenance TestProvenance(char character) {
+        BarcodeProvenance TestProvenance(char character) {
             // Calculate the standard deviation and other parameters
             var stdDev = StdDevForRepeatingCharacters(testData, character, hypotheticalMean, out var count, countCharacter);
             var stdDevInRange = stdDev <= hypotheticalStdDev * tolerance;
@@ -4662,28 +4656,28 @@ public class Calibrator {
             // If the standard deviation is acceptable, test the provenance of the barcode.
             return stdDevInRange
                 ? TestInRange()
-                : CalibrationBarcodeProvenance.Unknown;
+                : Calibration.BarcodeProvenance.Unknown;
 
             // Too few characters were reported. Test if this appears to be a baseline or deadkey barcode.
-            CalibrationBarcodeProvenance TestBarcodeTypeForShort() =>
+            BarcodeProvenance TestBarcodeTypeForShort() =>
                 isDeadKey
-                    ? CalibrationBarcodeProvenance.PartialDeadkey
-                    : CalibrationBarcodeProvenance.PartialBaseline;
+                    ? Calibration.BarcodeProvenance.PartialDeadkey
+                    : Calibration.BarcodeProvenance.PartialBaseline;
 
             // Test if this appears to be a baseline or deadkey barcode.
-            CalibrationBarcodeProvenance TestBarcodeTypeForInRange() =>
+            BarcodeProvenance TestBarcodeTypeForInRange() =>
                 isDeadKey
-                    ? CalibrationBarcodeProvenance.DeadKey
-                    : CalibrationBarcodeProvenance.Baseline;
+                    ? Calibration.BarcodeProvenance.DeadKey
+                    : Calibration.BarcodeProvenance.Baseline;
 
             // Test if too few characters were reported.
-            CalibrationBarcodeProvenance TestShort() =>
+            BarcodeProvenance TestShort() =>
                 dataLengthIsShort && shortCharacterCountInRange
                     ? TestBarcodeTypeForShort()
-                    : CalibrationBarcodeProvenance.Unknown;
+                    : Calibration.BarcodeProvenance.Unknown;
 
             // Test to see if the number of reported characters is in the accepted range.
-            CalibrationBarcodeProvenance TestInRange() =>
+            BarcodeProvenance TestInRange() =>
                 dataLengthInRange && characterCountInRange
                     ? TestBarcodeTypeForInRange()
                     : TestShort();
@@ -4821,8 +4815,8 @@ public class Calibrator {
     /// <param name="reportedSegmentsIndex">The index of the reported segment.</param>
     /// <param name="invariant">True, if the segment represents invariant characters; otherwise false.</param>
     /// <returns>The amended calibration token.</returns>
-    private CalibrationToken DetectCharacterIssues(
-        CalibrationToken token,
+    private Token DetectCharacterIssues(
+        Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments,
         int reportedSegmentsIndex,
@@ -4879,7 +4873,7 @@ public class Calibrator {
                    // Error - Some invariant characters cannot be detected. 
                    ? LogCalibrationInformation(
                        token,
-                       CalibrationInformationType.UndetectedInvariantCharacters)
+                       InformationType.UndetectedInvariantCharacters)
                    : token;
     }
 
@@ -4896,8 +4890,8 @@ public class Calibrator {
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    private CalibrationToken DetectDifferences(
-        CalibrationToken token,
+    private Token DetectDifferences(
+        Token token,
         IReadOnlyList<string> reportedPrintables,
         List<string> expectedPrintables,
         bool invariant,
@@ -4924,22 +4918,22 @@ public class Calibrator {
                         _tokenExtendedDataDeadKeysMap.TryAdd(reportedSequence, "]");
 
                         // Information - AIM identifiers are supported.
-                        token = LogCalibrationInformation(token, CalibrationInformationType.AimSupported);
+                        token = LogCalibrationInformation(token, InformationType.AimSupported);
 
                         // Warning - The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.
-                        token = LogCalibrationInformation(token, CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
+                        token = LogCalibrationInformation(token, InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier);
                     }
                     else {
                         _tokenExtendedDataAimFlagCharacterSequence = reportedSequence;
 
                         // Warning - AIM Identifiers cannot be recognised.
-                        token = LogCalibrationInformation(token, CalibrationInformationType.AimNotRecognised);
+                        token = LogCalibrationInformation(token, InformationType.AimNotRecognised);
                     }
                 }
                 else {
                     // Information - AIM identifiers are supported.
                     _tokenExtendedDataAimFlagCharacterSequence = reportedChar.ToInvariantString();
-                    token = LogCalibrationInformation(token, CalibrationInformationType.AimSupported);
+                    token = LogCalibrationInformation(token, InformationType.AimSupported);
 
                     if (reportedChar != expectedChar) {
                         // Record the difference.
@@ -4951,7 +4945,7 @@ public class Calibrator {
                         // Warning - The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.
                         ? LogCalibrationInformation(
                             token,
-                            CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier)
+                            InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier)
                         : token;
                 }
 
@@ -4987,7 +4981,7 @@ public class Calibrator {
                             differences = new Dictionary<char, char>();
                             return LogCalibrationInformation(
                                 token,
-                                CalibrationInformationType.DeadKeyMultipleKeys,
+                                InformationType.DeadKeyMultipleKeys,
                                 key.ToControlPictures(),
                                 $"{firstDeadKeyChar.ToControlPictureString()} {expectedChar.ToControlPictureString()}");
                         }
@@ -5047,7 +5041,7 @@ public class Calibrator {
                 // of the expected characters is invariant.
                 token = LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.MultipleKeysNonInvariantCharacters,
+                    InformationType.MultipleKeysNonInvariantCharacters,
                     reportedChar.ToControlPictureString(),
                     $"{differences[reportedChar]} {expectedChar.ToControlPictureString()}");
                 differences[reportedChar] = char.MinValue;
@@ -5091,8 +5085,8 @@ public class Calibrator {
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    private CalibrationToken DetectUnrecognisedOrComplexCharacters(
-        CalibrationToken token,
+    private Token DetectUnrecognisedOrComplexCharacters(
+        Token token,
         IList<string> segment,
         IList<string> expectedSegment,
         IDictionary<int, string> chainedSequences,
@@ -5132,8 +5126,8 @@ public class Calibrator {
                             return LogCalibrationInformation(
                                 token,
                                 sequence.Length == 1
-                                    ? CalibrationInformationType.MultipleKeys
-                                    : CalibrationInformationType.MultipleSequences,
+                                    ? InformationType.MultipleKeys
+                                    : InformationType.MultipleSequences,
                                 sequence.ToControlPictures(),
                                 $"{sequenceValue.ToControlPictures()} {expectedSegment[sequenceIdx + offsetRight].ToControlPictures()}");
                         }
@@ -5141,7 +5135,7 @@ public class Calibrator {
                         // Warning - Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}
                         token = LogCalibrationInformation(
                             token,
-                            CalibrationInformationType.NonInvariantCharacterSequence,
+                            InformationType.NonInvariantCharacterSequence,
                             sequence.ToControlPictures(),
                             $"{validSequences[sequence].ToControlPictures()} {expectedSegment[sequenceIdx + offsetRight].ToControlPictures()}");
                     }
@@ -5178,7 +5172,7 @@ public class Calibrator {
                             // barcode scanner's keyboard layout.
                             ? LogCalibrationInformation(
                                 token,
-                                CalibrationInformationType.MultipleSequencesForScannerDeadKey,
+                                InformationType.MultipleSequencesForScannerDeadKey,
                                 sequence.ToControlPictures(),
                                 $"{scannerDeadKeyFirstMapping.ToControlPictures()} {expectedSegment[sequenceIdx + offsetRight].ToControlPictures()}")
                             : token;
@@ -5186,7 +5180,7 @@ public class Calibrator {
                         // Error - The character {0} cannot be represented reliably because of incompatibility with the keyboard layout.
                         token = LogCalibrationInformation(
                             token,
-                            CalibrationInformationType.IncompatibleScannerDeadKey,
+                            InformationType.IncompatibleScannerDeadKey,
                             sequence.ToControlPictures(),
                             scannerDeadKeyFirstMapping.ToControlPictures());
                     }
@@ -5195,7 +5189,7 @@ public class Calibrator {
                             firstPass = true;
                             LogCalibrationInformation(
                                 token,
-                                CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                                InformationType.SomeNonInvariantCharactersUnrecognised,
                                 null,
                                 scannerDeadKeyFirstMapping.ToControlPictures());
                         }
@@ -5205,7 +5199,7 @@ public class Calibrator {
                             // Warning - Some non-invariant characters are not recognised: {0}
                             ? LogCalibrationInformation(
                                 token,
-                                CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                                InformationType.SomeNonInvariantCharactersUnrecognised,
                                 null,
                                 expectedSegment[sequenceIdx + offsetRight].ToControlPictures())
                             : token;
@@ -5290,7 +5284,7 @@ public class Calibrator {
             return unrecognisedCharacters.Count > 0
                        ? LogCalibrationInformation(
                            token,
-                           CalibrationInformationType.SomeInvariantCharactersUnrecognised,
+                           InformationType.SomeInvariantCharactersUnrecognised,
                            null,
                            unrecognisedCharacters.Aggregate((a, c) => $"{a} {c.ToControlPictures()}"))
                        : token;
@@ -5301,7 +5295,7 @@ public class Calibrator {
                    // Warning - Some non-invariant characters are not recognised: {0}
                    ? LogCalibrationInformation(
                        token,
-                       CalibrationInformationType.SomeNonInvariantCharactersUnrecognised,
+                       InformationType.SomeNonInvariantCharactersUnrecognised,
                        null,
                        unrecognisedCharacters.Aggregate((a, c) => $"{a} {c.ToControlPictures()}"))
                    : token;
@@ -5365,7 +5359,7 @@ public class Calibrator {
         var expectedSegments = new List<List<string>>();
 
         // Split each expected segment into character sequences.
-        expectedSegmentList.ForEach(segment => expectedSegments.Add(segment.Split('\u0020').ToList()));
+        expectedSegmentList.ForEach(segment => expectedSegments.Add([.. segment.Split('\u0020')]));
 
         return expectedSegments;
     }
@@ -5375,7 +5369,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The calibration token</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoInitializeFromTokenData(CalibrationToken token) {
+    private Token DoInitializeFromTokenData(Token token) {
         // Store token state
         _tokenBitmapStream = token.BitmapStream;
         _tokenSvg = token.Svg;
@@ -5435,7 +5429,7 @@ public class Calibrator {
 
         if (token == default) {
             _tokenExtendedDataScannerDeadKeysMap = new Dictionary<string, string>();
-            _tokenExtendedDataScannerUnassignedKeys = new List<string>();
+            _tokenExtendedDataScannerUnassignedKeys = [];
             _tokenExtendedDataLigatureMap = new Dictionary<string, char>();
             _tokenExtendedDataDeadKeysMap = new Dictionary<string, string>();
             _tokenExtendedDataAimFlagCharacterSequence = "]";
@@ -5455,7 +5449,7 @@ public class Calibrator {
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = default;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = default;
             AssessFormatnnSupport = true;
-            _tokenExtendedDataUnrecognisedKeys = new List<char>();
+            _tokenExtendedDataUnrecognisedKeys = [];
         }
         else {
             // Store token extended data
@@ -5490,8 +5484,8 @@ public class Calibrator {
     ///   Initializes the extended token data in the calibration token.
     /// </summary>
     /// <returns>Returns the token with initialized extended data.</returns>
-    private CalibrationToken InitializeTokenData() {
-        var @out = new CalibrationToken(
+    private Token InitializeTokenData() {
+        var @out = new Token(
             _tokenDataBarcodeData,
             _tokenDataKey,
             _tokenDataValue,
@@ -5516,7 +5510,7 @@ public class Calibrator {
         _tokenWarnings?.ForEach(warning => @out.AddInformation(warning));
         _tokenErrors?.ForEach(error => @out.AddInformation(error));
 
-        @out = CalibrationToken.SetExtendedData(
+        @out = Token.SetExtendedData(
             @out,
             _tokenExtendedDataDeadKeysMap,
             _tokenExtendedDataDeadKeyCharacterMap,
@@ -5556,9 +5550,9 @@ public class Calibrator {
     /// <param name="reportedData">The reported character(s).</param>
     /// <param name="expectedData">The expected character(s).</param>
     /// <returns>The calibration token with logged information.</returns>
-    private CalibrationToken LogCalibrationInformation(
-        CalibrationToken token,
-        CalibrationInformationType type,
+    private Token LogCalibrationInformation(
+        Token token,
+        InformationType type,
         string? reportedData = "",
         string? expectedData = null) {
         var description = Resources.ResourceManager.GetString(
@@ -5570,48 +5564,48 @@ public class Calibrator {
         // Add data to formattable strings.
         // ReSharper disable once SwitchStatementMissingSomeCases
         switch (type) {
-            case CalibrationInformationType.KeyboardScript:
-            case CalibrationInformationType.Platform:
-            case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
-            case CalibrationInformationType.MultipleKeysNonInvariantCharacters:
-            case CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters:
-            case CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-            case CalibrationInformationType.ControlCharacterMappingAdditionalDataElements:
-            case CalibrationInformationType.MultipleKeys:
-            case CalibrationInformationType.DeadKeyMultiMapping:
-            case CalibrationInformationType.DeadKeyMultipleKeys:
-            case CalibrationInformationType.MultipleSequences:
-            case CalibrationInformationType.MultipleSequencesForScannerDeadKey:
-            case CalibrationInformationType.GroupSeparatorMapping:
-            case CalibrationInformationType.LigatureCharacters:
+            case InformationType.KeyboardScript:
+            case InformationType.Platform:
+            case InformationType.IsoIec15434RecordSeparatorMapping:
+            case InformationType.MultipleKeysNonInvariantCharacters:
+            case InformationType.MultipleKeysMultipleNonInvariantCharacters:
+            case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+            case InformationType.ControlCharacterMappingAdditionalDataElements:
+            case InformationType.MultipleKeys:
+            case InformationType.DeadKeyMultiMapping:
+            case InformationType.DeadKeyMultipleKeys:
+            case InformationType.MultipleSequences:
+            case InformationType.MultipleSequencesForScannerDeadKey:
+            case InformationType.GroupSeparatorMapping:
+            case InformationType.LigatureCharacters:
                 description = string.Format(CultureInfo.InvariantCulture, description ?? string.Empty, reportedData);
                 break;
-            case CalibrationInformationType.AimTransmitted:
-            case CalibrationInformationType.AimMayBeTransmitted:
-            case CalibrationInformationType.EndOfLineTransmitted:
+            case InformationType.AimTransmitted:
+            case InformationType.AimMayBeTransmitted:
+            case InformationType.EndOfLineTransmitted:
                 AppendDescription(token.Information.Where(ci => ci.InformationType == type));
                 break;
-            case CalibrationInformationType.SomeNonInvariantCharactersUnrecognised:
-            case CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
+            case InformationType.SomeNonInvariantCharactersUnrecognised:
+            case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 AppendDescription(
                     token.Warnings.Where(ci => ci.InformationType == type), expectedData);
                 break;
-            case CalibrationInformationType.PrefixTransmitted:
-            case CalibrationInformationType.CodeTransmitted:
-            case CalibrationInformationType.SuffixTransmitted:
-            case CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters:
-            case CalibrationInformationType.NonInvariantCharacterSequence:
+            case InformationType.PrefixTransmitted:
+            case InformationType.CodeTransmitted:
+            case InformationType.SuffixTransmitted:
+            case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
+            case InformationType.NonInvariantCharacterSequence:
                 AppendDescription(token.Warnings.Where(ci => ci.InformationType == type));
                 break;
-            case CalibrationInformationType.SomeInvariantCharactersUnrecognised:
-            case CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
-            case CalibrationInformationType.IncompatibleScannerDeadKey:
+            case InformationType.SomeInvariantCharactersUnrecognised:
+            case InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
+            case InformationType.IncompatibleScannerDeadKey:
                 AppendDescription(
                     token.Errors.Where(ci => ci.InformationType == type),
                     expectedData);
                 break;
-            case CalibrationInformationType.CalibrationFailed:
-            case CalibrationInformationType.CalibrationFailedUnexpectedly:
+            case InformationType.CalibrationFailed:
+            case InformationType.CalibrationFailedUnexpectedly:
                 AppendDescription(token.Warnings.Where(ci => ci.InformationType == type));
                 break;
         }
@@ -5620,36 +5614,36 @@ public class Calibrator {
         switch ((int)type) {
             case < 200 and >= 100:
                 if (token.Information.All(ci => ci.InformationType != type)) {
-                    token.AddInformation(CalibrationInformationLevel.Information, type, description);
+                    token.AddInformation(InformationLevel.Information, type, description);
                 }
 
                 break;
             case < 300 and >= 200:
                 if (token.Warnings.All(ci => ci.InformationType != type)) {
-                    token.AddInformation(CalibrationInformationLevel.Warning, type, description);
+                    token.AddInformation(InformationLevel.Warning, type, description);
                 }
 
                 break;
             case < 400 and >= 300:
                 // Add the 'Calibration failed' error.
-                if (type != CalibrationInformationType.CalibrationFailed 
-                 && type != CalibrationInformationType.CalibrationFailedUnexpectedly
-                 && token.Errors.All(ci => ci.InformationType != CalibrationInformationType.CalibrationFailed)) {
+                if (type != InformationType.CalibrationFailed 
+                 && type != InformationType.CalibrationFailedUnexpectedly
+                 && token.Errors.All(ci => ci.InformationType != InformationType.CalibrationFailed)) {
                     var errorDescription = Resources.ResourceManager.GetString(
-                        $"CalibrationInformation_{(int)CalibrationInformationType.CalibrationFailed}",
+                        $"CalibrationInformation_{(int)InformationType.CalibrationFailed}",
                         Thread.CurrentThread.CurrentUICulture);
                     errorDescription = string.Format(
                         CultureInfo.InvariantCulture,
                         errorDescription ?? string.Empty,
                         string.Empty);
                     token.AddInformation(
-                        CalibrationInformationLevel.Error,
-                        CalibrationInformationType.CalibrationFailed,
+                        InformationLevel.Error,
+                        InformationType.CalibrationFailed,
                         errorDescription);
                 }
 
                 if (token.Errors.All(ci => ci.InformationType != type)) {
-                    token.AddInformation(CalibrationInformationLevel.Error, type, description);
+                    token.AddInformation(InformationLevel.Error, type, description);
                 }
 
                 break;
@@ -5658,8 +5652,8 @@ public class Calibrator {
         DoInitializeFromTokenData(token);
         return token;
 
-        void AppendDescription(IEnumerable<CalibrationInformation> information, string? data = null) {
-            var calibrationInformation = information as CalibrationInformation[] ?? information.ToArray();
+        void AppendDescription(IEnumerable<Information> information, string? data = null) {
+            var calibrationInformation = information as Information[] ?? information.ToArray();
             var descriptionData = string.IsNullOrEmpty(data) ? reportedData : data;
 
             if (!string.IsNullOrWhiteSpace(descriptionData) && calibrationInformation.Length == 1) {
@@ -5667,7 +5661,7 @@ public class Calibrator {
                 using var disposableEnumerator = enumerator as IDisposable;
                 
                 if (enumerator.MoveNext() && enumerator.Current is not null) {
-                    ((CalibrationInformation)enumerator.Current).Description += $" {descriptionData}";
+                    ((Information)enumerator.Current).Description += $" {descriptionData}";
                 }
             }
 
@@ -5686,7 +5680,7 @@ public class Calibrator {
     ///   sequences and not part of a character sequence.
     /// </remarks>
     private void ProcessReportedLogData(
-        CalibrationInformationType type,
+        InformationType type,
         string? reportedData = "",
         string? expectedData = null) {
         if (expectedData is not { Length: > 0 }) {
@@ -5704,34 +5698,34 @@ public class Calibrator {
         // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
         // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
         switch (type) {
-            case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
-            case CalibrationInformationType.MultipleKeysNonInvariantCharacters:
-            case CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters:
-            case CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters:
-            case CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-            case CalibrationInformationType.ControlCharacterMappingAdditionalDataElements:
-            case CalibrationInformationType.NonInvariantCharacterSequence:
+            case InformationType.IsoIec15434RecordSeparatorMapping:
+            case InformationType.MultipleKeysNonInvariantCharacters:
+            case InformationType.MultipleKeysMultipleNonInvariantCharacters:
+            case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
+            case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+            case InformationType.ControlCharacterMappingAdditionalDataElements:
+            case InformationType.NonInvariantCharacterSequence:
                 AddAmbiguity(_tokenExtendedDataNonInvariantAmbiguities);
                 break;
-            case CalibrationInformationType.MultipleKeys:
-            case CalibrationInformationType.DeadKeyMultiMapping:
-            case CalibrationInformationType.DeadKeyMultipleKeys:
-            case CalibrationInformationType.MultipleSequences:
-            case CalibrationInformationType.MultipleSequencesForScannerDeadKey:
-            case CalibrationInformationType.GroupSeparatorMapping:
+            case InformationType.MultipleKeys:
+            case InformationType.DeadKeyMultiMapping:
+            case InformationType.DeadKeyMultipleKeys:
+            case InformationType.MultipleSequences:
+            case InformationType.MultipleSequencesForScannerDeadKey:
+            case InformationType.GroupSeparatorMapping:
                 AddAmbiguity(_tokenExtendedDataInvariantGs1Ambiguities);
                 break;
-            case CalibrationInformationType.LigatureCharacters:
+            case InformationType.LigatureCharacters:
                 break;
-            case CalibrationInformationType.SomeNonInvariantCharactersUnrecognised:
-            case CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
+            case InformationType.SomeNonInvariantCharactersUnrecognised:
+            case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 AddUnrecognisedCharacter(_tokenExtendedDataNonInvariantUnrecognisedCharacters);
                 break;
-            case CalibrationInformationType.SomeInvariantCharactersUnrecognised:
-            case CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
+            case InformationType.SomeInvariantCharactersUnrecognised:
+            case InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
                 AddUnrecognisedCharacter(_tokenExtendedDataInvariantGs1UnrecognisedCharacters);
                 break;
-            case CalibrationInformationType.IncompatibleScannerDeadKey:
+            case InformationType.IncompatibleScannerDeadKey:
                 AddUnrecognisedCharacter((int)expectedData[0] switch {
                     >= 0 and < 29 => _tokenExtendedDataNonInvariantUnrecognisedCharacters,
                     >= 31 and <= 32 => _tokenExtendedDataNonInvariantUnrecognisedCharacters,
@@ -5763,7 +5757,7 @@ public class Calibrator {
         // Record an ambiguity.
         void AddAmbiguity(Dictionary<string, IList<string>> ambiguities) {
             foreach (var sequence in expectedSequences) {
-                if (!string.IsNullOrWhiteSpace(reportedData) && ambiguities.TryAdd(reportedData, new List<string> { sequence })) {
+                if (!string.IsNullOrWhiteSpace(reportedData) && ambiguities.TryAdd(reportedData, [sequence])) {
                     continue;
                 }
 
@@ -5818,7 +5812,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoProcessAimCandidate(CalibrationToken token) {
+    private Token DoProcessAimCandidate(Token token) {
         // AIM identifiers will be reported according to the OS keyboard layout.
         if (token.ReportedPrefixSegment is null ||
             token.ReportedPrefixSegment.Count <= 0) {
@@ -5844,14 +5838,14 @@ public class Calibrator {
 
         if (string.IsNullOrEmpty(normalisedData.aimId)) {
             // Warning - The barcode scanner is transmitting a prefix: [prefix]
-            token = LogCalibrationInformation(token, CalibrationInformationType.AimNotTransmitted);
+            token = LogCalibrationInformation(token, InformationType.AimNotTransmitted);
         }
         else {
             token = LogCalibrationInformation(
                 token,
                 aimIdUncertain
-                    ? CalibrationInformationType.AimMayBeTransmitted
-                    : CalibrationInformationType.AimTransmitted,
+                    ? InformationType.AimMayBeTransmitted
+                    : InformationType.AimTransmitted,
                 normalisedData.aimId.ToControlPictures());
         }
 
@@ -5859,7 +5853,7 @@ public class Calibrator {
             // Warning - The barcode scanner is transmitting a prefix: [prefix]
             token = LogCalibrationInformation(
                 token,
-                CalibrationInformationType.PrefixTransmitted,
+                InformationType.PrefixTransmitted,
                 normalisedData.prefix.ToControlPictures());
         }
 
@@ -5867,7 +5861,7 @@ public class Calibrator {
             // Warning - The barcode scanner is transmitting a prefix: [prefix]
             token = LogCalibrationInformation(
                 token,
-                CalibrationInformationType.CodeTransmitted,
+                InformationType.CodeTransmitted,
                 normalisedData.code.ToControlPictures());
         }
 
@@ -5882,9 +5876,9 @@ public class Calibrator {
 
         // Update the immutable token with the prefix and code - this code can
         // be replaced if Calibration Token is changed to a record.
-        CalibrationToken SetPrefixAndCode() {
-            return new CalibrationToken(token, token.ExtendedData is not null
-                ? new CalibrationTokenExtendedData(
+        Token SetPrefixAndCode() {
+            return new Token(token, token.ExtendedData is not null
+                ? new TokenExtendedData(
                     deadKeysMap: token.ExtendedData.DeadKeysMap,
                     deadKeyCharacterMap: token.ExtendedData.DeadKeyCharacterMap,
                     deadKeyFixUp: token.ExtendedData.DeadKeyFixUp,
@@ -5921,7 +5915,7 @@ public class Calibrator {
     /// <param name="token">The current calibration token.</param>
     /// <param name="reportedSuffix">The reported suffix character sequence.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoProcessSuffix(CalibrationToken token, string reportedSuffix) {
+    private Token DoProcessSuffix(Token token, string reportedSuffix) {
         var extendedDataReportedSuffix = string.Empty;
         var extendedDataSuffix = string.Empty;
 
@@ -5938,12 +5932,12 @@ public class Calibrator {
         return SetSuffix(tokenOut, extendedDataReportedSuffix);
 
         // Log information.
-        Token LogInformation(
-            CalibrationToken localToken,
-            CalibrationInformationType informationType,
+        EnvToken LogInformation(
+            Token localToken,
+            InformationType informationType,
             string data = "") =>
             () =>
-                new Lazy<CalibrationToken>(
+                new Lazy<Token>(
                     LogCalibrationInformation(
                         localToken,
                         informationType,
@@ -5961,21 +5955,21 @@ public class Calibrator {
         }
 
         // Log warning - The barcode scanner is transmitting a suffix: {0}.
-        Token LogAWarningThatTheScannerTransmitsASuffix(CalibrationToken localToken) =>
+        EnvToken LogAWarningThatTheScannerTransmitsASuffix(Token localToken) =>
             LogInformation(
                 localToken,
-                CalibrationInformationType.SuffixTransmitted,
+                InformationType.SuffixTransmitted,
                 NormalisedSuffix());
 
         // Test to see if the scanner transmitted a suffix.
-        bool TheScannerTransmittedASuffix(CalibrationToken localToken) =>
+        bool TheScannerTransmittedASuffix(Token localToken) =>
             !string.IsNullOrEmpty(reportedSuffix);
 
         // Update the immutable token with the suffix - this code can
         // be replaced if Calibration Token is changed to a record.
-        CalibrationToken SetSuffix(CalibrationToken currentToken, string suffix) {
-            return new CalibrationToken(currentToken, currentToken.ExtendedData is not null
-                ? new CalibrationTokenExtendedData(
+        Token SetSuffix(Token currentToken, string suffix) {
+            return new Token(currentToken, currentToken.ExtendedData is not null
+                ? new TokenExtendedData(
                 deadKeysMap: currentToken.ExtendedData.DeadKeysMap,
                 deadKeyCharacterMap: currentToken.ExtendedData.DeadKeyCharacterMap,
                 deadKeyFixUp: currentToken.ExtendedData.DeadKeyFixUp,
@@ -6218,8 +6212,8 @@ public class Calibrator {
     /// <param name="expectedSegments">The list of segments for expected characters.</param>
     /// <returns>The calibration token.</returns>
     // ReSharper disable once UnusedMethodReturnValue.Local
-    private CalibrationToken DoProcessAsciiControlCharacters(
-        CalibrationToken token,
+    private Token DoProcessAsciiControlCharacters(
+        Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments) {
         var correspondence = false;
@@ -6228,7 +6222,7 @@ public class Calibrator {
          * a control character (End of Transmission) that could cause issues when scanned. Hence, the
          * character is not included in any calibration barcode generated by this code.
          * */
-        for (var idx = CalibrationSegments.GroupSeparatorSegment; idx < CalibrationSegments.SuffixSegment; idx++) {
+        for (var idx = Segments.GroupSeparatorSegment; idx < Segments.SuffixSegment; idx++) {
             if (reportedSegments[(int)idx].Count == 0) {
                 continue;
             }
@@ -6236,25 +6230,25 @@ public class Calibrator {
             var reportedControl = reportedSegments[(int)idx][0];
             var expectedControl = expectedSegments[(int)idx][0];
 
-            if (reportedControl.StartsWith("\0", StringComparison.Ordinal)) {
+            if (reportedControl.StartsWith('\0')) {
                 if (reportedControl.Length > 1) {
                     if (!_tokenExtendedDataDeadKeysMap.ContainsKey(reportedControl)) {
                         _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedSegments[(int)idx][0]);
                         token = LogIsoIec15434SeparatorSupport(token, idx);
                     }
                     else {
-                        CalibrationInformationType NotRecognisedInformationType() =>
+                        InformationType NotRecognisedInformationType() =>
 
                             // ReSharper disable once StyleCop.SA1118
-                            idx == CalibrationSegments.RecordSeparatorSegment
+                            idx == Segments.RecordSeparatorSegment
 
                                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-                                ? CalibrationInformationType.IsoIec15434SyntaxNotRecognised
+                                ? InformationType.IsoIec15434SyntaxNotRecognised
 
                                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                                : CalibrationInformationType.IsoIec15434EdiNotReliablyReadable;
+                                : InformationType.IsoIec15434EdiNotReliablyReadable;
 
-                        token = idx > CalibrationSegments.GroupSeparatorSegment
+                        token = idx > Segments.GroupSeparatorSegment
                                     ? LogCalibrationInformation(
                                         token,
                                         NotRecognisedInformationType())
@@ -6264,21 +6258,21 @@ public class Calibrator {
                 else {
                     // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                     switch (idx) {
-                        case CalibrationSegments.GroupSeparatorSegment:
+                        case Segments.GroupSeparatorSegment:
                             // If the keyboard represents ASCII 29s as \0, we will use this in thе map.
                             _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
                             break;
-                        case CalibrationSegments.FileSeparatorSegment:
+                        case Segments.FileSeparatorSegment:
                             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
                             break;
-                        case CalibrationSegments.RecordSeparatorSegment:
+                        case Segments.RecordSeparatorSegment:
                             var key = _tokenExtendedDataCharacterMap.FirstOrDefault(x => x.Value == '\u001D').Key;
 
                             if (key == '\0' && _tokenExtendedDataCharacterMap.ContainsKey(key)) {
                                 // WARNING - The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
                                 token = LogCalibrationInformation(
                                     token,
-                                    CalibrationInformationType.IsoIec15434RecordSeparatorMapping,
+                                    InformationType.IsoIec15434RecordSeparatorMapping,
                                     '\0'.ToControlPictureString(),
                                     $"{'\u001D'.ToControlPictureString()} {'\u001E'.ToControlPictureString()}");
                             }
@@ -6289,7 +6283,7 @@ public class Calibrator {
 
                             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                             break;
-                        case CalibrationSegments.UnitSeparatorSegment:
+                        case Segments.UnitSeparatorSegment:
                             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
                             break;
                     }
@@ -6299,18 +6293,18 @@ public class Calibrator {
                     case 0:
                         // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                         switch (idx) {
-                            case CalibrationSegments.GroupSeparatorSegment:
+                            case Segments.GroupSeparatorSegment:
                                 // Error - No group separator is reported.
                                 return LogCalibrationInformation(
                                 token,
-                                CalibrationInformationType.NoGroupSeparatorMapping);
-                            case CalibrationSegments.FileSeparatorSegment:
+                                InformationType.NoGroupSeparatorMapping);
+                            case Segments.FileSeparatorSegment:
                                 _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
                                 break;
-                            case CalibrationSegments.RecordSeparatorSegment:
+                            case Segments.RecordSeparatorSegment:
                                 _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                                 break;
-                            case CalibrationSegments.UnitSeparatorSegment:
+                            case Segments.UnitSeparatorSegment:
                                 _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
                                 break;
                         }
@@ -6328,14 +6322,14 @@ public class Calibrator {
                                     .IsMatch(characterMapValue.ToInvariantString())) {
                                     // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
                                     switch (idx) {
-                                        case CalibrationSegments.GroupSeparatorSegment:
+                                        case Segments.GroupSeparatorSegment:
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character. 
                                             return LogCalibrationInformation(
                                             token,
-                                            CalibrationInformationType.GroupSeparatorMapping,
+                                            InformationType.GroupSeparatorMapping,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
-                                        case CalibrationSegments.RecordSeparatorSegment:
+                                        case Segments.RecordSeparatorSegment:
                                             // The ambiguity is resolved by the parser by inferring the ASCII 30.
                                             break;
                                         default:
@@ -6343,7 +6337,7 @@ public class Calibrator {
                                             // EDI data cannot be reliably read.
                                             token = LogCalibrationInformation(
                                             token,
-                                            CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                            InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             break;
@@ -6357,8 +6351,8 @@ public class Calibrator {
                                     var localToken = token;
 
                                     _tokenExtendedDataCharacterMap[key] = idx switch {
-                                        CalibrationSegments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30 ? RaiseWarning((char)29) : ResolveForGs1(),
-                                        CalibrationSegments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29 ? RaiseWarning((char)30) : ResolveForGs1(),
+                                        Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30 ? RaiseWarning((char)29) : ResolveForGs1(),
+                                        Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29 ? RaiseWarning((char)30) : ResolveForGs1(),
                                         _ => RaiseWarningIsoIec15434(_tokenExtendedDataCharacterMap[key])
                                     };
 
@@ -6368,7 +6362,7 @@ public class Calibrator {
                                         // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
                                         localToken = LogCalibrationInformation(
                                         localToken,
-                                        CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                                        InformationType.ControlCharacterMappingAdditionalDataElements,
                                         key.ToControlPictureString(),
                                         $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
 
@@ -6380,7 +6374,7 @@ public class Calibrator {
                                         // EDI data cannot be reliably read.
                                         localToken = LogCalibrationInformation(
                                             localToken,
-                                            CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                            InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
 
@@ -6408,7 +6402,7 @@ public class Calibrator {
                                     // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                     return LogCalibrationInformation(
                                     token,
-                                    CalibrationInformationType.GroupSeparatorMapping,
+                                    InformationType.GroupSeparatorMapping,
                                     key.ToControlPictureString(),
                                     $"{key.ToControlPictureString()} {expectedControl.First().ToControlPictureString()}");
                                 }
@@ -6424,17 +6418,17 @@ public class Calibrator {
 
                                 token = LogIsoIec15434SeparatorSupport(token, idx);
 
-                                CalibrationToken LogAmbiguity() =>
+                                Token LogAmbiguity() =>
                                     idx switch
                                     {
-                                        CalibrationSegments.GroupSeparatorSegment or CalibrationSegments.RecordSeparatorSegment => LogCalibrationInformation(
+                                        Segments.GroupSeparatorSegment or Segments.RecordSeparatorSegment => LogCalibrationInformation(
                                             token,
-                                            CalibrationInformationType.ControlCharacterMappingAdditionalDataElements,
+                                            InformationType.ControlCharacterMappingAdditionalDataElements,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode. 
                                         _ => LogCalibrationInformation(
                                             token,
-                                            CalibrationInformationType
+                                            InformationType
                                                 .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}") // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
@@ -6462,47 +6456,47 @@ public class Calibrator {
 
         return token;
 
-        CalibrationToken LogNonCorrespondenceForIsoIec15434Separators(CalibrationToken calibrationToken, CalibrationSegments idx) =>
+        Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
             idx switch
             {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-                CalibrationSegments.GroupSeparatorSegment => LogCalibrationInformation(
+                Segments.GroupSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator),
+                    InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator),
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
-                CalibrationSegments.FileSeparatorSegment => LogCalibrationInformation(
+                Segments.FileSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
+                    InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
-                CalibrationSegments.RecordSeparatorSegment => LogCalibrationInformation(
+                Segments.RecordSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator),
+                    InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator),
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
-                CalibrationSegments.UnitSeparatorSegment => LogCalibrationInformation(
+                Segments.UnitSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
+                    InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
                 _ => calibrationToken
             };
 
-        CalibrationToken LogIsoIec15434SeparatorSupport(CalibrationToken calibrationToken, CalibrationSegments idx) =>
+        Token LogIsoIec15434SeparatorSupport(Token calibrationToken, Segments idx) =>
             idx switch
             {
                 // Information: Group Separator characters are supported.
-                CalibrationSegments.GroupSeparatorSegment => LogCalibrationInformation(
+                Segments.GroupSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.GroupSeparatorSupported),
+                    InformationType.GroupSeparatorSupported),
                 // Information: File separator characters are supported.
-                CalibrationSegments.FileSeparatorSegment => LogCalibrationInformation(
+                Segments.FileSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.FileSeparatorSupported),
+                    InformationType.FileSeparatorSupported),
                 // Information: Record Separator characters are supported.
-                CalibrationSegments.RecordSeparatorSegment => LogCalibrationInformation(
+                Segments.RecordSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.RecordSeparatorSupported),
+                    InformationType.RecordSeparatorSupported),
                 // Information: Unit separator characters are supported.
-                CalibrationSegments.UnitSeparatorSegment => LogCalibrationInformation(
+                Segments.UnitSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
-                    CalibrationInformationType.UnitSeparatorSupported),
+                    InformationType.UnitSeparatorSupported),
                 _ => calibrationToken
             };
     }
@@ -6512,7 +6506,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoProcessForIsoIec15434MessageHeaderIncompatibility(CalibrationToken token) =>
+    private Token DoProcessForIsoIec15434MessageHeaderIncompatibility(Token token) =>
 
         // Check for Format 05 and 06 incompatibility
         _tokenExtendedDataCharacterMap.All(kvp => kvp.Value != '[') &&
@@ -6522,7 +6516,7 @@ public class Calibrator {
             !(_tokenExtendedDataReportedCharacters?.Contains('[', StringComparison.Ordinal) ?? false)
         )
             // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-            ? LogCalibrationInformation(token, CalibrationInformationType.IsoIec15434SyntaxNotRecognised)
+            ? LogCalibrationInformation(token, InformationType.IsoIec15434SyntaxNotRecognised)
             : token;
 
     /// <summary>
@@ -6530,7 +6524,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoProcessForIsoIec15434EdiIncompatibility(CalibrationToken token)
+    private Token DoProcessForIsoIec15434EdiIncompatibility(Token token)
     {
         switch (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs)
         {
@@ -6542,7 +6536,7 @@ public class Calibrator {
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                 return LogCalibrationInformation(
                     InitializeTokenData(),
-                    CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+                    InformationType.IsoIec15434EdiNotReliablyReadable);
         }
 
         // One of the ASCII 28 and ASCII 31 characters is reported as null.  We will only treat this as
@@ -6552,7 +6546,7 @@ public class Calibrator {
             // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
             return LogCalibrationInformation(
                 InitializeTokenData(),
-                CalibrationInformationType.IsoIec15434EdiNotReliablyReadable);
+                InformationType.IsoIec15434EdiNotReliablyReadable);
         }
 
         // Add mapping for ASCII 28 or ASCII 31
@@ -6566,7 +6560,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
-    private CalibrationToken DoProcessMissedAmbiguities(CalibrationToken token) {
+    private Token DoProcessMissedAmbiguities(Token token) {
         // Check for missed ambiguities
         var duplicateReportedCharacters =
             (_tokenExtendedDataReportedCharacters ?? string.Empty).GroupBy(c => c)
@@ -6598,21 +6592,21 @@ public class Calibrator {
                         // character(s).
                         ? LogCalibrationInformation(
                             token,
-                            CalibrationInformationType.MultipleKeysAimFlagCharacter,
+                            InformationType.MultipleKeysAimFlagCharacter,
                             duplicateReportedCharacterAsString[0].ToControlPictureString(),
                             AmbiguousMappedChars())
                         // Error - The reported character {0} is ambiguous. There are multiple keys for the same character, each
                         // representing a different expected character.
                         : LogCalibrationInformation(
                             token,
-                            CalibrationInformationType.MultipleKeys,
+                            InformationType.MultipleKeys,
                             duplicateReportedCharacterAsString[0].ToControlPictureString(),
                             AmbiguousMappedChars())
                     // Warning - The reported character {0} is ambiguous. There are multiple keys for the same character, each
                     // representing a different expected character. However, at most, only one of the expected characters is invariant.
                     : LogCalibrationInformation(
                         token,
-                        CalibrationInformationType.MultipleKeysNonInvariantCharacters,
+                        InformationType.MultipleKeysNonInvariantCharacters,
                         duplicateReportedCharacterAsString[0].ToControlPictureString(),
                         AmbiguousMappedChars())
 
@@ -6620,7 +6614,7 @@ public class Calibrator {
                 // a different non-invariant expected character: {0}
                 : LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters,
+                    InformationType.MultipleKeysMultipleNonInvariantCharacters,
                     duplicateReportedCharacter.ToInvariantString(),
                     AmbiguousMappedChars());
 #pragma warning restore S3358 // Ternary operators should not be nested
@@ -6637,7 +6631,7 @@ public class Calibrator {
                 // character(s).
                 ? LogCalibrationInformation(
                     token,
-                    CalibrationInformationType.MultipleKeysAimFlagCharacter,
+                    InformationType.MultipleKeysAimFlagCharacter,
                     duplicateReportedCharacter.ToControlPictureString(),
                     AmbiguousMappedChars())
                 : token;
@@ -6704,7 +6698,7 @@ public class Calibrator {
     /// <param name="data">The reported data currently being processed.</param>
     /// <param name="token">The current token.</param>
     /// <returns>True, if currently processing a small barcode sequence, but not yet at the last barcode; otherwise false.</returns>
-    private bool TryInSmallBarcodeSequence(ref string data, ref CalibrationToken token) {
+    private bool TryInSmallBarcodeSequence(ref string data, ref Token token) {
         if (!(token.Data?.SmallBarcodeSequenceCount > 0))
         {
             return false;
@@ -6732,7 +6726,7 @@ public class Calibrator {
             return true;
         }
 
-        token = new CalibrationToken(
+        token = new Token(
             _tokenDataBarcodeData,
             string.Empty,
             size: _tokenSize,

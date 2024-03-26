@@ -27,7 +27,7 @@ using System.Diagnostics.CodeAnalysis;
 /// <summary>
 ///   The type of calibration information.
 /// </summary>
-public enum CalibrationInformationType
+public enum InformationType
 {
     /// <summary>
     /// <p>No calibration information available.</p>

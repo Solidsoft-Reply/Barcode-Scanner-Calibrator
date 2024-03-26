@@ -743,15 +743,15 @@ public class UsToEuropeanCalibrationTests
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic)
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
     {
         var expectedCalibrations = ExpectedCalibrations();
         var computerKeyboardLayout = CalibrationBarcodes()[layoutName];
 
-        var calibrator = new Calibrator(calibrationAssumption: CalibrationAssumption.Agnostic);
+        var calibrator = new Calibrator(assumption: Assumption.Agnostic);
         var loopCountForBaseline = 0;
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         var recognisedDataElements = new List<RecognisedDataElement>
         {

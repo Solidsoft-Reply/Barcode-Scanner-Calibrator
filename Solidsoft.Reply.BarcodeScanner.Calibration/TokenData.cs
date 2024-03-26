@@ -35,17 +35,17 @@ using Newtonsoft.Json.Serialization;
 ///   A set of data passed as part of a calibration token. This data is always provided with the token but is
 ///   primarily intended for internal use to track the enumeration of calibration barcodes.
 /// </summary>
-public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
+public sealed class TokenData : IEquatable<TokenData>
 {
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationTokenData" /> class.
+    ///   Initializes a new instance of the <see cref="TokenData" /> class.
     /// </summary>
-    internal CalibrationTokenData()
+    internal TokenData()
     {
     }
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationTokenData" /> class.
+    ///   Initializes a new instance of the <see cref="TokenData" /> class.
     /// </summary>
     /// <param name="barcodeData">
     ///   The unsegmented barcode data for the current calibration data.
@@ -74,7 +74,7 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     /// <param name="reportedCharacters">
     ///   The reported characters for the current calibration barcode.
     /// </param>
-    internal CalibrationTokenData(
+    internal TokenData(
         string barcodeData,
         string? key = null,
         char value = default,
@@ -189,15 +189,15 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     /// <param name="json">A JSON string representing the serialized data.</param>
 
     // ReSharper disable once UnusedMember.Global
-    public static CalibrationTokenData FromJson(string json)
+    public static TokenData FromJson(string json)
     {
-        if (string.IsNullOrWhiteSpace(json)) return new CalibrationTokenData();
+        if (string.IsNullOrWhiteSpace(json)) return new TokenData();
 
-        var calibrationTokenData = JsonConvert.DeserializeObject<CalibrationTokenData>(json);
+        var calibrationTokenData = JsonConvert.DeserializeObject<TokenData>(json);
 
-        if (calibrationTokenData is null) return new CalibrationTokenData();
+        if (calibrationTokenData is null) return new TokenData();
 
-        return new CalibrationTokenData(
+        return new TokenData(
             calibrationTokenData.BarcodeData ?? string.Empty,
             calibrationTokenData.Key,
             calibrationTokenData.Value,
@@ -212,31 +212,31 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     /// <summary>
     ///   Override for the equality operator.
     /// </summary>
-    /// <param name="calibrationTokenData1">The first calibration token data.</param>
-    /// <param name="calibrationTokenData2">The second calibration token data.</param>
+    /// <param name="tokenData1">The first calibration token data.</param>
+    /// <param name="tokenData2">The second calibration token data.</param>
     /// <returns>True, if the calibration token data are equal; otherwise false.</returns>
     public static bool operator ==(
-        CalibrationTokenData? calibrationTokenData1,
-        CalibrationTokenData calibrationTokenData2) =>
-        calibrationTokenData1?.Equals(calibrationTokenData2) ?? false;
+        TokenData? tokenData1,
+        TokenData tokenData2) =>
+        tokenData1?.Equals(tokenData2) ?? false;
 
     /// <summary>
     ///   Override for the inequality operator.
     /// </summary>
-    /// <param name="calibrationTokenData1">The first calibration token data.</param>
-    /// <param name="calibrationTokenData2">The second calibration token data.</param>
+    /// <param name="tokenData1">The first calibration token data.</param>
+    /// <param name="tokenData2">The second calibration token data.</param>
     /// <returns>True, if the calibration token data are not equal; otherwise false.</returns>
     public static bool operator !=(
-        CalibrationTokenData? calibrationTokenData1,
-        CalibrationTokenData calibrationTokenData2) =>
-        !calibrationTokenData1?.Equals(calibrationTokenData2) ?? false;
+        TokenData? tokenData1,
+        TokenData tokenData2) =>
+        !tokenData1?.Equals(tokenData2) ?? false;
 
     /// <summary>
     ///   Indicates whether the current calibration token data is equal to another calibration token data object.
     /// </summary>
     /// <param name="other">A calibration token data object to compare with this current calibration token data object.</param>
     /// <returns>true if the current calibration token data object is equal to the other parameter; otherwise, false.</returns>
-    public bool Equals(CalibrationTokenData? other) =>
+    public bool Equals(TokenData? other) =>
         other is not null &&
         (ReferenceEquals(this, other) || string.Equals(
              BarcodeData,
@@ -268,7 +268,7 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
     /// <returns>true if the current calibration token data object is equal to the other parameter; otherwise, false.</returns>
     public override bool Equals(object? obj) =>
         obj is not null &&
-        (ReferenceEquals(this, obj) || obj is CalibrationTokenData tokenData && Equals(tokenData));
+        (ReferenceEquals(this, obj) || obj is TokenData tokenData && Equals(tokenData));
 
     /// <summary>
     ///   Returns a hash value for the current token.
@@ -311,7 +311,7 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
@@ -330,7 +330,7 @@ public sealed class CalibrationTokenData : IEquatable<CalibrationTokenData>
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

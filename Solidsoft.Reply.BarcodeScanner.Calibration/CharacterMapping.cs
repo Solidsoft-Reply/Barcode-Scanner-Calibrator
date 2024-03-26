@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationAmbiguity.cs" company="Solidsoft Reply Ltd.">
+// <copyright file="CalibrationCharacterMapping.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
@@ -16,8 +16,7 @@
 // limitations under the License.
 // </license>
 // <summary>
-// Represents a calibration ambiguity for one or more expected character
-// sequences and an ambiguous reported character sequence.
+// Represents a calibration match between an expected character and a reported sequence of characters.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -26,22 +25,19 @@ using Newtonsoft.Json;
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 /// <summary>
-///   Represents a calibration ambiguity for one or more expected character sequences
-///   and an ambiguous reported character sequence.
+///   Represents a calibration mapping from an expected character to a reported character.
 /// </summary>
-/// <param name="Expected">Gets an array of expected character sequences.</param>
-/// <param name="Reported">Gets an ambiguous reported character sequence.</param>
-/// <param name="InvariantCharactersOnly">
-///   Gets a value indicating whether the expected character sequence contains only invariant characters.
-/// .</param>
+/// <param name="Expected">Gets the expected character.</param>
+/// <param name="Reported">Gets the reported character sequence.</param>
+/// <param name="ExpectedCharacterCategory">Gets the category of the expected character in a character mapping.</param>
 /// <param name="DeadKey">Gets a value indicating whether the reported character is a dead key.</param>
-public record CalibrationAmbiguity(
+public record CharacterMapping(
         [property: JsonProperty("expected", Order = 0)]
-        IList<string> Expected,
+        char Expected,
         [property: JsonProperty("reported", Order = 1)]
         string Reported,
-        [property: JsonProperty("invariantCharactersOnly", Order = 2)]
-        bool InvariantCharactersOnly,
+        [property: JsonProperty("expectedCharacterCategory", Order = 2)]
+        CharacterCategory ExpectedCharacterCategory,
         [property: JsonProperty("deadKey", Order = 3)]
         bool DeadKey)
-    : CalibrationBaseRecord;
+    : BaseRecord;

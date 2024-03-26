@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationUnrecognisedCharacter.cs" company="Solidsoft Reply Ltd.">
+// <copyright file="CalibrationDeadKeyMapping.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
@@ -16,7 +16,7 @@
 // limitations under the License.
 // </license>
 // <summary>
-// The status of a calibration mapping for an expected character.
+// Represents a calibration mapping from an expected sequence to a reported dead key character sequence.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -25,15 +25,18 @@ using Newtonsoft.Json;
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 /// <summary>
-///   Represents a calibration ambiguity for an expected character sequence and two or more reported sequences of characters.
+///   Represents a calibration mapping from an expected sequence to a reported dead key character sequence.
 /// </summary>
-/// <param name="Expected">Gets the expected character.</param>
+/// <param name="Expected">Gets an expected character sequence.</param>
+/// <param name="Reported">Gets a reported dead key sequence.</param>
 /// <param name="InvariantCharactersOnly">
 ///   Gets a value indicating whether the expected character sequence contains only invariant characters.
 /// .</param>
-public record CalibrationUnrecognisedCharacter(
-        [property: JsonProperty("expected", Order = 0)]
+public record DeadKeyMapping(
+[property: JsonProperty("expected", Order = 0)]
         string Expected,
-        [property: JsonProperty("invariantCharactersOnly", Order = 1)]
+        [property: JsonProperty("reported", Order = 1)]
+        string Reported,
+        [property: JsonProperty("invariantCharactersOnly", Order = 2)]
         bool InvariantCharactersOnly)
-    : CalibrationBaseRecord;
+    : BaseRecord;

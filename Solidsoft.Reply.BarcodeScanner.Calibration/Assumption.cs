@@ -29,7 +29,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 ///   perspective from which advice is provided based on a stated assumption, or lack of assumption,
 ///   about the capabilities of client systems.
 /// </summary>
-public enum CalibrationAssumption
+public enum Assumption
 {
     /// <summary>
     ///   Provide advice from the perspective of a user whose client system may not support calibration.

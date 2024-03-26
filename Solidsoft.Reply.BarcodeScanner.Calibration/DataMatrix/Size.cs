@@ -26,7 +26,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// <summary>
 ///   Enumeration of Data Matrix code symbol sizes.
 /// </summary>
-public enum DataMatrixSize
+public enum Size
 {
     /// <summary>
     ///   Automatic sizing.

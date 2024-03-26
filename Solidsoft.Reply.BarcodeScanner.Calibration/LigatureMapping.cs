@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationDeadKeyMapping.cs" company="Solidsoft Reply Ltd.">
+// <copyright file="CalibrationLigatureMapping.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
@@ -25,18 +25,18 @@ using Newtonsoft.Json;
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 /// <summary>
-///   Represents a calibration mapping from an expected sequence to a reported dead key character sequence.
+///   Represents a calibration mapping from a ligature to a reported character.
 /// </summary>
-/// <param name="Expected">Gets an expected character sequence.</param>
-/// <param name="Reported">Gets a reported dead key sequence.</param>
-/// <param name="InvariantCharactersOnly">
-///   Gets a value indicating whether the expected character sequence contains only invariant characters.
+/// <param name="Expected">Gets an expected character.</param>
+/// <param name="Reported">Gets a reported ligature sequence.</param>
+/// <param name="InvariantCharacterOnly">
+///   Gets a value indicating whether the expected character is am invariant character.
 /// .</param>
-public record CalibrationDeadKeyMapping(
+public record LigatureMapping(
 [property: JsonProperty("expected", Order = 0)]
-        string Expected,
+        char Expected,
         [property: JsonProperty("reported", Order = 1)]
         string Reported,
-        [property: JsonProperty("invariantCharactersOnly", Order = 2)]
-        bool InvariantCharactersOnly)
-    : CalibrationBaseRecord;
+        [property: JsonProperty("invariantCharacterOnly", Order = 2)]
+        bool InvariantCharacterOnly)
+    : BaseRecord;

@@ -238,7 +238,7 @@ using Properties;
 /// <param name="DeadKeys">
 ///   Gets a value indicating whether dead key barcodes are required for calibration. 
 /// </param>
-/// <param name="CalibrationAssumption">
+/// <param name="Assumption">
 ///   Gets the assumption made concerning the use of calibration in client systems.
 /// </param>
 /// <param name="Ambiguities">
@@ -375,24 +375,24 @@ public sealed record SystemCapabilities (
     bool DeadKeys = false,
 
     [property: JsonProperty("characterMappings", Order = 41)]
-    IList<CalibrationCharacterMapping>? CharacterMappings = null,
+    IList<CharacterMapping>? CharacterMappings = null,
 
     [property: JsonProperty("deadKeyMappings", Order = 42)]
-    IList<CalibrationDeadKeyMapping>? DeadKeyMappings = null,
+    IList<DeadKeyMapping>? DeadKeyMappings = null,
 
     [property: JsonProperty("ambiguities", Order = 43)]
-    IList<CalibrationAmbiguity>? Ambiguities = null,
+    IList<Ambiguity>? Ambiguities = null,
 
     [property: JsonProperty("unrecognisedCharacters", Order = 44)]
-    IList<CalibrationUnrecognisedCharacter>? UnrecognisedCharacters = null,
+    IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
 
     [property: JsonProperty("ligatureMappings", Order = 45)]
-    IList<CalibrationLigatureMapping>? LigatureMappings = null,
+    IList<LigatureMapping>? LigatureMappings = null,
 
     [property: JsonProperty("calibrationAssumption", Order = 46)]
-    CalibrationAssumption CalibrationAssumption = CalibrationAssumption.Agnostic)
+    Assumption Assumption = Assumption.Agnostic)
      
-: CalibrationBaseRecord {
+: BaseRecord {
     /// <summary>
     ///   Indicates whether the keyboard Caps Lock key is on or off.
     /// </summary>
@@ -401,8 +401,8 @@ public sealed record SystemCapabilities (
     /// <summary>
     ///   Initializes a new instance of the <see cref="SystemCapabilities"/> class.
     /// </summary>
-    /// <param name="calibrationToken">The calibration token.</param>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="token">The calibration token.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     /// <param name="capsLock">Indicates whether Caps Lock is switched on.</param>
     /// <param name="scannerKeyboardPerformance">'Traffic Light' assessment of the performance of the barcode scanner keyboard input.</param>
     /// <param name="formatnnSupportAssessed">Indicates whether calibration included tests for Format nn support.</param>
@@ -416,8 +416,8 @@ public sealed record SystemCapabilities (
     /// <param name="nonInvariantUnrecognisedCharacters">A list of unrecognised non-invariant characters.</param>
     /// <param name="ligatureMap">A list of ligature character sequences.</param>
     public SystemCapabilities(
-        CalibrationToken calibrationToken,
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration,
+        Token token,
+        Assumption assumption = Assumption.Calibration,
         bool? capsLock = null,
         ScannerKeyboardPerformance scannerKeyboardPerformance = default,
         bool formatnnSupportAssessed = true,
@@ -431,264 +431,264 @@ public sealed record SystemCapabilities (
         IEnumerable<string>? nonInvariantUnrecognisedCharacters = null,
         IDictionary<string, char>? ligatureMap = null) : this()
     {
-        if (calibrationToken == default)
+        if (token == default)
         {
             return;
         }
 
-        CalibrationAssumption = calibrationAssumption;
+        Assumption = assumption;
         FormatnnSupportAssessed = formatnnSupportAssessed;
         ScannerKeyboardPerformance = scannerKeyboardPerformance;
         DeadKeys = deadKeys;
 
         // Process information
-        foreach (var info in calibrationToken.Information)
+        foreach (var info in token.Information)
         {
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (info.InformationType)
             {
-                case CalibrationInformationType.KeyboardScript:
+                case InformationType.KeyboardScript:
                     KeyboardScript = ParameterValue(info);
                     break;
-                case CalibrationInformationType.GroupSeparatorSupported:
+                case InformationType.GroupSeparatorSupported:
                     CanReadGroupSeparatorReliably = true;
                     break;
-                case CalibrationInformationType.RecordSeparatorSupported:
+                case InformationType.RecordSeparatorSupported:
                     CanReadRecordSeparatorReliably = true;
                     break;
-                case CalibrationInformationType.FileSeparatorSupported:
+                case InformationType.FileSeparatorSupported:
                     CanReadFileSeparatorsReliably = true;
                     break;
-                case CalibrationInformationType.UnitSeparatorSupported:
+                case InformationType.UnitSeparatorSupported:
                     CanReadUnitSeparatorsReliably = true;
                     break;
-                case CalibrationInformationType.ScannerMayCompensateForCapsLock:
+                case InformationType.ScannerMayCompensateForCapsLock:
                     ScannerMayCompensateForCapsLock = true;
                     break;
-                case CalibrationInformationType.Platform:
+                case InformationType.Platform:
                     Platform = Enum.TryParse<SupportedPlatform>(
                                         ParameterValue(info),
                                         out var platform)
                                         ? platform
                                         : SupportedPlatform.Windows;
                     break;
-                case CalibrationInformationType.AimTransmitted:
+                case InformationType.AimTransmitted:
                     AimIdentifier = ParameterValue(info);
                     break;
-                case CalibrationInformationType.AimMayBeTransmitted:
+                case InformationType.AimMayBeTransmitted:
                     AimIdentifier = ParameterValue(info);
                     AimIdentifierUncertain = true;
                     break;
-                case CalibrationInformationType.EndOfLineTransmitted:
+                case InformationType.EndOfLineTransmitted:
                     EndOfLineSequence = ParameterValue(info);
                     break;
-                case CalibrationInformationType.None:
-                case CalibrationInformationType.AimSupported:
-                case CalibrationInformationType.SomeNonInvariantCharactersUnreported:
-                case CalibrationInformationType.SomeNonInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
-                case CalibrationInformationType.IsoIec15434SyntaxNotRecognised:
-                case CalibrationInformationType.IsoIec15434EdiNotReliablyReadable:
-                case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
-                case CalibrationInformationType.AimNotTransmitted:
-                case CalibrationInformationType.AimNotRecognised:
-                case CalibrationInformationType.PrefixTransmitted:
-                case CalibrationInformationType.CodeTransmitted:
-                case CalibrationInformationType.SuffixTransmitted:
-                case CalibrationInformationType.EndOfLineNotTransmitted:
-                case CalibrationInformationType.MultipleKeysNonInvariantCharacters:
-                case CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters:
-                case CalibrationInformationType.MultipleKeysAimFlagCharacter:
-                case CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-                case CalibrationInformationType.ControlCharacterMappingAdditionalDataElements:
-                case CalibrationInformationType.NonInvariantCharacterSequence:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayouts:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
-                case CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence:
-                case CalibrationInformationType.CapsLockOn:
-                case CalibrationInformationType.CapsLockProbablyOn:
-                case CalibrationInformationType.ScannerMayConvertToUpperCase:
-                case CalibrationInformationType.ScannerMayConvertToLowerCase:
-                case CalibrationInformationType.ScannerMayInvertCase:
-                case CalibrationInformationType.SubOptimalScannerKeyboardPerformance:
-                case CalibrationInformationType.NoCalibrationDataReported:
-                case CalibrationInformationType.UnrecognisedData:
-                case CalibrationInformationType.TooManyCharactersDetected:
-                case CalibrationInformationType.PartialCalibrationDataReported:
-                case CalibrationInformationType.IncorrectCalibrationDataReported:
-                case CalibrationInformationType.UndetectedInvariantCharacters:
-                case CalibrationInformationType.SomeInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
-                case CalibrationInformationType.NoGroupSeparatorMapping:
-                case CalibrationInformationType.MultipleKeys:
-                case CalibrationInformationType.DeadKeyMultiMapping:
-                case CalibrationInformationType.DeadKeyMultipleKeys:
-                case CalibrationInformationType.MultipleSequences:
-                case CalibrationInformationType.MultipleSequencesForScannerDeadKey:
-                case CalibrationInformationType.IncompatibleScannerDeadKey:
-                case CalibrationInformationType.GroupSeparatorMapping:
-                case CalibrationInformationType.LigatureCharacters:
-                case CalibrationInformationType.NoDelimiters:
-                case CalibrationInformationType.NoTemporaryDelimiterCandidate:
-                case CalibrationInformationType.CalibrationFailed:
-                case CalibrationInformationType.CalibrationFailedUnexpectedly:
+                case InformationType.None:
+                case InformationType.AimSupported:
+                case InformationType.SomeNonInvariantCharactersUnreported:
+                case InformationType.SomeNonInvariantCharactersUnrecognised:
+                case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
+                case InformationType.IsoIec15434SyntaxNotRecognised:
+                case InformationType.IsoIec15434EdiNotReliablyReadable:
+                case InformationType.IsoIec15434RecordSeparatorMapping:
+                case InformationType.AimNotTransmitted:
+                case InformationType.AimNotRecognised:
+                case InformationType.PrefixTransmitted:
+                case InformationType.CodeTransmitted:
+                case InformationType.SuffixTransmitted:
+                case InformationType.EndOfLineNotTransmitted:
+                case InformationType.MultipleKeysNonInvariantCharacters:
+                case InformationType.MultipleKeysMultipleNonInvariantCharacters:
+                case InformationType.MultipleKeysAimFlagCharacter:
+                case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
+                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.NonInvariantCharacterSequence:
+                case InformationType.NonCorrespondingKeyboardLayouts:
+                case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
+                case InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
+                case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
+                case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
+                case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
+                case InformationType.CapsLockOn:
+                case InformationType.CapsLockProbablyOn:
+                case InformationType.ScannerMayConvertToUpperCase:
+                case InformationType.ScannerMayConvertToLowerCase:
+                case InformationType.ScannerMayInvertCase:
+                case InformationType.SubOptimalScannerKeyboardPerformance:
+                case InformationType.NoCalibrationDataReported:
+                case InformationType.UnrecognisedData:
+                case InformationType.TooManyCharactersDetected:
+                case InformationType.PartialCalibrationDataReported:
+                case InformationType.IncorrectCalibrationDataReported:
+                case InformationType.UndetectedInvariantCharacters:
+                case InformationType.SomeInvariantCharactersUnrecognised:
+                case InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
+                case InformationType.NoGroupSeparatorMapping:
+                case InformationType.MultipleKeys:
+                case InformationType.DeadKeyMultiMapping:
+                case InformationType.DeadKeyMultipleKeys:
+                case InformationType.MultipleSequences:
+                case InformationType.MultipleSequencesForScannerDeadKey:
+                case InformationType.IncompatibleScannerDeadKey:
+                case InformationType.GroupSeparatorMapping:
+                case InformationType.LigatureCharacters:
+                case InformationType.NoDelimiters:
+                case InformationType.NoTemporaryDelimiterCandidate:
+                case InformationType.CalibrationFailed:
+                case InformationType.CalibrationFailedUnexpectedly:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
-                        nameof(calibrationToken),
+                        nameof(token),
                         info.InformationType,
                         Resources.CalibrationIncorrectInformationalInformationType);
             }
         }
 
-        foreach (var info in calibrationToken.Warnings)
+        foreach (var info in token.Warnings)
         {
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (info.InformationType)
             {
-                case CalibrationInformationType.SomeNonInvariantCharactersUnreported:
-                case CalibrationInformationType.SomeNonInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
-                case CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters:
-                case CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case CalibrationInformationType.ControlCharacterMappingAdditionalDataElements:
-                case CalibrationInformationType.NonInvariantCharacterSequence:
+                case InformationType.SomeNonInvariantCharactersUnreported:
+                case InformationType.SomeNonInvariantCharactersUnrecognised:
+                case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
+                case InformationType.MultipleKeysMultipleNonInvariantCharacters:
+                case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
+                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.NonInvariantCharacterSequence:
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
                     KeyboardLayoutsCorrespond = false;
                     CanReadAdditionalAsciiCharactersReliably = false;
                     break;
-                case CalibrationInformationType.IsoIec15434SyntaxNotRecognised:
-                case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
+                case InformationType.IsoIec15434SyntaxNotRecognised:
+                case InformationType.IsoIec15434RecordSeparatorMapping:
                     CanReadFormat05AndFormat06Reliably = false;
                     break;
-                case CalibrationInformationType.IsoIec15434EdiNotReliablyReadable:
-                case CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.IsoIec15434EdiNotReliablyReadable:
+                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;
                     break;
-                case CalibrationInformationType.AimNotTransmitted:
+                case InformationType.AimNotTransmitted:
                     ScannerTransmitsAimIdentifiers = false;
                     break;
-                case CalibrationInformationType.AimNotRecognised:
-                case CalibrationInformationType.MultipleKeysAimFlagCharacter:
+                case InformationType.AimNotRecognised:
+                case InformationType.MultipleKeysAimFlagCharacter:
                     KeyboardLayoutsCorrespondForAimIdentifier = false;
                     KeyboardLayoutsCorrespond = false;
                     CanReadAimIdentifiersReliably = false;
                     break;
-                case CalibrationInformationType.PrefixTransmitted:
+                case InformationType.PrefixTransmitted:
                     ScannerTransmitsAdditionalPrefix = true;
                     AdditionalPrefix = ParameterValue(info);
                     break;
-                case CalibrationInformationType.CodeTransmitted:
+                case InformationType.CodeTransmitted:
                     ScannerTransmitsAdditionalCode = true;
                     AdditionalCode = ParameterValue(info);
                     break;
-                case CalibrationInformationType.SuffixTransmitted:
+                case InformationType.SuffixTransmitted:
                     ScannerTransmitsAdditionalSuffix = true;
                     AdditionalSuffix = ParameterValue(info);
                     break;
-                case CalibrationInformationType.EndOfLineNotTransmitted:
+                case InformationType.EndOfLineNotTransmitted:
                     ScannerTransmitsEndOfLineSequence = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayouts:
+                case InformationType.NonCorrespondingKeyboardLayouts:
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants:
+                case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
                     KeyboardLayoutsCorrespondForInvariants = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType
+                case InformationType
                    .NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                     KeyboardLayoutsCanRepresentGroupSeparator = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
                     KeyboardLayoutsCanRepresentRecordSeparator = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
+                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
                     KeyboardLayoutsCanRepresentEdiSeparators = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
+                case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                     KeyboardLayoutsCorrespondForAimIdentifier = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case CalibrationInformationType.CapsLockProbablyOn:
+                case InformationType.CapsLockProbablyOn:
                     CapsLockIndicator = true;
                     break;
-                case CalibrationInformationType.ScannerMayConvertToUpperCase:
+                case InformationType.ScannerMayConvertToUpperCase:
                     ScannerMayConvertToUpperCase = true;
                     break;
-                case CalibrationInformationType.ScannerMayConvertToLowerCase:
+                case InformationType.ScannerMayConvertToLowerCase:
                     ScannerMayConvertToLowerCase = true;
                     break;
-                case CalibrationInformationType.ScannerMayInvertCase:
+                case InformationType.ScannerMayInvertCase:
                     ScannerMayInvertCase = true;
                     break;
-                case CalibrationInformationType.None:
-                case CalibrationInformationType.AimSupported:
-                case CalibrationInformationType.AimTransmitted:
-                case CalibrationInformationType.AimMayBeTransmitted:
-                case CalibrationInformationType.EndOfLineTransmitted:
-                case CalibrationInformationType.GroupSeparatorSupported:
-                case CalibrationInformationType.RecordSeparatorSupported:
-                case CalibrationInformationType.FileSeparatorSupported:
-                case CalibrationInformationType.UnitSeparatorSupported:
-                case CalibrationInformationType.ScannerMayCompensateForCapsLock:
-                case CalibrationInformationType.KeyboardScript:
-                case CalibrationInformationType.Platform:
-                case CalibrationInformationType.MultipleKeysNonInvariantCharacters:
-                case CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence:
-                case CalibrationInformationType.CapsLockOn:
-                case CalibrationInformationType.SubOptimalScannerKeyboardPerformance:
-                case CalibrationInformationType.NoCalibrationDataReported:
-                case CalibrationInformationType.UnrecognisedData:
-                case CalibrationInformationType.TooManyCharactersDetected:
-                case CalibrationInformationType.PartialCalibrationDataReported:
-                case CalibrationInformationType.IncorrectCalibrationDataReported:
-                case CalibrationInformationType.UndetectedInvariantCharacters:
-                case CalibrationInformationType.SomeInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
-                case CalibrationInformationType.NoGroupSeparatorMapping:
-                case CalibrationInformationType.MultipleKeys:
-                case CalibrationInformationType.DeadKeyMultiMapping:
-                case CalibrationInformationType.DeadKeyMultipleKeys:
-                case CalibrationInformationType.MultipleSequences:
-                case CalibrationInformationType.MultipleSequencesForScannerDeadKey:
-                case CalibrationInformationType.IncompatibleScannerDeadKey:
-                case CalibrationInformationType.GroupSeparatorMapping:
-                case CalibrationInformationType.LigatureCharacters:
-                case CalibrationInformationType.NoDelimiters:
-                case CalibrationInformationType.NoTemporaryDelimiterCandidate:
-                case CalibrationInformationType.CalibrationFailed:
-                case CalibrationInformationType.CalibrationFailedUnexpectedly:
+                case InformationType.None:
+                case InformationType.AimSupported:
+                case InformationType.AimTransmitted:
+                case InformationType.AimMayBeTransmitted:
+                case InformationType.EndOfLineTransmitted:
+                case InformationType.GroupSeparatorSupported:
+                case InformationType.RecordSeparatorSupported:
+                case InformationType.FileSeparatorSupported:
+                case InformationType.UnitSeparatorSupported:
+                case InformationType.ScannerMayCompensateForCapsLock:
+                case InformationType.KeyboardScript:
+                case InformationType.Platform:
+                case InformationType.MultipleKeysNonInvariantCharacters:
+                case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
+                case InformationType.CapsLockOn:
+                case InformationType.SubOptimalScannerKeyboardPerformance:
+                case InformationType.NoCalibrationDataReported:
+                case InformationType.UnrecognisedData:
+                case InformationType.TooManyCharactersDetected:
+                case InformationType.PartialCalibrationDataReported:
+                case InformationType.IncorrectCalibrationDataReported:
+                case InformationType.UndetectedInvariantCharacters:
+                case InformationType.SomeInvariantCharactersUnrecognised:
+                case InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
+                case InformationType.NoGroupSeparatorMapping:
+                case InformationType.MultipleKeys:
+                case InformationType.DeadKeyMultiMapping:
+                case InformationType.DeadKeyMultipleKeys:
+                case InformationType.MultipleSequences:
+                case InformationType.MultipleSequencesForScannerDeadKey:
+                case InformationType.IncompatibleScannerDeadKey:
+                case InformationType.GroupSeparatorMapping:
+                case InformationType.LigatureCharacters:
+                case InformationType.NoDelimiters:
+                case InformationType.NoTemporaryDelimiterCandidate:
+                case InformationType.CalibrationFailed:
+                case InformationType.CalibrationFailedUnexpectedly:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
-                        nameof(calibrationToken),
+                        nameof(token),
                         info.InformationType,
                         Resources.CalibrationIncorrectWarningInformationType);
             }
         }
 
-        foreach (var informationType in calibrationToken.Errors.Select(info => info.InformationType))
+        foreach (var informationType in token.Errors.Select(info => info.InformationType))
         {
 #pragma warning disable S907
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (informationType)
             {
                 // We got a partial result, so retain all the knowledge we have gained.
-                case CalibrationInformationType.PartialCalibrationDataReported:
+                case InformationType.PartialCalibrationDataReported:
                     CompleteDataReported = false;
                     KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespondForInvariants = null;
@@ -698,7 +698,7 @@ public sealed record SystemCapabilities (
                     CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
-                case CalibrationInformationType.IncorrectCalibrationDataReported:
+                case InformationType.IncorrectCalibrationDataReported:
                     CorrectSequenceReported = false;
                     KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespondForInvariants = null;
@@ -708,19 +708,19 @@ public sealed record SystemCapabilities (
                     CanReadEdiReliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
-                case CalibrationInformationType.NoCalibrationDataReported:
+                case InformationType.NoCalibrationDataReported:
                     DataReported = false;
-                    goto case CalibrationInformationType.UnrecognisedData;
-                case CalibrationInformationType.CalibrationFailedUnexpectedly:
+                    goto case InformationType.UnrecognisedData;
+                case InformationType.CalibrationFailedUnexpectedly:
                     UnexpectedError = true;
-                    goto case CalibrationInformationType.UnrecognisedData;
-                case CalibrationInformationType.UnrecognisedData:
-                case CalibrationInformationType.TooManyCharactersDetected:
-                case CalibrationInformationType.NoTemporaryDelimiterCandidate:
-                case CalibrationInformationType.NoDelimiters:
+                    goto case InformationType.UnrecognisedData;
+                case InformationType.UnrecognisedData:
+                case InformationType.TooManyCharactersDetected:
+                case InformationType.NoTemporaryDelimiterCandidate:
+                case InformationType.NoDelimiters:
                     CompleteDataReported = false;
-                    goto case CalibrationInformationType.CalibrationFailed;
-                case CalibrationInformationType.CalibrationFailed:
+                    goto case InformationType.CalibrationFailed;
+                case InformationType.CalibrationFailed:
                     TestsSucceeded = false;
                     KeyboardLayoutsCorrespond = null;
                     KeyboardLayoutsCorrespondForInvariants = null;
@@ -738,18 +738,18 @@ public sealed record SystemCapabilities (
                     CorrectSequenceReported = true;
                     break;
                 // The following all indicate that reliable scanning is not possible, even with mapping
-                case CalibrationInformationType.UndetectedInvariantCharacters:
-                case CalibrationInformationType.SomeInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
-                case CalibrationInformationType.NoGroupSeparatorMapping:
-                case CalibrationInformationType.MultipleKeys:
-                case CalibrationInformationType.DeadKeyMultiMapping:
-                case CalibrationInformationType.DeadKeyMultipleKeys:
-                case CalibrationInformationType.MultipleSequences:
-                case CalibrationInformationType.MultipleSequencesForScannerDeadKey:
-                case CalibrationInformationType.IncompatibleScannerDeadKey:
-                case CalibrationInformationType.GroupSeparatorMapping:
-                case CalibrationInformationType.LigatureCharacters:
+                case InformationType.UndetectedInvariantCharacters:
+                case InformationType.SomeInvariantCharactersUnrecognised:
+                case InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants:
+                case InformationType.NoGroupSeparatorMapping:
+                case InformationType.MultipleKeys:
+                case InformationType.DeadKeyMultiMapping:
+                case InformationType.DeadKeyMultipleKeys:
+                case InformationType.MultipleSequences:
+                case InformationType.MultipleSequencesForScannerDeadKey:
+                case InformationType.IncompatibleScannerDeadKey:
+                case InformationType.GroupSeparatorMapping:
+                case InformationType.LigatureCharacters:
                     KeyboardLayoutsCorrespond = false;
                     KeyboardLayoutsCorrespondForInvariants = false;
                     CanReadInvariantsReliably = false;
@@ -758,55 +758,55 @@ public sealed record SystemCapabilities (
                     CanReadFileSeparatorsReliably = false;
                     CanReadUnitSeparatorsReliably = false;
                     break;
-                case CalibrationInformationType.None:
-                case CalibrationInformationType.AimSupported:
-                case CalibrationInformationType.AimTransmitted:
-                case CalibrationInformationType.AimMayBeTransmitted:
-                case CalibrationInformationType.EndOfLineTransmitted:
-                case CalibrationInformationType.GroupSeparatorSupported:
-                case CalibrationInformationType.RecordSeparatorSupported:
-                case CalibrationInformationType.FileSeparatorSupported:
-                case CalibrationInformationType.UnitSeparatorSupported:
-                case CalibrationInformationType.ScannerMayCompensateForCapsLock:
-                case CalibrationInformationType.KeyboardScript:
-                case CalibrationInformationType.Platform:
-                case CalibrationInformationType.SomeNonInvariantCharactersUnreported:
-                case CalibrationInformationType.SomeNonInvariantCharactersUnrecognised:
-                case CalibrationInformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
-                case CalibrationInformationType.IsoIec15434SyntaxNotRecognised:
-                case CalibrationInformationType.IsoIec15434EdiNotReliablyReadable:
-                case CalibrationInformationType.IsoIec15434RecordSeparatorMapping:
-                case CalibrationInformationType.AimNotTransmitted:
-                case CalibrationInformationType.AimNotRecognised:
-                case CalibrationInformationType.PrefixTransmitted:
-                case CalibrationInformationType.CodeTransmitted:
-                case CalibrationInformationType.SuffixTransmitted:
-                case CalibrationInformationType.EndOfLineNotTransmitted:
-                case CalibrationInformationType.MultipleKeysNonInvariantCharacters:
-                case CalibrationInformationType.MultipleKeysMultipleNonInvariantCharacters:
-                case CalibrationInformationType.MultipleKeysAimFlagCharacter:
-                case CalibrationInformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case CalibrationInformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-                case CalibrationInformationType.ControlCharacterMappingAdditionalDataElements:
-                case CalibrationInformationType.NonInvariantCharacterSequence:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayouts:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForInvariants:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
-                case CalibrationInformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
-                case CalibrationInformationType.NonDeterminableKeyboardLayoutCorrespondence:
-                case CalibrationInformationType.CapsLockOn:
-                case CalibrationInformationType.CapsLockProbablyOn:
-                case CalibrationInformationType.ScannerMayConvertToUpperCase:
-                case CalibrationInformationType.ScannerMayConvertToLowerCase:
-                case CalibrationInformationType.ScannerMayInvertCase:
-                case CalibrationInformationType.SubOptimalScannerKeyboardPerformance:
+                case InformationType.None:
+                case InformationType.AimSupported:
+                case InformationType.AimTransmitted:
+                case InformationType.AimMayBeTransmitted:
+                case InformationType.EndOfLineTransmitted:
+                case InformationType.GroupSeparatorSupported:
+                case InformationType.RecordSeparatorSupported:
+                case InformationType.FileSeparatorSupported:
+                case InformationType.UnitSeparatorSupported:
+                case InformationType.ScannerMayCompensateForCapsLock:
+                case InformationType.KeyboardScript:
+                case InformationType.Platform:
+                case InformationType.SomeNonInvariantCharactersUnreported:
+                case InformationType.SomeNonInvariantCharactersUnrecognised:
+                case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
+                case InformationType.IsoIec15434SyntaxNotRecognised:
+                case InformationType.IsoIec15434EdiNotReliablyReadable:
+                case InformationType.IsoIec15434RecordSeparatorMapping:
+                case InformationType.AimNotTransmitted:
+                case InformationType.AimNotRecognised:
+                case InformationType.PrefixTransmitted:
+                case InformationType.CodeTransmitted:
+                case InformationType.SuffixTransmitted:
+                case InformationType.EndOfLineNotTransmitted:
+                case InformationType.MultipleKeysNonInvariantCharacters:
+                case InformationType.MultipleKeysMultipleNonInvariantCharacters:
+                case InformationType.MultipleKeysAimFlagCharacter:
+                case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
+                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.NonInvariantCharacterSequence:
+                case InformationType.NonCorrespondingKeyboardLayouts:
+                case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
+                case InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
+                case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
+                case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
+                case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
+                case InformationType.CapsLockOn:
+                case InformationType.CapsLockProbablyOn:
+                case InformationType.ScannerMayConvertToUpperCase:
+                case InformationType.ScannerMayConvertToLowerCase:
+                case InformationType.ScannerMayInvertCase:
+                case InformationType.SubOptimalScannerKeyboardPerformance:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
-                        nameof(calibrationToken),
+                        nameof(token),
                         informationType,
                         Resources.CalibrationIncorrectErrorInformationType);
             }
@@ -879,16 +879,16 @@ public sealed record SystemCapabilities (
 
         // Set up match data for justification
         CharacterMappings = characterMap?.Where(kvp => !(deadKeyCharacterMap?.Values.Contains(kvp.Value) ?? false)).Select(characterMapping =>
-            new CalibrationCharacterMapping(characterMapping.Value.ToControlPicture(), characterMapping.Key.ToControlPictureString(),
+            new CharacterMapping(characterMapping.Value.ToControlPicture(), characterMapping.Key.ToControlPictureString(),
                 CalibrationCharacterCategory(characterMapping.Value),
                 false)).ToList();
 
-        (CharacterMappings as List<CalibrationCharacterMapping>)?.AddRange(
+        (CharacterMappings as List<CharacterMapping>)?.AddRange(
             deadKeyCharacterMap?.Select(deadKeyCharacterMapping =>
-                new CalibrationCharacterMapping(deadKeyCharacterMapping.Value.ToControlPicture(),
+                new CharacterMapping(deadKeyCharacterMapping.Value.ToControlPicture(),
                     deadKeyCharacterMapping.Key[(deadKeyCharacterMapping.Key.LastIndexOf('\0') + 1)..].ToControlPictures(),
                     CalibrationCharacterCategory(deadKeyCharacterMapping.Value),
-                    true)) ?? Array.Empty<CalibrationCharacterMapping>());
+                    true)) ?? Array.Empty<CharacterMapping>());
 
         CharacterMappings =
             (from cm in CharacterMappings
@@ -897,7 +897,7 @@ public sealed record SystemCapabilities (
 
         // Set up dead key sequence match data for justification
         DeadKeyMappings = deadKeysMap?.Select(deadKeyMapping =>
-            new CalibrationDeadKeyMapping(
+            new DeadKeyMapping(
                 deadKeyMapping.Value.ToControlPictures(), 
                 deadKeyMapping.Key.ToControlPictures(),
                 IsSequenceInvariantDataOrApplication(deadKeyMapping.Value, formatnnSupportAssessed))).ToList();
@@ -910,7 +910,7 @@ public sealed record SystemCapabilities (
         // Set up ambiguity data for justification.
         Ambiguities = invariantGs1Ambiguities?
             .Select(ambiguity =>
-                new CalibrationAmbiguity(ambiguity.Value, ambiguity.Key, true, deadKeyCharacterMap?.ContainsKey(ambiguity.Key.Replace('\u2400', '\0')) ?? false)).ToList();
+                new Ambiguity(ambiguity.Value, ambiguity.Key, true, deadKeyCharacterMap?.ContainsKey(ambiguity.Key.Replace('\u2400', '\0')) ?? false)).ToList();
 
         // Create a list of non-invariant ambiguities that includes any additional variant characters
         // for the same reported character.
@@ -929,25 +929,25 @@ public sealed record SystemCapabilities (
             ambiguities.Add(key, value);
         }
 
-        (Ambiguities as List<CalibrationAmbiguity>)?.AddRange(
+        (Ambiguities as List<Ambiguity>)?.AddRange(
             ambiguities.Select(
                 ambiguity =>
-                    new CalibrationAmbiguity(ambiguity.Value, ambiguity.Key, false, deadKeyCharacterMap?.ContainsKey(ambiguity.Key.Replace('\u2400', '\0')) ?? false)));
+                    new Ambiguity(ambiguity.Value, ambiguity.Key, false, deadKeyCharacterMap?.ContainsKey(ambiguity.Key.Replace('\u2400', '\0')) ?? false)));
 
         // Set up unrecognised character data for justification.
         UnrecognisedCharacters = invariantGs1UnrecognisedCharacters?
             .Select(unrecognisedCharacter =>
-                new CalibrationUnrecognisedCharacter(unrecognisedCharacter, true))
+                new UnrecognisedCharacter(unrecognisedCharacter, true))
             .ToList();
 
-        (UnrecognisedCharacters as List<CalibrationUnrecognisedCharacter>)?.AddRange(
+        (UnrecognisedCharacters as List<UnrecognisedCharacter>)?.AddRange(
             nonInvariantUnrecognisedCharacters?.Select(
                 unrecognisedCharacter =>
-                    new CalibrationUnrecognisedCharacter(unrecognisedCharacter, false)) ?? Array.Empty<CalibrationUnrecognisedCharacter>());
+                    new UnrecognisedCharacter(unrecognisedCharacter, false)) ?? Array.Empty<UnrecognisedCharacter>());
 
         // Set up ligature sequence match data for justification
         LigatureMappings = ligatureMap?.Select(ligatureMapping =>
-            new CalibrationLigatureMapping(
+            new LigatureMapping(
                 ligatureMapping.Value.ToControlPicture(),
                 ligatureMapping.Key.ToControlPictures(),
                 IsSequenceInvariantDataOrApplication(ligatureMapping.Value.ToString(), formatnnSupportAssessed))).ToList();
@@ -961,28 +961,28 @@ public sealed record SystemCapabilities (
         return;
 #pragma warning restore S3626
 
-        static string ParameterValue(CalibrationInformation info)
+        static string ParameterValue(Information info)
         {
             var msgSplit = info.Description.Split(':');
             return msgSplit.Length > 1 ? msgSplit[1].Trim() : string.Empty;
         }
 
-        static CalibrationCharacterCategory CalibrationCharacterCategory(int character) =>
+        static CharacterCategory CalibrationCharacterCategory(int character) =>
             character switch
             {
-                >= 0 and < 32 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Control,
-                32 => Calibration.CalibrationCharacterCategory.Ascii,
-                < 35 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Invariant,
-                >= 35 and < 37 => Calibration.CalibrationCharacterCategory.Ascii,
-                >= 37 and < 64 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Invariant,
-                64 => Calibration.CalibrationCharacterCategory.Ascii,
-                < 91 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Invariant,
-                >= 91 and < 95 => Calibration.CalibrationCharacterCategory.Ascii,
-                95 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Invariant,
-                96 => Calibration.CalibrationCharacterCategory.Ascii,
-                < 123 => Calibration.CalibrationCharacterCategory.Ascii | Calibration.CalibrationCharacterCategory.Invariant,
-                >= 123 and < 128 => Calibration.CalibrationCharacterCategory.Ascii,
-                _ => Calibration.CalibrationCharacterCategory.None
+                >= 0 and < 32 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Control,
+                32 => Calibration.CharacterCategory.Ascii,
+                < 35 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
+                >= 35 and < 37 => Calibration.CharacterCategory.Ascii,
+                >= 37 and < 64 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
+                64 => Calibration.CharacterCategory.Ascii,
+                < 91 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
+                >= 91 and < 95 => Calibration.CharacterCategory.Ascii,
+                95 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
+                96 => Calibration.CharacterCategory.Ascii,
+                < 123 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
+                >= 123 and < 128 => Calibration.CharacterCategory.Ascii,
+                _ => Calibration.CharacterCategory.None
             };
 
         static bool IsSequenceInvariantDataOrApplication(string sequence, bool formatnnSupportAssessed)
@@ -994,9 +994,9 @@ public sealed record SystemCapabilities (
                 var category = CalibrationCharacterCategory(c);
                 isInvariantDataOrApplication = category switch
                 {
-                    _ when (category & Calibration.CalibrationCharacterCategory.Invariant) is Calibration.CalibrationCharacterCategory.Invariant => true,
+                    _ when (category & Calibration.CharacterCategory.Invariant) is Calibration.CharacterCategory.Invariant => true,
                     // ReSharper disable once RedundantCast
-                    _ when (category | Calibration.CalibrationCharacterCategory.Control) is Calibration.CalibrationCharacterCategory.Control => (int)c switch
+                    _ when (category | Calibration.CharacterCategory.Control) is Calibration.CharacterCategory.Control => (int)c switch
                     {
                         >= 28 and < 32 => formatnnSupportAssessed || ( c >= 29 && c < 31),
                         _ => false

@@ -242,7 +242,7 @@ public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
@@ -261,7 +261,7 @@ public sealed class AdviceItem : IEquatable<AdviceItem>, IAdviceItem<AdviceType>
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

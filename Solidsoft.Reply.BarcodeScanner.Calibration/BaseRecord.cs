@@ -30,7 +30,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 /// 
 /// </summary>
-public abstract record CalibrationBaseRecord
+public abstract record BaseRecord
 {
     /// <summary>
     ///   Gets the latest serialization or deserialization error.
@@ -47,7 +47,7 @@ public abstract record CalibrationBaseRecord
     /// <param name="json">A JSON string representing the serialized data.</param>
     /// <returns>The deserialised object.</returns>
     // ReSharper disable once UnusedMember.Global
-    public static T? FromJson<T>(string json) where T : CalibrationBaseRecord
+    public static T? FromJson<T>(string json) where T : BaseRecord
     {
         var deserialisedObject = JsonConvert.DeserializeObject<T>(json);
 
@@ -78,7 +78,7 @@ public abstract record CalibrationBaseRecord
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     // ReSharper disable once UnusedMember.Global
@@ -91,7 +91,7 @@ public abstract record CalibrationBaseRecord
         {
             StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
             DefaultValueHandling = DefaultValueHandling.Ignore,
-            ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+            ContractResolver = new DataIgnoreEmptyEnumerableResolver()
         };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

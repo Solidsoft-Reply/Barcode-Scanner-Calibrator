@@ -736,7 +736,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Swiss French computer keyboard layout using 24x24 data matrix bar codes.
     /// </summary>
     [Fact]
-    public void ToSwissFrench2424() => PerformCalibrationTest("Swiss French 24x24", size: DataMatrixSize.Dm24X24);
+    public void ToSwissFrench2424() => PerformCalibrationTest("Swiss French 24x24", size: Size.Dm24X24);
 
     /// <summary>
     /// Performs a calibration test.
@@ -745,7 +745,7 @@ public class KeyboardCalibratorTestsStateless
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic)
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
     {
         Debug.WriteLine(layoutName);
 
@@ -755,7 +755,7 @@ public class KeyboardCalibratorTestsStateless
         var loopCountForBaseline = 0;
         var loopCount = -1;
 
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         while (true)
         {

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationCharacterCategory.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
+// <copyright file="CalibrationInformationLevel.cs" company="Solidsoft Reply Ltd.">
+//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // </copyright>
 // <license>
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,35 +16,29 @@
 // limitations under the License.
 // </license>
 // <summary>
-// The category of the character.
+// Levels of calibration information.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 /// <summary>
-/// The category of the character.
+///   Levels of calibration information.
 /// </summary>
-[Flags]
-public enum CalibrationCharacterCategory
+public enum InformationLevel
 {
     /// <summary>
-    ///   The character is not categorised.
+    ///   Information level.
     /// </summary>
-    None = 0,
+    Information,
 
     /// <summary>
-    /// The character is an ASCII character
+    ///   Warning level.
     /// </summary>
-    Ascii = 1 << 0,
+    Warning,
 
     /// <summary>
-    ///   The character is an invariant character (ISO 646).
+    ///   Error level.
     /// </summary>
-    Invariant = 1 << 2,
-
-    /// <summary>
-    ///   The expected character is a control character.
-    /// </summary>
-    Control = 1 << 3
+    Error
 }

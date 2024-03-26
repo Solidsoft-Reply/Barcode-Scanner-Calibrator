@@ -32,7 +32,7 @@ using Newtonsoft.Json.Serialization;
 /// <summary>
 ///   A JSON contract resolver. Ignores empty enumerable properties and fields on calibration data.
 /// </summary>
-public class CalibrationDataIgnoreEmptyEnumerableResolver : DefaultContractResolver
+public class DataIgnoreEmptyEnumerableResolver : DefaultContractResolver
 {
     /// <summary>
     ///   Creates a JSON property with conditional serialization.
@@ -53,7 +53,7 @@ public class CalibrationDataIgnoreEmptyEnumerableResolver : DefaultContractResol
              typeof(IEnumerable<KeyValuePair<char, char>>).IsAssignableFrom(property.PropertyType) ||
              typeof(IEnumerable<char>).IsAssignableFrom(property.PropertyType) ||
              typeof(IEnumerable<string>).IsAssignableFrom(property.PropertyType) ||
-             typeof(IEnumerable<CalibrationInformation>).IsAssignableFrom(property.PropertyType)))
+             typeof(IEnumerable<Information>).IsAssignableFrom(property.PropertyType)))
         {
             property.ShouldSerialize = instance =>
             {

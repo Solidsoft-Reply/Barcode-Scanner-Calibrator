@@ -35,7 +35,7 @@ using System.Linq;
 ///   Resolves a sequence of characters to a Unicode block that heuristically represents the kind of
 ///   keyboard configured in the OS.
 /// </summary>
-public static class UnicodeBlocks
+internal static class UnicodeBlocks
 {
     /// <summary>
     ///   A dictionary of ranges for each Unicode block.

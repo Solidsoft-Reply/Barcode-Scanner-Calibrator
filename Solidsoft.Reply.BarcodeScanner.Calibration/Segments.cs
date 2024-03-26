@@ -25,7 +25,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 /// The segments of data provided in a baseline calibration barcode.
 /// </summary>
-internal enum CalibrationSegments {
+internal enum Segments {
 
     /// <summary>
     /// The data segment containing any prefix and/or AIM identifier.

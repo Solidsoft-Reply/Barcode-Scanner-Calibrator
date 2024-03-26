@@ -58,7 +58,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// </summary>
 [ExcludeFromCodeCoverage]
 // ReSharper disable once ClassWithVirtualMembersNeverInherited.Global
-public class DataMatrixBarcode : IDisposable
+internal class Barcode : IDisposable
 {
     /// <summary>
     ///   Used to lock when creating a barcode;
@@ -76,16 +76,16 @@ public class DataMatrixBarcode : IDisposable
     private float _multiplier = 1.0F;
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="DataMatrixBarcode" /> class.
+    ///   Initializes a new instance of the <see cref="Barcode" /> class.
     /// </summary>
-    public DataMatrixBarcode()
+    public Barcode()
     {
     }
 
     /// <summary>
-    ///   Finalizes an instance of the <see cref="DataMatrixBarcode" /> class.
+    ///   Finalizes an instance of the <see cref="Barcode" /> class.
     /// </summary>
-    ~DataMatrixBarcode()
+    ~Barcode()
     {
         Dispose(false);
     }
@@ -366,7 +366,7 @@ public class DataMatrixBarcode : IDisposable
     }
 
     /// <summary>
-    ///   Public implementation of Dispose method for the <see cref="DataMatrixBarcode"/> class.
+    ///   Public implementation of Dispose method for the <see cref="Barcode"/> class.
     /// </summary>
     [SuppressMessage(
         "StyleCop.CSharp.DocumentationRules",
@@ -379,7 +379,7 @@ public class DataMatrixBarcode : IDisposable
     }
 
     /// <summary>
-    ///   Protected implementation of Dispose method for the <see cref="DataMatrixBarcode"/> class.
+    ///   Protected implementation of Dispose method for the <see cref="Barcode"/> class.
     /// </summary>
     /// <param name="disposing">Indicates whether the object is being disposed explicitly.</param>
     [SuppressMessage(

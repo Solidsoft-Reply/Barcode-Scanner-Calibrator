@@ -37,12 +37,12 @@ using Newtonsoft.Json;
 ///   A set of extended data passed as part of a calibration token. This data is only provided if the token is being
 ///   used in a stateless enumeration of calibration barcodes using the NextCalibrationToken method.
 /// </summary>
-public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenExtendedData>
+public sealed class TokenExtendedData : IEquatable<TokenExtendedData>
 {
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationTokenExtendedData" /> class.
+    ///   Initializes a new instance of the <see cref="TokenExtendedData" /> class.
     /// </summary>
-    internal CalibrationTokenExtendedData()
+    internal TokenExtendedData()
     {
         DeadKeysMap = new Dictionary<string, string>();
         DeadKeyCharacterMap = new Dictionary<string, char>();
@@ -73,7 +73,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     }
 
     /// <summary>
-    ///   Initializes a new instance of the <see cref="CalibrationTokenExtendedData" /> class.
+    ///   Initializes a new instance of the <see cref="TokenExtendedData" /> class.
     /// </summary>
     /// <param name="deadKeysMap">
     ///   A dictionary of differences in reported and expected characters where the reported data uses dead keys.
@@ -161,7 +161,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    internal CalibrationTokenExtendedData(
+    internal TokenExtendedData(
         IDictionary<string, string> deadKeysMap,
         IDictionary<string, char> deadKeyCharacterMap,
         IDictionary<string, string> deadKeyFixUp,
@@ -402,15 +402,15 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     /// </summary>
     /// <param name="json">A JSON string representing the serialized data.</param>
     // ReSharper disable once UnusedMember.Global
-    public static CalibrationTokenExtendedData FromJson(string json)
+    public static TokenExtendedData FromJson(string json)
     {
-        if (string.IsNullOrWhiteSpace(json)) return new CalibrationTokenExtendedData();
+        if (string.IsNullOrWhiteSpace(json)) return new TokenExtendedData();
 
-        var calibrationTokenExtendedData = JsonConvert.DeserializeObject<CalibrationTokenExtendedData>(json);
+        var calibrationTokenExtendedData = JsonConvert.DeserializeObject<TokenExtendedData>(json);
 
-        if (calibrationTokenExtendedData is null) return new CalibrationTokenExtendedData();
+        if (calibrationTokenExtendedData is null) return new TokenExtendedData();
 
-        return new CalibrationTokenExtendedData(
+        return new TokenExtendedData(
             calibrationTokenExtendedData.DeadKeysMap,
             calibrationTokenExtendedData.DeadKeyCharacterMap,
             calibrationTokenExtendedData.DeadKeyFixUp,
@@ -442,24 +442,24 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     /// <summary>
     ///   Override for the equality operator.
     /// </summary>
-    /// <param name="calibrationTokenExtendedData1">The first calibration token extended data.</param>
-    /// <param name="calibrationTokenExtendedData2">The second calibration token extended data.</param>
+    /// <param name="tokenExtendedData1">The first calibration token extended data.</param>
+    /// <param name="tokenExtendedData2">The second calibration token extended data.</param>
     /// <returns>True, if the calibration token extended data are equal; otherwise false.</returns>
     public static bool operator ==(
-        CalibrationTokenExtendedData? calibrationTokenExtendedData1,
-        CalibrationTokenExtendedData calibrationTokenExtendedData2) =>
-        calibrationTokenExtendedData1?.Equals(calibrationTokenExtendedData2) ?? false;
+        TokenExtendedData? tokenExtendedData1,
+        TokenExtendedData tokenExtendedData2) =>
+        tokenExtendedData1?.Equals(tokenExtendedData2) ?? false;
 
     /// <summary>
     ///   Override for the inequality operator.
-    /// <param name="calibrationTokenExtendedData1">The first calibration token extended data.</param>
-    /// <param name="calibrationTokenExtendedData2">The second calibration token extended data.</param>
+    /// <param name="tokenExtendedData1">The first calibration token extended data.</param>
+    /// <param name="tokenExtendedData2">The second calibration token extended data.</param>
     /// </summary>
     /// <returns>True, if the calibration token extended data are not equal; otherwise false.</returns>
     public static bool operator !=(
-        CalibrationTokenExtendedData? calibrationTokenExtendedData1,
-        CalibrationTokenExtendedData calibrationTokenExtendedData2) =>
-        !calibrationTokenExtendedData1?.Equals(calibrationTokenExtendedData2) ?? false;
+        TokenExtendedData? tokenExtendedData1,
+        TokenExtendedData tokenExtendedData2) =>
+        !tokenExtendedData1?.Equals(tokenExtendedData2) ?? false;
 
     /// <summary>
     ///   Indicates whether the current calibration token extended data is equal to another calibration token extended data
@@ -474,7 +474,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
         "StyleCop.CSharp.ReadabilityRules",
         "SA1126:PrefixCallsCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    public bool Equals(CalibrationTokenExtendedData? other) =>
+    public bool Equals(TokenExtendedData? other) =>
         other is not null && (ReferenceEquals(this, other) ||
                          (Equals(DeadKeysMap, other.DeadKeysMap) &&
                           Equals(DeadKeyCharacterMap, other.DeadKeyCharacterMap) &&
@@ -517,7 +517,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
     /// <returns>true if the current calibration token extended data object is equal to the other parameter; otherwise, false.</returns>
     public override bool Equals(object? obj) =>
         obj is not null && (ReferenceEquals(this, obj) ||
-                       (obj is CalibrationTokenExtendedData systemCapabilities && Equals(systemCapabilities)));
+                       (obj is TokenExtendedData systemCapabilities && Equals(systemCapabilities)));
 
     /// <summary>
     ///   Returns a hash value for the current token.
@@ -578,7 +578,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
             {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
             });
 
     /// <summary>
@@ -598,7 +598,7 @@ public sealed class CalibrationTokenExtendedData : IEquatable<CalibrationTokenEx
                        {
                            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                            DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new CalibrationDataIgnoreEmptyEnumerableResolver()
+                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
                        };
 
         LatestError = JsonConvert.SerializeObject(errorContext, settings);

@@ -871,7 +871,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     [Fact]
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
     public void ToSwissFrench2424() {
-        PerformCalibrationTest("Swiss French 24x24", size: DataMatrixSize.Dm24X24);
+        PerformCalibrationTest("Swiss French 24x24", size: Size.Dm24X24);
     }
 
     /// <summary>
@@ -881,14 +881,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static CalibrationToken PerformCalibrationTest(string layoutName, float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) {
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic) {
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
         var computerKeyboardLayout = UnitedStatesTestData()[layoutName];
 
         var calibrator = new Calibrator();
         var loopCountForBaseline = 0;
         var loopCount = -1;
-        CalibrationToken currentToken = default;
+        Token currentToken = default;
 
         var recognisedDataElements = new List<RecognisedDataElement>
         {

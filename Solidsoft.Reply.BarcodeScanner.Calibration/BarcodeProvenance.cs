@@ -25,7 +25,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 ///   The likely provenance of the calibration barcode. This is determined through statistical analysis of its data.
 /// </summary>
-public enum CalibrationBarcodeProvenance
+internal enum BarcodeProvenance
 {
     /// <summary>
     ///   The barcode appears to be a fully-reported baseline barcode.

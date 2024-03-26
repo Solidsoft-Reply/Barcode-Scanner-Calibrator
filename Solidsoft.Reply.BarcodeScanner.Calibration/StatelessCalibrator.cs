@@ -54,35 +54,35 @@ public class StatelessCalibrator
     /// <summary>
     ///   Initializes a new instance of the <see cref="StatelessCalibrator" /> class.
     /// </summary>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     public StatelessCalibrator(
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration)
+        Assumption assumption = Assumption.Calibration)
     {
-        _calibrator = new Calibrator(calibrationAssumption);
+        _calibrator = new Calibrator(assumption);
     }
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="StatelessCalibrator" /> class.
     /// </summary>
     /// <param name="calibrationsData">The calibration data.</param>
-    /// <param name="calibrationAssumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     // ReSharper disable once UnusedMember.Global
     public StatelessCalibrator(
-        CalibrationData? calibrationsData, 
-        CalibrationAssumption calibrationAssumption = CalibrationAssumption.Calibration)
+        Data? calibrationsData, 
+        Assumption assumption = Assumption.Calibration)
     {
-        _calibrator = new Calibrator(calibrationsData, calibrationAssumption);
+        _calibrator = new Calibrator(calibrationsData, assumption);
     }
 
     /// <summary>
     ///   Gets the type of calibration barcode currently being processed.
     /// </summary>
-    public CalibrationBarcodeType CurrentBarcodeType => _calibrator.CurrentBarcodeType;
+    public BarcodeType CurrentBarcodeType => _calibrator.CurrentBarcodeType;
 
     /// <summary>
     ///   Gets or sets the Calibration configuration data.
     /// </summary>
-    public CalibrationData? CalibrationData
+    public Data? CalibrationData
     {
         get => _calibrator.CalibrationData;
 
@@ -141,7 +141,7 @@ public class StatelessCalibrator
     ///   If multiple streams are returned, each stream is a barcode containing a segment of the
     ///   calibration data. Multiple streams are returned when smaller barcode sizes are required.
     /// </remarks>
-    public IList<Stream> BaselineBarcodes(float multiplier = 1F, DataMatrixSize size = DataMatrixSize.Automatic) => _calibrator.BaselineBarcodes(multiplier, size);
+    public IList<Stream> BaselineBarcodes(float multiplier = 1F, Size size = Size.Automatic) => _calibrator.BaselineBarcodes(multiplier, size);
 
     /// <summary>
     ///   Get the data for each baseline calibration barcode for the current calibration.
@@ -157,7 +157,7 @@ public class StatelessCalibrator
     ///   depending on the Calibration library.</p>
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
-    public IList<string> BaselineBarcodeData(DataMatrixSize size = DataMatrixSize.Automatic) =>
+    public IList<string> BaselineBarcodeData(Size size = Size.Automatic) =>
         _calibrator.BaselineBarcodeData(size);
 
     /// <summary>
@@ -172,7 +172,7 @@ public class StatelessCalibrator
     /// <returns>The updated calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    public CalibrationToken Calibrate(int[] data, CalibrationToken token, bool? capsLock = null,
+    public Token Calibrate(int[] data, Token token, bool? capsLock = null,
         SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null) =>
         _calibrator.Calibrate(data, token, capsLock, platform, dataEntryTimeSpan, preProcessors);
@@ -187,7 +187,7 @@ public class StatelessCalibrator
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>The updated calibration token.</returns>
-    public CalibrationToken Calibrate(string? data, CalibrationToken token, bool? capsLock = null,
+    public Token Calibrate(string? data, Token token, bool? capsLock = null,
         SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null) =>
         _calibrator.Calibrate(data, token, capsLock, platform, dataEntryTimeSpan, preProcessors);
@@ -201,10 +201,10 @@ public class StatelessCalibrator
     /// <returns>The next calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    public CalibrationToken NextCalibrationToken(
-        CalibrationToken token = default,
+    public Token NextCalibrationToken(
+        Token token = default,
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) =>
+        Size size = Size.Automatic) =>
             _calibrator.NextCalibrationToken(token, multiplier, size);
 
     /// <summary>
@@ -215,9 +215,9 @@ public class StatelessCalibrator
     /// <returns>The next calibration token.</returns>
 
     // ReSharper disable once UnusedMember.Global
-    public CalibrationToken NextCalibrationToken(
+    public Token NextCalibrationToken(
         bool generateImages,
-        CalibrationToken token = default) =>
+        Token token = default) =>
         _calibrator.NextCalibrationToken(generateImages, token);
 
     /// <summary>
@@ -239,7 +239,7 @@ public class StatelessCalibrator
     /// </remarks>
     public IDictionary<char, IList<Stream>> SupplementalBarcodes(
         float multiplier = 1F,
-        DataMatrixSize size = DataMatrixSize.Automatic) => _calibrator.SupplementalBarcodes(multiplier, size);
+        Size size = Size.Automatic) => _calibrator.SupplementalBarcodes(multiplier, size);
 
     /// <summary>
     ///   Get a dictionary of data for supplementary calibration barcodes for the current calibration.
@@ -261,7 +261,7 @@ public class StatelessCalibrator
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
     public IDictionary<char, IList<string>> SupplementalBarcodeData(
-        DataMatrixSize size = DataMatrixSize.Automatic) => _calibrator.SupplementalBarcodeData(size);
+        Size size = Size.Automatic) => _calibrator.SupplementalBarcodeData(size);
 
     /// <summary>
     ///   Gets a value indicating whether pre-processing of barcode scanner input is required.

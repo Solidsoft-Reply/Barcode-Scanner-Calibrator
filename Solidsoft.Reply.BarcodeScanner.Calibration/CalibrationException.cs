@@ -29,7 +29,9 @@ using System.Runtime.Serialization;
 ///   Represents a calibration exception.
 /// </summary>
 [Serializable]
-public class CalibrationException : Exception
+#pragma warning disable S3871
+internal class CalibrationException : Exception
+#pragma warning restore S3871
 {
     /// <summary>
     ///   Initializes a new instance of the <see cref="CalibrationException" /> class.

@@ -29,7 +29,7 @@ using System.Linq;
 /// <summary>
 ///   Computes the case conversion characteristics of the system based on observations.
 /// </summary>
-public class CaseConversionCharacteristics
+internal class CaseConversionCharacteristics
 {
     /// <summary>
     ///   A list of segment characters.
