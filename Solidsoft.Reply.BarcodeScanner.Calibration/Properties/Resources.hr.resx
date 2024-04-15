@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Prijavljeni podaci su za krivi kalibracijski bar kod.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Pokušaj kalibracije barkoda je učinjen, ali nije pružen token za kalibraciju.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Neki invarijantni znakovi se ne mogu detektirati.</value>
   </data>

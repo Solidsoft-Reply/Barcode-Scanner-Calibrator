@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationBarcodeData.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="BarcodeData.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,18 +12,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Represents barcode data for calibration.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Text;
-
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 /// <summary>
 ///   Represents barcode data for calibration.
@@ -59,11 +56,9 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
     /// <summary>
     ///   Gets a collection of calibration data segments for individual barcodes.
     /// </summary>
-    public IEnumerable<string> Segments  {
-        get
-        {
-            if (_segments != null)
-            {
+    public IEnumerable<string> Segments {
+        get {
+            if (_segments != null) {
                 return _segments;
             }
 
@@ -73,18 +68,27 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
     }
 
     /// <summary>
-    ///   Gets the count of barcode data segments
+    ///   Gets the count of barcode data segments.
     /// </summary>
     public int Count => _parsedData.Length == 0 ? 0 : Segments.Count();
+
+    /// <summary>
+    ///   Parses data to a collection of strings representing characters in the barcode.
+    /// </summary>
+    /// <param name="data">The data to be parsed.</param>
+    /// <returns>A collection of strings representing characters in the barcode.</returns>
+    private static IEnumerable<string> ParseData(string data) {
+        return string.IsNullOrWhiteSpace(data)
+            ? []
+            : data.Select(char.ToString).ToList();
+    }
 
     /// <summary>
     ///   Yields a collection of calibration data segments for individual barcodes.
     /// </summary>
     /// <returns>A data segment.</returns>
-    private IEnumerable<string> ProcessSegments()
-    {
-        if (_parsedData.Length == 0)
-        {
+    private IEnumerable<string> ProcessSegments() {
+        if (_parsedData.Length == 0) {
             yield break;
         }
 
@@ -108,8 +112,9 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
                         }
                         else if (!adjustingLastSegments && remainingLength < workingMaxCharacter * 2) {
                             workingMaxCharacter = (int)Math.Ceiling((double)remainingLength / 2);
-                            // ReSharper disable once RedundantAssignment
 #pragma warning disable IDE0059
+
+                            // ReSharper disable once RedundantAssignment
                             adjustingLastSegments = true;
 #pragma warning restore IDE0059
                             yield return DoIt();
@@ -153,23 +158,11 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
                     }
 
                     break;
-
                 }
+
             case < 0:
                 yield return _data;
                 break;
         }
-    }
-
-    /// <summary>
-    ///   Parses data to a collection of strings representing characters in the barcode.
-    /// </summary>
-    /// <param name="data">The data to be parsed.</param>
-    /// <returns>A collection of strings representing characters in the barcode.</returns>
-    private static IEnumerable<string> ParseData(string data)
-    {
-        return string.IsNullOrWhiteSpace(data) 
-            ? []
-            : data.Select(char.ToString).ToList();
     }
 }

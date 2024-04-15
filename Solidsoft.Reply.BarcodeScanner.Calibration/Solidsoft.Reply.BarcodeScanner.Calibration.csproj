@@ -17,10 +17,17 @@
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
+		This release introduces breaking changes to the previous versions.
+
 		1) The prefixes 'Calibration' and 'DataMatrix' have been dropped to shorten and simplify various type names.
 		2) Some method and property names have been simplified.
 		3) Some types have been scoped as internal rather than public.
-		4) Language support has been added for all EU official languages and Norwegian and Icelandic.
+		4) Language support has been added for all (24) EU official languages, and also for Norwegian and Icelandic.
+		5) Additional code clean-up has been performed through application of StyleCop rules.
+		6) A number of legacy (pre-C#9) record-type classes have been re-written as records.
+		7) Calibration data has been optimised for JSON by removing redundant ASCII 0s.
+		8) A new error type has been introduced for situations where no valid calibration is provided when calibrating.
+		9) Public API analysis support has been provided to help track breaking changes in future.
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
@@ -31,13 +38,33 @@
 	</Description>
 	<Version>2.0.0</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<CodeAnalysisRuleSet>$(SolutionDir)\StyleCopAnalyzersDefault.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="stylecop.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AdditionalFiles Include="stylecop.json" />
+	</ItemGroup>
 
   <ItemGroup>
+	<PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
 	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="ZXing.Net" Version="0.16.9" />
   </ItemGroup>
 

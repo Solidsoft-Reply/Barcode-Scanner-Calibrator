@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Die gemeldeten Daten sind für den falschen Kalibrierungsbarcode.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Ein Versuch wurde unternommen, einen Barcode zu kalibrieren, aber es wurde kein Kalibrierungstoken bereitgestellt.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Einige invariante Zeichen können nicht erkannt werden.</value>
   </data>

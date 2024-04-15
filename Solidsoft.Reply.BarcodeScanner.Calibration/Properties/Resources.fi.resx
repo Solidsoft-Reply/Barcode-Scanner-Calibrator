@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Raportoitu data on väärälle kalibrointiviivakoodille.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Viivakoodin kalibrointiyritys tehtiin, mutta kalibrointitokenia ei annettu.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Joitain invarianteja merkkejä ei voida havaita.</value>
   </data>

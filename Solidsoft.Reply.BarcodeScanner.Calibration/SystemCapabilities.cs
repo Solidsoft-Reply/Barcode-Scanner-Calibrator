@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SystemCapabilities.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="SystemCapabilities.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The capabilities of the combination of the barcode scanner and the system.
 // </summary>
@@ -122,9 +120,9 @@ using Properties;
 ///   keyboard layout, we handle this independently of correspondence for invariant and
 ///   non-invariant characters. The only capability we can assert here is that the combination
 ///   of the barcode scanner and computer are capable of representing ASCII 28 or ASCII 31 characters
-///   directly. This is weaker than layout correspondence, as we can't be sure of the exact sequence 
+///   directly. This is weaker than layout correspondence, as we can't be sure of the exact sequence
 ///   of Windows messages that will be available to an application - only that there will be
-///   sufficient information in those messages to explicitly record an ASCII 28 or ASCII 30 without 
+///   sufficient information in those messages to explicitly record an ASCII 28 or ASCII 30 without
 ///   the need for character-mapping.
 /// </remarks>
 /// <param name="KeyboardLayoutsCorrespondForAimIdentifier">
@@ -195,14 +193,21 @@ using Properties;
 /// <param name="ScannerMayConvertToLowerCase">
 ///   Gets a value indicating whether the scanner may be configured to convert upper-case letters to lower case.
 /// </param>
+/// <param name="KeyboardScriptDoesNotSupportCase">
+///   Gets a value indicating whether the computer keyboard script does not support upper- and lower-case letters.
+/// </param>
+/// <param name="CapsLockIndicator">
+///   Gets a value indicating whether the calibrator determined heuristically if the Caps Lock
+///   key appears to be on or off.
+/// </param>
 /// <param name="ScannerKeyboardPerformance">
 ///   Gets the time span specifying how long it took from the start of the scan to submitting the data.
 /// </param>
 /// <remarks>
 ///   This cannot be determined with 100% certainty.
 /// </remarks>
-/// <param name="KeyboardScriptDoesNotSupportCase">
-///   Gets a value indicating whether the computer keyboard script does not support upper- and lower-case letters.
+/// <param name="FormatSupportAssessed">
+///   Gets a value indicating whether calibration included tests for Format nn support.
 /// </param>
 /// <param name="AimIdentifier">
 ///   Gets the AIM identifier transmitted during calibration.
@@ -228,170 +233,76 @@ using Properties;
 /// <param name="Platform">
 ///   Gets the computer platform (operating system).
 /// </param>
-/// <param name="FormatnnSupportAssessed">
-///   Gets a value indicating whether calibration included tests for Format nn support.
-/// </param>
-/// <param name="CapsLockIndicator">
-///   Gets a value indicating whether the calibrator determined heuristically if the Caps Lock
-///   key appears to be on or off.
-/// </param>
 /// <param name="DeadKeys">
-///   Gets a value indicating whether dead key barcodes are required for calibration. 
+///   Gets a value indicating whether dead key barcodes are required for calibration.
 /// </param>
-/// <param name="Assumption">
-///   Gets the assumption made concerning the use of calibration in client systems.
+/// <param name="CharacterMappings">
+///   Gets a list of reported character sequences that map to characters.
+/// </param>
+/// <param name="DeadKeyMappings">
+///   Gets a list of reported character sequences that map to dead key character sequences.
 /// </param>
 /// <param name="Ambiguities">
 ///   Gets a list of ambiguous character sequences that map to a reported character.
 /// </param>
-/// <param name="LigatureMappings">
-///   Gets a list of ligature character sequences that map to a reported character.
-/// </param>
 /// <param name="UnrecognisedCharacters">
 ///   Gets a list of unrecognised characters.
 /// </param>
-public sealed record SystemCapabilities (
-    [property: JsonProperty("unexpectedError", Order = 0)]
-    bool UnexpectedError = false,
-
-    [property: JsonProperty("testsSucceeded", Order = 1)]
-    bool TestsSucceeded = true,
-
-    [property: JsonProperty("dataReported", Order = 2)]
-    bool DataReported = true,
-
-    [property: JsonProperty("correctSequenceReported", Order = 3)]
-    bool CorrectSequenceReported = true,
-
-    [property: JsonProperty("completeDataReported", Order = 4)]
-    bool CompleteDataReported = true,
-
-    [property: JsonProperty("keyboardLayoutsCorrespond", Order = 5)]
-    bool? KeyboardLayoutsCorrespond = true,
-
-    [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 6)]
-    bool? KeyboardLayoutsCorrespondForInvariants = true,
-
-    [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 7)]
-    bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true,
-
-    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparator", Order = 8)]
-    bool? KeyboardLayoutsCanRepresentGroupSeparator = true,
-
-    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparator", Order = 9)]
-    bool? KeyboardLayoutsCanRepresentRecordSeparator = true,
-
-    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 10)]
-    bool? KeyboardLayoutsCanRepresentEdiSeparators = true,
-
-    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 11)]
-    bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
-
-    [property: JsonProperty("canReadInvariantsReliably", Order = 12)]
-    bool? CanReadInvariantsReliably = true,
-
-    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 13)]
-    bool? CanReadFormat05AndFormat06Reliably = true,
-
-    [property: JsonProperty("canReadEdiReliably", Order = 14)]
-    bool? CanReadEdiReliably = true,
-
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 15)]
-    bool? CanReadGroupSeparatorReliably = true,
-
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 16)]
-    bool? CanReadRecordSeparatorReliably = true,
-
-    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 17)]
-    bool? CanReadFileSeparatorsReliably = true,
-
-    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 18)]
-    bool? CanReadUnitSeparatorsReliably = true,
-
-    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 19)]
-    bool? CanReadAimIdentifiersReliably = true,
-
-    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 20)]
-    bool? CanReadAdditionalAsciiCharactersReliably = true,
-
-    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 21)]
-    bool? ScannerTransmitsAimIdentifiers = true,
-
-    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 22)]
-    bool? ScannerTransmitsEndOfLineSequence = true,
-
-    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 23)]
-    bool ScannerTransmitsAdditionalPrefix = false,
-
-    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 24)]
-    bool ScannerTransmitsAdditionalCode = false,
-
-    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 25)]
-    bool ScannerTransmitsAdditionalSuffix = false,
-
-    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 26)]
-    bool? ScannerMayConvertToUpperCase = null,
-
-    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 27)]
-    bool? ScannerMayConvertToLowerCase = null,
-
-    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 28)]
-    bool? KeyboardScriptDoesNotSupportCase = null,
-
-    [property: JsonProperty("capsLockIndicator", Order = 29)]
-    bool CapsLockIndicator = false,
-
-    [property: JsonProperty("scannerKeyboardPerformance", Order = 30)]
-    ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
-
-    [property: JsonProperty("formatnnSupportAssessed", Order = 31)]
-    bool FormatnnSupportAssessed = false,
-
-    [property: JsonProperty("aimIdentifier", Order = 32)]
-    string? AimIdentifier = null,
-
-    [property: JsonProperty("aimIdentifierUncertain", Order = 33)]
-    bool AimIdentifierUncertain = false,
-
-    [property: JsonProperty("endOfLineSequence", Order = 34)]
-    string? EndOfLineSequence = null,
-
-    [property: JsonProperty("additionalPrefix", Order = 35)]
-    string AdditionalPrefix = "",
-
-    [property: JsonProperty("additionalCode", Order = 36)]
-    string AdditionalCode = "",
-
-    [property: JsonProperty("additionalSuffix", Order = 37)]
-    string AdditionalSuffix = "",
-
-    [property: JsonProperty("keyboardScript", Order = 38)]
-    string KeyboardScript = "",
-
-    [property: JsonProperty("platform", Order = 39)]
-    SupportedPlatform Platform = SupportedPlatform.Windows,
-
-    [property: JsonProperty("deadKeys", Order = 40)]
-    bool DeadKeys = false,
-
-    [property: JsonProperty("characterMappings", Order = 41)]
-    IList<CharacterMapping>? CharacterMappings = null,
-
-    [property: JsonProperty("deadKeyMappings", Order = 42)]
-    IList<DeadKeyMapping>? DeadKeyMappings = null,
-
-    [property: JsonProperty("ambiguities", Order = 43)]
-    IList<Ambiguity>? Ambiguities = null,
-
-    [property: JsonProperty("unrecognisedCharacters", Order = 44)]
-    IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
-
-    [property: JsonProperty("ligatureMappings", Order = 45)]
-    IList<LigatureMapping>? LigatureMappings = null,
-
-    [property: JsonProperty("calibrationAssumption", Order = 46)]
-    Assumption Assumption = Assumption.Agnostic)
-     
+/// <param name="LigatureMappings">
+///   Gets a list of ligature character sequences that map to a reported character.
+/// </param>
+/// <param name="Assumption">
+///   Gets the assumption made concerning the use of calibration in client systems.
+/// </param>
+[method: JsonConstructor]
+public sealed record SystemCapabilities(
+    [property: JsonProperty("unexpectedError", Order = 0)] bool UnexpectedError = false,
+    [property: JsonProperty("testsSucceeded", Order = 1)] bool TestsSucceeded = true,
+    [property: JsonProperty("dataReported", Order = 2)] bool DataReported = true,
+    [property: JsonProperty("correctSequenceReported", Order = 3)] bool CorrectSequenceReported = true,
+    [property: JsonProperty("completeDataReported", Order = 4)] bool CompleteDataReported = true,
+    [property: JsonProperty("keyboardLayoutsCorrespond", Order = 5)] bool? KeyboardLayoutsCorrespond = true,
+    [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 6)] bool? KeyboardLayoutsCorrespondForInvariants = true,
+    [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 7)] bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparator", Order = 8)] bool? KeyboardLayoutsCanRepresentGroupSeparator = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparator", Order = 9)] bool? KeyboardLayoutsCanRepresentRecordSeparator = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 10)] bool? KeyboardLayoutsCanRepresentEdiSeparators = true,
+    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 11)] bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
+    [property: JsonProperty("canReadInvariantsReliably", Order = 12)] bool? CanReadInvariantsReliably = true,
+    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 13)] bool? CanReadFormat05AndFormat06Reliably = true,
+    [property: JsonProperty("canReadEdiReliably", Order = 14)] bool? CanReadEdiReliably = true,
+    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 15)] bool? CanReadGroupSeparatorReliably = true,
+    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 16)] bool? CanReadRecordSeparatorReliably = true,
+    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 17)] bool? CanReadFileSeparatorsReliably = true,
+    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 18)] bool? CanReadUnitSeparatorsReliably = true,
+    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 19)] bool? CanReadAimIdentifiersReliably = true,
+    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 20)] bool? CanReadAdditionalAsciiCharactersReliably = true,
+    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 21)] bool? ScannerTransmitsAimIdentifiers = true,
+    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 22)] bool? ScannerTransmitsEndOfLineSequence = true,
+    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 23)] bool ScannerTransmitsAdditionalPrefix = false,
+    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 24)] bool ScannerTransmitsAdditionalCode = false,
+    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 25)] bool ScannerTransmitsAdditionalSuffix = false,
+    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 26)] bool? ScannerMayConvertToUpperCase = null,
+    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 27)] bool? ScannerMayConvertToLowerCase = null,
+    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 28)] bool? KeyboardScriptDoesNotSupportCase = null,
+    [property: JsonProperty("capsLockIndicator", Order = 29)] bool CapsLockIndicator = false,
+    [property: JsonProperty("scannerKeyboardPerformance", Order = 30)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
+    [property: JsonProperty("formatSupportAssessed", Order = 31)] bool FormatSupportAssessed = false,
+    [property: JsonProperty("aimIdentifier", Order = 32)] string? AimIdentifier = null,
+    [property: JsonProperty("aimIdentifierUncertain", Order = 33)] bool AimIdentifierUncertain = false,
+    [property: JsonProperty("endOfLineSequence", Order = 34)] string? EndOfLineSequence = null,
+    [property: JsonProperty("additionalPrefix", Order = 35)] string AdditionalPrefix = "",
+    [property: JsonProperty("additionalCode", Order = 36)] string AdditionalCode = "",
+    [property: JsonProperty("additionalSuffix", Order = 37)] string AdditionalSuffix = "",
+    [property: JsonProperty("keyboardScript", Order = 38)] string KeyboardScript = "",
+    [property: JsonProperty("platform", Order = 39)] SupportedPlatform Platform = SupportedPlatform.Windows,
+    [property: JsonProperty("deadKeys", Order = 40)] bool DeadKeys = false,
+    [property: JsonProperty("characterMappings", Order = 41)] IList<CharacterMapping>? CharacterMappings = null,
+    [property: JsonProperty("deadKeyMappings", Order = 42)] IList<DeadKeyMapping>? DeadKeyMappings = null,
+    [property: JsonProperty("ambiguities", Order = 43)] IList<Ambiguity>? Ambiguities = null,
+    [property: JsonProperty("unrecognisedCharacters", Order = 44)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
+    [property: JsonProperty("ligatureMappings", Order = 45)] IList<LigatureMapping>? LigatureMappings = null,
+    [property: JsonProperty("calibrationAssumption", Order = 46)] Assumption Assumption = Assumption.Agnostic)
 : BaseRecord {
     /// <summary>
     ///   Indicates whether the keyboard Caps Lock key is on or off.
@@ -405,7 +316,7 @@ public sealed record SystemCapabilities (
     /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     /// <param name="capsLock">Indicates whether Caps Lock is switched on.</param>
     /// <param name="scannerKeyboardPerformance">'Traffic Light' assessment of the performance of the barcode scanner keyboard input.</param>
-    /// <param name="formatnnSupportAssessed">Indicates whether calibration included tests for Format nn support.</param>
+    /// <param name="formatSupportAssessed">Indicates whether calibration included tests for Format nn support.</param>
     /// <param name="deadKeys">Indicates whether dead key barcodes are required for calibration.</param>
     /// <param name="characterMap">A dictionary of differences in reported and expected characters.</param>
     /// <param name="deadKeyCharacterMap">A dictionary of initially detected differences in reported and expected characters where the reported data uses dead keys.</param>
@@ -415,38 +326,35 @@ public sealed record SystemCapabilities (
     /// <param name="invariantGs1UnrecognisedCharacters"> A list of unrecognised invariant or other characters that may be used in GS1-compliant barcodes.</param>
     /// <param name="nonInvariantUnrecognisedCharacters">A list of unrecognised non-invariant characters.</param>
     /// <param name="ligatureMap">A list of ligature character sequences.</param>
-    public SystemCapabilities(
+    internal SystemCapabilities(
         Token token,
-        Assumption assumption = Assumption.Calibration,
-        bool? capsLock = null,
-        ScannerKeyboardPerformance scannerKeyboardPerformance = default,
-        bool formatnnSupportAssessed = true,
-        bool deadKeys = false,
-        IDictionary<char, char>? characterMap = null,
-        IDictionary<string, char>? deadKeyCharacterMap = null,
-        IDictionary<string, string>? deadKeysMap = null,
-        IDictionary<string, IList<string>>? invariantGs1Ambiguities = null,
-        IDictionary<string, IList<string>>? nonInvariantAmbiguities = null,
-        IEnumerable<string>? invariantGs1UnrecognisedCharacters = null,
-        IEnumerable<string>? nonInvariantUnrecognisedCharacters = null,
-        IDictionary<string, char>? ligatureMap = null) : this()
-    {
-        if (token == default)
-        {
+        Assumption assumption,
+        bool? capsLock,
+        ScannerKeyboardPerformance scannerKeyboardPerformance,
+        bool formatSupportAssessed,
+        bool deadKeys,
+        IDictionary<char, char>? characterMap,
+        IDictionary<string, char>? deadKeyCharacterMap,
+        IDictionary<string, string>? deadKeysMap,
+        IDictionary<string, IList<string>>? invariantGs1Ambiguities,
+        IDictionary<string, IList<string>>? nonInvariantAmbiguities,
+        IEnumerable<string>? invariantGs1UnrecognisedCharacters,
+        IEnumerable<string>? nonInvariantUnrecognisedCharacters,
+        IDictionary<string, char>? ligatureMap)
+        : this() {
+        if (token.ToJson().Replace(" ", string.Empty) == "{}") {
             return;
         }
 
         Assumption = assumption;
-        FormatnnSupportAssessed = formatnnSupportAssessed;
+        FormatSupportAssessed = formatSupportAssessed;
         ScannerKeyboardPerformance = scannerKeyboardPerformance;
         DeadKeys = deadKeys;
 
         // Process information
-        foreach (var info in token.Information)
-        {
+        foreach (var info in token.Information) {
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-            switch (info.InformationType)
-            {
+            switch (info.InformationType) {
                 case InformationType.KeyboardScript:
                     KeyboardScript = ParameterValue(info);
                     break;
@@ -547,11 +455,9 @@ public sealed record SystemCapabilities (
             }
         }
 
-        foreach (var info in token.Warnings)
-        {
+        foreach (var info in token.Warnings) {
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-            switch (info.InformationType)
-            {
+            switch (info.InformationType) {
                 case InformationType.SomeNonInvariantCharactersUnreported:
                 case InformationType.SomeNonInvariantCharactersUnrecognised:
                 case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
@@ -681,12 +587,10 @@ public sealed record SystemCapabilities (
             }
         }
 
-        foreach (var informationType in token.Errors.Select(info => info.InformationType))
-        {
+        foreach (var informationType in token.Errors.Select(info => info.InformationType)) {
 #pragma warning disable S907
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-            switch (informationType)
-            {
+            switch (informationType) {
                 // We got a partial result, so retain all the knowledge we have gained.
                 case InformationType.PartialCalibrationDataReported:
                     CompleteDataReported = false;
@@ -737,6 +641,7 @@ public sealed record SystemCapabilities (
                     KeyboardScript = string.Empty;
                     CorrectSequenceReported = true;
                     break;
+
                 // The following all indicate that reliable scanning is not possible, even with mapping
                 case InformationType.UndetectedInvariantCharacters:
                 case InformationType.SomeInvariantCharactersUnrecognised:
@@ -813,55 +718,44 @@ public sealed record SystemCapabilities (
 #pragma warning restore S907
         }
 
-        if (capsLock.GetValueOrDefault())
-        {
+        if (capsLock.GetValueOrDefault()) {
             // Caps Lock is ON
             _keyboardCapsLock = true;
         }
-        else
-        {
+        else {
             // Caps Lock is OFF or not reported
-            if (capsLock is null)
-            {
+            if (capsLock is null) {
                 // Caps Lock is not reported. We will assume that the caps lock indicator is accurate.
                 _keyboardCapsLock = CapsLockIndicator;
                 ScannerMayCompensateForCapsLock = null;
                 ScannerMayInvertCase = null;
             }
-            else
-            {
+            else {
                 // Caps Lock is OFF.
                 _keyboardCapsLock = false;
                 ScannerMayCompensateForCapsLock = null;
             }
         }
 
-        if (_keyboardCapsLock)
-        {
-            if (ScannerMayConvertToUpperCase ?? false)
-            {
+        if (_keyboardCapsLock) {
+            if (ScannerMayConvertToUpperCase ?? false) {
                 ScannerMayConvertToUpperCase = false;
                 ScannerMayConvertToLowerCase = true;
-
             }
-            else if (ScannerMayConvertToLowerCase ?? false)
-            {
+            else if (ScannerMayConvertToLowerCase ?? false) {
                 ScannerMayConvertToUpperCase = true;
                 ScannerMayConvertToLowerCase = false;
             }
         }
 
-        if ((ScannerMayConvertToUpperCase ?? false) || (ScannerMayConvertToLowerCase ?? false))
-        {
+        if ((ScannerMayConvertToUpperCase ?? false) || (ScannerMayConvertToLowerCase ?? false)) {
             KeyboardLayoutsCorrespond = null;
             KeyboardLayoutsCorrespondForInvariants = null;
             KeyboardLayoutsCorrespondForAimIdentifier = null;
         }
 
-        if (!string.IsNullOrWhiteSpace(KeyboardScript))
-        {
-            KeyboardScriptDoesNotSupportCase = KeyboardScript switch
-            {
+        if (!string.IsNullOrWhiteSpace(KeyboardScript)) {
+            KeyboardScriptDoesNotSupportCase = KeyboardScript switch {
                 "Latin" => false,
                 "Greek" => false,
                 "Cyrillic" => false,
@@ -879,33 +773,42 @@ public sealed record SystemCapabilities (
 
         // Set up match data for justification
         CharacterMappings = characterMap?.Where(kvp => !(deadKeyCharacterMap?.Values.Contains(kvp.Value) ?? false)).Select(characterMapping =>
-            new CharacterMapping(characterMapping.Value.ToControlPicture(), characterMapping.Key.ToControlPictureString(),
+            new CharacterMapping(
+                characterMapping.Value.ToControlPicture(),
+                characterMapping.Key.ToControlPictureString(),
                 CalibrationCharacterCategory(characterMapping.Value),
                 false)).ToList();
 
+#pragma warning disable IDE0301 // Simplify collection initialization
         (CharacterMappings as List<CharacterMapping>)?.AddRange(
             deadKeyCharacterMap?.Select(deadKeyCharacterMapping =>
-                new CharacterMapping(deadKeyCharacterMapping.Value.ToControlPicture(),
-                    deadKeyCharacterMapping.Key[(deadKeyCharacterMapping.Key.LastIndexOf('\0') + 1)..].ToControlPictures(),
+                new CharacterMapping(
+                    deadKeyCharacterMapping.Value.ToControlPicture(),
+                    deadKeyCharacterMapping.Key[(deadKeyCharacterMapping.Key.LastIndexOf('\0') + 1) ..].ToControlPictures(),
                     CalibrationCharacterCategory(deadKeyCharacterMapping.Value),
                     true)) ?? Array.Empty<CharacterMapping>());
+#pragma warning restore IDE0301 // Simplify collection initialization
 
+#pragma warning disable IDE0305 // Simplify collection initialization
         CharacterMappings =
             (from cm in CharacterMappings
              orderby cm.Expected
              select cm).ToList();
+#pragma warning restore IDE0305 // Simplify collection initialization
 
         // Set up dead key sequence match data for justification
         DeadKeyMappings = deadKeysMap?.Select(deadKeyMapping =>
             new DeadKeyMapping(
-                deadKeyMapping.Value.ToControlPictures(), 
+                deadKeyMapping.Value.ToControlPictures(),
                 deadKeyMapping.Key.ToControlPictures(),
-                IsSequenceInvariantDataOrApplication(deadKeyMapping.Value, formatnnSupportAssessed))).ToList();
+                IsSequenceInvariantDataOrApplication(deadKeyMapping.Value, formatSupportAssessed))).ToList();
 
+#pragma warning disable IDE0305 // Simplify collection initialization
         DeadKeyMappings =
             (from dkm in DeadKeyMappings
              orderby dkm.Expected
              select dkm).ToList();
+#pragma warning restore IDE0305 // Simplify collection initialization
 
         // Set up ambiguity data for justification.
         Ambiguities = invariantGs1Ambiguities?
@@ -916,13 +819,10 @@ public sealed record SystemCapabilities (
         // for the same reported character.
         var ambiguities = new Dictionary<string, IList<string>>();
 
-        foreach (var (key, value) in nonInvariantAmbiguities ?? new Dictionary<string, IList<string>>())
-        {
-            if (invariantGs1Ambiguities?.TryGetValue(key, out var ambiguity) ?? false)
-            {
-                foreach (var ambiguityValue in ambiguity)
-                {
-                    if(!value.Contains(ambiguityValue)) value.Add(ambiguityValue);
+        foreach (var (key, value) in nonInvariantAmbiguities ?? new Dictionary<string, IList<string>>()) {
+            if (invariantGs1Ambiguities?.TryGetValue(key, out var ambiguity) ?? false) {
+                foreach (var ambiguityValue in ambiguity) {
+                    if (!value.Contains(ambiguityValue)) value.Add(ambiguityValue);
                 }
             }
 
@@ -940,65 +840,65 @@ public sealed record SystemCapabilities (
                 new UnrecognisedCharacter(unrecognisedCharacter, true))
             .ToList();
 
+#pragma warning disable IDE0301 // Simplify collection initialization
         (UnrecognisedCharacters as List<UnrecognisedCharacter>)?.AddRange(
             nonInvariantUnrecognisedCharacters?.Select(
                 unrecognisedCharacter =>
                     new UnrecognisedCharacter(unrecognisedCharacter, false)) ?? Array.Empty<UnrecognisedCharacter>());
+#pragma warning restore IDE0301 // Simplify collection initialization
 
         // Set up ligature sequence match data for justification
         LigatureMappings = ligatureMap?.Select(ligatureMapping =>
             new LigatureMapping(
                 ligatureMapping.Value.ToControlPicture(),
                 ligatureMapping.Key.ToControlPictures(),
-                IsSequenceInvariantDataOrApplication(ligatureMapping.Value.ToString(), formatnnSupportAssessed))).ToList();
+                IsSequenceInvariantDataOrApplication(ligatureMapping.Value.ToString(), formatSupportAssessed))).ToList();
 
+#pragma warning disable IDE0305 // Simplify collection initialization
         LigatureMappings =
             (from dkm in LigatureMappings
              orderby dkm.Expected
-                select dkm).ToList();
+             select dkm).ToList();
+#pragma warning restore IDE0305 // Simplify collection initialization
 
 #pragma warning disable S3626
         return;
 #pragma warning restore S3626
 
-        static string ParameterValue(Information info)
-        {
-            var msgSplit = info.Description.Split(':');
-            return msgSplit.Length > 1 ? msgSplit[1].Trim() : string.Empty;
+        static string ParameterValue(Information info) {
+            var msgSplit = info.Description?.Split(':');
+            return msgSplit?.Length > 1 ? msgSplit[1].Trim() : string.Empty;
         }
 
         static CharacterCategory CalibrationCharacterCategory(int character) =>
-            character switch
-            {
-                >= 0 and < 32 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Control,
-                32 => Calibration.CharacterCategory.Ascii,
-                < 35 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
-                >= 35 and < 37 => Calibration.CharacterCategory.Ascii,
-                >= 37 and < 64 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
-                64 => Calibration.CharacterCategory.Ascii,
-                < 91 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
-                >= 91 and < 95 => Calibration.CharacterCategory.Ascii,
-                95 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
-                96 => Calibration.CharacterCategory.Ascii,
-                < 123 => Calibration.CharacterCategory.Ascii | Calibration.CharacterCategory.Invariant,
-                >= 123 and < 128 => Calibration.CharacterCategory.Ascii,
-                _ => Calibration.CharacterCategory.None
+            character switch {
+                >= 0 and < 32 => CharacterCategory.Ascii | CharacterCategory.Control,
+                32 => CharacterCategory.Ascii,
+                < 35 => CharacterCategory.Ascii | CharacterCategory.Invariant,
+                >= 35 and < 37 => CharacterCategory.Ascii,
+                >= 37 and < 64 => CharacterCategory.Ascii | CharacterCategory.Invariant,
+                64 => CharacterCategory.Ascii,
+                < 91 => CharacterCategory.Ascii | CharacterCategory.Invariant,
+                >= 91 and < 95 => CharacterCategory.Ascii,
+                95 => CharacterCategory.Ascii | CharacterCategory.Invariant,
+                96 => CharacterCategory.Ascii,
+                < 123 => CharacterCategory.Ascii | CharacterCategory.Invariant,
+                >= 123 and < 128 => CharacterCategory.Ascii,
+                _ => CharacterCategory.None
             };
 
-        static bool IsSequenceInvariantDataOrApplication(string sequence, bool formatnnSupportAssessed)
-        {
+        static bool IsSequenceInvariantDataOrApplication(string sequence, bool formatSupportAssessed) {
             if (string.IsNullOrWhiteSpace(sequence)) return false;
 
             var isInvariantDataOrApplication = true;
             foreach (var c in sequence) {
                 var category = CalibrationCharacterCategory(c);
-                isInvariantDataOrApplication = category switch
-                {
-                    _ when (category & Calibration.CharacterCategory.Invariant) is Calibration.CharacterCategory.Invariant => true,
+                isInvariantDataOrApplication = category switch {
+                    _ when (category & CharacterCategory.Invariant) is CharacterCategory.Invariant => true,
+
                     // ReSharper disable once RedundantCast
-                    _ when (category | Calibration.CharacterCategory.Control) is Calibration.CharacterCategory.Control => (int)c switch
-                    {
-                        >= 28 and < 32 => formatnnSupportAssessed || ( c >= 29 && c < 31),
+                    _ when (category | CharacterCategory.Control) is CharacterCategory.Control => (int)c switch {
+                        >= 28 and < 32 => formatSupportAssessed || (c >= 29 && c < 31),
                         _ => false
                     },
                     _ => false
@@ -1011,22 +911,29 @@ public sealed record SystemCapabilities (
         }
     }
 
-    [JsonProperty("capsLock", Order = 41)]
-    public bool CapsLock
-    {
+    /// <summary>
+    /// Gets or sets a value indicating whether CAPS LOCK in on or off.
+    /// </summary>
+    [JsonProperty("capsLock", Order = 47)]
+    public bool CapsLock {
         get => _keyboardCapsLock;
 
-        set
-        {
+        set {
             _keyboardCapsLock = value;
             ScannerMayCompensateForCapsLock = _keyboardCapsLock ? !CapsLockIndicator : null;
             ScannerMayInvertCase = _keyboardCapsLock ? !CapsLockIndicator : CapsLockIndicator;
         }
     }
 
-    [JsonProperty("scannerMayCompensateForCapsLock", Order = 42)]
+    /// <summary>
+    /// Gets a value that indicates whether the scanner may compensate for CAPS LOCK.
+    /// </summary>
+    [JsonProperty("scannerMayCompensateForCapsLock", Order = 48)]
     public bool? ScannerMayCompensateForCapsLock { get; private set; }
 
-    [JsonProperty("scannerMayInvertCase", Order = 43)]
+    /// <summary>
+    /// Gets a value that indicates whether the scanner may invert the case of characters.
+    /// </summary>
+    [JsonProperty("scannerMayInvertCase", Order = 49)]
     public bool? ScannerMayInvertCase { get; private set; }
 }

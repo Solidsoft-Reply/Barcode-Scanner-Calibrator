@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Poročani podatki so za napačno kalibracijsko črtno kodo.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Poskus kalibracije črtne kode je bil izveden, vendar ni bil zagotovljen kalibracijski žeton.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Nekaterih invariantnih znakov ni mogoče zaznati.</value>
   </data>

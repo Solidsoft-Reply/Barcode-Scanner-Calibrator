@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Den rapporterade datan är för fel kalibreringsstreckkod.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Ett försök gjordes att kalibrera en streckkod, men inget kalibreringstoken tillhandahölls.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Vissa invarianter kan inte detekteras.</value>
   </data>

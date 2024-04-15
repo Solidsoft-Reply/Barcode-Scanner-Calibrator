@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Nahlášená data jsou pro špatný kalibrační čárový kód.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Byl proveden pokus o kalibraci čárového kódu, ale nebyl poskytnut kalibrační token.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Některé invariantní znaky nemohou být detekovány.</value>
   </data>

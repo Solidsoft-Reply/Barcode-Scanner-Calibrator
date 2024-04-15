@@ -281,6 +281,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Les données signalées sont pour le mauvais code-barres d'étalonnage.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Une tentative a été faite pour calibrer un code-barres, mais aucun jeton de calibrage n'a été fourni.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Certains caractères invariants ne peuvent pas être détectés.</value>
   </data>

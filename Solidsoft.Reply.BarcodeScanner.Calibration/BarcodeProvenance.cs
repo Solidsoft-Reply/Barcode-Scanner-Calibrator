@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationBarcodeProvenance.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd.
-// </copyright>
-// <license>
+// <copyright file="BarcodeProvenance.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The likely provenance of the calibration barcode. This is determined through statistical analysis of its data.
 // </summary>
@@ -25,8 +23,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 ///   The likely provenance of the calibration barcode. This is determined through statistical analysis of its data.
 /// </summary>
-internal enum BarcodeProvenance
-{
+internal enum BarcodeProvenance {
     /// <summary>
     ///   The barcode appears to be a fully-reported baseline barcode.
     /// </summary>
@@ -55,5 +52,5 @@ internal enum BarcodeProvenance
     /// <summary>
     ///   No barcode data was reported.
     /// </summary>
-    NoData
+    NoData,
 }

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationBaseRecord.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="BaseRecord.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,32 +12,22 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A base record for JSON-serialisable records.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-using System.Runtime.Serialization;
-
-using Newtonsoft.Json.Serialization;
-
-using Newtonsoft.Json;
-
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
-/// <summary>
-/// 
-/// </summary>
-public abstract record BaseRecord
-{
-    /// <summary>
-    ///   Gets the latest serialization or deserialization error.
-    /// </summary>
-    [JsonIgnore]
-    // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    // ReSharper disable once MemberCanBePrivate.Global
-    public string LatestError { get; private set; } = string.Empty;
+using System.Runtime.Serialization;
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+
+/// <summary>
+///
+/// </summary>
+public abstract record BaseRecord {
     /// <summary>
     ///   Returns an object representing a JSON representation of the object.
     /// </summary>
@@ -47,8 +35,8 @@ public abstract record BaseRecord
     /// <param name="json">A JSON string representing the serialized data.</param>
     /// <returns>The deserialised object.</returns>
     // ReSharper disable once UnusedMember.Global
-    public static T? FromJson<T>(string json) where T : BaseRecord
-    {
+    public static T? FromJson<T>(string json)
+        where T : BaseRecord {
         var deserialisedObject = JsonConvert.DeserializeObject<T>(json);
 
         return string.IsNullOrWhiteSpace(json) || deserialisedObject is null
@@ -68,33 +56,14 @@ public abstract record BaseRecord
     /// </summary>
     /// <param name="formatting">Specifies the formatting to be applied to the JSON.</param>
     /// <returns>A JSON representation of the calibration data.</returns>
-
     // ReSharper disable once MemberCanBePrivate.Global
     public string ToJson(Formatting formatting = Formatting.None) =>
         JsonConvert.SerializeObject(
             this,
             formatting,
-            new JsonSerializerSettings
-            {
+            new JsonSerializerSettings {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver { NamingStrategy = new CamelCaseNamingStrategy() },
             });
-
-    // ReSharper disable once UnusedMember.Global
-    // ReSharper disable once UnusedParameter.Global
-#pragma warning disable IDE0060
-    internal void OnError(StreamingContext context, ErrorContext errorContext)
-#pragma warning restore IDE0060
-    {
-        var settings = new JsonSerializerSettings
-        {
-            StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
-            DefaultValueHandling = DefaultValueHandling.Ignore,
-            ContractResolver = new DataIgnoreEmptyEnumerableResolver()
-        };
-
-        LatestError = JsonConvert.SerializeObject(errorContext, settings);
-        errorContext.Handled = true;
-    }
 }

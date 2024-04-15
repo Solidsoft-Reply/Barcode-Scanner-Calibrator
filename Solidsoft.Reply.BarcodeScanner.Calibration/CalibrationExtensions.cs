@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationExtensions.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="CalibrationExtensions.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Extension methods for calibration.
 // </summary>
@@ -34,66 +32,49 @@ using System.Text.RegularExpressions;
 /// </summary>
 // ReSharper disable once UnusedMember.Global
 #if NET7_0_OR_GREATER
-internal static partial class CalibrationExtensions
-{
-
-    /// <summary>
-    ///   Returns a regular expression for matching line terminators and providing a stripped string.
-    /// </summary>
-    /// <returns>A regular expression.</returns>
-    [GeneratedRegex(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None, "en-US")]
-    private static partial Regex LineTerminators();
-
-    /// <summary>
-    ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
-    /// </summary>
-    /// <returns>A regular expression.</returns>
-    [GeneratedRegex(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None, "en-US")]
-    private static partial Regex ControlCharTerminators();
+internal static partial class CalibrationExtensions {
 #else
 internal static class CalibrationExtensions {
-    
     /// <summary>
     ///   Returns a regular expression for matching line terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex LineTerminators = new (@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
+    private static readonly Regex LineTerminators = new(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex ControlCharTerminators = new (@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
+    private static readonly Regex ControlCharTerminators = new(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
 #endif
-    
+
     /// <summary>
     ///   Strips off any trailing carriage return and line feed characters.
     /// </summary>
-    /// <param name="input">The input data from which trailing CR and LF characters will be stripped</param>
+    /// <param name="input">The input data from which trailing CR and LF characters will be stripped.</param>
     /// <param name="trailingCrLfChars">The trailing CR and LF characters, if any; Otherwise, and empty string.</param>
-    public static string StripTrailingCrLfs(this string input, out string trailingCrLfChars)
-    {
+    /// <returns>The input without any trailing carriage return and line feed characters.</returns>
+    public static string StripTrailingCrLfs(this string input, out string trailingCrLfChars) {
         trailingCrLfChars = string.Empty;
 
         if (input.Length == 0) return input;
 
-        var matchLineTerminators = LineTerminators
 #if NET7_0_OR_GREATER
-            ()
+        var matchLineTerminators = LineTerminators().Match(input);
+#else
+        var matchLineTerminators = LineTerminators.Match(input);
 #endif
-            .Match(input);
 
-        if (!matchLineTerminators.Success)
-        {
-            // We will look specifically for any situation where four spaces (the segment delimiter) are followed by 
+        if (!matchLineTerminators.Success) {
+            // We will look specifically for any situation where four spaces (the segment delimiter) are followed by
             // ASCII control characters at the end of the string.  In this case, we will assume that the control
-            // characters represent line terminators.  This is a best-endeavours approach.  It cannot handle 
+            // characters represent line terminators.  This is a best-endeavours approach.  It cannot handle
             // suffixes (unless they end with four spaces, in which case the assumption of line terminators may not be
             // valid) and it assumes that the space character is reported without change.  This approach not 100%
             // reliable, but can only be defeated in highly unusual circumstances.
-            var matchControlChars = ControlCharTerminators
 #if NET7_0_OR_GREATER
-                ()
+            var matchControlChars = ControlCharTerminators().Match(input);
+#else
+            var matchControlChars = ControlCharTerminators.Match(input);
 #endif
-                .Match(input);
 
             if (!matchControlChars.Success) return input;
             var trailingCrLfCharsSpan = matchLineTerminators.Groups["lineTerminators"].ValueSpan;
@@ -101,16 +82,14 @@ internal static class CalibrationExtensions {
             // Are there more than two control characters represented in the trailing characters?
             var characters = new List<char>();
 
-            foreach (var c in trailingCrLfCharsSpan)
-            {
+            foreach (var c in trailingCrLfCharsSpan) {
                 if (characters.Contains(c)) continue;
                 characters.Add(c);
             }
 
             if (characters.Count > 2) return input;
 
-            for (var idx = 0; idx < characters.Count; idx++)
-            {
+            for (var idx = 0; idx < characters.Count; idx++) {
                 _ = characters[idx];
                 trailingCrLfChars += idx == 0 ? "CR" : "LF";
             }
@@ -125,11 +104,13 @@ internal static class CalibrationExtensions {
     /// <summary>
     ///   Strips off any trailing carriage return and line feed characters.
     /// </summary>
-    /// <param name="input">The input data from which trailing CR and LF characters will be stripped</param>
+    /// <param name="input">The input data from which trailing CR and LF characters will be stripped.</param>
     /// <param name="baseline">Indicates if this is the baseline barcode or the last small barcode in the baseline sequence.</param>
     /// <returns>The input data without any trailing CR or LF characters.</returns>
+#pragma warning disable IDE0060 // Remove unused parameter
     public static string StripTrailingCrLfs(this string input, bool baseline = false) =>
         StripTrailingCrLfs(input, out _);
+#pragma warning restore IDE0060 // Remove unused parameter
 
     /// <summary>
     ///   Finds an extended ASCII character that is not being used in the input string.
@@ -137,8 +118,7 @@ internal static class CalibrationExtensions {
     /// <param name="input">The input string.</param>
     /// <param name="unusedChar">The first extended ASCII char that does not appear in the input.</param>
     /// <returns>True, if an unused extended ASCII character was found; otherwise false.</returns>
-    public static bool TryUnusedExtendedAsciiCharacter(this string input, out char unusedChar)
-    {
+    public static bool TryUnusedExtendedAsciiCharacter(this string input, out char unusedChar) {
         unusedChar = default;
 
         // Find a character that is not being used in the sequence. This will be used to temporarily indicate spaces returned by scanner dead keys.
@@ -158,8 +138,7 @@ internal static class CalibrationExtensions {
     /// <param name="input">The input string.</param>
     /// <returns>An extended ASCII character that is not being used in the input string.</returns>
     // ReSharper disable once MemberCanBePrivate.Global
-    public static char UnusedExtendedAsciiCharacter(this string input)
-    {
+    public static char UnusedExtendedAsciiCharacter(this string input) {
         // Find a character that is not being used in the sequence. This will be used to temporarily indicate spaces returned by scanner dead keys.
         var candidateCharacter = default(char);
 
@@ -194,12 +173,11 @@ internal static class CalibrationExtensions {
     /// <param name="aimFlagCharacterSequence">The AIM flag character sequence.</param>
     /// <returns>The normalised string, processed according to the calibration character map.</returns>
     public static string NormaliseCharacters(
-        this string characters, 
+        this string characters,
         IDictionary<char, char> dataCharacterMap,
-        IDictionary<string, char> deadKeyCharacterMap, 
+        IDictionary<string, char> deadKeyCharacterMap,
         IDictionary<string, string> deadKeysMap,
-        string? aimFlagCharacterSequence = null)
-    {
+        string? aimFlagCharacterSequence = null) {
         var builder = new StringBuilder();
 
         for (var idx = 0; idx < characters.Length; idx++) {
@@ -213,7 +191,9 @@ internal static class CalibrationExtensions {
                     if (map.Key != characters[idx..endIndex]) continue;
 
                     foundDeadKey = true;
+#pragma warning disable S127 // "for" loop stop conditions should be invariant
                     idx += map.Key.Length - 1;
+#pragma warning restore S127 // "for" loop stop conditions should be invariant
                     character = map.Value;
                 }
 
@@ -221,14 +201,16 @@ internal static class CalibrationExtensions {
                     foreach (var map in deadKeysMap) {
                         // Look up the value in the dead Key character map
                         var deadkeyMap = (from m in deadKeyCharacterMap
-                            where m.Value == map.Value[0]
-                            select map).FirstOrDefault();
+                                          where m.Value == map.Value[0]
+                                          select map).FirstOrDefault();
 
                         var endIndex = idx + map.Key.Length;
                         if (endIndex >= characters.Length) endIndex = characters.Length - 1;
                         if (deadkeyMap.Key != characters[idx..endIndex]) continue;
 
+#pragma warning disable S127 // "for" loop stop conditions should be invariant
                         idx += map.Key.Length - 1;
+#pragma warning restore S127 // "for" loop stop conditions should be invariant
                         character = deadkeyMap.Value[0];
                     }
                 }
@@ -268,14 +250,13 @@ internal static class CalibrationExtensions {
     [Pure]
     public static bool IsInvariant(this char character) =>
         character switch {
-            _ when character == 33 || character == 34  => true,
-            _ when character > 36  && character < 64   => true,
-            _ when character > 64  && character < 91   => true,
-            _ when character == 95                     => true,
-            _ when character > 96  && character < 123  => true,
-            _                                            => false
+            _ when character == 33 || character == 34 => true,
+            _ when character > 36 && character < 64 => true,
+            _ when character > 64 && character < 91 => true,
+            _ when character == 95 => true,
+            _ when character > 96 && character < 123 => true,
+            _ => false
         };
-
 
     /// <summary>
     ///   Converts an ASCII control character to a Unicode Control Picture character.
@@ -287,8 +268,7 @@ internal static class CalibrationExtensions {
     /// </returns>
     [Pure]
     public static char ToControlPicture(this char originalChar) =>
-        originalChar switch
-        {
+        originalChar switch {
             _ when originalChar < 32 => (char)(originalChar + 9216),
             _ => originalChar
         };
@@ -312,6 +292,21 @@ internal static class CalibrationExtensions {
     /// <returns>A string containing Unicode Control Pictures for any ASCII control characters.</returns>
     [Pure]
     public static string ToControlPictures(this string originalString) =>
-        new(originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
+        new (originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
 
+#if NET7_0_OR_GREATER
+    /// <summary>
+    ///   Returns a regular expression for matching line terminators and providing a stripped string.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None, "en-US")]
+    private static partial Regex LineTerminators();
+
+    /// <summary>
+    ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None, "en-US")]
+    private static partial Regex ControlCharTerminators();
+#endif
 }

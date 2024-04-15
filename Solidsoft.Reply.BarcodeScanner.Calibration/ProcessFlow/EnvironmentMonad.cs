@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="EnvironmentMonad.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2021 Solidsoft Reply Ltd.  All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="EnvironmentMonad.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Extension methods and delegates that define a simple Environment monad.
 // for any type marked with the IEnvironment&lt;T&gt; interface.
@@ -33,15 +31,15 @@ using System.Diagnostics.Contracts;
 /// </summary>
 /// <typeparam name="TEnv">The type of the environment data.</typeparam>
 /// <returns>A lazy-evaluated function that returns the environment data object.</returns>
-internal delegate Lazy<TEnv> Environment<TEnv>() where TEnv : IEnvironment<TEnv>;
+internal delegate Lazy<TEnv> Environment<TEnv>()
+    where TEnv : IEnvironment<TEnv>;
 
 /// <summary>
 ///   Extension methods and delegates that define an Environment monad.  The monad
 ///   manages the threading of an environment of data through sequences of functions.
 /// </summary>
 // ReSharper disable once UnusedMember.Global
-internal static class EnvironmentMonad
-{
+internal static class EnvironmentMonad {
     /// <summary>
     ///   Extended Bind function for conditional composition of functions within the
     ///   Environment monad. The environment is threaded through each function.
@@ -63,8 +61,7 @@ internal static class EnvironmentMonad
     public static If<TEnv> If<TEnv>(
         this Environment<TEnv> sourceEnvironment,
         Func<TEnv, bool> predicate)
-        where TEnv : IEnvironment<TEnv>
-    {
+        where TEnv : IEnvironment<TEnv> {
         // Must get value of monad first to maintain correct
         // order of execution for predicate.
         var env = sourceEnvironment.End();
@@ -143,7 +140,7 @@ internal static class EnvironmentMonad
     /// <param name="environment">The Environment monad.</param>
     /// <returns>The data object.</returns>
     [Pure]
-    public static TEnv End<TEnv>(this Environment<TEnv> environment) 
+    public static TEnv End<TEnv>(this Environment<TEnv> environment)
         where TEnv : IEnvironment<TEnv> =>
         environment().Value;
 }

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationInformationType.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="InformationType.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The type of calibration information.
 // </summary>
@@ -27,8 +25,7 @@ using System.Diagnostics.CodeAnalysis;
 /// <summary>
 ///   The type of calibration information.
 /// </summary>
-public enum InformationType
-{
+public enum InformationType {
     /// <summary>
     /// <p>No calibration information available.</p>
     /// </summary>
@@ -287,7 +284,7 @@ public enum InformationType
     /// <summary>
     /// WARNING: A pre-processing reported a warning during calibration.
     /// </summary>
-    PreProcessorWarning= 299,
+    PreProcessorWarning = 299,
 
     /// <summary>
     ///   ERROR: No calibration data was reported.
@@ -317,6 +314,11 @@ public enum InformationType
     ///   WARNING: The reported data is for the wrong calibration barcode.
     /// </summary>
     IncorrectCalibrationDataReported = 304,
+
+    /// <summary>
+    ///   WARNING: An attempt was made to calibrate a barcode, but no calibration token was provided.
+    /// </summary>
+    NoCalibrationTokenProvided = 305,
 
     /// <summary>
     ///   ERROR: Some invariant characters cannot be detected.
@@ -415,5 +417,5 @@ public enum InformationType
     /// <summary>
     /// ERROR: Calibration failed due to a pre-processing error.
     /// </summary>
-    PreProcessorError = 399
+    PreProcessorError = 399,
 }

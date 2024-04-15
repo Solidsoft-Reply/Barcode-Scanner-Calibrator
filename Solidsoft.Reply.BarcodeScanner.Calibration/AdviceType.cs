@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AdviceType.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="AdviceType.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The types of advice provided through analysis of the calibration results.
 // </summary>
@@ -25,8 +23,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 ///   The types of advice provided through analysis of the calibration results.
 /// </summary>
-public enum AdviceType
-{
+public enum AdviceType {
     /// <summary>
     /// <p>No advice provided.</p>
     /// </summary>
@@ -120,7 +117,7 @@ public enum AdviceType
     /// <summary>
     /// <p>Caps Lock is switched on.</p>
     /// <p>Switch Caps Lock off and test again.</p>
-    /// <p>If you must keep Caps Lock switched on while scanning barcodes, you may be able to 
+    /// <p>If you must keep Caps Lock switched on while scanning barcodes, you may be able to
     /// configure your barcode scanner to compensate.</p>
     /// </summary>
     CapsLockOn = 325,
@@ -270,21 +267,21 @@ public enum AdviceType
 
     /// <summary>
     /// <p>Your system cannot read Format 05 or Format 06 barcodes reliably.</p>
-    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. 
+    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data.
     /// If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     MayNotReadFormat0506NoCalibration = 241,
 
     /// <summary>
     /// <p>Your system cannot read Format 05 or Format 06 barcodes reliably.</p>
-    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. 
+    /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data.
     /// If necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     CannotReadAnsiMh1082Reliably = 245,
 
     /// <summary>
     /// <p>You did not test compatibility for compatibility with ISO/IEC 15434.</p>
-    /// <p>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434, 
+    /// <p>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434,
     /// run the test again, this time including the ISO/IEC 15434 data compatibility test.</p>
     /// </summary>
     Gs1OnlyTest = 250,
@@ -363,7 +360,7 @@ public enum AdviceType
     /// <p>You may need to enter data manually into your software for barcodes that contain data formatted
     /// according to ISO/IEC 15434 characters.</p>
     /// </summary>
-    ReadsInvariantCharactersReliablyNoFormatnnTest = 105,
+    ReadsInvariantCharactersReliablyNoFormatTest = 105,
 
     /// <summary>
     /// <p>Your system reads GS1 barcodes reliably.</p>
@@ -381,5 +378,5 @@ public enum AdviceType
     /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If
     /// necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
-    ReadsInvariantCharactersReliablyExceptFormat0506 = 115
+    ReadsInvariantCharactersReliablyExceptFormat0506 = 115,
 }

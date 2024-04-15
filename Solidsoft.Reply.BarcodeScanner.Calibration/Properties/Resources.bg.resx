@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Докладваните данни са за грешен калибрационен баркод.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Направен беше опит за калибриране на баркод, но не беше предоставен калибрационен токен.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Някои постоянни символи не могат да бъдат открити.</value>
   </data>

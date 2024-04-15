@@ -2,19 +2,6 @@
 // <copyright file="KeyboardCalibratorTestsInformation.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2018 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Unit tests for the Keyboard Calibrator
 // </summary>
@@ -105,9 +92,9 @@ public class KeyboardCalibratorTestsInformation {
     private const string TooManyCharactersDetectedB = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ á $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
     private const string TooManyCharactersDetectedC = "  ! \" % & ' ( ) * \0  , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z \0     # $ @ [ \\ ] ^ ` { | } ~    \x001D    \x001C    \0    \0    \x000D";
     private const string UnrecognisedData = "abcdefghijklmnopqrstuvwxyz";
-    private const string NoCalibrationDataReportedA = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
-    private const string NoCalibrationDataReportedB = "";
-    private const string NoCalibrationDataReportedC = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
+    private const string NoCalibrationDataProvided = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
+    private const string NoCalibrationDataReportedA = "";
+    private const string NoCalibrationDataReportedB = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
     private const string NoCalibrationDataReportedCDeadKey1 = "";
     private const string NoCalibrationDataReportedD1 = "]d1  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6\r";
     private const string NoCalibrationDataReportedD2 = "]d1 7 8 9 : ; < = > ? A B C D E F G H I J K L\r";
@@ -483,17 +470,23 @@ public class KeyboardCalibratorTestsInformation {
     /// </summary>
     [Fact]
     public void ErrorNoCalibrationDataReported() {
-        var token = PerformCalibrationTestWithDefaultToken("NoCalibrationDataReportedA");
+        var token = PerformCalibrationTest("NoCalibrationDataReportedA");
         Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
 
         token = PerformCalibrationTest("NoCalibrationDataReportedB");
         Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
 
-        token = PerformCalibrationTest("NoCalibrationDataReportedC");
-        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
-
         token = PerformCalibrationTestWithSegments("NoCalibrationDataReported");
         Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationDataReported);
+    }
+
+    /// <summary>
+    /// Test that no calibration data was provided.
+    /// </summary>
+    [Fact]
+    public void ErrorNoCalibrationTokenProvided() {
+        var token = PerformCalibrationTestWithDefaultToken("NoCalibrationDataProvided");
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.NoCalibrationTokenProvided);
     }
 
     /// <summary>
@@ -1244,6 +1237,16 @@ public class KeyboardCalibratorTestsInformation {
                                            }
                                        },
                                        {
+                                           "NoCalibrationDataProvided",
+                                           new Dictionary<string, IList<string>>
+                                           {
+                                               {
+                                                   NoCalibrationDataProvided,
+                                                   new List<string>()
+                                               }
+                                           }
+                                       },
+                                       {
                                            "NoCalibrationDataReportedA",
                                            new Dictionary<string, IList<string>>
                                            {
@@ -1259,16 +1262,6 @@ public class KeyboardCalibratorTestsInformation {
                                            {
                                                {
                                                    NoCalibrationDataReportedB,
-                                                   new List<string>()
-                                               }
-                                           }
-                                       },
-                                       {
-                                           "NoCalibrationDataReportedC",
-                                           new Dictionary<string, IList<string>>
-                                           {
-                                               {
-                                                   NoCalibrationDataReportedC,
                                                    new List<string>
                                                    {
                                                        NoCalibrationDataReportedCDeadKey1
@@ -2071,7 +2064,7 @@ public class KeyboardCalibratorTestsInformation {
     /// <returns>A comma-separated value list of character values.</returns>
     private static int[] ConvertToCharacterValues(string input) {
         if (string.IsNullOrWhiteSpace(input)) {
-            return Array.Empty<int>();
+            return [];
         }
 
         var outputBuilder = new int[input.Length];

@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Os dados relatados são para o código de barras de calibração errado.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Foi feita uma tentativa de calibrar um código de barras, mas nenhum token de calibração foi fornecido.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Alguns caracteres invariantes não podem ser detectados.</value>
   </data>

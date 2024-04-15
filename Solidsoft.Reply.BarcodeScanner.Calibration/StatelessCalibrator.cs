@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="StatelessCalibrator.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="StatelessCalibrator.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Calibrates for a given combination of barcode scanner and OS keyboard layouts.
 // Supports a stateless model suitable for client/server scenarios where no session
@@ -35,17 +33,17 @@ using System.Collections.Generic;
 using System.IO;
 
 using DataMatrix;
+
 using Parsers.Common;
 
 /// <summary>
 ///   Manages the calibration for a given combination of barcode scanner and OS keyboard layouts.
 /// </summary>
-///<remarks>
+/// <remarks>
 /// Supports a stateless model suitable for client/server scenarios where no session state is maintained
 /// across multiple calls into the server.
 /// </remarks>
-public class StatelessCalibrator
-{
+public class StatelessCalibrator {
     /// <summary>
     /// Internal instance of the <see cref="Calibrator"/> class.
     /// </summary>
@@ -54,11 +52,10 @@ public class StatelessCalibrator
     /// <summary>
     ///   Initializes a new instance of the <see cref="StatelessCalibrator" /> class.
     /// </summary>
-    /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
+    /// <param name="calibrationsData">The calibration data.</param>
     public StatelessCalibrator(
-        Assumption assumption = Assumption.Calibration)
-    {
-        _calibrator = new Calibrator(assumption);
+        Data calibrationsData) {
+        _calibrator = new Calibrator(calibrationsData);
     }
 
     /// <summary>
@@ -68,9 +65,8 @@ public class StatelessCalibrator
     /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     // ReSharper disable once UnusedMember.Global
     public StatelessCalibrator(
-        Data? calibrationsData, 
-        Assumption assumption = Assumption.Calibration)
-    {
+        Data? calibrationsData = null,
+        Assumption assumption = Assumption.Calibration) {
         _calibrator = new Calibrator(calibrationsData, assumption);
     }
 
@@ -82,12 +78,41 @@ public class StatelessCalibrator
     /// <summary>
     ///   Gets or sets the Calibration configuration data.
     /// </summary>
-    public Data? CalibrationData
-    {
+    public Data? CalibrationData {
         get => _calibrator.CalibrationData;
 
         set => _calibrator.CalibrationData = value;
     }
+
+    /// <summary>
+    ///   Gets or sets a value indicating whether to assess Format nn support.
+    /// </summary>
+    public bool AssessFormatSupport {
+        // ReSharper disable once UnusedMember.Global
+        get => _calibrator.AssessFormatSupport;
+
+        set => _calibrator.AssessFormatSupport = value;
+    }
+
+    /// <summary>
+    /// gets or sets a collection of recognised data elements.
+    /// </summary>
+    /// <remarks>
+    /// Optionally pass a list of recognised data elements to the Calibrator to constrain the GS1 application identifiers
+    /// and/or the ASC MH 10.8.2 data identifiers that the client software needs to recognise whe parsing data. This may
+    /// /extend the range of transformation strategies that the calibrator can identify.
+    /// </remarks>
+    // ReSharper disable once UnusedMember.Global
+    public IList<RecognisedDataElement> RecognisedDataElements {
+        get => _calibrator.RecognisedDataElements;
+
+        set => _calibrator.RecognisedDataElements = value;
+    }
+
+    /// <summary>
+    ///   Gets a value indicating whether pre-processing of barcode scanner input is required.
+    /// </summary>
+    public bool IsProcessingRequired => _calibrator.IsProcessingRequired;
 
     /// <summary>
     ///   Sets the reported prefix that the barcode scanner is expected to include when barcodes are
@@ -117,17 +142,6 @@ public class StatelessCalibrator
     /// </param>
     /// <returns>The system capabilities for the current calibration.</returns>
     public SystemCapabilities? SystemCapabilities(bool? capsLock = null) => _calibrator.SystemCapabilities(capsLock);
-
-    /// <summary>
-    ///   Gets or sets a value indicating whether to assess Format nn support.
-    /// </summary>
-    public bool AssessFormatnnSupport
-    {
-        // ReSharper disable once UnusedMember.Global
-        get => _calibrator.AssessFormatnnSupport;
-
-        set => _calibrator.AssessFormatnnSupport = value;
-    }
 
     /// <summary>
     ///   Get the baseline calibration barcode(s) for the current calibration.
@@ -170,10 +184,14 @@ public class StatelessCalibrator
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>The updated calibration token.</returns>
-
     // ReSharper disable once UnusedMember.Global
-    public Token Calibrate(int[] data, Token token, bool? capsLock = null,
-        SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default,
+#pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
+    public Token Calibrate(
+        int[] data,
+        Token token,
+        bool? capsLock = null,
+        SupportedPlatform platform = SupportedPlatform.Windows,
+        TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null) =>
         _calibrator.Calibrate(data, token, capsLock, platform, dataEntryTimeSpan, preProcessors);
 
@@ -187,10 +205,15 @@ public class StatelessCalibrator
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>The updated calibration token.</returns>
-    public Token Calibrate(string? data, Token token, bool? capsLock = null,
-        SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default,
+    public Token Calibrate(
+        string? data,
+        Token token,
+        bool? capsLock = null,
+        SupportedPlatform platform = SupportedPlatform.Windows,
+        TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null) =>
         _calibrator.Calibrate(data, token, capsLock, platform, dataEntryTimeSpan, preProcessors);
+#pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
 
     /// <summary>
     ///   Return the next calibration token.
@@ -199,7 +222,6 @@ public class StatelessCalibrator
     /// <param name="multiplier">The size multiplier.</param>
     /// <param name="size">The size of data matrix required.</param>
     /// <returns>The next calibration token.</returns>
-
     // ReSharper disable once UnusedMember.Global
     public Token NextCalibrationToken(
         Token token = default,
@@ -211,13 +233,22 @@ public class StatelessCalibrator
     ///   Return the next calibration token.
     /// </summary>
     /// <param name="generateImages">Indicates whether the library should generate barcode images.</param>
+    /// <returns>The next calibration token.</returns>
+    // ReSharper disable once UnusedMember.Global
+    public Token NextCalibrationToken(
+        bool generateImages) =>
+        _calibrator.NextCalibrationToken(generateImages);
+
+    /// <summary>
+    ///   Return the next calibration token.
+    /// </summary>
+    /// <param name="generateImages">Indicates whether the library should generate barcode images.</param>
     /// <param name="token">The current calibration token.</param>
     /// <returns>The next calibration token.</returns>
-
     // ReSharper disable once UnusedMember.Global
     public Token NextCalibrationToken(
         bool generateImages,
-        Token token = default) =>
+        Token token) =>
         _calibrator.NextCalibrationToken(generateImages, token);
 
     /// <summary>
@@ -264,11 +295,6 @@ public class StatelessCalibrator
         Size size = Size.Automatic) => _calibrator.SupplementalBarcodeData(size);
 
     /// <summary>
-    ///   Gets a value indicating whether pre-processing of barcode scanner input is required.
-    /// </summary>
-    public bool IsProcessingRequired => _calibrator.IsProcessingRequired;
-
-    /// <summary>
     ///   Processes input, normalizing it according the calibration character map, converting into
     ///   the correct sequence of characters.
     /// </summary>
@@ -279,20 +305,4 @@ public class StatelessCalibrator
     /// <param name="exceptions">Collection of exceptions.</param>
     /// <returns>The normalized input, processed according to the calibration character map.</returns>
     public string ProcessInput(string? input, out IList<PreprocessorException>? exceptions) => _calibrator.ProcessInput(input, out exceptions);
-
-    /// <summary>
-    /// gets or sets a collection of recognised data elements.
-    /// </summary>
-    /// <remarks>
-    /// Optionally pass a list of recognised data elements to the Calibrator to constrain the GS1 application identifiers
-    /// and/or the ASC MH 10.8.2 data identifiers that the client software needs to recognise whe parsing data. This may
-    /// /extend the range of transformation strategies that the calibrator can identify.
-    /// </remarks>
-    // ReSharper disable once UnusedMember.Global
-    public IList<RecognisedDataElement> RecognisedDataElements
-    {
-        get => _calibrator.RecognisedDataElements;
-
-        set => _calibrator.RecognisedDataElements = value;
-    }
 }

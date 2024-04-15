@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IAdviceItem.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="IAdviceItem.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Represents an individual item of advice for a given condition.
 // </summary>
@@ -27,10 +25,11 @@ using Newtonsoft.Json;
 /// <summary>
 /// Represents an individual item of advice for a given condition.
 /// </summary>
-/// <typeparam name="TAdviceType"></typeparam>
-public interface IAdviceItem<out TAdviceType> where TAdviceType : Enum {
+/// <typeparam name="TAdviceType">The advice type.</typeparam>
+public interface IAdviceItem<out TAdviceType>
+    where TAdviceType : Enum {
     /// <summary>
-    ///   The type of advice.
+    ///   Gets the type of advice.
     /// </summary>
     [JsonProperty("adviceType", Order = 0)]
     public TAdviceType AdviceType { get; }

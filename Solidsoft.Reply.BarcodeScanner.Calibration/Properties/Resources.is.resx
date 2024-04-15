@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Skýrð gögn eru fyrir rangt justunar strikamerki.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Reynt var að stilla strikamerki, en engin stillitákn var veitt.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Sumir óbreytanlegir stafir eru ógreinanlegir.</value>
   </data>

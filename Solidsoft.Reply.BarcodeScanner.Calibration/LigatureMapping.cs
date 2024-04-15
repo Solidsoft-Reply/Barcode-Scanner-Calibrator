@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationLigatureMapping.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2023-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="LigatureMapping.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,15 +12,15 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Represents a calibration mapping from an expected sequence to a reported dead key character sequence.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using Newtonsoft.Json;
-
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
+
+using Newtonsoft.Json;
 
 /// <summary>
 ///   Represents a calibration mapping from a ligature to a reported character.
@@ -32,11 +30,9 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <param name="InvariantCharacterOnly">
 ///   Gets a value indicating whether the expected character is am invariant character.
 /// .</param>
+[method: JsonConstructor]
 public record LigatureMapping(
-[property: JsonProperty("expected", Order = 0)]
-        char Expected,
-        [property: JsonProperty("reported", Order = 1)]
-        string Reported,
-        [property: JsonProperty("invariantCharacterOnly", Order = 2)]
-        bool InvariantCharacterOnly)
+        [property: JsonProperty("expected", Order = 0)] char Expected,
+        [property: JsonProperty("reported", Order = 1)] string Reported,
+        [property: JsonProperty("invariantCharacterOnly", Order = 2)] bool InvariantCharacterOnly)
     : BaseRecord;

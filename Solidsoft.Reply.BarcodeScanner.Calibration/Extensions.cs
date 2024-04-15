@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Extensions.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Extensions.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Extension methods.
 // </summary>
@@ -27,7 +25,6 @@ using System.Globalization;
 /// Extension methods.
 /// </summary>
 internal static class Extensions {
-
     /// <summary>
     ///   Converts the value of this instance to its equivalent string representation using culture-invariant format
     ///   information.

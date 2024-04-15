@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>De gerapporteerde gegevens zijn voor de verkeerde kalibratiebarcode.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Er is geprobeerd een barcode te kalibreren, maar er is geen kalibratietoken verstrekt.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Sommige invariante karakters kunnen niet gedetecteerd worden.</value>
   </data>

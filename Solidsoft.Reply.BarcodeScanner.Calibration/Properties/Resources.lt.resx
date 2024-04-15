@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Pranešti duomenys yra neteisingam kalibravimo brūkšniniam kodui.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Buvo bandyta kalibruoti brūkšninį kodą, tačiau nebuvo pateiktas kalibravimo žetonas.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Kai kurie invariantiniai simboliai negali būti aptikti.</value>
   </data>

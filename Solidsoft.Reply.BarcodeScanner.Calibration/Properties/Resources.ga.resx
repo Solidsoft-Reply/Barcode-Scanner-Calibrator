@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Tá na sonraí tuairiscithe don bharacód calabrúcháin mícheart.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Rinneadh iarracht cód barra a chothromú, ach níor soláthraíodh aon chomhartha calabrúcháin.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Ní féidir carachtair inbhuanaithe a bhrath.</value>
   </data>

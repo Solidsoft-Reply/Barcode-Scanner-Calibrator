@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DataMatrixBarcode.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Barcode.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Creates a data matrix EC200 barcode as a stream of image data.
 // </summary>
@@ -29,39 +27,41 @@
  * the same issues can be expected. In a WASM environment, use a Javascript library (e.g., bwip-js) to draw
  * barcodes.
  */
-using System.Globalization;
 
+namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
+
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Xml.Linq;
+
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
 using SixLabors.ImageSharp.Formats.Bmp;
 using SixLabors.ImageSharp.Formats.Gif;
 using SixLabors.ImageSharp.Formats.Jpeg;
 using SixLabors.ImageSharp.Formats.Pbm;
+using SixLabors.ImageSharp.Formats.Png;
 using SixLabors.ImageSharp.Formats.Tga;
 using SixLabors.ImageSharp.Formats.Tiff;
 using SixLabors.ImageSharp.Formats.Webp;
+using SixLabors.ImageSharp.PixelFormats;
+using SixLabors.ImageSharp.Processing;
+
+using ZXing;
+using ZXing.Datamatrix;
+
 using Color = SixLabors.ImageSharp.Color;
 using Image = SixLabors.ImageSharp.Image;
 
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats;
-using SixLabors.ImageSharp.Formats.Png;
-using System.Diagnostics.CodeAnalysis;
-
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
-using ZXing;
-using ZXing.Datamatrix;
-using System.Xml.Linq;
-
-namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// <summary>
 ///   Creates a data matrix EC200 barcode as a stream of image data.
 /// </summary>
 [ExcludeFromCodeCoverage]
+
 // ReSharper disable once ClassWithVirtualMembersNeverInherited.Global
-internal class Barcode : IDisposable
-{
+internal class Barcode : IDisposable {
     /// <summary>
-    ///   Used to lock when creating a barcode;
+    ///   Used to lock when creating a barcode;.
     /// </summary>
     private static readonly object CreateBarcodeLockObject = new();
 
@@ -78,15 +78,13 @@ internal class Barcode : IDisposable
     /// <summary>
     ///   Initializes a new instance of the <see cref="Barcode" /> class.
     /// </summary>
-    public Barcode()
-    {
+    public Barcode() {
     }
 
     /// <summary>
     ///   Finalizes an instance of the <see cref="Barcode" /> class.
     /// </summary>
-    ~Barcode()
-    {
+    ~Barcode() {
         Dispose(false);
     }
 
@@ -109,18 +107,15 @@ internal class Barcode : IDisposable
     /// <summary>
     ///   Gets or sets the size multiplier factor.
     /// </summary>
-    public float Multiplier
-    {
+    public float Multiplier {
         // ReSharper disable once UnusedMember.Global
-        get
-        {
+        get {
             lock (CreateBarcodeLockObject) {
                 return _multiplier;
             }
         }
 
-        set
-        {
+        set {
             value = value switch {
                 < 0.8f => 0.8f,
                 > 20.0f => 20,
@@ -142,8 +137,7 @@ internal class Barcode : IDisposable
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    public Stream CreateBarcode(string barcodeData)
-    {
+    public Stream CreateBarcode(string barcodeData) {
         return CreateBarcode(barcodeData, BackgroundColor, ForegroundColor, ImageFormat);
     }
 
@@ -154,8 +148,7 @@ internal class Barcode : IDisposable
     /// <param name="imageFormat">The image format.</param>
     /// <returns>A stream containing the image content.</returns>
     // ReSharper disable once UnusedMember.Global
-    public Stream CreateBarcode(string barcodeData, IImageFormat imageFormat)
-    {
+    public Stream CreateBarcode(string barcodeData, IImageFormat imageFormat) {
         return CreateBarcode(barcodeData, BackgroundColor, ForegroundColor, imageFormat);
     }
 
@@ -163,12 +156,11 @@ internal class Barcode : IDisposable
     ///   Creates a barcode and returns it as a readonly stream.
     /// </summary>
     /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
-    /// <param name="backgroundColor">The background colour of the barcode</param>
-    /// <param name="foregroundColor">The foreground colour of the barcode</param>
+    /// <param name="backgroundColor">The background colour of the barcode.</param>
+    /// <param name="foregroundColor">The foreground colour of the barcode.</param>
     /// <returns>A stream containing PNG content.</returns>
     // ReSharper disable once UnusedMember.Global
-    public Stream CreateBarcode(string barcodeData, Color backgroundColor, Color foregroundColor)
-    {
+    public Stream CreateBarcode(string barcodeData, Color backgroundColor, Color foregroundColor) {
         return CreateBarcode(barcodeData, backgroundColor, foregroundColor, ImageFormat);
     }
 
@@ -182,38 +174,32 @@ internal class Barcode : IDisposable
     /// <returns>A stream containing the image content.</returns>
     // ReSharper disable once MemberCanBePrivate.Global
     public Stream CreateBarcode(
-        string barcodeData, 
-        Color backgroundColor, 
+        string barcodeData,
+        Color backgroundColor,
         Color foregroundColor,
-        IImageFormat? imageFormat)
-    {
+        IImageFormat? imageFormat) {
         // Creating a barcode is not thread-safe, so this method is synchronized.
-        lock (CreateBarcodeLockObject)
-        {
-            if (string.IsNullOrEmpty(barcodeData))
-            {
-                return new MemoryStream(Array.Empty<byte>(), false);
+        lock (CreateBarcodeLockObject) {
+            if (string.IsNullOrEmpty(barcodeData)) {
+                return new MemoryStream([], false);
             }
 
             var (modulesX, modulesY) = CalculateDataMatrixModuleSize(barcodeData);
 
             // Workaround for issues with zXing
-            if (modulesY != modulesX)
-            {
+            if (modulesY != modulesX) {
                 modulesX = modulesY = Convert.ToInt32((modulesY > modulesX ? modulesY : modulesX) * 0.85);
             }
 
             // Create a Data Matrix barcode writer
-            var barcodeWriter = new BarcodeWriterPixelData
-            {
+            var barcodeWriter = new BarcodeWriterPixelData {
                 Format = BarcodeFormat.DATA_MATRIX,
-                Options = new DatamatrixEncodingOptions
-                {
+                Options = new DatamatrixEncodingOptions {
                     Width = (modulesX + 2) * (int)_multiplier,
                     Height = (modulesY + 2) * (int)_multiplier,
                     Margin = 1,
-                    SymbolShape = ZXing.Datamatrix.Encoder.SymbolShapeHint.FORCE_SQUARE
-                }
+                    SymbolShape = ZXing.Datamatrix.Encoder.SymbolShapeHint.FORCE_SQUARE,
+                },
             };
 
             // Generate the barcode
@@ -223,19 +209,15 @@ internal class Barcode : IDisposable
             using var backgroundImage = new Image<Rgba32>(Configuration.Default, pixelData.Width, pixelData.Height, backgroundColor);
 
             // Draw the barcode on the background image using the desired foreground color
-            backgroundImage.Mutate(context =>
-            {
+            backgroundImage.Mutate(context => {
                 // Load the barcode image from the pixel data
                 using var barcodeImage = Image.LoadPixelData<Rgba32>(pixelData.Pixels, pixelData.Width, pixelData.Height);
 
-                for (var y = 0; y < pixelData.Height; y++)
-                {
-                    for (var x = 0; x < pixelData.Width; x++)
-                    {
+                for (var y = 0; y < pixelData.Height; y++) {
+                    for (var x = 0; x < pixelData.Width; x++) {
                         var currentPixel = barcodeImage[x, y];
 
-                        barcodeImage[x, y] = currentPixel switch
-                        {
+                        barcodeImage[x, y] = currentPixel switch {
                             _ when currentPixel.Equals(Rgba32.ParseHex("000000FF")) => foregroundColor,
                             _ when currentPixel.Equals(Rgba32.ParseHex("FFFFFFFF")) => backgroundColor,
                             _ => backgroundColor
@@ -249,20 +231,22 @@ internal class Barcode : IDisposable
             // Write the image to a MemoryStream
             var memoryStream = new MemoryStream();
 
-            if (imageFormat != null)
-            {
-                backgroundImage.Save(memoryStream, imageFormat.Name.ToUpper(CultureInfo.InvariantCulture) switch
-                {
-                    "PNG" => new PngEncoder(),
-                    "BMP" => new BmpEncoder(),
-                    "GIF" => new GifEncoder(),
-                    "JPEG" => new JpegEncoder(),
-                    "PBM" => new PbmEncoder(),
-                    "TGA" => new TgaEncoder(),
-                    "TIFF" => new TiffEncoder(),
-                    "WEBP" => new WebpEncoder(),
-                    _ => new PngEncoder()
-                });
+            if (imageFormat != null) {
+#pragma warning disable SA1118 // Parameter should not span multiple lines
+                backgroundImage.Save(
+                    memoryStream,
+                    imageFormat.Name.ToUpper(CultureInfo.InvariantCulture) switch {
+                        "PNG" => new PngEncoder(),
+                        "BMP" => new BmpEncoder(),
+                        "GIF" => new GifEncoder(),
+                        "JPEG" => new JpegEncoder(),
+                        "PBM" => new PbmEncoder(),
+                        "TGA" => new TgaEncoder(),
+                        "TIFF" => new TiffEncoder(),
+                        "WEBP" => new WebpEncoder(),
+                        _ => new PngEncoder()
+                    });
+#pragma warning restore SA1118 // Parameter should not span multiple lines
             }
 
             memoryStream.Position = 0;
@@ -296,8 +280,7 @@ internal class Barcode : IDisposable
         Color backgroundColor,
         Color foregroundColor) {
         // Creating a barcode is not thread-safe, so this method is synchronized.
-        lock (CreateBarcodeLockObject)
-        {
+        lock (CreateBarcodeLockObject) {
             if (string.IsNullOrEmpty(barcodeData)) return string.Empty;
 
             var (modulesX, modulesY) = CalculateDataMatrixModuleSize(barcodeData);
@@ -315,7 +298,7 @@ internal class Barcode : IDisposable
                     Height = (modulesY + 2) * (int)_multiplier,
                     Margin = 1,
                     SymbolShape = ZXing.Datamatrix.Encoder.SymbolShapeHint.FORCE_SQUARE,
-                }
+                },
             };
 
             var svgContent = barcodeWriter.Write(barcodeData).Content;
@@ -372,8 +355,7 @@ internal class Barcode : IDisposable
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    public void Dispose()
-    {
+    public void Dispose() {
         Dispose(true);
         GC.SuppressFinalize(this);
     }
@@ -386,19 +368,16 @@ internal class Barcode : IDisposable
         "StyleCop.CSharp.DocumentationRules",
         "SA1650:ElementDocumentationMustBeSpelledCorrectly",
         Justification = "Reviewed. Suppression is OK here.")]
-    protected virtual void Dispose(bool disposing)
-    {
-        if (_disposed)
-        {
+    protected virtual void Dispose(bool disposing) {
+        if (_disposed) {
             return;
         }
 
-        if (disposing)
-        {
-            // Free any other managed objects here. 
+        if (disposing) {
+            // Free any other managed objects here.
         }
 
-        // Free any unmanaged objects here. 
+        // Free any unmanaged objects here.
         _disposed = true;
     }
 
@@ -407,8 +386,7 @@ internal class Barcode : IDisposable
     /// </summary>
     /// <param name="barcodeData">The barcode data.</param>
     /// <returns>The number of horizontal and vertical modules in the barcode.</returns>
-    private static (int modulesX, int modulesY) CalculateDataMatrixModuleSize(string barcodeData)
-    {
+    private static (int modulesX, int modulesY) CalculateDataMatrixModuleSize(string barcodeData) {
         // Create an instance of the DataMatrixWriter
         var dataMatrixWriter = new DataMatrixWriter();
 

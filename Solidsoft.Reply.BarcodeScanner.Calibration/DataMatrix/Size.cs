@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DataMatrixSize.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Size.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Enumeration of Data Matrix code symbol sizes.
 // </summary>
@@ -26,8 +24,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.DataMatrix;
 /// <summary>
 ///   Enumeration of Data Matrix code symbol sizes.
 /// </summary>
-public enum Size
-{
+public enum Size {
     /// <summary>
     ///   Automatic sizing.
     /// </summary>
@@ -233,5 +230,5 @@ public enum Size
     /// <summary>
     ///   Data Matrix rectangular extension 26 x 64.
     /// </summary>
-    Dm26X64
+    Dm26X64,
 }

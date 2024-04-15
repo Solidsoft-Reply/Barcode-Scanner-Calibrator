@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Advice.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Segments.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The segments of data provided in a baseline calibration barcode.
 // </summary>
@@ -26,7 +24,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// The segments of data provided in a baseline calibration barcode.
 /// </summary>
 internal enum Segments {
-
     /// <summary>
     /// The data segment containing any prefix and/or AIM identifier.
     /// </summary>
@@ -65,5 +62,5 @@ internal enum Segments {
     /// <summary>
     /// The data segment containing any suffix.
     /// </summary>
-    SuffixSegment = 7
+    SuffixSegment = 7,
 }

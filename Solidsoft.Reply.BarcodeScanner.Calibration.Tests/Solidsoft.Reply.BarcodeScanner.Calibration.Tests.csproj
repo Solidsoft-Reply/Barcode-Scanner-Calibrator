@@ -6,8 +6,20 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	  <CodeAnalysisRuleSet>$(SolutionDir)/StyleCopAnalyzersDefault.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Dom3KeyboardEVentCodesPreprocessorTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
 
   <ItemGroup>

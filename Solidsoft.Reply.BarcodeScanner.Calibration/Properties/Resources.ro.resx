@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Datele raportate sunt pentru codul de bare de calibrare greșit.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>S-a încercat calibrarea unui cod de bare, dar nu a fost furnizat niciun token de calibrare.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Unele caractere invariante nu pot fi detectate.</value>
   </data>

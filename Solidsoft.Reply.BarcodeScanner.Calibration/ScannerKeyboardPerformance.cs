@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ScannerKeyboardPerformance.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="ScannerKeyboardPerformance.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // 'Traffic Light' assessment of the performance of the barcode scanner keyboard input
 // </summary>
@@ -25,8 +23,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 /// <summary>
 ///   'Traffic Light' assessment of the performance of the barcode scanner keyboard input.
 /// </summary>
-public enum ScannerKeyboardPerformance
-{
+public enum ScannerKeyboardPerformance {
     /// <summary>
     ///   The performance of the keyboard is within the bounds of the 'high performance' threshold.
     /// </summary>
@@ -40,5 +37,5 @@ public enum ScannerKeyboardPerformance
     /// <summary>
     ///   The performance of the keyboard is within the bounds of the 'low performance' threshold.
     /// </summary>
-    Low = 2000
+    Low = 2000,
 }

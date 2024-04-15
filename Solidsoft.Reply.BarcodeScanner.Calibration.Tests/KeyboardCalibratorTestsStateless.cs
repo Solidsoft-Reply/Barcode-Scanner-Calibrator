@@ -2,19 +2,6 @@
 // <copyright file="KeyboardCalibratorTestsStateless.cs" company="Solidsoft Reply Ltd.">
 //   (c) 2018 Solidsoft Reply Ltd.  All rights reserved.
 // </copyright>
-// <license>
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// </license>
 // <summary>
 // Unit tests for the Keyboard Calibrator - stateless iteration of tokens.
 // </summary>
@@ -35,8 +22,7 @@ using DataMatrix;
 /// <summary>
 /// Unit tests for the Keyboard Calibrator - stateless iteration of tokens.
 /// </summary>
-public class KeyboardCalibratorTestsStateless
-{
+public class KeyboardCalibratorTestsStateless {
     private const string BelgianFrenchBaseline = "  1 % 5 7 ù 9 0 8 _ ; ) : = à & é \" ' ( § è ! ç M m . - / + Q B C D E F G H I J K L ? N O P A R S T U V Z X Y W ° q b c d e f g h i j k l , n o p a r s t u v z x y w   3 4 2 \0^µ $ 6 ² \0¨£ * ³    \x001D    \x001C    \0    \0    \x000D";
     private const string BelgianFrenchDeadKey1 = "\0^1\0^%\0^3\0^4\0^5\0^7\0^ù\0^9\0^0\0^8\0^_\0^;\0^)\0^:\0^=\0^à\0^&\0^é\0^\"\0^'\0^(\0^§\0^è\0^!\0^ç\0^M\0^m\0^.\0^-\0^/\0^+\0^2\0^Q\0^B\0^C\0^D\0Ê\0^F\0^G\0^H\0Î\0^J\0^K\0^L\0^?\0^N\0Ô\0^P\0Â\0^R\0^S\0^T\0Û\0^V\0^Z\0^X\0^Y\0^W\0^^\0^µ\0^$\0^6\0^°\0^²\0^q\0^b\0^c\0^d\0ê\0^f\0^g\0^h\0î\0^j\0^k\0^l\0^,\0^n\0ô\0^p\0â\0^r\0^s\0^t\0û\0^v\0^z\0^x\0^y\0^w\0^¨\0^£\0^*\0^³\x000D";
     private const string BelgianFrenchDeadKey2 = "\0¨1\0¨%\0¨3\0¨4\0¨5\0¨7\0¨ù\0¨9\0¨0\0¨8\0¨_\0¨;\0¨)\0¨:\0¨=\0¨à\0¨&\0¨é\0¨\"\0¨'\0¨(\0¨§\0¨è\0¨!\0¨ç\0¨M\0¨m\0¨.\0¨-\0¨/\0¨+\0¨2\0¨Q\0¨B\0¨C\0¨D\0Ë\0¨F\0¨G\0¨H\0Ï\0¨J\0¨K\0¨L\0¨?\0¨N\0Ö\0¨P\0Ä\0¨R\0¨S\0¨T\0Ü\0¨V\0¨Z\0¨X\0¨Y\0¨W\0¨^\0¨µ\0¨$\0¨6\0¨°\0¨²\0¨q\0¨b\0¨c\0¨d\0ë\0¨f\0¨g\0¨h\0ï\0¨j\0¨k\0¨l\0¨,\0¨n\0ö\0¨p\0ä\0¨r\0¨s\0¨t\0ü\0¨v\0¨z\0¨x\0ÿ\0¨w\0¨¨\0¨£\0¨*\0¨³\x000D";
@@ -305,8 +291,7 @@ public class KeyboardCalibratorTestsStateless
     /// <summary>
     /// Initializes a new instance of the <see cref="KeyboardCalibratorTestsStateless"/> class.
     /// </summary>
-    public KeyboardCalibratorTestsStateless()
-    {
+    public KeyboardCalibratorTestsStateless() {
         ////////_baseIdentifiers = BasePackIdentifiers(
         ////////    BaseCalibration().CalibrationData);
     }
@@ -315,13 +300,11 @@ public class KeyboardCalibratorTestsStateless
     /// Test a simple string.
     /// </summary>
     [Fact]
-    public void UnitedStatesToUnitedStates()
-    {
+    public void UnitedStatesToUnitedStates() {
         var calibrator = new Calibrator();
         var loopCount = 0;
 
-        foreach (var token in calibrator.CalibrationTokens())
-        {
+        foreach (var token in calibrator.CalibrationTokens()) {
             calibrator.Calibrate(ConvertToCharacterValues(BaselineCalibrationUsUs()), token);
             loopCount++;
         }
@@ -417,8 +400,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Greek (220) computer keyboard layout.
     /// </summary>
     [Fact]
-    public void ToGreek220()
-    {
+    public void ToGreek220() {
         // Calibration fails
         var token = PerformCalibrationTest("Greek (220)");
         Assert.Null(token.CalibrationData);
@@ -434,8 +416,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Greek Polytonic computer keyboard layout.
     /// </summary>
     [Fact]
-    public void ToGreekPolytonic()
-    {
+    public void ToGreekPolytonic() {
         // Calibration fails
         var token = PerformCalibrationTest("Greek Polytonic");
         Assert.Null(token.CalibrationData);
@@ -547,8 +528,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Latvian (Standard) computer keyboard layout.
     /// </summary>
     [Fact]
-    public void ToLatvianStandard()
-    {
+    public void ToLatvianStandard() {
         // Calibration fails
         var token = PerformCalibrationTest("Latvian (Standard)");
         Assert.Null(token.CalibrationData);
@@ -666,8 +646,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Slovak computer keyboard layout.
     /// </summary>
     [Fact]
-    public void ToSlovak()
-    {
+    public void ToSlovak() {
         // Calibration fails
         var token = PerformCalibrationTest("Slovak");
         Assert.Null(token.CalibrationData);
@@ -695,8 +674,7 @@ public class KeyboardCalibratorTestsStateless
     /// Test calibration for a Spanish Variation computer keyboard layout.
     /// </summary>
     [Fact]
-    public void ToSpanishVariation()
-    {
+    public void ToSpanishVariation() {
         // Calibration fails
         var token = PerformCalibrationTest("Spanish Variation");
         Assert.Null(token.CalibrationData);
@@ -745,8 +723,7 @@ public class KeyboardCalibratorTestsStateless
     /// <param name="multiplier">The multiplier for the size of the data matrix image.</param>
     /// <param name="size">The size of the data matrix.</param>
     /// <returns>A calibration token.</returns>
-    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic)
-    {
+    private static Token PerformCalibrationTest(string layoutName, float multiplier = 1F, Size size = Size.Automatic) {
         Debug.WriteLine(layoutName);
 
         var expectedCalibrations = UnitedStatesExpectedCalibrations();
@@ -757,8 +734,7 @@ public class KeyboardCalibratorTestsStateless
 
         Token currentToken = default;
 
-        while (true)
-        {
+        while (true) {
             // Get a new calibrator on each iteration to simulate statelessness.
             var calibrator = new StatelessCalibrator();
             var token = calibrator.NextCalibrationToken(currentToken, multiplier, size);
@@ -783,28 +759,23 @@ public class KeyboardCalibratorTestsStateless
 
             calibrator.RecognisedDataElements = recognisedDataElements;
 
-            if (loopCount < 0)
-            {
+            if (loopCount < 0) {
                 currentToken = calibrator.Calibrate(ConvertToCharacterValues(baseLine[loopCountForBaseline++]), currentToken);
                 loopCount = loopCountForBaseline == baseLine.Length ? ++loopCount : loopCount;
             }
-            else
-            {
-                if (loopCount < computerKeyboardLayout[baseLine].Count)
-                {
+            else {
+                if (loopCount < computerKeyboardLayout[baseLine].Count) {
                     currentToken = calibrator.Calibrate(
                         ConvertToCharacterValues(computerKeyboardLayout[baseLine][loopCount++]),
                         currentToken);
                 }
             }
 
-            foreach (var error in currentToken.Errors)
-            {
+            foreach (var error in currentToken.Errors) {
                 Debug.WriteLine(error.Description);
             }
 
-            if (currentToken.Remaining == 0)
-            {
+            if (currentToken.Remaining == 0) {
                 break;
             }
 
@@ -816,8 +787,7 @@ public class KeyboardCalibratorTestsStateless
             continue;
 #pragma warning restore S1751
 
-            static string ToLiteral(string input)
-            {
+            static string ToLiteral(string input) {
                 using var writer = new StringWriter();
                 using var provider = CodeDomProvider.CreateProvider("CSharp");
                 provider.GenerateCodeFromExpression(new System.CodeDom.CodePrimitiveExpression(input), writer, null!);
@@ -838,8 +808,7 @@ public class KeyboardCalibratorTestsStateless
     /// computer keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of test data.</returns>
-    private static Dictionary<string, Dictionary<string[], IList<string>>> UnitedStatesTestData()
-    {
+    private static Dictionary<string, Dictionary<string[], IList<string>>> UnitedStatesTestData() {
         var unitedStatesTestData = new Dictionary<string, Dictionary<string[], IList<string>>>
                                    {
                                        {
@@ -1612,8 +1581,7 @@ public class KeyboardCalibratorTestsStateless
     /// keyboard layouts for each European keyboard defined in Windows.
     /// </summary>
     /// <returns>A dictionary of expected calibrations.</returns>
-    private static Dictionary<string, string> UnitedStatesExpectedCalibrations()
-    {
+    private static Dictionary<string, string> UnitedStatesExpectedCalibrations() {
         var unitedStatesTestCalibrations = new Dictionary<string, string>
                                            {
                                                { "Belgian French", Calibrations.BelgianFrenchCalibration },
@@ -1693,8 +1661,7 @@ public class KeyboardCalibratorTestsStateless
     /// The scanner is configured for a US keyboard.
     /// The computer is configured for a US keyboard.
     /// </returns>
-    private static string BaselineCalibrationUsUs()
-    {
+    private static string BaselineCalibrationUsUs() {
         var testString =
             "  ! \" % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   # $ @ [ \\ ] ^ ` { | } ~    "
           + (char)29;
@@ -1706,17 +1673,14 @@ public class KeyboardCalibratorTestsStateless
     /// </summary>
     /// <param name="input">The string of characters to be converted.</param>
     /// <returns>A comma-separated value list of character values.</returns>
-    private static int[] ConvertToCharacterValues(string input)
-    {
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            return Array.Empty<int>();
+    private static int[] ConvertToCharacterValues(string input) {
+        if (string.IsNullOrWhiteSpace(input)) {
+            return [];
         }
 
         var outputBuilder = new int[input.Length];
 
-        for (var idx = 0; idx < input.Length; idx++)
-        {
+        for (var idx = 0; idx < input.Length; idx++) {
             outputBuilder[idx] = input[idx];
         }
 

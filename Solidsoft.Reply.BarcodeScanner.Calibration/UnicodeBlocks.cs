@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="UnicodeBlocks.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="UnicodeBlocks.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,15 +12,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // Resolves a sequence of characters to a Unicode block that heuristically represents the kind of
 // keyboard configured in the OS.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-
-// ReSharper disable BadBracesSpaces
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
@@ -35,8 +30,7 @@ using System.Linq;
 ///   Resolves a sequence of characters to a Unicode block that heuristically represents the kind of
 ///   keyboard configured in the OS.
 /// </summary>
-internal static class UnicodeBlocks
-{
+internal static class UnicodeBlocks {
     /// <summary>
     ///   A dictionary of ranges for each Unicode block.
     /// </summary>
@@ -344,7 +338,7 @@ internal static class UnicodeBlocks
             { (917504, 917631), "Tags" },
             { (917760, 917999), "Variation Selectors Supplement" },
             { (983040, 1048575), "Supplementary Private Use Area-A" },
-            { (1048576, 1114111), "Supplementary Private Use Area-B" }
+            { (1048576, 1114111), "Supplementary Private Use Area-B" },
         };
 
     /// <summary>
@@ -356,13 +350,11 @@ internal static class UnicodeBlocks
     [SuppressMessage("ReSharper", "StringLiteralTypo")]
     public static string ResolveScript(
         IEnumerable<string>? upperCaseSequences,
-        IEnumerable<string>? lowerCaseSequences)
-    {
+        IEnumerable<string>? lowerCaseSequences) {
         var scriptUpper = "<unknown>";
         var scriptLower = "<unknown>";
 
-        if (upperCaseSequences is null || lowerCaseSequences is null)
-        {
+        if (upperCaseSequences is null || lowerCaseSequences is null) {
             return scriptUpper;
         }
 
@@ -373,95 +365,92 @@ internal static class UnicodeBlocks
         var lowerReachedThreshold = Resolve(false);
 
         // Flatten the Unicode block name.
-        static string Flatten(string scriptName)
-        {
+        static string Flatten(string scriptName) {
 #pragma warning disable S3220 // Method calls should not resolve ambiguously to overloads with "params"
             var firstWord = scriptName.Split(' ', '-')[0];
 #pragma warning restore S3220 // Method calls should not resolve ambiguously to overloads with "params"
 
-            return firstWord switch
-                   {
-                       "Latin"      => "Latin",
-                       "IPA"        => "Latin",
-                       "Phonetic"   => "Latin",
-                       "Cyrillic"   => "Cyrillic",
-                       "Greek"      => "Greek",
-                       "Armenian"   => "Armenian",
-                       "Georgian"   => "Georgian",
-                       "Glagolitic" => "Glagolitic",
-                       "LinearB"    => "LinearB",
-                       "Bamun"      => "Bamun",
-                       "Coptic"     => "Coptic",
-                       "Ethiopic"   => "Ethiopic",
-                       "Metroitic"  => "Metroitic",
-                       "Arabic"     => "Arabic",
-                       "Hebrew"     => "Hebrew",
-                       "Syriac"     => "Syriac",
-                       "Mongolian"  => "Mongolian",
-                       "Devanagari" => "Devanagari",
-                       "Sinhala"    => "Sinhala",
-                       "Tamil"      => "Tamil",
-                       "Khmer"      => "Khmer",
-                       "Myanmar"    => "Myanmar",
-                       "Sundanese"  => "Sundanese",
-                       "Bopomofo"   => "Bopomofo",
-                       "Katakana"   => "Katakana",
-                       "Tangut"     => "Tangut",
-                       "Yi"         => "Yi",
-                       "Cherokee"   => "Cherokee",
-                       _ => scriptName switch
-                            {
-                                "Ancient Greek Numbers" => "Greek",
-                                "Latin-1 Supplement" => "Latin",
-                                "Aegean Numbers" => "LinearB",
-                                "Combining Diacritical Marks Extended" => "Combining Diacritical Marks",
-                                "Combining Diacritical Marks Supplement" => "Combining Diacritical Marks",
-                                "Egyptian Hieroglyph Format Controls" => "Egyptian Hieroglyphs",
-                                "Cuneiform Numbers and Punctuation" => "Cuniform",
-                                "Early Dynastic Cuneiform" => "Cuniform",
-                                "Old Persian" => "Cuniform",
-                                "Ugaritic" => "Cuniform",
-                                "Meetei Mayek Extensions" => "Meetei Mayek",
-                                "CJK Unified Ideographs Extension A" => "CJK Unified Ideographs (Han)",
-                                "CJK Unified Ideographs Extension B" => "CJK Unified Ideographs (Han)",
-                                "CJK Unified Ideographs Extension C" => "CJK Unified Ideographs (Han)",
-                                "CJK Unified Ideographs Extension D" => "CJK Unified Ideographs (Han)",
-                                "CJK Unified Ideographs Extension E" => "CJK Unified Ideographs (Han)",
-                                "CJK Unified Ideographs Extension F" => "CJK Unified Ideographs (Han)",
-                                "CJK Compatibility Ideographs Supplement" => "CJK Compatibility Ideographs",
-                                "CJK Radicals Supplement" => "CJK Radicals",
-                                "CJK Strokes" => "CJK Radicals",
-                                "Ideographic Description Characters" => "CJK Radicals",
-                                "Hangul Jamo Extended - A" => "Hangul Jamo",
-                                "Hangul Jamo Extended - B" => "Hangul Jamo",
-                                "Hangul Compatibility Jamo" => "Hangul Jamo",
-                                "Unified Canadian Aboriginal Syllabics Extended" => "Unified Canadian Aboriginal Syllabics",
-                                "Ancient Greek Musical Notation" => "Musical Symbols",
-                                "Byzantine Musical Symbols" => "Musical Symbols",
-                                "Shorthand Format Controls" => "Duployan",
-                                "Supplemental Punctuation" => "General Punctuation",
-                                "Ideographic Symbols and Punctuation" => "CJK Symbols and Punctuation",
-                                "Halfwidth and Fullwidth Forms" => "CJK Compatibility Forms",
-                                "Small Form Variants" => "CJK Compatibility Forms",
-                                "Vertical Forms" => "CJK Compatibility Forms",
-                                "Enclosed Alphanumeric Supplement" => "Enclosed Alphanumerics",
-                                "Enclosed Ideographic Supplement" => "Enclosed CJK Letters and Months",
-                                "Supplemental Arrows-A" => "Arrows",
-                                "Supplemental Arrows-B" => "Arrows",
-                                "Supplemental Arrows-C" => "Arrows",
-                                "Miscellaneous Symbols and Arrows" => "Arrows",
-                                "Arabic Mathematical Alphabetic Symbols" => "Mathematical Alphanumeric Symbols",
-                                "Letterlike Symbols" => "Mathematical Alphanumeric Symbols",
-                                "Supplemental Mathematical Operators" => "Mathematical Operators",
-                                "Miscellaneous Mathematical Symbols - A" => "Mathematical Operators",
-                                "Miscellaneous Mathematical Symbols - B" => "Mathematical Operators",
-                                "Box Drawing" => "Geometric Shapes",
-                                "Block Elements" => "Geometric Shapes",
-                                "Geometric Shapes Extended" => "Geometric Shapes",
-                                "Ornamental Dingbats" => "Dingbats",
-                                _ => scriptName
-                            }
-                   };
+            return firstWord switch {
+                "Latin" => "Latin",
+                "IPA" => "Latin",
+                "Phonetic" => "Latin",
+                "Cyrillic" => "Cyrillic",
+                "Greek" => "Greek",
+                "Armenian" => "Armenian",
+                "Georgian" => "Georgian",
+                "Glagolitic" => "Glagolitic",
+                "LinearB" => "LinearB",
+                "Bamun" => "Bamun",
+                "Coptic" => "Coptic",
+                "Ethiopic" => "Ethiopic",
+                "Metroitic" => "Metroitic",
+                "Arabic" => "Arabic",
+                "Hebrew" => "Hebrew",
+                "Syriac" => "Syriac",
+                "Mongolian" => "Mongolian",
+                "Devanagari" => "Devanagari",
+                "Sinhala" => "Sinhala",
+                "Tamil" => "Tamil",
+                "Khmer" => "Khmer",
+                "Myanmar" => "Myanmar",
+                "Sundanese" => "Sundanese",
+                "Bopomofo" => "Bopomofo",
+                "Katakana" => "Katakana",
+                "Tangut" => "Tangut",
+                "Yi" => "Yi",
+                "Cherokee" => "Cherokee",
+                _ => scriptName switch {
+                    "Ancient Greek Numbers" => "Greek",
+                    "Latin-1 Supplement" => "Latin",
+                    "Aegean Numbers" => "LinearB",
+                    "Combining Diacritical Marks Extended" => "Combining Diacritical Marks",
+                    "Combining Diacritical Marks Supplement" => "Combining Diacritical Marks",
+                    "Egyptian Hieroglyph Format Controls" => "Egyptian Hieroglyphs",
+                    "Cuneiform Numbers and Punctuation" => "Cuniform",
+                    "Early Dynastic Cuneiform" => "Cuniform",
+                    "Old Persian" => "Cuniform",
+                    "Ugaritic" => "Cuniform",
+                    "Meetei Mayek Extensions" => "Meetei Mayek",
+                    "CJK Unified Ideographs Extension A" => "CJK Unified Ideographs (Han)",
+                    "CJK Unified Ideographs Extension B" => "CJK Unified Ideographs (Han)",
+                    "CJK Unified Ideographs Extension C" => "CJK Unified Ideographs (Han)",
+                    "CJK Unified Ideographs Extension D" => "CJK Unified Ideographs (Han)",
+                    "CJK Unified Ideographs Extension E" => "CJK Unified Ideographs (Han)",
+                    "CJK Unified Ideographs Extension F" => "CJK Unified Ideographs (Han)",
+                    "CJK Compatibility Ideographs Supplement" => "CJK Compatibility Ideographs",
+                    "CJK Radicals Supplement" => "CJK Radicals",
+                    "CJK Strokes" => "CJK Radicals",
+                    "Ideographic Description Characters" => "CJK Radicals",
+                    "Hangul Jamo Extended - A" => "Hangul Jamo",
+                    "Hangul Jamo Extended - B" => "Hangul Jamo",
+                    "Hangul Compatibility Jamo" => "Hangul Jamo",
+                    "Unified Canadian Aboriginal Syllabics Extended" => "Unified Canadian Aboriginal Syllabics",
+                    "Ancient Greek Musical Notation" => "Musical Symbols",
+                    "Byzantine Musical Symbols" => "Musical Symbols",
+                    "Shorthand Format Controls" => "Duployan",
+                    "Supplemental Punctuation" => "General Punctuation",
+                    "Ideographic Symbols and Punctuation" => "CJK Symbols and Punctuation",
+                    "Halfwidth and Fullwidth Forms" => "CJK Compatibility Forms",
+                    "Small Form Variants" => "CJK Compatibility Forms",
+                    "Vertical Forms" => "CJK Compatibility Forms",
+                    "Enclosed Alphanumeric Supplement" => "Enclosed Alphanumerics",
+                    "Enclosed Ideographic Supplement" => "Enclosed CJK Letters and Months",
+                    "Supplemental Arrows-A" => "Arrows",
+                    "Supplemental Arrows-B" => "Arrows",
+                    "Supplemental Arrows-C" => "Arrows",
+                    "Miscellaneous Symbols and Arrows" => "Arrows",
+                    "Arabic Mathematical Alphabetic Symbols" => "Mathematical Alphanumeric Symbols",
+                    "Letterlike Symbols" => "Mathematical Alphanumeric Symbols",
+                    "Supplemental Mathematical Operators" => "Mathematical Operators",
+                    "Miscellaneous Mathematical Symbols - A" => "Mathematical Operators",
+                    "Miscellaneous Mathematical Symbols - B" => "Mathematical Operators",
+                    "Box Drawing" => "Geometric Shapes",
+                    "Block Elements" => "Geometric Shapes",
+                    "Geometric Shapes Extended" => "Geometric Shapes",
+                    "Ornamental Dingbats" => "Dingbats",
+                    _ => scriptName
+                }
+            };
         }
 
         FlattenExtendedScripts();
@@ -470,23 +459,18 @@ internal static class UnicodeBlocks
                    ? TestScriptsEqual()
                    : TestUnknownScriptUpper();
 
-        bool Resolve(bool upper = true)
-        {
+        bool Resolve(bool upper = true) {
             var resolverDictionary = new Dictionary<string, int>();
             var characterCount = 0D;
 
-            foreach (var sequence in upper ? upperSequences : lowerSequences)
-            {
-                foreach (var character in sequence)
-                {
+            foreach (var sequence in upper ? upperSequences : lowerSequences) {
+                foreach (var character in sequence) {
                     characterCount++;
 
-                    foreach (var ((item1, item2), value) in UnicodeBlocksDictionary)
-                    {
+                    foreach (var ((item1, item2), value) in UnicodeBlocksDictionary) {
                         var characterValue = (int)character;
 
-                        if (characterValue < item1 || characterValue > item2)
-                        {
+                        if (characterValue < item1 || characterValue > item2) {
                             continue;
                         }
 
@@ -501,29 +485,23 @@ internal static class UnicodeBlocks
 
             var reachedThreshold = Convert.ToDouble(resolverDictionary.Values.Max()) / characterCount > 0.65;
 
-            if (reachedThreshold)
-            {
-                if (upper)
-                {
+            if (reachedThreshold) {
+                if (upper) {
                     scriptUpper = (from candidates in resolverDictionary
-                        where candidates.Value == resolverDictionary.Values.Max()
-                        select candidates.Key).First();
+                                   where candidates.Value == resolverDictionary.Values.Max()
+                                   select candidates.Key).First();
                 }
-                else
-                {
+                else {
                     scriptLower = (from candidates in resolverDictionary
-                        where candidates.Value == resolverDictionary.Values.Max()
-                        select candidates.Key).First();
+                                   where candidates.Value == resolverDictionary.Values.Max()
+                                   select candidates.Key).First();
                 }
             }
-            else
-            {
-                if (upper)
-                {
+            else {
+                if (upper) {
                     scriptUpper = "<unknown>";
                 }
-                else
-                {
+                else {
                     scriptLower = "<unknown>";
                 }
             }
@@ -531,29 +509,24 @@ internal static class UnicodeBlocks
             return reachedThreshold;
         }
 
-
-        // On a Hebrew keyboard, SHIFT (and CAPS LOCK) provide access to Latin characters. This is very unusual. The 
+        // On a Hebrew keyboard, SHIFT (and CAPS LOCK) provide access to Latin characters. This is very unusual. The
         // Sinhala Wij 9 keyboard, for example, provides access to Latin characters on CAPS LOCK, but not on SHIFT.
-        bool CheckForHebrew()
-        {
+        bool CheckForHebrew() {
             return (scriptUpper == "Basic Latin" && scriptLower == "Hebrew")
                    || (scriptUpper == "Hebrew" && scriptLower == "Basic Latin");
         }
 
-        void FlattenExtendedScripts()
-        {
+        void FlattenExtendedScripts() {
             scriptUpper = scriptUpper == "Basic Latin" ? "Latin" : scriptUpper;
             scriptLower = scriptLower == "Basic Latin" ? "Latin" : scriptLower;
 
-            if (scriptUpper == scriptLower)
-            {
+            if (scriptUpper == scriptLower) {
                 return;
             }
 
             // We will treat Georgian (Old Alphabets) as a special case, because the corresponding
             // keyboard supports CAPS LOCK to switch between Georgian and Latin scripts.
-            if (scriptUpper == "Georgian Supplement" && scriptLower == "Georgian")
-            {
+            if (scriptUpper == "Georgian Supplement" && scriptLower == "Georgian") {
                 scriptUpper = scriptLower = "Georgian (Old Alphabets)";
                 return;
             }
@@ -561,7 +534,6 @@ internal static class UnicodeBlocks
             scriptUpper = Flatten(scriptUpper);
             scriptLower = Flatten(scriptLower);
         }
-
 
         string TestUnknownScripts() =>
             scriptLower == "<unknown>"
@@ -578,6 +550,5 @@ internal static class UnicodeBlocks
 
         string TestScriptsEqual() =>
             scriptUpper == scriptLower ? scriptUpper : TestForHebrew();
-
     }
 }

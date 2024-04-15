@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationAssumption.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2020 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Assumption.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,7 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // The assumption made concerning the use of calibration in client systems. The mode controls the
 // perspective from which advice is provided based on a stated assumption, or lack of assumption,
@@ -29,8 +27,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 ///   perspective from which advice is provided based on a stated assumption, or lack of assumption,
 ///   about the capabilities of client systems.
 /// </summary>
-public enum Assumption
-{
+public enum Assumption {
     /// <summary>
     ///   Provide advice from the perspective of a user whose client system may not support calibration.
     ///   In this case, the advice must address the lowest-common-denominator of client systems that do
@@ -50,5 +47,5 @@ public enum Assumption
     ///   In this case, the advice addresses only the lowest-common-denominator of client systems that do
     ///   not process the character input to recover the original data in a barcode.
     /// </summary>
-    NoCalibration = 2
+    NoCalibration = 2,
 }

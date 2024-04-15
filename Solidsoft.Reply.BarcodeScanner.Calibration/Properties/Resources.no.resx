@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Rapporterte data er for feil kalibreringsstrekkode.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Det ble forsøkt å kalibrere en strekkode, men det ble ikke oppgitt noen kalibreringstoken.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Noen invariante tegn kan ikke oppdages.</value>
   </data>

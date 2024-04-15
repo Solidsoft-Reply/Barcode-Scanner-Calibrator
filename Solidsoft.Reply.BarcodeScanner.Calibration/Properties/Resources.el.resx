@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Τα αναφερόμενα δεδομένα είναι για λάθος barcode βαθμονόμησης.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Έγινε προσπάθεια βαθμονόμησης ενός barcode, αλλά δεν δόθηκε διακριτικό βαθμονόμησης.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Κάποιοι αμετάβλητοι χαρακτήρες δεν μπορούν να ανιχνευτούν.</value>
   </data>

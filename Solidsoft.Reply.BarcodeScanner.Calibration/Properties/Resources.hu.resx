@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>A jelentett adatok a helytelen kalibrációs vonalkódhoz tartoznak.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Megkísérelték egy vonalkód kalibrálását, de nem adtak meg kalibrálási tokent.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Néhány invariáns karakter nem észlelhető.</value>
   </data>

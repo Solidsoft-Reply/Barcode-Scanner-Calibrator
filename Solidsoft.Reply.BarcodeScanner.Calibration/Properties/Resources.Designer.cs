@@ -574,6 +574,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An attempt was made to calibrate a barcode, but no calibration token was provided..
+        /// </summary>
+        internal static string CalibrationInformation_305 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_305", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Some invariant characters cannot be detected..
         /// </summary>
         internal static string CalibrationInformation_310 {

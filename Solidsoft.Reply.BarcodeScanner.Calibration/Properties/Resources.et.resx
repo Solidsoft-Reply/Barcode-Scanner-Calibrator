@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Teatatud andmed on vale kalibreerimisvöötkoodi jaoks.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Tehti katse kalibreerida vöötkoodi, kuid kalibreerimismärki ei antud.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Mõningaid invariante tähemärke ei saa tuvastada.</value>
   </data>

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationToken.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="Token.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,13 +12,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
 // A token passed within the keyboard calibration code to represent the current calibration session.  The token
 // provides calibration state and results.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
@@ -29,8 +26,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics.CodeAnalysis;
-using System.Runtime.Serialization;
-
 using ProcessFlow;
 using Properties;
 using DataMatrix;
@@ -42,17 +37,67 @@ using Newtonsoft.Json.Serialization;
 ///   A token passed within the keyboard calibration code to represent the current calibration session. The token
 ///   provides calibration state and results.
 /// </summary>
-public struct Token : IEquatable<Token>, IEnvironment<Token>
-{
+/// <param name="Data">
+///   Gets data for tokens that is primarily intended for internal calibration use only.
+/// </param>
+/// <param name="BitmapStream">
+///   Gets the stream containing the bitmap image of the current calibration barcode.
+/// </param>
+/// <param name="Svg">
+///   Gets the SVG content of the image of the current calibration barcode.
+/// </param>
+/// <param name="Remaining">
+///   Gets a count of the number of barcodes that remain to be calibrated during a calibration session.
+/// </param>
+/// <param name="Size">
+///   Gets the maximum characters allowed in a barcode image.
+/// </param>
+/// <param name="KeyboardMatch">
+///   Gets a value indicating whether the scanner emulates a keyboard that corresponds with the current computer
+///   keyboard layout.
+/// </param>
+/// <remarks>
+///   When true, this property cannot be assumed to indicate that the scanner and computer keyboard layouts are
+///   identical, but simply that the keys representing ASCII characters are the same in both layouts. Another
+///   possibility is that the scanner is emulating a numeric keyboard.
+/// </remarks>
+/// <param name="CalibrationData">
+///   Gets the Calibration configuration.
+/// </param>
+/// <param name="SystemCapabilities">
+///   Gets the system capabilities and advice items.
+/// </param>
+/// <param name="CalibrationSessionAbandoned">
+///   Gets a value indicating whether the calibration session has been abandoned.
+/// </param>
+/// <param name="ReportedPrefixSegment">
+///   Gets a list of reported prefix segments.
+/// </param>
+/// <param name="ReportedSuffix">
+///   Gets a reported suffix.
+/// </param>
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[method: JsonConstructor]
+public readonly record struct Token(
+    [property: JsonProperty("data", Order = 7)] TokenData? Data,
+    [property: JsonIgnore] Stream? BitmapStream = null,
+    [property: JsonIgnore] string? Svg = null,
+    [property: JsonProperty("remaining", Order = 0)] int Remaining = 0,
+    [property: JsonProperty("size", Order = 1)] Size Size = Size.Automatic,
+    [property: JsonProperty("keyboardMatch", Order = 2)] bool? KeyboardMatch = null,
+    [property: JsonProperty("calibrationData", Order = 8)] Data? CalibrationData = null,
+    [property: JsonProperty("systemCapabilities", Order = 3)] SystemCapabilities? SystemCapabilities = null,
+    [property: JsonProperty("calibrationSessionAbandoned", Order = 10)] bool? CalibrationSessionAbandoned = null,
+    [property: JsonProperty("reportedPrefixSegment", Order = 11)] List<string>? ReportedPrefixSegment = null,
+    [property: JsonProperty("reportedSuffix", Order = 12)] string? ReportedSuffix = null)
+    : IEnvironment<Token> {
+
+#pragma warning disable SA1642 // Constructor summary documentation should begin with standard text
     /// <summary>
-    ///   Initializes a new instance of the <see cref="Token" /> struct.
+    /// Initializes a new instance of the <see cref="Token"/> struct.
     /// </summary>
     public Token()
-    {
-        Errors = new List<Information>();
-        Warnings = new List<Information>();
-        Information = new List<Information>();
-        LatestError = string.Empty;
+        : this(default(TokenData)) {
     }
 
     /// <summary>
@@ -131,32 +176,28 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
         bool? calibrationSessionAbandoned = false,
         List<string>? reportedPrefixSegment = null,
         string? reportedSuffix = "")
-    {
-        Data = new TokenData(
-            barcodeData,
-            key,
-            value,
-            calibrationsRemaining,
-            smallBarcodeSequenceIndex,
-            smallBarcodeSequenceCount,
-            prefix ?? string.Empty,
-            suffix ?? string.Empty,
-            reportedCharacters ?? string.Empty);
-        BitmapStream = bitmapStream;
-        Svg = svg;
-        Remaining = remaining;
-        Size = size;
-        KeyboardMatch = keyboardMatch;
-        CalibrationData = calibrationData;
-        SystemCapabilities = systemCapabilities;
-        Errors = new List<Information>();
-        Warnings = new List<Information>();
-        Information = new List<Information>();
+        : this(
+            new TokenData(
+                barcodeData,
+                key,
+                value,
+                calibrationsRemaining,
+                smallBarcodeSequenceIndex,
+                smallBarcodeSequenceCount,
+                prefix ?? string.Empty,
+                suffix ?? string.Empty,
+                reportedCharacters ?? string.Empty),
+            bitmapStream,
+            svg,
+            remaining,
+            size,
+            keyboardMatch,
+            calibrationData,
+            systemCapabilities,
+            calibrationSessionAbandoned,
+            reportedPrefixSegment,
+            reportedSuffix) {
         ExtendedData = null;
-        LatestError = string.Empty;
-        CalibrationSessionAbandoned = calibrationSessionAbandoned;
-        ReportedPrefixSegment = reportedPrefixSegment;
-        ReportedSuffix = reportedSuffix;
     }
 
     /// <summary>
@@ -169,11 +210,11 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
     /// <param name="prefix">A prefix reported by the barcode scanner, if it exists.</param>
     /// <param name="suffix">A suffix reported by the barcode scanner, if it exists.</param>
     public Token(
-        Token oldToken, 
-        TokenExtendedData? extendedData = null, 
-        string prefix = "", 
+        Token oldToken,
+        TokenExtendedData? extendedData = null,
+        string prefix = "",
         string suffix = "")
-    {
+    : this() {
         Data = oldToken.Data is null
                         ? null
                         : new TokenData(
@@ -201,51 +242,37 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
 
         CalibrationData = oldToken.CalibrationData is null
                                    ? null
-                                   : new Data(
-                                       oldToken.CalibrationData.AimFlagCharacterSequence,
-                                       new Dictionary<char, char>(),
-                                       new Dictionary<string, string>(),
-                                       new Dictionary<string, char>(),
-                                       new Dictionary<string, char>(),
-                                       new Dictionary<string, string>(),
-                                       new List<string>(),
-                                       oldToken.CalibrationData.ReportedCharacters,
-                                       oldToken.CalibrationData.ReportedPrefix,
-                                       oldToken.CalibrationData.ReportedCode,
-                                       oldToken.CalibrationData.ReportedSuffix,
-                                       oldToken.CalibrationData.KeyboardScript,
-                                       oldToken.CalibrationData.ScannerKeyboardPerformance,
-                                       oldToken.CalibrationData.LineFeedCharacter);
+                                   : oldToken.CalibrationData with {
+                                       CharacterMap = new Dictionary<char, char>(),
+                                       DeadKeysMap = new Dictionary<string, string>(),
+                                       DeadKeyCharacterMap = new Dictionary<string, char>(),
+                                       LigatureMap = new Dictionary<string, char>(),
+                                       ScannerDeadKeysMap = new Dictionary<string, string>(),
+                                       ScannerUnassignedKeys = new List<string>()
+                                   };
 
-        if (CalibrationData is not null)
-        {
-            foreach (var (key, value) in oldToken.CalibrationData?.CharacterMap ?? new Dictionary<char, char>())
-            {
+        if (CalibrationData is not null) {
+            foreach (var (key, value) in oldToken.CalibrationData?.CharacterMap ?? new Dictionary<char, char>()) {
                 CalibrationData.CharacterMap?.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.CalibrationData?.DeadKeysMap ?? new Dictionary<string, string>())
-            {
+            foreach (var (key, value) in oldToken.CalibrationData?.DeadKeysMap ?? new Dictionary<string, string>()) {
                 CalibrationData.DeadKeysMap?.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.CalibrationData?.DeadKeyCharacterMap ?? new Dictionary<string, char>())
-            {
+            foreach (var (key, value) in oldToken.CalibrationData?.DeadKeyCharacterMap ?? new Dictionary<string, char>()) {
                 CalibrationData.DeadKeyCharacterMap?.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.CalibrationData?.LigatureMap ?? new Dictionary<string, char>())
-            {
+            foreach (var (key, value) in oldToken.CalibrationData?.LigatureMap ?? new Dictionary<string, char>()) {
                 CalibrationData.LigatureMap?.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.CalibrationData?.ScannerDeadKeysMap ?? new Dictionary<string, string>())
-            {
+            foreach (var (key, value) in oldToken.CalibrationData?.ScannerDeadKeysMap ?? new Dictionary<string, string>()) {
                 CalibrationData.ScannerDeadKeysMap?.Add(key, value);
             }
 
-            foreach (var value in oldToken.CalibrationData?.ScannerUnassignedKeys  ?? new List<string>())
-            {
+            foreach (var value in oldToken.CalibrationData?.ScannerUnassignedKeys ?? new List<string>()) {
                 CalibrationData.ScannerUnassignedKeys?.Add(value);
             }
         }
@@ -284,7 +311,7 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
                                           oldToken.SystemCapabilities.KeyboardScriptDoesNotSupportCase,
                                           oldToken.SystemCapabilities.CapsLockIndicator,
                                           oldToken.SystemCapabilities.ScannerKeyboardPerformance,
-                                          oldToken.SystemCapabilities.FormatnnSupportAssessed,
+                                          oldToken.SystemCapabilities.FormatSupportAssessed,
                                           oldToken.SystemCapabilities.AimIdentifier,
                                           oldToken.SystemCapabilities.AimIdentifierUncertain,
                                           oldToken.SystemCapabilities.EndOfLineSequence,
@@ -304,10 +331,7 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
         if (SystemCapabilities is not null && oldToken.SystemCapabilities is not null)
             SystemCapabilities.CapsLock = oldToken.SystemCapabilities.CapsLock;
 
-        Errors = new List<Information>();
-        Warnings = new List<Information>();
-        Information = new List<Information>();
-        ExtendedData = oldToken.ExtendedData is null && 
+        ExtendedData = oldToken.ExtendedData is null &&
                             extendedData is null
                                 ? null
                                 : extendedData ?? new TokenExtendedData(
@@ -338,182 +362,90 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
                                       oldToken.ExtendedData?.NonInvariantUnrecognisedCharacters ?? new List<string>(),
                                       oldToken.ExtendedData?.InvariantGs1UnrecognisedCharacters ?? new List<string>());
 
-        if (extendedData is null && oldToken.ExtendedData is not null && ExtendedData is not null)
-        {
-            foreach (var (key, value) in oldToken.ExtendedData.DeadKeysMap)
-            {
+        if (extendedData is null && oldToken.ExtendedData is not null && ExtendedData is not null) {
+            foreach (var (key, value) in oldToken.ExtendedData.DeadKeysMap) {
                 ExtendedData.DeadKeysMap.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.ExtendedData.DeadKeyCharacterMap)
-            {
+            foreach (var (key, value) in oldToken.ExtendedData.DeadKeyCharacterMap) {
                 ExtendedData.DeadKeyCharacterMap.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.ExtendedData.DeadKeyFixUp)
-            {
+            foreach (var (key, value) in oldToken.ExtendedData.DeadKeyFixUp) {
                 ExtendedData.DeadKeyFixUp.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.ExtendedData.ScannerDeadKeysMap)
-            {
+            foreach (var (key, value) in oldToken.ExtendedData.ScannerDeadKeysMap) {
                 ExtendedData.ScannerDeadKeysMap.Add(key, value);
             }
 
-            foreach (var value in oldToken.ExtendedData.ScannerUnassignedKeys)
-            {
+            foreach (var value in oldToken.ExtendedData.ScannerUnassignedKeys) {
                 ExtendedData.ScannerUnassignedKeys.Add(value);
             }
 
-            foreach (var (key, value) in oldToken.ExtendedData.CharacterMap)
-            {
+            foreach (var (key, value) in oldToken.ExtendedData.CharacterMap) {
                 ExtendedData.CharacterMap.Add(key, value);
             }
 
-            foreach (var (key, value) in oldToken.ExtendedData.LigatureMap)
-            {
+            foreach (var (key, value) in oldToken.ExtendedData.LigatureMap) {
                 ExtendedData.LigatureMap.Add(key, value);
             }
 
-            foreach (var value in oldToken.ExtendedData.UnrecognisedKeys)
-            {
+            foreach (var value in oldToken.ExtendedData.UnrecognisedKeys) {
                 ExtendedData.UnrecognisedKeys.Add(value);
             }
         }
 
         ReportedPrefixSegment = oldToken.ReportedPrefixSegment;
         ReportedSuffix = oldToken.ReportedSuffix;
-        LatestError = string.Empty;
 
-        foreach (var error in oldToken.Errors)
-        {
-            AddInformation(new Information(error.Level, error.InformationType, error.Description));
+        foreach (var error in oldToken.Errors) {
+            AddInformation(new Information(error.Level, error.InformationType) { Description = error.Description });
         }
 
-        foreach (var warning in oldToken.Warnings)
-        {
-            AddInformation(new Information(warning.Level, warning.InformationType, warning.Description));
+        foreach (var warning in oldToken.Warnings) {
+            AddInformation(new Information(warning.Level, warning.InformationType) { Description = warning.Description });
         }
 
-        foreach (var info in oldToken.Information)
-        {
-            AddInformation(new Information(info.Level, info.InformationType, info.Description));
+        foreach (var info in oldToken.Information) {
+            AddInformation(new Information(info.Level, info.InformationType) { Description = info.Description });
         }
 
         CalibrationSessionAbandoned = oldToken.CalibrationSessionAbandoned;
     }
-
-    /// <summary>
-    ///   Gets a count of the number of barcodes that remain to be calibrated during a calibration session.
-    /// </summary>
-    [JsonProperty("remaining", Order = 0)]
-    public int Remaining { get; private set; }
-
-    /// <summary>
-    ///   Gets the maximum characters allowed in a barcode image.
-    /// </summary>
-    [JsonProperty("size", Order = 1)]
-    public Size Size { get; private set; }
-
-    /// <summary>
-    ///   Gets a value indicating whether the scanner emulates a keyboard that corresponds with the current computer
-    ///   keyboard layout.
-    /// </summary>
-    /// <remarks>
-    ///   When true, this property cannot be assumed to indicate that the scanner and computer keyboard layouts are
-    ///   identical, but simply that the keys representing ASCII characters are the same in both layouts. Another
-    ///   possibility is that the scanner is emulating a numeric keyboard.
-    /// </remarks>
-    [JsonProperty("keyboardMatch", Order = 2)]
-    public bool? KeyboardMatch { get; internal set; }
-
-    /// <summary>
-    ///   Gets the stream containing the bitmap image of the current calibration barcode.
-    /// </summary>
-    [JsonIgnore]
-    public Stream? BitmapStream { get; }
-
-    /// <summary>
-    ///   Gets the SVG content of the image of the current calibration barcode.
-    /// </summary>
-    [JsonIgnore]
-    public string? Svg { get; }
-
-    /// <summary>
-    ///   Gets the system capabilities and advice items.
-    /// </summary>
-    [JsonProperty("systemCapabilities", Order = 3)]
-    public SystemCapabilities? SystemCapabilities { get; private set; }
+#pragma warning restore SA1642 // Constructor summary documentation should begin with standard text
 
     /// <summary>
     ///   Gets the collection or calibration errors.
     /// </summary>
     [JsonProperty("errors", Order = 4)]
-    public IEnumerable<Information> Errors { get; private set; }
+    public IEnumerable<Information> Errors { get; init; } = new List<Information>();
 
     /// <summary>
     ///   Gets the collection of calibration warnings.
     /// </summary>
     [JsonProperty("warnings", Order = 5)]
-    public IEnumerable<Information> Warnings { get; private set; }
+    public IEnumerable<Information> Warnings { get; init; } = new List<Information>();
 
     /// <summary>
     ///   Gets the collection of calibration information.
     /// </summary>
     [JsonProperty("information", Order = 6)]
-    public IEnumerable<Information> Information { get; private set; }
-
-    /// <summary>
-    ///   Gets data for tokens that is primarily intended for internal calibration use only.
-    /// </summary>c
-    [JsonProperty("data", Order = 7)]
-    public TokenData? Data { get; private set; }
-
-    /// <summary>
-    ///   Gets the Calibration configuration.
-    /// </summary>
-    [JsonProperty("calibrationData", Order = 8)]
-    public Data? CalibrationData { get; private set; }
+    public IEnumerable<Information> Information { get; init; } = new List<Information>();
 
     /// <summary>
     ///   Gets extended token data that must be used in stateless interactions.
     /// </summary>
     [JsonProperty("extendedData", Order = 9)]
-    public TokenExtendedData? ExtendedData { get; private set; }
-
-    /// <summary>
-    ///   Gets a value indicating whether the calibration session has been abandoned.
-    /// </summary>
-    [JsonProperty("calibrationSessionAbandoned", Order = 10)]
-    public bool? CalibrationSessionAbandoned { get; private set; }
-
-    /// <summary>
-    ///   Gets a list of reported prefix segments.
-    /// </summary>
-    [JsonProperty("reportedPrefixSegment", Order = 11)]
-    public List<string>? ReportedPrefixSegment { get; private set; }
-
-    /// <summary>
-    ///   Gets a reported suffix.
-    /// </summary>
-    [JsonProperty("reportedSuffix", Order = 12)]
-    public string? ReportedSuffix { get; private set; }
-
-    /// <summary>
-    ///   Gets the latest serialization or deserialization error.
-    /// </summary>
-    [JsonIgnore]
-    // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    // ReSharper disable once MemberCanBePrivate.Global
-    public string LatestError { get; private set; }
+    public TokenExtendedData? ExtendedData { get; init; }
 
     /// <summary>
     ///   Initializes the token data from a JSON string representing the serialized data.
     /// </summary>
     /// <param name="json">A JSON string representing the serialized data.</param>
+    /// <returns>The deserialised token.</returns>
     // ReSharper disable once UnusedMember.Global
-    public static Token FromJson(string json)
-    {
+    public static Token FromJson(string json) {
         if (string.IsNullOrWhiteSpace(json)) return default;
 
         var calibrationToken = JsonConvert.DeserializeObject<Token>(json);
@@ -539,6 +471,28 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
             calibrationToken.ReportedPrefixSegment,
             calibrationToken.ReportedSuffix);
     }
+
+    /// <summary>
+    ///   Returns a JSON representation of the calibration token.
+    /// </summary>
+    /// <returns>A JSON representation of the calibration token.</returns>
+    public readonly override string ToString() => ToJson();
+
+    /// <summary>
+    ///   Returns a JSON representation of the calibration token.
+    /// </summary>
+    /// <param name="formatting">Specifies the formatting to be applied to the JSON.</param>
+    /// <returns>A JSON representation of the calibration token.</returns>
+    // ReSharper disable once MemberCanBePrivate.Global
+    public readonly string ToJson(Formatting formatting = Formatting.None) =>
+        JsonConvert.SerializeObject(
+            this,
+            formatting,
+            new JsonSerializerSettings {
+                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
+                DefaultValueHandling = DefaultValueHandling.Ignore,
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver { NamingStrategy = new CamelCaseNamingStrategy() },
+            });
 
     /// <summary>
     ///   Returns an extended clone of the original token.
@@ -607,9 +561,9 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
     /// <param name="invariantGs1UnrecognisedCharacters">
     ///   A list of unrecognised invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </param>
-
+    /// <returns>The token with the extended data.</returns>
     // ReSharper disable once StyleCop.SA1650
-    public static Token SetExtendedData(
+    internal static Token SetExtendedData(
         Token token,
         IDictionary<string, string>? deadKeysMap,
         IDictionary<string, char>? deadKeyCharacterMap,
@@ -636,8 +590,7 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
         IDictionary<string, IList<string>> nonInvariantAmbiguities,
         IDictionary<string, IList<string>> invariantGs1Ambiguities,
         IList<string> nonInvariantUnrecognisedCharacters,
-        IList<string> invariantGs1UnrecognisedCharacters)
-    {
+        IList<string> invariantGs1UnrecognisedCharacters) {
         var extendedData = new TokenExtendedData(
             new Dictionary<string, string>(),
             new Dictionary<string, char>(),
@@ -666,69 +619,53 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
             nonInvariantUnrecognisedCharacters,
             invariantGs1UnrecognisedCharacters);
 
-        if (deadKeysMap is not null)
-        {
-            foreach (var (key, value) in deadKeysMap)
-            {
+        if (deadKeysMap is not null) {
+            foreach (var (key, value) in deadKeysMap) {
                 extendedData.DeadKeysMap.Add(key, value);
             }
         }
 
-        if (deadKeyCharacterMap is not null)
-        {
-            foreach (var (key, value) in deadKeyCharacterMap)
-            {
+        if (deadKeyCharacterMap is not null) {
+            foreach (var (key, value) in deadKeyCharacterMap) {
                 extendedData.DeadKeyCharacterMap.Add(key, value);
             }
         }
 
-        if (deadKeyFixUp is not null)
-        {
-            foreach (var (key, value) in deadKeyFixUp)
-            {
+        if (deadKeyFixUp is not null) {
+            foreach (var (key, value) in deadKeyFixUp) {
                 extendedData.DeadKeyFixUp.Add(key, value);
             }
         }
 
-        if (scannerDeadKeysMap is not null)
-        {
-            foreach (var (key, value) in scannerDeadKeysMap)
-            {
+        if (scannerDeadKeysMap is not null) {
+            foreach (var (key, value) in scannerDeadKeysMap) {
                 extendedData.ScannerDeadKeysMap.Add(key, value);
             }
         }
 
-        if (scannerUnassignedKeys is not null)
-        {
-            foreach (var value in scannerUnassignedKeys)
-            {
+        if (scannerUnassignedKeys is not null) {
+            foreach (var value in scannerUnassignedKeys) {
                 extendedData.ScannerUnassignedKeys.Add(value);
             }
         }
 
-        if (characterMap is not null)
-        {
-            foreach (var (key, value) in characterMap)
-            {
+        if (characterMap is not null) {
+            foreach (var (key, value) in characterMap) {
                 extendedData.CharacterMap.Add(key, value);
             }
         }
 
-        if (ligatureMap is not null)
-        {
-            foreach (var (key, value) in ligatureMap)
-            {
+        if (ligatureMap is not null) {
+            foreach (var (key, value) in ligatureMap) {
                 extendedData.LigatureMap.Add(key, value);
             }
         }
 
-        if (unrecognisedKeys is null)
-        {
+        if (unrecognisedKeys is null) {
             return new Token(token, extendedData);
         }
 
-        foreach (var value in unrecognisedKeys)
-        {
+        foreach (var value in unrecognisedKeys) {
             extendedData.UnrecognisedKeys.Add(value);
         }
 
@@ -736,93 +673,11 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
     }
 
     /// <summary>
-    ///   Override for the equality operator.
-    /// </summary>
-    /// <param name="token1">The first calibration token.</param>
-    /// <param name="token2">The second calibration token.</param>
-    /// <returns>True, if the calibration tokens are equal; otherwise false.</returns>
-    public static bool operator ==(Token token1, Token token2) =>
-        token1.Equals(token2);
-
-    /// <summary>
-    ///   Override for the inequality operator.
-    /// </summary>
-    /// <param name="token1">The first calibration token.</param>
-    /// <param name="token2">The second calibration token.</param>
-    /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
-    public static bool operator !=(Token token1, Token token2) =>
-        !token1.Equals(token2);
-
-    /// <summary>
-    ///   Tests the equality of this token with another, based on the key values, only.
-    /// </summary>
-    /// <param name="other">The token to be tested.</param>
-    /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
-    public readonly bool Equals(Token other) =>
-        Remaining.Equals(other.Remaining) &&
-        Size.Equals(other.Size) &&
-        Equals(BitmapStream, other.BitmapStream) &&
-        Equals(Svg, other.Svg) &&
-        Equals(SystemCapabilities, other.SystemCapabilities) &&
-        Equals(Data, other.Data) &&
-        Equals(CalibrationData, other.CalibrationData) &&
-        Equals(ExtendedData, other.ExtendedData);
-
-    /// <summary>
-    ///   Tests the equality of this token with another.
-    /// </summary>
-    /// <param name="obj">The token to be tested.</param>
-    /// <returns>True, if the calibration tokens are not equal; otherwise false.</returns>
-    public readonly override bool Equals(object? obj) =>
-        obj is Token token && Equals(token);
-
-    /// <summary>
-    ///   Returns a hash value for the current token.
-    /// </summary>
-    /// <returns>The hash value.</returns>
-    [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
-    public readonly override int GetHashCode() =>
-        Fnv.CreateHashFnv1A(
-            Remaining,
-            Size,
-            BitmapStream,
-            Svg,
-            SystemCapabilities,
-            Data,
-            CalibrationData,
-            ExtendedData);
-
-    /// <summary>
-    ///   Returns a JSON representation of the calibration token.
-    /// </summary>
-    /// <returns>A JSON representation of the calibration token.</returns>
-    public readonly override string ToString() => ToJson();
-
-    /// <summary>
-    ///   Returns a JSON representation of the calibration token.
-    /// </summary>
-    /// <param name="formatting">Specifies the formatting to be applied to the JSON.</param>
-    /// <returns>A JSON representation of the calibration token.</returns>
-
-    // ReSharper disable once MemberCanBePrivate.Global
-    public readonly string ToJson(Formatting formatting = Formatting.None) =>
-        JsonConvert.SerializeObject(
-            this,
-            formatting,
-            new JsonSerializerSettings
-            {
-                StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
-                DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
-            });
-
-    /// <summary>
     ///   Marks the abandonment of the current calibration session.
     /// </summary>
-    internal Token AbandonCalibrationSession()
-    {
-        CalibrationSessionAbandoned = true;
-        return this;
+    /// <returns>The token.</returns>
+    internal Token AbandonCalibrationSession() {
+        return this with { CalibrationSessionAbandoned = true };
     }
 
     /// <summary>
@@ -835,35 +690,27 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
         InformationLevel level,
         InformationType type,
         string? description) =>
-        AddInformation(new Information(level, type, description));
+        AddInformation(new Information(level, type) { Description = description });
 
     /// <summary>
     ///   Adds an information record to the correct collection.
     /// </summary>
     /// <param name="information">The calibration information.</param>
-    internal void AddInformation(Information information)
-    {
-        switch (information.Level)
-        {
+    internal void AddInformation(Information information) {
+        switch (information.Level) {
             case InformationLevel.Information:
-                Information ??= new List<Information>();
-
                 ((IList)Information).Add(information);
                 break;
             case InformationLevel.Warning:
-                Warnings ??= new List<Information>();
-
                 ((IList)Warnings).Add(information);
                 break;
             case InformationLevel.Error:
-                Errors ??= new List<Information>();
-
                 ((IList)Errors).Add(information);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(
-                    nameof(information), 
-                    information, 
+                    nameof(information),
+                    information,
                     Resources.CalibrationInvalidInformationLevel);
         }
     }
@@ -871,55 +718,23 @@ public struct Token : IEquatable<Token>, IEnvironment<Token>
     /// <summary>
     ///   Removes an information record from the correct collection.
     /// </summary>
-    /// <param name="information"></param>
-    internal void RemoveInformation(Information information)
-    {
-        switch (information.Level)
-        {
+    /// <param name="information">The information to be removed.</param>
+    internal void RemoveInformation(Information information) {
+        switch (information.Level) {
             case InformationLevel.Information:
-                Information ??= new List<Information>();
-
                 ((IList)Information).Remove(information);
                 break;
             case InformationLevel.Warning:
-                Warnings ??= new List<Information>();
-
                 ((IList)Warnings).Remove(information);
                 break;
             case InformationLevel.Error:
-                Errors ??= new List<Information>();
-
                 ((IList)Errors).Remove(information);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(
-                    nameof(information), 
-                    information.Level, 
+                    nameof(information),
+                    information.Level,
                     Resources.CalibrationInvalidInformationLevel);
         }
-    }
-
-    /// <summary>
-    ///   Handles errors in serialization and deserialization
-    /// </summary>
-    /// <param name="context">The streaming context.</param>
-    /// <param name="errorContext">The error context</param>
-    [OnError]
-    [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
-    // ReSharper disable once UnusedMember.Global
-    // ReSharper disable once UnusedParameter.Global
-#pragma warning disable CA1801 // Review unused parameters
-    internal void OnError(StreamingContext context, ErrorContext errorContext)
-#pragma warning restore CA1801 // Review unused parameters
-    {
-        var settings = new JsonSerializerSettings
-                       {
-                           StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
-                           DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
-                       };
-
-        LatestError = JsonConvert.SerializeObject(errorContext, settings);
-        errorContext.Handled = true;
     }
 }

@@ -1,8 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CalibrationTokenData.cs" company="Solidsoft Reply Ltd.">
-//   (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
-// </copyright>
-// <license>
+// <copyright file="TokenData.cs" company="Solidsoft Reply Ltd">
+// Copyright (c) 2018-2024 Solidsoft Reply Ltd. All rights reserved.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -14,9 +12,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-// </license>
+// </copyright>
 // <summary>
-// A set of data passed as part of a calibration token. This data is always provided with the token but is 
+// A set of data passed as part of a calibration token. This data is always provided with the token but is
 // primarily intended for internal use to track the enumeration of calibration barcodes.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
@@ -26,7 +24,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Runtime.Serialization;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -35,13 +32,11 @@ using Newtonsoft.Json.Serialization;
 ///   A set of data passed as part of a calibration token. This data is always provided with the token but is
 ///   primarily intended for internal use to track the enumeration of calibration barcodes.
 /// </summary>
-public sealed class TokenData : IEquatable<TokenData>
-{
+public sealed record TokenData {
     /// <summary>
     ///   Initializes a new instance of the <see cref="TokenData" /> class.
     /// </summary>
-    internal TokenData()
-    {
+    internal TokenData() {
     }
 
     /// <summary>
@@ -83,8 +78,7 @@ public sealed class TokenData : IEquatable<TokenData>
         int smallBarcodeSequenceCount = -1,
         string prefix = "",
         string suffix = "",
-        string reportedCharacters = "")
-    {
+        string reportedCharacters = "") {
         BarcodeData = barcodeData;
         Key = key;
         Value = value;
@@ -100,25 +94,25 @@ public sealed class TokenData : IEquatable<TokenData>
     ///   Gets a new key and value for an additional barcode.
     /// </summary>
     [JsonProperty("additionalBarcode", Order = 0)]
-    public KeyValuePair<string, char> AdditionalBarcode { get; private set; }
+    public KeyValuePair<string, char> AdditionalBarcode { get; init; }
 
     /// <summary>
     ///   Gets the unsegmented barcode data for the current calibration data.
     /// </summary>
     [JsonProperty("barcodeData", Order = 1)]
-    public string? BarcodeData { get; private set; }
+    public string? BarcodeData { get; init; }
 
     /// <summary>
     ///   Gets a count of the known number of calibrations to be performed this session.
     /// </summary>
     [JsonProperty("calibrationRemaining", Order = 2)]
-    public int CalibrationsRemaining { get; private set; }
+    public int CalibrationsRemaining { get; init; }
 
     /// <summary>
     ///   Gets the dead key currently being calibrated. Null indicates baseline calibration.
     /// </summary>
     [JsonProperty("key", Order = 3)]
-    public string? Key { get; private set; }
+    public string? Key { get; init; }
 
     /// <summary>
     ///   Gets the reported characters for the current calibration barcode. If the calibration barcode has been
@@ -126,13 +120,13 @@ public sealed class TokenData : IEquatable<TokenData>
     ///   small barcodes.
     /// </summary>
     [JsonProperty("reportedCharacters", Order = 4)]
-    public string? ReportedCharacters { get; private set; }
+    public string? ReportedCharacters { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether it is necessary to reset the 'bar codes remaining' count when yielding bar codes.
     /// </summary>
     [JsonProperty("resetBarcodesRemainingCount", Order = 5)]
-    public bool ResetBarcodesRemainingCount { get; private set; }
+    public bool ResetBarcodesRemainingCount { get; init; }
 
     /// <summary>
     ///   Gets the index number of the current small barcode.
@@ -144,7 +138,7 @@ public sealed class TokenData : IEquatable<TokenData>
     ///   property is set to -1.
     /// </remarks>
     [JsonProperty("smallBarcodeSequenceIndex", Order = 6)]
-    public int SmallBarcodeSequenceIndex { get; private set; }
+    public int SmallBarcodeSequenceIndex { get; init; }
 
     /// <summary>
     ///   Gets the number of small barcodes for the current calibration.
@@ -154,43 +148,33 @@ public sealed class TokenData : IEquatable<TokenData>
     ///   to carry the calibration data.
     /// </remarks>
     [JsonProperty("smallBarcodeSequenceCount", Order = 7)]
-    public int SmallBarcodeSequenceCount { get; private set; }
+    public int SmallBarcodeSequenceCount { get; init; }
 
     /// <summary>
     ///   Gets the prefix, if any, transmitted by the barcode scanner.
     /// </summary>
     [JsonProperty("prefix", Order = 8)]
-    public string? Prefix { get; private set; }
+    public string? Prefix { get; init; }
 
     /// <summary>
     ///   Gets the suffix, if any, transmitted by the barcode scanner.
     /// </summary>
     [JsonProperty("suffix", Order = 9)]
-    public string? Suffix { get; private set; }
-    
+    public string? Suffix { get; init; }
+
     /// <summary>
     ///   Gets the expected character for the current dead key being calibrated.
     /// </summary>
     [JsonProperty("value", Order = 10)]
-    public char Value { get; private set; }
+    public char Value { get; init; }
 
     /// <summary>
-    ///   Gets the latest serialization or deserialization error.
+    ///   Returns a token representing a JSON representation of the token.
     /// </summary>
-    [JsonIgnore]
-
-    // ReSharper disable once UnusedAutoPropertyAccessor.Global
-    // ReSharper disable once MemberCanBePrivate.Global
-    public string LatestError { get; private set; } = string.Empty;
-
-    /// <summary>
-    ///   Initializes the token data from a JSON string representing the serialized data.
-    /// </summary>
-    /// <param name="json">A JSON string representing the serialized data.</param>
-
+    /// <param name="json">A JSON string representing the serialized token.</param>
+    /// <returns>The deserialised token.</returns>
     // ReSharper disable once UnusedMember.Global
-    public static TokenData FromJson(string json)
-    {
+    public static TokenData FromJson(string json) {
         if (string.IsNullOrWhiteSpace(json)) return new TokenData();
 
         var calibrationTokenData = JsonConvert.DeserializeObject<TokenData>(json);
@@ -210,86 +194,6 @@ public sealed class TokenData : IEquatable<TokenData>
     }
 
     /// <summary>
-    ///   Override for the equality operator.
-    /// </summary>
-    /// <param name="tokenData1">The first calibration token data.</param>
-    /// <param name="tokenData2">The second calibration token data.</param>
-    /// <returns>True, if the calibration token data are equal; otherwise false.</returns>
-    public static bool operator ==(
-        TokenData? tokenData1,
-        TokenData tokenData2) =>
-        tokenData1?.Equals(tokenData2) ?? false;
-
-    /// <summary>
-    ///   Override for the inequality operator.
-    /// </summary>
-    /// <param name="tokenData1">The first calibration token data.</param>
-    /// <param name="tokenData2">The second calibration token data.</param>
-    /// <returns>True, if the calibration token data are not equal; otherwise false.</returns>
-    public static bool operator !=(
-        TokenData? tokenData1,
-        TokenData tokenData2) =>
-        !tokenData1?.Equals(tokenData2) ?? false;
-
-    /// <summary>
-    ///   Indicates whether the current calibration token data is equal to another calibration token data object.
-    /// </summary>
-    /// <param name="other">A calibration token data object to compare with this current calibration token data object.</param>
-    /// <returns>true if the current calibration token data object is equal to the other parameter; otherwise, false.</returns>
-    public bool Equals(TokenData? other) =>
-        other is not null &&
-        (ReferenceEquals(this, other) || string.Equals(
-             BarcodeData,
-             other.BarcodeData,
-             StringComparison.Ordinal) &&
-         string.Equals(Key, other.Key, StringComparison.Ordinal) && Value == other.Value &&
-         CalibrationsRemaining == other.CalibrationsRemaining &&
-         ResetBarcodesRemainingCount == other.ResetBarcodesRemainingCount &&
-         AdditionalBarcode.Equals(other.AdditionalBarcode) &&
-         SmallBarcodeSequenceIndex == other.SmallBarcodeSequenceIndex &&
-         SmallBarcodeSequenceCount == other.SmallBarcodeSequenceCount &&
-         string.Equals(
-             Prefix,
-             other.Prefix,
-             StringComparison.Ordinal) &&
-         string.Equals(
-             Suffix,
-             other.Suffix,
-             StringComparison.Ordinal) &&
-         string.Equals(
-             ReportedCharacters,
-             other.ReportedCharacters,
-             StringComparison.Ordinal));
-
-    /// <summary>
-    ///   Indicates whether the current calibration token data is equal to another object.
-    /// </summary>
-    /// <param name="obj">An object to compare with this current calibration token data object.</param>
-    /// <returns>true if the current calibration token data object is equal to the other parameter; otherwise, false.</returns>
-    public override bool Equals(object? obj) =>
-        obj is not null &&
-        (ReferenceEquals(this, obj) || obj is TokenData tokenData && Equals(tokenData));
-
-    /// <summary>
-    ///   Returns a hash value for the current token.
-    /// </summary>
-    /// <returns>The hash value.</returns>
-    [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
-    public override int GetHashCode() =>
-        Fnv.CreateHashFnv1A(
-            BarcodeData,
-            Key,
-            Value,
-            CalibrationsRemaining,
-            ResetBarcodesRemainingCount,
-            AdditionalBarcode,
-            SmallBarcodeSequenceIndex,
-            SmallBarcodeSequenceCount,
-            Prefix,
-            Suffix,
-            ReportedCharacters);
-
-    /// <summary>
     ///   Returns a JSON representation of the calibration token data.
     /// </summary>
     /// <returns>A JSON representation of the calibration token data.</returns>
@@ -301,39 +205,15 @@ public sealed class TokenData : IEquatable<TokenData>
     /// </summary>
     /// <param name="formatting">Specifies the formatting to be applied to the JSON.</param>
     /// <returns>A JSON representation of the calibration token data.</returns>
-
     // ReSharper disable once MemberCanBePrivate.Global
     public string ToJson(Formatting formatting = Formatting.None) =>
         JsonConvert.SerializeObject(
             this,
             formatting,
-            new JsonSerializerSettings
-            {
+            new JsonSerializerSettings {
                 StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
                 DefaultValueHandling = DefaultValueHandling.Ignore,
-                ContractResolver = new DataIgnoreEmptyEnumerableResolver()
+                ConstructorHandling = ConstructorHandling.Default,
+                ContractResolver = new DataIgnoreEmptyEnumerableResolver { NamingStrategy = new CamelCaseNamingStrategy() },
             });
-
-    /// <summary>
-    ///   Handles errors in serialization and deserialization
-    /// </summary>
-    /// <param name="context">The streaming context.</param>
-    /// <param name="errorContext">The error context</param>
-    [OnError, SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
-    // ReSharper disable once UnusedMember.Global
-    // ReSharper disable once UnusedParameter.Global
-#pragma warning disable CA1801 // Review unused parameters
-    internal void OnError(StreamingContext context, ErrorContext errorContext)
-#pragma warning restore CA1801 // Review unused parameters
-    {
-        var settings = new JsonSerializerSettings
-                       {
-                           StringEscapeHandling = StringEscapeHandling.EscapeNonAscii,
-                           DefaultValueHandling = DefaultValueHandling.Ignore,
-                           ContractResolver = new DataIgnoreEmptyEnumerableResolver()
-                       };
-
-        LatestError = JsonConvert.SerializeObject(errorContext, settings);
-        errorContext.Handled = true;
-    }
 }

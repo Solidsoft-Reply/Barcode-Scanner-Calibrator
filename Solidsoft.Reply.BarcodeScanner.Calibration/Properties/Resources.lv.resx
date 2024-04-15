@@ -279,6 +279,9 @@
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Ziņotie dati ir nepareizam kalibrācijas svītrkodam.</value>
   </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Tika veikts mēģinājums kalibrēt svītrkodu, taču netika sniegts kalibrācijas marķieris.</value>
+  </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Dažas nemainīgās rakstzīmes nevar noteikt.</value>
   </data>
