@@ -9,7 +9,6 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.Tests;
 
-using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -214,7 +213,8 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     private const string SorbianStandardLegacyDeadKey3 = "\0^!\0^Ä\0^§\0^$\0^%\0^/\0^ä\0^)\0^=\0^(\0^`\0^,\0^ß\0^.\0^-\0^0\0^1\0^2\0^3\0^4\0^5\0^6\0^7\0^8\0^9\0^Ö\0^ö\0^;\0^´\0^:\0^_\0^\"\0^A\0^B\0Č\0Ď\0Ě\0^F\0^G\0^H\0^I\0^J\0^K\0Ľ\0^M\0Ň\0ô\0^P\0^Q\0Ř\0Š\0Ť\0^U\0^V\0^W\0^X\0Ž\0^Y\0^ü\0^ł\0^+\0^&\0^?\0^^\0^a\0^b\0č\0ď\0ě\0^f\0^g\0^h\0^i\0^j\0^k\0ľ\0^m\0ň\0Ô\0^p\0^q\0ř\0š\0ť\0^u\0^v\0^w\0^x\0ž\0^y\0^Ü\0^Ł\0^*\0^°\x000D";
     private const string SorbianStandardLegacyDeadKey4 = "\0°!\0°Ä\0°§\0°$\0°%\0°/\0°ä\0°)\0°=\0°(\0°`\0°,\0°ß\0°.\0°-\0°0\0°1\0°2\0°3\0°4\0°5\0°6\0°7\0°8\0°9\0°Ö\0°ö\0°;\0°´\0°:\0°_\0°\"\0°A\0°B\0°C\0°D\0Ė\0°F\0°G\0°H\0°I\0°J\0°K\0°L\0°M\0°N\0°O\0°P\0°Q\0°R\0°S\0°T\0Ů\0°V\0°W\0°X\0Ż\0°Y\0°ü\0°ł\0°+\0°&\0°?\0°^\0°a\0°b\0°c\0°d\0ė\0°f\0°g\0°h\0°i\0°j\0°k\0°l\0°m\0°n\0°o\0°p\0°q\0°r\0ſ\0°t\0ů\0°v\0°w\0°x\0ż\0°y\0°Ü\0°Ł\0°*\0°°\x000D";
     private const string UnitedKingdomBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    \x001D    \x001C    \0    \0    \x000D";
-    private const string UnitedKingdomExtendedBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \0    \0    \0    \0    \x000D";
+    private const string UnitedKingdomVmBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ ` { ~ } ¬    0029    0028    0030    0039    \x000D";
+    private const string UnitedKingdomExtendedBaseline = "  ! @ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z _ a b c d e f g h i j k l m n o p q r s t u v w x y z   £ $ \" [ # ] ^ \0`{ ~ } ¬    \u001D    \0    \0    \0    \x000D";
     private const string UnitedKingdomExtendedDeadKey1 = "\0`!\0`@\0`£\0`$\0`%\0`&\0`'\0`(\0`)\0`*\0`+\0`,\0`-\0`.\0`/\0`0\0`1\0`2\0`3\0`4\0`5\0`6\0`7\0`8\0`9\0`:\0`;\0`<\0`=\0`>\0`?\0`\"\0À\0`B\0`C\0`D\0È\0`F\0`G\0`H\0Ì\0`J\0`K\0`L\0`M\0`N\0Ò\0`P\0`Q\0`R\0`S\0`T\0Ù\0`V\0Ẁ\0`X\0Ỳ\0`Z\0`[\0`#\0`]\0`^\0`_\0``\0à\0`b\0`c\0`d\0è\0`f\0`g\0`h\0ì\0`j\0`k\0`l\0`m\0`n\0ò\0`p\0`q\0`r\0`s\0`t\0ù\0`v\0ẁ\0`x\0ỳ\0`z\0`{\0`~\0`}\0`¬\x000D";
 
     private const string SwissFrench2424BaselineA = "  + ä % / à ) = ( \0`, ' . - 0 1 2";
@@ -841,6 +841,14 @@ public class KeyboardCalibratorTestsFromUnitedStates {
     [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
     public void ToUnitedKingdom() {
         PerformCalibrationTest("United Kingdom");
+    }
+
+    /// <summary>
+    /// This test reproduces an issue encountered when running the Calibrator code in a HyperV VM on Windows.  The issue seems to be
+    /// </summary>
+    [Fact]
+    public void ToUnitedKingdomVm() {
+        PerformCalibrationTest("United Kingdom VM");
     }
 
     /// <summary>
@@ -1686,6 +1694,13 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                            }
                                        },
                                        {
+                                           "United Kingdom VM",
+                                           new Dictionary<string[], IList<string>>
+                                           {
+                                               { [UnitedKingdomVmBaseline], new List<string>() }
+                                           }
+                                       },
+                                       {
                                            "United Kingdom Extended",
                                            new Dictionary<string[], IList<string>>
                                            {
@@ -1811,6 +1826,7 @@ public class KeyboardCalibratorTestsFromUnitedStates {
                                                { "Sorbian Extended", Calibrations.SorbianExtendedCalibration },
                                                { "Sorbian Standard (Legacy)", Calibrations.SorbianStandardLegacyCalibration },
                                                { "United Kingdom", Calibrations.UnitedKingdomCalibration },
+                                               { "United Kingdom VM", Calibrations.UnitedKingdomVmCalibration },
                                                { "United Kingdom Extended", Calibrations.UnitedKingdomExtendedCalibration },
                                                { "Swiss French 24x24", Calibrations.SwissFrenchCalibration }
                                            };

@@ -1062,11 +1062,11 @@ public class Calibrator {
                 _tokenExtendedDataLineFeedCharacter);
         }
 
-        if (_tokenRemaining != 0 && !@out.Errors.Any()) {
-            @out = InitializeTokenData();
-            _lastToken = token;
-            return @out;
-        }
+        //////if (_tokenRemaining != 0 && !@out.Errors.Any()) {
+        //////    @out = InitializeTokenData();
+        //////    _lastToken = token;
+        //////    return @out;
+        //////}
 
         // Process the calibration results to determine the system capabilities.
         _tokenSystemCapabilities = new SystemCapabilities(
@@ -1100,6 +1100,12 @@ public class Calibrator {
         }
 
         _lastToken = token;
+
+        if (_tokenRemaining != 0 && !@out.Errors.Any()) {
+            @out = InitializeTokenData();
+            _lastToken = token;
+            return @out;
+        }
 
         var failedCalibrationErrors = new List<InformationType>
         {
