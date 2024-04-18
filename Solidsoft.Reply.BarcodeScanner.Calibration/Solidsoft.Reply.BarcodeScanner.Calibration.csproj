@@ -17,17 +17,20 @@
 	<PackageTags>barcode;scanner;keyboard;wedge;usb;hid</PackageTags>
 	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 	<PackageReleaseNotes>
-		This release introduces breaking changes to the previous versions.
+		The following changes were made in this release.
 
-		1) The prefixes 'Calibration' and 'DataMatrix' have been dropped to shorten and simplify various type names.
-		2) Some method and property names have been simplified.
-		3) Some types have been scoped as internal rather than public.
-		4) Language support has been added for all (24) EU official languages, and also for Norwegian and Icelandic.
-		5) Additional code clean-up has been performed through application of StyleCop rules.
-		6) A number of legacy (pre-C#9) record-type classes have been re-written as records.
-		7) Calibration data has been optimised for JSON by removing redundant ASCII 0s.
-		8) A new error type has been introduced for situations where no valid calibration is provided when calibrating.
-		9) Public API analysis support has been provided to help track breaking changes in future.
+		1) Amendment to provide system capabilities output in the event that dead key barcodes are skipped.  When using the
+		Calibrator to analyse barcode-computer interaction, only (i.e., if we are not interested in using the calibration data
+		to parse actual unique identifiers), it is useful to allow end users to skip scanning the dead key barcodes.  We collect
+		enough analytics on the Baseline barcode scan to indicate major issues, and we don't need to know about every potential
+		ambiguity, although there is a risk that the Calibrator will only identify a keybard mismatch, but not report incompatibility.
+
+		2) Small change to improve handling of ligatures. The code assumes that ligatures will never conflict with other
+		data - e.g., a ligature for 'Æ' would never conflict with an 'a' followed by an 'e'.  This is generally true because of
+		the use of UNICODE combining characters, but it is not guaranteed. The library currently cannot handle such situations
+		correctly, and there is no very obvious way to fix this (ther may be heuristic approach, though).  However, investigation of 
+		the issue did reveal another bug when this situation is encountered which we have fixed.
+
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.
@@ -36,7 +39,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.0.0</Version>
+	<Version>2.1.0</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>

@@ -1062,12 +1062,6 @@ public class Calibrator {
                 _tokenExtendedDataLineFeedCharacter);
         }
 
-        //////if (_tokenRemaining != 0 && !@out.Errors.Any()) {
-        //////    @out = InitializeTokenData();
-        //////    _lastToken = token;
-        //////    return @out;
-        //////}
-
         // Process the calibration results to determine the system capabilities.
         _tokenSystemCapabilities = new SystemCapabilities(
             @out,
@@ -1465,9 +1459,9 @@ public class Calibrator {
             var reportedCharString = reportedCharStringBuilder.ToString();
 
             // If an entry was found in the ligature map, then append the mapped value and continue
-            if (reportedCharString.Length > 2) {
+            if (_tokenExtendedDataLigatureMap.TryGetValue(reportedCharString[..^1], out var c)) {
                 idx = lookAheadIndex - 1;
-                builder.Append(_tokenExtendedDataLigatureMap[reportedCharString[..^1]]);
+                builder.Append(c);
                 continue;
             }
 #pragma warning restore S127 // "for" loop stop conditions should be invariant
