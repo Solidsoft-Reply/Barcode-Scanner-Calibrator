@@ -247,7 +247,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test that bar codes that use Format 05 or Format 06 syntax cannot be recognised.
     /// This includes German PPN pack identifiers.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void WarningFormat0506NotRecognised() {
         var token = PerformCalibrationTest("Format0506NotRecognisedA");
@@ -267,7 +266,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test that bar codes that use Format 05 or Format 06 syntax cannot all be reliably recognised.
     /// This includes German PPN pack identifiers.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void WarningFormat0506NotReliablyRecognised() {
         var token = PerformCalibrationTest("Format0506NotReliablyRecognised1");
@@ -408,7 +406,6 @@ public class KeyboardCalibratorTestsInformation {
     /// <summary>
     /// Test that some key combinations are not recognised. Unique pack identifiers cannot be read reliably. {0}
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void ErrorSomeDeadKeyCombinationsUnrecognised() {
         var token = PerformCalibrationTest("SomeDeadKeyCombinationsUnrecognised");
@@ -419,7 +416,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test that some characters are not recognised by the scanner in its current
     /// configuration. Unique pack identifiers cannot be read reliably. {0}
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void ErrorSomeCharactersUnrecognised() {
         var token = PerformCalibrationTest("SomeCharactersUnrecognised");
@@ -455,7 +451,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test that the reported data is unrecognised. The wrong barcode may have been
     /// scanned.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void ErrorUnrecognisedData() {
         var token = PerformCalibrationTest("UnrecognisedData");
@@ -641,7 +636,6 @@ public class KeyboardCalibratorTestsInformation {
     /// <summary>
     /// Test that the AIM Identifier cannot be recognised.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void WarningAimNotRecognised() {
         var token = PerformCalibrationTest("AimNotRecognised");
@@ -664,7 +658,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test that some combinations of characters are not recognised. However, these character
     /// combinations are not used in unique pack identifiers.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void WarningSomeAdditionalCharacterCombinationsUnrecognised() {
         var token = PerformCalibrationTest("SomeNonInvariantCharacterCombinationsUnrecognised");
@@ -674,7 +667,6 @@ public class KeyboardCalibratorTestsInformation {
     /// <summary>
     /// Test that some characters are not recognised. However, these characters are not used in unique pack identifiers.
     /// </summary>
-    [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
     [Fact]
     public void WarningSomeAdditionalCharactersUnrecognised() {
         var token = PerformCalibrationTest("SomeAdditionalCharactersUnrecognisedA");

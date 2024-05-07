@@ -9,12 +9,9 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.Tests.Data;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 /// Data for GS1 Parser US to European calibration tests.
 /// </summary>
-[SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "Reviewed.")]
 public static class UsToEuropeanCalibrations {
     public const string UnitedKingdomCalibration =
         "{\"characterMap\":{\"@\":\"\\\"\",\"\\u00a3\":\"#\",\"\\\"\":\"@\",\"#\":\"\\\\\",\"~\":\"|\",\"\\u00ac\":\"~\",\"\\u0000\":\"\\u001f\"},\"reportedCharacters\":\"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\\u00a3$\\\"[#]^`{~}\\u00ac\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\",\"keyboardScript\":\"Latin\"}";

@@ -20,10 +20,8 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 
 /// <summary>
@@ -81,12 +79,12 @@ using Newtonsoft.Json;
 [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
 [method: JsonConstructor]
 public sealed record Data(
-    [property: JsonProperty("characterMap", Order = 0)] IDictionary<char, char> CharacterMap,
-    [property: JsonProperty("deadKeysMap", Order = 1)] IDictionary<string, string> DeadKeysMap,
+    [property: JsonProperty("characterMap", Order = 0)] IDictionary<char, char>? CharacterMap,
+    [property: JsonProperty("deadKeysMap", Order = 1)] IDictionary<string, string>? DeadKeysMap,
     [property: JsonProperty("deadKeyCharacterMap", Order = 2)] IDictionary<string, char>? DeadKeyCharacterMap,
-    [property: JsonProperty("ligatureMap", Order = 3)] IDictionary<string, char> LigatureMap,
+    [property: JsonProperty("ligatureMap", Order = 3)] IDictionary<string, char>? LigatureMap,
     [property: JsonProperty("scannerDeadKeysMap", Order = 4)] IDictionary<string, string>? ScannerDeadKeysMap,
-    [property: JsonProperty("scannerUnassignedKeys", Order = 5)] IList<string> ScannerUnassignedKeys,
+    [property: JsonProperty("scannerUnassignedKeys", Order = 5)] IList<string>? ScannerUnassignedKeys,
     [property: JsonProperty("reportedCharacters", Order = 6)] string? ReportedCharacters = null,
     [property: JsonProperty("aimFlagCharacterSequence", Order = 7)] string? AimFlagCharacterSequence = null,
     [property: JsonProperty("prefix", Order = 8)] string? Prefix = null,
@@ -109,16 +107,7 @@ public sealed record Data(
             new Dictionary<string, char>(),
             new Dictionary<string, string>(),
 #pragma warning disable IDE0028 // Simplify collection initialization
-            new List<string>(),
-#pragma warning restore IDE0028 // Simplify collection initialization
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            ScannerKeyboardPerformance.High,
-            null) {
+            new List<string>()) {
         if (string.IsNullOrWhiteSpace(json) || json.Length <= 1) return;
 
 #pragma warning disable SA1010 // Opening square brackets should be spaced correctly

@@ -23,7 +23,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 /// <summary>
@@ -34,7 +33,6 @@ internal static class UnicodeBlocks {
     /// <summary>
     ///   A dictionary of ranges for each Unicode block.
     /// </summary>
-    [SuppressMessage("ReSharper", "StringLiteralTypo")]
     private static readonly IDictionary<(int, int), string> UnicodeBlocksDictionary =
         new Dictionary<(int, int), string>
         {
@@ -347,7 +345,6 @@ internal static class UnicodeBlocks {
     /// <param name="upperCaseSequences">A sequence representing upper case characters.</param>
     /// <param name="lowerCaseSequences">A sequence representing lower case characters.</param>
     /// <returns>The name of the Unicode block representing the keyboard script for the sequences.</returns>
-    [SuppressMessage("ReSharper", "StringLiteralTypo")]
     public static string ResolveScript(
         IEnumerable<string>? upperCaseSequences,
         IEnumerable<string>? lowerCaseSequences) {

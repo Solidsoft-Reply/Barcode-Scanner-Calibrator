@@ -20,8 +20,6 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
-using System.Diagnostics.CodeAnalysis;
-
 /// <summary>
 ///   The type of calibration information.
 /// </summary>
@@ -85,9 +83,7 @@ public enum InformationType {
     /// <summary>
     ///   INFORMATION: The computer keyboard is configured for the following platform: {0}.
     /// </summary>
-#pragma warning disable CA1069 // Enums values should not be duplicated
     Platform = 190,
-#pragma warning restore CA1069 // Enums values should not be duplicated
 
     /// <summary>
     ///   WARNING: Some non-invariant ASCII characters cannot be detected.
@@ -97,46 +93,26 @@ public enum InformationType {
     /// <summary>
     ///   WARNING: Some non-invariant ASCII characters are not recognised: {0}
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     SomeNonInvariantCharactersUnrecognised = 201,
 
     /// <summary>
     ///   WARNING: Some combinations of non-invariant ASCII characters are not recognised: {0}
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     SomeNonInvariantCharacterCombinationsUnrecognised = 202,
 
     /// <summary>
     ///   WARNING: Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     IsoIec15434SyntaxNotRecognised = 210,
 
     /// <summary>
     ///   WARNING: Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     IsoIec15434EdiNotReliablyReadable = 211,
 
     /// <summary>
     ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     IsoIec15434RecordSeparatorMapping = 212,
 
     /// <summary>
@@ -147,10 +123,6 @@ public enum InformationType {
     /// <summary>
     ///   WARNING: The AIM Identifier cannot be recognised.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     AimNotRecognised = 221,
 
     /// <summary>
@@ -294,10 +266,6 @@ public enum InformationType {
     /// <summary>
     ///   ERROR: The reported data is unrecognised. The wrong barcode may have been scanned.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     UnrecognisedData = 301,
 
     /// <summary>
@@ -328,19 +296,11 @@ public enum InformationType {
     /// <summary>
     ///   ERROR: Some invariant characters are not recognised by the barcode scanner in its current configuration: {0}
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     SomeInvariantCharactersUnrecognised = 311,
 
     /// <summary>
     ///   ERROR: Some key combinations that include invariant characters are not recognised: {0}
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     SomeDeadKeyCombinationsUnrecognisedForInvariants = 312,
 
     /// <summary>

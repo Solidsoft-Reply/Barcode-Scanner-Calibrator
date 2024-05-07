@@ -9,10 +9,6 @@
 
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.Tests;
 
-using System.Diagnostics.CodeAnalysis;
-
-[SuppressMessage("ReSharper", "UnusedMember.Global", Justification = "Reviewed.")]
-[SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1600:ElementsMustBeDocumented", Justification = "Reviewed.")]
 // ReSharper disable once UnusedType.Global
 public static class Calibrations {
     public const string UnitedKingdomExtendedCalibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~","\u0000":"\u001d"},"deadKeysMap":{"`":"`","\u00c0":"`A","\u00c8":"`E","\u00cc":"`I","\u00d2":"`O","\u00d9":"`U","\u1e80":"`W","\u1ef2":"`Y","\u00e0":"`a","\u00e8":"`e","\u00ec":"`i","\u00f2":"`o","\u00f9":"`u","\u1e81":"`w","\u1ef3":"`y"},"deadKeyCharacterMap":{"`":"`"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";

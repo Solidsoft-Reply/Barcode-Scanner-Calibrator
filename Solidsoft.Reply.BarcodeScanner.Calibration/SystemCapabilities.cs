@@ -626,19 +626,6 @@ public sealed record SystemCapabilities(
                     goto case InformationType.CalibrationFailed;
                 case InformationType.CalibrationFailed:
                     TestsSucceeded = false;
-                    KeyboardLayoutsCorrespond = null;
-                    KeyboardLayoutsCorrespondForInvariants = null;
-                    KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
-                    CanReadInvariantsReliably = null;
-                    CanReadFormat05AndFormat06Reliably = null;
-                    CanReadEdiReliably = null;
-                    CanReadAdditionalAsciiCharactersReliably = null;
-                    ScannerTransmitsAdditionalPrefix = false;
-                    ScannerTransmitsAdditionalSuffix = false;
-                    AdditionalPrefix = string.Empty;
-                    AdditionalCode = string.Empty;
-                    AdditionalSuffix = string.Empty;
-                    KeyboardScript = string.Empty;
                     CorrectSequenceReported = true;
                     break;
 

@@ -121,19 +121,19 @@ Solidsoft.Reply.BarcodeScanner.Calibration.ConditionSeverity.None = 0 -> Solidso
 Solidsoft.Reply.BarcodeScanner.Calibration.Data
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.AimFlagCharacterSequence.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.AimFlagCharacterSequence.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.Data.CharacterMap.get -> System.Collections.Generic.IDictionary<char, char>!
+Solidsoft.Reply.BarcodeScanner.Calibration.Data.CharacterMap.get -> System.Collections.Generic.IDictionary<char, char>?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.CharacterMap.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.Code.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.Code.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.Data(string! json) -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.Data.Data(System.Collections.Generic.IDictionary<char, char>! CharacterMap, System.Collections.Generic.IDictionary<string!, string!>! DeadKeysMap, System.Collections.Generic.IDictionary<string!, char>? DeadKeyCharacterMap, System.Collections.Generic.IDictionary<string!, char>! LigatureMap, System.Collections.Generic.IDictionary<string!, string!>? ScannerDeadKeysMap, System.Collections.Generic.IList<string!>! ScannerUnassignedKeys, string? ReportedCharacters = null, string? AimFlagCharacterSequence = null, string? Prefix = null, string? Code = null, string? Suffix = null, string? KeyboardScript = null, Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance ScannerKeyboardPerformance = Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance.High, string? LineFeedCharacter = null) -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.Data.Data(System.Collections.Generic.IDictionary<char, char>? CharacterMap, System.Collections.Generic.IDictionary<string!, string!>? DeadKeysMap, System.Collections.Generic.IDictionary<string!, char>? DeadKeyCharacterMap, System.Collections.Generic.IDictionary<string!, char>? LigatureMap, System.Collections.Generic.IDictionary<string!, string!>? ScannerDeadKeysMap, System.Collections.Generic.IList<string!>? ScannerUnassignedKeys, string? ReportedCharacters = null, string? AimFlagCharacterSequence = null, string? Prefix = null, string? Code = null, string? Suffix = null, string? KeyboardScript = null, Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance ScannerKeyboardPerformance = Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance.High, string? LineFeedCharacter = null) -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.DeadKeyCharacterMap.get -> System.Collections.Generic.IDictionary<string!, char>?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.DeadKeyCharacterMap.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.Data.DeadKeysMap.get -> System.Collections.Generic.IDictionary<string!, string!>!
+Solidsoft.Reply.BarcodeScanner.Calibration.Data.DeadKeysMap.get -> System.Collections.Generic.IDictionary<string!, string!>?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.DeadKeysMap.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.KeyboardScript.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.KeyboardScript.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.Data.LigatureMap.get -> System.Collections.Generic.IDictionary<string!, char>!
+Solidsoft.Reply.BarcodeScanner.Calibration.Data.LigatureMap.get -> System.Collections.Generic.IDictionary<string!, char>?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.LigatureMap.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.LineFeedCharacter.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.LineFeedCharacter.init -> void
@@ -145,7 +145,7 @@ Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerDeadKeysMap.get -> System
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerDeadKeysMap.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerKeyboardPerformance.get -> Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerKeyboardPerformance.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerUnassignedKeys.get -> System.Collections.Generic.IList<string!>!
+Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerUnassignedKeys.get -> System.Collections.Generic.IList<string!>?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.ScannerUnassignedKeys.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.Suffix.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Data.Suffix.init -> void
@@ -203,6 +203,12 @@ Solidsoft.Reply.BarcodeScanner.Calibration.DeadKeyMapping.Reported.get -> string
 Solidsoft.Reply.BarcodeScanner.Calibration.DeadKeyMapping.Reported.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.IAdvice<TAdviceItem, TAdviceType>
 Solidsoft.Reply.BarcodeScanner.Calibration.IAdvice<TAdviceItem, TAdviceType>.Items.get -> System.Collections.Generic.IEnumerable<TAdviceItem>!
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>.Advice.get -> System.Collections.Generic.IList<string!>!
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>.AdviceType.get -> TAdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>.Condition.get -> string!
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>.Description.get -> string!
+Solidsoft.Reply.BarcodeScanner.Calibration.IAdviceItem<TAdviceType>.Severity.get -> Solidsoft.Reply.BarcodeScanner.Calibration.ConditionSeverity
 Solidsoft.Reply.BarcodeScanner.Calibration.Information
 Solidsoft.Reply.BarcodeScanner.Calibration.Information.Description.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.Information.Description.set -> void

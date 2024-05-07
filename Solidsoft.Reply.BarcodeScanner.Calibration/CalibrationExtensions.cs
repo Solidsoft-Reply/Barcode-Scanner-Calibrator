@@ -38,12 +38,12 @@ internal static class CalibrationExtensions {
     /// <summary>
     ///   Returns a regular expression for matching line terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex LineTerminators = new(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
+    private static readonly Regex LineTerminators = new (@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex ControlCharTerminators = new(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
+    private static readonly Regex ControlCharTerminators = new (@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
 #endif
 
     /// <summary>
@@ -229,13 +229,9 @@ internal static class CalibrationExtensions {
                 }
 
                 builder.Append(
-                    dataCharacterMap.TryGetValue(character, out var value)
-#pragma warning disable S3358
-                        ? idx == 0
+                    dataCharacterMap.TryGetValue(character, out var value) ? idx == 0
                             ? ResolveFlagCharacter(value)
-                            : value.ToInvariantString()
-#pragma warning restore S3358
-                        : ResolveFlagCharacter(character));
+                            : value.ToInvariantString() : ResolveFlagCharacter(character));
             }
         }
 

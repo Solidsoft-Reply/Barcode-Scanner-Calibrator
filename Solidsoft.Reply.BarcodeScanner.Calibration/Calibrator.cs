@@ -23,7 +23,6 @@
 using System.Diagnostics;
 #pragma warning disable RS0016
 
-#pragma warning disable S3358
 #pragma warning disable S1751
 #pragma warning disable S3626
 
@@ -2597,15 +2596,11 @@ public class Calibrator {
                 if (!Match1().Success) return deadKey;
                 var observedPrefix = match.Groups["prefix"].Value;
                 var observedCode = match.Groups["code"].Value;
-
-#pragma warning disable S3358 // Ternary operators should not be nested
                 _tokenExtendedDataPrefix = string.IsNullOrEmpty(observedPrefix)
                     ? string.IsNullOrEmpty(observedCode)
                         ? string.Empty
                         : observedCode
                     : TestObservedPrefix();
-#pragma warning restore S3358 // Ternary operators should not be nested
-
                 return deadKey;
 
                 string TestObservedPrefix() {
@@ -6613,8 +6608,6 @@ public class Calibrator {
                 ExpectedCharacters(_invariantMappedCharacters ?? new StringBuilder(), expectedInvariantCharacters);
             var expectedAdditionalAscii =
                 ExpectedCharacters(_nonInvariantMappedCharacters ?? new StringBuilder(), expectedAdditionalAsciiCharacters);
-
-#pragma warning disable S3358 // Ternary operators should not be nested
             token = expectedInvariants.Count > 0
                 ? expectedInvariants.Count > 1
                     ? duplicateReportedCharacterAsString == _tokenExtendedDataAimFlagCharacterSequence
@@ -6651,8 +6644,6 @@ public class Calibrator {
                     InformationType.MultipleKeysMultipleNonInvariantCharacters,
                     duplicateReportedCharacter.ToInvariantString(),
                     AmbiguousMappedChars());
-#pragma warning restore S3358 // Ternary operators should not be nested
-
             var aimFlag =
                 _tokenExtendedDataAimFlagCharacterSequence?.Length == 2
                     ? _tokenExtendedDataAimFlagCharacterSequence[1]

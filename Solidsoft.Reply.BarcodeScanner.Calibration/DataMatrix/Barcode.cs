@@ -63,7 +63,7 @@ internal class Barcode : IDisposable {
     /// <summary>
     ///   Used to lock when creating a barcode;.
     /// </summary>
-    private static readonly object CreateBarcodeLockObject = new();
+    private static readonly object CreateBarcodeLockObject = new ();
 
     /// <summary>
     ///   Indicates whether Dispose already been called.
@@ -133,10 +133,6 @@ internal class Barcode : IDisposable {
     /// </summary>
     /// <param name="barcodeData">The barcode data. Encoded using Zint rules.</param>
     /// <returns>A stream containing PNG content.</returns>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     public Stream CreateBarcode(string barcodeData) {
         return CreateBarcode(barcodeData, BackgroundColor, ForegroundColor, ImageFormat);
     }
@@ -259,10 +255,6 @@ internal class Barcode : IDisposable {
     /// </summary>
     /// <param name="barcodeData">The barcode data. Encoded using ZXing rules.</param>
     /// <returns>A stream containing SVG content.</returns>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     public string CreateBarcodeSvg(string barcodeData) {
         return CreateBarcodeSvg(barcodeData, BackgroundColor, ForegroundColor);
     }
@@ -351,10 +343,6 @@ internal class Barcode : IDisposable {
     /// <summary>
     ///   Public implementation of Dispose method for the <see cref="Barcode"/> class.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     public void Dispose() {
         Dispose(true);
         GC.SuppressFinalize(this);
@@ -364,10 +352,6 @@ internal class Barcode : IDisposable {
     ///   Protected implementation of Dispose method for the <see cref="Barcode"/> class.
     /// </summary>
     /// <param name="disposing">Indicates whether the object is being disposed explicitly.</param>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     protected virtual void Dispose(bool disposing) {
         if (_disposed) {
             return;

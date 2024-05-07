@@ -22,11 +22,7 @@
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using Newtonsoft.Json.Serialization;
-
-using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-
 using Newtonsoft.Json;
 
 /// <summary>
@@ -155,10 +151,6 @@ public sealed record TokenExtendedData {
     /// <param name="invariantGs1UnrecognisedCharacters">
     ///   A list of unrecognised invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </param>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     internal TokenExtendedData(
         IDictionary<string, string> deadKeysMap,
         IDictionary<string, char> deadKeyCharacterMap,
@@ -328,10 +320,6 @@ public sealed record TokenExtendedData {
     /// <summary>
     ///   Gets a list of characters that are not recognised by the scanner keyboard layout.
     /// </summary>
-    [SuppressMessage(
-        "StyleCop.CSharp.DocumentationRules",
-        "SA1650:ElementDocumentationMustBeSpelledCorrectly",
-        Justification = "Reviewed. Suppression is OK here.")]
     [JsonProperty("unrecognisedKeys", Order = 17)]
     public IList<char> UnrecognisedKeys { get; init; }
 

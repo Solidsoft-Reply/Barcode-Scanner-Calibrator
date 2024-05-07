@@ -8,7 +8,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.Tests;
 
-using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Diagnostics;
