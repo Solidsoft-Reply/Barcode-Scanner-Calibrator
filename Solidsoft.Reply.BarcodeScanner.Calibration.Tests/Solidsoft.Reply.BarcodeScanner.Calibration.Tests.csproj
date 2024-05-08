@@ -37,4 +37,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Solidsoft.Reply.BarcodeScanner.Calibration\Solidsoft.Reply.BarcodeScanner.Calibration.csproj" />
+  </ItemGroup>
+
 </Project>
