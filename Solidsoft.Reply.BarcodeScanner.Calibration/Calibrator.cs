@@ -806,6 +806,7 @@ public class Calibrator {
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
         bool trace = false) {
+
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         var tempDataForTrace = string.Empty;
 
@@ -1969,19 +1970,6 @@ public class Calibrator {
         }
         : null;
 
-        Color GetColour(string hexColor) {
-            if (hexColor.Length is < 6 or > 7) {
-                return Color.Black;
-            }
-
-            // Remove #
-            if (hexColor.First() == '#') hexColor = hexColor[1..];
-            return Color.FromRgb(
-                Convert.ToByte(hexColor[..2], 16),
-                Convert.ToByte(hexColor[2..4], 16),
-                Convert.ToByte(hexColor[4..], 16));
-        }
-
         var maximumCharacters = size.MaxCapacity();
         Token token;
 
@@ -2095,6 +2083,19 @@ public class Calibrator {
         }
 
         yield break;
+
+        Color GetColour(string hexColor) {
+            if (hexColor.Length is < 6 or > 7) {
+                return Color.Black;
+            }
+
+            // Remove #
+            if (hexColor.First() == '#') hexColor = hexColor[1..];
+            return Color.FromRgb(
+                Convert.ToByte(hexColor[..2], 16),
+                Convert.ToByte(hexColor[2..4], 16),
+                Convert.ToByte(hexColor[4..], 16));
+        }
 
         void SetInformation() {
             _tokenInformation?.ForEach(information => token.AddInformation(information));
@@ -2321,6 +2322,7 @@ public class Calibrator {
     /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1008:Opening parenthesis should be spaced correctly", Justification = "<Pending>")]
     private (Token token, string suffix, string endOfLine) CalibrateBaseLine(string data, Token token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default) {
+
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
             < (double)ScannerKeyboardPerformance.Medium => ScannerKeyboardPerformance.High,
@@ -5569,6 +5571,7 @@ public class Calibrator {
         InformationType type,
         string? reportedData = "",
         string? expectedData = null) {
+
         var description = Resources.ResourceManager.GetString(
             $"CalibrationInformation_{(int)type}",
             Thread.CurrentThread.CurrentUICulture);
@@ -6570,7 +6573,7 @@ public class Calibrator {
         if (_tokenExtendedDataCharacterMap.ContainsKey('\0')) {
             // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
             return LogCalibrationInformation(
-                InitializeTokenData(),
+            InitializeTokenData(),
                 InformationType.IsoIec15434EdiNotReliablyReadable);
         }
 
@@ -6730,12 +6733,11 @@ public class Calibrator {
 
         _tokenDataPrefix ??= string.Empty;
 
+        // Strip off any trailing Carriage Return or Line Feed characters. These are assumed
+        // to have been added by the barcode scanner.
         data = token.Data.SmallBarcodeSequenceIndex < token.Data.SmallBarcodeSequenceCount
-
-                    // Strip off any trailing Carriage Return or Line Feed characters. These are assumed
-                    // to have been added by the barcode scanner.
-                    ? data.StripTrailingCrLfs()
-                    : data;
+            ? data.StripTrailingCrLfs()
+            : data;
 
         // Strip off any identical prefixes on second and subsequent barcodes. We are forced to
         // assume that there are no spaces in the prefix.
