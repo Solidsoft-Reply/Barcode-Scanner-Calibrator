@@ -764,6 +764,7 @@ public class Calibrator {
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
+    /// <param name="assessScript">Indicates whether the calibrator should assess the script for the configured OS keyboard.</param>
     /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
     // ReSharper disable once UnusedMember.Global
@@ -775,6 +776,7 @@ public class Calibrator {
         SupportedPlatform platform = SupportedPlatform.Windows,
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
+        bool assessScript = true,
         bool trace = false) {
         ArgumentNullException.ThrowIfNull(data);
 
@@ -784,7 +786,7 @@ public class Calibrator {
             charOut[idx] = (char)data[idx];
         }
 
-        return Calibrate(new string(charOut), token, capsLock, platform, dataEntryTimeSpan, preProcessors, trace);
+        return Calibrate(new string(charOut), token, capsLock, platform, dataEntryTimeSpan, preProcessors, assessScript, trace);
     }
 
     /// <summary>
@@ -796,6 +798,7 @@ public class Calibrator {
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
+    /// <param name="assessScript">Indicates whether the calibrator should assess the script for the configured OS keyboard.</param>
     /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
     public Token Calibrate(
@@ -805,6 +808,7 @@ public class Calibrator {
         SupportedPlatform platform = SupportedPlatform.Windows,
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
+        bool assessScript = true,
         bool trace = false) {
 
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
@@ -912,7 +916,7 @@ public class Calibrator {
         try {
             // Perform calibration
             extendedToken = token.Data?.Key?.Length == 0
-                            ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan)
+                            ? CalibrateBaseLine(data, token, capsLock, platform, dataEntryTimeSpan, assessScript)
                             : CalibrateDeadKey(data, token, dataEntryTimeSpan, _tokenSmallBarcodeSuffixData.suffix, _tokenSmallBarcodeSuffixData.endOfLine);
         }
         catch (Exception ex) {
@@ -2319,9 +2323,16 @@ public class Calibrator {
     ///   The time span specifying how long it took from the start of the scan to
     ///   submitting the data.
     /// </param>
+    /// <param name="assessScript">Indicates whether the calibrator should assess the script for the configured OS keyboard.</param>
     /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1008:Opening parenthesis should be spaced correctly", Justification = "<Pending>")]
-    private (Token token, string suffix, string endOfLine) CalibrateBaseLine(string data, Token token, bool? capsLock = null, SupportedPlatform platform = SupportedPlatform.Windows, TimeSpan dataEntryTimeSpan = default) {
+    private (Token token, string suffix, string endOfLine) CalibrateBaseLine(
+        string data, 
+        Token token, 
+        bool? capsLock = null, 
+        SupportedPlatform platform = SupportedPlatform.Windows, 
+        TimeSpan dataEntryTimeSpan = default, 
+        bool assessScript = true) {
 
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
@@ -2388,7 +2399,8 @@ public class Calibrator {
             reportedSegments,
             expectedSegments,
             capsLock,
-            platform);
+            platform,
+            assessScript);
 
         ProcessDeadKeys();
 
@@ -3088,12 +3100,14 @@ public class Calibrator {
     /// <param name="expectedSegments">The list of segments fo expected sequences.</param>
     /// <param name="capsLock">Optional reported Caps Lock state.</param>
     /// <param name="platform">Operating system platform.</param>
+    /// <param name="assessScript">Indicates whether the calibrator should assess the script for the configured OS keyboard.</param>
     private void ProcessReportedSegments(
         Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments,
         bool? capsLock,
-        SupportedPlatform platform) {
+        SupportedPlatform platform,
+        bool assessScript) {
         var selectedCharacterKeyValuePairs = new List<KeyValuePair<char, char>>();
         var ambiguousLigatureStrings = new List<string>();
         CaseConversionCharacteristics? caseConversionCharacteristics = null;
@@ -3209,8 +3223,9 @@ public class Calibrator {
         // Determine the Unicode block name for the script represented by the OS-configured keyboard layout.
         EnvToken DetermineTheUnicodeBlockNameForTheKeyboardScript(Token localToken) =>
             () => {
-                _tokenExtendedDataKeyboardScript =
-                    ResolveKeyboardScript(reportedSegments[(int)Segments.InvariantSegment], capsLock.GetValueOrDefault());
+                _tokenExtendedDataKeyboardScript = assessScript 
+                    ? ResolveKeyboardScript(reportedSegments[(int)Segments.InvariantSegment], capsLock.GetValueOrDefault())
+                    : "<unknown>";
 
                 return new Lazy<Token>(localToken);
             };
