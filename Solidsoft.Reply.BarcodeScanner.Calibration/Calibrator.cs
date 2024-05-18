@@ -1284,7 +1284,7 @@ public class Calibrator {
     /// </param>
     /// <param name="exceptions">Collection of exceptions.</param>
     /// <returns>The normalized input, processed according to the calibration character map.</returns>
-    public string ProcessInput(string? input, out IList<PreprocessorException>? exceptions) {
+    public string? ProcessInput(string? input, out IList<PreprocessorException>? exceptions) {
         // We need to convert the AIM identifier if it exists and there is a conversion.
         var aimId = PreProcessAimIdentifier(input);
         var preprocessorExceptions = new List<PreprocessorException>();
@@ -1404,6 +1404,7 @@ public class Calibrator {
             input = input.EndsWith('\u0004' + _tokenExtendedDataReportedSuffix, StringComparison.Ordinal)
                         ? input[..^_tokenExtendedDataReportedSuffix.Length]
                         : TestSuffixBeforeEoT();
+
         }
 
 #pragma warning disable S127 // "for" loop stop conditions should be invariant
@@ -1479,7 +1480,8 @@ public class Calibrator {
              * */
 
             builder.Append(
-                _tokenExtendedDataCharacterMap.TryGetValue(reportedChar, out var value) ? value.ToInvariantString()
+                _tokenExtendedDataCharacterMap.TryGetValue(reportedChar, out var value) 
+                    ? value.ToInvariantString()
                     : TestForReportedCharacters());
             continue;
 
@@ -1505,6 +1507,7 @@ public class Calibrator {
         }
 
         exceptions = preprocessorExceptions;
+
         return builder.ToString();
     }
 
@@ -5816,12 +5819,12 @@ public class Calibrator {
     /// </summary>
     /// <param name="input">The data transmitted by a barcode scanner.</param>
     /// <returns>The pre-processed AIM identifier, if an AIM identifier was reported.</returns>
-    private string PreProcessAimIdentifier(string? input) {
+    private string? PreProcessAimIdentifier(string? input) {
         var processedPrefixData = ProcessReportedPrefix(input, out _, out _, out _);
         Match match;
 
         // Test to see if the candidate AIM identifier was a real AIM identifier or not.
-        if (string.IsNullOrEmpty(processedPrefixData) || !MatchWithAimId().Success) {
+        if (string.IsNullOrEmpty(processedPrefixData)  || !MatchWithAimId().Success) {
             return string.Empty;
         }
 
