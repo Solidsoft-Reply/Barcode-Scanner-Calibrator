@@ -19,9 +19,10 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Fixed a bug that could affect dead key recognition where the scanner and compuer keyboard layouts match and 
-		   a literal dead key is entered. This was detected when testing Estonian keyboard layouts. The bug caused the
-		   calibrator to output redundant character mappings.
+		1) Improvements made to eliminate ISO/IEC 15434-related warnings if no assessment is made for Format 05 and Format 06 barcodes.
+		   Previously, the calibrator would report issues for ASCII 30 (Record Separator) and EDI-related issues even if the calibrator
+		   was configured to only assess capabilities for scanning FNC1 and GS1-128 barcodes.  This change eliminates potential sources
+		   of confusion for users who are not interested in assessing ISO/IEC 15434 capabilities.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -31,7 +32,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.1</Version>
+	<Version>2.2.2</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>

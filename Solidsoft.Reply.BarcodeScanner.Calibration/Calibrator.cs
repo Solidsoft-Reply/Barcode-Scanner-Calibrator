@@ -809,7 +809,7 @@ public class Calibrator {
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
         bool assessScript = true,
-        bool trace = false) {
+        bool trace = true) {
 
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         var tempDataForTrace = string.Empty;
@@ -989,7 +989,7 @@ public class Calibrator {
                 // Null may already been mapped to another character.  We favour AIM flag sequences over
                 // control characters used in EDI data or any additional character mapped to null
                 var addMap = existingMap switch {
-                    '\u001C' or '\u001F' => ReplaceExistingMapForEdiControlCharacter(),
+                    '\u001C' or '\u001F' when AssessFormatSupport => ReplaceExistingMapForEdiControlCharacter(),
                     '#' or '$' or '@' or '[' or '\\' or '^' or '`' or '{' or '|' or '}' or '~' => ReplaceExistingMapForAdditionalCharacter(),
                     ']' => char.MinValue,
                     _ => DoNotReplaceExistingMap()
@@ -3193,7 +3193,7 @@ public class Calibrator {
             .Do(DetermineAnyIssuesForAsciiControlCharacters)
             .Do(CheckForAnyMissedAmbiguities)
             .Do(DetermineCompatibilityWithFormat05AndFormat06Barcodes)
-            .Do(DetermineCompatibilityWithFEdiBarcodes)
+            .Do(DetermineCompatibilityWithEdiBarcodes)
 
             .If(AmbiguousLigatureStringsWereDetected)
             .Then(LogTheAmbiguousLigatureCharacters)
@@ -3501,7 +3501,7 @@ public class Calibrator {
                 new Lazy<Token>(DoProcessForIsoIec15434MessageHeaderIncompatibility(localToken));
 
         // Check for EDI incompatibility
-        EnvToken DetermineCompatibilityWithFEdiBarcodes(Token localToken) =>
+        EnvToken DetermineCompatibilityWithEdiBarcodes(Token localToken) =>
             () =>
                 new Lazy<Token>(DoProcessForIsoIec15434EdiIncompatibility(localToken));
 
@@ -3776,10 +3776,12 @@ public class Calibrator {
 
                                 // If ASCII 38 and/or ASCII 31 characters are not being emitted,
                                 // test if EDI barcodes can be read reliably.
-                                token = DetermineIfEdiUnreadableWhenNoAscii28Or31(
-                                    token,
-                                    reportedCharacterSequence.ToControlPictures(),
-                                    expectedCharacter[0].ToControlPictureString());
+                                token = AssessFormatSupport
+                                    ? DetermineIfEdiUnreadableWhenNoAscii28Or31(
+                                        token,
+                                        reportedCharacterSequence.ToControlPictures(),
+                                        expectedCharacter[0].ToControlPictureString())
+                                    : token;
 
                                 _tokenExtendedDataDeadKeysMap.Add(
                                     reportedCharacterSequence,
@@ -3878,9 +3880,11 @@ public class Calibrator {
             reportedCharacterSequence[1] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-                ? LogCalibrationInformation(
-                    InitializeTokenData(),
-                    InformationType.IsoIec15434SyntaxNotRecognised)
+                ? AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        InitializeTokenData(),
+                        InformationType.IsoIec15434SyntaxNotRecognised)
+                    : token
                 : token;
 
         // Test if the reported dead key sequence (e.g., \0à) reports a character (e.g., à)
@@ -3889,9 +3893,11 @@ public class Calibrator {
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-                ? LogCalibrationInformation(
-                    InitializeTokenData(),
-                    InformationType.IsoIec15434SyntaxNotRecognised)
+                ? AssessFormatSupport 
+                    ? LogCalibrationInformation(
+                                InitializeTokenData(),
+                                InformationType.IsoIec15434SyntaxNotRecognised)
+                    : token
 
                 // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements
                 // included in a barcode.
@@ -3941,9 +3947,11 @@ public class Calibrator {
             reportedCharacterSequence[1] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                ? LogCalibrationInformation(
-                    InitializeTokenData(),
-                    InformationType.IsoIec15434EdiNotReliablyReadable)
+                ? AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        InitializeTokenData(),
+                        InformationType.IsoIec15434EdiNotReliablyReadable)
+                    : token
                 : token;
 
         // Test if the reported dead key sequence (e.g., \0à) reports a character (e.g., à)
@@ -3952,9 +3960,11 @@ public class Calibrator {
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                ? LogCalibrationInformation(
-                    InitializeTokenData(),
-                    InformationType.IsoIec15434EdiNotReliablyReadable)
+                ? AssessFormatSupport 
+                    ? LogCalibrationInformation(
+                        InitializeTokenData(),
+                        InformationType.IsoIec15434EdiNotReliablyReadable)
+                    : token
 
                 // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements
                 // included in a barcode.
@@ -6287,6 +6297,12 @@ public class Calibrator {
                         token = LogIsoIec15434SeparatorSupport(token, idx);
                     }
                     else {
+                        token = idx > Segments.GroupSeparatorSegment
+                                    ? LogCalibrationInformation(
+                                        token,
+                                        NotRecognisedInformationType())
+                                    : token;
+
                         InformationType NotRecognisedInformationType() =>
 
                             // ReSharper disable once StyleCop.SA1118
@@ -6297,12 +6313,6 @@ public class Calibrator {
 
                                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                                 : InformationType.IsoIec15434EdiNotReliablyReadable;
-
-                        token = idx > Segments.GroupSeparatorSegment
-                                    ? LogCalibrationInformation(
-                                        token,
-                                        NotRecognisedInformationType())
-                                    : token;
                     }
                 }
                 else {
@@ -6320,11 +6330,13 @@ public class Calibrator {
 
                             if (key == '\0' && _tokenExtendedDataCharacterMap.ContainsKey(key)) {
                                 // WARNING - The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
-                                token = LogCalibrationInformation(
-                                    token,
-                                    InformationType.IsoIec15434RecordSeparatorMapping,
-                                    '\0'.ToControlPictureString(),
-                                    $"{'\u001D'.ToControlPictureString()} {'\u001E'.ToControlPictureString()}");
+                                token = AssessFormatSupport
+                                    ? LogCalibrationInformation(
+                                        token,
+                                        InformationType.IsoIec15434RecordSeparatorMapping,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u001D'.ToControlPictureString()} {'\u001E'.ToControlPictureString()}")
+                                    : token;
                             }
                             else {
                                 // If the keyboard represents ASCII 30s as \0, we will use this in thе map.
@@ -6423,11 +6435,13 @@ public class Calibrator {
                                     char RaiseWarningIsoIec15434(char controlCharacter) {
                                         // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                         // EDI data cannot be reliably read.
-                                        localToken = LogCalibrationInformation(
-                                            localToken,
-                                            InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                            key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
+                                        localToken = AssessFormatSupport
+                                            ? LogCalibrationInformation(
+                                                localToken,
+                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                key.ToControlPictureString(),
+                                                $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+                                            : localToken;
 
                                         return controlCharacter;
                                     }
@@ -6477,12 +6491,12 @@ public class Calibrator {
                                             InformationType.ControlCharacterMappingAdditionalDataElements,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
-                                        _ => LogCalibrationInformation(
+                                        _ when AssessFormatSupport => LogCalibrationInformation(
                                             token,
                                             InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}") // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-
+                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                        _ => token
                                         /* EDI data cannot be reliably read.*/
                                     };
                             }
@@ -6517,19 +6531,25 @@ public class Calibrator {
                     InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator),
 
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
-                Segments.FileSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
+                Segments.FileSeparatorSegment => AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        calibrationToken,
+                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators)
+                    : calibrationToken,
 
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
-                Segments.RecordSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator),
+                Segments.RecordSeparatorSegment => AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        calibrationToken,
+                        InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator)
+                    : calibrationToken,
 
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
-                Segments.UnitSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators),
+                Segments.UnitSeparatorSegment => AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        calibrationToken,
+                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators)
+                    : calibrationToken,
                 _ => calibrationToken
             };
 
@@ -6589,18 +6609,22 @@ public class Calibrator {
             case true when
                 _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs:
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                return LogCalibrationInformation(
-                    InitializeTokenData(),
-                    InformationType.IsoIec15434EdiNotReliablyReadable);
+                return AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        InitializeTokenData(),
+                        InformationType.IsoIec15434EdiNotReliablyReadable)
+                    : token;
         }
 
         // One of the ASCII 28 and ASCII 31 characters is reported as null.  We will only treat this as
         // unreliable read for EDI data is there is already a mapping for ASCII NULL.
         if (_tokenExtendedDataCharacterMap.ContainsKey('\0')) {
             // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-            return LogCalibrationInformation(
-            InitializeTokenData(),
-                InformationType.IsoIec15434EdiNotReliablyReadable);
+            return AssessFormatSupport
+            ? LogCalibrationInformation(
+                InitializeTokenData(),
+                InformationType.IsoIec15434EdiNotReliablyReadable)
+            : token;
         }
 
         // Add mapping for ASCII 28 or ASCII 31
