@@ -19,10 +19,9 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Improvements made to eliminate ISO/IEC 15434-related warnings if no assessment is made for Format 05 and Format 06 barcodes.
-		   Previously, the calibrator would report issues for ASCII 30 (Record Separator) and EDI-related issues even if the calibrator
-		   was configured to only assess capabilities for scanning FNC1 and GS1-128 barcodes.  This change eliminates potential sources
-		   of confusion for users who are not interested in assessing ISO/IEC 15434 capabilities.
+		1) Fixed additional issues with ISO/IEC 15434 separator handling to ensure that the correct advice is output.
+
+		2) Fixed issues with matches between dead keys in scanner and computer keybaord layouts.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -32,7 +31,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.2</Version>
+	<Version>2.2.3</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>

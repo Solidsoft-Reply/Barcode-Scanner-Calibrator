@@ -153,13 +153,20 @@ public class Calibrator {
     /// <summary>
     ///   Returns a regular expression for temporary space holder insertion for case 2.
     /// </summary>
-    private static readonly Regex Case2TempSpaceHolderRegex = new(@"(?<a>\u0000[^\u0020]{0,2})\u0020{4}", RegexOptions.None);
+    private static readonly Regex Case2TempSpaceHolderRegex = new(@"(?<a>\u0000[^\u0020]{0,1})\u0020{4}", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for reported dead key sequences where the key is not a dead key on the
     ///   scanner keyboard.
     /// </summary>
-    private static readonly Regex NonMatchingDeadKeyComputerKeyboardRegex = new(@"(?<a>\u0000[^\u0020]+)\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
+    /// <returns>A regular expression.</returns>
+    private static readonly Regex NonMatchingDeadKeyComputerKeyboardCandidatesRegex = new(@"(?<a>\u0000[^\u0020])((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
+
+    /// <summary>
+    ///   Returns a regular expression for reported dead key sequences where the key is not a dead key on the
+    ///   scanner keyboard.
+    /// </summary>
+    private static readonly Regex MatchingDeadKeyComputerKeyboardRegex = new(@"(?<a>\u0000[^\u0020])\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect sequences of six or more spaces in multiples
@@ -1583,10 +1590,12 @@ public class Calibrator {
     private static partial Regex Case1TempSpaceHolderRegex();
 
     /// <summary>
-    ///   Returns a regular expression for temporary space holder insertion for case 2.
+    /// Returns a regular expression for temporary space holder insertion for case 2.
+    /// This also handles the case where there is no assigned computer keyboard key for the
+    /// key pressed on the scanner keyboard.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    [GeneratedRegex(@"(?<a>\u0000[^\u0020]{0,2})\u0020{4}", RegexOptions.None, "en-US")]
+    [GeneratedRegex(@"(?<a>\u0000[^\u0020]{0,1})\u0020{4}", RegexOptions.None, "en-US")]
     private static partial Regex Case2TempSpaceHolderRegex();
 
     /// <summary>
@@ -1594,8 +1603,16 @@ public class Calibrator {
     ///   scanner keyboard.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    [GeneratedRegex(@"(?<a>\u0000[^\u0020]+)\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None, "en-US")]
-    private static partial Regex NonMatchingDeadKeyComputerKeyboardRegex();
+    [GeneratedRegex(@"(?<a>\u0000[^\u0020])((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None, "en-US")]
+    private static partial Regex NonMatchingDeadKeyComputerKeyboardCandidatesRegex();
+
+    /// <summary>
+    ///   Returns a regular expression for reported dead key sequences where the key is not a dead key on the
+    ///   scanner keyboard.
+    /// </summary>
+    /// <returns>A regular expression.</returns>
+    [GeneratedRegex(@"(?<a>\u0000[^\u0020])\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None, "en-US")]
+    private static partial Regex MatchingDeadKeyComputerKeyboardRegex();
 
     /// <summary>
     ///   Returns a regular expression to detect sequences of six or more spaces in multiples
@@ -2767,28 +2784,37 @@ public class Calibrator {
         }
 
         /* If a dead key on the barcode scanner keyboard layout matches a dead key on the computer keyboard layout, and assuming that
-         * the next key 'pressed' on the scanner keyboard matches an assigned key on the computer keyboard layout, the result
-         * will be an ASCII 0 followed by one or two characters followed by a space, followed by either a non-space character (first case), or
-         * a delimiter sequence of at least three spaces (second case). No space is consumed because the barcode scanner types in an
-         * additional space to enter the literal dead key character.
+         * the dead key character is not a iature and that the next key 'pressed' on the scanner keyboard matches an assigned key on
+         * the computer keyboard layout, the result will be an ASCII 0 followed by a character followed by a space, followed by either
+         * a non-space character (first case), or a delimiter sequence of at least two spaces (second case). No space is consumed
+         * because the barcode scanner types in an additional space to enter the literal dead key character.
          *
-         * First, we need to detect all reported dead keys for which the expected character is not entered using a dead key. This is
+         * First, we need to detect all candidate reported dead keys for which the expected character is not entered using a dead key. This is
          * necessary because, if the key on the barcode scanner keyboard layout is not a dead key, this indicates a keyboard mismatch
          * which we need to report here.  Consider the case where the ' key on the scanner keyboard layout matches the ' dead key on
          * the computer keyboard layout.  If the ' key on the scanner keyboard layout is, itself, a dead key, the keyboard layouts
          * may well be identical.  If it is not a dead key, the keyboard layouts clearly do not match.
          * */
 #if NET7_0_OR_GREATER
-        if (NonMatchingDeadKeyComputerKeyboardRegex().Matches(data) is { Count: > 0 })
+        var candidateNonMatches = NonMatchingDeadKeyComputerKeyboardCandidatesRegex().Matches(data);
+        var matches = MatchingDeadKeyComputerKeyboardRegex().Matches(data);
 #else
-        if (NonMatchingDeadKeyComputerKeyboardRegex.Matches(data) is { Count: > 0 })
+        var candidateNonMatches = NonMatchingDeadKeyComputerKeyboardCandidatesRegex.Matches(data);
+        var matches = MatchingDeadKeyComputerKeyboardRegex.Matches(data);
 #endif
-        {
-            token = LogCalibrationInformation(token, InformationType.NonCorrespondingKeyboardLayouts);
+        var candidateCount = candidateNonMatches.Count;
+
+        foreach (Match candidate in candidateNonMatches) {
+            if (matches.Any(m => m.Groups["a"].Value == candidate.Groups["a"].Value)) {
+                candidateCount--;
+            }
         }
 
-        /* If there are non-matching reported dead keys, the keyboard layouts do not match, so we will record this.
-         * */
+        if (candidateCount > 0) {
+            // There are reported dead keys does that do not match the dead key on the computer keyboard layout,
+            // and therefore the keyboard layouts do not match.
+            token = LogCalibrationInformation(token, InformationType.NonCorrespondingKeyboardLayouts);
+        }
 
         /* Next, for matching dead keys, we will replace the single space in the first case with a space holder. In the case that the
          * second key 'pressed' on the scanner maps to an unassigned key
@@ -4056,7 +4082,9 @@ public class Calibrator {
                 InformationType.NonCorrespondingKeyboardLayoutsForInvariants);
         }
 
-        if (_tokenExtendedDataDeadKeysMap.Any(map => map.Value.Length == 1 && map.Value[0] switch {
+        if (_tokenExtendedDataDeadKeysMap.Any(map => map.Value.Length == 1 && 
+                                                     $"\0{map.Value[0]}" != map.Key &&
+                                                     map.Value[0] switch {
             var c when c == 32 => true,
             var c when c >= 35 && c < 37 => true,
             var c when c == 64 => true,
@@ -6526,9 +6554,11 @@ public class Calibrator {
         Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
             idx switch {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-                Segments.GroupSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator),
+                Segments.GroupSeparatorSegment => AssessFormatSupport 
+                    ? LogCalibrationInformation(
+                        calibrationToken,
+                        InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
+                    : calibrationToken,
 
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
                 Segments.FileSeparatorSegment => AssessFormatSupport
