@@ -19,12 +19,9 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Added a new feature that controls the assessment of the script supported by the configured computer
-		   keybaord layout.  Sometimes, we want to supress this assessment - e.g., if a pre-processor represents
-		   characters differently to the configured keyboard.  For example, the built-in AIDC DOM event code
-		   processor outputs characters drawn from across UNICODE which can lead to incorrect assessment of the 
-		   keyboard script.  This is a non-breaking change that introduces a new optional parameter on the 
-		   Calibrate method.
+		1) Fixed a bug that could affect dead key recognition where the scanner and compuer keyboard layouts match and 
+		   a literal dead key is entered. This was detected when testing Estonian keyboard layouts. The bug caused the
+		   calibrator to output redundant character mappings.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -34,7 +31,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.0</Version>
+	<Version>2.2.1</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
