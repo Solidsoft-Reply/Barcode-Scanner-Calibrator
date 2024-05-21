@@ -1925,7 +1925,7 @@ public class Calibrator {
                          *
                          *   a)  followed by a non-dead key character where the two sequences have effectively
                          *       been concatenated by the consumption of the space delimiter in the barcode.
-                         *   b)  a space, representing a corresponding literal dead key used on the scanner keyboard.
+                         *   c)  a space, representing a corresponding literal dead key used on the scanner keyboard.
                          *       At the end of sequence, there is a non-dead key character, as for a).
                          *
                          *   Reproduce two or more sequences.
@@ -2968,6 +2968,7 @@ public class Calibrator {
              segmentIdx++) {
             var sequences = reportedSegments[segmentIdx];
             var expectedSequences = expectedSegments[segmentIdx];
+                
             var fixedUpReportedSegment = new List<string>();
 
             /* If the reported sequence contains too many items, we won't detect here, as this will be reported
@@ -3002,21 +3003,21 @@ public class Calibrator {
                     var splitSequence = SplitSequence(sequence);
                     fixedUpReportedSegment.AddRange(splitSequence);
 
-                    for (var fixedIpSequenceIdx = sequenceIdx;
-                         fixedIpSequenceIdx < sequenceIdx + splitSequence.Count;
-                         fixedIpSequenceIdx++) {
+                    for (var fixedUpSequenceIdx = sequenceIdx;
+                         fixedUpSequenceIdx < sequenceIdx + splitSequence.Count;
+                         fixedUpSequenceIdx++) {
 #if NET7_0_OR_GREATER
-                        if (!BarcodeScannerDeadKeysFilter2Regex().Match(fixedUpReportedSegment[fixedIpSequenceIdx]).Success)
+                        if (!BarcodeScannerDeadKeysFilter2Regex().Match(fixedUpReportedSegment[fixedUpSequenceIdx]).Success)
 #else
-                        if (!BarcodeScannerDeadKeysFilter2Regex.Match(fixedUpReportedSegment[fixedIpSequenceIdx]).Success)
+                        if (!BarcodeScannerDeadKeysFilter2Regex.Match(fixedUpReportedSegment[fixedUpSequenceIdx]).Success)
 #endif
                         {
                             continue;
                         }
 
-                        fixedUpReportedSegment[fixedIpSequenceIdx] =
-                            fixedUpReportedSegment[fixedIpSequenceIdx].TrimEnd();
-                        SetScannerDeadKey(fixedIpSequenceIdx);
+                        fixedUpReportedSegment[fixedUpSequenceIdx] =
+                            fixedUpReportedSegment[fixedUpSequenceIdx].TrimEnd();
+                        SetScannerDeadKey(fixedUpSequenceIdx);
                     }
 
                     continue;
@@ -3027,6 +3028,11 @@ public class Calibrator {
 
                 if (expectedSequences.Count <= fixedUpIndex) {
                     continue;
+                }
+
+                if (sequenceIdx == sequences.Count - 1) {
+                    fixedUpReportedSegment[fixedUpIndex] =
+                        fixedUpReportedSegment[fixedUpIndex].TrimEnd();
                 }
 
                 SetScannerDeadKey(fixedUpIndex);
@@ -5021,6 +5027,8 @@ public class Calibrator {
                         }
                     }
                     else {
+                        Console.WriteLine($"key: {key}; expectedChar: {expectedChar.ToInvariantString()}");
+                        Console.WriteLine($"reportedPrintables: {reportedPrintables.Aggregate((a, b) => a + b)}");
                         _tokenExtendedDataDeadKeysMap.Add(key, expectedChar.ToInvariantString());
                     }
                 }
