@@ -48,6 +48,7 @@ using Properties;
 
 using EnvToken = ProcessFlow.Environment<Token>;
 using SixLabors.ImageSharp;
+using System.Threading;
 
 /// <summary>
 ///   Delegate for pre-processor functions.
@@ -1091,6 +1092,13 @@ public class Calibrator {
             _tokenExtendedDataLigatureMap);
 
         @out = InitializeTokenData();
+
+        // Fix up the Caps Lock warnings by removing CapsLockProbablyOn if CapsLockOn is set.
+        // This has to be done after creating the system capabilities.
+        if (@out.Warnings.Any(i => i.InformationType == InformationType.CapsLockOn) &&
+            @out.Warnings.Any(i => i.InformationType == InformationType.CapsLockProbablyOn)) {
+            @out.RemoveInformation(@out.Warnings.Where(w => w.InformationType == InformationType.CapsLockProbablyOn).FirstOrDefault());
+        }
 
         // If the barcode scanner keyboard performance is less than optimal, post additional warnings or error to the log.
         switch (_tokenExtendedDataScannerKeyboardPerformance) {
@@ -3302,7 +3310,8 @@ public class Calibrator {
                 InferCaseConversionCapsLockOn(
                     localToken,
                     caseConversionCharacteristics!,
-                    platform));
+                    platform,
+                    LogCapsLockProbablyOn));
 
         // Infer the case conversion characteristics of the scanner and keyboard.
         EnvToken DetermineTheBarcodeScannerCaseConversionBehaviourForCapsLockOffOrUnknown(Token localToken) =>
@@ -4331,11 +4340,15 @@ public class Calibrator {
     /// <param name="token">The calibration token.</param>
     /// <param name="caseConversionCharacteristics">The case conversion characteristics.</param>
     /// <param name="platform">The operating system platform.</param>
+    /// <param name="setCapLockWarningAndIndicator">
+    ///   A function that sets the CAPS LOCK indicator as well as a warning message.
+    /// </param>
     /// <returns>The calibration token, populated to inferred information.</returns>
     private Token InferCaseConversionCapsLockOn(
         Token token,
         CaseConversionCharacteristics caseConversionCharacteristics,
-        SupportedPlatform platform) {
+        SupportedPlatform platform,
+        Func<Token, EnvToken> setCapLockWarningAndIndicator) {
         // Warning - Caps Lock is switched on.
         token = LogCalibrationInformation(
             token,
@@ -4410,7 +4423,7 @@ public class Calibrator {
             caseConversionCharacteristics.LowerCaseConversionDetected
 
                 // Character case is being inverted as expected.
-                ? token
+                ? setCapLockWarningAndIndicator(token).End()
 
                 // On most, but not all, platforms, this indicates that the scanner is configured
                 // to convert upper case characters to lower case. CAPS LOCK is then inverting
