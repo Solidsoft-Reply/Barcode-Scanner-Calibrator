@@ -337,13 +337,13 @@
     <value>Jūsų sistema negali patikimai skaityti brūkšninių kodų, jei jie turi neinvariantinių simbolių.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Jūsų sistema negali patikimai skaityti brūkšninių kodų, jei jie turi EDI duomenų.</value>
+    <value>Jūsų sistema negali patikimai nuskaityti brūkšninių kodų, jei juose yra elektroninių duomenų mainų (EDI) duomenų.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Jūsų sistema negali patikimai skaityti brūkšninių kodų, jei jie turi EDI duomenų.</value>
+    <value>Jūsų sistema negali patikimai nuskaityti brūkšninių kodų, jei juose yra elektroninių duomenų mainų (EDI) duomenų.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Jūsų sistema negali patikimai skaityti brūkšninių kodų, jei jie turi EDI duomenų.</value>
+    <value>Jūsų sistema negali patikimai nuskaityti brūkšninių kodų, jei juose yra elektroninių duomenų mainų (EDI) duomenų.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testas nepavyko.</value>

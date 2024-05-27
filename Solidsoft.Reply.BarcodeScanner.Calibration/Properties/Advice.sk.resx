@@ -337,13 +337,13 @@
     <value>Váš systém nemusí spoľahlivo čítať čiarové kódy, ak obsahujú neinvariantné znaky.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Váš systém nemusí spoľahlivo čítať čiarové kódy, ak obsahujú EDI údaje.</value>
+    <value>Váš systém nemôže spoľahlivo čítať čiarové kódy, ak obsahujú údaje pre elektronickú výmenu údajov (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Váš systém nemusí spoľahlivo čítať čiarové kódy, ak obsahujú EDI údaje.</value>
+    <value>Váš systém nemôže spoľahlivo čítať čiarové kódy, ak obsahujú údaje pre elektronickú výmenu údajov (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Váš systém nemusí spoľahlivo čítať čiarové kódy, ak obsahujú EDI údaje.</value>
+    <value>Váš systém nemôže spoľahlivo čítať čiarové kódy, ak obsahujú údaje pre elektronickú výmenu údajov (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test zlyhal.</value>

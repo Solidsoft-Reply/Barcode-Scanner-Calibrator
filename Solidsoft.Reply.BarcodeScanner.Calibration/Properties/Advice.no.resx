@@ -337,13 +337,13 @@
     <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder ikke-invariante tegn.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder EDI-data.</value>
+    <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen feilet.</value>

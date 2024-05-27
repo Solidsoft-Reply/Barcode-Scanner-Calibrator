@@ -337,13 +337,13 @@
     <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze niet-invariante karakters bevatten.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI data bevatten.</value>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI data bevatten.</value>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze EDI data bevatten.</value>
+    <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>De test is mislukt.</value>

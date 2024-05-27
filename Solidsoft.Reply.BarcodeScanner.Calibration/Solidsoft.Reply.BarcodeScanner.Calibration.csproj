@@ -23,6 +23,8 @@
 
 		2) Fixed an issue where, when an ambiguity occurs for a control character, a character map entry is incorrectly created.
 
+		3) Improved the advice handling for EDI issues.
+
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.

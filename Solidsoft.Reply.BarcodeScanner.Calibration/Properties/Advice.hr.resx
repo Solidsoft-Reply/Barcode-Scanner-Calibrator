@@ -337,13 +337,13 @@
     <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže neinvarijantne znakove.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Vaš sustav ne može pouzdano čitati bar kodove ako sadrže EDI podatke.</value>
+    <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nije uspio.</value>

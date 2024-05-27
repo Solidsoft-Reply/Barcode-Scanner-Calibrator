@@ -237,15 +237,17 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 270, 271, 275
         AddAdviceItemToList(
             IfDataWasFullyReported()
-            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators() // 275
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()
                 ? IfWeCannotReadEdiCharactersReliably()
-                    ? ReportThatTheSystemCannotReadEdiCharactersReliably()
+                    ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
                     : IfWeAssumeAgnosticism()
                         ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() // 270
                         : IfWeAssumeNoCalibration()
                             ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() // 271
                             : null
-                : null);
+                : IfWeCannotReadEdiCharactersReliably()
+                    ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
+                    : null);
 
         // AdviceType: 300
         AddAdviceItemToList(

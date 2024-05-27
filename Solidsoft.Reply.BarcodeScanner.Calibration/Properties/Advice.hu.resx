@@ -337,13 +337,13 @@
     <value>A rendszere nem tudja megbízhatóan olvasni a vonalkódokat, ha azok nem állandó karaktereket tartalmaznak.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>A rendszere nem tudja megbízhatóan olvasni a vonalkódokat, ha azok EDI adatokat tartalmaznak.</value>
+    <value>A rendszered nem tudja megbízhatóan olvasni a vonalkódokat, ha azok elektronikus adatcseréhez (EDI) tartozó adatokat tartalmaznak.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>A rendszere nem tudja megbízhatóan olvasni a vonalkódokat, ha azok EDI adatokat tartalmaznak.</value>
+    <value>A rendszered nem tudja megbízhatóan olvasni a vonalkódokat, ha azok elektronikus adatcseréhez (EDI) tartozó adatokat tartalmaznak.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>A rendszere nem tudja megbízhatóan olvasni a vonalkódokat, ha azok EDI adatokat tartalmaznak.</value>
+    <value>A rendszered nem tudja megbízhatóan olvasni a vonalkódokat, ha azok elektronikus adatcseréhez (EDI) tartozó adatokat tartalmaznak.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>A teszt sikertelen volt.</value>

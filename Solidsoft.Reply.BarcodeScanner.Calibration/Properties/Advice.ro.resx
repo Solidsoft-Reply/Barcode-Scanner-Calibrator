@@ -337,13 +337,13 @@
     <value>Sistemul tău nu poate citi în mod fiabil codurile de bare care conțin caractere non-invariante.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Sistemul tău nu poate citi în mod fiabil codurile de bare care conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Sistemul tău nu poate citi în mod fiabil codurile de bare care conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Sistemul tău nu poate citi în mod fiabil codurile de bare care conțin date EDI.</value>
+    <value>Sistemul dvs. nu poate citi fiabil codurile de bare dacă acestea conțin date pentru schimbul electronic de date (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testul a eșuat.</value>

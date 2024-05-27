@@ -337,13 +337,13 @@
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des caractères non invariants.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
+    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données pour l'échange de données électroniques (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
+    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données pour l'échange de données électroniques (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données EDI.</value>
+    <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données pour l'échange de données électroniques (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>

@@ -337,13 +337,13 @@
     <value>Kerfið þitt getur ekki lesið strikamerki áreiðanlega ef þau innihalda óbreytanlega stafi.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Kerfið þitt getur ekki lesið strikamerki áreiðanlega ef þau innihalda EDI gögn.</value>
+    <value>Kerfið þitt getur ekki lesið strikamerki á áreiðanlegan hátt ef þau innihalda gögn fyrir rafrænan gagnaflutning (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Kerfið þitt getur ekki lesið strikamerki áreiðanlega ef þau innihalda EDI gögn.</value>
+    <value>Kerfið þitt getur ekki lesið strikamerki á áreiðanlegan hátt ef þau innihalda gögn fyrir rafrænan gagnaflutning (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Kerfið þitt getur ekki lesið strikamerki áreiðanlega ef þau innihalda EDI gögn.</value>
+    <value>Kerfið þitt getur ekki lesið strikamerki á áreiðanlegan hátt ef þau innihalda gögn fyrir rafrænan gagnaflutning (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Prófið mistókst.</value>

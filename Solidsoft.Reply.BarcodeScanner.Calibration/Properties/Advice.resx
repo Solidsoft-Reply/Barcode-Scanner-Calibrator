@@ -410,15 +410,15 @@
     <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain EDI data.</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">

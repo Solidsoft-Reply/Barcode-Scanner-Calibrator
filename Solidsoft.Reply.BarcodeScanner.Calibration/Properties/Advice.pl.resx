@@ -337,13 +337,13 @@
     <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają niezmiennicze znaki.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane EDI.</value>
+    <value>Twój system nie może niezawodnie odczytywać kodów kreskowych, jeśli zawierają dane do elektronicznej wymiany danych (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test się nie powiódł.</value>

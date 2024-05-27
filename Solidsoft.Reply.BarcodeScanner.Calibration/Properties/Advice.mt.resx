@@ -337,13 +337,13 @@
     <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom karattri mhux invarianti.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra barcodes b'mod affidabbli jekk fihom data EDI.</value>
+    <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>It-test falla.</value>

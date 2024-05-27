@@ -337,13 +337,13 @@
     <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie nicht-invariante Zeichen enthalten.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie EDI-Daten enthalten.</value>
+    <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Der Test ist fehlgeschlagen.</value>

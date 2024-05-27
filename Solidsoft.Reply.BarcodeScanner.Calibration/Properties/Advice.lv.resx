@@ -337,13 +337,13 @@
     <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur neinvariantas rakstzīmes.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tie satur EDI datus.</value>
+    <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Tests neizdevās.</value>

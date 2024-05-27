@@ -337,13 +337,13 @@
     <value>Järjestelmäsi ei pysty lukemaan viivakoodeja luotettavasti, jos ne sisältävät ei-invariantteja merkkejä.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty lukemaan viivakoodeja luotettavasti, jos ne sisältävät EDI-dataa.</value>
+    <value>Järjestelmäsi ei voi luotettavasti lukea viivakoodeja, jos ne sisältävät tietoja sähköistä tiedonsiirtoa (EDI) varten.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty lukemaan viivakoodeja luotettavasti, jos ne sisältävät EDI-dataa.</value>
+    <value>Järjestelmäsi ei voi luotettavasti lukea viivakoodeja, jos ne sisältävät tietoja sähköistä tiedonsiirtoa (EDI) varten.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty lukemaan viivakoodeja luotettavasti, jos ne sisältävät EDI-dataa.</value>
+    <value>Järjestelmäsi ei voi luotettavasti lukea viivakoodeja, jos ne sisältävät tietoja sähköistä tiedonsiirtoa (EDI) varten.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testi epäonnistui.</value>

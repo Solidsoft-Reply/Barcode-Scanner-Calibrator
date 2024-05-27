@@ -337,13 +337,13 @@
     <value>Ditt system kan inte pålitligt läsa streckkoder som innehåller icke-invarianta tecken.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Ditt system kan inte pålitligt läsa streckkoder som innehåller EDI-data.</value>
+    <value>Ditt system kan inte läsa streckkoder tillförlitligt om de innehåller data för Elektroniskt Datautbyte (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Ditt system kan inte pålitligt läsa streckkoder som innehåller EDI-data.</value>
+    <value>Ditt system kan inte läsa streckkoder tillförlitligt om de innehåller data för Elektroniskt Datautbyte (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Ditt system kan inte pålitligt läsa streckkoder som innehåller EDI-data.</value>
+    <value>Ditt system kan inte läsa streckkoder tillförlitligt om de innehåller data för Elektroniskt Datautbyte (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testet misslyckades.</value>

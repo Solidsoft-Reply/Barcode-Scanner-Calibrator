@@ -337,13 +337,13 @@
     <value>Vaš sistem ne more zanesljivo brati črtnih kod, če vsebujejo neinvariantne znake.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Vaš sistem ne more zanesljivo brati črtnih kod, če vsebujejo podatke EDI.</value>
+    <value>Vaš sistem ne more zanesljivo brati črtnih kodov, če vsebujejo podatke za elektronsko izmenjavo podatkov (EDI).</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Vaš sistem ne more zanesljivo brati črtnih kod, če vsebujejo podatke EDI.</value>
+    <value>Vaš sistem ne more zanesljivo brati črtnih kodov, če vsebujejo podatke za elektronsko izmenjavo podatkov (EDI).</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Vaš sistem ne more zanesljivo brati črtnih kod, če vsebujejo podatke EDI.</value>
+    <value>Vaš sistem ne more zanesljivo brati črtnih kodov, če vsebujejo podatke za elektronsko izmenjavo podatkov (EDI).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test ni uspel.</value>

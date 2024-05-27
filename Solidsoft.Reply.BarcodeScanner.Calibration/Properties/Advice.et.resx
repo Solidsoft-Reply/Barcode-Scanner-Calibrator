@@ -337,13 +337,13 @@
     <value>Teie süsteem ei suuda vöötkoode usaldusväärselt lugeda, kui need sisaldavad mitteinvariantseid tähemärke.</value>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Teie süsteem ei suuda vöötkoode usaldusväärselt lugeda, kui need sisaldavad EDI andmeid.</value>
+    <value>Teie süsteem ei suuda triipkoode usaldusväärselt lugeda, kui need sisaldavad elektroonilise andmevahetuse (EDI) andmeid.</value>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Teie süsteem ei suuda vöötkoode usaldusväärselt lugeda, kui need sisaldavad EDI andmeid.</value>
+    <value>Teie süsteem ei suuda triipkoode usaldusväärselt lugeda, kui need sisaldavad elektroonilise andmevahetuse (EDI) andmeid.</value>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Teie süsteem ei suuda vöötkoode usaldusväärselt lugeda, kui need sisaldavad EDI andmeid.</value>
+    <value>Teie süsteem ei suuda triipkoode usaldusväärselt lugeda, kui need sisaldavad elektroonilise andmevahetuse (EDI) andmeid.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nurjus.</value>
