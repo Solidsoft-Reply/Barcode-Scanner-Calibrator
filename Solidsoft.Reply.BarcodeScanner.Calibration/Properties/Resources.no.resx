@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Støtte for EDI-separator-tegn.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Enhetsseparator-tegn støttes.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Strekkodeskanneren kan være konfigurert til å kompensere for Caps Lock.</value>
   </data>

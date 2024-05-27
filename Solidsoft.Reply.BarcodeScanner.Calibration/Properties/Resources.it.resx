@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>I caratteri separatore EDI sono supportati.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>I caratteri separatori di unità sono supportati.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Lo scanner di codici a barre potrebbe essere configurato per compensare il blocco maiuscole.</value>
   </data>

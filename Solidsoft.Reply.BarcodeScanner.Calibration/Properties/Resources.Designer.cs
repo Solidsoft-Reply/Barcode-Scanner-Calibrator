@@ -205,6 +205,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unit separator characters are supported..
+        /// </summary>
+        internal static string CalibrationInformation_163 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_163", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The barcode scanner may be configured to compensate for Caps Lock..
         /// </summary>
         internal static string CalibrationInformation_170 {

@@ -21,6 +21,8 @@
 
 		1) Fixed an issue where the Calibrator would incorrectly infer that the scanner is compensationg for Caps Lock.
 
+		2) Fixed an issue where, when an ambiguity occurs for a control character, a character map entry is incorrectly created.
+
 	</PackageReleaseNotes>
 	<Description>
 		A library that calibrates application software to the combination of the barcode scanner configuration and OS keyboard layout.

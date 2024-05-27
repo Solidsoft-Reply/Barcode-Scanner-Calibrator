@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Caracterele separator EDI sunt suportate.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Caracterele separatoare de unitate sunt acceptate.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Scanerul de coduri de bare poate fi configurat pentru a compensa Caps Lock.</value>
   </data>

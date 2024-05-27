@@ -2355,11 +2355,11 @@ public class Calibrator {
     /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1008:Opening parenthesis should be spaced correctly", Justification = "<Pending>")]
     private (Token token, string suffix, string endOfLine) CalibrateBaseLine(
-        string data, 
-        Token token, 
-        bool? capsLock = null, 
-        SupportedPlatform platform = SupportedPlatform.Windows, 
-        TimeSpan dataEntryTimeSpan = default, 
+        string data,
+        Token token,
+        bool? capsLock = null,
+        SupportedPlatform platform = SupportedPlatform.Windows,
+        TimeSpan dataEntryTimeSpan = default,
         bool assessScript = true) {
 
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
@@ -5078,8 +5078,6 @@ public class Calibrator {
                         }
                     }
                     else {
-                        Console.WriteLine($"key: {key}; expectedChar: {expectedChar.ToInvariantString()}");
-                        Console.WriteLine($"reportedPrintables: {reportedPrintables.Aggregate((a, b) => a + b)}");
                         _tokenExtendedDataDeadKeysMap.Add(key, expectedChar.ToInvariantString());
                     }
                 }
@@ -6514,14 +6512,9 @@ public class Calibrator {
                                         $"{key.ToControlPictureString()} {expectedControl.First().ToControlPictureString()}");
                                 }
 
-                                _tokenExtendedDataCharacterMap.Add(key, expectedControl.First());
-
                                 token = AsciiChars.Contains(key, StringComparison.Ordinal)
-
-                                    // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                    // EDI data cannot be reliably read.
                                     ? LogAmbiguity()
-                                    : token;
+                                    : AddMapping();
 
                                 token = LogIsoIec15434SeparatorSupport(token, idx);
 
@@ -6536,10 +6529,14 @@ public class Calibrator {
                                             token,
                                             InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                             key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                                         _ => token
-                                        /* EDI data cannot be reliably read.*/
                                     };
+
+                                Token AddMapping() {
+                                    _tokenExtendedDataCharacterMap.Add(key, expectedControl.First());
+                                    return token;
+                                }
                             }
                             else {
                                 correspondence = true;

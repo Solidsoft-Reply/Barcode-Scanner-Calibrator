@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Znaki separatora EDI są obsługiwane.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Znaki separatora jednostki są obsługiwane.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Skaner kodów kreskowych może być skonfigurowany do kompensacji Caps Lock.</value>
   </data>

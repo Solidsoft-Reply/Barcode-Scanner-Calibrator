@@ -158,6 +158,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Les caractères de séparateur EDI sont pris en charge.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Les caractères de séparation d'unité sont pris en charge.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Le scanner de code-barres peut être configuré pour compenser le verrouillage des majuscules.</value>
   </data>

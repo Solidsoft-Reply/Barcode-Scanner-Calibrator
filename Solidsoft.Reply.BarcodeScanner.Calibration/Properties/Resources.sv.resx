@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Tecken för EDI-separatorer stöds.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Enhetsavgränsningstecken stöds.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Streckkodsläsaren kan vara konfigurerad för att kompensera för Caps Lock.</value>
   </data>

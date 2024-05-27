@@ -157,7 +157,7 @@ public static class Calibrations {
 
     public const string LexonErrorBCalibration = "";
 
-    public const string LexonErrorCCalibration = "{\"characterMap\":{\"@\":\"\\u001d\",\"\\u0000\":\"\\u001e\"},\"reportedCharacters" +
+    public const string LexonErrorCCalibration = "{\"characterMap\":{\"\\u0000\":\"\\u001e\"},\"reportedCharacters" +
                                                  "\":\"!\\\"%&\'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijkl" +
                                                  "mnopqrstuvwxyz#$@[\\\\]^`{|}~\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\"," +
                                                  "\"keyboardScript\":\"Latin\"}";

@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Поддържат се символи за разделител EDI.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Поддържат се знаци за разделяне на единици.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Баркод скенерът може да бъде конфигуриран да компенсира Caps Lock.</value>
   </data>

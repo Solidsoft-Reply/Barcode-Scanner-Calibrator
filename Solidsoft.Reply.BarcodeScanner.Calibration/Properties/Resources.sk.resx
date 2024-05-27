@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Podporované sú znaky oddeľovača EDI.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Znak oddelovača jednotiek je podporovaný.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Čítačka čiarových kódov môže byť nakonfigurovaná na kompenzáciu Caps Lock.</value>
   </data>

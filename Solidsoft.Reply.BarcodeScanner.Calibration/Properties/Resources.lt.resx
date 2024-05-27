@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Palaikomi EDI skyrikliai.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Palaikomi vienetų skyrimo simboliai.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas gali būti nustatytas kompensuoti Caps Lock.</value>
   </data>

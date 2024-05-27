@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Υποστηρίζονται οι χαρακτήρες διαχωριστή EDI.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Οι χαρακτήρες διαχωρισμού μονάδων υποστηρίζονται.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Ο саρωτής barcode μπορεί να είναι διαμορфωμένος για να αντισταθμίσει το Caps Lock.</value>
   </data>

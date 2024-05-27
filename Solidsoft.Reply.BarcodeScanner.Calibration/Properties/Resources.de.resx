@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI-Trennzeichen werden unterstützt.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Einheitstrennzeichen werden unterstützt.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Der Barcode-Scanner könnte konfiguriert sein, um Caps Lock zu kompensieren.</value>
   </data>

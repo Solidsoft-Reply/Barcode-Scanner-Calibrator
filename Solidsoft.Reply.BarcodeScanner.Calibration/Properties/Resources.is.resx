@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI skiljastafi eru studdir.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Einingarskilamerki eru studd.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Strikamerkjalesarinn gæti verið stilltur til að bæta úr fyrir Caps Lock.</value>
   </data>

@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Podržani su znakovi EDI separatora.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Podržani su znakovi razdvajanja jedinica.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Skener bar kodova može biti konfiguriran za kompenzaciju Caps Lock-a.</value>
   </data>

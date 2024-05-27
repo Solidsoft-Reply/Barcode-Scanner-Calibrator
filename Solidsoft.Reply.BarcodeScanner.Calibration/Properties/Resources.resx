@@ -358,4 +358,7 @@
   <data name="CalibrationInformation_305" xml:space="preserve">
     <value>An attempt was made to calibrate a barcode, but no calibration token was provided.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Unit separator characters are supported.</value>
+  </data>
 </root>

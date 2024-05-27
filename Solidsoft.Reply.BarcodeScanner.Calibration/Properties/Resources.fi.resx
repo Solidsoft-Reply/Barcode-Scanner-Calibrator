@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI-erotinmerkit ovat tuettuja.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Yksikön erottimet ovat tuettuja.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Viivakoodinlukija voidaan konfiguroida kompensoimaan Caps Lockin.</value>
   </data>

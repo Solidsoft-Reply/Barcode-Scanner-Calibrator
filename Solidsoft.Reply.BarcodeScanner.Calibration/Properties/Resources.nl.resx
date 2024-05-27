@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI-scheidingskarakters worden ondersteund.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Eenheidsscheidingstekens worden ondersteund.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>De barcode scanner kan geconfigureerd zijn om te compenseren voor Caps Lock.</value>
   </data>

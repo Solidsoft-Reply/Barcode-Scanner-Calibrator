@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI-separatortegn understøttes.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Enhedsskilletegn understøttes.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Stregkodescanneren kan være konfigureret til at kompensere for Caps Lock.</value>
   </data>

@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Tacaítear le carachtair scartha EDI.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Tacaítear le carachtair deighilte aonad.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>D'fhéadfadh an scanóir baracóid a bheith cumraithe chun cúiteamh a dhéanamh do Caps Lock.</value>
   </data>

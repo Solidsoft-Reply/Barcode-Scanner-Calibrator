@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Podprti so znaki ločila EDI.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Podprti so ločevalni znaki enote.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Čitalnik črtnih kod je morda nastavljen za kompenzacijo Caps Lock.</value>
   </data>

@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Az Edi Separator karakterek támogatottak.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Az egységelválasztó karakterek támogatottak.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>A vonalkódolvasó beállítható a Caps Lock kompenzálására.</value>
   </data>

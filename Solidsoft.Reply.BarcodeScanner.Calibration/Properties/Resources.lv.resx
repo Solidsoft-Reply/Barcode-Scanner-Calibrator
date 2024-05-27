@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>EDI atdalītāju rakstzīmes tiek atbalstītas.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Atbalstīti vienību atdalīšanas rakstzīmes.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Svītrkodu skeneris var tikt konfigurēts, lai kompensētu Caps Lock.</value>
   </data>

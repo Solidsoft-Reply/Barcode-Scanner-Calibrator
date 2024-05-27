@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Los caracteres separadores EDI son compatibles.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Se admiten caracteres de separador de unidad.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>El escáner de códigos de barras puede estar configurado para compensar el bloqueo de mayúsculas.</value>
   </data>

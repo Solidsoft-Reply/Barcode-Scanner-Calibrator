@@ -156,6 +156,9 @@
   <data name="CalibrationInformation_162" xml:space="preserve">
     <value>Karattri separatori Edi huma appoġġjati.</value>
   </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Il-karattri ta' separazzjoni ta' unità huma appoġġjati.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>L-iskanner tal-barcode jista' jkun ikkonfigurat biex jikkumpensa għall-Caps Lock.</value>
   </data>
