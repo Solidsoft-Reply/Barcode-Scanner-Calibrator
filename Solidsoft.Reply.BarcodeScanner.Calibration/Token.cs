@@ -309,6 +309,7 @@ public readonly record struct Token(
                                           oldToken.SystemCapabilities.KeyboardScriptDoesNotSupportCase,
                                           oldToken.SystemCapabilities.CapsLockIndicator,
                                           oldToken.SystemCapabilities.ScannerKeyboardPerformance,
+                                          oldToken.SystemCapabilities.ScannerCharactersPerSecond,
                                           oldToken.SystemCapabilities.FormatSupportAssessed,
                                           oldToken.SystemCapabilities.AimIdentifier,
                                           oldToken.SystemCapabilities.AimIdentifierUncertain,
@@ -349,6 +350,7 @@ public readonly record struct Token(
                                       oldToken.ExtendedData?.ReportedSuffix ?? string.Empty,
                                       oldToken.ExtendedData?.KeyboardScript ?? string.Empty,
                                       oldToken.ExtendedData?.ScannerKeyboardPerformance ?? ScannerKeyboardPerformance.High,
+                                      oldToken.ExtendedData?.ScannerCharactersPerSecond ?? 0,
                                       oldToken.ExtendedData?.AimFlagCharacterSequence ?? string.Empty,
                                       oldToken.ExtendedData?.ReportedCharacters ?? string.Empty,
                                       oldToken.ExtendedData?.PotentialIsoIec15434Unreadable30 ?? false,
@@ -527,6 +529,7 @@ public readonly record struct Token(
     /// <param name="reportedSuffix">Any suffix reported during calibration.</param>
     /// <param name="keyboardScript">The Unicode name of the keyboard script.</param>
     /// <param name="scannerKeyboardPerformance">The 'Traffic Light' assessment of the performance of the barcode scanner keyboard input.</param>
+    /// <param name="scannerCharactersPerSecond">Performance of the barcode scanner keyboard input in characters per second.</param>
     /// <param name="aimFlagCharacterSequence">
     ///   The first (flag) character. By default, this is "]". If a dead key is used, the
     ///   sequence will contain two characters.
@@ -579,6 +582,7 @@ public readonly record struct Token(
         string reportedSuffix,
         string keyboardScript,
         ScannerKeyboardPerformance scannerKeyboardPerformance,
+        int scannerCharactersPerSecond,
         string aimFlagCharacterSequence,
         string reportedCharacters,
         bool potentialIsoIec15434Unreadable30,
@@ -606,6 +610,7 @@ public readonly record struct Token(
             reportedSuffix,
             keyboardScript,
             scannerKeyboardPerformance,
+            scannerCharactersPerSecond,
             aimFlagCharacterSequence,
             reportedCharacters,
             potentialIsoIec15434Unreadable30,

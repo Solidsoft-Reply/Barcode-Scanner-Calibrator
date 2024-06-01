@@ -203,6 +203,9 @@ using Properties;
 /// <param name="ScannerKeyboardPerformance">
 ///   Gets the time span specifying how long it took from the start of the scan to submitting the data.
 /// </param>
+/// <param name="ScannerCharactersPerSecond">
+///   Gets the performance of the barcode scanner keyboard input in characters per second.
+/// </param>
 /// <remarks>
 ///   This cannot be determined with 100% certainty.
 /// </remarks>
@@ -287,22 +290,23 @@ public sealed record SystemCapabilities(
     [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 28)] bool? KeyboardScriptDoesNotSupportCase = null,
     [property: JsonProperty("capsLockIndicator", Order = 29)] bool CapsLockIndicator = false,
     [property: JsonProperty("scannerKeyboardPerformance", Order = 30)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
-    [property: JsonProperty("formatSupportAssessed", Order = 31)] bool FormatSupportAssessed = false,
-    [property: JsonProperty("aimIdentifier", Order = 32)] string? AimIdentifier = null,
-    [property: JsonProperty("aimIdentifierUncertain", Order = 33)] bool AimIdentifierUncertain = false,
-    [property: JsonProperty("endOfLineSequence", Order = 34)] string? EndOfLineSequence = null,
-    [property: JsonProperty("additionalPrefix", Order = 35)] string AdditionalPrefix = "",
-    [property: JsonProperty("additionalCode", Order = 36)] string AdditionalCode = "",
-    [property: JsonProperty("additionalSuffix", Order = 37)] string AdditionalSuffix = "",
-    [property: JsonProperty("keyboardScript", Order = 38)] string KeyboardScript = "",
-    [property: JsonProperty("platform", Order = 39)] SupportedPlatform Platform = SupportedPlatform.Windows,
-    [property: JsonProperty("deadKeys", Order = 40)] bool DeadKeys = false,
-    [property: JsonProperty("characterMappings", Order = 41)] IList<CharacterMapping>? CharacterMappings = null,
-    [property: JsonProperty("deadKeyMappings", Order = 42)] IList<DeadKeyMapping>? DeadKeyMappings = null,
-    [property: JsonProperty("ambiguities", Order = 43)] IList<Ambiguity>? Ambiguities = null,
-    [property: JsonProperty("unrecognisedCharacters", Order = 44)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
-    [property: JsonProperty("ligatureMappings", Order = 45)] IList<LigatureMapping>? LigatureMappings = null,
-    [property: JsonProperty("calibrationAssumption", Order = 46)] Assumption Assumption = Assumption.Agnostic)
+    [property: JsonProperty("scannerCharactersPerSecond", Order = 31)] int ScannerCharactersPerSecond = 0,
+    [property: JsonProperty("formatSupportAssessed", Order = 32)] bool FormatSupportAssessed = false,
+    [property: JsonProperty("aimIdentifier", Order = 33)] string? AimIdentifier = null,
+    [property: JsonProperty("aimIdentifierUncertain", Order = 34)] bool AimIdentifierUncertain = false,
+    [property: JsonProperty("endOfLineSequence", Order = 35)] string? EndOfLineSequence = null,
+    [property: JsonProperty("additionalPrefix", Order = 36)] string AdditionalPrefix = "",
+    [property: JsonProperty("additionalCode", Order = 37)] string AdditionalCode = "",
+    [property: JsonProperty("additionalSuffix", Order = 38)] string AdditionalSuffix = "",
+    [property: JsonProperty("keyboardScript", Order = 39)] string KeyboardScript = "",
+    [property: JsonProperty("platform", Order = 40)] SupportedPlatform Platform = SupportedPlatform.Windows,
+    [property: JsonProperty("deadKeys", Order = 41)] bool DeadKeys = false,
+    [property: JsonProperty("characterMappings", Order = 42)] IList<CharacterMapping>? CharacterMappings = null,
+    [property: JsonProperty("deadKeyMappings", Order = 43)] IList<DeadKeyMapping>? DeadKeyMappings = null,
+    [property: JsonProperty("ambiguities", Order = 44)] IList<Ambiguity>? Ambiguities = null,
+    [property: JsonProperty("unrecognisedCharacters", Order = 45)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
+    [property: JsonProperty("ligatureMappings", Order = 46)] IList<LigatureMapping>? LigatureMappings = null,
+    [property: JsonProperty("calibrationAssumption", Order = 47)] Assumption Assumption = Assumption.Agnostic)
 : BaseRecord {
     /// <summary>
     ///   Indicates whether the keyboard Caps Lock key is on or off.
@@ -316,6 +320,7 @@ public sealed record SystemCapabilities(
     /// <param name="assumption">The assumption made concerning the use of calibration in client systems.</param>
     /// <param name="capsLock">Indicates whether Caps Lock is switched on.</param>
     /// <param name="scannerKeyboardPerformance">'Traffic Light' assessment of the performance of the barcode scanner keyboard input.</param>
+    /// <param name="scannerCharactersPerSecond">Performance of the barcode scanner keyboard input in characters per second.</param>
     /// <param name="formatSupportAssessed">Indicates whether calibration included tests for Format nn support.</param>
     /// <param name="deadKeys">Indicates whether dead key barcodes are required for calibration.</param>
     /// <param name="characterMap">A dictionary of differences in reported and expected characters.</param>
@@ -331,6 +336,7 @@ public sealed record SystemCapabilities(
         Assumption assumption,
         bool? capsLock,
         ScannerKeyboardPerformance scannerKeyboardPerformance,
+        int scannerCharactersPerSecond,
         bool formatSupportAssessed,
         bool deadKeys,
         IDictionary<char, char>? characterMap,
@@ -349,6 +355,7 @@ public sealed record SystemCapabilities(
         Assumption = assumption;
         FormatSupportAssessed = formatSupportAssessed;
         ScannerKeyboardPerformance = scannerKeyboardPerformance;
+        ScannerCharactersPerSecond = scannerCharactersPerSecond;
         DeadKeys = deadKeys;
 
         // Process information
@@ -771,7 +778,7 @@ public sealed record SystemCapabilities(
             deadKeyCharacterMap?.Select(deadKeyCharacterMapping =>
                 new CharacterMapping(
                     deadKeyCharacterMapping.Value.ToControlPicture(),
-                    deadKeyCharacterMapping.Key[(deadKeyCharacterMapping.Key.LastIndexOf('\0') + 1) ..].ToControlPictures(),
+                    deadKeyCharacterMapping.Key[(deadKeyCharacterMapping.Key.LastIndexOf('\0') + 1)..].ToControlPictures(),
                     CalibrationCharacterCategory(deadKeyCharacterMapping.Value),
                     true)) ?? Array.Empty<CharacterMapping>());
 #pragma warning restore IDE0301 // Simplify collection initialization

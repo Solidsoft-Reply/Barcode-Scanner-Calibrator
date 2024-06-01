@@ -22,6 +22,7 @@
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System.Collections.Generic;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

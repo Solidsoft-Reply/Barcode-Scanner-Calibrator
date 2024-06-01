@@ -22,6 +22,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+
 using Newtonsoft.Json;
 
 /// <summary>
@@ -73,6 +74,9 @@ using Newtonsoft.Json;
 /// <param name="ScannerKeyboardPerformance">
 ///   'Traffic Light' assessment of the performance of the barcode scanner keyboard input.
 /// </param>
+/// <param name="ScannerCharactersPerSecond">
+///   Performance of the barcode scanner keyboard input in characters per second.
+/// </param>
 /// <param name="LineFeedCharacter">
 ///   The control character that naps to the line feed character.
 /// </param>
@@ -92,7 +96,8 @@ public sealed record Data(
     [property: JsonProperty("suffix", Order = 10)] string? Suffix = null,
     [property: JsonProperty("keyboardScript", Order = 11)] string? KeyboardScript = null,
     [property: JsonProperty("scannerKeyboardPerformance", Order = 12)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
-    [property: JsonProperty("lineFeedCharacter", Order = 13)] string? LineFeedCharacter = null) {
+    [property: JsonProperty("scannerCharactersPerSecond", Order = 13)] int ScannerCharactersPerSecond = 0,
+    [property: JsonProperty("lineFeedCharacter", Order = 14)] string? LineFeedCharacter = null) {
     /// <summary>
     ///   Initializes a new instance of the <see cref="Data" /> class.
     /// </summary>
@@ -134,6 +139,7 @@ public sealed record Data(
         ScannerDeadKeysMap = calibration.ScannerDeadKeysMap ?? new Dictionary<string, string>();
         ScannerUnassignedKeys = calibration.ScannerUnassignedKeys;
         ScannerKeyboardPerformance = calibration.ScannerKeyboardPerformance;
+        ScannerCharactersPerSecond = calibration.ScannerCharactersPerSecond;
     }
 
     /// <summary>

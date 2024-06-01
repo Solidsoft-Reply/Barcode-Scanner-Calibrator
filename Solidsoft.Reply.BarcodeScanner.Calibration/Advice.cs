@@ -699,199 +699,199 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
 
         // 100
         AdviceItem ReportThatInvariantCharactersAreReadReliably() =>
-            new (AdviceType.ReadsInvariantCharactersReliably);
+            new(AdviceType.ReadsInvariantCharactersReliably);
 
         // 105
         AdviceItem ReportThatInvariantCharactersAreReadReliablyButTheFormatTestWasOmitted() =>
-            new (AdviceType.ReadsInvariantCharactersReliablyNoFormatTest);
+            new(AdviceType.ReadsInvariantCharactersReliablyNoFormatTest);
 
         // 110
         AdviceItem ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() =>
-            new (AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
+            new(AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
 
         // 115
         AdviceItem ReportThatInvariantCharactersButNotFormat05OrFormat06AreReadReliably() =>
-            new (AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506);
+            new(AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506);
 
         // 200
         AdviceItem ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers() =>
-            new (AdviceType.NotTransmittingAim);
+            new(AdviceType.NotTransmittingAim);
 
         // 205
         AdviceItem ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly() =>
-            new (AdviceType.CapsLockCompensation);
+            new(AdviceType.CapsLockCompensation);
 
         // 206
         AdviceItem ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved() =>
-            new (AdviceType.CapsLockOnPreservationMacintosh);
+            new(AdviceType.CapsLockOnPreservationMacintosh);
 
         // 210
         AdviceItem ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase() =>
-            new (AdviceType.CapsLockOnNoCase);
+            new(AdviceType.CapsLockOnNoCase);
 
         // 215
         AdviceItem ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence() =>
-            new (AdviceType.NotTransmittingEndOfLine);
+            new(AdviceType.NotTransmittingEndOfLine);
 
         // 220
         AdviceItem ReportThatTheScannerTransmitsAPrefix() =>
-            new (AdviceType.TransmittingPrefix);
+            new(AdviceType.TransmittingPrefix);
 
         // 225
         AdviceItem ReportThatTheScannerTransmitsASuffix() =>
-            new (AdviceType.TransmittingSuffix);
+            new(AdviceType.TransmittingSuffix);
 
         // 230
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism() =>
-            new (AdviceType.MayNotReadAim);
+            new(AdviceType.MayNotReadAim);
 
         // 231
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new (AdviceType.CannotReadAimNoCalibration);
+            new(AdviceType.CannotReadAimNoCalibration);
 
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>
-            new (AdviceType.MayNotTransmitAim);
+            new(AdviceType.MayNotTransmitAim);
 
         // 235
         AdviceItem ReportThatWeCannotReadAimIdentifiers() =>
-            new (AdviceType.CannotReadAim);
+            new(AdviceType.CannotReadAim);
 
         // 240
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() =>
-            new (AdviceType.MayNotReadFormat0506);
+            new(AdviceType.MayNotReadFormat0506);
 
         // 241
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
-            new (AdviceType.MayNotReadFormat0506NoCalibration);
+            new(AdviceType.MayNotReadFormat0506NoCalibration);
 
         // 245
         AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
-            new (AdviceType.CannotReadAnsiMh1082Reliably);
+            new(AdviceType.CannotReadAnsiMh1082Reliably);
 
         // 250
         AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>
-            new (AdviceType.Gs1OnlyTest);
+            new(AdviceType.Gs1OnlyTest);
 
         // 255
         AdviceItem ReportThatTheDataInputPerformanceIsSlowerThanExpected() =>
-            new (AdviceType.SlowScannerPerformance);
+            new(AdviceType.SlowScannerPerformance);
 
         // 256
         AdviceItem ReportThatTheDataInputPerformanceIsVeryPoor() =>
-            new (AdviceType.VerySlowScannerPerformance);
+            new(AdviceType.VerySlowScannerPerformance);
 
         // 260
         AdviceItem ReportThatNonInvariantCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new (AdviceType.MayNotReadNonInvariantCharactersReliably);
+            new(AdviceType.MayNotReadNonInvariantCharactersReliably);
 
         // 261
         AdviceItem ReportThatNonInvariantCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new (AdviceType.MayNotReadNonInvariantCharactersNoCalibration);
+            new(AdviceType.MayNotReadNonInvariantCharactersNoCalibration);
 
         // 265
         AdviceItem ReportThatTheSystemCannotReadNonInvariantCharactersReliably() =>
-            new (AdviceType.CannotReadNonInvariantCharacters);
+            new(AdviceType.CannotReadNonInvariantCharacters);
 
         // 270
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new (AdviceType.MayNotReadEdiCharactersReliably);
+            new(AdviceType.MayNotReadEdiCharactersReliably);
 
         // 271
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new (AdviceType.MayNotReadEdiCharactersNoCalibration);
+            new(AdviceType.MayNotReadEdiCharactersNoCalibration);
 
         // 275
         AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
-            new (AdviceType.CannotReadEdiCharacters);
+            new(AdviceType.CannotReadEdiCharacters);
 
         // 300
         AdviceItem ReportThatTheTestFailed() =>
-            new (AdviceType.TestFailed);
+            new(AdviceType.TestFailed);
 
         // 301
         AdviceItem ReportThatNoScannedDataWasReportedForBaseLineBarcode() =>
-            new (AdviceType.NoDataReported);
+            new(AdviceType.NoDataReported);
 
         // 303
         AdviceItem ReportThatScannedDataWasPartiallyReportedForBaselineBarcode() =>
-            new (AdviceType.PartialDataReported);
+            new(AdviceType.PartialDataReported);
 
         // 304
         AdviceItem ReportThatNoScannedDataWasReportedForDeadKeyBarcodes() =>
-            new (AdviceType.NoDataReportedDeadKeys);
+            new(AdviceType.NoDataReportedDeadKeys);
 
         // 305
         AdviceItem ReportThatUserScannedADeadKeyBarcodeOutOfSequence() =>
-            new (AdviceType.IncorrectSequenceDeadKeys);
+            new(AdviceType.IncorrectSequenceDeadKeys);
 
         // 306
         AdviceItem ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes() =>
-            new (AdviceType.PartialDataReportedDeadKeys);
+            new(AdviceType.PartialDataReportedDeadKeys);
 
         // 307
         AdviceItem ReportThatLayoutsDoNotMatch() =>
-            new (AdviceType.LayoutsDoNotMatch);
+            new(AdviceType.LayoutsDoNotMatch);
 
         // 308
         AdviceItem ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() =>
-            new (AdviceType.LayoutsDoNotMatchNoCalibration);
+            new(AdviceType.LayoutsDoNotMatchNoCalibration);
 
         // 309
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
-            new (AdviceType.HiddenCharactersNotRepresentedCorrectly);
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectly);
 
         // 310
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
-            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
 
         // 315
         AdviceItem ReportThatLayoutsDoNotMatchAndFormat05AndFormat06CannotBeReadReliably() =>
-            new (AdviceType.LayoutsDoNotMatchNoFormat0506);
+            new(AdviceType.LayoutsDoNotMatchNoFormat0506);
 
         // 316
         AdviceItem ReportThatHiddenCharactersAreNotReportedCorrectly() =>
-            new (AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506);
+            new(AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506);
 
         // 320
         AdviceItem ReportThatSystemCannotReadBarcodesReliably() =>
-            new (AdviceType.CannotReadBarcodesReliably);
+            new(AdviceType.CannotReadBarcodesReliably);
 
         // 325
         AdviceItem ReportThatCapsLockIsSwitchedOn() =>
-            new (AdviceType.CapsLockOn);
+            new(AdviceType.CapsLockOn);
 
         // 326
         AdviceItem ReportThatCapsLockIsSwitchedOnForMacintosh() =>
-            new (AdviceType.CapsLockOnMacintosh);
+            new(AdviceType.CapsLockOnMacintosh);
 
         // 327
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToUpperCases() =>
-            new (AdviceType.CapsLockOnConvertsToUpperCase);
+            new(AdviceType.CapsLockOnConvertsToUpperCase);
 
         // 328
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToLowerCases() =>
-            new (AdviceType.CapsLockOnConvertsToLowerCase);
+            new(AdviceType.CapsLockOnConvertsToLowerCase);
 
         // 330
         AdviceItem ReportThatSystemConvertsUpperAndLowerCases() =>
-            new (AdviceType.CaseIsSwitched);
+            new(AdviceType.CaseIsSwitched);
 
         // 331
         AdviceItem ReportThatSystemConvertsToUpperCase() =>
-            new (AdviceType.ConvertsToUpperCase);
+            new(AdviceType.ConvertsToUpperCase);
 
         // 332
         AdviceItem ReportThatSystemConvertsToLowerCase() =>
-            new (AdviceType.ConvertsToLowerCase);
+            new(AdviceType.ConvertsToLowerCase);
 
         // 335
         AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
-            new (AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+            new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
 
         // 390
         AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
-            new (AdviceType.UnexpectedErrorReported);
+            new(AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

@@ -63,7 +63,7 @@ internal class Barcode : IDisposable {
     /// <summary>
     ///   Used to lock when creating a barcode;.
     /// </summary>
-    private static readonly object CreateBarcodeLockObject = new ();
+    private static readonly object CreateBarcodeLockObject = new();
 
     /// <summary>
     ///   Indicates whether Dispose already been called.

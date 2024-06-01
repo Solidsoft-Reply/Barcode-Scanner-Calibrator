@@ -52,6 +52,7 @@ public sealed record TokenExtendedData {
         ReportedSuffix = string.Empty;
         KeyboardScript = string.Empty;
         ScannerKeyboardPerformance = ScannerKeyboardPerformance.High;
+        ScannerCharactersPerSecond = 0;
         AimFlagCharacterSequence = string.Empty;
         ReportedCharacters = string.Empty;
         PotentialIsoIec15434Unreadable30 = false;
@@ -119,6 +120,9 @@ public sealed record TokenExtendedData {
     /// <param name="scannerKeyboardPerformance">
     ///   'Traffic Light' assessment of the performance of the barcode scanner keyboard input.
     /// </param>
+    /// <param name="scannerCharactersPerSecond">
+    ///   Performance of the barcode scanner keyboard input in characters per second.
+    /// </param>
     /// <param name="aimFlagCharacterSequence">
     ///   The first (flag) character. By default, this is "]". If a dead key is used, the sequence will contain two
     ///   characters.
@@ -168,6 +172,7 @@ public sealed record TokenExtendedData {
         string reportedSuffix,
         string keyboardScript,
         ScannerKeyboardPerformance scannerKeyboardPerformance,
+        int scannerCharactersPerSecond,
         string aimFlagCharacterSequence,
         string reportedCharacters,
         bool potentialIsoIec15434Unreadable30,
@@ -194,6 +199,7 @@ public sealed record TokenExtendedData {
         ReportedSuffix = reportedSuffix;
         KeyboardScript = keyboardScript;
         ScannerKeyboardPerformance = scannerKeyboardPerformance;
+        ScannerCharactersPerSecond = scannerCharactersPerSecond;
         AimFlagCharacterSequence = aimFlagCharacterSequence;
         ReportedCharacters = reportedCharacters;
         PotentialIsoIec15434Unreadable30 = potentialIsoIec15434Unreadable30;
@@ -318,61 +324,67 @@ public sealed record TokenExtendedData {
     public ScannerKeyboardPerformance ScannerKeyboardPerformance { get; init; }
 
     /// <summary>
+    ///   Gets the performance of the barcode scanner in characters per second.
+    /// </summary>
+    [JsonProperty("scannerCharactersPerSecond", Order = 17)]
+    public int ScannerCharactersPerSecond { get; init; }
+
+    /// <summary>
     ///   Gets a list of characters that are not recognised by the scanner keyboard layout.
     /// </summary>
-    [JsonProperty("unrecognisedKeys", Order = 17)]
+    [JsonProperty("unrecognisedKeys", Order = 18)]
     public IList<char> UnrecognisedKeys { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 30.
     ///   character.
     /// </summary>
-    [JsonProperty("potentialFormat06Unreadable30", Order = 18)]
+    [JsonProperty("potentialFormat06Unreadable30", Order = 19)]
     public bool PotentialIsoIec15434Unreadable30 { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28.
     ///   character.
     /// </summary>
-    [JsonProperty("potentialIsoIec15434EdiUnreadableFs", Order = 19)]
+    [JsonProperty("potentialIsoIec15434EdiUnreadableFs", Order = 20)]
     public bool PotentialIsoIec15434EdiUnreadableFs { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31.
     ///   character.
     /// </summary>
-    [JsonProperty("potentialIsoIec15434EdiUnreadableUs", Order = 20)]
+    [JsonProperty("potentialIsoIec15434EdiUnreadableUs", Order = 21)]
 
     public bool PotentialIsoIec15434EdiUnreadableUs { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether to assess Format 06 and Format 05 support.
     /// </summary>
-    [JsonProperty("testSupportForFormat06", Order = 21)]
+    [JsonProperty("testSupportForFormat06", Order = 22)]
     public bool AssessFormat06Support { get; init; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous non-invariant ASCII character sequences that map to a reported character.
     /// </summary>
-    [JsonProperty("nonInvariantAmbiguities", Order = 22)]
+    [JsonProperty("nonInvariantAmbiguities", Order = 23)]
     public IDictionary<string, IList<string>> NonInvariantAmbiguities { get; init; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1Ambiguities", Order = 23)]
+    [JsonProperty("invariantGs1Ambiguities", Order = 24)]
     public IDictionary<string, IList<string>> InvariantGs1Ambiguities { get; init; }
 
     /// <summary>
     ///   Gets a list of unrecognised non-invariant character sequences.
     /// </summary>
-    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 24)]
+    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 25)]
     public IList<string> NonInvariantUnrecognisedCharacters { get; init; }
 
     /// <summary>
     ///   Gets a list of unrecognised invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 25)]
+    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 26)]
     public IList<string> InvariantGs1UnrecognisedCharacters { get; init; }
 
     /// <summary>
@@ -405,6 +417,7 @@ public sealed record TokenExtendedData {
             calibrationTokenExtendedData.ReportedSuffix,
             calibrationTokenExtendedData.KeyboardScript,
             calibrationTokenExtendedData.ScannerKeyboardPerformance,
+            calibrationTokenExtendedData.ScannerCharactersPerSecond,
             calibrationTokenExtendedData.AimFlagCharacterSequence,
             calibrationTokenExtendedData.ReportedCharacters,
             calibrationTokenExtendedData.PotentialIsoIec15434Unreadable30,

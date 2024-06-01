@@ -38,12 +38,12 @@ internal static class CalibrationExtensions {
     /// <summary>
     ///   Returns a regular expression for matching line terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex LineTerminators = new (@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
+    private static readonly Regex LineTerminators = new(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex ControlCharTerminators = new (@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
+    private static readonly Regex ControlCharTerminators = new(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
 #endif
 
     /// <summary>
@@ -288,7 +288,7 @@ internal static class CalibrationExtensions {
     /// <returns>A string containing Unicode Control Pictures for any ASCII control characters.</returns>
     [Pure]
     public static string ToControlPictures(this string originalString) =>
-        new (originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
+        new(originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
 
 #if NET7_0_OR_GREATER
     /// <summary>

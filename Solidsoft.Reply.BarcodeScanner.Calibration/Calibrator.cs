@@ -481,6 +481,11 @@ public class Calibrator {
     private ScannerKeyboardPerformance _tokenExtendedDataScannerKeyboardPerformance;
 
     /// <summary>
+    ///   Barcode scanner calculated in characters per second.
+    /// </summary>
+    private int _tokenExtendedDataScannerCharactersPerSecond;
+
+    /// <summary>
     ///   A dictionary of differences in reported and expected characters.
     /// </summary>
     private IDictionary<char, char> _tokenExtendedDataCharacterMap = new Dictionary<char, char>();
@@ -585,6 +590,7 @@ public class Calibrator {
             _tokenExtendedDataReportedSuffix = value.Suffix;
             _tokenExtendedDataKeyboardScript = value.KeyboardScript;
             _tokenExtendedDataScannerKeyboardPerformance = value.ScannerKeyboardPerformance;
+            _tokenExtendedDataScannerCharactersPerSecond = value.ScannerCharactersPerSecond;
             _tokenExtendedDataLineFeedCharacter = value.LineFeedCharacter;
             _tokenCalibrationData = value;
         }
@@ -817,7 +823,7 @@ public class Calibrator {
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
         bool assessScript = true,
-        bool trace = true) {
+        bool trace = false) {
 
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         var tempDataForTrace = string.Empty;
@@ -1071,6 +1077,7 @@ public class Calibrator {
                 _tokenExtendedDataReportedSuffix,
                 _tokenExtendedDataKeyboardScript,
                 _tokenExtendedDataScannerKeyboardPerformance,
+                _tokenExtendedDataScannerCharactersPerSecond,
                 _tokenExtendedDataLineFeedCharacter);
         }
 
@@ -1080,6 +1087,7 @@ public class Calibrator {
             _assumption,
             capsLock,
             _tokenExtendedDataScannerKeyboardPerformance,
+            _tokenExtendedDataScannerCharactersPerSecond,
             AssessFormatSupport,
             _tokenExtendedDataDeadKeyCharacterMap.Count > 0,
             _tokenExtendedDataCharacterMap,
@@ -1340,7 +1348,7 @@ public class Calibrator {
             input = prefixStartIdx >= 0 && prefixStartIdx - 2 <= _tokenExtendedDataAimFlagCharacterSequence?.Length
 
                 // Remove the prefix
-                ? input[..prefixStartIdx] + input[(prefixStartIdx + _tokenExtendedDataReportedPrefix.Length) ..]
+                ? input[..prefixStartIdx] + input[(prefixStartIdx + _tokenExtendedDataReportedPrefix.Length)..]
                 : input;
         }
 
@@ -1371,7 +1379,7 @@ public class Calibrator {
             // by scanning a Format 05 or Format 06 barcode.
             string InvalidSuffixForF0506() =>
                 indexOfEoT >= 0
-                    ? input[(indexOfEoT + 1) ..]
+                    ? input[(indexOfEoT + 1)..]
                     : string.Empty;
 
             var indexOfRs = input.LastIndexOf('\u001e');
@@ -1381,7 +1389,7 @@ public class Calibrator {
             // behaviour by the barcode scanner would be quite incorrect.
             string InvalidSuffixForF050BeforeEoT() =>
                 indexOfRs >= 0 && indexOfEoT == input.Length - 1
-                    ? input[(indexOfRs + 1) ..indexOfEoT]
+                    ? input[(indexOfRs + 1)..indexOfEoT]
                     : string.Empty;
 
             var invalidSuffix = InvalidSuffixForF0506();
@@ -1495,7 +1503,7 @@ public class Calibrator {
              * */
 
             builder.Append(
-                _tokenExtendedDataCharacterMap.TryGetValue(reportedChar, out var value) 
+                _tokenExtendedDataCharacterMap.TryGetValue(reportedChar, out var value)
                     ? value.ToInvariantString()
                     : TestForReportedCharacters());
             continue;
@@ -1761,7 +1769,7 @@ public class Calibrator {
                 continue;
             }
 
-            reportedData = reportedData[..idx] + reportedData[(idx + suffixValue.Length) ..];
+            reportedData = reportedData[..idx] + reportedData[(idx + suffixValue.Length)..];
             idx += suffixValue.Length;
         }
 
@@ -2369,6 +2377,11 @@ public class Calibrator {
             _ => ScannerKeyboardPerformance.Low
         };
 
+        // Calculate the number of scanned characters per second.
+        _tokenExtendedDataScannerCharactersPerSecond = data.Length > 0
+            ? (int)Math.Floor(data.Length / (double)dataEntryTimeSpan.TotalSeconds)
+            : 0;
+
         // If this is a small barcode within a sequence, but not the last barcode, return the token.
         if (TryInSmallBarcodeSequence(ref data, ref token)) return (token, string.Empty, string.Empty);
 
@@ -2471,6 +2484,16 @@ public class Calibrator {
         _tokenExtendedDataScannerKeyboardPerformance = _tokenExtendedDataScannerKeyboardPerformance > candidateAssessmentValue
                                                                ? candidateAssessmentValue
                                                                : _tokenExtendedDataScannerKeyboardPerformance;
+
+        // Calculate the number of scanned characters per second.
+        var candidateCharactersPerSecond = data.Length > 0
+            ? (int)Math.Floor(data.Length / dataEntryTimeSpan.TotalSeconds)
+            : 0;
+
+        // If the calculated cps value is less than the current value, choose it.
+        _tokenExtendedDataScannerCharactersPerSecond = _tokenExtendedDataScannerCharactersPerSecond > candidateCharactersPerSecond
+            ? candidateCharactersPerSecond
+            : _tokenExtendedDataScannerCharactersPerSecond;
 
         // If this is a small barcode, but not the last barcode in the sequence, return the token
         if (token.Data?.SmallBarcodeSequenceCount > 0) {
@@ -3002,7 +3025,7 @@ public class Calibrator {
              segmentIdx++) {
             var sequences = reportedSegments[segmentIdx];
             var expectedSequences = expectedSegments[segmentIdx];
-                
+
             var fixedUpReportedSegment = new List<string>();
 
             /* If the reported sequence contains too many items, we won't detect here, as this will be reported
@@ -3266,7 +3289,7 @@ public class Calibrator {
         // Determine the Unicode block name for the script represented by the OS-configured keyboard layout.
         EnvToken DetermineTheUnicodeBlockNameForTheKeyboardScript(Token localToken) =>
             () => {
-                _tokenExtendedDataKeyboardScript = assessScript 
+                _tokenExtendedDataKeyboardScript = assessScript
                     ? ResolveKeyboardScript(reportedSegments[(int)Segments.InvariantSegment], capsLock.GetValueOrDefault())
                     : "<unknown>";
 
@@ -3928,7 +3951,7 @@ public class Calibrator {
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-                ? AssessFormatSupport 
+                ? AssessFormatSupport
                     ? LogCalibrationInformation(
                                 InitializeTokenData(),
                                 InformationType.IsoIec15434SyntaxNotRecognised)
@@ -3995,7 +4018,7 @@ public class Calibrator {
             _tokenExtendedDataCharacterMap[reportedCharacterSequence[1]] == 48
 
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                ? AssessFormatSupport 
+                ? AssessFormatSupport
                     ? LogCalibrationInformation(
                         InitializeTokenData(),
                         InformationType.IsoIec15434EdiNotReliablyReadable)
@@ -4091,17 +4114,17 @@ public class Calibrator {
                 InformationType.NonCorrespondingKeyboardLayoutsForInvariants);
         }
 
-        if (_tokenExtendedDataDeadKeysMap.Any(map => map.Value.Length == 1 && 
+        if (_tokenExtendedDataDeadKeysMap.Any(map => map.Value.Length == 1 &&
                                                      $"\0{map.Value[0]}" != map.Key &&
                                                      map.Value[0] switch {
-            var c when c == 32 => true,
-            var c when c >= 35 && c < 37 => true,
-            var c when c == 64 => true,
-            var c when c >= 91 && c < 95 => true,
-            var c when c == 96 => true,
-            var c when c >= 123 && c < 127 => true,
-            _ => false
-        })) {
+                                                         var c when c == 32 => true,
+                                                         var c when c >= 35 && c < 37 => true,
+                                                         var c when c == 64 => true,
+                                                         var c when c >= 91 && c < 95 => true,
+                                                         var c when c == 96 => true,
+                                                         var c when c >= 123 && c < 127 => true,
+                                                         _ => false
+                                                     })) {
             token = LogCalibrationInformation(
                 token,
                 InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters);
@@ -4641,7 +4664,7 @@ public class Calibrator {
 
             testData = lastAscii0 > 220 &&
                        lastAscii0 < testData.Length - 3
-                           ? testData[.. (lastAscii0 + 2)]
+                           ? testData[..(lastAscii0 + 2)]
                            : testData;
 
             return TestProvenance('\0');
@@ -4852,14 +4875,14 @@ public class Calibrator {
             if (idx == charSet82Idx) {
                 var tempSegValue = segments[0] + segments[idx];
 
-                tempSegValue = tempSegValue[.. (_expectedReportedPrefix?.Length ?? 0)]
+                tempSegValue = tempSegValue[..(_expectedReportedPrefix?.Length ?? 0)]
                                   .Contains(
                                        tempSpaceHolder,
                                        StringComparison.Ordinal)
                                    ? _expectedReportedPrefix +
                                      tempSegValue[tempSegValue.IndexOf(
                                                       tempSpaceHolder,
-                                                      StringComparison.Ordinal) ..]
+                                                      StringComparison.Ordinal)..]
                                    : $"{_expectedReportedPrefix}{tempSpaceHolder} {tempSegValue[seg0Length..]}";
 
                 segments[inIdx++] = tempSegValue;
@@ -4935,7 +4958,7 @@ public class Calibrator {
         // If any chained dead key sequences have been detected, we will normalize them by removing multiple ASCII 0 characters.
         if (chainedSequences.Count > 0) {
             segmentOut = segment.Select((t, sequenceIdx) => chainedSequences.TryGetValue(sequenceIdx, out var value)
-                    ? $"\u0000{value[value.IndexOf(value.First(c => c != '\u0000'), StringComparison.Ordinal) ..]}"
+                    ? $"\u0000{value[value.IndexOf(value.First(c => c != '\u0000'), StringComparison.Ordinal)..]}"
                     : t)
                 .ToList();
 
@@ -5428,7 +5451,7 @@ public class Calibrator {
 
         foreach (var match in matches.OfType<Match>()) {
             var reversed = $"\u0000{match.Groups["dkc"]}{match.Groups["cc"]}";
-            input = $"{input[..match.Index]}{reversed}{input[(match.Index + match.Length) ..]}";
+            input = $"{input[..match.Index]}{reversed}{input[(match.Index + match.Length)..]}";
         }
 
         return input;
@@ -5533,6 +5556,7 @@ public class Calibrator {
             _tokenExtendedDataReportedSuffix = default;
             _tokenExtendedDataKeyboardScript = default;
             _tokenExtendedDataScannerKeyboardPerformance = ScannerKeyboardPerformance.High;
+            _tokenExtendedDataScannerCharactersPerSecond = 0;
             _tokenExtendedDataCharacterMap = new Dictionary<char, char>();
             _tokenExtendedDataDeadKeyCharacterMap = new Dictionary<string, char>();
             _tokenExtendedDataDeadKeyFixUp = [];
@@ -5558,6 +5582,7 @@ public class Calibrator {
             _tokenExtendedDataReportedSuffix = token.ExtendedData.ReportedSuffix;
             _tokenExtendedDataKeyboardScript = token.ExtendedData.KeyboardScript;
             _tokenExtendedDataScannerKeyboardPerformance = token.ExtendedData.ScannerKeyboardPerformance;
+            _tokenExtendedDataScannerCharactersPerSecond = token.ExtendedData.ScannerCharactersPerSecond;
             _tokenExtendedDataCharacterMap = token.ExtendedData.CharacterMap;
             _tokenExtendedDataDeadKeyCharacterMap = token.ExtendedData.DeadKeyCharacterMap;
             _tokenExtendedDataDeadKeyFixUp = token.ExtendedData.DeadKeyFixUp;
@@ -5619,6 +5644,7 @@ public class Calibrator {
             _tokenExtendedDataReportedSuffix ?? string.Empty,
             _tokenExtendedDataKeyboardScript ?? string.Empty,
             _tokenExtendedDataScannerKeyboardPerformance,
+            _tokenExtendedDataScannerCharactersPerSecond,
             _tokenExtendedDataAimFlagCharacterSequence ?? string.Empty,
             _tokenExtendedDataReportedCharacters ?? string.Empty,
             _tokenExtendedDataPotentialIsoIec15434Unreadable30,
@@ -5881,7 +5907,7 @@ public class Calibrator {
         Match match;
 
         // Test to see if the candidate AIM identifier was a real AIM identifier or not.
-        if (string.IsNullOrEmpty(processedPrefixData)  || !MatchWithAimId().Success) {
+        if (string.IsNullOrEmpty(processedPrefixData) || !MatchWithAimId().Success) {
             return string.Empty;
         }
 
@@ -5989,6 +6015,7 @@ public class Calibrator {
                         reportedSuffix: token.ExtendedData.ReportedSuffix,
                         keyboardScript: token.ExtendedData.KeyboardScript,
                         scannerKeyboardPerformance: token.ExtendedData.ScannerKeyboardPerformance,
+                        scannerCharactersPerSecond: token.ExtendedData.ScannerCharactersPerSecond,
                         aimFlagCharacterSequence: token.ExtendedData.AimFlagCharacterSequence,
                         reportedCharacters: token.ExtendedData.ReportedCharacters,
                         potentialIsoIec15434Unreadable30: token.ExtendedData.PotentialIsoIec15434Unreadable30,
@@ -6084,6 +6111,7 @@ public class Calibrator {
                         reportedSuffix: currentToken.ExtendedData.ReportedSuffix,
                         keyboardScript: currentToken.ExtendedData.KeyboardScript,
                         scannerKeyboardPerformance: currentToken.ExtendedData.ScannerKeyboardPerformance,
+                        scannerCharactersPerSecond: currentToken.ExtendedData.ScannerCharactersPerSecond,
                         aimFlagCharacterSequence: currentToken.ExtendedData.AimFlagCharacterSequence,
                         reportedCharacters: currentToken.ExtendedData.ReportedCharacters,
                         potentialIsoIec15434Unreadable30: currentToken.ExtendedData.PotentialIsoIec15434Unreadable30,
@@ -6564,7 +6592,7 @@ public class Calibrator {
         Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
             idx switch {
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-                Segments.GroupSeparatorSegment => AssessFormatSupport 
+                Segments.GroupSeparatorSegment => AssessFormatSupport
                     ? LogCalibrationInformation(
                         calibrationToken,
                         InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
@@ -6854,7 +6882,7 @@ public class Calibrator {
         // Get the small barcode sequence prefix.
         string SmallBarcodeSequencePrefix(string localData) =>
             _tokenDataPrefix.Length == 0
-                ? localData[CalculateSmallBarcodeSequencePrefix(localData) ..]
+                ? localData[CalculateSmallBarcodeSequencePrefix(localData)..]
                 : localData[_tokenDataPrefix.Length..];
 
         // Calculate the small barcode sequence prefix.

@@ -19,11 +19,13 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Fixed an issue where the Calibrator would incorrectly infer that the scanner is compensationg for Caps Lock.
+		1) Added support for reporting the barcode scanner performance in characters per second.
 
-		2) Fixed an issue where, when an ambiguity occurs for a control character, a character map entry is incorrectly created.
+		2) Fixed an issue where the Calibrator would incorrectly infer that the scanner is compensationg for Caps Lock.
 
-		3) Improved the advice handling for EDI issues.
+		3) Fixed an issue where, when an ambiguity occurs for a control character, a character map entry is incorrectly created.
+
+		4) Improved the advice handling for EDI issues.
 
 	</PackageReleaseNotes>
 	<Description>
