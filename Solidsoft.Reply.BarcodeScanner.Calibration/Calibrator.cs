@@ -823,8 +823,8 @@ public class Calibrator {
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null,
         bool assessScript = true,
-        bool trace = false) {
-
+        bool trace = false)
+    {
 #pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
         var tempDataForTrace = string.Empty;
 
@@ -1105,7 +1105,7 @@ public class Calibrator {
         // This has to be done after creating the system capabilities.
         if (@out.Warnings.Any(i => i.InformationType == InformationType.CapsLockOn) &&
             @out.Warnings.Any(i => i.InformationType == InformationType.CapsLockProbablyOn)) {
-            @out.RemoveInformation(@out.Warnings.Where(w => w.InformationType == InformationType.CapsLockProbablyOn).FirstOrDefault());
+            @out.RemoveInformation(@out.Warnings.FirstOrDefault(w => w.InformationType == InformationType.CapsLockProbablyOn));
         }
 
         // If the barcode scanner keyboard performance is less than optimal, post additional warnings or error to the log.
@@ -1427,7 +1427,6 @@ public class Calibrator {
             input = input.EndsWith('\u0004' + _tokenExtendedDataReportedSuffix, StringComparison.Ordinal)
                         ? input[..^_tokenExtendedDataReportedSuffix.Length]
                         : TestSuffixBeforeEoT();
-
         }
 
 #pragma warning disable S127 // "for" loop stop conditions should be invariant
@@ -2368,8 +2367,8 @@ public class Calibrator {
         bool? capsLock = null,
         SupportedPlatform platform = SupportedPlatform.Windows,
         TimeSpan dataEntryTimeSpan = default,
-        bool assessScript = true) {
-
+        bool assessScript = true)
+    {
         // Resolve the data entry time span to determine a barcode scanner keyboard performance assessment value.
         _tokenExtendedDataScannerKeyboardPerformance = dataEntryTimeSpan.TotalMilliseconds switch {
             < (double)ScannerKeyboardPerformance.Medium => ScannerKeyboardPerformance.High,
@@ -5671,8 +5670,8 @@ public class Calibrator {
         Token token,
         InformationType type,
         string? reportedData = "",
-        string? expectedData = null) {
-
+        string? expectedData = null)
+    {
         var description = Resources.ResourceManager.GetString(
             $"CalibrationInformation_{(int)type}",
             Thread.CurrentThread.CurrentUICulture);
@@ -5681,7 +5680,8 @@ public class Calibrator {
 
         // Add data to formattable strings.
         // ReSharper disable once SwitchStatementMissingSomeCases
-        switch (type) {
+        switch (type)
+        {
             case InformationType.KeyboardScript:
             case InformationType.Platform:
             case InformationType.IsoIec15434RecordSeparatorMapping:
@@ -5729,15 +5729,18 @@ public class Calibrator {
         }
 
         // Assign information if no entry yet exists.
-        switch ((int)type) {
+        switch ((int)type)
+        {
             case < 200 and >= 100:
-                if (token.Information.All(ci => ci.InformationType != type)) {
+                if (token.Information.All(ci => ci.InformationType != type))
+                {
                     token.AddInformation(InformationLevel.Information, type, description);
                 }
 
                 break;
             case < 300 and >= 200:
-                if (token.Warnings.All(ci => ci.InformationType != type)) {
+                if (token.Warnings.All(ci => ci.InformationType != type))
+                {
                     token.AddInformation(InformationLevel.Warning, type, description);
                 }
 
@@ -5745,8 +5748,9 @@ public class Calibrator {
             case < 400 and >= 300:
                 // Add the 'Calibration failed' error.
                 if (type != InformationType.CalibrationFailed
-                 && type != InformationType.CalibrationFailedUnexpectedly
-                 && token.Errors.All(ci => ci.InformationType != InformationType.CalibrationFailed)) {
+                    && type != InformationType.CalibrationFailedUnexpectedly
+                    && token.Errors.All(ci => ci.InformationType != InformationType.CalibrationFailed))
+                {
                     var errorDescription = Resources.ResourceManager.GetString(
                         $"CalibrationInformation_{(int)InformationType.CalibrationFailed}",
                         Thread.CurrentThread.CurrentUICulture);
@@ -5760,7 +5764,8 @@ public class Calibrator {
                         errorDescription);
                 }
 
-                if (token.Errors.All(ci => ci.InformationType != type)) {
+                if (token.Errors.All(ci => ci.InformationType != type))
+                {
                     token.AddInformation(InformationLevel.Error, type, description);
                 }
 
@@ -5770,15 +5775,18 @@ public class Calibrator {
         DoInitializeFromTokenData(token);
         return token;
 
-        void AppendDescription(IEnumerable<Information> information, string? data = null) {
+        void AppendDescription(IEnumerable<Information> information, string? data = null)
+        {
             var calibrationInformation = information as Information[] ?? information.ToArray();
             var descriptionData = string.IsNullOrEmpty(data) ? reportedData : data;
 
-            if (!string.IsNullOrWhiteSpace(descriptionData) && calibrationInformation.Length == 1) {
+            if (!string.IsNullOrWhiteSpace(descriptionData) && calibrationInformation.Length == 1)
+            {
                 var enumerator = calibrationInformation.GetEnumerator();
                 using var disposableEnumerator = enumerator as IDisposable;
 
-                if (enumerator.MoveNext() && enumerator.Current is not null) {
+                if (enumerator.MoveNext() && enumerator.Current is not null)
+                {
                     ((Information)enumerator.Current).Description += $" {descriptionData}";
                 }
             }
