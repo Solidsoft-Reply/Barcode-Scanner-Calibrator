@@ -722,7 +722,9 @@ public readonly record struct Token(
     ///   Removes an information record from the correct collection.
     /// </summary>
     /// <param name="information">The information to be removed.</param>
-    internal void RemoveInformation(Information information) {
+    internal void RemoveInformation(Information? information) {
+        if (information is null) return;
+
         switch (information.Level) {
             case InformationLevel.Information:
                 ((IList)Information).Remove(information);

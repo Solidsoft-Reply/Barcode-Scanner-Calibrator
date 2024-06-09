@@ -1307,7 +1307,7 @@ public class Calibrator {
     /// </param>
     /// <param name="exceptions">Collection of exceptions.</param>
     /// <returns>The normalized input, processed according to the calibration character map.</returns>
-    public string? ProcessInput(string? input, out IList<PreprocessorException>? exceptions) {
+    public string ProcessInput(string? input, out IList<PreprocessorException>? exceptions) {
         // We need to convert the AIM identifier if it exists and there is a conversion.
         var aimId = PreProcessAimIdentifier(input);
         var preprocessorExceptions = new List<PreprocessorException>();
@@ -2378,7 +2378,7 @@ public class Calibrator {
 
         // Calculate the number of scanned characters per second.
         _tokenExtendedDataScannerCharactersPerSecond = data.Length > 0
-            ? (int)Math.Floor(data.Length / (double)dataEntryTimeSpan.TotalSeconds)
+            ? (int)Math.Floor(data.Length / dataEntryTimeSpan.TotalSeconds)
             : 0;
 
         // If this is a small barcode within a sequence, but not the last barcode, return the token.
@@ -2814,7 +2814,7 @@ public class Calibrator {
         }
 
         /* If a dead key on the barcode scanner keyboard layout matches a dead key on the computer keyboard layout, and assuming that
-         * the dead key character is not a iature and that the next key 'pressed' on the scanner keyboard matches an assigned key on
+         * the dead key character is not a ligature and that the next key 'pressed' on the scanner keyboard matches an assigned key on
          * the computer keyboard layout, the result will be an ASCII 0 followed by a character followed by a space, followed by either
          * a non-space character (first case), or a delimiter sequence of at least two spaces (second case). No space is consumed
          * because the barcode scanner types in an additional space to enter the literal dead key character.
@@ -2834,11 +2834,13 @@ public class Calibrator {
 #endif
         var candidateCount = candidateNonMatches.Count;
 
-        foreach (Match candidate in candidateNonMatches) {
-            if (matches.Any(m => m.Groups["a"].Value == candidate.Groups["a"].Value)) {
-                candidateCount--;
-            }
+#pragma warning disable SA1312
+        foreach (var _ in from Match candidate in candidateNonMatches
+                 where matches.Any(m => m.Groups["a"].Value == candidate.Groups["a"].Value)
+                          select new { }) {
+            candidateCount--;
         }
+#pragma warning restore SA1312
 
         if (candidateCount > 0) {
             // There are reported dead keys does that do not match the dead key on the computer keyboard layout,
@@ -5379,13 +5381,29 @@ public class Calibrator {
                 // Add the list of split sequences to the split sequence dictionary.
                 splitSequences.Add(sequenceIdx, splitSequenceOut);
             }
-            else {
-                if (expectedSegment.Count > sequenceIdx + offsetRight) {
-                    /* If we have multiple characters in the sequence, but the first one is not an ASCII 0, this must represent a
-                     * ligature. A ligature occurs when a single key produces multiple characters. There is no known use of this
-                     * on any European keyboards for modern languages, but it is used on some other keyboards. We will collect the
-                     * ligature mapping.
-                     * */
+            else
+            {
+                if (expectedSegment.Count <= sequenceIdx + offsetRight) continue;
+
+                /* If we have multiple characters in the sequence, but the first one is not an ASCII 0, this must represent a
+                 * ligature, unless the second character is a space. If the second character is a space, the most likely reason
+                 * is that a character in the barcode has been entered using a dead key, followed by a space, in the barcode
+                 * scanner keyboard.
+                 */
+                if (sequence is [_, ' ']) {
+                    // We have probably already detected and registered the scanner dead key, but we will add it here, if necessary.
+                    var key = expectedSegment[sequenceIdx + offsetRight].First().ToInvariantString();
+                    if (!_tokenExtendedDataScannerDeadKeysMap.ContainsKey(key)) {
+                        _tokenExtendedDataScannerDeadKeysMap.Add(
+                            expectedSegment[sequenceIdx + offsetRight].First().ToInvariantString(),
+                            sequence);
+                    }
+                }
+                else {
+                    /* A ligature occurs when a single key produces multiple characters. There is no known use of this
+                         * on any European keyboards for modern languages, but it is used on some other keyboards. We will collect the
+                         * ligature mapping.
+                         * */
                     _tokenExtendedDataLigatureMap.Add(sequence, expectedSegment[sequenceIdx + offsetRight].First());
                 }
             }
@@ -5910,7 +5928,7 @@ public class Calibrator {
     /// </summary>
     /// <param name="input">The data transmitted by a barcode scanner.</param>
     /// <returns>The pre-processed AIM identifier, if an AIM identifier was reported.</returns>
-    private string? PreProcessAimIdentifier(string? input) {
+    private string PreProcessAimIdentifier(string? input) {
         var processedPrefixData = ProcessReportedPrefix(input, out _, out _, out _);
         Match match;
 
@@ -6451,15 +6469,17 @@ public class Calibrator {
                     case 1: {
                             var key = reportedControl.First();
 
-                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue)) {
+                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue))
+                            {
 #if NET7_0_OR_GREATER
                                 if (InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString()))
 #else
                                 if (InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString()))
 #endif
-                            {
+                                {
                                     // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-                                    switch (idx) {
+                                    switch (idx)
+                                    {
                                         case Segments.GroupSeparatorSegment:
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                             return LogCalibrationInformation(
@@ -6475,28 +6495,36 @@ public class Calibrator {
                                             // EDI data cannot be reliably read.
                                             token = LogCalibrationInformation(
                                                 token,
-                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                InformationType
+                                                    .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                                 key.ToControlPictureString(),
                                                 $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             break;
                                     }
                                 }
-                                else {
+                                else
+                                {
                                     /* The ambiguity is for a non-invariant character. We will resolve it by omitting the
                                      * opportunity to resolve the non-invariant character. Replace the mapping in the
                                      * character map with one for the ASCII 30.
                                      * */
                                     var localToken = token;
 
-                                    _tokenExtendedDataCharacterMap[key] = idx switch {
-                                        Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30 ? RaiseWarning((char)29) : ResolveForGs1(),
-                                        Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29 ? RaiseWarning((char)30) : ResolveForGs1(),
+                                    _tokenExtendedDataCharacterMap[key] = idx switch
+                                    {
+                                        Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30
+                                            ? RaiseWarning((char)29)
+                                            : ResolveForGs1(),
+                                        Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29
+                                            ? RaiseWarning((char)30)
+                                            : ResolveForGs1(),
                                         _ => RaiseWarningIsoIec15434(_tokenExtendedDataCharacterMap[key])
                                     };
 
                                     token = localToken;
 
-                                    char RaiseWarning(char controlCharacter) {
+                                    char RaiseWarning(char controlCharacter)
+                                    {
                                         // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
                                         localToken = LogCalibrationInformation(
                                             localToken,
@@ -6507,13 +6535,15 @@ public class Calibrator {
                                         return controlCharacter;
                                     }
 
-                                    char RaiseWarningIsoIec15434(char controlCharacter) {
+                                    char RaiseWarningIsoIec15434(char controlCharacter)
+                                    {
                                         // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                         // EDI data cannot be reliably read.
                                         localToken = AssessFormatSupport
                                             ? LogCalibrationInformation(
                                                 localToken,
-                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                InformationType
+                                                    .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                                 key.ToControlPictureString(),
                                                 $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
                                             : localToken;
@@ -6521,7 +6551,8 @@ public class Calibrator {
                                         return controlCharacter;
                                     }
 
-                                    char ResolveForGs1() {
+                                    char ResolveForGs1()
+                                    {
                                         /* Both ASCII 29 and ASCII 30 map to the same character. We will resolve
                                          * in favour of ASCII 29 (used in both GS1 and ANSI MH 10.8.2 barcodes).
                                          * The map entry should already be for ASCII 29, but we will set it again
