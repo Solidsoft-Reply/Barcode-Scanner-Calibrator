@@ -424,7 +424,7 @@
     <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może je wykorzystać, aby wyeliminować niepotrzebne alerty.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Twój skaner kodów kreskowych prawdopodobnie jest skonfigurowany, aby automatycznie kompensować włączony Caps Lock.</value>
+    <value>Twój skaner kodów kreskowych jest prawdopodobnie skonfigurowany do automatycznego kompensowania Caps Lock lub do wprowadzania danych za pomocą klawiatury numerycznej (tryb ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Twój klawisz Caps Lock może być wyłączony lub przemapowany.</value>

@@ -424,7 +424,7 @@
     <value>AIM azonosítók a vonalkód típusát jelölik. A szoftverük használhatja őket a felesleges riasztások kiküszöbölésére.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>A vonalkódolvasó valószínűleg automatikusan kompenzál a Caps Lock bekapcsolása esetén.</value>
+    <value>A vonalkódolvasó valószínűleg úgy van beállítva, hogy automatikusan kompenzálja a Caps Lock-ot, vagy az adatokat a numerikus billentyűzettel (ALT mód) viszi be.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>A Caps Lock gomb letiltható vagy átrendezhető lehet.</value>

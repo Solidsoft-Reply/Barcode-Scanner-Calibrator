@@ -424,7 +424,7 @@
     <value>Identifikátory AIM reprezentují typ čárového kódu. Váš software je může použít k eliminaci zbytečných upozornění.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Váš skener čárových kódů je pravděpodobně nakonfigurován tak, aby automaticky kompenzoval Caps Lock.</value>
+    <value>Váš skener čárových kódů je pravděpodobně nastaven tak, aby automaticky kompenzoval klávesu Caps Lock nebo zadával data pomocí numerické klávesnice (režim ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Váš klíč Caps Lock může být zakázán nebo přemapován.</value>

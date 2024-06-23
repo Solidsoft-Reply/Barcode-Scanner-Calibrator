@@ -424,7 +424,7 @@
     <value>Gli identificatori AIM rappresentano il tipo di codice a barre. Il tuo software può utilizzarli per eliminare allarmi non necessari.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Il tuo scanner di codici a barre è probabilmente configurato per compensare automaticamente il blocco maiuscole.</value>
+    <value>Il tuo lettore di codici a barre è probabilmente configurato per compensare automaticamente il Bloc Maiusc o per inserire i dati utilizzando il tastierino numerico (modalità ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Il tasto del blocco maiuscole potrebbe essere disabilitato o rimappato.</value>

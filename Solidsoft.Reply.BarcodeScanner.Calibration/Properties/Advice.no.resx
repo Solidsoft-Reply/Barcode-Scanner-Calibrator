@@ -424,7 +424,7 @@
     <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Strekkodeskanneren din er sannsynligvis konfigurert til automatisk å kompensere for Caps Lock.</value>
+    <value>Strekkodeskanneren din er sannsynligvis konfigurert til å automatisk kompensere for Caps Lock eller til å legge inn data ved hjelp av det numeriske tastaturet (ALT-modus).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Caps Lock-tasten din kan være deaktivert eller omkonfigurert.</value>

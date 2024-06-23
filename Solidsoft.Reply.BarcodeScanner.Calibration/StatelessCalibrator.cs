@@ -93,12 +93,12 @@ public class StatelessCalibrator {
     }
 
     /// <summary>
-    /// gets or sets a collection of recognised data elements.
+    /// Gets or sets a collection of recognised data elements.
     /// </summary>
     /// <remarks>
     /// Optionally pass a list of recognised data elements to the Calibrator to constrain the GS1 application identifiers
     /// and/or the ASC MH 10.8.2 data identifiers that the client software needs to recognise whe parsing data. This may
-    /// /extend the range of transformation strategies that the calibrator can identify.
+    /// extend the range of transformation strategies that the calibrator can identify.
     /// </remarks>
     // ReSharper disable once UnusedMember.Global
     public IList<RecognisedDataElement> RecognisedDataElements {

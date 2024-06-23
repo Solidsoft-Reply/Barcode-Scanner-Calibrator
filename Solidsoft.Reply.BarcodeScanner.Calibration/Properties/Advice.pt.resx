@@ -424,7 +424,7 @@
     <value>Identificadores AIM representam o tipo de código de barras. Seu software pode usá-los para eliminar alertas desnecessários.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Seu scanner de código de barras provavelmente está configurado para compensar automaticamente o Caps Lock.</value>
+    <value>Seu leitor de código de barras provavelmente está configurado para compensar automaticamente o Caps Lock ou para inserir dados usando o teclado numérico (modo ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Sua tecla Caps Lock pode estar desativada ou remapeada.</value>

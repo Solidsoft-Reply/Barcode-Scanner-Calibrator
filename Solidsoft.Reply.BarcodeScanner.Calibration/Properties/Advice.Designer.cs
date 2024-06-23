@@ -979,7 +979,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your barcode scanner is probably configured to compensate automatically for Caps Lock..
+        ///   Looks up a localized string similar to Your barcode scanner is probably configured to compensate automatically for Caps Lock or to enter data using the numeric keypad (ALT mode)..
         /// </summary>
         internal static string Description_205 {
             get {

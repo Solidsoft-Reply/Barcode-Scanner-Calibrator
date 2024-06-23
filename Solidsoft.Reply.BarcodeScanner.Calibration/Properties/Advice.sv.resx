@@ -424,7 +424,7 @@
     <value>AIM-identifier representerar streckkodstypen. Din programvara kan använda dem för att eliminera onödiga varningar.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Din streckkodsläsare är troligen konfigurerad för att automatiskt kompensera för Caps Lock.</value>
+    <value>Din streckkodsläsare är förmodligen konfigurerad för att automatiskt kompensera för Caps Lock eller för att mata in data med det numeriska tangentbordet (ALT-läge).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Din Caps Lock-tangent kan vara avaktiverad eller omprogrammerad.</value>

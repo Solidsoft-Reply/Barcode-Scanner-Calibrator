@@ -424,7 +424,7 @@
     <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Vaš skener bar kodova vjerojatno je konfiguriran da automatski kompenzira Caps Lock.</value>
+    <value>Vaš čitač barkoda vjerojatno je konfiguriran za automatsku kompenzaciju Caps Lock-a ili za unos podataka pomoću numeričke tipkovnice (ALT način rada).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Vaša Caps Lock tipka može biti onemogućena ili preusmjerena.</value>

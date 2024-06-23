@@ -424,7 +424,7 @@
     <value>AIM identifikatoriai atspindi brūkšninio kodo tipą. Jūsų programinė įranga gali juos naudoti nereikalingų įspėjimų šalinimui.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Jūsų brūkšninių kodų skaitytuvas greičiausiai nustatytas automatiškai kompensuoti Caps Lock.</value>
+    <value>Jūsų brūkšninių kodų skaitytuvas tikriausiai sukonfigūruotas automatiškai kompensuoti „Caps Lock“ arba įvesti duomenis naudojant skaitmeninę klaviatūrą (ALT režimu).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Jūsų Caps Lock klavišas gali būti išjungtas arba perkonfigūruotas.</value>

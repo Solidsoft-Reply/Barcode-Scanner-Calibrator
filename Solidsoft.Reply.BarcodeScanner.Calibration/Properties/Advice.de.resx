@@ -424,7 +424,7 @@
     <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Ihr Barcode-Scanner ist wahrscheinlich so konfiguriert, dass er automatisch für die Feststelltaste kompensiert.</value>
+    <value>Ihr Barcode-Scanner ist wahrscheinlich so konfiguriert, dass er automatisch die Feststelltaste kompensiert oder Daten über den numerischen Tastenblock (ALT-Modus) eingibt.</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Ihre Feststelltaste könnte deaktiviert oder umbelegt sein.</value>

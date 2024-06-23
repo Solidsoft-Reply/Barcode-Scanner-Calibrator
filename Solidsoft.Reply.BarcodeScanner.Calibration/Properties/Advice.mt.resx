@@ -424,7 +424,7 @@
     <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>L-iskanner tal-barcode tiegħek probabbilment ikkonfigurat biex jikkumpensa awtomatikament għall-Caps Lock.</value>
+    <value>Is-skaner tal-barcode tiegħek probabbilment huwa kkonfigurat biex jikkumpensa awtomatikament għall-Caps Lock jew biex iddaħħal id-dejta billi tuża n-num pad (modalità ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Iċ-ċavetta Caps Lock tiegħek tista' tkun diżattivata jew rikunfigurata.</value>

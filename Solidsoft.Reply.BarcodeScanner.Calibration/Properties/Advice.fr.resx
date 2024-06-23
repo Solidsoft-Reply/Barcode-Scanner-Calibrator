@@ -424,7 +424,7 @@
     <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Votre scanner de code-barres est probablement configuré pour compenser automatiquement le verrouillage des majuscules.</value>
+    <value>Votre lecteur de codes-barres est probablement configuré pour compenser automatiquement le verrouillage des majuscules ou pour saisir des données à l'aide du pavé numérique (mode ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Votre touche de verrouillage des majuscules peut être désactivée ou remappée.</value>

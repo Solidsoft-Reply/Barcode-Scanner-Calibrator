@@ -532,18 +532,18 @@ public class Calibrator {
     /// </summary>
     private IList<char> _tokenExtendedDataUnrecognisedKeys = [];
 
-    /// <summary>
-    ///   Initializes a new instance of the <see cref="Calibrator" /> class.
-    /// </summary>
-    /// <param name="calibrationData">The calibration data.</param>
-    public Calibrator(
-        Data? calibrationData) {
-        if (calibrationData is not null) {
-            CalibrationData = calibrationData;
-        }
+    /////////// <summary>
+    ///////////   Initializes a new instance of the <see cref="Calibrator" /> class.
+    /////////// </summary>
+    /////////// <param name="calibrationData">The calibration data.</param>
+    ////////public Calibrator(
+    ////////    Data? calibrationData) {
+    ////////    if (calibrationData is not null) {
+    ////////        CalibrationData = calibrationData;
+    ////////    }
 
-        _assumption = Assumption.Calibration;
-    }
+    ////////    _assumption = Assumption.Calibration;
+    ////////}
 
     /// <summary>
     ///   Initializes a new instance of the <see cref="Calibrator" /> class.
@@ -597,7 +597,7 @@ public class Calibrator {
     }
 
     /// <summary>
-    ///   Gets or sets a value indicating whether to assess Format nn support.
+    ///   Gets or sets a value indicating whether to assess Format support.
     /// </summary>
     public bool AssessFormatSupport { get; set; } = true;
 
@@ -831,7 +831,8 @@ public class Calibrator {
         if (trace) {
             var basicCapsLockValue = capsLock ?? false ? "true" : "false";
             var capsLockValue = capsLock == null ? "unknown" : basicCapsLockValue;
-            var additionalData = (string.IsNullOrEmpty(data) ? string.Empty : "\r\n") + $"Caps Lock: {capsLockValue}\r\nSupported Platform: {platform}\r\n";
+            var timeSpanMs = dataEntryTimeSpan == default ? "not specified" : dataEntryTimeSpan.TotalMilliseconds.ToString("0.00");
+            var additionalData = (string.IsNullOrEmpty(data) ? string.Empty : "\r\n") + $"Caps Lock: {capsLockValue}\r\nSupported Platform: {platform}\r\nData Entry Interval: {timeSpanMs}ms";
             tempDataForTrace = data;
 
             try {
@@ -2360,7 +2361,6 @@ public class Calibrator {
     /// </param>
     /// <param name="assessScript">Indicates whether the calibrator should assess the script for the configured OS keyboard.</param>
     /// <returns>The calibration token together with any suffix and end-of-line data.</returns>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.SpacingRules", "SA1008:Opening parenthesis should be spaced correctly", Justification = "<Pending>")]
     private (Token token, string suffix, string endOfLine) CalibrateBaseLine(
         string data,
         Token token,
@@ -6495,8 +6495,7 @@ public class Calibrator {
                                             // EDI data cannot be reliably read.
                                             token = LogCalibrationInformation(
                                                 token,
-                                                InformationType
-                                                    .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                                 key.ToControlPictureString(),
                                                 $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             break;
@@ -6542,8 +6541,7 @@ public class Calibrator {
                                         localToken = AssessFormatSupport
                                             ? LogCalibrationInformation(
                                                 localToken,
-                                                InformationType
-                                                    .ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                                                 key.ToControlPictureString(),
                                                 $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
                                             : localToken;

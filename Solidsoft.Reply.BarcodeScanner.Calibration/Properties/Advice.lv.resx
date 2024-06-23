@@ -424,7 +424,7 @@
     <value>AIM identifikatori norāda uz svītrkoda tipu. Jūsu programmatūra var tos izmantot, lai novērstu nevajadzīgus brīdinājumus.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Jūsu svītrkodu skeneris, visticamāk, ir konfigurēts, lai automātiski kompensētu Caps Lock.</value>
+    <value>Jūsu svītrkodu skeneris, iespējams, ir konfigurēts, lai automātiski kompensētu Caps Lock vai ievadītu datus, izmantojot ciparu tastatūru (ALT režīms).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Jūsu Caps Lock taustiņš var būt atspējots vai pārkonfigurēts.</value>

@@ -424,7 +424,7 @@
     <value>AIM-i identifikaatorid esindavad vöötkoodi tüüpi. Teie tarkvara võib neid kasutada mittevajalike hoiatuste kõrvaldamiseks.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Teie vöötkoodiskanner on tõenäoliselt konfigureeritud automaatselt kompenseerima Caps Lock'i.</value>
+    <value>Teie vöötkoodilugeja on tõenäoliselt konfigureeritud automaatselt kompenseerima suurtähelukku või sisestama andmeid numbriklaviatuuriga (ALT-režiim).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Teie Caps Lock klahv võib olla välja lülitatud või ümber paigutatud.</value>

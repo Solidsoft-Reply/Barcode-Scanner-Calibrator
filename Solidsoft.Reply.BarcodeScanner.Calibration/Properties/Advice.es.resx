@@ -424,7 +424,7 @@
     <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Su escáner de códigos de barras probablemente esté configurado para compensar automáticamente el bloqueo de mayúsculas.</value>
+    <value>Es probable que su escáner de códigos de barras esté configurado para compensar automáticamente el bloqueo de mayúsculas o para ingresar datos usando el teclado numérico (modo ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Su tecla de bloqueo de mayúsculas puede estar desactivada o reasignada.</value>

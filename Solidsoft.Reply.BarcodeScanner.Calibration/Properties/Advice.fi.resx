@@ -424,7 +424,7 @@
     <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Viivakoodinlukijasi on todennäköisesti konfiguroitu kompensoimaan automaattisesti Caps Lockin.</value>
+    <value>Viivakoodinlukijasi on todennäköisesti määritetty korvaamaan automaattisesti Caps Lock -näppäimen tai syöttämään tietoja numeronäppäimistön avulla (ALT-tila).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Caps Lock -näppäimesi saattaa olla poistettu käytöstä tai uudelleenohjelmoitu.</value>

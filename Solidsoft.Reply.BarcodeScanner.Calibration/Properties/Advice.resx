@@ -526,7 +526,7 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock.</value>
+    <value>Your barcode scanner is probably configured to compensate automatically for Caps Lock or to enter data using the numeric keypad (ALT mode).</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_206" xml:space="preserve">

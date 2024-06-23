@@ -280,7 +280,7 @@
     <value>Vaš čitalnik črtnih kod ne prenaša AIM identifikatorjev.</value>
   </data>
   <data name="Condition_205" xml:space="preserve">
-    <value>Caps Lock je vklopljen, vendar je velikost črk pravilno prikazana.</value>
+    <value>Vaš čitalnik črtne kode je verjetno konfiguriran za samodejno kompenzacijo Caps Lock ali za vnos podatkov s pomočjo numerične tipkovnice (ALT način).</value>
   </data>
   <data name="Condition_206" xml:space="preserve">
     <value>Caps Lock je vklopljen, vendar je ohranjena velikost črk.</value>

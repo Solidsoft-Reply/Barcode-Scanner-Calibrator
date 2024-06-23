@@ -424,7 +424,7 @@
     <value>AIM-identifikatorer repræsenterer stregkodetypen. Din software kan bruge dem til at eliminere unødvendige alarmer.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Din stregkodescanner er sandsynligvis konfigureret til automatisk at kompensere for Caps Lock.</value>
+    <value>Din stregkodescanner er sandsynligvis konfigureret til automatisk at kompensere for Caps Lock eller til at indtaste data ved hjælp af det numeriske tastatur (ALT-tilstand).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Din Caps Lock-tast kan være deaktiveret eller omkonfigureret.</value>

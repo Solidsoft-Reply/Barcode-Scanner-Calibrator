@@ -424,7 +424,7 @@
     <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może ich użyć, aby wyeliminować niepotrzebne alerty.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>Scanerul tău de coduri de bare este probabil configurat pentru a compensa automat Caps Lock.</value>
+    <value>Scanerul dvs. de coduri de bare este probabil configurat pentru a compensa automat Caps Lock sau pentru a introduce date folosind tastatura numerică (modul ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>Tastele Caps Lock pot fi dezactivate sau remapate.</value>

@@ -424,7 +424,7 @@
     <value>AIM-aithintitheoirí ionadaíonn an cineál barcode. D'fhéadfadh do bhogearraí iad a úsáid chun foláirimh neamhriachtanacha a sheachaint.</value>
   </data>
   <data name="Description_205" xml:space="preserve">
-    <value>D'fhéadfadh do scanóir barcode a bheith cumraithe chun cúiteamh a dhéanamh go huathoibríoch le haghaidh Caps Lock.</value>
+    <value>Tá do scanóir cód barra socraithe go dóchúil chun dul i ngleic le Caps Lock go huathoibríoch nó chun sonraí a iontráil ag úsáid na heochracha uimhriúla (mód ALT).</value>
   </data>
   <data name="Description_206" xml:space="preserve">
     <value>D'fhéadfadh do eochair Caps Lock a bheith díchumasaithe nó athshuiteáilte.</value>
