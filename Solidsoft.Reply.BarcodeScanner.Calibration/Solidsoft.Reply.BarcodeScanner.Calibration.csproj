@@ -20,6 +20,8 @@
 		The following changes were made in this release.
 
 		1) Updated an advice message to describe the condition fully.
+		
+		2) Introduced minor improvement to aid debugging in scenarios where unidentified keys are not reported correctly to the calibrator.
 
 	</PackageReleaseNotes>
 	<Description>
