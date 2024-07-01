@@ -1,4 +1,94 @@
-                                 Apache License
+﻿NOTICES AND INFORMATION
+Do Not Translate or Localize
+
+This product includes software developed by Solidsoft Reply Ltd.
+(https://github.com/Solidsoft-Reply/Barcode-Scanner-Calibrator).
+
+=========================================================================
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for the specific language governing permissions and
+limitations under the License.
+
+=========================================================================
+
+This product includes third-party software components. The following is a list of third-party components and their respective notices.
+
+1. Component: Newtonsoft.json
+   License: MIT License (see below)
+   Copyright: (c) 2007 James Newton-King
+   URL: https://github.com/JamesNK/Newtonsoft.Json
+
+2. Component: SixLabors.ImageSharp
+   License: Apache 2.0 License (see below)
+   Copyright: (c) Six Labors
+   URL: https://github.com/SixLabors/ImageSharp
+   See Third-Party notices below for additional dependencies.
+
+3. Component: Solutaris.InfoWARE.ProtectedBrowserStorage
+   License: MIT License (see below)
+   Copyright: (c) 2022 Solutaris LLC
+   URL: https://github.com/InfoWAREDevTeam/Solutaris.InfoWARE.ProtectedBrowserStorage
+
+4. Component: ZXing.Net
+   License: Apache 2.0 License (see below)
+   Copyright: (c) 2017 ZXing.Net authors
+   URL: https://github.com/micjahn/ZXing.Net
+
+=========================================================================
+DEVELEOPMENT TOOLS:
+
+The following tools and libraries were used during development:
+
+1. Component: Microsoft.CodeAnalysis.PublicApiAnalyzers
+   License: MIT License (see below)
+   Copyright: (c) .NET Foundation and Contributors
+   URL: https://github.com/dotnet/roslyn-analyzers
+
+2. Component: Microsoft.SourceLink.GitHub
+   License: MIT License (see below)
+   Copyright: (c) .NET Foundation and Contributors
+   URL: https://github.com/dotnet/sourcelink
+
+3. Component: StyleCop.Analyzers
+   License: MIT License (see below)
+   Copyright: (c) Tunnel Vision Laboratories, LLC
+   URL: https://github.com/DotNetAnalyzers/StyleCopAnalyzers
+
+These tools are not distributed with the product but were used during development.
+
+See DEVELOPER-NOTICE.txt for additional information.
+
+=========================================================================
+FRAMWORKS:
+
+The following frameworks were used during development:
+
+1. Library: Microsoft.NETCore.App
+   License: MIT License and .NET Library License (see below)
+   URL: https://github.com/dotnet/runtime
+   Copyright: Microsoft Corporation
+
+These frameworks are not distributed with the product.
+
+See DEVELOPER-NOTICE.txt for additional information.
+
+=========================================================================
+LICENCES
+
+-------------------------------------------------------------------------
+Apache 2.0 Licence
+-------------------------------------------------------------------------
+                                    Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -186,7 +276,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2018-2024 Solidsoft Reply Ltd.
+   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -199,3 +289,68 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+-------------------------------------------------------------------------
+MIT Licence
+-------------------------------------------------------------------------
+   MIT License
+
+   Copyright (c) [Year] Example Author
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+=========================================================================
+THIRD-PARTY NOTICES AND INFORMATION
+Do Not Translate or Localize
+
+-------------------------------------------------------------------------
+SixLabors.ImageSharp
+-------------------------------------------------------------------------
+ImageSharp uses third-party libraries or other resources that may be
+distributed under licenses different than ImageSharp itself.
+
+In the event that we accidentally failed to list a required notice, please
+bring it to our attention by posting an issue.
+
+The attached notices are provided for information only.
+
+
+License notice for Zlib
+-----
+
+DeflateStream implementation adapted from SharpZipLib.
+Licensed under MIT.
+https://github.com/icsharpcode/SharpZipLib
+
+
+Crc32 and Adler32 SIMD implementation adapted from Chromium.
+Licensed under BSD 3-Clause "New" or "Revised" License.
+https://github.com/chromium/chromium
+
+
+License notice for Stream Read/Write Extensions
+-----
+
+Licensed to the .NET Foundation under one or more agreements.
+The .NET Foundation licenses this file to you under the MIT license.
+See the LICENSE file in the CoreFX project root for more information.
+
+https://github.com/dotnet/corefx/blob/17300169760c61a90cab8d913636c1058a30a8c1/LICENSE.TXT
+https://github.com/dotnet/corefx/blob/17300169760c61a90cab8d913636c1058a30a8c1/src/Common/src/CoreLib/System/IO/Stream.cs#L742
+https://github.com/dotnet/corefx/blob/17300169760c61a90cab8d913636c1058a30a8c1/src/Common/src/CoreLib/System/IO/Stream.cs#L775
