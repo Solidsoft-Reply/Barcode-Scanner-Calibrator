@@ -184,6 +184,11 @@ public enum InformationType {
     ControlCharacterMappingAdditionalDataElements = 256,
 
     /// <summary>
+    ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read.
+    /// </summary>
+    ControlCharacterMappingNotReliablyReadable = 257,
+
+    /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond.
     /// </summary>
     NonCorrespondingKeyboardLayouts = 260,

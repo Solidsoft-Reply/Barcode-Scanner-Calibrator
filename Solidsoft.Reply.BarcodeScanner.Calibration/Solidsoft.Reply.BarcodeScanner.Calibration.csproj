@@ -19,9 +19,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Updated an advice message to describe the condition fully.
-		
-		2) Introduced minor improvement to aid debugging in scenarios where unidentified keys are not reported correctly to the calibrator.
+		1) Implemented improved handling for situations where ambiguities exist for EDI control characters with characters that are not used in EDI data.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -31,7 +29,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.7</Version>
+	<Version>2.2.8</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
@@ -49,7 +47,12 @@
 	  <AdditionalFiles Include="stylecop.json" />
 	</ItemGroup>
 
-  <ItemGroup>
+	<ItemGroup>
+		<None Include="../LICENSE.txt" Pack="true" PackagePath="" />
+		<None Include="../README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
 	<PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4">
 	  <PrivateAssets>all</PrivateAssets>
 	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Si escanea códigos de barras EDI y experimenta dificultades, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Si experimenta dificultades al escanear códigos de barras, intente configurar su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Intente de nuevo, asegurándose de escanear el(los) código(s) de barras correcto(s).</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Su sistema no puede leer códigos de barras de manera confiable si contienen datos para el Intercambio Electrónico de Datos (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Su sistema no puede distinguir entre ciertos caracteres normales y caracteres especiales.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>La prueba falló.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Algunos códigos de barras pueden contener datos EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>En la mayoría de los casos, estos caracteres no aparecen juntos en los códigos de barras.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Puede haber escaneado un código de barras incorrecto o ingresado datos incorrectos usando el teclado. Su escáner de códigos de barras o sistema puede ser lento, o puede haber ocurrido algún problema inesperado o intermitente.</value>

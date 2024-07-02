@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Tá an seicheamh carachtar tuairiscithe {0} doiléir. D'fhéadfadh sé seo cosc a chur ar léamh aon eilimintí sonraí breise san áireamh i mbarcód.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Tá an carachtar a thuairiscítear {0} débhríoch. Ní féidir códanna barra a úsáideann ASCII 28 nó ASCII 31 a léamh go hiontaofa.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire</value>
   </data>

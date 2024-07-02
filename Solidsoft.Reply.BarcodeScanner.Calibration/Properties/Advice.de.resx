@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Wenn Sie EDI-Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Wenn Sie beim Scannen von Barcodes auf Schwierigkeiten stoßen, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Ihr System kann bestimmte normale Zeichen und Sonderzeichen nicht unterscheiden.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Der Test ist fehlgeschlagen.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Einige Barcodes können EDI-Daten enthalten.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>In den meisten Fällen treten diese Zeichen nicht zusammen in Barcodes auf.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner</value>

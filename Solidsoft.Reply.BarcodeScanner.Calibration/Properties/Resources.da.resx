@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Den rapporterede tegnsekvens {0} er tvetydig. Dette kan forhindre læsning af eventuelle yderligere dataelementer inkluderet i en stregkode.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Det rapporterede tegn {0} er tvetydigt. Stregkoder, der bruger ASCII 28 eller ASCII 31, kan muligvis ikke læses pålideligt.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens</value>
   </data>

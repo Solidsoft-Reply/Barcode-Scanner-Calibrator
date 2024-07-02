@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Докладваната редица от символи {0} е двусмислена. Това може да попречи на четенето на допълнителни елементи от данни, включени в баркода.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Символът {0}, за който е съобщено, е двусмислен. Баркодове, които използват ASCII 28 или ASCII 31, може да не бъдат четени надеждно.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват.</value>
   </data>

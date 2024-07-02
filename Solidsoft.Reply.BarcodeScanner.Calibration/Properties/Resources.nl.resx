@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>De gerapporteerde karakterreeks {0} is dubbelzinnig. Dit kan het lezen van eventuele extra gegevenselementen in een barcode verhinderen.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} is dubbelzinnig. Barcodes die ASCII 28 of ASCII 31 gebruiken, kunnen mogelijk niet betrouwbaar worden gelezen.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen.</value>
   </data>

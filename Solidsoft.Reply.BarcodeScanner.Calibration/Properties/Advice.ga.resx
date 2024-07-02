@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Má tá deacrachtaí agat ag scanadh barcodes EDI, bain triail as do scanóir barcode a chumrú chun méarchlár uimhriúil a aithris.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Má tá deacrachtaí agat agus cóid barra á scanadh agat, déan iarracht do scanóir cóid barra a chumrú chun méarchlár uimhriúil a aithris.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Bain triail eile as, ag déanamh cinnte go scanálann tú an barcode(anna) ceart.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Ní féidir le do chóras barrachóid a léamh go hiontaofa má tá sonraí le haghaidh Malartú Leictreonach Sonraí (EDI) iontu.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Ní féidir le do chóras idirdhealú a dhéanamh idir gnáthcharachtair áirithe agus carachtair speisialta.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Theip ar an tástáil.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>D'fhéadfadh roinnt barcodes sonraí EDI a áireamh.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>I bhformhór na gcásanna, ní fheictear na carachtair seo le chéile i gcóid barra.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>D'fhéadfá barcode mícheart a bheith scanáilte nó sonraí míchearta a bheith ionchurtha ag baint úsáide as an méarchlár. D'fhéadfadh do scanóir barcode nó do chóras a bheith mall, nó d'fhéadfadh fadhb gan choinne nó idirthréimhseach tarlú.</value>

@@ -412,6 +412,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_257 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_257", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond.
         /// </summary>
         internal static string CalibrationInformation_260 {

@@ -361,4 +361,7 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Unit separator characters are supported.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read.</value>
+  </data>
 </root>

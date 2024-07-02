@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Se scansioni codici a barre EDI e incontri difficoltà, prova a configurare il tuo scanner di codici a barre per emulare un tastierino numerico.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Se riscontri difficoltà durante la scansione dei codici a barre, prova a configurare il tuo lettore di codici a barre per emulare un tastierino numerico.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Prova di nuovo, assicurandoti di scansionare il codice a barre corretto.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Il tuo sistema non può leggere i codici a barre in modo affidabile se contengono dati per lo scambio elettronico di dati (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Il tuo sistema non può distinguere tra alcuni caratteri normali e caratteri speciali.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Il test è fallito.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Alcuni codici a barre possono contenere dati EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Nella maggior parte dei casi, questi caratteri non compaiono insieme nei codici a barre.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Potresti aver scansionato un codice a barre sbagliato o inserito dati errati usando la tastiera. Il tuo scanner di codici a barre o il sistema potrebbe essere lento, o potrebbero essersi verificati alcuni problemi inaspettati o intermittenti.</value>

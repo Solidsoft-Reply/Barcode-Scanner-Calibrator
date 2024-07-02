@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jos skannaat EDI-viivakoodeja ja kohtaat vaikeuksia, kokeile konfiguroida viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi emuloimaan numeronäppäimistöä.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Yritä uudelleen varmistaen, että skannaat oikean viivakoodin tai viivakoodit.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Järjestelmäsi ei voi luotettavasti lukea viivakoodeja, jos ne sisältävät tietoja sähköistä tiedonsiirtoa (EDI) varten.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Järjestelmäsi ei pysty erottamaan tiettyjä normaaleja ja erikoismerkkejä toisistaan.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testi epäonnistui.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Jotkut viivakoodit saattavat sisältää EDI-dataa.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Useimmissa tapauksissa nämä merkit eivät esiinny yhdessä viivakoodeissa.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Saatat olla skannannut väärän viivakoodin tai syöttänyt virheellisiä tietoja näppäimistöllä. Viivakoodinlukijasi tai järjestelmäsi saattaa olla hidas, tai jokin odottamaton tai satunnainen ongelma saattaa olla ilmennyt.</value>

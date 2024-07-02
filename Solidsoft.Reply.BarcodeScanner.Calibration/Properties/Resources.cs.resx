@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Nahlášená sekvence znaků {0} je nejednoznačná. To může zabránit čtení dalších datových prvků zahrnutých v čárovém kódu.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Zadaný znak {0} je nejednoznačný. Čárové kódy používající ASCII 28 nebo ASCII 31 nemusí být spolehlivě čteny.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Rozložení klávesnice skeneru čárových kódů a počítače neodpovídají.</value>
   </data>

@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>A jelentett {0} karakter sorozat kétértelmű. Ez megakadályozhatja a vonalkódban található további adatelemek olvasását.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>A jelentett karakter {0} nem egyértelmű. Az ASCII 28 vagy ASCII 31 használatával készült vonalkódok megbízható olvasása nem garantált.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése nem egyezik meg.</value>
   </data>

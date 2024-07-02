@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ef þú skannar EDI strikamerki og lendir í vandræðum, reyndu að stilla strikamerkjalesarann þinn þannig að hann líki eftir númeralyklaborði.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ef þú lendir í erfiðleikum við að skanna strikamerki, reyndu að stilla strikamerkjaskannan þinn til að líkja eftir tölulegu lyklaborði.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Reyndu aftur og vertu viss um að þú skannir rétt strikamerki.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Kerfið þitt getur ekki lesið strikamerki á áreiðanlegan hátt ef þau innihalda gögn fyrir rafrænan gagnaflutning (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Kerfið þitt getur ekki greint á milli ákveðinna venjulegra stafa og sértákna.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Prófið mistókst.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Sum strikamerki gætu innihaldið EDI gögn.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Í flestum tilfellum birtast þessir stafir ekki saman í strikamerkjum.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Þú gætir hafa skannað rangt strikamerki eða slegið inn rangar upplýsingar á lyklaborðinu. Strikamerkjalesarinn þinn eða kerfið gæti verið hægt, eða einhver óvænt eða tíð tímaúrfelling gæti hafa komið upp.</value>

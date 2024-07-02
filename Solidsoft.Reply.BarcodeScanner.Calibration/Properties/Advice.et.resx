@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Kui skaneerite EDI vöötkoode ja kogete raskusi, proovige seadistada oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Kui teil tekib vöötkoodide skannimisel raskusi, proovige seadistada oma vöötkoodilugeja numbriklaviatuuri emuleerimiseks.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Proovige uuesti, veendudes, et skaneerite õiget vöötkoodi(de).</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Teie süsteem ei suuda triipkoode usaldusväärselt lugeda, kui need sisaldavad elektroonilise andmevahetuse (EDI) andmeid.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Teie süsteem ei suuda eristada teatud tavalisi märke ja erimärke.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nurjus.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Mõned vöötkoodid võivad sisaldada EDI andmeid.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Enamikul juhtudel ei esine need märgid vöötkoodides koos.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Võib-olla skaneerisite vale vöötkoodi või sisestasite klaviatuuriga vale andme. Teie vöötkoodiskanner või süsteem võib olla aeglane või võis esineda mõni ootamatu või katkendlik probleem.</value>

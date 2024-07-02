@@ -74,6 +74,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         var canReadInvariantCharactersReliably = systemCapabilities.CanReadInvariantsReliably;
         var canReadFormat05AndFormat06Reliably = systemCapabilities.CanReadFormat05AndFormat06Reliably;
         var canReadEdiReliably = systemCapabilities.CanReadEdiReliably;
+        var canReadAscii28Ascci31Reliably = systemCapabilities.CanReadAscii28Ascci31Reliably;
         var canReadAimIdentifiersReliably = systemCapabilities.CanReadAimIdentifiersReliably;
         var canReadNonInvariantCharactersReliably = systemCapabilities.CanReadAdditionalAsciiCharactersReliably;
         var scannerTransmitsAimIdentifiers = systemCapabilities.ScannerTransmitsAimIdentifiers;
@@ -234,20 +235,24 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                             : null
                 : null);
 
-        // AdviceType: 270, 271, 275
+        // AdviceType: 270, 271, 275, 276
         AddAdviceItemToList(
             IfDataWasFullyReported()
             && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()
                 ? IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
-                    : IfWeAssumeAgnosticism()
-                        ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() // 270
-                        : IfWeAssumeNoCalibration()
-                            ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() // 271
-                            : null
+                    : IfWeCannotReadAscii28Ascii31CharactersReliably()
+                        ? ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() // 276
+                        : IfWeAssumeAgnosticism()
+                            ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() // 270
+                            : IfWeAssumeNoCalibration()
+                                ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() // 271
+                                : null
                 : IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
-                    : null);
+                    : IfWeCannotReadAscii28Ascii31CharactersReliably()
+                        ? ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() // 276
+                        : null);
 
         // AdviceType: 300
         AddAdviceItemToList(
@@ -681,6 +686,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
 
         bool IfWeCannotReadNonInvariantCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
         bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
+        bool IfWeCannotReadAscii28Ascii31CharactersReliably() => !canReadAscii28Ascci31Reliably ?? false;
         bool IfUnexpectedErrorOccurred() => unexpectedError;
         bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;
@@ -804,6 +810,10 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // 275
         AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
             new(AdviceType.CannotReadEdiCharacters);
+
+        // 276
+        AdviceItem ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() =>
+            new(AdviceType.CannotReadAscii28Ascii31Characters);
 
         // 300
         AdviceItem ReportThatTheTestFailed() =>

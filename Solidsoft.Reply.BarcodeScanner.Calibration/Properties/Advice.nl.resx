@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Als u EDI-barcodes scant en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenbord te emuleren.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Probeer opnieuw, zorg ervoor dat u de juiste barcode(s) scant.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Uw systeem kan bepaalde normale tekens en speciale tekens niet onderscheiden.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>De test is mislukt.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Sommige barcodes kunnen EDI data bevatten.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>In de meeste gevallen komen deze tekens niet samen voor in barcodes.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>U heeft mogelijk een verkeerde barcode gescand of incorrecte gegevens ingevoerd via het toetsenbord. Uw barcode scanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>

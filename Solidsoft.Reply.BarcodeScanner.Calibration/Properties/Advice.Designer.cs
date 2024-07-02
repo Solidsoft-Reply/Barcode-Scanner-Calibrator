@@ -304,6 +304,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_276 {
+            get {
+                return ResourceManager.GetString("Advice_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again, making sure you scan the correct barcode(s)..
         /// </summary>
         internal static string Advice_300 {
@@ -745,6 +754,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your system cannot distinguish between certain normal characters and special characters..
+        /// </summary>
+        internal static string Condition_276 {
+            get {
+                return ResourceManager.GetString("Condition_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The test failed..
         /// </summary>
         internal static string Condition_300 {
@@ -1155,6 +1173,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Description_275 {
             get {
                 return ResourceManager.GetString("Description_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In most cases, these characters don&apos;t appear together in barcodes..
+        /// </summary>
+        internal static string Description_276 {
+            get {
+                return ResourceManager.GetString("Description_276", resourceCulture);
             }
         }
         

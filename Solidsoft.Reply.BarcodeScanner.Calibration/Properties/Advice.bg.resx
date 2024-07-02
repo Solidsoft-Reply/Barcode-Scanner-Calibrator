@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ако сканирате баркодове, които съдържат данни EDI, и имате затруднения, опитайте да конфигурирате вашия баркод скенер да имитира числова клавиатура.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ако срещате трудности при сканирането на баркодове, опитайте да конфигурирате баркод скенера си да емулира цифрова клавиатура.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Опитайте отново, като се уверите, че сканирате правилния баркод(ове).</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Вашата система не може да чете баркодове надеждно, ако те съдържат данни за електронен обмен на данни (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Вашата система не може да различи определени нормални символи и специални символи.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Тестът се провали.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Някои баркодове могат да съдържат данни EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>В повечето случаи тези символи не се появяват заедно в баркодове.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Може да сте сканирали грешен баркод или сте въвели неправилни данни с клавиатурата. Вашият баркод скенер или система може да са бавни, или е възникнал някакъв неочакван или прекъсващ проблем.</value>

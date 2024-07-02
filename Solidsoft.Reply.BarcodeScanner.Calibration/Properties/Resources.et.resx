@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See võib takistada vöötkoodis sisalduvate täiendavate andmeelementide lugemist.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Teatatud märk {0} on mitmetähenduslik. Vöötkoodid, mis kasutavad ASCII 28 või ASCII 31, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti.</value>
   </data>

@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jos skannaat EDI-viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Prøv igjen, og sørg for at du skanner riktig strekkode(r).</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Systemet ditt kan ikke skille mellom visse normale tegn og spesialtegn.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen feilet.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Jotkut viivakoodit saattavat sisältää EDI-tietoja.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>I de fleste tilfeller vises ikke disse tegnene sammen i strekkoder.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannet en feil strekkode eller tastet inn feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller intermittent problem.</value>

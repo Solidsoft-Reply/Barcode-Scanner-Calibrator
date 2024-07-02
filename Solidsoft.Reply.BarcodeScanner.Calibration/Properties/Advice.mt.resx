@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Jekk tiskennja barcodes EDI, u tesperjenza diffikultà, ipprova tikkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultà meta tiskannja codes tal-bar, ipprova kkonfigura l-iskaner tal-codes tal-bar tiegħek biex jimita tastiera numerika.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode(s) korretta/i.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Is-sistema tiegħek ma tistax taqra l-kodiċijiet tal-bar b'mod affidabbli jekk fihom data għall-Iskambju Elettroniku tad-Data (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax tiddistingwi bejn ċerti karattri normali u karattri speċjali.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>It-test falla.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Xi barcodes jistgħu jkun fihom data EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Fil-biċċa l-kbira tal-każijiet, dawn il-karattri ma jidhirx flimkien fil-codes tal-bar.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>

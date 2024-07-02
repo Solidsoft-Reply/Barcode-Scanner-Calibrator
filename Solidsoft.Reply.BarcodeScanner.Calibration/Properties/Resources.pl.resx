@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Może to uniemożliwić odczyt jakichkolwiek dodatkowych elementów danych zawartych w kodzie kreskowym.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Zgłoszony znak {0} jest niejednoznaczny. Kody kreskowe używające ASCII 28 lub ASCII 31 mogą być odczytywane nieprawidłowo.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie.</value>
   </data>

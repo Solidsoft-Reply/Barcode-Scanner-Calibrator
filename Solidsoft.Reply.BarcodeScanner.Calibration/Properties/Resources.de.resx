@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies kann das Lesen von zusätzlichen Datenelementen in einem Barcode verhindern.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die ASCII 28 oder ASCII 31 verwenden, können möglicherweise nicht zuverlässig gelesen werden.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht.</value>
   </data>

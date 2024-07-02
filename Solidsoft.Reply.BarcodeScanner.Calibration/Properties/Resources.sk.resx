@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To môže zabrániť čítaniu akýchkoľvek ďalších údajových prvkov zahrnutých v čiarovom kóde.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy, ktoré používajú ASCII 28 alebo ASCII 31, nemusia byť spoľahlivo čítané.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá.</value>
   </data>

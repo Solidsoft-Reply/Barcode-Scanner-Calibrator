@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>La sequenza di caratteri segnalata {0} è ambigua. Ciò potrebbe impedire la lettura di eventuali elementi di dati aggiuntivi inclusi in un codice a barre.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Il carattere segnalato {0} è ambiguo. I codici a barre che utilizzano ASCII 28 o ASCII 31 potrebbero non essere letti in modo affidabile.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono.</value>
   </data>

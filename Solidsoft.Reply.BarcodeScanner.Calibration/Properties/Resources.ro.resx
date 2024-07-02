@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Secvența de caractere raportată {0} este ambiguă. Acest lucru poate împiedica citirea oricăror elemente de date suplimentare incluse într-un cod de bare.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Caracterul raportat {0} este ambiguu. Codurile de bare care folosesc ASCII 28 sau ASCII 31 pot să nu fie citite în mod fiabil.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund</value>
   </data>

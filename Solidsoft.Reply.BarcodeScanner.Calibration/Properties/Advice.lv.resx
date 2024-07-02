@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Ja rodas grūtības skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri, lai tas atdarinātu ciparu tastatūru.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Jūsu sistēma nevar atšķirt noteiktus parastos rakstzīmes un īpašos rakstzīmes.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Tests neizdevās.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Daži svītrkodi var saturēt EDI datus.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Vairumā gadījumu šīs rakstzīmes svītrkodos neparādās kopā.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>

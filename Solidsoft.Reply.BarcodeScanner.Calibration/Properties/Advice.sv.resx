@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Om du skannar EDI-streckkoder och upplever svårigheter, försök konfigurera din streckkodsläsare för att emulera ett numeriskt tangentbord.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Om du upplever svårigheter vid skanning av streckkoder, försök att konfigurera din streckkodsläsare för att emulera ett numeriskt tangentbord.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Försök igen, se till att du skannar rätt streckkod(er).</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Ditt system kan inte läsa streckkoder tillförlitligt om de innehåller data för Elektroniskt Datautbyte (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Ditt system kan inte skilja mellan vissa normala tecken och specialtecken.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testet misslyckades.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Vissa streckkoder kan innehålla EDI-data.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>I de flesta fall förekommer dessa tecken inte tillsammans i streckkoder.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannat en felaktig streckkod eller matat in felaktiga uppgifter med tangentbordet. Din streckkodsläsare eller system kan vara långsam, eller något oväntat eller intermittenta problem kan ha inträffat.</value>

@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tas var traucēt jebkuru papildus datu elementu nolasīšanu, kas iekļauti svītrkodā.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ziņotais raksturs {0} ir neskaidrs. Svītrkodus, kuros tiek izmantots ASCII 28 vai ASCII 31, var nebūt iespējams droši nolasīt.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst.</value>
   </data>

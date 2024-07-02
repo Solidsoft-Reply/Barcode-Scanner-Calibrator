@@ -5711,6 +5711,7 @@ public class Calibrator {
             case InformationType.MultipleKeysMultipleNonInvariantCharacters:
             case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
             case InformationType.ControlCharacterMappingAdditionalDataElements:
+            case InformationType.ControlCharacterMappingNotReliablyReadable:
             case InformationType.MultipleKeys:
             case InformationType.DeadKeyMultiMapping:
             case InformationType.DeadKeyMultipleKeys:
@@ -5852,6 +5853,7 @@ public class Calibrator {
             case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
             case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
             case InformationType.ControlCharacterMappingAdditionalDataElements:
+            case InformationType.ControlCharacterMappingNotReliablyReadable:
             case InformationType.NonInvariantCharacterSequence:
                 AddAmbiguity(_tokenExtendedDataNonInvariantAmbiguities);
                 break;
@@ -6473,8 +6475,7 @@ public class Calibrator {
                     case 1: {
                             var key = reportedControl.First();
 
-                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue))
-                            {
+                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue)) {
 #if NET7_0_OR_GREATER
                                 if (InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString()))
 #else
@@ -6482,8 +6483,7 @@ public class Calibrator {
 #endif
                                 {
                                     // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-                                    switch (idx)
-                                    {
+                                    switch (idx) {
                                         case Segments.GroupSeparatorSegment:
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                             return LogCalibrationInformation(
@@ -6495,26 +6495,34 @@ public class Calibrator {
                                             // The ambiguity is resolved by the parser by inferring the ASCII 30.
                                             break;
                                         default:
-                                            // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                            // EDI data cannot be reliably read.
-                                            token = LogCalibrationInformation(
-                                                token,
-                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                                key.ToControlPictureString(),
-                                                $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+                                            token = isEdiCharacter(characterMapValue)
+
+                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                // EDI data cannot be reliably read.
+                                                ? LogCalibrationInformation(
+                                                    token,
+                                                    InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                    key.ToControlPictureString(),
+                                                    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}")
+ 
+                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
+                                                // characters may not be reliably read.
+                                                : LogCalibrationInformation(
+                                                    token,
+                                                    InformationType.ControlCharacterMappingNotReliablyReadable,
+                                                    key.ToControlPictureString(),
+                                                    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             break;
                                     }
                                 }
-                                else
-                                {
+                                else {
                                     /* The ambiguity is for a non-invariant character. We will resolve it by omitting the
                                      * opportunity to resolve the non-invariant character. Replace the mapping in the
                                      * character map with one for the ASCII 30.
                                      * */
                                     var localToken = token;
 
-                                    _tokenExtendedDataCharacterMap[key] = idx switch
-                                    {
+                                    _tokenExtendedDataCharacterMap[key] = idx switch {
                                         Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30
                                             ? RaiseWarning((char)29)
                                             : ResolveForGs1(),
@@ -6526,8 +6534,7 @@ public class Calibrator {
 
                                     token = localToken;
 
-                                    char RaiseWarning(char controlCharacter)
-                                    {
+                                    char RaiseWarning(char controlCharacter) {
                                         // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
                                         localToken = LogCalibrationInformation(
                                             localToken,
@@ -6538,23 +6545,35 @@ public class Calibrator {
                                         return controlCharacter;
                                     }
 
-                                    char RaiseWarningIsoIec15434(char controlCharacter)
-                                    {
+                                    char RaiseWarningIsoIec15434(char controlCharacter) {
+
                                         // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                         // EDI data cannot be reliably read.
                                         localToken = AssessFormatSupport
-                                            ? LogCalibrationInformation(
-                                                localToken,
-                                                InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                                key.ToControlPictureString(),
-                                                $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+                                            ? isEdiCharacter(characterMapValue)
+
+                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                               // EDI data cannot be reliably read.
+                                               ? LogCalibrationInformation(
+                                                   token,
+                                                   InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                   key.ToControlPictureString(),
+                                                   $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+
+                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
+                                               // characters may not be reliably read.
+                                               : LogCalibrationInformation(
+                                                   token,
+                                                   InformationType.ControlCharacterMappingNotReliablyReadable,
+                                                   key.ToControlPictureString(),
+                                                   $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+
                                             : localToken;
 
                                         return controlCharacter;
                                     }
 
-                                    char ResolveForGs1()
-                                    {
+                                    char ResolveForGs1() {
                                         /* Both ASCII 29 and ASCII 30 map to the same character. We will resolve
                                          * in favour of ASCII 29 (used in both GS1 and ANSI MH 10.8.2 barcodes).
                                          * The map entry should already be for ASCII 29, but we will set it again
@@ -6594,11 +6613,23 @@ public class Calibrator {
                                             InformationType.ControlCharacterMappingAdditionalDataElements,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
-                                        _ when AssessFormatSupport => LogCalibrationInformation(
-                                            token,
-                                            InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                            key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+                                        _ when AssessFormatSupport => isEdiCharacter(characterMapValue)
+
+                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                               // EDI data cannot be reliably read.
+                                               ? LogCalibrationInformation(
+                                                   token,
+                                                   InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                                                   key.ToControlPictureString(),
+                                                   $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")
+
+                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
+                                               // characters may not be reliably read.
+                                               : LogCalibrationInformation(
+                                                   token,
+                                                   InformationType.ControlCharacterMappingNotReliablyReadable,
+                                                   key.ToControlPictureString(),
+                                                   $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
                                         _ => token
                                     };
 
@@ -6684,6 +6715,19 @@ public class Calibrator {
                     calibrationToken,
                     InformationType.UnitSeparatorSupported),
                 _ => calibrationToken
+            };
+
+        bool isEdiCharacter(char character) =>
+            ((int)character) switch {
+                > 64 and <= 90 => true,
+                > 47 and <= 57 => true,
+                32 => true,
+                > 38 and <= 41 => true,
+                > 42 and <= 47 => true,
+                58 => true,
+                61 => true,
+                63 => true,
+                _ => false
             };
     }
 

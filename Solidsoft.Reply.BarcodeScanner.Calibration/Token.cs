@@ -293,6 +293,7 @@ public readonly record struct Token(
                                           oldToken.SystemCapabilities.CanReadInvariantsReliably,
                                           oldToken.SystemCapabilities.CanReadFormat05AndFormat06Reliably,
                                           oldToken.SystemCapabilities.CanReadEdiReliably,
+                                          oldToken.SystemCapabilities.CanReadAscii28Ascci31Reliably,
                                           oldToken.SystemCapabilities.CanReadGroupSeparatorReliably,
                                           oldToken.SystemCapabilities.CanReadRecordSeparatorReliably,
                                           oldToken.SystemCapabilities.CanReadFileSeparatorsReliably,

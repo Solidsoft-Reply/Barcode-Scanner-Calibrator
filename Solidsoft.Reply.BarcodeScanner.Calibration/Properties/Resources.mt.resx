@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Is-sekwenza tal-karattri rrappurtata {0} hija ambigwa. Dan jista' jipprevjeni l-qari ta' kwalunkwe elementi addizzjonali ta' data inklużi f'barcode.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} huwa ambigwu. Il-codes tal-bar li jużaw ASCII 28 jew ASCII 31 jistgħu ma jinqrawx b’mod affidabbli.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux</value>
   </data>

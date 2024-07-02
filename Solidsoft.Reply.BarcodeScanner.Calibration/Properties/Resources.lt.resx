@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai gali sutrukdyti bet kokių papildomų duomenų elementų, įtrauktų į brūkšninį kodą, nuskaitymui.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ASCII 28 arba ASCII 31, gali būti neskaitomi patikimai.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa</value>
   </data>

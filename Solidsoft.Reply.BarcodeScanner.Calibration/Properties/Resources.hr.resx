@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Prijavljena sekvencija znakova {0} je dvosmislena. To može spriječiti čitanje bilo kojih dodatnih elemenata podataka uključenih u bar kod.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvosmislen. Barkodovi koji koriste ASCII 28 ili ASCII 31 možda neće biti pouzdano pročitani.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju</value>
   </data>

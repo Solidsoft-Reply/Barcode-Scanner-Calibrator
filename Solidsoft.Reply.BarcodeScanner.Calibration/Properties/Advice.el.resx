@@ -198,6 +198,9 @@
   <data name="Advice_275" xml:space="preserve">
     <value>Αν σαρώνετε barcodes που περιέχουν δεδομένα EDI και αντιμετωπίζετε δυσκολία, δοκιμάστε να ρυθμίσετε τον σαρωτή barcode σας να μιμείται ένα αριθμητικό πληκτρολόγιο.</value>
   </data>
+  <data name="Advice_276" xml:space="preserve">
+    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση γραμμωτών κωδίκων, δοκιμάστε να διαμορφώσετε το σαρωτή γραμμωτού κώδικα ώστε να εξομοιώνει αριθμητικό πληκτρολόγιο.</value>
+  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Δοκιμάστε ξανά, βεβαιωθείτε ότι σαρώνετε τα σωστά barcodes.</value>
   </data>
@@ -345,6 +348,9 @@
   <data name="Condition_275" xml:space="preserve">
     <value>Το σύστημά σας δεν μπορεί να διαβάσει αξιόπιστα τους γραμμωτούς κώδικες εάν περιέχουν δεδομένα για Ηλεκτρονική Ανταλλαγή Δεδομένων (EDI).</value>
   </data>
+  <data name="Condition_276" xml:space="preserve">
+    <value>Το σύστημά σας δεν μπορεί να διακρίνει μεταξύ ορισμένων κανονικών χαρακτήρων και ειδικών χαρακτήρων.</value>
+  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Η δοκιμή απέτυχε.</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="Description_275" xml:space="preserve">
     <value>Μερικά barcodes μπορεί να περιέχουν δεδομένα EDI.</value>
+  </data>
+  <data name="Description_276" xml:space="preserve">
+    <value>Στις περισσότερες περιπτώσεις, αυτοί οι χαρακτήρες δεν εμφανίζονται μαζί στους γραμμωτούς κώδικες.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Μπορεί να σαρώσατε ένα λάθος barcode ή να εισάγατε λάθος δεδομένα χρησιμοποιώντας το πληκτρολόγιο. Ο σαρωτής barcode ή το σύστημά σας μπορεί να είναι αργό, ή να έχει συμβεί κάποιο απροσδόκητο ή περιστασιακό πρόβλημα.</value>

@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι ασαφής. Αυτό μπορεί να εμποδίσει την ανάγνωση οποιωνδήποτε επιπλέον στοιχείων δεδομένων που περιλαμβάνονται σε ένα barcode.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Οι γραμμωτοί κώδικες που χρησιμοποιούν ASCII 28 ή ASCII 31 ενδέχεται να μην διαβάζονται αξιόπιστα.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν αντιστοιχούν</value>
   </data>

@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Skýrð stafaröð {0} er tvíræð. Þetta gæti komið í veg fyrir lestur á frekari gögnum sem innifalin eru í strikamerki.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Táknið {0} sem tilkynnt var er tvírætt. Strikamerki sem nota ASCII 28 eða ASCII 31 gætu ekki lesist áreiðanlega.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman.</value>
   </data>

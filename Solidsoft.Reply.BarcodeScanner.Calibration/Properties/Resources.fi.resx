@@ -225,6 +225,9 @@
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Raportoitu merkkijono {0} on epäselvä. Tämä saattaa estää viivakoodissa olevien lisädatan elementtien lukemisen.</value>
   </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} on epäselvä. Viivakoodeja, jotka käyttävät ASCII 28:aa tai ASCII 31:tä, ei välttämättä voida lukea luotettavasti.</value>
+  </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan</value>
   </data>
