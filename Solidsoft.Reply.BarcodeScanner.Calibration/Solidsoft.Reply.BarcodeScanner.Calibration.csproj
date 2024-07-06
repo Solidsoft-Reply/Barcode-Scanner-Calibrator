@@ -19,7 +19,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Implemented improved handling for situations where ambiguities exist for EDI control characters with characters that are not used in EDI data.
+		1) Fixed issue with calculation of scanner capabilities for ISO/IEC 15434 data.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +29,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.8</Version>
+	<Version>2.2.9</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>

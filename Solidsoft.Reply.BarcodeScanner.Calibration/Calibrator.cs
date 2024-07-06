@@ -532,19 +532,6 @@ public class Calibrator {
     /// </summary>
     private IList<char> _tokenExtendedDataUnrecognisedKeys = [];
 
-    /////////// <summary>
-    ///////////   Initializes a new instance of the <see cref="Calibrator" /> class.
-    /////////// </summary>
-    /////////// <param name="calibrationData">The calibration data.</param>
-    ////////public Calibrator(
-    ////////    Data? calibrationData) {
-    ////////    if (calibrationData is not null) {
-    ////////        CalibrationData = calibrationData;
-    ////////    }
-
-    ////////    _assumption = Assumption.Calibration;
-    ////////}
-
     /// <summary>
     ///   Initializes a new instance of the <see cref="Calibrator" /> class.
     /// </summary>

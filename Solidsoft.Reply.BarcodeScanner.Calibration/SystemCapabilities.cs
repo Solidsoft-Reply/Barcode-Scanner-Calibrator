@@ -279,10 +279,10 @@ public sealed record SystemCapabilities(
     [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 13)] bool? CanReadFormat05AndFormat06Reliably = true,
     [property: JsonProperty("canReadEdiReliably", Order = 14)] bool? CanReadEdiReliably = true,
     [property: JsonProperty("canReadAscii29Ascii31Reliably", Order = 15)] bool? CanReadAscii28Ascci31Reliably = true,
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 16)] bool? CanReadGroupSeparatorReliably = true,
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 17)] bool? CanReadRecordSeparatorReliably = true,
-    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 18)] bool? CanReadFileSeparatorsReliably = true,
-    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 19)] bool? CanReadUnitSeparatorsReliably = true,
+    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 16)] bool? CanReadGroupSeparatorReliably = null,
+    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 17)] bool? CanReadRecordSeparatorReliably = null,
+    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 18)] bool? CanReadFileSeparatorsReliably = null,
+    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 19)] bool? CanReadUnitSeparatorsReliably = null,
     [property: JsonProperty("canReadAimIdentifiersReliably", Order = 20)] bool? CanReadAimIdentifiersReliably = true,
     [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 21)] bool? CanReadAdditionalAsciiCharactersReliably = true,
     [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 22)] bool? ScannerTransmitsAimIdentifiers = true,
@@ -490,6 +490,8 @@ public sealed record SystemCapabilities(
                 case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;
                     CanReadAscii28Ascci31Reliably = false;
+                    CanReadFileSeparatorsReliably = CanReadFileSeparatorsReliably is null ? false : CanReadFileSeparatorsReliably;
+                    CanReadUnitSeparatorsReliably = CanReadUnitSeparatorsReliably is null ? false : CanReadUnitSeparatorsReliably;
                     break;
                 case InformationType.ControlCharacterMappingNotReliablyReadable:
                     CanReadAscii28Ascci31Reliably = false;
@@ -664,11 +666,6 @@ public sealed record SystemCapabilities(
                     KeyboardLayoutsCorrespond = false;
                     KeyboardLayoutsCorrespondForInvariants = false;
                     CanReadInvariantsReliably = false;
-                    CanReadFormat05AndFormat06Reliably = false;
-                    CanReadEdiReliably = false;
-                    CanReadAscii28Ascci31Reliably = false;
-                    CanReadFileSeparatorsReliably = false;
-                    CanReadUnitSeparatorsReliably = false;
                     break;
                 case InformationType.None:
                 case InformationType.AimSupported:
