@@ -19,7 +19,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Fixed issue with calculation of scanner capabilities for ISO/IEC 15434 data.
+		1) Improved recording of ambiguities involving AIM identifers.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +29,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.9</Version>
+	<Version>2.2.10</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>

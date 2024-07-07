@@ -1018,7 +1018,7 @@ public class Calibrator {
                         @out,
                         InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
                         char.MinValue.ToControlPictureString(),
-                        existingMap.ToControlPictureString());
+                        $"] {existingMap.ToControlPictureString()}");
 
                     LogCalibrationInformation(
                         @out,
