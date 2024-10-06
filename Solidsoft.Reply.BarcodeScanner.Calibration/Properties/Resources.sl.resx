@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Neskladje preostalih nasvetov.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Pripona {0} se ne ujema s pričakovano pripono {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Napačen izvor črtne kode.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Napačna vrsta informacije o napaki.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Napačna vrsta opozorilne informacije.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Vstavljanje nadomestnih presledkov ni uspelo.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Neveljaven argument, podan metodi Replace rednega izraza.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>Redni izraz je prekoračil časovno omejitev med izvajanjem ujemanja.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Ne najdem ustreznega znaka za začasno nadomestilo. Vsi razširjeni ASCII znaki so že uporabljeni v vhodnem nizu.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Napačen izvor črtne kode.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Neveljavna raven informacij.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Neveljaven nasvet.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Pripona {0} se ne ujema s pričakovano pripono {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM identifikatorji so podprti.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Podprti so znaki ločila zapisa.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Podprti so znaki ločila EDI.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Podprti so ločevalni znaki enote.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Čitalnik črtnih kod je morda nastavljen za kompenzacijo Caps Lock.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Nekateri poročani neinvariantni ASCII znaki so dvoumni: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Poročani znak {0} je dvoumen. Črtnih kod, ki uporabljajo sintakso ISO/IEC 15434 za prikaz podatkov EDI, ni mogoče zanesljivo brati.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Nekatera poročana zaporedja znakov so dvoumna. Ti znaki ne predstavljajo invariantnih znakov: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Poročano zaporedje znakov {0} je dvoumno. To lahko prepreči branje dodatnih podatkovnih elementov, vključenih v črtno kodo.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvoumen. Črtne kode, ki uporabljajo ASCII 28 ali ASCII 31, morda ne bodo zanesljivo prebrane.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Nekatera poročana zaporedja znakov so dvoumna. Ti znaki ne predstavljajo invariantnih znakov: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata.</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil zapisov.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil EDI.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju AIM identifikatorjev.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Ujemanja razporeditev tipkovnic čitalnika črtnih kod in računalnika ni mogoče določiti.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock je vklopljen.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Poročani podatki so za napačno kalibracijsko črtno kodo.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Poskus kalibracije črtne kode je bil izveden, vendar ni bil zagotovljen kalibracijski žeton.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Nekaterih invariantnih znakov ni mogoče zaznati.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibracija ni uspela. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibracija ni uspela. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Podprti so znaki ločila EDI.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Neveljaven nasvet.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Poročani znak {0} je dvoumen. Črtnih kod, ki uporabljajo sintakso ISO/IEC 15434 za prikaz podatkov EDI, ni mogoče zanesljivo brati.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Neveljavna raven informacij.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil EDI.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Vstavljanje nadomestnih presledkov ni uspelo.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Neveljaven argument, podan metodi Replace rednega izraza.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Redni izraz je prekoračil časovno omejitev med izvajanjem ujemanja.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Ujemanja razporeditev tipkovnic čitalnika črtnih kod in računalnika ni mogoče določiti.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Nedoločeno</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Ne najdem ustreznega znaka za začasno nadomestilo. Vsi razširjeni ASCII znaki so že uporabljeni v vhodnem nizu.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibracija ni uspela. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Poskus kalibracije črtne kode je bil izveden, vendar ni bil zagotovljen kalibracijski žeton.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Podprti so ločevalni znaki enote.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvoumen. Črtne kode, ki uporabljajo ASCII 28 ali ASCII 31, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Znaki za konec prenosa so podprti.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Znaka ločilnika datotek ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Znaka ločilnika enot ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Znaka za konec prenosa ni mogoče zanesljivo prebrati.</value>
   </data>
 </root>

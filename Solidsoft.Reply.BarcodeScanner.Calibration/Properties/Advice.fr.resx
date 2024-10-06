@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Vous devrez peut-être saisir les données manuellement dans votre logiciel pour les codes-barres qui contiennent des données formatées selon les caractères ISO/IEC 15434.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Si vous scannez des codes-barres EDI et rencontrez des difficultés, essayez de configurer votre lecteur de code-barres pour émuler un pavé numérique.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre scanner de codes-barres pour émuler un pavé numérique.</value>
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Essayez à nouveau, en vous assurant de scanner le(s) bon(s) code(s)-barres.</value>
@@ -349,7 +361,22 @@
     <value>Votre système ne peut pas lire les codes-barres de manière fiable s'ils contiennent des données pour l'échange de données électroniques (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Votre système ne peut pas distinguer certains caractères normaux et des caractères spéciaux.</value>
+    <value>Votre système peut ne pas lire correctement les caractères de séparation de fichier (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de séparation de fichier (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de fin de transmission (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de fin de transmission (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>
@@ -490,7 +517,22 @@
     <value>Certains codes-barres peuvent contenir des données EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Dans la plupart des cas, ces caractères n'apparaissent pas ensemble dans les codes-barres.</value>
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Vous avez peut-être scanné un mauvais code-barres ou saisi des données incorrectes à l'aide du clavier. Votre lecteur de code-barres ou système peut être lent, ou un problème inattendu ou intermittent peut être survenu.</value>

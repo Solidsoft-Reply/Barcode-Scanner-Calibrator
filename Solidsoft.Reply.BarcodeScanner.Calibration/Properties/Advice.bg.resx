@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Може да се наложи да въведете данни ръчно във вашия софтуер за баркодове, които съдържат данни, форматирани според символите на ISO/IEC 15434.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Ако сканирате баркодове, които съдържат данни EDI, и имате затруднения, опитайте да конфигурирате вашия баркод скенер да имитира числова клавиатура.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Ако срещате трудности при сканирането на баркодове, опитайте да конфигурирате баркод скенера си да емулира цифрова клавиатура.</value>
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Опитайте отново, като се уверите, че сканирате правилния баркод(ове).</value>
@@ -349,7 +361,22 @@
     <value>Вашата система не може да чете баркодове надеждно, ако те съдържат данни за електронен обмен на данни (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Вашата система не може да различи определени нормални символи и специални символи.</value>
+    <value>Вашата система може да не чете правилно знаците за разделител на файлове (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Вашата система не може да чете знаците за разделител на файлове (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за край на предаването (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Вашата система не може да чете знаците за край на предаването (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Тестът се провали.</value>
@@ -490,7 +517,22 @@
     <value>Някои баркодове могат да съдържат данни EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>В повечето случаи тези символи не се появяват заедно в баркодове.</value>
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Може да сте сканирали грешен баркод или сте въвели неправилни данни с клавиатурата. Вашият баркод скенер или система може да са бавни, или е възникнал някакъв неочакван или прекъсващ проблем.</value>

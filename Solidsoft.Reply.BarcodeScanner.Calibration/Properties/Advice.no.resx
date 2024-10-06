@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Du må kanskje legge inn data manuelt i programvaren din for strekkoder som inneholder data formatert i henhold til ISO/IEC 15434-tegn.</value>
   </data>
@@ -199,6 +196,21 @@
     <value>Jos skannaat EDI-viivakoodeja ja koet vaikeuksia, yritä konfiguroida viivakoodinlukijasi emuloimaan numeerista näppäimistöä.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
     <value>Hvis du opplever problemer når du skanner strekkoder, prøv å konfigurere strekkodeskanneren din til å emulere et numerisk tastatur.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
@@ -349,7 +361,22 @@
     <value>Systemet ditt kan ikke lese strekkoder pålitelig hvis de inneholder data for elektronisk datautveksling (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Systemet ditt kan ikke skille mellom visse normale tegn og spesialtegn.</value>
+    <value>Systemet ditt kan kanskje ikke lese filseparator-tegn (ASCII 28) korrekt.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Systemet ditt kan ikke lese filseparator-tegn (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese enhetsseparator-tegn (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese enhetsseparator-tegn (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Systemet ditt kan kanskje ikke lese overføringsslutt-tegn (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Systemet ditt kan ikke lese overføringsslutt-tegn (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen feilet.</value>
@@ -490,7 +517,22 @@
     <value>Jotkut viivakoodit saattavat sisältää EDI-tietoja.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>I de fleste tilfeller vises ikke disse tegnene sammen i strekkoder.</value>
+    <value>Disse tegnene er ikke mye brukt i strekkoder.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Disse tegnene er ikke mye brukt i strekkoder.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Disse tegnene er ikke mye brukt i strekkoder.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Disse tegnene er ikke mye brukt i strekkoder.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Noen typer strekkoder bruker dette tegnet for å markere slutten på strekkodedataene. Programvaren din kan kanskje ikke lese et eventuelt suffiks lagt til av strekkodeskanneren korrekt.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Noen typer strekkoder bruker dette tegnet for å markere slutten på strekkodedataene. Programvaren din kan kanskje ikke lese et eventuelt suffiks lagt til av strekkodeskanneren korrekt.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannet en feil strekkode eller tastet inn feil data ved hjelp av tastaturet. Strekkodeskanneren eller systemet ditt kan være tregt, eller det kan ha oppstått et uventet eller intermittent problem.</value>

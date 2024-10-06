@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Oġġetti ta' parir li fadal ma jaqblux.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Is-suffiss {0} ma jaqbilx mas-suffiss mistenni {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Provenjenza tal-barcode żbaljata.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Tip ta' informazzjoni ta' żball mhux korretta.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Tip ta' informazzjoni ta' twissija mhux korretta.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Fallejt biex tiddaħħal placeholders għall-ispazju.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Argument invalidu pprovdut lill-metodu Replace ta' espressjoni regolari.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>L-espressjoni regolari ħadet żmien twil wisq waqt li kienet qed twettaq tqabbil.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Ma nstabx karattru adattat għal placeholder temporanju. Il-karattri kollha estiżi ASCII diġà jintużaw fil-katina ta' input.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Provenjenza tal-barcode żbaljata.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Livell ta' informazzjoni invalidu.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Oġġett ta' parir invalidu.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Is-suffiss {0} ma jaqbilx mas-suffiss mistenni {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>Identifikaturi AIM huma appoġġjati.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Karattri separatori tar-rekord huma appoġġjati.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Karattri separatori Edi huma appoġġjati.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Il-karattri ta' separazzjoni ta' unità huma appoġġjati.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>L-iskanner tal-barcode jista' jkun ikkonfigurat biex jikkumpensa għall-Caps Lock.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Xi karattri ASCII mhux invarianti rrappurtati huma ambigwi: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Il-karattru rrappurtat {0} huwa ambigwu. Barcodes li jużaw is-sintassi ISO/IEC 15434 biex jirrappreżentaw data EDI ma jistgħux jiġu aqra b'mod affidabbli.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Xi sekwenzi ta' karattri rrappurtati huma ambigwi. Dawn il-karattri ma jirrappreżentawx karattri invarianti: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Is-sekwenza tal-karattri rrappurtata {0} hija ambigwa. Dan jista' jipprevjeni l-qari ta' kwalunkwe elementi addizzjonali ta' data inklużi f'barcode.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Il-karattru rrappurtat {0} huwa ambigwu. Il-codes tal-bar li jużaw ASCII 28 jew ASCII 31 jistgħu ma jinqrawx b’mod affidabbli.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Xi sekwenzi ta' karattri rrappurtati huma ambigwi. Dawn il-karattri ma jirrappreżentawx karattri invarianti: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw Separatori tar-Rekord.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw separatori EDI.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw identifikaturi AIM.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Ma jistax jiġi ddeterminat jekk il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter jaqblux.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Il-Caps Lock huwa mixgħul.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Id-data rrappurtata hija għall-barcode tal-kalibrazzjoni żbaljat.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Saret tentattiva biex jiġi kalibrat barcode, iżda ma ngħatax token tal-kalibrazzjoni.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Xi karattri invarianti ma jistgħux jiġu skoperti.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Il-kalibrazzjoni falliet. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Il-kalibrazzjoni falliet. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Karattri separatori Edi huma appoġġjati.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Oġġett ta' parir invalidu.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} huwa ambigwu. Barcodes li jużaw is-sintassi ISO/IEC 15434 biex jirrappreżentaw data EDI ma jistgħux jiġu aqra b'mod affidabbli.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Livell ta' informazzjoni invalidu.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw separatori EDI.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Fallejt biex tiddaħħal placeholders għall-ispazju.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Argument invalidu pprovdut lill-metodu Replace ta' espressjoni regolari.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>L-espressjoni regolari ħadet żmien twil wisq waqt li kienet qed twettaq tqabbil.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Ma jistax jiġi ddeterminat jekk il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter jaqblux.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Mhux speċifikat</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Ma nstabx karattru adattat għal placeholder temporanju. Il-karattri kollha estiżi ASCII diġà jintużaw fil-katina ta' input.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Il-kalibrazzjoni falliet. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Saret tentattiva biex jiġi kalibrat barcode, iżda ma ngħatax token tal-kalibrazzjoni.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Il-karattri ta' separazzjoni ta' unità huma appoġġjati.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} huwa ambigwu. Il-codes tal-bar li jużaw ASCII 28 jew ASCII 31 jistgħu ma jinqrawx b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Karattri tat-tmiem tat-trasmissjoni huma appoġġati.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Il-karattru ta' separatur tal-fajls ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Il-karattru ta' separatur tal-unità ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara b'mod affidabbli.</value>
   </data>
 </root>

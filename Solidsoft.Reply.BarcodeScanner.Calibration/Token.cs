@@ -286,18 +286,22 @@ public readonly record struct Token(
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespond,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForInvariants,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparator,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparator,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparators,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEotWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier,
                                           oldToken.SystemCapabilities.CanReadInvariantsReliably,
                                           oldToken.SystemCapabilities.CanReadFormat05AndFormat06Reliably,
                                           oldToken.SystemCapabilities.CanReadEdiReliably,
-                                          oldToken.SystemCapabilities.CanReadAscii28Ascci31Reliably,
+                                          //oldToken.SystemCapabilities.CanReadAscii28Ascii31Reliably,
                                           oldToken.SystemCapabilities.CanReadGroupSeparatorReliably,
                                           oldToken.SystemCapabilities.CanReadRecordSeparatorReliably,
                                           oldToken.SystemCapabilities.CanReadFileSeparatorsReliably,
                                           oldToken.SystemCapabilities.CanReadUnitSeparatorsReliably,
+                                          oldToken.SystemCapabilities.CanReadEotReliably,
                                           oldToken.SystemCapabilities.CanReadAimIdentifiersReliably,
                                           oldToken.SystemCapabilities.CanReadAdditionalAsciiCharactersReliably,
                                           oldToken.SystemCapabilities.ScannerTransmitsAimIdentifiers,
@@ -357,6 +361,7 @@ public readonly record struct Token(
                                       oldToken.ExtendedData?.PotentialIsoIec15434Unreadable30 ?? false,
                                       oldToken.ExtendedData?.PotentialIsoIec15434EdiUnreadableFs ?? false,
                                       oldToken.ExtendedData?.PotentialIsoIec15434EdiUnreadableUs ?? false,
+                                      oldToken.ExtendedData?.PotentialIsoIec15434EotUnreadable ?? false,
                                       oldToken.ExtendedData?.AssessFormat06Support ?? false,
                                       oldToken.ExtendedData?.NonInvariantAmbiguities ?? new Dictionary<string, IList<string>>(),
                                       oldToken.ExtendedData?.InvariantGs1Ambiguities ?? new Dictionary<string, IList<string>>(),
@@ -548,6 +553,10 @@ public readonly record struct Token(
     ///   A value indicating whether an EDI barcode may be unreadable due
     ///   to non-representation of ASCII 31 characters.
     /// </param>
+    /// <param name="potentialIsoIec15434EotUnreadable">
+    ///   A value indicating whether a barcode may be unreadable due
+    ///   to non-representation of ASCII 04 characters.
+    /// </param>
     /// <param name="testSupportForFormat06">
     ///   A value indicating whether to test for Format 06 and Format 05 support.
     /// </param>
@@ -589,6 +598,7 @@ public readonly record struct Token(
         bool potentialIsoIec15434Unreadable30,
         bool potentialIsoIec15434EdiUnreadableFs,
         bool potentialIsoIec15434EdiUnreadableUs,
+        bool potentialIsoIec15434EotUnreadable,
         bool testSupportForFormat06,
         IDictionary<string, IList<string>> nonInvariantAmbiguities,
         IDictionary<string, IList<string>> invariantGs1Ambiguities,
@@ -617,6 +627,7 @@ public readonly record struct Token(
             potentialIsoIec15434Unreadable30,
             potentialIsoIec15434EdiUnreadableFs,
             potentialIsoIec15434EdiUnreadableUs,
+            potentialIsoIec15434EotUnreadable,
             testSupportForFormat06,
             nonInvariantAmbiguities,
             invariantGs1Ambiguities,

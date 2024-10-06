@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Υπάρχει αντιστοιχία στα εναπομείναντα στοιχεία συμβουλών.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Το επίθημα {0} δεν ταιριάζει με το αναμενόμενο επίθημα {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Λάθος προέλευση barcode.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Λάθος τύπος πληροφορίας σφάλματος.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Λάθος τύπος πληροφορίας προειδοποίησης.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Αποτυχία εισαγωγής διαστημάτων placeholders.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Παρέχεται άκυρο επιχείρημα στη μέθοδο αντικατάστασης τακτικών εκφράσεων.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>Η τακτική έκφραση έληξε κατά τη διάρκεια της αντιστοιχίας.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Δεν βρέθηκε κατάλληλος χαρακτήρας για προσωρινό placeholder. Όλοι οι εκτεταμένοι χαρακτήρες ASCII χρησιμοποιούνται ήδη στην εισερχόμενη σειρά.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Λάθος προέλευση barcode.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Άκυρο επίπεδο πληροφοριών.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Άκυρο στοιχείο συμβουλής.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Το επίθημα {0} δεν ταιριάζει με το αναμενόμενο επίθημα {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>Υποστηρίζονται τα αναγνωριστικά AIM.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Υποστηρίζονται χαρακτήρες διαχωριστή εγγραφών.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Υποστηρίζονται οι χαρακτήρες διαχωριστή EDI.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Οι χαρακτήρες διαχωρισμού μονάδων υποστηρίζονται.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Ο саρωτής barcode μπορεί να είναι διαμορфωμένος για να αντισταθμίσει το Caps Lock.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Κάποιοι αναφερόμενοι μη αμετάβλητοι χαρακτήρες ASCII είναι ασαφείς: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Ο αναφερόμενος χаρακτήρας {0} είναι ασαφής. Τα barcodes που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 για να αναπαραστήσουν δεδομένα EDI δεν μπορούν να διαβαστούν αξιόπιστα.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Κάποιες αναφερόμενες ακολουθίες χαρακτήρων είναι ασαφείς. Αυτοί οι χαρακτήρες δεν αντιπροσωπεύουν αμετάβλητους χαρακτήρες: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι ασαφής. Αυτό μπορεί να εμποδίσει την ανάγνωση οποιωνδήποτε επιπλέον στοιχείων δεδομένων που περιλαμβάνονται σε ένα barcode.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Οι γραμμωτοί κώδικες που χρησιμοποιούν ASCII 28 ή ASCII 31 ενδέχεται να μην διαβάζονται αξιόπιστα.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Κάποιες αναφερόμενες ακολουθίες χαρακτήρων είναι ασαφείς. Αυτοί οι χαρακτήρες δεν αντιπροσωπεύουν αμετάβλητους χαρακτήρες: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν αντιστοιχούν</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου тου σαρωτή barcode και του υпολογиστή δεν αντιστοιχούν κατά την αναπαράσταση διαχωριστών εγγραφών.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υпολογιστή δεν αнτιστοιχούν κατά την αναπαράσταση διαχωριστών EDI.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υпολογιστή δεν αнτιсτοιχούν κατά την αναπαράσταση αναγνωριστικών AIM.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Η αντιστοιχία των διατάξεων πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν μπορεί να καθοριστεί.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Το Caps Lock είναι ενεργοποιημένο.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Τα αναφερόμενα δεδομένα είναι για λάθος barcode βαθμονόμησης.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Έγινε προσπάθεια βαθμονόμησης ενός barcode, αλλά δεν δόθηκε διακριτικό βαθμονόμησης.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Κάποιοι αμετάβλητοι χαρακτήρες δεν μπορούν να ανιχνευτούν.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Η βαθμονόμηση απέτυχε. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Η βαθμονόμηση απέτυχε. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Υποστηρίζονται οι χαρακτήρες διαχωριστή EDI.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Άκυρο στοιχείο συμβουλής.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Ο αναφερόμενος χаρακτήρας {0} είναι ασαφής. Τα barcodes που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 για να αναπαραστήσουν δεδομένα EDI δεν μπορούν να διαβαστούν αξιόπιστα.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Άκυρο επίπεδο πληροφοριών.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υпολογιστή δεν αнτιστοιχούν κατά την αναπαράσταση διαχωριστών EDI.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Αποτυχία εισαγωγής διαστημάτων placeholders.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Παρέχεται άκυρο επιχείρημα στη μέθοδο αντικατάστασης τακτικών εκφράσεων.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Η τακτική έκφραση έληξε κατά τη διάρκεια της αντιστοιχίας.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Η αντιστοιχία των διατάξεων πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν μπορεί να καθοριστεί.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Απροσδιόριστο</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Δεν βρέθηκε κατάλληλος χαρακτήρας για προσωρινό placeholder. Όλοι οι εκτεταμένοι χαρακτήρες ASCII χρησιμοποιούνται ήδη στην εισερχόμενη σειρά.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Η βαθμονόμηση απέτυχε. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Έγινε προσπάθεια βαθμονόμησης ενός barcode, αλλά δεν δόθηκε διακριτικό βαθμονόμησης.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Οι χαρακτήρες διαχωρισμού μονάδων υποστηρίζονται.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Οι γραμμωτοί κώδικες που χρησιμοποιούν ASCII 28 ή ASCII 31 ενδέχεται να μην διαβάζονται αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Ο χαρακτήρας διαχωρισμού αρχείων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Ο χαρακτήρας διαχωρισμού μονάδας δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Ο χαρακτήρας τέλους μετάδοσης δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Οι χαρακτήρες τέλους μετάδοσης υποστηρίζονται.</value>
   </data>
 </root>

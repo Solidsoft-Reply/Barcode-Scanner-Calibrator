@@ -230,7 +230,7 @@ public class Calibrator {
     /// <summary>
     ///   The baseline barcode data.
     /// </summary>
-    private readonly string _baselineBarcodeDataFormat06 = $"{(char)28}{SegmentDelimiter}{(char)30}{SegmentDelimiter}{(char)31}";
+    private readonly string _baselineBarcodeDataFormat06 = $"{(char)28}{SegmentDelimiter}{(char)30}{SegmentDelimiter}{(char)31}{SegmentDelimiter}{(char)04}";
 
     /// <summary>
     ///   Split characters that require escaping.
@@ -518,6 +518,11 @@ public class Calibrator {
     private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs;
 
     /// <summary>
+    ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 04 character.
+    /// </summary>
+    private bool _tokenExtendedDataPotentialIsoIec15434EotUnreadable;
+
+    /// <summary>
     /// Any suffix and end-of-line sequence recorded while processing small barcodes.
     /// </summary>
     private (string suffix, string endOfLine) _tokenSmallBarcodeSuffixData = (string.Empty, string.Empty);
@@ -760,7 +765,7 @@ public class Calibrator {
     ///   Calibrates for a given combination of barcode scanner and OS keyboard layouts.
     /// </summary>
     /// <param name="data">The reported input after scanning the calibration barcode.</param>
-    /// <param name="token">The current calibration token.</param>
+    /// <param name="token">The current calibration token. NB. use CalibrationTokens() to get the token collection enumerator.</param>
     /// <param name="capsLock">Indicates if Caps Lock is switched on.</param>
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
@@ -794,7 +799,7 @@ public class Calibrator {
     ///   Calibrates for a given combination of barcode scanner and OS keyboard layouts.
     /// </summary>
     /// <param name="data">The reported input after scanning the calibration barcode.</param>
-    /// <param name="token">The current calibration token.</param>
+    /// <param name="token">The current calibration token. NB. use CalibrationTokens() to get the token collection enumerator.</param>
     /// <param name="capsLock">Indicates if Caps Lock is switched on.</param>
     /// <param name="platform">The platform on which the system resides.</param>
     /// <param name="dataEntryTimeSpan">The time span specifying how long it took from the start of the scan to submitting the data.</param>
@@ -991,7 +996,7 @@ public class Calibrator {
                 // Null may already been mapped to another character.  We favour AIM flag sequences over
                 // control characters used in EDI data or any additional character mapped to null
                 var addMap = existingMap switch {
-                    '\u001C' or '\u001F' when AssessFormatSupport => ReplaceExistingMapForEdiControlCharacter(),
+                    '\u001C' or '\u001F' or '\u0004' when AssessFormatSupport => ReplaceExistingMapForEdiControlCharacter(),
                     '#' or '$' or '@' or '[' or '\\' or '^' or '`' or '{' or '|' or '}' or '~' => ReplaceExistingMapForAdditionalCharacter(),
                     ']' => char.MinValue,
                     _ => DoNotReplaceExistingMap()
@@ -1022,7 +1027,12 @@ public class Calibrator {
 
                     LogCalibrationInformation(
                         @out,
-                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators);
+                        existingMap switch {
+                            '\u001C' => InformationType.NonCorrespondingKeyboardLayoutsFileSeparator,
+                            '\u001F' => InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator,
+                            '\u0004' => InformationType.NonCorrespondingKeyboardLayoutsEoT,
+                            _ => throw new ArgumentOutOfRangeException(nameof(existingMap))
+                        });
 
                     return ']';
                 }
@@ -2904,7 +2914,7 @@ public class Calibrator {
                     continue;
                 }
 
-                if (idx >= 6) {
+                if (idx >= 7) {
                     var addSpace = new string(' ', segment == tempSpaceHolder.ToString() ? 1 : 2);
                     segments[idx] = segment.Replace(tempSpaceHolder.ToString(), addSpace, StringComparison.Ordinal);
                     continue;
@@ -2980,24 +2990,24 @@ public class Calibrator {
 
         // If we did not include tests for Format 06, then we need to insert some empty entries between the suffix and the rest of the data.
         if (!AssessFormatSupport) {
-            var adjustedSegments = new string[segments.Count + 3];
+            var adjustedSegments = new string[segments.Count + 4];
             var toAscii28 = segments.Count - 1;
             segments.ToArray()[..toAscii28].CopyTo(adjustedSegments, 0);
 
-            new[] { string.Empty, string.Empty, string.Empty }.CopyTo(adjustedSegments, toAscii28);
-            segments.ToArray()[toAscii28..].CopyTo(adjustedSegments, toAscii28 + 3);
+            new[] { string.Empty, string.Empty, string.Empty, string.Empty }.CopyTo(adjustedSegments, toAscii28);
+            segments.ToArray()[toAscii28..].CopyTo(adjustedSegments, toAscii28 + 4);
 
             segments = [.. adjustedSegments];
         }
 
         // Add any additional segments to sections, normalizing trailing sections into a single section. These segments are
-        // for non-printing characters (ASCII 29, and the ASCII 28, 30 and 31) and any suffix provided by the barcode scanner.
-        for (var segmentIdx = 2; segmentIdx < (segments.Count > 7 ? segments.Count : 7); segmentIdx++) {
+        // for non-printing characters (ASCII 29, and the ASCII 28, 30, 31 amd 04) and any suffix provided by the barcode scanner.
+        for (var segmentIdx = 2; segmentIdx < (segments.Count > 8 ? segments.Count : 8); segmentIdx++) {
             if (segmentIdx >= segments.Count) {
                 // Pad the segment list with empty segments if necessary.
                 reportedSegments.Add([]);
             }
-            else if (segmentIdx > (int)Segments.UnitSeparatorSegment) {
+            else if (segmentIdx > (int)Segments.EndOfTransmissionSegment) {
                 // If the barcode scanner included a suffix that has split into segments, concatenate the into a single suffix segment.
                 reportedSegments[(int)Segments.SuffixSegment][0] = reportedSegments[(int)Segments.SuffixSegment][0] += $"{new string(' ', 3)}{segments[segmentIdx]}";
             }
@@ -3119,7 +3129,7 @@ public class Calibrator {
          * terminal applications, for example, and will often lead to failed calibration. If the
          * calibrator encounters dead keys on the computer keyboard layout, all bets are off. Calibration
          * is bound to fail, which is good. However, if there are no dead keys and the keyboard does not
-         * support entry of all ASCII control characters (28 to 31), then we need to fix this up so that
+         * support entry of all ASCII control characters (28 to 31 and 04), then we need to fix this up so that
          * calibration can succeed or fail correctly. Specifically, if no Group Separator is found, we
          * need to detect this correctly. Getting this right helps maximise the number of scenarios
          * calibration can be used in poorly behaved environments while avoiding incorrect calibration.
@@ -3239,6 +3249,9 @@ public class Calibrator {
             .Do(CheckForAnyMissedAmbiguities)
             .Do(DetermineCompatibilityWithFormat05AndFormat06Barcodes)
             .Do(DetermineCompatibilityWithEdiBarcodes)
+            .Do(DetermineReadibilityOfFs)
+            .Do(DetermineReadibilityOfUs)
+            .Do(DetermineReadibilityOfEot)
 
             .If(AmbiguousLigatureStringsWereDetected)
             .Then(LogTheAmbiguousLigatureCharacters)
@@ -3530,7 +3543,7 @@ public class Calibrator {
                         localToken,
                         selectedCharacterKeyValuePairs));
 
-        // Process the reported data to determine any issues with ASCII control characters (ASCII 29, 28, 30 and 31).
+        // Process the reported data to determine any issues with ASCII control characters (ASCII 04, 29, 28, 30 and 31).
         EnvToken DetermineAnyIssuesForAsciiControlCharacters(Token localToken) =>
             () =>
                 new Lazy<Token>(
@@ -3550,6 +3563,21 @@ public class Calibrator {
         EnvToken DetermineCompatibilityWithEdiBarcodes(Token localToken) =>
             () =>
                 new Lazy<Token>(DoProcessForIsoIec15434EdiIncompatibility(localToken));
+
+        // Check for FS characters
+        EnvToken DetermineReadibilityOfFs(Token localToken) =>
+            () =>
+                new Lazy<Token>(DoProcessForIsoIec15434FsIncompatibility(localToken));
+
+        // Check for US characters
+        EnvToken DetermineReadibilityOfUs(Token localToken) =>
+            () =>
+                new Lazy<Token>(DoProcessForIsoIec15434UsIncompatibility(localToken));
+
+        // Check for EOT characters
+        EnvToken DetermineReadibilityOfEot(Token localToken) =>
+            () =>
+                new Lazy<Token>(DoProcessForIsoIec15434EotIncompatibility(localToken));
 
         EnvToken LogTheAmbiguousLigatureCharacters(Token localToken) =>
 
@@ -4024,7 +4052,7 @@ public class Calibrator {
         Token TestPotentialConflictWithCharacterMap() =>
             _tokenExtendedDataCharacterMap.ContainsKey(reportedCharacterSequence[1])
 
-                // If the reported dead key sequence (e.g. \0à) reports a character (à) that maps to a 0,
+                // If a reported dead key sequence (e.g. \0à) reports a character (à) that maps to a 0,
                 // we can't disambiguate \0à from <FS>0 and/or <US>0 in the barcode which is also reported
                 // as \00.
                 ? TestIfDeadKeySequenceCharacterMapsTo0()
@@ -5470,7 +5498,7 @@ public class Calibrator {
         string expected =
             "\u0020\u0020!\u0020\u0022\u0020%\u0020&\u0020'\u0020(\u0020)\u0020*\u0020+\u0020,\u0020-\u0020.\u0020/\u00200\u00201\u00202\u00203\u00204\u00205\u00206\u00207\u00208\u00209\u0020:\u0020;\u0020<\u0020=\u0020>\u0020?\u0020A\u0020B\u0020C\u0020D\u0020E\u0020F\u0020G\u0020H\u0020I\u0020J\u0020K\u0020L\u0020M\u0020N\u0020O\u0020P\u0020Q\u0020R\u0020S\u0020T\u0020U\u0020V\u0020W\u0020X\u0020Y\u0020Z\u0020_\u0020a\u0020b\u0020c\u0020d\u0020e\u0020f\u0020g\u0020h\u0020i\u0020j\u0020k\u0020l\u0020m\u0020n\u0020o\u0020p\u0020q\u0020r\u0020s\u0020t\u0020u\u0020v\u0020w\u0020x\u0020y\u0020z\u0020\u0020#\u0020$\u0020@\u0020[\u0020\u005C\u0020]\u0020^\u0020`\u0020{\u0020|\u0020}\u0020\u007E\u0020\u0020\u001D\u0020\u0020" +
                 (AssessFormatSupport
-                ? "\u001c\u0020\u0020\u001e\u0020\u0020\u001f\u0020\u0020"
+                ? "\u001c\u0020\u0020\u001e\u0020\u0020\u001f\u0020\u0020\u0004\u0020\u0020"
                 : "\u0020\u0020\u0020\u0020\u0020\u0020");
 
         var delimiter = new[] { new string('\u0020', 2) };
@@ -5571,6 +5599,7 @@ public class Calibrator {
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = default;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = default;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = default;
+            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = default;
             AssessFormatSupport = true;
             _tokenExtendedDataUnrecognisedKeys = [];
         }
@@ -5597,6 +5626,7 @@ public class Calibrator {
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = token.ExtendedData.PotentialIsoIec15434Unreadable30;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs;
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs;
+            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = token.ExtendedData.PotentialIsoIec15434EotUnreadable;
             AssessFormatSupport = token.ExtendedData.AssessFormat06Support;
             _tokenExtendedDataUnrecognisedKeys = token.ExtendedData.UnrecognisedKeys;
         }
@@ -5658,6 +5688,7 @@ public class Calibrator {
             _tokenExtendedDataPotentialIsoIec15434Unreadable30,
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs,
             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs,
+            _tokenExtendedDataPotentialIsoIec15434EotUnreadable,
             AssessFormatSupport,
             _tokenExtendedDataNonInvariantAmbiguities,
             _tokenExtendedDataInvariantGs1Ambiguities,
@@ -6040,6 +6071,7 @@ public class Calibrator {
                         potentialIsoIec15434Unreadable30: token.ExtendedData.PotentialIsoIec15434Unreadable30,
                         potentialIsoIec15434EdiUnreadableFs: token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs,
                         potentialIsoIec15434EdiUnreadableUs: token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs,
+                        potentialIsoIec15434EotUnreadable: token.ExtendedData.PotentialIsoIec15434EotUnreadable,
                         assessFormat06Support: token.ExtendedData.AssessFormat06Support,
                         nonInvariantAmbiguities: token.ExtendedData.NonInvariantAmbiguities,
                         invariantGs1Ambiguities: token.ExtendedData.InvariantGs1Ambiguities,
@@ -6136,6 +6168,7 @@ public class Calibrator {
                         potentialIsoIec15434Unreadable30: currentToken.ExtendedData.PotentialIsoIec15434Unreadable30,
                         potentialIsoIec15434EdiUnreadableFs: currentToken.ExtendedData.PotentialIsoIec15434EdiUnreadableFs,
                         potentialIsoIec15434EdiUnreadableUs: currentToken.ExtendedData.PotentialIsoIec15434EdiUnreadableUs,
+                        potentialIsoIec15434EotUnreadable: currentToken.ExtendedData.PotentialIsoIec15434EotUnreadable,
                         assessFormat06Support: currentToken.ExtendedData.AssessFormat06Support,
                         nonInvariantAmbiguities: currentToken.ExtendedData.NonInvariantAmbiguities,
                         invariantGs1Ambiguities: currentToken.ExtendedData.InvariantGs1Ambiguities,
@@ -6362,12 +6395,7 @@ public class Calibrator {
         Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments) {
-        var correspondence = false;
 
-        /* NB. ASCII 04 support is not detected by the keyboard calibration code because it signifies
-         * a control character (End of Transmission) that could cause issues when scanned. Hence, the
-         * character is not included in any calibration barcode generated by this code.
-         * */
         for (var idx = Segments.GroupSeparatorSegment; idx < Segments.SuffixSegment; idx++) {
             if (reportedSegments[(int)idx].Count == 0) {
                 continue;
@@ -6375,6 +6403,7 @@ public class Calibrator {
 
             var reportedControl = reportedSegments[(int)idx][0];
             var expectedControl = expectedSegments[(int)idx][0];
+            var correspondence = true;
 
             if (reportedControl.StartsWith('\0')) {
                 if (reportedControl.Length > 1) {
@@ -6391,14 +6420,21 @@ public class Calibrator {
 
                         InformationType NotRecognisedInformationType() =>
 
-                            // ReSharper disable once StyleCop.SA1118
-                            idx == Segments.RecordSeparatorSegment
+                        idx switch {
+                            Segments.RecordSeparatorSegment => InformationType.IsoIec15434SyntaxNotRecognised,
+                            Segments.FileSeparatorSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434FsNotReliablyReadable),
+                            Segments.UnitSeparatorSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434UsNotReliablyReadable),
+                            Segments.EndOfTransmissionSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434EotNotReliablyReadable),
+                            _ => InformationType.IsoIec15434EdiNotReliablyReadable
+                        };
 
-                                // Warning - Barcodes that use ISO/IEC 15434 syntax cannot be recognised.
-                                ? InformationType.IsoIec15434SyntaxNotRecognised
+                        InformationType SetEdiNotReliablyReadable(InformationType informationType) {
+                            token = LogCalibrationInformation(
+                                token,
+                                InformationType.IsoIec15434EdiNotReliablyReadable);
 
-                                // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
-                                : InformationType.IsoIec15434EdiNotReliablyReadable;
+                            return informationType;
+                        }
                     }
                 }
                 else {
@@ -6407,9 +6443,6 @@ public class Calibrator {
                         case Segments.GroupSeparatorSegment:
                             // If the keyboard represents ASCII 29s as \0, we will use this in thе map.
                             _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
-                            break;
-                        case Segments.FileSeparatorSegment:
-                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
                             break;
                         case Segments.RecordSeparatorSegment:
                             var key = _tokenExtendedDataCharacterMap.FirstOrDefault(x => x.Value == '\u001D').Key;
@@ -6431,8 +6464,29 @@ public class Calibrator {
 
                             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                             break;
+                        case Segments.FileSeparatorSegment:
+                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
+                            token = LogCalibrationInformation(
+                                token,
+                                InformationType.IsoIec15434FsNotReliablyReadable,
+                                '\0'.ToControlPictureString(),
+                                $"{'\u001C'.ToControlPictureString()}");
+                            break;
                         case Segments.UnitSeparatorSegment:
                             _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
+                            token = LogCalibrationInformation(
+                                token,
+                                InformationType.IsoIec15434UsNotReliablyReadable,
+                                '\0'.ToControlPictureString(),
+                                $"{'\u001F'.ToControlPictureString()}");
+                            break;
+                        case Segments.EndOfTransmissionSegment:
+                            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = true;
+                            token = LogCalibrationInformation(
+                                token,
+                                InformationType.IsoIec15434EotNotReliablyReadable,
+                                '\0'.ToControlPictureString(),
+                                $"{'\u0004'.ToControlPictureString()}");
                             break;
                     }
                 }
@@ -6447,14 +6501,32 @@ public class Calibrator {
                                 return LogCalibrationInformation(
                                     token,
                                     InformationType.NoGroupSeparatorMapping);
-                            case Segments.FileSeparatorSegment:
-                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
-                                break;
                             case Segments.RecordSeparatorSegment:
                                 _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
                                 break;
+                            case Segments.FileSeparatorSegment:
+                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
+                                token = LogCalibrationInformation(
+                                    token,
+                                    InformationType.IsoIec15434FsNotReliablyReadable,
+                                    '\0'.ToControlPictureString(),
+                                    $"{'\u001C'.ToControlPictureString()}");
+                                break;
                             case Segments.UnitSeparatorSegment:
                                 _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
+                                token = LogCalibrationInformation(
+                                    token,
+                                    InformationType.IsoIec15434UsNotReliablyReadable,
+                                    '\0'.ToControlPictureString(),
+                                    $"{'\u001F'.ToControlPictureString()}");
+                                break;
+                            case Segments.EndOfTransmissionSegment:
+                                _tokenExtendedDataPotentialIsoIec15434EotUnreadable = true;
+                                token = LogCalibrationInformation(
+                                    token,
+                                    InformationType.IsoIec15434EotNotReliablyReadable,
+                                    '\0'.ToControlPictureString(),
+                                    $"{'\u0004'.ToControlPictureString()}");
                                 break;
                         }
 
@@ -6482,7 +6554,7 @@ public class Calibrator {
                                             // The ambiguity is resolved by the parser by inferring the ASCII 30.
                                             break;
                                         default:
-                                            token = isEdiCharacter(characterMapValue)
+                                            token = IsEdiCharacter(characterMapValue)
 
                                                 // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                                 // EDI data cannot be reliably read.
@@ -6492,7 +6564,7 @@ public class Calibrator {
                                                     key.ToControlPictureString(),
                                                     $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}")
  
-                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
+                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 04, ASCII 28 or ASCII 31 control
                                                 // characters may not be reliably read.
                                                 : LogCalibrationInformation(
                                                     token,
@@ -6516,6 +6588,7 @@ public class Calibrator {
                                         Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29
                                             ? RaiseWarning((char)30)
                                             : ResolveForGs1(),
+                                        Segments.EndOfTransmissionSegment => RaiseWarning((char)04),
                                         _ => RaiseWarningIsoIec15434(_tokenExtendedDataCharacterMap[key])
                                     };
 
@@ -6537,7 +6610,7 @@ public class Calibrator {
                                         // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                         // EDI data cannot be reliably read.
                                         localToken = AssessFormatSupport
-                                            ? isEdiCharacter(characterMapValue)
+                                            ? IsEdiCharacter(characterMapValue)
 
                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                                // EDI data cannot be reliably read.
@@ -6587,6 +6660,8 @@ public class Calibrator {
                                         $"{key.ToControlPictureString()} {expectedControl.First().ToControlPictureString()}");
                                 }
 
+                                correspondence = false;
+
                                 token = AsciiChars.Contains(key, StringComparison.Ordinal)
                                     ? LogAmbiguity()
                                     : AddMapping();
@@ -6600,7 +6675,7 @@ public class Calibrator {
                                             InformationType.ControlCharacterMappingAdditionalDataElements,
                                             key.ToControlPictureString(),
                                             $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
-                                        _ when AssessFormatSupport => isEdiCharacter(characterMapValue)
+                                        _ when AssessFormatSupport => IsEdiCharacter(characterMapValue)
 
                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
                                                // EDI data cannot be reliably read.
@@ -6610,7 +6685,7 @@ public class Calibrator {
                                                    key.ToControlPictureString(),
                                                    $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")
 
-                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
+                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 04, ASCII 28 or ASCII 31 control
                                                // characters may not be reliably read.
                                                : LogCalibrationInformation(
                                                    token,
@@ -6626,7 +6701,6 @@ public class Calibrator {
                                 }
                             }
                             else {
-                                correspondence = true;
                                 token = LogIsoIec15434SeparatorSupport(token, idx);
                             }
 
@@ -6657,11 +6731,11 @@ public class Calibrator {
                         InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
                     : calibrationToken,
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
+                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing File separators.
                 Segments.FileSeparatorSegment => AssessFormatSupport
                     ? LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators)
+                        InformationType.NonCorrespondingKeyboardLayoutsFileSeparator)
                     : calibrationToken,
 
                 // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
@@ -6671,12 +6745,20 @@ public class Calibrator {
                         InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator)
                     : calibrationToken,
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
+                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Unit separators.
                 Segments.UnitSeparatorSegment => AssessFormatSupport
                     ? LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators)
+                        InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator)
                     : calibrationToken,
+
+                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing End-of-Transmission characters.
+                Segments.EndOfTransmissionSegment => AssessFormatSupport
+                    ? LogCalibrationInformation(
+                        calibrationToken,
+                        InformationType.NonCorrespondingKeyboardLayoutsEoT)
+                    : calibrationToken,
+
                 _ => calibrationToken
             };
 
@@ -6701,10 +6783,16 @@ public class Calibrator {
                 Segments.UnitSeparatorSegment => LogCalibrationInformation(
                     calibrationToken,
                     InformationType.UnitSeparatorSupported),
+
+                // Information: End-of-Transmission characters are supported.
+                Segments.EndOfTransmissionSegment => LogCalibrationInformation(
+                    calibrationToken,
+                    InformationType.EndOfTransmissionSupported),
+
                 _ => calibrationToken
             };
 
-        bool isEdiCharacter(char character) =>
+        bool IsEdiCharacter(char character) =>
             ((int)character) switch {
                 > 64 and <= 90 => true,
                 > 47 and <= 57 => true,
@@ -6769,6 +6857,45 @@ public class Calibrator {
 
         // Add mapping for ASCII 28 or ASCII 31
         _tokenExtendedDataCharacterMap.Add('\0', _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs ? '\u001c' : '\u001f');
+
+        return token;
+    }
+
+    private Token DoProcessForIsoIec15434FsIncompatibility(Token token) {
+        if (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs) {
+            // Warning - The file separator character cannot be reliably read.
+            return AssessFormatSupport
+                ? LogCalibrationInformation(
+                    InitializeTokenData(),
+                    InformationType.IsoIec15434FsNotReliablyReadable)
+                : token;
+        }
+
+        return token;
+    }
+
+    private Token DoProcessForIsoIec15434UsIncompatibility(Token token) {
+        if (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs) {
+            // Warning - The unit separator character cannot be reliably read.
+            return AssessFormatSupport
+                ? LogCalibrationInformation(
+                    InitializeTokenData(),
+                    InformationType.IsoIec15434UsNotReliablyReadable)
+                : token;
+        }
+
+        return token;
+    }
+
+    private Token DoProcessForIsoIec15434EotIncompatibility(Token token) {
+        if (_tokenExtendedDataPotentialIsoIec15434EotUnreadable) {
+            // Warning - The end-of-transmission character cannot be reliably read.
+            return AssessFormatSupport
+                ? LogCalibrationInformation(
+                    InitializeTokenData(),
+                    InformationType.IsoIec15434EotNotReliablyReadable)
+                : token;
+        }
 
         return token;
     }
@@ -6902,6 +7029,7 @@ public class Calibrator {
         _tokenExtendedDataPotentialIsoIec15434Unreadable30 = false;
         _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = false;
         _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = false;
+        _tokenExtendedDataPotentialIsoIec15434EotUnreadable = false;
         _tokenCalibrationData = null;
         _tokenSystemCapabilities = null;
         _invariantMappedCharacters = null;

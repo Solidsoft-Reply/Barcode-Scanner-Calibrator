@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>U moet mogelijk handmatig gegevens invoeren in uw software voor barcodes die data bevatten geformatteerd volgens ISO/IEC 15434 karakters.</value>
   </data>
@@ -199,6 +196,21 @@
     <value>Als u EDI-barcodes scant en problemen ondervindt, probeer dan uw barcodescanner te configureren om een numeriek toetsenbord te emuleren.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
     <value>Als u problemen ondervindt bij het scannen van barcodes, probeert u uw barcodescanner zo te configureren dat deze een numeriek toetsenbord emuleert.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
@@ -349,7 +361,22 @@
     <value>Uw systeem kan barcodes niet betrouwbaar lezen als ze gegevens voor elektronische gegevensuitwisseling (EDI) bevatten.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Uw systeem kan bepaalde normale tekens en speciale tekens niet onderscheiden.</value>
+    <value>Uw systeem kan mogelijk de bestandscheidingstekens (ASCII 28) niet correct lezen.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Uw systeem kan de bestandscheidingstekens (ASCII 28) niet lezen.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de scheidingstekens van eenheid (ASCII 31) niet correct lezen.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Uw systeem kan mogelijk de einde-overdrachttekens (ASCII 04) niet correct lezen.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Uw systeem kan de einde-overdrachttekens (ASCII 04) niet lezen.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>De test is mislukt.</value>
@@ -490,7 +517,22 @@
     <value>Sommige barcodes kunnen EDI data bevatten.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>In de meeste gevallen komen deze tekens niet samen voor in barcodes.</value>
+    <value>Deze tekens worden niet veel gebruikt in barcodes.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Deze tekens worden niet veel gebruikt in barcodes.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Deze tekens worden niet veel gebruikt in barcodes.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Deze tekens worden niet veel gebruikt in barcodes.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Sommige soorten barcodes gebruiken dit teken om het einde van de barcodedata aan te geven. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Sommige soorten barcodes gebruiken dit teken om het einde van de barcodedata aan te geven. Uw software leest mogelijk geen suffix correct dat door de barcodescanner is toegevoegd.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>U heeft mogelijk een verkeerde barcode gescand of incorrecte gegevens ingevoerd via het toetsenbord. Uw barcode scanner of systeem kan traag zijn, of er kan een onverwachte of intermitterende storing zijn opgetreden.</value>

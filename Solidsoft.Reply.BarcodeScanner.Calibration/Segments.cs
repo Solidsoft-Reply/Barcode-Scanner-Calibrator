@@ -60,7 +60,12 @@ internal enum Segments {
     UnitSeparatorSegment = 6,
 
     /// <summary>
+    /// The data segment containing the end-of-transmission (EOT) character.
+    /// </summary>
+    EndOfTransmissionSegment = 7,
+    
+    /// <summary>
     /// The data segment containing any suffix.
     /// </summary>
-    SuffixSegment = 7,
+    SuffixSegment = 8,
 }

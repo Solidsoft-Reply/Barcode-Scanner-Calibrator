@@ -58,6 +58,7 @@ public sealed record TokenExtendedData {
         PotentialIsoIec15434Unreadable30 = false;
         PotentialIsoIec15434EdiUnreadableFs = false;
         PotentialIsoIec15434EdiUnreadableUs = false;
+        PotentialIsoIec15434EotUnreadable = false;
         AssessFormat06Support = true;
         NonInvariantAmbiguities = new Dictionary<string, IList<string>>();
         InvariantGs1Ambiguities = new Dictionary<string, IList<string>>();
@@ -140,6 +141,9 @@ public sealed record TokenExtendedData {
     /// <param name="potentialIsoIec15434EdiUnreadableUs">
     ///   A value indicating whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31.
     /// </param>
+    /// <param name="potentialIsoIec15434EotUnreadable">
+    ///   A value indicating whether data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 04.
+    /// </param>
     /// <param name="assessFormat06Support">
     ///   A value indicating whether to assess Format 06 and Format 05 support.
     /// </param>
@@ -178,6 +182,7 @@ public sealed record TokenExtendedData {
         bool potentialIsoIec15434Unreadable30,
         bool potentialIsoIec15434EdiUnreadableFs,
         bool potentialIsoIec15434EdiUnreadableUs,
+        bool potentialIsoIec15434EotUnreadable,
         bool assessFormat06Support,
         IDictionary<string, IList<string>> nonInvariantAmbiguities,
         IDictionary<string, IList<string>> invariantGs1Ambiguities,
@@ -205,6 +210,7 @@ public sealed record TokenExtendedData {
         PotentialIsoIec15434Unreadable30 = potentialIsoIec15434Unreadable30;
         PotentialIsoIec15434EdiUnreadableFs = potentialIsoIec15434EdiUnreadableFs;
         PotentialIsoIec15434EdiUnreadableUs = potentialIsoIec15434EdiUnreadableUs;
+        PotentialIsoIec15434EotUnreadable = potentialIsoIec15434EotUnreadable;
         AssessFormat06Support = assessFormat06Support;
         NonInvariantAmbiguities = nonInvariantAmbiguities;
         InvariantGs1Ambiguities = invariantGs1Ambiguities;
@@ -354,37 +360,43 @@ public sealed record TokenExtendedData {
     ///   character.
     /// </summary>
     [JsonProperty("potentialIsoIec15434EdiUnreadableUs", Order = 21)]
-
     public bool PotentialIsoIec15434EdiUnreadableUs { get; init; }
+
+    /// <summary>
+    ///   Gets a value indicating whether data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 04.
+    ///   character.
+    /// </summary>
+    [JsonProperty("potentialIsoIec15434EotUnreadableUs", Order = 22)]
+    public bool PotentialIsoIec15434EotUnreadable { get; init; }
 
     /// <summary>
     ///   Gets a value indicating whether to assess Format 06 and Format 05 support.
     /// </summary>
-    [JsonProperty("testSupportForFormat06", Order = 22)]
+    [JsonProperty("testSupportForFormat06", Order = 23)]
     public bool AssessFormat06Support { get; init; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous non-invariant ASCII character sequences that map to a reported character.
     /// </summary>
-    [JsonProperty("nonInvariantAmbiguities", Order = 23)]
+    [JsonProperty("nonInvariantAmbiguities", Order = 24)]
     public IDictionary<string, IList<string>> NonInvariantAmbiguities { get; init; }
 
     /// <summary>
     ///   Gets a dictionary of ambiguous invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1Ambiguities", Order = 24)]
+    [JsonProperty("invariantGs1Ambiguities", Order = 25)]
     public IDictionary<string, IList<string>> InvariantGs1Ambiguities { get; init; }
 
     /// <summary>
     ///   Gets a list of unrecognised non-invariant character sequences.
     /// </summary>
-    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 25)]
+    [JsonProperty("nonInvariantUnrecognisedCharacters", Order = 26)]
     public IList<string> NonInvariantUnrecognisedCharacters { get; init; }
 
     /// <summary>
     ///   Gets a list of unrecognised invariant or other character sequences that may be used in GS1-compliant barcodes.
     /// </summary>
-    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 26)]
+    [JsonProperty("invariantGs1UnrecognisedCharacters", Order = 27)]
     public IList<string> InvariantGs1UnrecognisedCharacters { get; init; }
 
     /// <summary>
@@ -423,6 +435,7 @@ public sealed record TokenExtendedData {
             calibrationTokenExtendedData.PotentialIsoIec15434Unreadable30,
             calibrationTokenExtendedData.PotentialIsoIec15434EdiUnreadableFs,
             calibrationTokenExtendedData.PotentialIsoIec15434EdiUnreadableUs,
+            calibrationTokenExtendedData.PotentialIsoIec15434EotUnreadable,
             calibrationTokenExtendedData.AssessFormat06Support,
             calibrationTokenExtendedData.NonInvariantAmbiguities,
             calibrationTokenExtendedData.InvariantGs1Ambiguities,

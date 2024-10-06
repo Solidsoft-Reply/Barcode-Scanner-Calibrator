@@ -654,8 +654,6 @@ public class UsToEuropeanCalibrationTests {
         // Assert that the calibrator calculated the expected calibration.
         Assert.Equal(expectedCalibrations[layoutName], currentToken.CalibrationData?.ToJson() ?? string.Empty);
 
-        ////Assert.Equal(computerKeyboardLayout.Value[baseLine], loopCount);
-
         return currentToken;
 
         static string ToLiteral(string input) {

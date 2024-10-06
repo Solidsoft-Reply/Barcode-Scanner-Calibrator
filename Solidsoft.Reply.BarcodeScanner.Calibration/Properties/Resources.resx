@@ -364,4 +364,22 @@
   <data name="CalibrationInformation_257" xml:space="preserve">
     <value>The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read.</value>
   </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>The file separator character cannot be reliably read.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>The unit separator character cannot be reliably read.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>The end-of-transmission character cannot be reliably read.</value>
+  </data>
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>End-of-Transmission characters are supported.</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Možda ćete morati ručno unijeti podatke u vaš softver za bar kodove koji sadrže podatke formatirane prema znakovima ISO/IEC 15434.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Ako skenirate EDI bar kodove i imate poteškoća, pokušajte konfigurirati vaš skener bar kodova da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju barkodova, pokušajte konfigurirati svoj čitač barkoda da emulira numeričku tipkovnicu.</value>
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.</value>
@@ -349,7 +361,22 @@
     <value>Vaš sustav ne može pouzdano čitati barkodove ako sadrže podatke za Elektroničku Razmjenu Podataka (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Vaš sustav ne može razlikovati određene normalne znakove i posebne znakove.</value>
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Vaš sustav ne može čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Vaš sustav ne može čitati znakove za kraj prijenosa (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nije uspio.</value>
@@ -490,7 +517,22 @@
     <value>Neki bar kodovi mogu sadržavati EDI podatke.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>U većini slučajeva, ovi se znakovi ne pojavljuju zajedno u barkodovima.</value>
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možda ste skenirali krivi bar kod ili unijeli netočne podatke koristeći tipkovnicu. Vaš skener bar kodova ili sustav može biti spor, ili se može pojaviti neki neočekivani ili povremeni problem.</value>

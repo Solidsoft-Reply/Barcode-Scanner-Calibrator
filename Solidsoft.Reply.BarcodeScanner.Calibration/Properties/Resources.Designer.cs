@@ -61,7 +61,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Advice items remaining mismatch..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string AdviceItemRemainingMismatch {
             get {
@@ -214,6 +214,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End-of-Transmission characters are supported..
+        /// </summary>
+        internal static string CalibrationInformation_164 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The barcode scanner may be configured to compensate for Caps Lock..
         /// </summary>
         internal static string CalibrationInformation_170 {
@@ -291,6 +300,33 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string CalibrationInformation_212 {
             get {
                 return ResourceManager.GetString("CalibrationInformation_212", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_213 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_213", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The unit separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_214 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_214", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The end-of-transmission character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_215 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_215", resourceCulture);
             }
         }
         
@@ -759,6 +795,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string CalibrationInvalidInformationLevel {
             get {
                 return ResourceManager.GetString("CalibrationInvalidInformationLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

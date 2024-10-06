@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Neuvontakohteiden jäljellä oleva määrä ei täsmää.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Suffiksi {0} ei vastaa odotettua suffiksia {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Virheellinen viivakoodin alkuperä.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Virheellinen virhetiedon tyyppi.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Virheellinen varoituksen tiedon tyyppi.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Väliaikaisten välilyöntimerkkien lisääminen epäonnistui.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Virheellinen argumentti säännöllisen lausekkeen Replace-metodille.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>Säännöllinen lauseke aikakatkaistiin suoritettaessa vastaavuutta.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Sopivaa merkkiä väliaikaiseen paikkamerkkiin ei löydy. Kaikki laajennetun ASCII:n merkit on jo käytetty syötteessä.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Virheellinen viivakoodin alkuperä.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Virheellinen tietotaso.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Virheellinen neuvontakohde.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Suffiksi {0} ei vastaa odotettua suffiksia {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM-tunnisteet ovat tuettuja.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Tallenteen erottajamerkit ovat tuettuja.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-erotinmerkit ovat tuettuja.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Yksikön erottimet ovat tuettuja.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Viivakoodinlukija voidaan konfiguroida kompensoimaan Caps Lockin.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Joitakin raportoituja ei-invariantteja ASCII-merkkejä on epäselviä: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä EDI-tietoja sisältäviä viivakoodeja ei voida lukea luotettavasti.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Joitakin raportoituja merkkijonoja on epäselviä. Nämä merkit eivät edusta invarianteja merkkejä: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Raportoitu merkkijono {0} on epäselvä. Tämä saattaa estää viivakoodissa olevien lisädatan elementtien lukemisen.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Ilmoitettu merkki {0} on epäselvä. Viivakoodeja, jotka käyttävät ASCII 28:aa tai ASCII 31:tä, ei välttämättä voida lukea luotettavasti.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Joitakin raportoituja merkkijonoja on epäselviä. Nämä merkit eivät edusta invarianteja merkkejä: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan tallenteen erottajaa esitettäessä.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan EDI-erotinta esitettäessä.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan AIM-tunnisteita esitettäessä.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelujen yhteenkuuluvuutta ei voida määrittää.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock on kytketty päälle.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Raportoitu data on väärälle kalibrointiviivakoodille.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Viivakoodin kalibrointiyritys tehtiin, mutta kalibrointitokenia ei annettu.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Joitain invarianteja merkkejä ei voida havaita.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibrointi epäonnistui. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibrointi epäonnistui. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>EDI-erotinmerkit ovat tuettuja.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Virheellinen neuvontakohde.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä EDI-tietoja sisältäviä viivakoodeja ei voida lukea luotettavasti.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Virheellinen tietotaso.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan EDI-erotinta esitettäessä.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Väliaikaisten välilyöntimerkkien lisääminen epäonnistui.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Virheellinen argumentti säännöllisen lausekkeen Replace-metodille.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Säännöllinen lauseke aikakatkaistiin suoritettaessa vastaavuutta.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelujen yhteenkuuluvuutta ei voida määrittää.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Määrittelemätön</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Sopivaa merkkiä väliaikaiseen paikkamerkkiin ei löydy. Kaikki laajennetun ASCII:n merkit on jo käytetty syötteessä.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibrointi epäonnistui. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Viivakoodin kalibrointiyritys tehtiin, mutta kalibrointitokenia ei annettu.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Yksikön erottimet ovat tuettuja.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} on epäselvä. Viivakoodeja, jotka käyttävät ASCII 28:aa tai ASCII 31:tä, ei välttämättä voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Siirron päättymismerkit tuetaan.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Tiedoston erottimen merkkiä ei voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Yksikön erottimen merkkiä ei voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Siirron päättymismerkkiä ei voida lukea luotettavasti.</value>
   </data>
 </root>

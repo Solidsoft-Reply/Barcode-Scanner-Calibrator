@@ -61,11 +61,11 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
         /// </summary>
-        internal static string Advice_100 {
+        internal static string Adv_ice_278 {
             get {
-                return ResourceManager.GetString("Advice_100", resourceCulture);
+                return ResourceManager.GetString("Adv ice_278", resourceCulture);
             }
         }
         
@@ -309,6 +309,51 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Advice_276 {
             get {
                 return ResourceManager.GetString("Advice_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_277 {
+            get {
+                return ResourceManager.GetString("Advice_277", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_278 {
+            get {
+                return ResourceManager.GetString("Advice_278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_279 {
+            get {
+                return ResourceManager.GetString("Advice_279", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_280 {
+            get {
+                return ResourceManager.GetString("Advice_280", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
+        /// </summary>
+        internal static string Advice_281 {
+            get {
+                return ResourceManager.GetString("Advice_281", resourceCulture);
             }
         }
         
@@ -727,7 +772,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
         /// </summary>
         internal static string Condition_270 {
             get {
@@ -736,7 +781,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
         /// </summary>
         internal static string Condition_271 {
             get {
@@ -745,7 +790,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
         /// </summary>
         internal static string Condition_275 {
             get {
@@ -754,11 +799,56 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot distinguish between certain normal characters and special characters..
+        ///   Looks up a localized string similar to Your system may not read File Separator (ASCII 28) characters correctly..
         /// </summary>
         internal static string Condition_276 {
             get {
                 return ResourceManager.GetString("Condition_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read File Separator (ASCII 28) characters..
+        /// </summary>
+        internal static string Condition_277 {
+            get {
+                return ResourceManager.GetString("Condition_277", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system may not read Unit Separator (ASCII 31) characters correctly..
+        /// </summary>
+        internal static string Condition_278 {
+            get {
+                return ResourceManager.GetString("Condition_278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read Unit Separator (ASCII 31) characters..
+        /// </summary>
+        internal static string Condition_279 {
+            get {
+                return ResourceManager.GetString("Condition_279", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system may not read End-of-Transmission (ASCII 04) characters correctly..
+        /// </summary>
+        internal static string Condition_280 {
+            get {
+                return ResourceManager.GetString("Condition_280", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your system cannot read End-of-Transmission (ASCII 04) characters..
+        /// </summary>
+        internal static string Condition_281 {
+            get {
+                return ResourceManager.GetString("Condition_281", resourceCulture);
             }
         }
         
@@ -1177,11 +1267,56 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to In most cases, these characters don&apos;t appear together in barcodes..
+        ///   Looks up a localized string similar to These characters are not used widely in barcodes..
         /// </summary>
         internal static string Description_276 {
             get {
                 return ResourceManager.GetString("Description_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to These characters are not used widely in barcodes..
+        /// </summary>
+        internal static string Description_277 {
+            get {
+                return ResourceManager.GetString("Description_277", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to These characters are not used widely in barcodes..
+        /// </summary>
+        internal static string Description_278 {
+            get {
+                return ResourceManager.GetString("Description_278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to These characters are not used widely in barcodes..
+        /// </summary>
+        internal static string Description_279 {
+            get {
+                return ResourceManager.GetString("Description_279", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner..
+        /// </summary>
+        internal static string Description_280 {
+            get {
+                return ResourceManager.GetString("Description_280", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner..
+        /// </summary>
+        internal static string Description_281 {
+            get {
+                return ResourceManager.GetString("Description_281", resourceCulture);
             }
         }
         

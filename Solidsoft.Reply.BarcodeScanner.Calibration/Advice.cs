@@ -60,21 +60,21 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         var dataReported = systemCapabilities.DataReported;
         var correctSequenceReported = systemCapabilities.CorrectSequenceReported;
         var completeDataReported = systemCapabilities.CompleteDataReported;
-        var keyboardLayoutsCorrespondForInvariantCharacters =
-            systemCapabilities.KeyboardLayoutsCorrespondForInvariants;
-        var keyboardLayoutsCorrespondForNonInvariantCharacters =
-            systemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters;
-        var keyboardLayoutsCanRepresentGroupSeparator =
-            systemCapabilities.KeyboardLayoutsCanRepresentGroupSeparator;
-        var keyboardLayoutsCanRepresentRecordSeparator =
-            systemCapabilities.KeyboardLayoutsCanRepresentRecordSeparator;
-        var keyboardLayoutsCanRepresentEdiSeparators = systemCapabilities.KeyboardLayoutsCanRepresentEdiSeparators;
-        var keyboardLayoutsCorrespondForAimIdentifier =
-            systemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier;
+        var keyboardLayoutsCorrespondForInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForInvariants;
+        var keyboardLayoutsCorrespondForNonInvariantCharacters = systemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters;
+        var keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping;
+        var keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping;
+        var keyboardLayoutsCanRepresentFileSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping;
+        var keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping;
+        var keyboardLayoutsCanRepresentEotWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentEotWithoutMapping;
+        var keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = systemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping;
+        var keyboardLayoutsCorrespondForAimIdentifier = systemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier;
         var canReadInvariantCharactersReliably = systemCapabilities.CanReadInvariantsReliably;
         var canReadFormat05AndFormat06Reliably = systemCapabilities.CanReadFormat05AndFormat06Reliably;
         var canReadEdiReliably = systemCapabilities.CanReadEdiReliably;
-        var canReadAscii28Ascci31Reliably = systemCapabilities.CanReadAscii28Ascci31Reliably;
+        var canReadAscii28Reliably = systemCapabilities.CanReadFileSeparatorsReliably;
+        var canReadAscii31Reliably = systemCapabilities.CanReadUnitSeparatorsReliably;
+        var canReadAscii04Reliably = systemCapabilities.CanReadEotReliably;
         var canReadAimIdentifiersReliably = systemCapabilities.CanReadAimIdentifiersReliably;
         var canReadNonInvariantCharactersReliably = systemCapabilities.CanReadAdditionalAsciiCharactersReliably;
         var scannerTransmitsAimIdentifiers = systemCapabilities.ScannerTransmitsAimIdentifiers;
@@ -84,8 +84,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         var scannerMayConvertToUpperCase = systemCapabilities.ScannerMayConvertToUpperCase.GetValueOrDefault();
         var scannerMayConvertToLowerCase = systemCapabilities.ScannerMayConvertToLowerCase.GetValueOrDefault();
         var scannerMayInvertCase = systemCapabilities.ScannerMayInvertCase.GetValueOrDefault();
-        var scannerMayCompensateForCapsLock =
-            systemCapabilities.ScannerMayCompensateForCapsLock.GetValueOrDefault();
+        var scannerMayCompensateForCapsLock = systemCapabilities.ScannerMayCompensateForCapsLock.GetValueOrDefault();
         var keyboardScriptDoesNotSupportCase = systemCapabilities.KeyboardScriptDoesNotSupportCase;
         var aimIdentifierUncertain = systemCapabilities.AimIdentifierUncertain;
         var assumption = systemCapabilities.Assumption;
@@ -110,30 +109,25 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                         : null
                 : null);
 
-        // AdviceTypes: 100, 105, 110, 115 (No Calibration)
+        // AdviceTypes: 100, 105, 110, 115 (No Calibration assumed)
         AddAdviceItemToList(
             IfTheTestSucceeded()
             && IfWeCanReadInvariantCharactersReliably()
-            && IfTheKeyboardLayoutsCorrespondForInvariantCharacters()
-            && IfTheKeyboardLayoutsCanRepresentGroupSeparators()
             && IfWeDoNotAssumeCalibration()
-            && IfWeOmittedTheFormatTest()
-                ? ReportThatInvariantCharactersAreReadReliablyButTheFormatTestWasOmitted() // 105
-                : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
-                    ? IfWeCanReadFormat05AndFormat06Reliably()
-                        ? IfWeAssumeAgnosticism()
-                            ? IfTheKeyboardLayoutsCanRepresentRecordSeparators()
+            && IfTheKeyboardLayoutsCorrespondForInvariantCharacters()
+            && IfTheKeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping()
+                ? IfWeOmittedTheFormatTest()
+                    ? ReportThatInvariantCharactersAreReadReliablyButTheFormatTestWasOmitted() // 105
+                    : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
+                        ? IfWeCanReadFormat05AndFormat06Reliably()
+                            ? IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping()
                                 ? ReportThatInvariantCharactersAreReadReliably() // 100
-                                : ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() // 110
-                            : IfWeAssumeNoCalibration()
-                              && IfTheKeyboardLayoutsCannotRepresentRecordSeparators()
-                              && IfWeIncludedTheFormatTest()
-                                ? ReportThatInvariantCharactersAreReadReliablyButTheFormatTestWasOmitted() // 105
-                                : null
-                        : IfWeIncludedTheFormatTest()
-                            ? ReportThatInvariantCharactersButNotFormat05OrFormat06AreReadReliably() // 115
-                            : null
-                    : null);
+                                : IfWeAssumeAgnosticism()
+                                    ? ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() // 110
+                                    : ReportThatInvariantCharactersButNotFormat05OrFormat06AreReadReliably() // 115
+                            : ReportThatInvariantCharactersButNotFormat05OrFormat06AreReadReliably() // 115
+                        : ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() // 110
+                : null);
 
         // AdviceType: 200
         AddAdviceItemToList(
@@ -203,9 +197,9 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             IfDataWasFullyReported()
             && IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                 ? IfWeCanReadFormat05AndFormat06Reliably()
-                    ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() ||
+                    ? (IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() ||
                        IfWeKnowIfWeCanReadInvariantCharactersReliably())
-                      && IfTheKeyboardLayoutsCannotRepresentRecordSeparators()
+                      && IfTheKeyboardLayoutsCannotRepresentRecordSeparatorsWithoutMapping()
                       && IfWeCanReadInvariantCharactersReliably()
                         ? IfWeAssumeAgnosticism()
                             ? ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() // 240
@@ -235,24 +229,61 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                             : null
                 : null);
 
-        // AdviceType: 270, 271, 275, 276
+        // AdviceType: 270, 271, 275
         AddAdviceItemToList(
             IfDataWasFullyReported()
-            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators()
+            && IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping()
                 ? IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
-                    : IfWeCannotReadAscii28Ascii31CharactersReliably()
-                        ? ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() // 276
-                        : IfWeAssumeAgnosticism()
-                            ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() // 270
-                            : IfWeAssumeNoCalibration()
-                                ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() // 271
-                                : null
+                    : IfWeAssumeAgnosticism()
+                        ? ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() // 270
+                        : IfWeAssumeNoCalibration()
+                            ? IfTheKeyboardLayoutsCannotRepresentEdiSeparatorsWithoutMapping()
+                                ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
+                                : ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() // 271
+                            : null
                 : IfWeCannotReadEdiCharactersReliably()
                     ? ReportThatTheSystemCannotReadEdiCharactersReliably() // 275
-                    : IfWeCannotReadAscii28Ascii31CharactersReliably()
-                        ? ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() // 276
-                        : null);
+                    : null);
+
+        // AdviceType: 276, 277
+        AddAdviceItemToList(
+            IfDataWasFullyReported()
+            && IfWeCannotReadAscii28CharactersReliably()
+                ? ReportThatTheSystemCannotReadAscii28CharactersReliably() // 277
+                : IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping()
+                    ? IfWeAssumeAgnosticism()
+                        ? ReportThatTheSystemMayNotReadAscii28CharactersReliably() // 276
+                        : IfWeAssumeNoCalibration()
+                            ? ReportThatTheSystemCannotReadAscii28CharactersReliably() // 277
+                            : null
+                    : null);
+
+        // AdviceType: 278, 279
+        AddAdviceItemToList(
+            IfDataWasFullyReported()
+            && IfWeCannotReadAscii31CharactersReliably()
+                ? ReportThatTheSystemCannotReadAscii31CharactersReliably() // 279
+                : IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping()
+                    ? IfWeAssumeAgnosticism()
+                        ? ReportThatTheSystemMayNotReadAscii31CharactersReliably() // 278
+                        : IfWeAssumeNoCalibration()
+                            ? ReportThatTheSystemCannotReadAscii31CharactersReliably() // 279
+                            : null
+                    : null);
+
+        // AdviceType: 280, 281
+        AddAdviceItemToList(
+            IfDataWasFullyReported()
+            && IfWeCannotReadAscii04CharactersReliably()
+                ? ReportThatTheSystemCannotReadAscii04CharactersReliably() // 281
+                : IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping()
+                    ? IfWeAssumeNoCalibration()
+                        ? ReportThatTheSystemCannotReadAscii04CharactersReliably() // 281
+                        : IfWeAssumeAgnosticism() 
+                            ? ReportThatTheSystemMayNotReadAscii04CharactersReliably() // 280
+                            : null
+                    : null);
 
         // AdviceType: 300
         AddAdviceItemToList(
@@ -615,78 +646,49 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfTheTestSucceeded() => testsSucceeded;
         bool IfTestDidNotSucceed() => !testsSucceeded;
         bool IfWeOmittedTheFormatTest() => testGs1Only;
-        bool IfWeIncludedTheFormatTest() => !testGs1Only;
         bool IfWeKnowIfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably is not null;
         bool IfWeCanReadFormat05AndFormat06Reliably() => canReadFormat05AndFormat06Reliably ?? false;
         bool IfWeCannotReadFormat05AndFormat06Reliably() => !canReadFormat05AndFormat06Reliably ?? false;
         bool IfWeKnowIfWeCanReadInvariantCharactersReliably() => canReadInvariantCharactersReliably is not null;
         bool IfWeCanReadInvariantCharactersReliably() => canReadInvariantCharactersReliably ?? false;
         bool IfWeCannotReadVariantCharactersReliably() => !canReadInvariantCharactersReliably ?? false;
-
-        bool IfWeDoNotAscertainThatWeCanReadVariantCharactersReliably() =>
-            !(canReadInvariantCharactersReliably ?? false);
-
-        bool IfTheKeyboardLayoutsCorrespondForInvariantCharacters() =>
-            keyboardLayoutsCorrespondForInvariantCharacters ?? false;
-
-        bool IfTheKeyboardLayoutsDoNotCorrespondForInvariantCharacters() =>
-            !keyboardLayoutsCorrespondForInvariantCharacters ?? false;
-
-        bool IfWeKnowIfKeyboardLayoutsCorrespondForInvariants() =>
-            keyboardLayoutsCorrespondForInvariantCharacters is not null;
-
+        bool IfWeDoNotAscertainThatWeCanReadVariantCharactersReliably() => !(canReadInvariantCharactersReliably ?? false);
+        bool IfTheKeyboardLayoutsCorrespondForInvariantCharacters() => keyboardLayoutsCorrespondForInvariantCharacters ?? false;
+        bool IfTheKeyboardLayoutsDoNotCorrespondForInvariantCharacters() => !keyboardLayoutsCorrespondForInvariantCharacters ?? false;
+        bool IfWeKnowIfKeyboardLayoutsCorrespondForInvariants() => keyboardLayoutsCorrespondForInvariantCharacters is not null;
         bool IfWeAssumeAgnosticism() => assumption == Assumption.Agnostic;
         bool IfWeAssumeCalibration() => assumption == Assumption.Calibration;
         bool IfWeDoNotAssumeCalibration() => assumption != Assumption.Calibration;
         bool IfWeAssumeNoCalibration() => assumption == Assumption.NoCalibration;
         bool IfTheCurrentPlatformIsMacintosh() => platform == SupportedPlatform.Macintosh;
-
-        bool IfTheKeyboardLayoutsCanRepresentRecordSeparators() =>
-            keyboardLayoutsCanRepresentRecordSeparator ?? false;
-
-        bool IfTheKeyboardLayoutsCannotRepresentRecordSeparators() =>
-            !keyboardLayoutsCanRepresentRecordSeparator ?? false;
-
-        bool IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparators() =>
-            keyboardLayoutsCanRepresentRecordSeparator is not null;
-
-        bool IfTheKeyboardLayoutsCanRepresentGroupSeparators() =>
-            keyboardLayoutsCanRepresentGroupSeparator ?? false;
-
-        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparators() =>
-            !(keyboardLayoutsCanRepresentEdiSeparators ?? false);
-
+        bool IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentRecordSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping ?? false;
+        bool IfWeKnowIfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping is not null;
+        bool IfTheKeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentFileSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping() => !keyboardLayoutsCanRepresentEotWithoutMapping ?? false;
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping() => !(keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping ?? false);
+        bool IfTheKeyboardLayoutsCannotRepresentEdiSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping is false;
         bool IfCapsLockIsOn() => systemCapabilities.CapsLock;
         bool IfCapsLockIsOff() => !systemCapabilities.CapsLock;
-
-        bool IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase() =>
-            !(keyboardScriptDoesNotSupportCase ?? false);
-
+        bool IfWeDoNotAscertainThatTheKeyboardScriptDoesNotSupportCase() => !(keyboardScriptDoesNotSupportCase ?? false);
         bool IfTheKeyboardScriptDoesNotSupportCase() => keyboardScriptDoesNotSupportCase ?? false;
         bool IfPlatformIsMacOs() => platform == SupportedPlatform.Macintosh;
         bool IfScannerMayCompensateForCapsLock() => scannerMayCompensateForCapsLock;
-
-        bool IfWeDoNotAscertainThatTheScannerTransmitsAimIdentifiers() =>
-            !(scannerTransmitsAimIdentifiers ?? false);
-
-        bool IfWeDoNotAscertainThatTheScannerTransmitsAnEndOfLineSequence() =>
-            !(scannerTransmitsEndOfLineSequence ?? false);
-
+        bool IfWeDoNotAscertainThatTheScannerTransmitsAimIdentifiers() => !(scannerTransmitsAimIdentifiers ?? false);
+        bool IfWeDoNotAscertainThatTheScannerTransmitsAnEndOfLineSequence() => !(scannerTransmitsEndOfLineSequence ?? false);
         bool IfScannerTransmitsAnAdditionalPrefix() => scannerTransmitsAdditionalPrefix;
         bool IfScannerTransmitsAnAdditionalSuffix() => scannerTransmitsAdditionalSuffix;
-
-        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter() =>
-            !(keyboardLayoutsCorrespondForAimIdentifier ?? false);
-
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondForAimIdentifierFlagCharacter() => !(keyboardLayoutsCorrespondForAimIdentifier ?? false);
         bool IfWeCannotReadAimIdentifiersReliably() => !canReadAimIdentifiersReliably ?? false;
         bool IfThereIsUncertaintyAboutTheDetectedAimIdentifier() => aimIdentifierUncertain;
-
-        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForNonInvariantCharacters() =>
-            !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
-
+        bool IfWeDoNotAscertainThatTheKeyboardLayoutsCorrespondsForNonInvariantCharacters() => !(keyboardLayoutsCorrespondForNonInvariantCharacters ?? false);
         bool IfWeCannotReadNonInvariantCharactersReliably() => !canReadNonInvariantCharactersReliably ?? false;
         bool IfWeCannotReadEdiCharactersReliably() => !canReadEdiReliably ?? false;
-        bool IfWeCannotReadAscii28Ascii31CharactersReliably() => !canReadAscii28Ascci31Reliably ?? false;
+        bool IfWeCannotReadAscii28CharactersReliably() => !canReadAscii28Reliably ?? false;
+        bool IfWeCannotReadAscii31CharactersReliably() => !canReadAscii31Reliably ?? false;
+        bool IfWeCannotReadAscii04CharactersReliably() => !canReadAscii04Reliably ?? false;
         bool IfUnexpectedErrorOccurred() => unexpectedError;
         bool IfNoUnexpectedErrorOccurred() => !unexpectedError;
         bool IfDataWasReported() => dataReported;
@@ -695,213 +697,230 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfDataWasOnlyPartiallyReported() => !completeDataReported;
         bool IfDeadKeyBarcodesWereGeneratedDuringCalibration() => deadKeys;
         bool IfBarcodesWereScannedInAnIncorrectSequence() => !correctSequenceReported;
-
-        bool IfTheKeyboardLayoutsCannotRepresentGroupSeparators() =>
-            !keyboardLayoutsCanRepresentGroupSeparator ?? false;
-
+        bool IfTheKeyboardLayoutsCannotRepresentGroupSeparators() => !keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping ?? false;
         bool IfScannerMayConvertToUpperCase() => scannerMayConvertToUpperCase;
         bool IfScannerMayConvertToLowerCase() => scannerMayConvertToLowerCase;
         bool IfScannerMayInvertCase() => scannerMayInvertCase;
 
         // 100
         AdviceItem ReportThatInvariantCharactersAreReadReliably() =>
-            new(AdviceType.ReadsInvariantCharactersReliably);
+            new (AdviceType.ReadsInvariantCharactersReliably);
 
         // 105
         AdviceItem ReportThatInvariantCharactersAreReadReliablyButTheFormatTestWasOmitted() =>
-            new(AdviceType.ReadsInvariantCharactersReliablyNoFormatTest);
+            new (AdviceType.ReadsInvariantCharactersReliablyNoFormatTest);
 
         // 110
         AdviceItem ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() =>
-            new(AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
+            new (AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
 
         // 115
         AdviceItem ReportThatInvariantCharactersButNotFormat05OrFormat06AreReadReliably() =>
-            new(AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506);
+            new (AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506);
 
         // 200
         AdviceItem ReportThatTheBarcodeScannerDoesNotTransmitAimIdentifiers() =>
-            new(AdviceType.NotTransmittingAim);
+            new (AdviceType.NotTransmittingAim);
 
         // 205
         AdviceItem ReportThatCapsLockIsSwitchedOnButCaseIsReportedCorrectly() =>
-            new(AdviceType.CapsLockCompensation);
+            new (AdviceType.CapsLockCompensation);
 
         // 206
         AdviceItem ReportThatCapsLockIsSwitchedOnOnMacOsButCaseIsPreserved() =>
-            new(AdviceType.CapsLockOnPreservationMacintosh);
+            new (AdviceType.CapsLockOnPreservationMacintosh);
 
         // 210
         AdviceItem ReportThatCapsLockIsSwitchedOnButScriptDoesNotSupportCase() =>
-            new(AdviceType.CapsLockOnNoCase);
+            new (AdviceType.CapsLockOnNoCase);
 
         // 215
         AdviceItem ReportThatTheScannerDoesNotTransmitAnEndOfLineSequence() =>
-            new(AdviceType.NotTransmittingEndOfLine);
+            new (AdviceType.NotTransmittingEndOfLine);
 
         // 220
         AdviceItem ReportThatTheScannerTransmitsAPrefix() =>
-            new(AdviceType.TransmittingPrefix);
+            new (AdviceType.TransmittingPrefix);
 
         // 225
         AdviceItem ReportThatTheScannerTransmitsASuffix() =>
-            new(AdviceType.TransmittingSuffix);
+            new (AdviceType.TransmittingSuffix);
 
         // 230
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadAim);
+            new (AdviceType.MayNotReadAim);
 
         // 231
         AdviceItem ReportThatWeMayNotReadAimIdentifiersAssumingNoCalibration() =>
-            new(AdviceType.CannotReadAimNoCalibration);
+            new (AdviceType.CannotReadAimNoCalibration);
 
         // 232
         AdviceItem ReportThatTheBarcodeScannerMayNotTransmitAimIdentifiers() =>
-            new(AdviceType.MayNotTransmitAim);
+            new (AdviceType.MayNotTransmitAim);
 
         // 235
         AdviceItem ReportThatWeCannotReadAimIdentifiers() =>
-            new(AdviceType.CannotReadAim);
+            new (AdviceType.CannotReadAim);
 
         // 240
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadFormat0506);
+            new (AdviceType.MayNotReadFormat0506);
 
         // 241
         AdviceItem ReportThatFormat05OrFormat06MayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadFormat0506NoCalibration);
+            new (AdviceType.MayNotReadFormat0506NoCalibration);
 
         // 245
         AdviceItem ReportThatFormat05OrFormat06AreNotReadReliably() =>
-            new(AdviceType.CannotReadAnsiMh1082Reliably);
+            new (AdviceType.CannotReadAnsiMh1082Reliably);
 
         // 250
         AdviceItem ReportThatWeDidNotTestForIsoIec15434() =>
-            new(AdviceType.Gs1OnlyTest);
+            new (AdviceType.Gs1OnlyTest);
 
         // 255
         AdviceItem ReportThatTheDataInputPerformanceIsSlowerThanExpected() =>
-            new(AdviceType.SlowScannerPerformance);
+            new (AdviceType.SlowScannerPerformance);
 
         // 256
         AdviceItem ReportThatTheDataInputPerformanceIsVeryPoor() =>
-            new(AdviceType.VerySlowScannerPerformance);
+            new (AdviceType.VerySlowScannerPerformance);
 
         // 260
         AdviceItem ReportThatNonInvariantCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadNonInvariantCharactersReliably);
+            new (AdviceType.MayNotReadNonInvariantCharactersReliably);
 
         // 261
         AdviceItem ReportThatNonInvariantCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadNonInvariantCharactersNoCalibration);
+            new (AdviceType.MayNotReadNonInvariantCharactersNoCalibration);
 
         // 265
         AdviceItem ReportThatTheSystemCannotReadNonInvariantCharactersReliably() =>
-            new(AdviceType.CannotReadNonInvariantCharacters);
+            new (AdviceType.CannotReadNonInvariantCharacters);
 
         // 270
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingAgnosticism() =>
-            new(AdviceType.MayNotReadEdiCharactersReliably);
+            new (AdviceType.MayNotReadEdiCharactersReliably);
 
         // 271
         AdviceItem ReportThatEdiCharactersMayNotBeReadReliablyAssumingNoCalibration() =>
-            new(AdviceType.MayNotReadEdiCharactersNoCalibration);
+            new (AdviceType.MayNotReadEdiCharactersNoCalibration);
 
         // 275
         AdviceItem ReportThatTheSystemCannotReadEdiCharactersReliably() =>
-            new(AdviceType.CannotReadEdiCharacters);
+            new (AdviceType.CannotReadEdiCharacters);
 
         // 276
-        AdviceItem ReportThatTheSystemCannotReadAscii28Ascii31CharactersReliably() =>
-            new(AdviceType.CannotReadAscii28Ascii31Characters);
+        AdviceItem ReportThatTheSystemMayNotReadAscii28CharactersReliably() =>
+            new(AdviceType.MayNotReadAscii28Characters);
+
+        // 277
+        AdviceItem ReportThatTheSystemCannotReadAscii28CharactersReliably() =>
+            new (AdviceType.CannotReadAscii28Characters);
+
+        // 278
+        AdviceItem ReportThatTheSystemMayNotReadAscii31CharactersReliably() =>
+            new (AdviceType.MayNotReadAscii31Characters);
+
+        // 279
+        AdviceItem ReportThatTheSystemCannotReadAscii31CharactersReliably() =>
+            new (AdviceType.CannotReadAscii31Characters);
+
+        // 280
+        AdviceItem ReportThatTheSystemMayNotReadAscii04CharactersReliably() =>
+            new (AdviceType.MayNotReadAscii04Characters);
+
+        // 281
+        AdviceItem ReportThatTheSystemCannotReadAscii04CharactersReliably() =>
+            new (AdviceType.CannotReadAscii04Characters);
 
         // 300
         AdviceItem ReportThatTheTestFailed() =>
-            new(AdviceType.TestFailed);
+            new (AdviceType.TestFailed);
 
         // 301
         AdviceItem ReportThatNoScannedDataWasReportedForBaseLineBarcode() =>
-            new(AdviceType.NoDataReported);
+            new (AdviceType.NoDataReported);
 
         // 303
         AdviceItem ReportThatScannedDataWasPartiallyReportedForBaselineBarcode() =>
-            new(AdviceType.PartialDataReported);
+            new (AdviceType.PartialDataReported);
 
         // 304
         AdviceItem ReportThatNoScannedDataWasReportedForDeadKeyBarcodes() =>
-            new(AdviceType.NoDataReportedDeadKeys);
+            new (AdviceType.NoDataReportedDeadKeys);
 
         // 305
         AdviceItem ReportThatUserScannedADeadKeyBarcodeOutOfSequence() =>
-            new(AdviceType.IncorrectSequenceDeadKeys);
+            new (AdviceType.IncorrectSequenceDeadKeys);
 
         // 306
         AdviceItem ReportThatScannedDataWasPartiallyReportedForDeadKeyBarcodes() =>
-            new(AdviceType.PartialDataReportedDeadKeys);
+            new (AdviceType.PartialDataReportedDeadKeys);
 
         // 307
         AdviceItem ReportThatLayoutsDoNotMatch() =>
-            new(AdviceType.LayoutsDoNotMatch);
+            new (AdviceType.LayoutsDoNotMatch);
 
         // 308
         AdviceItem ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() =>
-            new(AdviceType.LayoutsDoNotMatchNoCalibration);
+            new (AdviceType.LayoutsDoNotMatchNoCalibration);
 
         // 309
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectly);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectly);
 
         // 310
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
-            new(AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
 
         // 315
         AdviceItem ReportThatLayoutsDoNotMatchAndFormat05AndFormat06CannotBeReadReliably() =>
-            new(AdviceType.LayoutsDoNotMatchNoFormat0506);
+            new (AdviceType.LayoutsDoNotMatchNoFormat0506);
 
         // 316
         AdviceItem ReportThatHiddenCharactersAreNotReportedCorrectly() =>
-            new(AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506);
+            new (AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506);
 
         // 320
         AdviceItem ReportThatSystemCannotReadBarcodesReliably() =>
-            new(AdviceType.CannotReadBarcodesReliably);
+            new (AdviceType.CannotReadBarcodesReliably);
 
         // 325
         AdviceItem ReportThatCapsLockIsSwitchedOn() =>
-            new(AdviceType.CapsLockOn);
+            new (AdviceType.CapsLockOn);
 
         // 326
         AdviceItem ReportThatCapsLockIsSwitchedOnForMacintosh() =>
-            new(AdviceType.CapsLockOnMacintosh);
+            new (AdviceType.CapsLockOnMacintosh);
 
         // 327
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToUpperCases() =>
-            new(AdviceType.CapsLockOnConvertsToUpperCase);
+            new (AdviceType.CapsLockOnConvertsToUpperCase);
 
         // 328
         AdviceItem ReportThatCapsLockIsOnAndSystemConvertsToLowerCases() =>
-            new(AdviceType.CapsLockOnConvertsToLowerCase);
+            new (AdviceType.CapsLockOnConvertsToLowerCase);
 
         // 330
         AdviceItem ReportThatSystemConvertsUpperAndLowerCases() =>
-            new(AdviceType.CaseIsSwitched);
+            new (AdviceType.CaseIsSwitched);
 
         // 331
         AdviceItem ReportThatSystemConvertsToUpperCase() =>
-            new(AdviceType.ConvertsToUpperCase);
+            new (AdviceType.ConvertsToUpperCase);
 
         // 332
         AdviceItem ReportThatSystemConvertsToLowerCase() =>
-            new(AdviceType.ConvertsToLowerCase);
+            new (AdviceType.ConvertsToLowerCase);
 
         // 335
         AdviceItem ReportBarcodesCannotBeReadReliablyForKeyboardScriptThatDoesNotSupportCase() =>
-            new(AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
+            new (AdviceType.NoSupportForCase, systemCapabilities.KeyboardScript);
 
         // 390
         AdviceItem ReportThatAnUnexpectedErrorWasReported() =>
-            new(AdviceType.UnexpectedErrorReported);
+            new (AdviceType.UnexpectedErrorReported);
     }
 
     /// <summary>

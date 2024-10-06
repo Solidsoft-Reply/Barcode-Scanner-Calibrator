@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>D'fhéadfadh ort sonraí a ionchur de láimh isteach i do bhogearraí fíoraithe le haghaidh barcodes a bhfuil sonraí formáidithe de réir ISO/IEC 15434 iontu.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Má tá deacrachtaí agat ag scanadh barcodes EDI, bain triail as do scanóir barcode a chumrú chun méarchlár uimhriúil a aithris.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Má tá deacrachtaí agat agus cóid barra á scanadh agat, déan iarracht do scanóir cóid barra a chumrú chun méarchlár uimhriúil a aithris.</value>
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Má bhíonn deacrachtaí agat agus tú ag scanadh cóid bharra, bain triail as an scanóir cóid bharra a chumrú chun aithris a dhéanamh ar mhéarchlár uimhriúil.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Bain triail eile as, ag déanamh cinnte go scanálann tú an barcode(anna) ceart.</value>
@@ -349,7 +361,22 @@
     <value>Ní féidir le do chóras barrachóid a léamh go hiontaofa má tá sonraí le haghaidh Malartú Leictreonach Sonraí (EDI) iontu.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Ní féidir le do chóras idirdhealú a dhéanamh idir gnáthcharachtair áirithe agus carachtair speisialta.</value>
+    <value>B’fhéidir nach léann do chóras carachtair File Separator (ASCII 28) i gceart.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Ní féidir le do chóras carachtair File Separator (ASCII 28) a léamh.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair Unit Separator (ASCII 31) i gceart.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair Unit Separator (ASCII 31) i gceart.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>B’fhéidir nach léann do chóras carachtair End-of-Transmission (ASCII 04) i gceart.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ní féidir le do chóras carachtair End-of-Transmission (ASCII 04) a léamh.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Theip ar an tástáil.</value>
@@ -490,7 +517,22 @@
     <value>D'fhéadfadh roinnt barcodes sonraí EDI a áireamh.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>I bhformhór na gcásanna, ní fheictear na carachtair seo le chéile i gcóid barra.</value>
+    <value>Ní úsáidtear na carachtair seo go forleathan i gcóid bharra.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ní úsáidtear na carachtair seo go forleathan i gcóid bharra.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ní úsáidtear na carachtair seo go forleathan i gcóid bharra.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ní úsáidtear na carachtair seo go forleathan i gcóid bharra.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Úsáideann roinnt cineálacha cóid bharra an carachtar seo chun deireadh sonraí an chóid bharra a mharcáil. B’fhéidir nach léann do bhogearraí aon iarfhocal a chuirfidh an scanóir cóid bharra leis i gceart.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Úsáideann roinnt cineálacha cóid bharra an carachtar seo chun deireadh sonraí an chóid bharra a mharcáil. B’fhéidir nach léann do bhogearraí aon iarfhocal a chuirfidh an scanóir cóid bharra leis i gceart.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>D'fhéadfá barcode mícheart a bheith scanáilte nó sonraí míchearta a bheith ionchurtha ag baint úsáide as an méarchlár. D'fhéadfadh do scanóir barcode nó do chóras a bheith mall, nó d'fhéadfadh fadhb gan choinne nó idirthréimhseach tarlú.</value>

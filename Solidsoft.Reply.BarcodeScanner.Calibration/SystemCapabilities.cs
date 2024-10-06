@@ -80,7 +80,11 @@ using Properties;
 ///   Even if the keyboard layouts do not correspond, it can still be possible to read additional
 ///   reliably using a map. See the MappingPossible property.
 /// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentGroupSeparator">
+/// <param name="KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping">
+///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
+///   Group Separator control characters without mapping.
+/// </param>
+/// <param name="KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Group Separator control characters without mapping.
 /// </param>
@@ -95,7 +99,15 @@ using Properties;
 ///   sufficient information in those messages to explicitly record an ASCII
 ///   29 without the need for character-mapping.
 /// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentRecordSeparator">
+/// <param name="KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping">
+///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
+///   Record Separator control characters without mapping.
+/// </param>
+/// <param name="KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping">
+///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
+///   Record Separator control characters without mapping.
+/// </param>
+/// <param name="KeyboardLayoutsCanRepresentEotWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Record Separator control characters without mapping.
 /// </param>
@@ -110,7 +122,7 @@ using Properties;
 ///   sufficient information in those messages to explicitly record an ASCII 30 without the need
 ///   for character-mapping.
 /// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentEdiSeparators">
+/// <param name="KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   EDI separator control characters without mapping.
 /// </param>
@@ -149,14 +161,6 @@ using Properties;
 ///   Gets a value indicating whether the calibrated system can read EDI barcode data
 ///   formatted in accordance with ISO/IEC 15434 reliably, using a mapping if necessary.
 /// </param>
-/// <param name="CanReadAscii28Ascci31Reliably">
-///   Gets a value indicating whether the calibrated system can read ASCII 29 and ASCII 31
-///   barcode data reliably using a mapping if necessary.
-/// </param>
-/// <remarks>
-/// <p></p>
-/// <p>If the Format 06 and Format 05 tests where not run, the value is null.</p>
-/// </remarks>
 /// <param name="CanReadGroupSeparatorReliably">
 ///   Gets a value indicating whether the calibrated system can read Group Separator characters reliably, using a mapping if necessary.
 /// </param>
@@ -168,6 +172,9 @@ using Properties;
 /// </param>
 /// <param name="CanReadUnitSeparatorsReliably">
 ///   Gets a value indicating whether the calibrated system can read Unit separator characters reliably, using a mapping if necessary.
+/// </param>
+/// <param name="CanReadEotReliably">
+///   Gets a value indicating whether the calibrated system can read EOT characters reliably, using a mapping if necessary.
 /// </param>
 /// <param name="CanReadAimIdentifiersReliably">
 ///   Gets a value indicating whether the calibrated system can read AIM identifiers reliably, using a mapping if necessary.
@@ -271,47 +278,50 @@ public sealed record SystemCapabilities(
     [property: JsonProperty("keyboardLayoutsCorrespond", Order = 5)] bool? KeyboardLayoutsCorrespond = true,
     [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 6)] bool? KeyboardLayoutsCorrespondForInvariants = true,
     [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 7)] bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparator", Order = 8)] bool? KeyboardLayoutsCanRepresentGroupSeparator = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparator", Order = 9)] bool? KeyboardLayoutsCanRepresentRecordSeparator = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparator", Order = 10)] bool? KeyboardLayoutsCanRepresentEdiSeparators = true,
-    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 11)] bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
-    [property: JsonProperty("canReadInvariantsReliably", Order = 12)] bool? CanReadInvariantsReliably = true,
-    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 13)] bool? CanReadFormat05AndFormat06Reliably = true,
-    [property: JsonProperty("canReadEdiReliably", Order = 14)] bool? CanReadEdiReliably = true,
-    [property: JsonProperty("canReadAscii29Ascii31Reliably", Order = 15)] bool? CanReadAscii28Ascci31Reliably = true,
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 16)] bool? CanReadGroupSeparatorReliably = null,
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 17)] bool? CanReadRecordSeparatorReliably = null,
-    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 18)] bool? CanReadFileSeparatorsReliably = null,
-    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 19)] bool? CanReadUnitSeparatorsReliably = null,
-    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 20)] bool? CanReadAimIdentifiersReliably = true,
-    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 21)] bool? CanReadAdditionalAsciiCharactersReliably = true,
-    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 22)] bool? ScannerTransmitsAimIdentifiers = true,
-    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 23)] bool? ScannerTransmitsEndOfLineSequence = true,
-    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 24)] bool ScannerTransmitsAdditionalPrefix = false,
-    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 25)] bool ScannerTransmitsAdditionalCode = false,
-    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 26)] bool ScannerTransmitsAdditionalSuffix = false,
-    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 27)] bool? ScannerMayConvertToUpperCase = null,
-    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 28)] bool? ScannerMayConvertToLowerCase = null,
-    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 29)] bool? KeyboardScriptDoesNotSupportCase = null,
-    [property: JsonProperty("capsLockIndicator", Order = 30)] bool CapsLockIndicator = false,
-    [property: JsonProperty("scannerKeyboardPerformance", Order = 31)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
-    [property: JsonProperty("scannerCharactersPerSecond", Order = 32)] int ScannerCharactersPerSecond = 0,
-    [property: JsonProperty("formatSupportAssessed", Order = 33)] bool FormatSupportAssessed = false,
-    [property: JsonProperty("aimIdentifier", Order = 34)] string? AimIdentifier = null,
-    [property: JsonProperty("aimIdentifierUncertain", Order = 35)] bool AimIdentifierUncertain = false,
-    [property: JsonProperty("endOfLineSequence", Order = 36)] string? EndOfLineSequence = null,
-    [property: JsonProperty("additionalPrefix", Order = 37)] string AdditionalPrefix = "",
-    [property: JsonProperty("additionalCode", Order = 38)] string AdditionalCode = "",
-    [property: JsonProperty("additionalSuffix", Order = 39)] string AdditionalSuffix = "",
-    [property: JsonProperty("keyboardScript", Order = 40)] string KeyboardScript = "",
-    [property: JsonProperty("platform", Order = 41)] SupportedPlatform Platform = SupportedPlatform.Windows,
-    [property: JsonProperty("deadKeys", Order = 42)] bool DeadKeys = false,
-    [property: JsonProperty("characterMappings", Order = 43)] IList<CharacterMapping>? CharacterMappings = null,
-    [property: JsonProperty("deadKeyMappings", Order = 44)] IList<DeadKeyMapping>? DeadKeyMappings = null,
-    [property: JsonProperty("ambiguities", Order = 45)] IList<Ambiguity>? Ambiguities = null,
-    [property: JsonProperty("unrecognisedCharacters", Order = 46)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
-    [property: JsonProperty("ligatureMappings", Order = 47)] IList<LigatureMapping>? LigatureMappings = null,
-    [property: JsonProperty("calibrationAssumption", Order = 48)] Assumption Assumption = Assumption.Agnostic)
+    [property: JsonProperty("keyboardLayoutsCanRepresentFileSeparatorWithoutMapping", Order = 8)] bool? KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping", Order = 9)] bool? KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping", Order = 10)] bool? KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping", Order = 11)] bool? KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentEotSeparatorWithoutMapping", Order = 12)] bool? KeyboardLayoutsCanRepresentEotWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparatorWithoutMapping", Order = 13)] bool? KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 14)] bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
+    [property: JsonProperty("canReadInvariantsReliably", Order = 15)] bool? CanReadInvariantsReliably = true,
+    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 16)] bool? CanReadFormat05AndFormat06Reliably = true,
+    [property: JsonProperty("canReadEdiReliably", Order = 17)] bool? CanReadEdiReliably = true,
+    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 18)] bool? CanReadGroupSeparatorReliably = null,
+    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 19)] bool? CanReadRecordSeparatorReliably = null,
+    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 20)] bool? CanReadFileSeparatorsReliably = null,
+    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 21)] bool? CanReadUnitSeparatorsReliably = null,
+    [property: JsonProperty("canReadEotReliably", Order = 22)] bool? CanReadEotReliably = null,
+    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 23)] bool? CanReadAimIdentifiersReliably = true,
+    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 24)] bool? CanReadAdditionalAsciiCharactersReliably = true,
+    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 25)] bool? ScannerTransmitsAimIdentifiers = true,
+    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 26)] bool? ScannerTransmitsEndOfLineSequence = true,
+    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 27)] bool ScannerTransmitsAdditionalPrefix = false,
+    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 28)] bool ScannerTransmitsAdditionalCode = false,
+    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 29)] bool ScannerTransmitsAdditionalSuffix = false,
+    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 30)] bool? ScannerMayConvertToUpperCase = null,
+    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 31)] bool? ScannerMayConvertToLowerCase = null,
+    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 32)] bool? KeyboardScriptDoesNotSupportCase = null,
+    [property: JsonProperty("capsLockIndicator", Order = 33)] bool CapsLockIndicator = false,
+    [property: JsonProperty("scannerKeyboardPerformance", Order = 34)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
+    [property: JsonProperty("scannerCharactersPerSecond", Order = 35)] int ScannerCharactersPerSecond = 0,
+    [property: JsonProperty("formatSupportAssessed", Order = 36)] bool FormatSupportAssessed = false,
+    [property: JsonProperty("aimIdentifier", Order = 37)] string? AimIdentifier = null,
+    [property: JsonProperty("aimIdentifierUncertain", Order = 38)] bool AimIdentifierUncertain = false,
+    [property: JsonProperty("endOfLineSequence", Order = 39)] string? EndOfLineSequence = null,
+    [property: JsonProperty("additionalPrefix", Order = 40)] string AdditionalPrefix = "",
+    [property: JsonProperty("additionalCode", Order = 41)] string AdditionalCode = "",
+    [property: JsonProperty("additionalSuffix", Order = 42)] string AdditionalSuffix = "",
+    [property: JsonProperty("keyboardScript", Order = 43)] string KeyboardScript = "",
+    [property: JsonProperty("platform", Order = 44)] SupportedPlatform Platform = SupportedPlatform.Windows,
+    [property: JsonProperty("deadKeys", Order = 45)] bool DeadKeys = false,
+    [property: JsonProperty("characterMappings", Order = 46)] IList<CharacterMapping>? CharacterMappings = null,
+    [property: JsonProperty("deadKeyMappings", Order = 47)] IList<DeadKeyMapping>? DeadKeyMappings = null,
+    [property: JsonProperty("ambiguities", Order = 48)] IList<Ambiguity>? Ambiguities = null,
+    [property: JsonProperty("unrecognisedCharacters", Order = 49)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
+    [property: JsonProperty("ligatureMappings", Order = 50)] IList<LigatureMapping>? LigatureMappings = null,
+    [property: JsonProperty("calibrationAssumption", Order = 51)] Assumption Assumption = Assumption.Agnostic)
 : BaseRecord {
     /// <summary>
     ///   Indicates whether the keyboard Caps Lock key is on or off.
@@ -382,6 +392,9 @@ public sealed record SystemCapabilities(
                 case InformationType.UnitSeparatorSupported:
                     CanReadUnitSeparatorsReliably = true;
                     break;
+                case InformationType.EndOfTransmissionSupported:
+                    CanReadEotReliably = true;
+                    break;
                 case InformationType.ScannerMayCompensateForCapsLock:
                     ScannerMayCompensateForCapsLock = true;
                     break;
@@ -427,9 +440,11 @@ public sealed record SystemCapabilities(
                 case InformationType.NonCorrespondingKeyboardLayouts:
                 case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
                 case InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
+                case InformationType.NonCorrespondingKeyboardLayoutsFileSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
                 case InformationType.CapsLockOn:
@@ -487,14 +502,27 @@ public sealed record SystemCapabilities(
                     CanReadFormat05AndFormat06Reliably = false;
                     break;
                 case InformationType.IsoIec15434EdiNotReliablyReadable:
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.IsoIec15434FsNotReliablyReadable:
+                    CanReadEdiReliably = false;
+                    CanReadFileSeparatorsReliably = false;
+                    break;
+                case InformationType.IsoIec15434UsNotReliablyReadable:
+                    CanReadEdiReliably = false;
+                    CanReadUnitSeparatorsReliably = false;
+                    break;
+                case InformationType.IsoIec15434EotNotReliablyReadable:
+                    CanReadEotReliably = false;
+                    break;
                 case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;
-                    CanReadAscii28Ascci31Reliably = false;
-                    CanReadFileSeparatorsReliably = CanReadFileSeparatorsReliably is null ? false : CanReadFileSeparatorsReliably;
-                    CanReadUnitSeparatorsReliably = CanReadUnitSeparatorsReliably is null ? false : CanReadUnitSeparatorsReliably;
+                    //CanReadAscii28Ascii31Reliably = false;
+                    CanReadFileSeparatorsReliably = CanReadFileSeparatorsReliably ?? false;
+                    CanReadUnitSeparatorsReliably = CanReadUnitSeparatorsReliably ?? false;
                     break;
                 case InformationType.ControlCharacterMappingNotReliablyReadable:
-                    CanReadAscii28Ascci31Reliably = false;
+                    //CanReadAscii28Ascii31Reliably = false;
                     break;
                 case InformationType.AimNotTransmitted:
                     ScannerTransmitsAimIdentifiers = false;
@@ -532,16 +560,26 @@ public sealed record SystemCapabilities(
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
+                case InformationType.NonCorrespondingKeyboardLayoutsFileSeparator:
+                    KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = false;
+                    KeyboardLayoutsCorrespond = false;
+                    break;
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
-                    KeyboardLayoutsCanRepresentGroupSeparator = false;
+                    KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                    KeyboardLayoutsCanRepresentRecordSeparator = false;
+                    KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
-                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
-                    KeyboardLayoutsCanRepresentEdiSeparators = false;
+                case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
+                    KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = false;
+                    KeyboardLayoutsCorrespond = false;
+                    break;
+                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
+                    KeyboardLayoutsCanRepresentEotWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
@@ -569,6 +607,7 @@ public sealed record SystemCapabilities(
                 case InformationType.RecordSeparatorSupported:
                 case InformationType.FileSeparatorSupported:
                 case InformationType.UnitSeparatorSupported:
+                case InformationType.EndOfTransmissionSupported:
                 case InformationType.ScannerMayCompensateForCapsLock:
                 case InformationType.KeyboardScript:
                 case InformationType.Platform:
@@ -619,7 +658,7 @@ public sealed record SystemCapabilities(
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
                     CanReadEdiReliably = null;
-                    CanReadAscii28Ascci31Reliably = null;
+                    //CanReadAscii28Ascii31Reliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
                 case InformationType.IncorrectCalibrationDataReported:
@@ -630,7 +669,7 @@ public sealed record SystemCapabilities(
                     CanReadInvariantsReliably = null;
                     CanReadFormat05AndFormat06Reliably = null;
                     CanReadEdiReliably = null;
-                    CanReadAscii28Ascci31Reliably = null;
+                    //CanReadAscii28Ascii31Reliably = null;
                     CanReadAdditionalAsciiCharactersReliably = null;
                     break;
                 case InformationType.NoCalibrationDataReported:
@@ -676,6 +715,7 @@ public sealed record SystemCapabilities(
                 case InformationType.RecordSeparatorSupported:
                 case InformationType.FileSeparatorSupported:
                 case InformationType.UnitSeparatorSupported:
+                case InformationType.EndOfTransmissionSupported:
                 case InformationType.ScannerMayCompensateForCapsLock:
                 case InformationType.KeyboardScript:
                 case InformationType.Platform:
@@ -702,9 +742,11 @@ public sealed record SystemCapabilities(
                 case InformationType.NonCorrespondingKeyboardLayouts:
                 case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
                 case InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters:
+                case InformationType.NonCorrespondingKeyboardLayoutsFileSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                case InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators:
+                case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
+                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
                 case InformationType.CapsLockOn:

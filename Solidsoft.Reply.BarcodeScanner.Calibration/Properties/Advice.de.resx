@@ -199,7 +199,7 @@
     <value>Wenn Sie EDI-Barcodes scannen und dabei Schwierigkeiten haben, versuchen Sie, Ihren Barcodescanner so zu konfigurieren, dass er ein numerisches Tastenfeld emuliert.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Wenn Sie beim Scannen von Barcodes auf Schwierigkeiten stoßen, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass eC158:S161r eine numerische Tastatur emuliert.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Versuchen Sie es erneut, und stellen Sie sicher, dass Sie den richtigen Barcode(s) scannen.</value>
@@ -349,7 +349,7 @@
     <value>Ihr System kann Barcodes nicht zuverlässig lesen, wenn sie Daten für den elektronischen Datenaustausch (EDI) enthalten.</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Ihr System kann bestimmte normale Zeichen und Sonderzeichen nicht unterscheiden.</value>
+    <value>Ihr System kann möglicherweise Dateitrennzeichen (ASCII 28) nicht korrekt lesen.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Der Test ist fehlgeschlagen.</value>
@@ -490,7 +490,7 @@
     <value>Einige Barcodes können EDI-Daten enthalten.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>In den meisten Fällen treten diese Zeichen nicht zusammen in Barcodes auf.</value>
+    <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner</value>
@@ -536,5 +536,50 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Fehler bei der Auflösung von Tastaturskripten: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Ihr System kann Dateitrennzeichen (ASCII 28) nicht lesen.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Einheitentrennzeichen (ASCII 31) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Einheitentrennzeichen (ASCII 31) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Übertragungsendzeichen (ASCII 04) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ihr System kann Übertragungsendzeichen (ASCII 04) nicht lesen.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Einige Barcode-Typen verwenden dieses Zeichen, um das Ende der Barcode-Daten zu markieren. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Einige Barcode-Typen verwenden dieses Zeichen, um das Ende der Barcode-Daten zu markieren. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
   </data>
 </root>

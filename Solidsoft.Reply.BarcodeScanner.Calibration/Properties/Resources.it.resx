@@ -120,12 +120,6 @@
   <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Gli articoli di consiglio rimanenti non corrispondono.</value>
   </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Il suffisso {0} non corrisponde al suffisso atteso {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Provenienza del codice a barre errata.</value>
-  </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Tipo di informazione di errore non corretto.</value>
   </data>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Tipo di informazione di avviso non corretto.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Inserimento di segnaposto spazio fallito.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Argomento non valido fornito al metodo Replace dell'espressione regolare.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>L'espressione regolare è scaduta durante l'esecuzione di una corrispondenza.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Impossibile trovare un carattere adatto per il segnaposto temporaneo. Tutti i caratteri ASCII estesi sono già utilizzati nella stringa di input.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Provenienza del codice a barre errata.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Livello di informazione non valido.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Articolo di consiglio non valido.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Il suffisso {0} non corrisponde al suffisso atteso {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>Gli identificatori AIM sono supportati.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>I caratteri separatore di record sono supportati.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>I caratteri separatore EDI sono supportati.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>I caratteri separatori di unità sono supportati.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Lo scanner di codici a barre potrebbe essere configurato per compensare il blocco maiuscole.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Alcuni caratteri ASCII non invarianti segnalati sono ambigui: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Il carattere segnalato {0} è ambiguo. I codici a barre che utilizzano la sintassi ISO/IEC 15434 per rappresentare dati EDI non possono essere letti in modo affidabile.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Alcune sequenze di caratteri segnalate sono ambigue. Questi caratteri non rappresentano caratteri invarianti: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>La sequenza di caratteri segnalata {0} è ambigua. Ciò potrebbe impedire la lettura di eventuali elementi di dati aggiuntivi inclusi in un codice a barre.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Il carattere segnalato {0} è ambiguo. I codici a barre che utilizzano ASCII 28 o ASCII 31 potrebbero non essere letti in modo affidabile.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Alcune sequenze di caratteri segnalate sono ambigue. Questi caratteri non rappresentano caratteri invarianti: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono.</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono nella rappresentazione dei separatori di record.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono nella rappresentazione dei separatori EDI.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono nella rappresentazione degli identificatori AIM.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>La corrispondenza delle disposizioni della tastiera dello scanner di codici a barre e del computer non può essere determinata.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Il blocco maiuscole è attivato.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>I dati segnalati sono per il codice a barre di calibrazione sbagliato.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>È stato fatto un tentativo di calibrare un codice a barre, ma non è stato fornito alcun token di calibrazione.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Alcuni caratteri invarianti non possono essere rilevati.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Calibrazione fallita. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Calibrazione fallita. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>I caratteri separatore EDI sono supportati.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Articolo di consiglio non valido.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Il carattere segnalato {0} è ambiguo. I codici a barre che utilizzano la sintassi ISO/IEC 15434 per rappresentare dati EDI non possono essere letti in modo affidabile.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Livello di informazione non valido.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Le disposizioni della tastiera dello scanner di codici a barre e del computer non corrispondono nella rappresentazione dei separatori EDI.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Inserimento di segnaposto spazio fallito.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Argomento non valido fornito al metodo Replace dell'espressione regolare.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>L'espressione regolare è scaduta durante l'esecuzione di una corrispondenza.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>La corrispondenza delle disposizioni della tastiera dello scanner di codici a barre e del computer non può essere determinata.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Non specificato</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Impossibile trovare un carattere adatto per il segnaposto temporaneo. Tutti i caratteri ASCII estesi sono già utilizzati nella stringa di input.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Calibrazione fallita. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>È stato fatto un tentativo di calibrare un codice a barre, ma non è stato fornito alcun token di calibrazione.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>I caratteri separatori di unità sono supportati.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Il carattere segnalato {0} è ambiguo. I codici a barre che utilizzano ASCII 28 o ASCII 31 potrebbero non essere letti in modo affidabile.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>I caratteri di fine trasmissione sono supportati.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Il carattere separatore di file non può essere letto in modo affidabile.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Il carattere separatore di unità non può essere letto in modo affidabile.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Il carattere di fine trasmissione non può essere letto in modo affidabile.</value>
   </data>
 </root>

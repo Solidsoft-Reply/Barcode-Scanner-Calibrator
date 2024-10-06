@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Padomi par palikušajiem elementiem nesakrīt.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Papildinājums {0} neatbilst gaidītajam papildinājumam {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Nepareiza svītrkoda izcelsme.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Nepareiza kļūdas informācijas veida.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Nepareiza brīdinājuma informācijas veida.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Neizdevās ievietot atstarpju vietturus.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Nederīgs arguments regulārās izteiksmes Aizvietošanas metodē.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>Regulārā izteiksme pārtrauca darbību, veicot atbilstību.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Nevar atrast piemērotu raksturu pagaidu vietturim. Visi paplašinātā ASCII rakstzīmes jau tiek izmantotas ievades virknē.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Nepareiza svītrkoda izcelsme.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Nederīgs informācijas līmenis.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Nederīgs padoma elements.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Papildinājums {0} neatbilst gaidītajam papildinājumam {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM identifikatori tiek atbalstīti.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Ierakstu atdalītāju rakstzīmes tiek atbalstītas.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI atdalītāju rakstzīmes tiek atbalstītas.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Atbalstīti vienību atdalīšanas rakstzīmes.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Svītrkodu skeneris var tikt konfigurēts, lai kompensētu Caps Lock.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Daži ziņotie nemainīgās ASCII rakstzīmes ir neskaidri: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Ziņotā rakstzīme {0} ir neskaidra. Svītrkodi, kuri izmanto ISO/IEC 15434 sintaksi, lai pārstāvētu EDI datus, nevar tikt uzticami nolasīti.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Daži ziņotie raksturu virknes ir neskaidras. Šie raksturi nepārstāv nemainīgās rakstzīmes: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tas var traucēt jebkuru papildus datu elementu nolasīšanu, kas iekļauti svītrkodā.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Ziņotais raksturs {0} ir neskaidrs. Svītrkodus, kuros tiek izmantots ASCII 28 vai ASCII 31, var nebūt iespējams droši nolasīt.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Daži ziņotie raksturu virknes ir neskaidras. Šie raksturi nepārstāv nemainīgās rakstzīmes: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst.</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot ierakstu atdalītājus.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot EDI atdalītājus.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot AIM identifikatorus.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Nevar noteikt svītrkodu skenera un datora klaviatūras izkārtojumu atbilstību.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock ir ieslēgts.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Ziņotie dati ir nepareizam kalibrācijas svītrkodam.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Tika veikts mēģinājums kalibrēt svītrkodu, taču netika sniegts kalibrācijas marķieris.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Dažas nemainīgās rakstzīmes nevar noteikt.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibrācija neizdevās. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibrācija neizdevās. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>EDI atdalītāju rakstzīmes tiek atbalstītas.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Nederīgs padoma elements.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Ziņotā rakstzīme {0} ir neskaidra. Svītrkodi, kuri izmanto ISO/IEC 15434 sintaksi, lai pārstāvētu EDI datus, nevar tikt uzticami nolasīti.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Nederīgs informācijas līmenis.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Svītrkoda skenera un datora tastatūras izkārtojumi neatbilst, pārstāvot EDI atdalītājus.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Neizdevās ievietot atstarpju vietturus.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Nederīgs arguments regulārās izteiksmes Aizvietošanas metodē.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Regulārā izteiksme pārtrauca darbību, veicot atbilstību.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Nevar noteikt svītrkodu skenera un datora klaviatūras izkārtojumu atbilstību.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Nenoteikts</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Nevar atrast piemērotu raksturu pagaidu vietturim. Visi paplašinātā ASCII rakstzīmes jau tiek izmantotas ievades virknē.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibrācija neizdevās. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Tika veikts mēģinājums kalibrēt svītrkodu, taču netika sniegts kalibrācijas marķieris.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Atbalstīti vienību atdalīšanas rakstzīmes.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ziņotais raksturs {0} ir neskaidrs. Svītrkodus, kuros tiek izmantots ASCII 28 vai ASCII 31, var nebūt iespējams droši nolasīt.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Tiek atbalstīti pārraides beigu rakstzīmes.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Faila atdalītāja rakstzīmi nevar uzticami nolasīt.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Vienības atdalītāja rakstzīmi nevar uzticami nolasīt.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Pārraides beigu rakstzīmi nevar uzticami nolasīt.</value>
   </data>
 </root>

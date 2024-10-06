@@ -117,244 +117,1459 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
-    <value>Uoverensstemmelse i tilbageværende rådgivningselementer.</value>
+  <data name="di0" xml:space="preserve">
+    <value>'DET' tegn. Sundhedsindustriens Forretningskommunikationsråd (HIBCC)</value>
   </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Endelse {0} matcher ikke forventet endelse {1}.</value>
+  <data name="di10000" xml:space="preserve">
+    <value>Unikt licenspladenummer.</value>
   </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Ukorrekt stregkodeoprindelse.</value>
+  <data name="di10001" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en transportenhed, som er den laveste emballageniveau, den udelelige enhed.</value>
   </data>
-  <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
-    <value>Ukorrekt type af fejlinformation.</value>
+  <data name="di10002" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en transportenhed, som indeholder flere pakker.</value>
   </data>
-  <data name="CalibrationIncorrectInformationalInformationType" xml:space="preserve">
-    <value>Ukorrekt type af informationsinformation.</value>
+  <data name="di10003" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en transportenhed, som er den laveste emballageniveau, den udelelige enhed og som har EDI-data associeret med enheden.</value>
   </data>
-  <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
-    <value>Ukorrekt type af advarselsinformation.</value>
+  <data name="di10004" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en transportenhed, som indeholder flere pakker og som er associeret med EDI-data.</value>
   </data>
-  <data name="CalibrationInformation_130" xml:space="preserve">
-    <value>AIM-identifikatorer understøttes.</value>
+  <data name="di10005" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en blandet transportenhed indeholdende ulige varer i en enkelt kundetransaktion og kan have associerede EDI-data.</value>
   </data>
-  <data name="CalibrationInformation_131" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer en AIM-identifikator: {0}</value>
+  <data name="di10006" xml:space="preserve">
+    <value>Unikt licenspladenummer tildelt en master transportenhed indeholdende lige varer i en enkelt kundetransaktion og kan have associerede EDI-data.</value>
   </data>
-  <data name="CalibrationInformation_132" xml:space="preserve">
-    <value>Stregkodescanneren kan transmittere en AIM-identifikator: {0}</value>
+  <data name="di10007" xml:space="preserve">
+    <value>Køretøjsregistreringsnummer (ikke unikt uden identifikation af land og udstedende regering/autoritet)</value>
   </data>
-  <data name="CalibrationInformation_150" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer en slutningen-af-linje tegnsekvens: {0}</value>
+  <data name="di10008" xml:space="preserve">
+    <value>Maritime Mobile Service Identity (MMSI).\nEt ni-cifret nummer reguleret af Den Internationale Telekommunikationsunion for entydigt at identificere et skib eller en kyst radiostation. Eksempel: 8J211123456.</value>
   </data>
-  <data name="CalibrationInformation_160" xml:space="preserve">
-    <value>Gruppeseparatortegn understøttes.</value>
+  <data name="di11000" xml:space="preserve">
+    <value>Ordrenummer tildelt af kunden for at identificere et køb (f.eks. ordrenummer).</value>
   </data>
-  <data name="CalibrationInformation_161" xml:space="preserve">
-    <value>Rekordseparator-tegn understøttes.</value>
+  <data name="di11001" xml:space="preserve">
+    <value>Ordrenummer tildelt af leverandøren for at identificere et køb.</value>
   </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-separatortegn understøttes.</value>
+  <data name="di11002" xml:space="preserve">
+    <value>Fragtbrev/Vejbrev/Forsendelsesidentifikationskode tildelt af leverandør/afsender.</value>
   </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Enhedsskilletegn understøttes.</value>
+  <data name="di11003" xml:space="preserve">
+    <value>Fragtbrev/Vejbrev/Forsendelsesidentifikationskode tildelt af transportør.</value>
   </data>
-  <data name="CalibrationInformation_170" xml:space="preserve">
-    <value>Stregkodescanneren kan være konfigureret til at kompensere for Caps Lock.</value>
+  <data name="di11004" xml:space="preserve">
+    <value>Ordrens linjenummer tildelt af kunden for at identificere et køb.</value>
   </data>
-  <data name="CalibrationInformation_180" xml:space="preserve">
-    <value>Computerens tastatur understøtter følgende skrift: {0}</value>
+  <data name="di11005" xml:space="preserve">
+    <value>Referencenummer tildelt af kunden for at identificere en forsendelsesgodkendelse (frigivelse) mod en etableret købsordre.</value>
   </data>
-  <data name="CalibrationInformation_190" xml:space="preserve">
-    <value>Computerens tastatur er konfigureret til følgende platform: {0}</value>
+  <data name="di11006" xml:space="preserve">
+    <value>PRO# Tildelt af transportør.</value>
   </data>
-  <data name="CalibrationInformation_200" xml:space="preserve">
-    <value>Nogle ikke-invariante ASCII-tegn kan ikke detekteres.</value>
+  <data name="di11007" xml:space="preserve">
+    <value>Transportform i fritekstformat gensidigt defineret mellem kunde og leverandør (f.eks. Luft, Lastbil, Båd, Tog).</value>
   </data>
-  <data name="CalibrationInformation_201" xml:space="preserve">
-    <value>Nogle ikke-invariante ASCII-tegn genkendes ikke: {0}</value>
+  <data name="di11008" xml:space="preserve">
+    <value>Kontraktnummer.</value>
   </data>
-  <data name="CalibrationInformation_202" xml:space="preserve">
-    <value>Nogle kombinationer af ikke-invariante ASCII-tegn genkendes ikke: {0}</value>
+  <data name="di11009" xml:space="preserve">
+    <value>Generisk transaktionsreferencekode (internt tildelt eller gensidigt defineret).</value>
   </data>
-  <data name="CalibrationInformation_210" xml:space="preserve">
-    <value>Stregkoder, der bruger ISO/IEC 15434 syntaks, kan ikke genkendes.</value>
+  <data name="di11010" xml:space="preserve">
+    <value>Fakturanummer.</value>
   </data>
-  <data name="CalibrationInformation_211" xml:space="preserve">
-    <value>Stregkoder, der bruger ISO/IEC 15434 syntaks til at repræsentere EDI-data, kan ikke pålideligt aflæses.</value>
+  <data name="di11011" xml:space="preserve">
+    <value>Pakkelistenummer.</value>
   </data>
-  <data name="CalibrationInformation_212" xml:space="preserve">
-    <value>Den rapporterede karakter {0} er tvetydig. Stregkoder, der bruger ISO/IEC 15434 syntaks, kan ikke læses pålideligt.</value>
+  <data name="di11012" xml:space="preserve">
+    <value>SCAC (Standard Carrier Alpha Code) (an4 - bindestreg '-' fyldt til venstre) og transportør tildelt PROgressivt nummer.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer ikke en AIM-identifikator.</value>
+  <data name="di11013" xml:space="preserve">
+    <value>Fragtbrevsnummer /Transportkvitteringsnummer SCAC + containerfragts B/L-nummer eller vejbreve nummer.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
-    <value>AIM-identifikatoren kan ikke genkendes.</value>
+  <data name="di11014" xml:space="preserve">
+    <value>Kombineret ordrenummer og linjenummer i formatet nn...nn+nn...n hvor et plus (+) symbol bruges som skilletegn mellem ordrenummer og linjenummer.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer et præfiks: {0}</value>
+  <data name="di11015" xml:space="preserve">
+    <value>KANBAN-nummer.</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer en kode: {0}</value>
+  <data name="di11016" xml:space="preserve">
+    <value>DELINS-nummer: kode tildelt for at identificere et dokument, som indeholder leveringsinformation.</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer et suffiks: {0}</value>
+  <data name="di11017" xml:space="preserve">
+    <value>Kontrolnummer.</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Stregkodescanneren transmitterer ikke en slutningen-af-linje tegnsekvens (f.eks. en vognretur).</value>
+  <data name="di11018" xml:space="preserve">
+    <value>Struktureret reference.</value>
   </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Den rapporterede karakter {0} er tvetydig. Der er flere taster for samme tegn, hver repræsenterer et forskelligt forventet tegn. Dog er højst ét af de forventede tegn invariant.</value>
+  <data name="di11019" xml:space="preserve">
+    <value>Udenlandsk militært salgs sagsnummer.</value>
   </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Nogle rapporterede tegn er tvetydige. Der er flere taster for samme tegn, hver repræsenterer en forskellig ikke-invariant forventet ASCII-tegn: {0}</value>
+  <data name="di11020" xml:space="preserve">
+    <value>Licensidentifikator, værende en globalt unik identifikator for en licens eller kontrakt, under hvilken varer genereres, indsendes til behandling og/eller betales for, der er konstrueret ved at sammenkæde:\n - en ISO/IEC 15459 udstedende agenturskode;\n - et licens- eller kontraktnummer, som overholder specifikationerne fra det pågældende udstedende agentur;\n og det:\n - består kun af store bogstaver og/eller numeriske tegn;\n - er unikt (det vil sige, adskiller sig fra ethvert andet ISO/IEC 15459-kompatibelt identifikator) inden for udstedende agenturs domæne;\n - kan ikke udledes fra et andet ISO/IEC 15459-kompatibelt identifikator, udstedt under samme udstedende agentur, ved simpelthen at tilføje tegn til, eller fjerne dem fra, dets ende.</value>
   </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-identifikatorer kan ikke genkendes. Den rapporterede karakter {0} er tvetydig. Der er flere taster for denne karakter, som repræsenterer AIM-flagkarakteren samt andre forventede karakter(er).</value>
+  <data name="di11021" xml:space="preserve">
+    <value>Kundedata, værende data der:\n - fra et kundeperspektiv, er relateret til eller associeret med et emne eller en transaktion, eller til en batch eller relaterede emner eller transaktioner, og\n - består af op til 35 udskrivbare tegn og/eller mellemrum, bortset fra plus (+), hentet fra tegnsættet defineret i ISO/IEC 646.</value>
   </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Nogle rapporterede ikke-invariante ASCII-tegn er tvetydige: {0}</value>
+  <data name="di11022" xml:space="preserve">
+    <value>'22K' Transaktionsautentificeringsinformation, værende en værdi, konstrueret ved at sammenkæde:\n - en ISO/IEC 15459 udstedende agenturskode;\n - en værdi, som overholder specifikationerne fra det pågældende udstedende agentur,\n der tillader verifikation af transaktionens autenticitet og især, at transaktionen blev initieret af den part, der inden for transaktionen hævdes at have været dens initiativtager, ved:\n - transaktionens modtager, og/eller\n - en eller flere af de parter, der er involveret i dens håndtering eller behandling, og/eller\n - en betroet tredjepart.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Den rapporterede karakter {0} er tvetydig. Stregkoder, der bruger ISO/IEC 15434 syntaks til at repræsentere EDI-data, kan ikke læses pålideligt.</value>
+  <data name="di11025" xml:space="preserve">
+    <value>Global unik identifikation af grupper af transportenheder tildelt af transportøren, defineret som:\nIdentifikation af en part i en transaktion som defineret tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af fragtbrevsnummeret eller vejbreve- eller forsendelsesidentifikationskoden, der er unik inden for CIN indehaverens domæne.</value>
   </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Nogle rapporterede tegnsekvenser er tvetydige. Disse tegn repræsenterer ikke invariante tegn: {0}</value>
+  <data name="di11026" xml:space="preserve">
+    <value>Global unik identifikation af grupper af transportenheder tildelt af afsenderen, defineret som:\nIdentifikation af en part i en transaktion tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af fragtbrevsnummeret eller vejbreve- eller forsendelsesidentifikationskoden, der er unik inden for CIN indehaverens domæne.</value>
   </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Den rapporterede tegnsekvens {0} er tvetydig. Dette kan forhindre læsning af eventuelle yderligere dataelementer inkluderet i en stregkode.</value>
+  <data name="di11027" xml:space="preserve">
+    <value>Leverandør tildelt tilbudnummer - Nummer tildelt et tilbud af leverandøren som svar på en anmodning om tilbud fra kunden.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Det rapporterede tegn {0} er tvetydigt. Stregkoder, der bruger ASCII 28 eller ASCII 31, kan muligvis ikke læses pålideligt.</value>
+  <data name="di12000" xml:space="preserve">
+    <value>Lagersted.</value>
   </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens</value>
+  <data name="di12001" xml:space="preserve">
+    <value>Sted.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens for invariante tegn.</value>
+  <data name="di12002" xml:space="preserve">
+    <value>'Forsend til:' Stedkode defineret af en industriel standard eller gensidigt defineret.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens for ikke-invariante ASCII-tegn.</value>
+  <data name="di12003" xml:space="preserve">
+    <value>'Forsend fra:' Stedkode defineret af en industriel standard eller gensidigt defineret.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens ved repræsentation af gruppeseparatorer.</value>
+  <data name="di12004" xml:space="preserve">
+    <value>Oprindelsesland, to-tegns ISO 3166 landekode. Med aftale mellem handelspartnere og når oprindelseslandet er blandet, skal landekoden 'AA' bruges.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens ved repræsentation af rekordseparatorer.</value>
+  <data name="di12005" xml:space="preserve">
+    <value>'Forsend for:' Stedkode defineret af en industriel standard eller gensidigt defineret.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens ved repræsentation af EDI-separatorer.</value>
+  <data name="di12006" xml:space="preserve">
+    <value>Rutekode tildelt af leverandøren for at betegne en specifik transportrute.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens ved repræsentation af AIM-identifikatorer.</value>
+  <data name="di12007" xml:space="preserve">
+    <value>6-tegns Department of Defense Activity Code (DoDAAC).</value>
   </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Overensstemmelsen mellem stregkodescannerens og computerens tastaturlayouts kan ikke bestemmes.</value>
+  <data name="di12008" xml:space="preserve">
+    <value>Afgangs havn - Gensidigt defineret.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Caps Lock er slået til.</value>
+  <data name="di12009" xml:space="preserve">
+    <value>Ankomst havn - Gensidigt defineret.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
-    <value>Caps Lock kan være slået til.</value>
+  <data name="di12011" xml:space="preserve">
+    <value>Sted (Latitude/Longitude/Altitude) kodet i formatet xnn.nnnnn/xnnn.nnnnnn/xnnnn.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
-    <value>Stregkodescanneren kan være konfigureret til at konvertere tegn til store bogstaver.</value>
+  <data name="di12012" xml:space="preserve">
+    <value>'Forsend til:' Sted (Latitude/Longitude/Altitude) kodet i formatet xnn.nnnnn/xnnn.nnnnnn/xnnnn.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
-    <value>Stregkodescanneren kan være konfigureret til at konvertere tegn til små bogstaver.</value>
+  <data name="di12013" xml:space="preserve">
+    <value>'Forsend fra:' Sted (Latitude/Longitude/Altitude) kodet i formatet xnn.nnnnn/xnnn.nnnnnn/xnnnn.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
-    <value>Stregkodescanneren kan være konfigureret til at invertere tegn.</value>
+  <data name="di12015" xml:space="preserve">
+    <value>Forsend for: Sted (Latitude/Longitude/Altitude) kodet i formatet xnn.nnnnn/xnnn.nnnnnn/xnnnn.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>Den bedst rapporterede tastaturdataindtastningstid under kalibrering indikerer, at stregkodescanneren ikke præsterer optimalt.</value>
+  <data name="di12016" xml:space="preserve">
+    <value>Tag aktiveringssted.\nEngelsk stednavn (tegnsæt: 0-9, A-Z &lt;Mellemrum&gt;).</value>
   </data>
-  <data name="CalibrationInformation_300" xml:space="preserve">
-    <value>Ingen kalibreringsdata rapporteret.</value>
+  <data name="di12017" xml:space="preserve">
+    <value>Tag deaktiveringssted.\nEngelsk stednavn (tegnsæt: 0-9, A-Z &lt;Mellemrum&gt;).</value>
   </data>
-  <data name="CalibrationInformation_301" xml:space="preserve">
-    <value>De rapporterede data er uanerkendte. Den forkerte stregkode kan være blevet scannet.</value>
+  <data name="di12018" xml:space="preserve">
+    <value>FAO fiskeområdekode som defineret af Fiskeri- og Akvakulturafdelingen i FAO (http://www.fao.org. Søg efter Fishing Area Code under-site).\nAlle tegn fra GS1 General Specification-definerede delmængde af ISO/IEC 646 er tilladt.\nEksempler:\n18L37.1.3 Vestlige Middelhav, Sardinien;\n18L47.B.1 Atlanten, Sydøst, SEAFO Division, Namibias EEZ;\n18L67 Stillehavet, Nordøst.</value>
   </data>
-  <data name="CalibrationInformation_302" xml:space="preserve">
-    <value>For mange tegn detekteret. Den forkerte stregkode kan være blevet scannet.</value>
+  <data name="di12020" xml:space="preserve">
+    <value>Første niveau (internt tildelt).</value>
   </data>
-  <data name="CalibrationInformation_303" xml:space="preserve">
-    <value>Delvise data blev rapporteret for kalibreringsstregkode.</value>
+  <data name="di12021" xml:space="preserve">
+    <value>Andet niveau (internt tildelt).</value>
   </data>
-  <data name="CalibrationInformation_304" xml:space="preserve">
-    <value>De rapporterede data er for den forkerte kalibreringsstregkode.</value>
+  <data name="di12022" xml:space="preserve">
+    <value>Tredje niveau (internt tildelt.</value>
   </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Der blev foretaget et forsøg på at kalibrere en stregkode, men der blev ikke leveret noget kalibreringstoken.</value>
+  <data name="di12023" xml:space="preserve">
+    <value>Fjerde niveau (internt tildelt).</value>
   </data>
-  <data name="CalibrationInformation_310" xml:space="preserve">
-    <value>Nogle invariante tegn kan ikke detekteres.</value>
+  <data name="di12024" xml:space="preserve">
+    <value>Femte niveau (internt tildelt).</value>
   </data>
-  <data name="CalibrationInformation_311" xml:space="preserve">
-    <value>Nogle invariante tegn genkendes ikke af stregkodescanneren i dens nuværende konfiguration: {0}</value>
+  <data name="di12025" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion, f.eks. 25L IAC CIN LOC tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af den fysiske interne placering (LOC), der er unik inden for CIN indehaverens domæne.</value>
   </data>
-  <data name="CalibrationInformation_312" xml:space="preserve">
-    <value>Nogle tastekombinationer, der inkluderer invariante tegn, genkendes ikke: {0}</value>
+  <data name="di12026" xml:space="preserve">
+    <value>'26L' Stedkode, værende en kode, der identificerer et sted eller geografisk område, eller en tilknyttet gruppe af sådanne steder eller områder, der har relevans for en relateret transaktion og som overholder en af de strukturer, der er defineret i (a) til (f) nedenfor:\na) to store bogstaver svarende til ISO 3166-1 to alfa landekoden for det land, hvor, eller bestående af hvilket, stedet/områderne er placeret;\nb) tre store bogstaver svarende til IATA-koden for lufthavnen eller byen i, tæt på, eller bestående af hvilket, stedet/områderne er placeret;\nc) fire eller flere tegn, hvoraf de første tre svarer til en ISO 3166-1 landekode efterfulgt af en bindestreg (-), med resten værende et postnummer i det pågældende land;\nd) fire eller flere tegn, hvoraf de første tre svarer til en ISO 3166-1 landekode efterfulgt af en prik (.), med resten værende en ISO 3166-2 landunderafdelingskode i det pågældende land;\ne) fem store bogstaver svarende til UN/LOCODE for området i, tæt på, eller bestående af hvilket, stedet/områderne er placeret;\nf) sammenkædningen, værende ikke mindre end syv eller mere end 35 tegn i længde, af:\n- en ISO/IEC 15459 udstedende agenturskode;\n- en stedkode, bestående af tegn hentet fra sættet {A-Z; 0-9} som overholder specifikationerne fra det pågældende udstedende agentur.</value>
   </data>
-  <data name="CalibrationInformation_320" xml:space="preserve">
-    <value>Ingen gruppeseparator rapporteret.</value>
+  <data name="di12027" xml:space="preserve">
+    <value>Begivenhedssted UN/LOCODE.\nUN/LOCODE efterfulgt af et plus (+) tegn efterfulgt af en eller flere kodeværdier fra EDIFACT Kodeliste 3227 'Location function code qualifier', f.eks.,\n7 Leveringssted;\n5 Afgangs havn;\n9 Lastnings havn;\n11 Lossnings havn;\n13 Omstigningssted;\n24 Indgangshavn;\n35 Eksportland;\n88 Modtagelsessted for transportør;\n125 Udenlandsk havn før afgang til USA;\n147 Stuvningscelle/position;\n159 Leveringssted (til modtager);\n248 Lastningssted\nhttp://www.unece.org/cefact/locode/.</value>
   </data>
-  <data name="CalibrationInformation_360" xml:space="preserve">
-    <value>Den rapporterede karakter {0} er tvetydig. Der er flere taster for samme tegn, hver repræsenterer et forskelligt forventet tegn.</value>
+  <data name="di12028" xml:space="preserve">
+    <value>Nummer og gadenavn.\nBruges i forbindelse med H, 6H, 28L, 29L, 30L, 31L, 32L.</value>
   </data>
-  <data name="CalibrationInformation_361" xml:space="preserve">
-    <value>Den rapporterede karakter {0} er tvetydig. Samme tegn rapporteres for flere døde taster, der repræsenterer forskellige forventede tegn.</value>
+  <data name="di12029" xml:space="preserve">
+    <value>Bynavn.\nBruges i forbindelse med H, 6H, 28L, 29L, 30L, 31L, 32L.</value>
   </data>
-  <data name="CalibrationInformation_362" xml:space="preserve">
-    <value>Den rapporterede døde tast karakter {0} er tvetydig. Der er flere døde taster for samme tegn, hver repræsenterer et forskelligt forventet tegn.</value>
+  <data name="di12030" xml:space="preserve">
+    <value>Detaljer om landets underenhed.\nBruges i forbindelse med H, 6H, 28L, 29L, 30L, 31L, 32L.</value>
   </data>
-  <data name="CalibrationInformation_363" xml:space="preserve">
-    <value>Den rapporterede tegnsekvens {0} er tvetydig. Samme sekvens rapporteres for flere forventede tegnsekvenser.</value>
+  <data name="di12031" xml:space="preserve">
+    <value>Postnummer.\nBruges i forbindelse med H, 6H, 28L, 29L, 30L, 31L, 32L (Hvis en '-' bindestreg bruges, skal den udtrykkeligt kodes).</value>
   </data>
-  <data name="CalibrationInformation_364" xml:space="preserve">
-    <value>Den rapporterede tegnsekvens {0} er tvetydig. Samme sekvens rapporteres for flere døde taster i stregkodescannerens tastaturlayout.</value>
+  <data name="di12032" xml:space="preserve">
+    <value>Landekode.\nISO 3166-1 Alpha 2 Kode\nBruges i forbindelse med H, 6H, 28L, 29L, 30L, 31L, 32L.</value>
   </data>
-  <data name="CalibrationInformation_365" xml:space="preserve">
-    <value>Tegnet {0} kan ikke repræsenteres pålideligt på grund af inkompatibilitet med tastaturlayoutet.</value>
+  <data name="di12033" xml:space="preserve">
+    <value>Uniform Resource Locator (URL).\nIndeholder alle tegn, der danner en URL, inklusive headerdata såsom f.eks., http://. Tegnsæt som opført i RFC 1738.</value>
   </data>
-  <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Den rapporterede tegnsekvens {0} er tvetydig. Dette repræsenterer gruppens separator tegn.</value>
+  <data name="di12034" xml:space="preserve">
+    <value>Peger på proces-URL (P2P-URL) for at initiere en URL til at bære alle andre dataelementer kodet i et AIDC-medie i henhold til følgende regel: Scan koden og initiér URL'en startende med P2P-URL-strengen, udelad DI 34L og ISO/IEC 15434 kuvertsyntaks (præfiks og postfix) og tilføj alle andre dataelementer, der er blevet scannet i samme sekvens som kodet i mediet, inklusive DIs og dataseparatorer. Konverter specielle tegn i de tilføjede data til RFC 1738-format (f.eks., Gruppeseparator 'GS' oversat til RFC 1738 sekvens %1D). Bemærk, at dette ikke gælder for P2P-URL'en selv.\nEksempel: Kodet datastreng (ved brug af ISO/IEC 15434) [)&gt;RS06GS25SUN123456789PA12345GS4LUSGS16D20131108 G S34LHTTP://WWW.SECUREUID.COM/ITEMDATA/?SCAN= R S05 GS13131108RSEOT\nresulterer i følgende URL med de overførte data:\nHTTP://WWW.SECUREUID.COM/ITEMDATA/?SCAN=25SU N123456789PA12345%1D4LUS%1D16D20131108.\nBemærk: data fra '05' formatkuverten blev ikke inkorporeret i URL'en, da 34L blev kodet i '06' formatkuverten.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
-    <value>Nogle rapporterede tegn er tvetydige. De kan rapporteres individuelt, men bruges også til at danne ligaturer: {0}</value>
+  <data name="di12035" xml:space="preserve">
+    <value>En regeringsudstedt godkendelsesnummer for fartøj / akvakultursted / gård / forarbejder, startende med et ISO 31661 alfa-2 landekode, efterfulgt af godkendelsesnummeret.\nAlle tegn fra GS1 General Specification-definerede delmængde af ISO/IEC 646 er tilladt.\nEksempel:\n35LIECK0107EC = Land; Irland. Skibets navn; FV Endurance DA31.</value>
   </data>
-  <data name="CalibrationInformation_370" xml:space="preserve">
-    <value>De rapporterede kalibreringsdata kan ikke behandles. De inkluderer ikke forventede afgrænsere.</value>
+  <data name="di12036" xml:space="preserve">
+    <value>En regeringsudstedt godkendelsesnummer for producent eller gård eller første udbening / skærehal, startende med en ISO 3166-1 alfa-2 landekode, efterfulgt af godkendelsesnummeret.\nAlle tegn fra GS1 General Specification-definerede delmængde af ISO/IEC 646 er tilladt.\nEksempel:\n36LIECK0107EC = Land; Irland. Skibets navn; FV Endurance DA31.</value>
   </data>
-  <data name="CalibrationInformation_371" xml:space="preserve">
-    <value>De rapporterede kalibreringsdata kan ikke behandles. Ingen karakter kan bestemmes til at fungere som en midlertidig afgrænser.</value>
+  <data name="di12051" xml:space="preserve">
+    <value>'Forsend fra:' - Stedkode defineret af et postvæsen (f.eks., 5-cifrede og 9-cifrede ZIP-koder, der identificerer amerikanske placeringer eller 6-tegns postkoder, der identificerer canadiske placeringer).</value>
   </data>
-  <data name="CalibrationInformation_390" xml:space="preserve">
-    <value>Kalibrering mislykkedes. {0}</value>
+  <data name="di12052" xml:space="preserve">
+    <value>'Forsend til:' - Stedkode defineret af et postvæsen (f.eks., 5-cifrede og 9-cifrede ZIP-koder, der identificerer amerikanske placeringer eller 6tegns postkoder, der identificerer canadiske placeringer).</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibrering mislykkedes. {0}</value>
+  <data name="di12054" xml:space="preserve">
+    <value>'Forsend fra:' - Stedkode defineret af et postvæsen i formatet: postkoder (f.eks., 5-cifrede ZIP-koder, der identificerer amerikanske placeringer eller 6- eller 7-tegns postkoder, der identificerer britiske placeringer) efterfulgt af to tegns ISO 3166 landekode (f.eks., US eller GB).</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Ugyldigt rådgivningselement.</value>
+  <data name="di12055" xml:space="preserve">
+    <value>'Forsend til:' - Stedkode defineret af et postvæsen i formatet: postkoder (f.eks., 5-cifrede ZIP-koder, der identificerer amerikanske placeringer eller 6- eller 7-tegns postkoder, der identificerer britiske placeringer) efterfulgt af to tegns ISO 3166 landekode (f.eks., US eller GB).</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Ugyldigt informationsniveau.</value>
+  <data name="di13010" xml:space="preserve">
+    <value>Army Form 2410 data. Formatet er data værdi forfulgt af bloknummeret på form 2410. Feltlængder og acceptable tegn kan findes på;\nhttp://www.apd.army.mil/pdffiles/p738_751.pdf.\n2020 Opdatering: URL'en er blevet ændret til:\nhttps://armypubs.army.mil/ProductMaps/PubForm/Details.asp x?PUB_ID=1408</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Kunne ikke indsætte pladsholdere for mellemrum.</value>
+  <data name="di13011" xml:space="preserve">
+    <value>Army Form 2408 data. Formatet er data værdi forfulgt af bloknummeret på form 2408. Feltlængder og acceptable tegn kan findes på;\nhttp://www.apd.army.mil/pdffiles/p738_751.pdf.\n2020 Opdatering: URL'en er blevet ændret til:\nhttps://armypubs.army.mil/ProductMaps/PubForm/Details.asp x?PUB_ID=1400</value>
   </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Ugyldigt argument leveret til regulært udtryks Erstat-metode.</value>
+  <data name="di13012" xml:space="preserve">
+    <value>Army Form 2407 data. Formatet er data værdi forfulgt af bloknummeret på form 2407. Feltlængder og acceptable tegn kan findes på;\nhttp://www.apd.army.mil/pdffiles/p738_751.pdf.\n2020 Opdatering: URL'en er blevet ændret til:\nhttps://armypubs.army.mil/ProductMaps/PubForm/Details.asp x?PUB_ID=1391</value>
   </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Det regulære udtryk løb tør for tid under udførelsen af en match.</value>
+  <data name="di13013" xml:space="preserve">
+    <value>Air Force Form 95 data. Formatet er data værdi forfulgt af bloknummeret på form 95. Feltlængder og acceptable tegn kan findes på;\nhttp://www.gsa.gov/portal/forms/download/116418.\n2020 Opdatering: Formens navn er "Air Force Technical Order Form 95 (AFTO Form 95)." Detaljer om formen findes i Air Force Technical Order (TO) 00-20-1. URL'en for denne TO er blevet ændret til:\nhttps://www.tinker.af.mil/Portals/106/Documents/Technical%20Orders/AFD-180615-00-20-1.pdf</value>
   </data>
-  <data name="Unspecified" xml:space="preserve">
-    <value>Uspecificeret</value>
+  <data name="di13014" xml:space="preserve">
+    <value>Navy Form 4790 data. Formatet er data værdi forfulgt af bloknummeret på form 2410. Feltlængder og acceptable tegn kan findes på;\nhttp://www.navair.navy.mil/logistics/4790/library/Chapter%201 5.pdf.\n2020 Opdatering: URL'en er ikke længere gyldig.</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Kan ikke finde passende tegn til midlertidig pladsholder. Alle udvidede ASCII-tegn er allerede brugt i inputstrengen.</value>
+  <data name="di14000" xml:space="preserve">
+    <value>National/NATO Stock Number (NSN).</value>
+  </data>
+  <data name="di14001" xml:space="preserve">
+    <value>Produktkarakteristikdata defineret af Chemical Industry Data Exchange (CIDX).</value>
+  </data>
+  <data name="di14003" xml:space="preserve">
+    <value>Kodestruktur i overensstemmelse med format defineret af Electronic Industries Association Japan (EIAJ).</value>
+  </data>
+  <data name="di14004" xml:space="preserve">
+    <value>Kodestruktur og formater i overensstemmelse med GS1 Applikationsidentifikatorer (AI plus data) (GS1).</value>
+  </data>
+  <data name="di14005" xml:space="preserve">
+    <value>Kodestruktur og formater i overensstemmelse med AIAG anbefalinger. Det fulde Data Identifier er i formen 5Nxx, hvor 'xx' findes i den fulde kodeliste, der kan findes på https://www.aiag.org/</value>
+  </data>
+  <data name="di14006" xml:space="preserve">
+    <value>U.S. DOD Requisition og Issue Procedure Codes. Formatet er den passende MILSTRIP-kode efterfulgt af dataværdien associeret med den kode. (Den fulde liste over koder er tilgængelig på;\nhttp://www2.dla.mil/j6/dlmso/elibrary/Manuals/DLM/MILSTRIP/MILSTRIP.pdf.\n2020 Opdatering: URL'en er blevet ændret til:\nhttps://www.dla.mil/HQ/InformationOperations/DLMS/elibrary/manuals/MILSTRIP/</value>
+  </data>
+  <data name="di14007" xml:space="preserve">
+    <value>U.S. Defense Transportation Regulation Codes. Formatet er DTR-koden efterfulgt af den passende dataværdi associeret med den kode. (Den fulde liste over koder er tilgængelig på;\nhttp://www.transcom.mil/dtr/part-ii/dtr_part_ii_toc.pdf.\n2020 Opdatering: URL'en er blevet ændret til:\nhttps://www.ustranscom.mil/dtr/part-ii/dtr_part_ii_toc.pdf</value>
+  </data>
+  <data name="di14008" xml:space="preserve">
+    <value>Produktionsdyr Identifikationskoder. Formatet er produktionsdyrkoden efterfulgt af den passende dataværdi associeret med den kode. Den tekniske rapport og den fulde liste over Udvidede Dataelementer (koder) vedligeholdes på;\nhttp://www.aimglobal.org/store/view_product.asp?id=4926441 Udvidede Dataelementer (Koder).\nhttp://www.aimglobal.org/store/view_product.asp?id=4926483 Teknisk Rapport.\n2020 Opdatering: URL'erne er blevet ændret til:\nhttps://web.aimglobal.org/external/wcpages/wcecommerce/ecomlistpage.aspx?Keyword=animal</value>
+  </data>
+  <data name="di14009" xml:space="preserve">
+    <value>Apoteksproduktnummer vedligeholdt af IFA (www.ifaffm.de) med følgende elementer; Dataidentifikator (DI), todigit produktregistreringsagenturskode (PRAC), produktreferencen (PR) og de to PPN-kontrolcifre (CC), i formen DI PRAC PR CC.\nBEMÆRK - mellemrum tilføjes som separator for visuel klarhed og er ikke en del af dataene.\nEksempler:\n • 9N1112345678CC\n • 9N1312345MEDDEVICE1245678900CC</value>
+  </data>
+  <data name="di14010" xml:space="preserve">
+    <value>Data i formatet og ved brug af semantik defineret af indehaveren af et firmaidentifikationsnummer (CIN), der er blevet udstedt af et udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459, defineret som en sekvens af sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af separator tegnet ':' (kolon) efterfulgt af data i formatet og ved brug af semantik som defineret af CIN indehaveren.\nBEMÆRK: Kun datasyntaksreglerne (hvis nogen) som leveret af den erklærede IAC+CIN inden for hver DI '10N' datastrøm skal anvendes på dataene efter DI 10N+IAC+CIN.\nBEMÆRK: På grund af en fejl i tildelingen af DI '10N' (der er ingen central myndighed for data-definition eller vedligeholdelse), bør ingen nye anvendelser af DI '10N' implementeres.\nFunktionen af DI '10N' er etableret i Kategori 18, DIVERSE med DI '5R'. Det anbefales kraftigt, at eksisterende applikationer, der bruger DI '10N', migrerer til DI 5R'.</value>
+  </data>
+  <data name="di14011" xml:space="preserve">
+    <value>Datakonstruktionen er defineret og kontrolleret af RLA, og består af 2 segmenter: feltidentifikatorkoden, umiddelbart efterfulgt af dataene som defineret for det element i henhold til dat ordbogen af RLA. Det er væsentligt et katalog af felter med standardiseret indhold. Feltidentifikatorerne er postet på http://rla.org/11ncodes. Brugen og strukturen af disse koder er defineret på: http://rla.org/11nformat Yderligere eksempler kan findes på dette websted. DI '11N' skal aldrig kodes i en 2D- eller RFID-tag sammen med andre DI-elementer.\nBEMÆRK: På grund af en fejl i tildelingen af DI '11N' (sproget som siger: 'DI '11N' skal aldrig kodes i en 2D- eller RFID-tag sammen med andre DI-elementer.' er ikke en gyldig udtalelse), bør ingen nye anvendelser af DI '11N' implementeres. Funktionen af DI '11N' er etableret i DI '12N'. Det anbefales kraftigt, at eksisterende applikationer, der bruger DI '11N', migrerer til DI '12N'.</value>
+  </data>
+  <data name="di14012" xml:space="preserve">
+    <value>Datakonstruktionen er defineret og kontrolleret af RLA, bestående af 2 segmenter: feltidentifikator (FI) koden, umiddelbart efterfulgt af dataene som defineret for det element i henhold til dat ordbogen af RLA. Det er væsentligt et katalog af felter med standardiseret indhold. Feltidentifikatorerne er postet på http://rla.org/12ncodes Brugen og strukturen af disse koder er defineret på: http://rla.org/12nformat. Eksempler kan findes på dette websted.\n2020 Opdatering: URL'en er ændret til:\nhttps://rla.org/page/sqrl-code-listing</value>
+  </data>
+  <data name="di14015" xml:space="preserve">
+    <value>Repræsenterer Industrial Internet Identifier koder kontrolleret og vedligeholdt af CAICT, brugt i Industrial Internet Identifier Resolution System af Kina og konstrueret som &lt;DI&gt;&lt;IAC&gt;&lt;TTC&gt;&lt;STC&gt;&lt;CIN&gt;&lt;SN&gt;, i formen an3+a3+n3+n3+n8+an1...33, hvor an3 er Dataidentifikator (DI), a3 er Udstedende Agenturs Kode (IAC = "VAA"), n3 er Top-Tier Kode (TTC), n3 er Sekundær-Tier Kode (STC), n8 er firmaidentifikationsnummer (CIN) kontrolleret og tildelt af Sekundær-Tier platformen og an1...33 er Serienummer (SN) der er kontrolleret og tildelt af indehaveren af CIN, og er unik inden for det CIN indehavers' domæne, ved brug af tegnene 0 til 9, øvre- og nedre\u0002case A til Z, * (asterisk), + (plus tegn), - (bindestreg), . (punktum eller fuldt stop), / (skråstreg), ( (venstre parentes), ) (højre parentes), ! (udråbstegn).\nEksempler:\n15NVAA08810000000001123Ab.098\n15NVAA0881000000000112334Diat*C-\nDE!(8765)jiuY/L23+a!h</value>
+  </data>
+  <data name="di16000" xml:space="preserve">
+    <value>Vareidentifikationskode tildelt af kunden.</value>
+  </data>
+  <data name="di16001" xml:space="preserve">
+    <value>Vareidentifikationskode tildelt af leverandøren.</value>
+  </data>
+  <data name="di16002" xml:space="preserve">
+    <value>Kode tildelt for at specificere revisionsniveau for en vare (f.eks., engineering ændringsniveau, udgave eller revision).</value>
+  </data>
+  <data name="di16003" xml:space="preserve">
+    <value>Kombineret producentidentifikationskode/varekode under de 12/13-cifrede GS1-formater, plus supplerende koder, hvis nogen.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.</value>
+  </data>
+  <data name="di16004" xml:space="preserve">
+    <value>Varekode del af GS1-formater.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.</value>
+  </data>
+  <data name="di16005" xml:space="preserve">
+    <value>Godsklassificeringsvarenummer tildelt af transportør til formål at vurdere farlige materialer (f.eks., Motorfragt, Luft, Båd, Tog Klassificering).</value>
+  </data>
+  <data name="di16006" xml:space="preserve">
+    <value>Kombineret leverandøridentifikation og varekode (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di16007" xml:space="preserve">
+    <value>Common Language Equipment Identification (CLEI) tildelt af producenten til noget telekommunikationsudstyr.</value>
+  </data>
+  <data name="di16008" xml:space="preserve">
+    <value>14-cifret GS1 format for GTIN-14 kode struktur.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.</value>
+  </data>
+  <data name="di16009" xml:space="preserve">
+    <value>Kombineret producentidentifikationskode (9-cifret DUNS-nummer tildelt af Dun &amp; Bradstreet) og varekoden/delnummeret (tildelt af producenten).</value>
+  </data>
+  <data name="di16010" xml:space="preserve">
+    <value>Farligt Materiale Kode som defineret af ANSI X12.3 i formatet Dataelement 208 (1-tegns kodekvalifikator) efterfulgt af Dataelement 209 (Farligt Materiale Kode).</value>
+  </data>
+  <data name="di16011" xml:space="preserve">
+    <value>10-tegns CLEI Kode for telekommunikationsudstyr.</value>
+  </data>
+  <data name="di16012" xml:space="preserve">
+    <value>Dokumenttype (f.eks., Plukliste, Design Tegning, osv.) (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di16013" xml:space="preserve">
+    <value>VMRS System Kode.</value>
+  </data>
+  <data name="di16014" xml:space="preserve">
+    <value>VMRS System og Samlingskode.</value>
+  </data>
+  <data name="di16015" xml:space="preserve">
+    <value>VMRS System, Samling, &amp; Delkode.</value>
+  </data>
+  <data name="di16016" xml:space="preserve">
+    <value>VMRS System, Samling, eller Delkode. (Brugermodificeret).</value>
+  </data>
+  <data name="di16017" xml:space="preserve">
+    <value>Kombineret GS1 Leverandøridentifikation og Varekode Tildelt Af Leverandøren.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.</value>
+  </data>
+  <data name="di16018" xml:space="preserve">
+    <value>Kombineret VMRS leverandør ID og Leverandør Tildelt Reservedelsnummer.</value>
+  </data>
+  <data name="di16019" xml:space="preserve">
+    <value>Komponent af en vare. (Et produkt indeholdt i flere pakker).</value>
+  </data>
+  <data name="di16020" xml:space="preserve">
+    <value>Første Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di16021" xml:space="preserve">
+    <value>Andet Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di16022" xml:space="preserve">
+    <value>Tredje Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di16023" xml:space="preserve">
+    <value>Fjerde Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di16024" xml:space="preserve">
+    <value>Femte Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di16025" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion Tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af leverandør tildelt reservedelsnummer, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di16026" xml:space="preserve">
+    <value>Delenummer for Næste Højere Samling.</value>
+  </data>
+  <data name="di16027" xml:space="preserve">
+    <value>Vare HTS-6 Kode; Ved brug af formatet: 4012.11 eller 4012.11.4000 (Decimalpunkt er udtrykkeligt kodet) Harmoniseret System (HS) Klassifikation er en 6-cifret standardiseret numerisk metode til klassificering af handlede produkter. HS-numre bruges af toldmyndigheder over hele verden til at identificere produkter til anvendelse af afgifter og skatter. Yderligere cifre tilføjes til HS-nummeret af nogle regeringer for yderligere at skelne produkter i visse kategorier. I USA kaldes numre brugt til at klassificere eksporterede produkter 'Schedule B' numre. U.S. Census Bureau administrerer Schedule B-systemet. Schedule B-numre, ikke HS-numre, skal angives på Shippers' Export Declaration (SED).\nhttp://www.niccomp.com/rohs/files/NIC_HTS1006.pdf\nImportkoder administreres af U.S. International Trade Commission (USITC). http://hts.usitc.gov/\n2020 Opdatering: linket http://www.niccomp.com/rohs/files/NIC_HTS1006.pdf er ikke længere aktivt. Konsulter afsenderen for en SED-form.</value>
+  </data>
+  <data name="di16028" xml:space="preserve">
+    <value>Lastnavn. Klart sprog beskrivelse (Engelsk).</value>
+  </data>
+  <data name="di16029" xml:space="preserve">
+    <value>Produktklassifikationskode som defineret med GMDN (Global Medical Device Nomenclature - http://www.gmdnagency.org).</value>
+  </data>
+  <data name="di16030" xml:space="preserve">
+    <value>Første Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di16031" xml:space="preserve">
+    <value>Andet Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di16032" xml:space="preserve">
+    <value>Tredje Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di16033" xml:space="preserve">
+    <value>Fjerde Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di16034" xml:space="preserve">
+    <value>Femte Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di16040" xml:space="preserve">
+    <value>En Kode Tildelt af en Kunde til Identifikationsnummeret af Producentens Materiale Sikkerhedsdatablad (MSDS) dokument, der beskriver anvendelser, farer og kemisk sammensætning af et farligt materiale.</value>
+  </data>
+  <data name="di16049" xml:space="preserve">
+    <value>Eksportkontrolleret Vare. Underlagt eksportkontrol og/eller restriktioner som identificeret i Wassenaar Arrangementet. DI efterfulgt af Alpha-2 ISO 3166 Landekoden for det land, der pålagde restriktionen efterfulgt af Wassenaar Kode (http://www.wassenaar.org/controllists/index.html).\n2020 Opdatering: URL'en er ændret til https://www.wassenaar.org/control-lists/</value>
+  </data>
+  <data name="di16050" xml:space="preserve">
+    <value>Producent-tildelt vareidentifikator - bestående af et varenummer tildelt af vareproducenten, efterfulgt af et plus (+) tegn, efterfulgt - hvis det kræves for entydigt at identificere varen inden for producentens produktsortiment - af en producenttildelt vareversion.\nEksempel 50PABC+6 ville repræsentere varenummer ABC, vareversion 6\nBEMÆRK - Varenummeret skal altid følges af et plus tegn, selvom ingen vareversion er til stede. Dette kræves for at tillade entydig sammenkædning af producenttildelt vareidentifikator med et andet datakonstrukt ved brug af sammenkædningstegnet plus. For eksempel, kombinationen af en 50P producent-tildelt vareidentifikator uden vareversion og et serienummer (Dataidentifikator S) på en enhed kunne kodes som 50PDEF++S1234.</value>
+  </data>
+  <data name="di16051" xml:space="preserve">
+    <value>Globalt Unik Vareidentifikator bestående af Identifikationen af en part i en transaktion tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, efterfulgt af et plus (+) tegn, efterfulgt af Producent-tildelt vareidentifikator som defineret med 50P\nEksempel: 51PJ4LBE0431863103+ABC+ ville repræsentere varen med varenummer ABC og ingen versionsnummer produceret af firmaet med det belgiske momsnummer 0431863103.</value>
+  </data>
+  <data name="di16052" xml:space="preserve">
+    <value>Farvekode.\nFarve på en vare/objekt identificeret af en kode eller term gensidigt aftalt mellem handelspartnere.</value>
+  </data>
+  <data name="di16053" xml:space="preserve">
+    <value>Identifikator for Specifikt Marineudstyr godkendt under Den Europæiske Unions Direktiv om Marineudstyr (2014/90/EU) og Gennemførelsesforordning (EU) 2018/608.\nFormat:\n• DI (an3);\n• Type af overensstemmelsesvurderings (CA) modul(er) fastsat i Bilag II til direktiv 2014/90/EU brugt til overensstemmelsesvurderingen (a1);\n• Notificeret organ (NB) identifikationsnummer tildelt af Kommissionen i overensstemmelse med punkt 3.1 i Bilag IV til direktiv 2014/90/EU (n4);\n• Certifikat (an5...20)</value>
+  </data>
+  <data name="di16054" xml:space="preserve">
+    <value>UDI-DI (Unik Enhedsidentifikation - Enhedsidentifikator) for Medicinsk Udstyr (MD) og In-vitro-Diagnostik (IvD) som den unikke nøgle til offentlige UDI databaser (GUDID, EUDAMED, osv.), i henhold til nationale regulatoriske krav, som beskrevet af International Medical Device Regulators Forum (IMDRF). Alle udskrivbare tegn af UTF-8 tegnsættet er tilladt.</value>
+  </data>
+  <data name="di16055" xml:space="preserve">
+    <value>DNV certificeringsreference. Angiver, at data indeholder en reference til et produktcertifikat/verifikationsudtalelse/rapport, udstedt af DNV. Dataidentifikator skal efterfølges af bogstaverne "NV" og certifikatnummeret. Når certifikatnummeret har postfix, skal det inkluderes i datastrømmen ved brug af "-" separator tegnet. Revisionsindikatorer skal ikke gives.\nEksempler:\n1. 55PNVXXXXXXX, hvor 55P er dataidentifikatoren, XXXXXXX er DNV-certifikatnummeret.\n2. 55PNVXXXXXXX-Y, hvor 55P er dataidentifikatoren, XXXXXXX-Y er DNV-certifikatnummeret med postfix Y.</value>
+  </data>
+  <data name="di17000" xml:space="preserve">
+    <value>Mængde, Antal Stykker, eller Mængde (kun numerisk) (enhed af mål og betydning gensidigt defineret).</value>
+  </data>
+  <data name="di17001" xml:space="preserve">
+    <value>Teoretisk Længde/Vægt (kun numerisk).</value>
+  </data>
+  <data name="di17002" xml:space="preserve">
+    <value>Faktisk Vægt (kun numerisk).</value>
+  </data>
+  <data name="di17003" xml:space="preserve">
+    <value>Måleenhed, som defineret af den to-cifrede ANSI X12.3 Dataelementnummer 355 Enhed af Målekode.</value>
+  </data>
+  <data name="di17004" xml:space="preserve">
+    <value>Bruttobeløb.</value>
+  </data>
+  <data name="di17005" xml:space="preserve">
+    <value>Nettobeløb.</value>
+  </data>
+  <data name="di17006" xml:space="preserve">
+    <value>Hvor Flere Beholdere Udgør Et Enkelt Produkt (indholdet af hver beholder skal kombineres med indholdet af de andre beholdere for at udgøre et enkelt produkt) skal Dataidentifikatoren '6Q' bruges til at kæde de forskellige</value>
+  </data>
+  <data name="di17007" xml:space="preserve">
+    <value>Mængde, Beløb, eller Antal Stykker i formatet: Mængde efterfulgt af den to-cifrede ANSI X12.3 Dataelementnummer 355 Enhed af Målekode.</value>
+  </data>
+  <data name="di17008" xml:space="preserve">
+    <value>Beholder Nominel Vægt\nProducent-tildelt vægtbærende kapacitet af beholderen. Tildelt ved fremstillingstidspunktet. Måleenhed er kg.</value>
+  </data>
+  <data name="di17009" xml:space="preserve">
+    <value>Stykkevægt\nVægt af en enkelt vare.</value>
+  </data>
+  <data name="di17011" xml:space="preserve">
+    <value>Tarevægt: vægt af en tom beholder.\nBeholder kropsvægt.\nProducent-tildelt vægt af den tomme beholder. Tildelt ved fremstillingstidspunktet. Måleenhed er kg (Tarevægt).</value>
+  </data>
+  <data name="di17012" xml:space="preserve">
+    <value>Monetær Værdi fastsat af Leverandøren i formatet: værdien efterfulgt af en ISO 4217 dataelementkode for repræsentation af værdienheden af valutaer og fonde (f.eks., 12Q2.50USD) (2.50 Monetær Værdi i USA Dollars) betydning gensidigt defineret.\nIndgangsværdi;\nVærdi efterfulgt af en ISO 4217 dataelementkode for repræsentation af værdienheden af valutaer og fonde (f.eks., 12Q2.50USD) (2.50 Monetær Værdi i USA Dollars)</value>
+  </data>
+  <data name="di17013" xml:space="preserve">
+    <value># af # ('dette er det n-te stykke af x stykker i denne forsendelse').\nPræsenteret i formatet 'n/x', hvor '/' (skråstreg) bruges som en skilletegn mellem to værdier.</value>
+  </data>
+  <data name="di17014" xml:space="preserve">
+    <value>Start Sekundær Mængde.</value>
+  </data>
+  <data name="di17015" xml:space="preserve">
+    <value>Slut Sekundær Mængde.</value>
+  </data>
+  <data name="di17016" xml:space="preserve">
+    <value>Antal Stykker i Varevogn.</value>
+  </data>
+  <data name="di17017" xml:space="preserve">
+    <value>Antal Forsendelser i Varevogn.</value>
+  </data>
+  <data name="di17018" xml:space="preserve">
+    <value>Kubik udtrykt i kubikmeter eller kubikfod efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af målekode (CR eller CF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17019" xml:space="preserve">
+    <value>Bredde udtrykt i lineære meter eller lineære fødder efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af målekode (LC eller LF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17020" xml:space="preserve">
+    <value>Højde udtrykt i lineære meter eller lineære fødder efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af målekode (LC eller LF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17021" xml:space="preserve">
+    <value>Længde udtrykt i lineære meter eller lineære fødder efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af målekode (LC eller LF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17022" xml:space="preserve">
+    <value>Nettovægt Af Forsendelse udtrykt i pund eller kilogram (kilos) efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af måle (LB eller KG). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17023" xml:space="preserve">
+    <value>Varevognslængde udtrykt i lineære meter eller lineære fødder efterfulgt af ANSI X12.3 dataelementnummer 355 enhed af måle (LC eller LF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17024" xml:space="preserve">
+    <value>Indvendig Kubik af en Varevogn udtrykt i kubikmeter eller kubikfod efterfulgt af ANSI X12.3 dataelementnummer 355 af enhed målekode (CR eller CF). Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17025" xml:space="preserve">
+    <value>Netto Eksplosiv Vægt (en beregnet værdi af eksplosiv ækvivalent udtrykt i pund TNT). Målingen af NEW bruges internationalt til eksplosiv sikkerhedsafstandsbueberegninger. Ingen underforstået decimalpunkt.</value>
+  </data>
+  <data name="di17026" xml:space="preserve">
+    <value>Pakkeniveau, der specificerer hierarkisk niveau af emballage i overensstemmelse med HIBC (Health Industry Bar Code) specifikationer.</value>
+  </data>
+  <data name="di17027" xml:space="preserve">
+    <value>Enkelt Produkt Prisværdi, Net, '.' (punktum) brugt som decimalpunkt (f.eks. 27Q1000.5 for prisværdien af 1000,50).\nStruktur: an3+an1...20\n &lt;DI&gt;&lt;prisværdi&gt;.\nTegnsæt: 0 til 9, punktum (ISO 646 ASCII værdi decimal 46, hexadecimal 2E).\nEksempel på kodning ved brug af en nettoprisværdi på 1000:\n27Q1000.\nEksempel på kodning ved brug af en nettoprisværdi på 1000,50:\n27Q1000.5.\nBEMÆRK - Hvis valuta er krævet, kan den tages fra et andet dataelement brugt i samme kode, f.eks. 12Q.</value>
+  </data>
+  <data name="di17028" xml:space="preserve">
+    <value>Enkelt Prisopkrævningsværdi For Porto Og Emballage, '.' (punktum) repræsenterer positionen af et komma (f.eks. 30Q100.50 for værdien af 100,50).\nStruktur: an3+an1...10\n &lt;DI&gt;&lt;prisværdi&gt;.\nTegnsæt: 0 til 9, punktum.\nEksempel på kodning ved brug af porto &amp; emballageværdi på 100:\n30Q100.\nEksempel på kodning ved brug af porto &amp; emballageværdi på 100,50:\n30Q100.50.\nBEMÆRK - Hvis valuta er krævet, kan den tages fra et andet dataelement brugt i samme kode, f.eks. 12Q.</value>
+  </data>
+  <data name="di17029" xml:space="preserve">
+    <value>Rabatprocent, '.' (punktum) repræsenterer positionen af et komma (f.eks. 31Q8.5 for en rabatværdi på 8,5%).\nStruktur: an3+n1...6 (12.456)\n &lt;DI&gt;&lt;rabatprocent (%)&gt;.\nTegnsæt: 0 til 9, punktum\nEksempel på kodning ved brug af rabatprocent på 10%:\n31Q10.\nEksempel på kodning ved brug af rabatprocent på 8,5%:\n31Q8.5.</value>
+  </data>
+  <data name="di17030" xml:space="preserve">
+    <value>Momsprocent, '.' (punktum) repræsenterer positionen af et komma (f.eks. 27Q8.5 for moms værdien på 8,5%).\nStruktur: an3+an1...5 (12.45)\n &lt;DI&gt;&lt;Momsprocent (%)&gt;.\nTegnsæt: 0 til 9, punktum.\nEksempel på kodning ved brug af momsprocent på 10%:\n27Q19.\nEksempel på kodning ved brug af momsprocent på 8,5%:\n27Q8.5.</value>
+  </data>
+  <data name="di17031" xml:space="preserve">
+    <value>Valuta, ISO 4217 valutakode.\nStruktur: an3+an3\n &lt;DI&gt;&lt;Valuta, f.eks. EUR&gt;.\nTegnsæt: A-Z, 0 til 9.\nEksempel på kodning ved brug af ISO alfabetisk kode for US Dollar:\n31QUSD.\nEksempel på kodning ved brug af ISO alfabetisk kode for EURO:\n31QEUR.\nEksempel på kodning ved brug af ISO numerisk kode for EURO:\n31Q978.</value>
+  </data>
+  <data name="di17032" xml:space="preserve">
+    <value>Klinisk termkode som defineret med den kliniske nomenklatur: "Den internationale standard for identificering af sundhedsmålinger, observationer, og dokumenter - LOINC" (https://loinc.org), i følgende sekvens: &lt;DI&gt;&lt;LOINC Kode&gt;&lt;Plus Tegn&gt;&lt;Værdi&gt;. Enheden og formatet af Værdien er defineret af LOINC Koden.\nEksempel: 32Q28903-3+60 = LOINC Kode 28903-3: Venstre kontaktlinse Akse (grader); med Værdi = 60.</value>
+  </data>
+  <data name="di18001" xml:space="preserve">
+    <value>Retur Autorisationskode (RMA) tildelt af Leverandøren</value>
+  </data>
+  <data name="di18002" xml:space="preserve">
+    <value>Returkode Tildelt af Kunden</value>
+  </data>
+  <data name="di18004" xml:space="preserve">
+    <value>U.S. Department of Defense Identifikationskode (DoDIC)</value>
+  </data>
+  <data name="di18005" xml:space="preserve">
+    <value>Data i formatet og ved brug af semantik defineret af indehaveren af et firmaidentifikationsnummer (CIN), der er blevet udstedt af et udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459, defineret som en sekvens af sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af separator tegnet ':' (kolon) efterfulgt af data i formatet og ved brug af semantik som defineret af CIN indehaveren.\nBEMÆRK - Kun datasyntaksreglerne (hvis nogen) som leveret af den erklærede IAC+CIN inden for hver DI '5R' datastrøm skal anvendes på dataene efter DI 5R+IAC+CIN.4.</value>
+  </data>
+  <data name="di18006" xml:space="preserve">
+    <value>ISO/IEC 20248 digital signatur datakonstrukt. Hvis den underliggende data bærer kodning er 7 bits, så kan kun ISO/IEC 20248 råformatet bruges.\nEksempel med en URL-format:\n&lt;6R&gt;&lt;https://20248.sigvr.it/?Oo586eJAMEYCIQCf31EqIJML GclBpHLlRgBdO&gt;\nEksempel med et råformat:\n&lt;6R&gt;&lt;Oo586eJAMEYCIQCf31EqIJMLGclBpHLlRgBdO&gt;\nEn ISO/IEC 20248 datastruktur indeholder en digital signatur, der bruges til at verificere de specificerede dataelementer af datameldingen. Værdien af 6R, som det første parameter, og dataelementerne, der skal verificeres (fjernet fra alle ikke-udskrivbare tegn), som det andet parameter, sendes til ISO/IEC 20248 DecoderVerifier - hvilket vil returnere verifikationsresultatet: ACCEPT, REJECT eller ERROR(feilkode), og JSON-objektet af dekodede ISO/IEC 20248 yderligere felter. ISO/IEC 20248 datastrukturen kan indeholde yderligere felter og instruktioner til at dekode og verificere en eller flere meldinger af dataelementer. Disse instruktioner vil blive behandlet af ISO/IEC 20248 DecoderVerifier.</value>
+  </data>
+  <data name="di18007" xml:space="preserve">
+    <value>Aquatic Sciences and Fisheries Information System (ASFIS) 'Inter-agentur 3-alfa artskode', vedligeholdt af Fødevare- og Landbrugsorganisationen for De Forenede Nationer (www.fao.org, derefter søg efter 'ASFIS').\nEksempler;\n7RMUC = Mudderkarpe;\n7RPCD = Australsk ferskvandssild;\n7RWSH = Stor hvid haj.</value>
+  </data>
+  <data name="di18008" xml:space="preserve">
+    <value>Fødevare- og Landbrugsorganisationen (FAO) Internationale Standardklassifikation af Fiskeredskaber (ISSCFG) kode. (www.fao.org)\nAlle tegn fra GS1 General Specification-definerede delmængde af ISO/IEC 646 er tilladt.\nEksempler:\n8R02.1.0 = Strandnoter;\n8R03.1.5 = Rejetrawl;\n8R05.1.0 = Bærbare løftenet.</value>
+  </data>
+  <data name="di18009" xml:space="preserve">
+    <value>Produktionsmetode for fisk og skaldyr som specificeret af Fiskeri- og Akvakulturafdelingen i Fødevare- og Landbrugsorganisationen (FAO) for De Forenede Nationer, i henhold til EU-forordning 1379/2013. (www.fao.org).\nAlle tegn fra GS1 General Specification-definerede delmængde af ISO/IEC 646 er tilladt.\nEksempler;\n9R01 = Fanget på havet;\n9R02 = Fanget i ferskvand;\n9R03 = Opdrættet.</value>
+  </data>
+  <data name="di19000" xml:space="preserve">
+    <value>Serienummer eller kode tildelt af leverandøren til en enhed for dens levetid, (f.eks., computer serienummer, sporbarhedsnummer, kontraktværktøjsidentifikation)</value>
+  </data>
+  <data name="di19001" xml:space="preserve">
+    <value>Yderligere kode tildelt af leverandøren til en enhed for dens levetid (f.eks., sporbarhedsnummer, computer serienummer)</value>
+  </data>
+  <data name="di19002" xml:space="preserve">
+    <value>Forsendelsesmeddelelse (ASN) Forsendelses-ID (SID) svarer til ANSI ASC X12 Dataelement 396</value>
+  </data>
+  <data name="di19003" xml:space="preserve">
+    <value>Unik pakkeidentifikation tildelt af leverandøren (laveste niveau af emballage, som har en pakke-ID-kode; skal indeholde lige varer)</value>
+  </data>
+  <data name="di19004" xml:space="preserve">
+    <value>Pakkeidentifikation tildelt af leverandøren til masteremballage indeholdende lige varer på en enkelt kundeordre</value>
+  </data>
+  <data name="di19005" xml:space="preserve">
+    <value>Pakkeidentifikation tildelt af leverandøren til masteremballage indeholdende ulige varer på en enkelt kundeordre</value>
+  </data>
+  <data name="di19006" xml:space="preserve">
+    <value>Pakkeidentifikation tildelt af leverandøren til masteremballage indeholdende lige varer over flere kundeordrer</value>
+  </data>
+  <data name="di19007" xml:space="preserve">
+    <value>Pakkeidentifikation tildelt af leverandøren til masteremballage indeholdende ulige varer over flere kundeordrer</value>
+  </data>
+  <data name="di19008" xml:space="preserve">
+    <value>Leverandør ID/Unik Beholder ID præsenteret i dataformatet specificeret af GS1 SSCC-18\n2020 Opdatering: Henvis til GS1 Generelle Specifikationer vedrørende den seneste version af SSCC.</value>
+  </data>
+  <data name="di19009" xml:space="preserve">
+    <value>Pakkeidentifikation, Generisk (gensidigt defineret)</value>
+  </data>
+  <data name="di19010" xml:space="preserve">
+    <value>Maskine, Celle, eller Værktøjs-ID Kode</value>
+  </data>
+  <data name="di19011" xml:space="preserve">
+    <value>Fast Aktiv-ID Kode</value>
+  </data>
+  <data name="di19012" xml:space="preserve">
+    <value>Dokumentnummer (internt tildelt eller gensidigt defineret)</value>
+  </data>
+  <data name="di19013" xml:space="preserve">
+    <value>Container Sikkerhedsforsegling</value>
+  </data>
+  <data name="di19014" xml:space="preserve">
+    <value>Fjerde klasse Ikke-identiske pakkepostmanifestering.</value>
+  </data>
+  <data name="di19015" xml:space="preserve">
+    <value>Serienummer Tildelt af Leverandørentiteten, der kun kan bruges i forbindelse med '13V'</value>
+  </data>
+  <data name="di19016" xml:space="preserve">
+    <value>Versionsnummer, f.eks., Softwareversion</value>
+  </data>
+  <data name="di19017" xml:space="preserve">
+    <value>Kombineret 6-cifret GS1 Leverandøridentifikation og Unik Pakkeidentifikation Tildelt Af Leverandøren\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.</value>
+  </data>
+  <data name="di19018" xml:space="preserve">
+    <value>CAGE Kode &amp; Serienummer Unikt Inden for CAGE</value>
+  </data>
+  <data name="di19019" xml:space="preserve">
+    <value>Kombineret Dun &amp; Bradstreet firmaidentifikation af leverandøren efterfulgt af en unik pakkeidentifikation tildelt af leverandøren, i formatet nn...nn+nn...n hvor et plus symbol (+) bruges som skilletegn mellem DUNS-nummeret og unik pakkeidentifikation</value>
+  </data>
+  <data name="di19020" xml:space="preserve">
+    <value>Sporingskode for en enhed tildelt af kunden</value>
+  </data>
+  <data name="di19021" xml:space="preserve">
+    <value>Dækidentifikationsnummer som defineret af U.S. Department of Transportation (D.O.T) under U.S. Code 49 CFR 574.5.</value>
+  </data>
+  <data name="di19022" xml:space="preserve">
+    <value>Unik Individuel Identitet for Mobiltelefoner</value>
+  </data>
+  <data name="di19023" xml:space="preserve">
+    <value>Media Access Control (MAC) Adresse i overensstemmelse med IEEE 802.11</value>
+  </data>
+  <data name="di19024" xml:space="preserve">
+    <value>I henhold til ISO/IEC 15963 (værdien er en konvertering af dens bitværdi til 8-bit ASCII-værdier). Denne Dataidentifikator kunne muligvis antage enhver ASCII-256 værdi. For fragtcontainer tags er Registreringsautoriteten (RA) for producenter RA for ISO 14816. (ISO 646)</value>
+  </data>
+  <data name="di19025" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af leverandør tildelt serienummer, der er unikt inden for CIN indehaverens domæne (Se Bilag C.11)</value>
+  </data>
+  <data name="di19026" xml:space="preserve">
+    <value>Udstyrsidentifikator, værende en globalt unik identifikator for en enhed, et udstyrsstykke eller en instans af en computerapplikation, der bruges i produktionen, transporten, behandlingen eller anden håndtering af varer, der er konstrueret ved at sammenkæde:\n - en ISO/IEC 15459 udstedende agenturskode;\n - et udstyrsnummer, som overholder specifikationerne fra det pågældende udstedende agentur; og at:\n - består kun af store bogstaver og/eller numeriske tegn;\n - er unikt (det vil sige, adskiller sig fra ethvert andet ISO/IEC 15459-kompatibelt identifikator) inden for udstedende agenturs domæne;\n - kan ikke udledes fra et andet ISO/IEC 15459-kompatibelt identifikator, udstedt under samme udstedende agentur, ved simpelthen at tilføje tegn til, eller fjerne dem fra, det ende.\nLæser ID.\nUdstyrsidentifikator, værende en globalt unik identifikator for en enhed, et udstyrsstykke eller en instans af en computerapplikation, der bruges i produktionen, transporten, behandlingen eller anden håndtering af varer.</value>
+  </data>
+  <data name="di19027" xml:space="preserve">
+    <value>Varenummer Inden for Batch, værende en streng af numeriske cifre:\n - der entydigt adskiller en vare, inden for en identificerbar batch af relaterede varer, fra alle andre varer i samme batch;\n - hvis længde er den samme for alle varer inden for den pågældende batch.</value>
+  </data>
+  <data name="di19028" xml:space="preserve">
+    <value>Batch-og-Varenummer, værende sammenkædningen af en dataidentifikator 27T batchnummer og dataidentifikatoren 27S varenummer for en vare tilhørende den pågældende batch.</value>
+  </data>
+  <data name="di19030" xml:space="preserve">
+    <value>Yderligere Sporingskode For En Enhed Tildelt af Leverandøren ud over eller forskellig fra sporingskode(r) leveret af 'S' eller '1S'</value>
+  </data>
+  <data name="di19031" xml:space="preserve">
+    <value>Start Serienummer for serienumre i sekvens</value>
+  </data>
+  <data name="di19032" xml:space="preserve">
+    <value>Slut Serienummer for serienumre i sekvens</value>
+  </data>
+  <data name="di19033" xml:space="preserve">
+    <value>Serienummer for Næste Højere Samling</value>
+  </data>
+  <data name="di19034" xml:space="preserve">
+    <value>Serienummer eller Delnummer for Endelig Vare</value>
+  </data>
+  <data name="di19035" xml:space="preserve">
+    <value>Kofanger Nummer (Brugt i Enheds DOD Flytning)</value>
+  </data>
+  <data name="di19036" xml:space="preserve">
+    <value>Palle Identifikator (Brugt til belæssede 463L luftpaller)</value>
+  </data>
+  <data name="di19037" xml:space="preserve">
+    <value>Unik Vareidentifikator bestående af en sekvens af 5 dataelementer: 'IAC', efterfulgt af 'CIN', efterfulgt af 'Delnummer (PN)', efterfulgt af '+' tegnet, efterfulgt af leverandør tildelt (eller forvaltet) 'Dels Serienummer (PSN)' der er globalt unikt inden for CIN indehaverens domæne; i formatet IAC CIN PN + PSN (mellemrum leveret for visuel klarhed kun; de er ikke en del af dataene). Se Bilag C.11.</value>
+  </data>
+  <data name="di19042" xml:space="preserve">
+    <value>Unik Vareidentifikator (UII) i 25S format forfulgt af numerisk værdi, der angiver serienummerelementets længde til brug af systemer, der kræver 'serienummer' komponenten af et sammenkædet Serienummerelement (IAC+CIN+SN) Format: DI+LI+IAC+CIN+SN (LI=længde af SN)</value>
+  </data>
+  <data name="di19043" xml:space="preserve">
+    <value>Integreret Kredsløbskort Identifikator (ICCID) i overensstemmelse med ITU-T Anbefaling E.118 og ETSI Anbefaling GSM 11.11; maksimalt 20 cifre bestående af Udsteder identifikationsnummer (IIN; maksimalt 7 cifre), Individuel konto identifikation (variabel; længde bestemt af IIN, men samme længde inden for individuelle IIN'er), Kontrolciffer (enkelt ciffer beregnet ved hjælp af Luhn algoritmen\nhttp://en.wikipedia.org/wiki/Luhn_algorithm).\n43Siiiiiiinnnnnnnnnnnnc (i = IIN, n = konto identifikation, c = kontrolciffer)</value>
+  </data>
+  <data name="di19050" xml:space="preserve">
+    <value>Første Niveau (Leverandørtildelt)</value>
+  </data>
+  <data name="di19051" xml:space="preserve">
+    <value>Andet Niveau (Leverandørtildelt)</value>
+  </data>
+  <data name="di19052" xml:space="preserve">
+    <value>Tredje Niveau (Leverandørtildelt)</value>
+  </data>
+  <data name="di19053" xml:space="preserve">
+    <value>Fjerde Niveau (Leverandørtildelt)</value>
+  </data>
+  <data name="di19054" xml:space="preserve">
+    <value>Femte Niveau (Leverandørtildelt)</value>
+  </data>
+  <data name="di19096" xml:space="preserve">
+    <value>EPC nummer (Typisk Serialiseret Global Handelsidentifikationsnummer - SGTIN)\n2020 Opdatering: Termen "EPC nummer" bruges ikke længere af GS1. Henvis til GS1 Generelle Specifikationer og Tag Data Standarden for aktuel terminologi</value>
+  </data>
+  <data name="di19097" xml:space="preserve">
+    <value>Krypteret serienummer tildelt af leverandøren til en enhed, som kan autentificeres af en uafhængig betroet tredjepart. Det krypterede serienummer beskriver ikke nogen parametre af enheden uden dekryptering af en uafhængig tredjepart.</value>
+  </data>
+  <data name="di2" xml:space="preserve">
+    <value>'DET' tegn. ICCBBA</value>
+  </data>
+  <data name="di2000" xml:space="preserve">
+    <value>Beholdertype (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di20000" xml:space="preserve">
+    <value>Sporingsnummer tildelt af kunden for at identificere/spore en unik gruppe af enheder (f.eks., parti, batch, varme).</value>
+  </data>
+  <data name="di20001" xml:space="preserve">
+    <value>Sporingsnummer tildelt af leverandøren for at identificere/spore en unik gruppe af enheder (f.eks., parti, batch, varme).</value>
+  </data>
+  <data name="di20003" xml:space="preserve">
+    <value>Eksklusiv Tildeling (U.S. EPA køretøjsidentifikation for emissionsprøvning).</value>
+  </data>
+  <data name="di2001" xml:space="preserve">
+    <value>Returbar Beholder Identifikationskode tildelt af beholderens ejer eller den relevante reguleringsmyndighed (f.eks., en metalbeholder, kurv, spole, enhedslastenhed (ULD), trailer, tank, eller intermodal beholder) (ekskluderer gasflasker Se '2B').</value>
+  </data>
+  <data name="di2002" xml:space="preserve">
+    <value>Gas Cylinder Beholder Identifikationskode tildelt af producenten i overensstemmelse med U.S. Department of Transportation (D.O.T.) standarder.</value>
+  </data>
+  <data name="di20020" xml:space="preserve">
+    <value>Første Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di20021" xml:space="preserve">
+    <value>Andet Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di20022" xml:space="preserve">
+    <value>Tredje Niveau (Kundetildelt).</value>
+  </data>
+  <data name="di20023" xml:space="preserve">
+    <value>Fjerde Niveau (Kundetildelt.</value>
+  </data>
+  <data name="di20024" xml:space="preserve">
+    <value>Femte Niveau (Kundetildelt.</value>
+  </data>
+  <data name="di20025" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion tildelt af en indehaver af et firmaidentifikationsnummer (CIN) og inkluderer det relaterede udstedende agenturskode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af leverandør tildelt sporingsnummer, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di20026" xml:space="preserve">
+    <value>Batchidentifikator bestående af sammenkædningen af enten:\n - en dataidentifikator 26S postbehandlingsudstyr identifikator, eller\n - en dataidentifikator 20K licensidentifikator, eller\n - en dataidentifikator 18V partidentifikator der:\n - adskiller sig fra ethvert andet ISO/IEC 15459-kompatibelt identifikator inden for udstedende agenturs domæne;\n - kan ikke udledes fra et andet partidentifikator eller ethvert andet ISO/IEC 15459-kompatibelt identifikator, udstedt under samme udstedende agentur, ved simpelthen at tilføje tegn til, eller fjerne dem fra, dets ende;\n med en dataidentifikator 27T batchnummer, de to adskilt af et bindestreg (-) tegn.</value>
+  </data>
+  <data name="di20027" xml:space="preserve">
+    <value>Batchnummer, udstedt under kontrol af en identificeret part eller enhed af forarbejdningsudstyr, eller under bestemmelserne af en identificeret licens, der:\n - entydigt adskiller en batch af relaterede varer fra alle andre batches, som et batchnummer er tildelt af partiet eller udstyret, eller under licensen, bekymret;\n - består af en streng med maksimal længde på 10 tegn, hvoraf det første (numeriske) tegn angiver antallet af følgende tegn, hver taget fra sættet .</value>
+  </data>
+  <data name="di2003" xml:space="preserve">
+    <value>Motorfragt Transportudstyr Identifikationskode tildelt af producenten i overensstemmelse med International Organisation for Standardization (ISO) standarder.</value>
+  </data>
+  <data name="di20030" xml:space="preserve">
+    <value>Første Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di20031" xml:space="preserve">
+    <value>Andet Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di20032" xml:space="preserve">
+    <value>Tredje Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di20033" xml:space="preserve">
+    <value>Fjerde Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di20034" xml:space="preserve">
+    <value>Femte Niveau (Leverandørtildelt).</value>
+  </data>
+  <data name="di2004" xml:space="preserve">
+    <value>Standard Carrier Alpha Code (SCAC) (4 alfanumeriske tegn) og et valgfrit transportørtildelt trailernummer (et til ti alfanumeriske tegn). Når det bruges, er det transportørtildelte trailernummer adskilt fra SCAC med en bindestreg '-'.</value>
+  </data>
+  <data name="di2005" xml:space="preserve">
+    <value>Receptacle Asset Nummer - Bestående af to sammenføjede dele:\n- Identifikation af en organisation i overensstemmelse med ISO/IEC 15459 og en unik enhedsidentifikation tildelt i overensstemmelse med regler fastsat af udstedende agentur.\n- Et unikt serienummer tildelt af enheden, afsluttet med en 3-tegns beholder typekode taget fra EDIFACT Kodeliste 8053 eller UPU standard M82-3. (Hvis beholder typekoden opført er mindre end tre tegn i længden, vil feltet blive dash '-' fyldt til venstre til længden af tre tegn).</value>
+  </data>
+  <data name="di2007" xml:space="preserve">
+    <value>Container Serienummer.\nI henhold til ISO 6346. OC EI CSN CD, hvor OC er den tredjebogstavs ejerkode tildelt i samarbejde med BIC, EI er den etbogstavs udstyrskategoriidentifikator, CSN er et 6-cifret unikt containeridentifikation tildelt af udstyrets ejer, og CD er et modulus 11 kontrolciffer beregnet i overensstemmelse med bilag A, ISO 6346.</value>
+  </data>
+  <data name="di2008" xml:space="preserve">
+    <value>Identifikation af en Returbar Container ejer tildelt i samarbejde med BIC.</value>
+  </data>
+  <data name="di2009" xml:space="preserve">
+    <value>Container Størrelse/Type Kode.\nI henhold til ISO 6346, Afsnit 4.2.</value>
+  </data>
+  <data name="di2010" xml:space="preserve">
+    <value>Container Ejer Kode. Faktisk fire-tegns forkortelse markeret på containeren af ejeren. For DOD ejede containere se Defense Transportation Regulation App EE-6.\n2020 Opdatering: datakilde reference opdateret til Defense Transportation Regulation, Del II, App TT beliggende på:\nhttps://www.ustranscom.mil/dtr/dtrp2.cfm</value>
+  </data>
+  <data name="di2011" xml:space="preserve">
+    <value>Vognnummer (komplet nummer minus kontrolciffer).</value>
+  </data>
+  <data name="di2012" xml:space="preserve">
+    <value>Kontrolciffer af Vognnummer identificeret i 11B.</value>
+  </data>
+  <data name="di2013" xml:space="preserve">
+    <value>Container Nummer Kode (sidste 5 cifre af nummeret ikke tællende kontrolciffer).</value>
+  </data>
+  <data name="di2014" xml:space="preserve">
+    <value>Tag Status.\nY=Autoriseret / N=Uautoriseret.</value>
+  </data>
+  <data name="di2015" xml:space="preserve">
+    <value>Farlig Gods Klasse.\nIMDG Klasse i formatet 'n.na' hvor n = numerisk, decimalpunkt udtrykkeligt kodet, og a = betinget alfabetisk kvalifikator. http://docs.imo.org/.</value>
+  </data>
+  <data name="di2016" xml:space="preserve">
+    <value>UN Kode for Farlige Varer.\nFor farligt gods leveret af afsender i overensstemmelse med UN Koden.\nwww.unece.org/trans/danger/publi/unrec/English/part3.pdf\n2020 Opdatering: URL ændret til http://www.unece.org/trans/danger/danger.html</value>
+  </data>
+  <data name="di2017" xml:space="preserve">
+    <value>Navn På Transport Emne.\nSkibsnanvn eller køretøjskode/togtur nummer på engelsk.</value>
+  </data>
+  <data name="di2018" xml:space="preserve">
+    <value>Skibs Registreringsnummer.\nDe tre bogstaver 'IMO' efterfulgt af det syvcifrede nummer tildelt til alle skibe af IHS Fairplay, når de er konstrueret. http://www.imonumbers.lrfairplay.com/.</value>
+  </data>
+  <data name="di2019" xml:space="preserve">
+    <value>Rejsenummer/Turnummer.\nBogstav og nummer.</value>
+  </data>
+  <data name="di2020" xml:space="preserve">
+    <value>Skibsland.\nISO 3166-1 Alpha 2 Kode.</value>
+  </data>
+  <data name="di2021" xml:space="preserve">
+    <value>Reserveret til Elektroniske Seglnumre.\nBestår af 18185-1 segl tag ID - 32 bits og ISO 14816 16-bits producentens ID (ISO 646).</value>
+  </data>
+  <data name="di2022" xml:space="preserve">
+    <value>Indgangsnummer/Type.\nBestår af den trecifrede filerkode, efterfulgt af det syvcifrede indgangsnummer, og afsluttet med det et ciffer kontrolciffer. Indgangs Filer Kode repræsenterer den trecifrede alfanumeriske filerkode tildelt til fileren eller importøren af CBP. Indgangsnummer repræsenterer det syvcifrede nummer tildelt af fileren. Nummeret kan tildeles på enhver bekvem måde, forudsat at det samme nummer ikke er tildelt mere end én CBP Form 7501. Førende nuller skal vises. Kontrolcifferet beregnes på de foregående 10 tegn. Formlen til beregning af kontrolcifferet kan findes i Bilag 1, CBP 7501 Instruktioner.\nIndgangstype er en tocifret kode i overensstemmelse med Blok 2, CBP 7501 Instruktioner.</value>
+  </data>
+  <data name="di2023" xml:space="preserve">
+    <value>Kaution Nummer.\nDen trecifrede numeriske kode, der identificerer kautionsselskabet på Toldbonden. Denne kode kan findes i blok 7 af CBP Form 301, eller er tilgængelig gennem CBP's automatiserede system til ABI-filere, via importørbond forespørgselstransaktionen. For U.S. Government importeringer og indgangstyper, der ikke kræver kaution, skal kode 999 vises i denne blok. Når kontanter eller offentlige værdipapirer bruges i stedet for kaution, brug kode 998.</value>
+  </data>
+  <data name="di2024" xml:space="preserve">
+    <value>Udenlandsk Laste Havn.\n'Schedule K' (Klassifikation af Udenlandske Havne efter Geografisk Handelsområde og Land) for den udenlandske havn, hvor varerne faktisk blev lastet på skibet, der bragte varerne til U.S. http://www.navigationdatacenter.us/wcsc/scheduleK/schedule k.htm.\n2020 Opdatering: URL ændret til: https://www.cbp.gov/sites/default/files/assets/documents/2017-Feb/appendix_f_0.pdf</value>
+  </data>
+  <data name="di2025" xml:space="preserve">
+    <value>Identifikation af en Part i en Transaktion som defineret i ISO 17364, tildelt af en indehaver af et Firmaidentifikationsnummer (CIN) og inkluderer det relaterede Udstedende Agenturs Kode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af RTI serienummeret, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di2026" xml:space="preserve">
+    <value>Unikt Returbar Transportgenstand Identifikator bestående af en sekvens af 5 dataelementer: 'IAC', efterfulgt af 'CIN', efterfulgt af 'RTI Nummer' (RTIN), efterfulgt af '+' tegnet, efterfulgt af leverandørtildelt (eller forvaltet) 'RTI Serienummer' (RTISN), der er globalt unikt inden for CIN indehaverens domæne; i formatet IAC CIN RTIN + RTISN (mellemrum tilføjet for visuel klarhed kun; de er ikke en del af dataene). Se Bilag C.11.</value>
+  </data>
+  <data name="di2027" xml:space="preserve">
+    <value>Globalt Unik Asset Identifikator for en Stor Lastbærer (LLC) Returbar Transportgenstand (RTI) med en side base på = 1000 mm, som defineret i ISO 17365:2013, tertiær emballage, lag 3 bestående af en sekvens af 5 dataelementer: 'IAC', efterfulgt af 'CIN', efterfulgt af RTI Type Kode 'RTITC', efterfulgt af '+' tegnet, efterfulgt af ejer tildelt (eller forvaltet) RTI Serienummer 'RTISN', der er globalt unikt inden for CIN indehaverens domæne i formatet IAC CIN RTITC + RTISN (mellemrum tilføjet for visuel klarhed kun; de er ikke en del af dataene).</value>
+  </data>
+  <data name="di2028" xml:space="preserve">
+    <value>Globalt Unik Asset Identifikator for en Lille Lastbærer (SLC) Returbar Transportgenstand med en side base på &lt; 1000 mm, som defineret i ISO 17364:2013 (RTI), tertiær emballage, lag 2 bestående af en sekvens af 5 dataelementer: 'IAC', efterfulgt af 'CIN', efterfulgt af RTI Type Kode 'RTITC', efterfulgt af '+' tegnet, efterfulgt af ejer tildelt (eller forvaltet) RTI Serienummer 'RTISN', der er globalt unikt inden for CIN indehaverens domæne i formatet IAC CIN RTITC + RTISN (mellemrum tilføjet for visuel klarhed kun; de er ikke en del af dataene).</value>
+  </data>
+  <data name="di2029" xml:space="preserve">
+    <value>Globalt Unik Returbar Emballagegenstand (RPI) identifikator af kategorien emballagehjælpemiddel (låg, blister, indlæg, ...) bestående af en sekvens af 5 dataelementer: 'IAC', efterfulgt af 'CIN', efterfulgt af 'RPI Nummer' RPIN, efterfulgt af '+' tegnet, efterfulgt af ejer tildelt (eller forvaltet) 'RPI Serienummer' RPISN, der er globalt unikt inden for CIN indehaverens domæne i formatet IAC CIN RPIN + RPISN (mellemrum tilføjet for visuel klarhed kun; de er ikke en del af dataene).</value>
+  </data>
+  <data name="di2030" xml:space="preserve">
+    <value>Emballagegenstandsnummer.\nNummer til identifikation af typen af emballagegenstand (materiale) brugt, når produkter og pakker pakkes.\nNummeret vil gøre det muligt for emballagegenstand (materiale) at blive identificeret og adskilt fra produkter, pakker, Returbare Transportgenstande (RTI'er) og Returbare Emballagegenstande (RPI'er) under pakning.\nNummeret konstrueres som en sekvens af minimum 1 dataelement:\nEmballagegenstand (materiale) nummer, der er unikt inden for indehaverens domæne.</value>
+  </data>
+  <data name="di2031" xml:space="preserve">
+    <value>Globalt Unikt Emballagenummer\nGlobalt unikt nummer til identifikation af typen af emballagegenstand (materiale) brugt, når produkter og pakker pakkes.\nDet globalt unikke nummer vil gøre det muligt for emballagegenstande (materialer) at blive identificeret og adskilt fra produkter, pakker, Returbare Transportgenstande (RTI'er) og Returbare Emballagegenstande (RPI'er) under pakning.\nNummeret konstrueres som en sekvens af 3 sammenkædede dataelementer:\nIAC, efterfulgt af CIN, efterfulgt af Emballagegenstand (materiale) nummer, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di2055" xml:space="preserve">
+    <value>Globalt Unik Returbar Emballagegenstand (RPI) som defineret i ISO 17364, tildelt af en indehaver af et Firmaidentifikationsnummer (CIN) og inkluderer det relaterede Udstedende Agenturs Kode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af RPI serienummeret, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di21005" xml:space="preserve">
+    <value>Specifikation af en posttjeneste og tilknyttede procesdata i overensstemmelse med UPU standard S25 datakonstrukt 'Service Data'</value>
+  </data>
+  <data name="di21006" xml:space="preserve">
+    <value>Licensering af Postdata, i overensstemmelse med specifikationen i UPU standard S25.</value>
+  </data>
+  <data name="di21015" xml:space="preserve">
+    <value>Specifikation af supplerende posttjeneste og tilknyttede procesdata i overensstemmelse med UPU standard S25 datakonstrukt 'Supplerende Service Data'.</value>
+  </data>
+  <data name="di21016" xml:space="preserve">
+    <value>Postadministration Identifikationer, værende identifikationen, udtrykt i overensstemmelse med specifikationen i UPU standard S25, af en eller flere postadministrationer involveret i behandlingen af en postgenstand eller batch.</value>
+  </data>
+  <data name="di21017" xml:space="preserve">
+    <value>UPU Placering Kode, værende en kode, der identificerer en placering eller geografisk område, eller en tilknyttet gruppe af sådanne placeringer eller områder, der har relevans for en relateret transaktion og som overholder en af de strukturer, der er defineret i a) til g) nedenfor:\na) to store bogstaver svarende til ISO 3166-1 to alfakode for landet, hvor, eller bestående af hvilket, placering(en) eller område(r) er placeret;\nb) tre store bogstaver svarende til IATA-koden for lufthavnen eller byen i, tæt på, eller bestående af hvilket placering(en) eller område(r) er placeret;\nc) fire eller flere tegn, hvoraf de første tre svarer til en ISO 3166-1 landekode efterfulgt af en bindestreg (-), med resten værende et postnummer i det pågældende land;\nd) fire eller flere tegn, hvoraf de første tre svarer til en ISO 3166-1 landekode efterfulgt af en prik (.), med resten værende en ISO 3166-2 landunderafdelingskode i det pågældende land;\ne) fem store bogstaver svarende til UN/LOCODE for området i, tæt på, eller bestående af hvilket, placering(en) eller område(r) er placeret;\nf) seks store alfanumeriske tegn svarende til en UPU IMPC-kode tildelt i overensstemmelse med UPU standard S34;\ng) sammenkædningen, værende ikke mindre end syv eller mere end 25 tegn i længden, af:\n - en udstederkode tildelt i overensstemmelse med UPU standarder S31;\n - en placering kode, bestående af tegn trukket fra sættet {A-Z; 0-9} som overholder specifikationerne for den pågældende udsteder.</value>
+  </data>
+  <data name="di21018" xml:space="preserve">
+    <value>Kvalificeret UPU Placering Kode, sammenkædning af:\n - en placeringkategori trukket fra UPU kodeliste 139;\n - en dataidentifikator 17U UPU placering kode.</value>
+  </data>
+  <data name="di21019" xml:space="preserve">
+    <value>Nummerplade med Service Data og Placering Kode er en sammensat datakonstrukt, i overensstemmelse med specifikationen i UPU standard S25, som inkluderer specifikation af:\n - en ISO/IEC 15459-kompatibel vareidentifikator;\n - en dataidentifikator 5U-kompatibel specifikation af den service, der skal leveres med hensyn til varen;\n - en dataidentifikator 17U-kompatibel UPU placering kode eller en dataidentifikator 18U-kompatibel kvalificeret UPU placering kode.\n Bemærk - For yderligere detaljer, henvises til UPU standard S25. Forskellen mellem en simpel UPU placering kode (DI 17U) og en kvalificeret UPU placering kode (DI 18U) kan bestemmes ud fra det første tegn. Hvis dette er numerisk, gælder 18U; hvis det er alfabetisk, gælder 17U.</value>
+  </data>
+  <data name="di21055" xml:space="preserve">
+    <value>OCR Data Locator.</value>
+  </data>
+  <data name="di22000" xml:space="preserve">
+    <value>Leverandørkode Tildelt af Kunde.</value>
+  </data>
+  <data name="di22001" xml:space="preserve">
+    <value>Leverandørkode Tildelt af Leverandør.</value>
+  </data>
+  <data name="di22002" xml:space="preserve">
+    <value>U.P.C. Firma Præfiks.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.\nIfølge GS1 bruges udtrykket "U.P.C." ikke længere, og metadataen (an2+n8) er ikke længere korrekt. GS1 anbefaler, at denne DI ikke bruges til fremtidige applikationer.</value>
+  </data>
+  <data name="di22003" xml:space="preserve">
+    <value>GS1 Firma Præfiks.\n2020 Opdatering: GS1 anbefaler, at denne DI ikke længere bruges, og at brugere af denne DI migrerer til GS1 datakvalifikatorer (Applikationsidentifikatorer) i henhold til ISO/IEC 15418 og ISO/IEC 15459-3.\nIfølge GS1 er metadataen (an2+n9) ikke længere korrekt. GS1 anbefaler, at denne DI ikke bruges til fremtidige applikationer.</value>
+  </data>
+  <data name="di22004" xml:space="preserve">
+    <value>Transportør Identifikationskode tildelt af en industri standard gensidigt defineret af Leverandøren, Transportøren og Kunden.</value>
+  </data>
+  <data name="di22005" xml:space="preserve">
+    <value>Finansiel Institution Identifikationskode (gensidigt defineret).</value>
+  </data>
+  <data name="di22006" xml:space="preserve">
+    <value>Producentens Identifikationskode (gensidigt defineret.</value>
+  </data>
+  <data name="di22007" xml:space="preserve">
+    <value>Kode tildelt til en part, som har finansiel ansvarlighed for en enhed eller gruppe af enheder (f.eks., ejer af lager) (gensidigt defineret).</value>
+  </data>
+  <data name="di22008" xml:space="preserve">
+    <value>Kundekode Tildelt af Kunden.</value>
+  </data>
+  <data name="di22009" xml:space="preserve">
+    <value>Kundekode Tildelt af Leverandøren.</value>
+  </data>
+  <data name="di22010" xml:space="preserve">
+    <value>Producent ID\nBEMÆRK - Se Bilag 2, CBP 7501 Instruktioner.</value>
+  </data>
+  <data name="di22011" xml:space="preserve">
+    <value>Organisation med budgetansvar for en enhed, proces eller procedure (f.eks., værksted, division, afdeling)(internt tildelt).</value>
+  </data>
+  <data name="di22012" xml:space="preserve">
+    <value>DUNS Nummer Identificerende Producent.</value>
+  </data>
+  <data name="di22013" xml:space="preserve">
+    <value>DUNS Nummer Identificerende Leverandør.</value>
+  </data>
+  <data name="di22014" xml:space="preserve">
+    <value>DUNS Nummer Identificerende Kunde.</value>
+  </data>
+  <data name="di22015" xml:space="preserve">
+    <value>Transportør-Tildelt Afsendernummer.</value>
+  </data>
+  <data name="di22016" xml:space="preserve">
+    <value>VMRS Leverandør ID.</value>
+  </data>
+  <data name="di22017" xml:space="preserve">
+    <value>U.S. DoD CAGE Kode.</value>
+  </data>
+  <data name="di22018" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion, hvor dataformatet består af to sammenkædede segmenter. Det første segment er Udstedende Agenturs Kode (IAC) i overensstemmelse med ISO/IEC 15459, det andet segment er en unik enhedsidentifikation Firmaidentifikationsnummer (CIN) tildelt i overensstemmelse med regler fastsat af udstedende agentur (se http://www.aimglobal.org/?page=Reg_Authority15459&amp;hhSearchTerms=%22IAC%22).</value>
+  </data>
+  <data name="di22019" xml:space="preserve">
+    <value>Specifikation af en parts rolle(r) i en transaktion, bestående af en eller flere kodeværdier fra EDIFACT Kodeliste 3035 'Part Kvalifikator', adskilt af plus (+) tegn (Må aldrig sammenkædes med andre DIs i et lineært symbol eller andet medie, hvor sammenkædningstegnet er et plus (+) tegn).</value>
+  </data>
+  <data name="di22020" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion tildelt af en indehaver af et Firmaidentifikationsnummer (CIN) og inkluderer det relaterede Udstedende Agenturs Kode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af et plus (+) tegn efterfulgt af en eller flere kodeværdier fra EDIFACT Kodeliste 3035 'Part Kvalifikator', adskilt af plus (+) tegn (Må aldrig sammenkædes med andre DIs i et lineært symbol eller andet medie, hvor sammenkædningstegnet er et plus (+) tegn).</value>
+  </data>
+  <data name="di22021" xml:space="preserve">
+    <value>Identifikation af en part i en transaktion, f.eks., 21V IAC CIN OSU, tildelt af en indehaver af et Firmaidentifikationsnummer (CIN) og inkluderer det relaterede Udstedende Agenturs Kode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som en sekvens af 3 sammenkædede dataelementer: IAC, efterfulgt af CIN, efterfulgt af den organisatoriske underenhedsidentifikation tildelt af CIN, der er unikt inden for CIN indehaverens domæne.</value>
+  </data>
+  <data name="di22022" xml:space="preserve">
+    <value>Transportør SCAC.\nStandard Carrier Alpha Code - The National Motor Freight Traffic Association, Inc., (NMFTA) tildeler SCACs for alle virksomheder undtagen dem, der bruges til identifikation af fragtcontainere, der ikke opererer udelukkende i Nordamerika, intermodale chassis og trailere, ikke-jernbaneejede jernbanevogne og jernbaner. http://www.nmfta.org/Pages/welcome.aspx\nVirksomheder, der søger identifikationskoder til fragtcontainere, der ikke opererer i Nordamerika, bør kontakte Bureau International des Containers, 38, rue des Blancs Manteaux, F75004 Paris, Frankrig, e-mail: bic@bic-code.org, web www.biccode.org. Jernbaner og ejere af intermodale chassis, trailere og ikke-jernbaneejede jernbanevogne bør kontakte Railinc Kundeservice, Att: Private Marks, 7001 Weston Parkway, Suite 200, Cary, NC 27513, (800) 544-7245, e-mail: private.marks@railinc.com.</value>
+  </data>
+  <data name="di22023" xml:space="preserve">
+    <value>Regerings-tildelt Merværdiafgift identifikationsnummer, der identificerer leverandør, startende med en ISO 3166-1 alfa-2 landekode (undtagen for Grækenland, som bruger ISO 639-1 sprogkoden EL), efterfulgt af det regeringstildelte momsnummer.\nEksempel:\n23VIE6388047V tildelt til Google Irland.</value>
+  </data>
+  <data name="di22024" xml:space="preserve">
+    <value>Regerings-tildelt Merværdiafgift identifikationsnummer, der identificerer kunde, startende med en ISO 3166-1 alfa-2 landekode (undtagen for Grækenland, som bruger ISO 639-1 sprogkoden EL), efterfulgt af det regeringstildelte momsnummer.\nEksempel:\n24VIE6388047V tildelt til Google Irland.</value>
+  </data>
+  <data name="di22025" xml:space="preserve">
+    <value>Erklærer, at NCAGE/CAGE-koden, der følger DI 25V, er Producenten. Part i en transaktion, hvor NATO Commercial And Government Entity (NCAGE) / Commercial And Government Entity (CAGE) koden brugt bag DI 25V erklæres at være producenten af de genstand(e), der er involveret i transaktionen. Data efter DI 25V vil bestå af fem store alfanumeriske tegn, eksklusive bogstaverne "I" og "O".</value>
+  </data>
+  <data name="di23000" xml:space="preserve">
+    <value>Arbejdsordrenummer (f.eks., 'Produktionspapir') (internt tildelt).</value>
+  </data>
+  <data name="di23001" xml:space="preserve">
+    <value>Operationssekvensnummer. Et nummer, der definerer rækkefølgen af en bestemt operation i en serie af operationer, generelt i en fremstillings- eller samleproces.</value>
+  </data>
+  <data name="di23002" xml:space="preserve">
+    <value>Operationskode/Arbejdskode - typen af arbejde, der skal udføres (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di23003" xml:space="preserve">
+    <value>Kombineret Arbejdsordrenummer og Operationssekvensnummer i formatet nn...n+nn...n, hvor et plus-symbol (+) bruges som skilletegn mellem Arbejdsordrenummeret og Operationssekvensnummeret.</value>
+  </data>
+  <data name="di23004" xml:space="preserve">
+    <value>Statuskode (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di23005" xml:space="preserve">
+    <value>Arbejdsenhedskode - identificerer system, subsystem, samling, komponent osv., hvorpå vedligeholdelse udføres.</value>
+  </data>
+  <data name="di23006" xml:space="preserve">
+    <value>Nomenklatur - (internt tildelt eller gensidigt defineret).</value>
+  </data>
+  <data name="di23010" xml:space="preserve">
+    <value>Formkontrolnummer - Fortrykt kontrolnummer på formularer.</value>
+  </data>
+  <data name="di23011" xml:space="preserve">
+    <value>Kvalitetssikringsinspektør - Efternavn.</value>
+  </data>
+  <data name="di23012" xml:space="preserve">
+    <value>Telefonnummer for Personen/Aktiviteten, der Udfylder Formularen - udtrykt i formatet (landekode) by- eller områdekode plus lokalt nummer dvs. (1) 319 555 1212.</value>
+  </data>
+  <data name="di26000" xml:space="preserve">
+    <value>Gensidigt Defineret Mellem Kunde og Leverandør</value>
+  </data>
+  <data name="di26001" xml:space="preserve">
+    <value>Gensidigt Defineret Mellem Transportør og Leverandør</value>
+  </data>
+  <data name="di26002" xml:space="preserve">
+    <value>Gensidigt Defineret Mellem Kunde og Transportør</value>
+  </data>
+  <data name="di26003" xml:space="preserve">
+    <value>Fritekst</value>
+  </data>
+  <data name="di26004" xml:space="preserve">
+    <value>Gensidigt Defineret Mellem Transportør og Handelspartner</value>
+  </data>
+  <data name="di26010" xml:space="preserve">
+    <value>Struktureret Fritekst (Header Data)</value>
+  </data>
+  <data name="di26011" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 1 Data)</value>
+  </data>
+  <data name="di26012" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 2 Data)</value>
+  </data>
+  <data name="di26013" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 3 Data)</value>
+  </data>
+  <data name="di26014" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 4 Data)</value>
+  </data>
+  <data name="di26015" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 5 Data)</value>
+  </data>
+  <data name="di26016" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 6 Data)</value>
+  </data>
+  <data name="di26017" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 7 Data)</value>
+  </data>
+  <data name="di26018" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 8 Data)</value>
+  </data>
+  <data name="di26019" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 9 Data)</value>
+  </data>
+  <data name="di26020" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 10 Data)</value>
+  </data>
+  <data name="di26021" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 11 Data)</value>
+  </data>
+  <data name="di26022" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 12 Data)</value>
+  </data>
+  <data name="di26023" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 13 Data)</value>
+  </data>
+  <data name="di26024" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 14 Data)</value>
+  </data>
+  <data name="di26025" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 15 Data)</value>
+  </data>
+  <data name="di26026" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 16 Data)</value>
+  </data>
+  <data name="di26027" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 17 Data)</value>
+  </data>
+  <data name="di26028" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 18 Data)</value>
+  </data>
+  <data name="di26029" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 19 Data)</value>
+  </data>
+  <data name="di26030" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 20 Data)</value>
+  </data>
+  <data name="di26031" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 21 Data)</value>
+  </data>
+  <data name="di26032" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 22 Data)</value>
+  </data>
+  <data name="di26033" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 23 Data)</value>
+  </data>
+  <data name="di26034" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 24 Data)</value>
+  </data>
+  <data name="di26035" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 25 Data)</value>
+  </data>
+  <data name="di26036" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 26 Data)</value>
+  </data>
+  <data name="di26037" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 27 Data)</value>
+  </data>
+  <data name="di26038" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 28 Data)</value>
+  </data>
+  <data name="di26039" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 29 Data)</value>
+  </data>
+  <data name="di26040" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 30 Data)</value>
+  </data>
+  <data name="di26041" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 31 Data)</value>
+  </data>
+  <data name="di26042" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 32 Data)</value>
+  </data>
+  <data name="di26043" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 33 Data)</value>
+  </data>
+  <data name="di26044" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 34 Data)</value>
+  </data>
+  <data name="di26045" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 35 Data)</value>
+  </data>
+  <data name="di26046" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 36 Data)</value>
+  </data>
+  <data name="di26047" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 37 Data)</value>
+  </data>
+  <data name="di26048" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 38 Data)</value>
+  </data>
+  <data name="di26049" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 39 Data)</value>
+  </data>
+  <data name="di26050" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 40 Data)</value>
+  </data>
+  <data name="di26051" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 41 Data)</value>
+  </data>
+  <data name="di26052" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 42 Data)</value>
+  </data>
+  <data name="di26053" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 43 Data)</value>
+  </data>
+  <data name="di26054" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 44 Data)</value>
+  </data>
+  <data name="di26055" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 45 Data)</value>
+  </data>
+  <data name="di26056" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 46 Data)</value>
+  </data>
+  <data name="di26057" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 47 Data)</value>
+  </data>
+  <data name="di26058" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 48 Data)</value>
+  </data>
+  <data name="di26059" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 49 Data)</value>
+  </data>
+  <data name="di26060" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 50 Data)</value>
+  </data>
+  <data name="di26061" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 51 Data)</value>
+  </data>
+  <data name="di26062" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 52 Data)</value>
+  </data>
+  <data name="di26063" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 53 Data)</value>
+  </data>
+  <data name="di26064" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 54 Data)</value>
+  </data>
+  <data name="di26065" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 55 Data)</value>
+  </data>
+  <data name="di26066" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 56 Data)</value>
+  </data>
+  <data name="di26067" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 57 Data)</value>
+  </data>
+  <data name="di26068" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 58 Data)</value>
+  </data>
+  <data name="di26069" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 59 Data)</value>
+  </data>
+  <data name="di26070" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 60 Data)</value>
+  </data>
+  <data name="di26071" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 61 Data)</value>
+  </data>
+  <data name="di26072" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 62 Data)</value>
+  </data>
+  <data name="di26073" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 63 Data)</value>
+  </data>
+  <data name="di26074" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 64 Data)</value>
+  </data>
+  <data name="di26075" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 65 Data)</value>
+  </data>
+  <data name="di26076" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 66 Data)</value>
+  </data>
+  <data name="di26077" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 67 Data)</value>
+  </data>
+  <data name="di26078" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 68 Data)</value>
+  </data>
+  <data name="di26079" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 69 Data)</value>
+  </data>
+  <data name="di26080" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 70 Data)</value>
+  </data>
+  <data name="di26081" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 71 Data)</value>
+  </data>
+  <data name="di26082" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 72 Data)</value>
+  </data>
+  <data name="di26083" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 73 Data)</value>
+  </data>
+  <data name="di26084" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 74 Data)</value>
+  </data>
+  <data name="di26085" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 75 Data)</value>
+  </data>
+  <data name="di26086" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 76 Data)</value>
+  </data>
+  <data name="di26087" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 77 Data)</value>
+  </data>
+  <data name="di26088" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 78 Data)</value>
+  </data>
+  <data name="di26089" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 79 Data)</value>
+  </data>
+  <data name="di26090" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 80 Data)</value>
+  </data>
+  <data name="di26091" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 81 Data)</value>
+  </data>
+  <data name="di26092" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 82 Data)</value>
+  </data>
+  <data name="di26093" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 83 Data)</value>
+  </data>
+  <data name="di26094" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 84 Data)</value>
+  </data>
+  <data name="di26095" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 85 Data)</value>
+  </data>
+  <data name="di26096" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 86 Data)</value>
+  </data>
+  <data name="di26097" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 87 Data)</value>
+  </data>
+  <data name="di26098" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 88 Data)</value>
+  </data>
+  <data name="di26099" xml:space="preserve">
+    <value>Struktureret Fritekst (Linje 89 Data)</value>
+  </data>
+  <data name="di3" xml:space="preserve">
+    <value>'LIG MED'-tegnet. ICCBB</value>
+  </data>
+  <data name="di3000" xml:space="preserve">
+    <value>Fortsættelse af en Varekode (Kategori 16) tildelt af Kunde, der er for lang til en påkrævet feltstørrelse.</value>
+  </data>
+  <data name="di3001" xml:space="preserve">
+    <value>Fortsættelse af Sporingskode (Kategori 20) tildelt af Leverandør.</value>
+  </data>
+  <data name="di3002" xml:space="preserve">
+    <value>Fortsættelse af Serienummer (Kategori 19) tildelt af Leverandør.</value>
+  </data>
+  <data name="di3003" xml:space="preserve">
+    <value>Fortsættelse af Fritekst (Kategori 26) gensidigt defineret mellem Leverandør/Transportør/Kunde.</value>
+  </data>
+  <data name="di3004" xml:space="preserve">
+    <value>Fortsættelse af Transaktionsreference (Kategori 11) gensidigt defineret mellem Leverandør/Transportør/Kunde.</value>
+  </data>
+  <data name="di3005" xml:space="preserve">
+    <value>Fortsættelse af Varekode (Kategori 16) Tildelt af Leverandør.</value>
+  </data>
+  <data name="di4" xml:space="preserve">
+    <value>Funktion 1 (FUNC1) tegn. Fremkommer i den første position efter symbologi starttegnet af et Code 128, Code 49, eller Code 16K Symbol for at signalere et GS1-kontrolleret symbol.</value>
+  </data>
+  <data name="di4000" xml:space="preserve">
+    <value>Format ÅÅMMDD.</value>
+  </data>
+  <data name="di4001" xml:space="preserve">
+    <value>Format DDMMÅÅ.</value>
+  </data>
+  <data name="di4002" xml:space="preserve">
+    <value>Format MMDDÅÅ.</value>
+  </data>
+  <data name="di4003" xml:space="preserve">
+    <value>Format ÅDDD (Juliansk).</value>
+  </data>
+  <data name="di4004" xml:space="preserve">
+    <value>Format ÅÅDDD (Juliansk).</value>
+  </data>
+  <data name="di4005" xml:space="preserve">
+    <value>ISO format ÅÅMMDD umiddelbart efterfulgt af et ANSI X12.3 Data Element Nummer 374 Kvalifikator, der giver en kode, der specificerer type af dato (f.eks., forsendelsesdato, fremstillingsdato).</value>
+  </data>
+  <data name="di4006" xml:space="preserve">
+    <value>ISO format ÅÅÅÅMMDD umiddelbart efterfulgt af et ANSI X12.3 Data Element Nummer 374 Kvalifikator, der giver en kode, der specificerer type af dato (f.eks., forsendelsesdato, fremstillingsdato).</value>
+  </data>
+  <data name="di4007" xml:space="preserve">
+    <value>Format MMÅÅ.</value>
+  </data>
+  <data name="di4008" xml:space="preserve">
+    <value>Begivenhed, Dato og Tid.\nISO-format ÅÅÅÅMMDDHHMM (24-timers ur - UTC) umiddelbart efterfulgt af en UN/EDIFACT-kodekvalifikator 2005, der angiver en datotype, f.eks.,\n11 [Dato, hvor det forventes, at varer afsendes/forsendelsesbesked udstedes.];\n17 [Anslået leveringsdato/-tid, hvor det forventes, at varer leveres];\n35 [Datoen, hvor varer leveres til deres destination.];\n118 [Booking bekræftet];\n129 [Dato, når skibet/merchandise forlod den sidste udenlandske havn i eksportlandet.];\n132 [Dato/tid, når transportøren skønner, at et transportmiddel bør ankomme til losningshavnen eller bestemmelsesstedet.];\n133 [Dato/tid, når transportøren skønner, at et transportmiddel bør afgå fra afgangsstedet];\n137 [Dato/tid, når leverandøren afsender dele baseret på kundens anmodning. (Dato, når DESADV-besked udstedes. Anbefalingen er, at DESADV udstedes inden for 30 minutter efter varer er hentet hos ShipFrom-part];\n146 [Anslået indgangsdato (Told) dato, hvor den officielle dato for en toldindgang forventes.];\n151 [Importdato (Ankommet til havn med intention om at losse];\n186 Afgår fra en facilitet ('Gate-out)];\n204 [Dato, hvor tolden frigiver merchandise til transportøren eller importøren];\n253 [Afgår fra en havn ('Skibsafgang')];\n252 [Ankommer til en havn ('Skibsanankomst')];\n283 [Ankommer til en facilitet ('Gate-in)];\n342 [Transportmiddel lastet];\n351 [Terminalportinspektion];\n411 [Bestilt fyldt];\n412 [Bestilt tømt];\n420 [Transportmiddel aflæsset];\n534 [Repareret];\n677 [Bekræftet fyldt];\n678 [Bekræftet tømt];\n696 [Indleveringsdato].</value>
+  </data>
+  <data name="di4009" xml:space="preserve">
+    <value>Dato (struktur og betydning gensidigt defineret).</value>
+  </data>
+  <data name="di4010" xml:space="preserve">
+    <value>Format ÅÅWW.</value>
+  </data>
+  <data name="di4011" xml:space="preserve">
+    <value>Format ÅÅÅÅWW.</value>
+  </data>
+  <data name="di4012" xml:space="preserve">
+    <value>Format ÅÅÅÅMMDD.</value>
+  </data>
+  <data name="di4013" xml:space="preserve">
+    <value>Ældste og nyeste fremstillingsdato i formatet ÅÅMMÅÅMM.</value>
+  </data>
+  <data name="di4014" xml:space="preserve">
+    <value>Udløbsdato (ÅÅÅÅMMDD).</value>
+  </data>
+  <data name="di4015" xml:space="preserve">
+    <value>Udløbsdato (DDMMÅÅÅÅ).</value>
+  </data>
+  <data name="di4016" xml:space="preserve">
+    <value>Produktionsdato (ÅÅÅÅMMDD) - Fremstillingsdato.</value>
+  </data>
+  <data name="di4017" xml:space="preserve">
+    <value>Produktionsdato (DDMMÅÅÅÅ).</value>
+  </data>
+  <data name="di4018" xml:space="preserve">
+    <value>Tag aktiveringstid.\nÅÅÅÅMMDDHHMM (24-timers ur - UTC).</value>
+  </data>
+  <data name="di4019" xml:space="preserve">
+    <value>Tag deaktiveringstid.\nÅÅÅÅMMDDHHMM (24-timers ur - UTC).</value>
+  </data>
+  <data name="di4020" xml:space="preserve">
+    <value>Inspektionsdato (DDMMÅÅÅÅ).</value>
+  </data>
+  <data name="di4021" xml:space="preserve">
+    <value>Krævet leveringsdato (DDD Julian) eller DOD MILSTAMP-kode.</value>
+  </data>
+  <data name="di4022" xml:space="preserve">
+    <value>Optagelsestid.\nÅÅÅÅMMDDHHMM (24-timers ur - UTC).</value>
+  </data>
+  <data name="di4023" xml:space="preserve">
+    <value>Dato, repræsenteret i modificeret UTC-kompatibel form:\nåååå[mm[dd[tt[mm[ss[fff]]]]]][poooo] hvor firkantede parenteser indikerer valgfrihed og åååå er året, mmdd måneden og dagen, ttmmss tidspunktet på dagen i timer minutter og sekunder, fff brøkdele af sekunder og poooo forskellen fra UTC udtrykt i timer og minutter, forskellen er positiv hvis p er et punktum (.), negativ hvis P er et minus tegn (-).\nEKSEMPEL:\n2005 - (UTC) kalenderår 2005;\n200505 - (UTC) kalendermåned maj 2005;\n20050518 - (UTC) 18. maj 2005;\n200505181247 - 12:47 UTC den 18. maj 2005;\n200505181247.0100 - 12:47 lokal tid, svarende til 11:47 UTC, den 18. maj 2005;\n20050518124723099 - 99 millisekunder efter 12:47:23 UTC den 18. maj 2005.</value>
+  </data>
+  <data name="di4024" xml:space="preserve">
+    <value>Kvalificeret dato, bestående af sammenkædningen af:\n- en ISO/IEC 15459 udstedende agenturs kode;\n- en dato kvalifikator i overensstemmelse med specifikationerne fra det udstedende agentur;\n- en dato hvis format og fortolkning overholder specifikationerne fra det udstedende agentur for den pågældende dato kvalifikator.</value>
+  </data>
+  <data name="di4025" xml:space="preserve">
+    <value>Bedst før dato: (ÅÅÅÅMMDD).\nEksempel: 25D20170202 = 2. februar 2017</value>
+  </data>
+  <data name="di4026" xml:space="preserve">
+    <value>Første frysedato (ÅÅÅÅMMDD).\nDen første frysedato defineres som datoen, hvor produkter fryses umiddelbart efter slagtning, høst, fangst eller efter første forarbejdning.\nEksempel: 26D20170721 = 21. juli 2017.</value>
+  </data>
+  <data name="di4027" xml:space="preserve">
+    <value>Høstdato (ÅÅÅÅMMDD).\nDatoen hvor et dyr blev slagtet eller dræbt, en fisk blev høstet, eller en afgrøde blev høstet.\nEksempel: 27D20170615 = 15. juni 2017.</value>
+  </data>
+  <data name="di4028" xml:space="preserve">
+    <value>Høstdato interval (ÅÅÅÅMMDDÅÅÅÅMMDD).\nStartdatoen og slutdatoen for intervallet, hvor høstning fandt sted.\nFor eksempel; dyr blev slagtet eller dræbt, fisk blev høstet, eller en afgrøde blev høstet.\nDatastrømmen er defineret som den første ÅÅÅÅMMDD som startdato og den sidste ÅÅÅÅMMDD som slutdato.\nEksempel:\n28D2017012320170214 = Start; 23. januar 2017. Slut; 14. februar 2017.</value>
+  </data>
+  <data name="di5" xml:space="preserve">
+    <value>'Venstre firkantet parentes', 'Højre parentes', 'Større end tegn', 'Record Separator' tegn. Datastruktur i overensstemmelse med ISO/IEC 15434, Informationsteknologi - Automatisk identifikation og datafangstteknikker - Syntaks for medier med høj kapacitet.\nKlassificeret stoffer klassifikation - 'Miljøklassifikationskode' inklusive blyfri (Pb-fri) finish kategorier defineret i JESD97 (IPC JEDEC J-STD-609), og fremtidige industri eller regeringsagentur tildelte koder relateret til miljøregulativ overholdelse og farligt materiale indhold.</value>
+  </data>
+  <data name="di5000" xml:space="preserve">
+    <value>Klassifikation af begrænsede stoffer - 'Miljøklassifikationskode' inklusive blyfri (Pb-fri) overfladekategorier defineret i JESD97 (IPC JEDEC J-STD-609), samt fremtidige koder tildelt af industrien eller statslige myndigheder relateret til miljømæssig lovgivningsmæssig overholdelse og indhold af farlige materialer.</value>
+  </data>
+  <data name="di5001" xml:space="preserve">
+    <value>Lufttryk - (højde) udtrykt i Pascal som den internationale standardmåling.</value>
+  </data>
+  <data name="di5002" xml:space="preserve">
+    <value>Maksimal tilladt temperatur. Maksimal tilladt temperatur; grader Celsius, '-' (minus) kodet, hvis nødvendigt.</value>
+  </data>
+  <data name="di5003" xml:space="preserve">
+    <value>Minimum tilladt temperatur.\nMinimum tilladt temperatur; grader Celsius, '-' (minus) kodet, hvis nødvendigt.</value>
+  </data>
+  <data name="di5004" xml:space="preserve">
+    <value>Maksimal tilladt relativ fugtighed.\nMaksimal tilladt relativ fugtighed, antydet som procent.</value>
+  </data>
+  <data name="di5005" xml:space="preserve">
+    <value>Minimum tilladt relativ fugtighed.\nMaksimal tilladt relativ fugtighed, udtrykt som procent.</value>
+  </data>
+  <data name="di5006" xml:space="preserve">
+    <value>Køleskabscontainer temperatur.\nFor temperaturkontrolleret last, mål specificeret af afsender, grader Celsius, '-' (minus) kodet, hvis nødvendigt.</value>
+  </data>
+  <data name="di5010" xml:space="preserve">
+    <value>Kumulativ tids temperatur indeks - udtrykt som antallet af målinger eller optællinger.</value>
+  </data>
+  <data name="di5011" xml:space="preserve">
+    <value>Tids temperatur indeks - Næste højere samling - udtrykt som antallet af målinger eller optællinger.</value>
+  </data>
+  <data name="di5012" xml:space="preserve">
+    <value>Erklæring af emballagemateriale kategori*, kode* og vægt for et givent emballagemateriale anvendt i en given emballage i henhold til EU's emballage- og emballageaffaldsdirektiv. (Materialekategori og kode defineret i bilag M).\n12ECCMMMMMMNNNNNUU hvor: - '12E' (an3) er dataidentifikatoren;\n - 'CC' (n2) er materialekategorien per bilag M;\n - 'MMMMMM' (an1...6) er materialekoden per bilag M;\n - 'NNNNN' (n5) materiale vægt, inklusive decimalpunkt (f.eks., 12.12);\n - 'UU' (an2) er vægtenheden (f.eks., KG, GR, LB eller OZ per ANSI X12.3 som i bilag D).</value>
+  </data>
+  <data name="di5013" xml:space="preserve">
+    <value>Dataene efter DI 13E vil være en af MSL-indikatorerne (1, 2, 2a, 3, 4, 5, 5a, 6) som vist i LEVEL kolonnen i tabel 5-1 af JEDEC standard IPC/JEDEC J-STD-020E. Tabellen vises her kun som reference; den aktuelt udgivne version af den refererede standard skal bruges til at opnå den korrekte MSL for den aktuelle komponent. Eksempel: 13E2a</value>
+  </data>
+  <data name="di6" xml:space="preserve">
+    <value>'Bindestreg' eller 'minus' tegnet. Farmaceutisk centralt nummer (PZN), kontrolleret af IFA-ABDATA, Tyskland (Registrering af dette systemidentifikator udløber den 01-07-2016). Erstattet af '9N'.</value>
+  </data>
+  <data name="di6000" xml:space="preserve">
+    <value>Looping Header.</value>
+  </data>
+  <data name="di6001" xml:space="preserve">
+    <value>Min forælder ______ er . . . Unikt identifikator efterfulgt af en dataidentifikator og tilhørende data (til brug med returemballage). Denne dataidentifikator skal umiddelbart følge feltet (konstrueret af en dataidentifikator, data og en gruppeseparator) hvormed den er associeret.</value>
+  </data>
+  <data name="di6003" xml:space="preserve">
+    <value>Jeg har ______ børn . . . (til brug med returemballage, f.eks.; 3F10, for ti børn). Denne dataidentifikator skal umiddelbart følge feltet (konstrueret af en dataidentifikator, data og en gruppeseparator) hvormed den er associeret.</value>
+  </data>
+  <data name="di6004" xml:space="preserve">
+    <value>Logisk tildeling af en side med oplysninger inden for en gruppe af sider, der er spredt på flere databærere, struktureret som en sekvens af op til tre (3) sammenkædede dataelementer, adskilt af en skråstreg ( / ) :\n Sidetal (påkrævet), efterfulgt af sidetælling (valgfri, påkrævet for den sidste side), efterfulgt af en alfanumerisk gruppe-ID (valgfri; hvis brugt så påkrævet for alle sider og struktureret i overensstemmelse med ISO/IEC 15459-3 som en sekvens af 3 dataelementer: Udstedende agenturs kode, efterfulgt af firmaidentifikationsnummer, efterfulgt af en alfanumerisk kode unik inden for udstederens domæne).\n Efterfølgende skråstreger er valgfrie.</value>
+  </data>
+  <data name="di6005" xml:space="preserve">
+    <value>Jeg har ______ børn og de er . . . (til brug med returemballage) Denne dataidentifikator skal umiddelbart følge feltet (konstrueret af en dataidentifikator, data og en gruppeseparator) hvormed den er associeret.</value>
+  </data>
+  <data name="di7" xml:space="preserve">
+    <value>'Udråbstegn'. Eurokode-IBLS</value>
+  </data>
+  <data name="di8000" xml:space="preserve">
+    <value>Navn på part.\nNavnet på en part efterfulgt af et plus (+) tegn efterfulgt af en eller flere kodeværdier fra EDIFACT-kodeliste 3035 'Party Qualifier', f.eks.;\nBY [Køber];\nCF [Containeroperatør];\nCN [Modtager];\nCS [Konsolidator];\nDEI [Skibsfører/kaptajn på skib];\nFA [Operationelt personale kode];\nIM [Importør];\nMF [Producent];\nOS [Afsender];\nSE [Sælger];\nST [Send til];\nUC [Endelig modtager].</value>
+  </data>
+  <data name="di8001" xml:space="preserve">
+    <value>Ansat identifikationskode tildelt af arbejdsgiver.</value>
+  </data>
+  <data name="di8002" xml:space="preserve">
+    <value>U.S. Social Security Number.</value>
+  </data>
+  <data name="di8003" xml:space="preserve">
+    <value>ID-nummer for ikke-ansat (internt tildelt eller gensidigt defineret) (f.eks., kontraktarbejdere, leverandører, service- og leveringspersonale).</value>
+  </data>
+  <data name="di8004" xml:space="preserve">
+    <value>Nationalt socialsikringsnummer.</value>
+  </data>
+  <data name="di8005" xml:space="preserve">
+    <value>Efternavn.</value>
+  </data>
+  <data name="di8006" xml:space="preserve">
+    <value>Partinavn (Linje 2).</value>
+  </data>
+  <data name="di8007" xml:space="preserve">
+    <value>Kontakttelefon.\nLande kode, områdekode, central, nummer [XX YYY ZZZ ZZZZ].</value>
+  </data>
+  <data name="di8008" xml:space="preserve">
+    <value>Kontakt email.</value>
+  </data>
+  <data name="di8009" xml:space="preserve">
+    <value>Modtager nummer.\nDet unikke identificerende nummer kan være IRS, EIN, SSN eller det af CBP tildelte nummer, som krævet på Security Filing. Kun følgende formater skal bruges: IRS EIN: NN-NNNNNNN;\nIRS EIN m/ suffix:\nNN-NNNNNNNXX;\nSSN: NNN-NN-NNNN;\nCBP tildelt nbr: YYDDPP-NNNNN.</value>
+  </data>
+  <data name="di8010" xml:space="preserve">
+    <value>Personlig identifikationskode (første initial, sidste initial, de sidste fire af SSN).</value>
+  </data>
+  <data name="di8011" xml:space="preserve">
+    <value>Fornavn og mellemnavns initial.</value>
+  </data>
+  <data name="di8012" xml:space="preserve">
+    <value>Militærgrad (E1-E9, W1-W5 og O1-O10).\n2020 Opdatering: Metadataformat er ændret for at stemme overens med de faktiske officergrader i brug af militæret: "an2+an3". Forklaringsinformationen er ændret til: "Militærgrad (E1-E9, W1-W5 og O1-O11).</value>
+  </data>
+  <data name="di8015" xml:space="preserve">
+    <value>Et nationalt identifikationsnummer, nationalt identitetsnummer eller nationalt forsikringsnummer brugt som et middel til at identificere individer inden for et land til formål som arbejde, beskatning, offentlige ydelser, sundhedspleje og andre regeringsrelaterede funktioner.\nStrukturen af identifikatoren er DI (15H) efterfulgt af ISO 3166-1 Alpha2 landekode efterfulgt af det primære regeringstildelte identifikationskode for individer.</value>
+  </data>
+  <data name="di8025" xml:space="preserve">
+    <value>Globalt unikt personligt ID. tildelt af en indehaver af et firmaidentifikationskode (CIN) og inklusive det relaterede udstedende agenturs kode (IAC) i overensstemmelse med ISO/IEC 15459 og dets register, struktureret som sekvens af 3 sammenkædede dataelementer: IAC efterfulgt af CIN, efterfulgt af ID unikt inden for indehaverens domæne.</value>
+  </data>
+  <data name="di8026" xml:space="preserve">
+    <value>Globalt unikt personligt ID, med en "Part Kvalifikator" kodeværdi fra EDIFACT-kodeliste 3035</value>
+  </data>
+  <data name="di9000" xml:space="preserve">
+    <value>Eksklusiv tildeling - Køretøjsidentifikationsnummer (VIN) som defineret i USA under 49 CFR, Afsnit 565 og internationalt af ISO 3779. (Disse er fuldt kompatible datastrukturer).</value>
+  </data>
+  <data name="di9002" xml:space="preserve">
+    <value>Forkortet VIN-kode.</value>
+  </data>
+  <data name="di9004" xml:space="preserve">
+    <value>Globalt unikt transportkøretøjsidentifikator (f.eks., lastbiler) bestående af køretøjsidentifikationsnummeret (VIN) som defineret i USA under 49 CFR Afsnit 565, og internationalt af ISO 3779, efterfulgt af '+' tegnet, derefter efterfulgt af det af regeringen udstedte køretøjsregistreringsnummerpladenummer i formen '4I' 'VIN' '+' 'regeringsudstedt køretøjsregistreringsnummerpladenummer' (citationstegn og mellemrum vist for klarheds skyld kun; de er ikke en del af dataene).</value>
+  </data>
+  <data name="di9005" xml:space="preserve">
+    <value>Unikt produktionskøretøjsidentifikator, der vil blive brugt under køretøjets produktionsprocesser, bestående af karrosseritagnummeret (BTN; eller enhver anden beskrivelse brugt til at identificere den rå bilkarrosseri, eller sagt på en anden måde, samlingen af dele, der bruges til at starte køretøjets produktion), efterfulgt af '+' tegnet, derefter efterfulgt af produktionsordrenummeret (PON), efterfulgt af '+' tegnet, og derefter efterfulgt af producenttildelt serienummer (SN). BEMÆRK - SN-komponenten skal erstattes af VIN, så snart VIN er tilgængelig i samleprocessen.\nKonstruktionen vil være som følger;\n\5I" "BTN" "+" "PON" "+" "SN"\nskiftende til (når VIN tilgængelig)\n"5I" "BTN" "+" "PON" "+" "VIN"\nBEMÆRK - Citationstegn og mellemrum er vist for klarheds skyld kun; de er ikke en del af dataene.\nBEMÆRK - Dette DI skal aldrig sammenkædes med andre DIs i et lineært symbol eller andre medier, hvor sammenkædningstegnet er et plus (+) tegn.\nEksempler:\nSN-version: 5IABCD1234+CO1234+W0L201600500001\nVIN-version: 5IABCD1234+CO1234+W0L0XAP68F4050901</value>
   </data>
 </root>

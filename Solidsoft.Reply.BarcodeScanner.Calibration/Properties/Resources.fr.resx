@@ -161,6 +161,9 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Les caractères de séparation d'unité sont pris en charge.</value>
   </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Les caractères de fin de transmission sont pris en charge.</value>
+  </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Le scanner de code-barres peut être configuré pour compenser le verrouillage des majuscules.</value>
   </data>
@@ -187,6 +190,15 @@
   </data>
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Le caractère signalé {0} est ambigu. Les codes-barres utilisant la syntaxe ISO/IEC 15434 ne peuvent pas être lus de manière fiable.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Le caractère séparateur de fichier ne peut pas être lu de manière fiable.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Le caractère séparateur d'unité ne peut pas être lu de manière fiable.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Le caractère de fin de transmission ne peut pas être lu de manière fiable.</value>
   </data>
   <data name="CalibrationInformation_220" xml:space="preserve">
     <value>Le scanner de code-barres ne transmet pas d'identifiant AIM.</value>

@@ -84,12 +84,14 @@ public enum AdviceType {
     /// <p>Hidden characters in barcodes are not reported correctly.</p>
     /// <p>Your software may not be able to compensate. Configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
+    /// <remarks>This indicates problems with Group Separators, only.</remarks>
     HiddenCharactersNotRepresentedCorrectly = 309,
 
     /// <summary>
     /// <p>Hidden characters in barcodes are not reported correctly.</p>
     /// <p>Configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
+    /// <remarks>This indicates problems with Group Separators, only.</remarks>
     HiddenCharactersNotRepresentedCorrectlyNoCalibration = 310,
 
     /// <summary>
@@ -112,6 +114,10 @@ public enum AdviceType {
     /// <p>Your system cannot read barcode characters reliably.</p>
     /// <p>Configure your barcode scanner to emulate a different keyboard layout or a numeric keypad.</p>
     /// </summary>
+    /// <remarks>
+    /// This is only assigned if we do not determine if we cannot read variant characters reliably - i.e.,
+    /// that we do not test ofr variant characters.
+    /// </remarks>
     CannotReadBarcodesReliably = 320,
 
     /// <summary>
@@ -349,12 +355,46 @@ public enum AdviceType {
     CannotReadEdiCharacters = 275,
 
     /// <summary>
-    /// <p>Your system cannot read ASCII 28 and/or ASCII 31 characters reliably.</p>
-    /// <p>Some barcodes may contain ASCII 28 or ASCII 31 characters.</p>
-    /// <p>If you scan EDI barcodes, and experience difficulty, try configuring your barcode scanner to
-    /// emulate a numeric keypad.</p>
+    /// <p>Your system cannot read File Separator (ASCII 28) characters.</p>
+    /// <p>These character are not widely used in barcodes.</p>
+    /// <p>IIf you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
-    CannotReadAscii28Ascii31Characters = 276,
+    MayNotReadAscii28Characters = 276,
+
+    /// <summary>
+    /// <p>Your system cannot read File Separator (ASCII 28) characters.</p>
+    /// <p>These character are not widely used in barcodes.</p>
+    /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadAscii28Characters = 277,
+
+    /// <summary>
+    /// <p>Your system may not read Unit Separator (ASCII 31) characters.</p>
+    /// <p>Some barcodes may contain ASCII 31 characters.</p>
+    /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadAscii31Characters = 278,
+
+    /// <summary>
+    /// <p>Your system cannot read Unit Separator (ASCII 31) characters.</p>
+    /// <p>Some barcodes may contain ASCII 31 characters.</p>
+    /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadAscii31Characters = 279,
+
+    /// <summary>
+    /// <p>Your system cannot read End-of-Transmission (ASCII 04) characters reliably.</p>
+    /// <p>Some barcodes may contain ASCII 04 characters.</p>
+    /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    MayNotReadAscii04Characters = 280,
+
+    /// <summary>
+    /// <p>Your system cannot read End-of-Transmission (ASCII 04) characters reliably.</p>
+    /// <p>Some barcodes may contain ASCII 04 characters.</p>
+    /// <p>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</p>
+    /// </summary>
+    CannotReadAscii04Characters = 281,
 
     /// <summary>
     /// <p>Your system reads most barcodes reliably.</p>

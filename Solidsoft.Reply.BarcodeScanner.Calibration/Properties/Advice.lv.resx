@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Jums var nākties manuāli ievadīt datus savā programmatūrā svītrkodu gadījumos, kad tie satur datus, kas formatēti atbilstoši ISO/IEC 15434 rakstzīmēm.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Ja skenējat EDI svītrkodus un rodas grūtības, mēģiniet konfigurēt savu svītrkodu skeneri tā, lai tas imitētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Ja rodas grūtības skenējot svītrkodus, mēģiniet konfigurēt savu svītrkodu skeneri, lai tas atdarinātu ciparu tastatūru.</value>
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ja, skenējot svītrkodus, rodas grūtības, mēģiniet konfigurēt svītrkodu skeneri tā, lai tas emulētu ciparu tastatūru.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Mēģiniet vēlreiz, pārliecinoties, ka skenējat pareizos svītrkodus.</value>
@@ -349,7 +361,22 @@
     <value>Jūsu sistēma nevar uzticami nolasīt svītrkodus, ja tajos ir dati par Elektronisko Datu Apmaiņu (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Jūsu sistēma nevar atšķirt noteiktus parastos rakstzīmes un īpašos rakstzīmes.</value>
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa faila atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasīt faila atdalītāja (ASCII 28) rakstzīmes.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa vienības atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa vienības atdalītāja (ASCII 31) rakstzīmes.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Jūsu sistēma, iespējams, nepareizi nolasa pārraides beigu (ASCII 04) rakstzīmes.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Jūsu sistēma nevar nolasīt pārraides beigu (ASCII 04) rakstzīmes.</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Tests neizdevās.</value>
@@ -490,7 +517,22 @@
     <value>Daži svītrkodi var saturēt EDI datus.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Vairumā gadījumu šīs rakstzīmes svītrkodos neparādās kopā.</value>
+    <value>Šīs rakstzīmes netiek plaši izmantotas svītrkodos.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Šīs rakstzīmes netiek plaši izmantotas svītrkodos.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Šīs rakstzīmes netiek plaši izmantotas svītrkodos.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Šīs rakstzīmes netiek plaši izmantotas svītrkodos.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Daži svītrkodu veidi izmanto šo rakstzīmi, lai atzīmētu svītrkoda datu beigas. Jūsu programmatūra, iespējams, nepareizi nolasa jebkuru piedēkli, ko pievieno svītrkodu skeneris.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Daži svītrkodu veidi izmanto šo rakstzīmi, lai atzīmētu svītrkoda datu beigas. Jūsu programmatūra, iespējams, nepareizi nolasa jebkuru piedēkli, ko pievieno svītrkodu skeneris.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jūs varētu būt nolasis nepareizu svītrkodu vai ievadījis nepareizus datus, izmantojot tastatūru. Jūsu svītrkodu skeneris vai sistēma var būt lēna, vai var būt notikusi kāda negaidīta vai periodiska problēma.</value>

@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Neusklađenost preostalih savjetodavnih stavki.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Sufiks {0} se ne podudara s očekivanim sufiksom {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Netočno porijeklo bar koda.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Netočna vrsta informacija o pogrešci.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Netočna vrsta upozoravajućih informacija.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Nije uspjelo umetanje rezervnih mjesta za razmake.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Neispravan argument pružen metodi zamjene regularnog izraza.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>Regularni izraz je istekao tijekom izvođenja podudaranja.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Ne može se pronaći odgovarajući znak za privremeni rezervni prostor. Svi prošireni ASCII znakovi su već upotrijebljeni u ulaznom nizu.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Netočno porijeklo bar koda.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Neispravna razina informacija.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Neispravan savjetodavni predmet.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Sufiks {0} se ne podudara s očekivanim sufiksom {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM identifikatori su podržani.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Podržani su znakovi rekordnih separatora.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Podržani su znakovi EDI separatora.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Podržani su znakovi razdvajanja jedinica.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>Skener bar kodova može biti konfiguriran za kompenzaciju Caps Lock-a.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Neki prijavljeni neinvarijantni ASCII znakovi su dvosmisleni: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvosmislen. Bar kodovi koji koriste sintaksu ISO/IEC 15434 za prikazivanje EDI podataka se ne mogu pouzdano čitati.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Neke prijavljene sekvence znakova su dvosmislene. Ti znakovi ne predstavljaju invarijantne znakove: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>Prijavljena sekvencija znakova {0} je dvosmislena. To može spriječiti čitanje bilo kojih dodatnih elemenata podataka uključenih u bar kod.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvosmislen. Barkodovi koji koriste ASCII 28 ili ASCII 31 možda neće biti pouzdano pročitani.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Neke prijavljene sekvence znakova su dvosmislene. Ti znakovi ne predstavljaju invarijantne znakove: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja rekordnih separatora.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja EDI separatora.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja AIM identifikatora.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>Ne može se utvrditi podudarnost konfiguracije skenera bar kodova i tipkovnice računala.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock je uključen.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>Prijavljeni podaci su za krivi kalibracijski bar kod.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Pokušaj kalibracije barkoda je učinjen, ali nije pružen token za kalibraciju.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Neki invarijantni znakovi se ne mogu detektirati.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibracija nije uspjela. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibracija nije uspjela. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Podržani su znakovi EDI separatora.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Neispravan savjetodavni predmet.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvosmislen. Bar kodovi koji koriste sintaksu ISO/IEC 15434 za prikazivanje EDI podataka se ne mogu pouzdano čitati.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Neispravna razina informacija.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja EDI separatora.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Nije uspjelo umetanje rezervnih mjesta za razmake.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Neispravan argument pružen metodi zamjene regularnog izraza.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>Regularni izraz je istekao tijekom izvođenja podudaranja.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>Ne može se utvrditi podudarnost konfiguracije skenera bar kodova i tipkovnice računala.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Nespecificirano</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Ne može se pronaći odgovarajući znak za privremeni rezervni prostor. Svi prošireni ASCII znakovi su već upotrijebljeni u ulaznom nizu.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibracija nije uspjela. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Pokušaj kalibracije barkoda je učinjen, ali nije pružen token za kalibraciju.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Podržani su znakovi razdvajanja jedinica.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvosmislen. Barkodovi koji koriste ASCII 28 ili ASCII 31 možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Podržani su znakovi za kraj prijenosa.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Znak za odvajanje datoteka ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Znak za odvajanje jedinica ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Znak za kraj prijenosa ne može se pouzdano pročitati.</value>
   </data>
 </root>

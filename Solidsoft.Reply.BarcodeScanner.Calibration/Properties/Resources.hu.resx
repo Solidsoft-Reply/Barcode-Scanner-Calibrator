@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Tanácsadási elemek megmaradt eltérés.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Az {0} utótag nem egyezik a várt {1} utótaggal.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Helytelen vonalkód eredet.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Helytelen hiba információtípus.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Helytelen figyelmeztetés információtípus.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Nem sikerült szóköz helykitöltők beszúrása.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Érvénytelen argumentum lett megadva a reguláris kifejezés Replace metódusához.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>A reguláris kifejezés túlcsordult egyeztetés közben.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Nem található megfelelő karakter az ideiglenes helykitöltőhöz. Az összes kiterjesztett ASCII karakter már használatban van a bemeneti szövegben.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Helytelen vonalkód eredet.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Érvénytelen információszint.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Érvénytelen tanácsadási elem.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Az {0} utótag nem egyezik a várt {1} utótaggal.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>Az AIM azonosítók támogatottak.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>A rekordelválasztó karakterek támogatottak.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Az Edi Separator karakterek támogatottak.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Az egységelválasztó karakterek támogatottak.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>A vonalkódolvasó beállítható a Caps Lock kompenzálására.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Néhány jelentett nem invariáns ASCII karakter kétértelmű: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>A jelentett {0} karakter kétértelmű. Az ISO/IEC 15434 szintaxist használó, EDI adatokat reprezentáló vonalkódokat nem lehet megbízhatóan olvasni.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Néhány jelentett karakter sorozat kétértelmű. Ezek a karakterek nem reprezentálják az invariáns karaktereket: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>A jelentett {0} karakter sorozat kétértelmű. Ez megakadályozhatja a vonalkódban található további adatelemek olvasását.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>A jelentett karakter {0} nem egyértelmű. Az ASCII 28 vagy ASCII 31 használatával készült vonalkódok megbízható olvasása nem garantált.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Néhány jelentett karakter sorozat kétértelmű. Ezek a karakterek nem reprezentálják az invariáns karaktereket: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése nem egyezik meg.</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése a rekordelválasztók reprezentálásakor nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az EDI elválasztók reprezentálásakor nem egyezik meg.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az AIM azonosítók reprezentálásakor nem egyezik meg.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>A vonalkódolvasó és a számítógép billentyűzetének megfeleltetése nem állapítható meg.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>A Caps Lock be van kapcsolva.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>A jelentett adatok a helytelen kalibrációs vonalkódhoz tartoznak.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Megkísérelték egy vonalkód kalibrálását, de nem adtak meg kalibrálási tokent.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Néhány invariáns karakter nem észlelhető.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibrálás sikertelen. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibrálás sikertelen. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>Az Edi Separator karakterek támogatottak.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Érvénytelen tanácsadási elem.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>A jelentett {0} karakter kétértelmű. Az ISO/IEC 15434 szintaxist használó, EDI adatokat reprezentáló vonalkódokat nem lehet megbízhatóan olvasni.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Érvénytelen információszint.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az EDI elválasztók reprezentálásakor nem egyezik meg.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Nem sikerült szóköz helykitöltők beszúrása.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Érvénytelen argumentum lett megadva a reguláris kifejezés Replace metódusához.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>A reguláris kifejezés túlcsordult egyeztetés közben.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>A vonalkódolvasó és a számítógép billentyűzetének megfeleltetése nem állapítható meg.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Nem meghatározott</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Nem található megfelelő karakter az ideiglenes helykitöltőhöz. Az összes kiterjesztett ASCII karakter már használatban van a bemeneti szövegben.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibrálás sikertelen. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Megkísérelték egy vonalkód kalibrálását, de nem adtak meg kalibrálási tokent.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Az egységelválasztó karakterek támogatottak.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>A jelentett karakter {0} nem egyértelmű. Az ASCII 28 vagy ASCII 31 használatával készült vonalkódok megbízható olvasása nem garantált.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Az átvitel vége karakterek támogatottak.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>A fájlelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Az egységelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Az átvitel vége karakter nem olvasható megbízhatóan.</value>
   </data>
 </root>

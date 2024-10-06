@@ -71,6 +71,11 @@ public enum InformationType {
     UnitSeparatorSupported = 163,
 
     /// <summary>
+    ///   INFORMATION: End-of-Transmission characters are supported.
+    /// </summary>
+    EndOfTransmissionSupported = 164,
+
+    /// <summary>
     ///   INFORMATION: The barcode scanner may be configured to compensate for Caps Lock.
     /// </summary>
     ScannerMayCompensateForCapsLock = 170,
@@ -114,6 +119,21 @@ public enum InformationType {
     ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
     /// </summary>
     IsoIec15434RecordSeparatorMapping = 212,
+
+    /// <summary>
+    ///   WARNING: The file separator character cannot be reliably read.
+    /// </summary>
+    IsoIec15434FsNotReliablyReadable = 213,
+
+    /// <summary>
+    ///   WARNING: The unit separator character cannot be reliably read.
+    /// </summary>
+    IsoIec15434UsNotReliablyReadable = 214,
+
+    /// <summary>
+    ///   WARNING: The end-of-transmission character cannot be reliably read.
+    /// </summary>
+    IsoIec15434EotNotReliablyReadable = 215,
 
     /// <summary>
     ///   WARNING: The barcode scanner is not transmitting an AIM Identifier.
@@ -206,27 +226,37 @@ public enum InformationType {
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsGroupSeparator = 263,
+    NonCorrespondingKeyboardLayoutsFileSeparator = 263,
+
+    /// <summary>
+    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
+    /// </summary>
+    NonCorrespondingKeyboardLayoutsGroupSeparator = 264,  //263
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsRecordSeparator = 264,
+    NonCorrespondingKeyboardLayoutsRecordSeparator = 265,  //264
 
     /// <summary>
-    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators.
+    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsEdiSeparators = 265,
+    NonCorrespondingKeyboardLayoutsUnitSeparator = 266,
+
+    /// <summary>
+    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
+    /// </summary>
+    NonCorrespondingKeyboardLayoutsEoT = 267,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsForAimIdentifier = 266,
+    NonCorrespondingKeyboardLayoutsForAimIdentifier = 268,  // 266
 
     /// <summary>
     ///   Warning - The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.
     /// </summary>
-    NonDeterminableKeyboardLayoutCorrespondence = 267,
+    NonDeterminableKeyboardLayoutCorrespondence = 269,
 
     /// <summary>
     ///   WARNING: Caps Lock is switched on.

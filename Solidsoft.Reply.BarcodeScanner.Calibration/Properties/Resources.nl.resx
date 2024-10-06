@@ -117,14 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advic+A2:A71eItemRemainingMismatch" xml:space="preserve">
+  <data name="AdviceItemRemainingMismatch" xml:space="preserve">
     <value>Adviesitems komen niet overeen.</value>
-  </data>
-  <data name="Barcodes_Error_100" xml:space="preserve">
-    <value>Achtervoegsel {0} komt niet overeen met verwacht achtervoegsel {1}.</value>
-  </data>
-  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
-    <value>Onjuiste barcode-oorsprong.</value>
   </data>
   <data name="CalibrationIncorrectErrorInformationType" xml:space="preserve">
     <value>Onjuist type foutinformatie.</value>
@@ -134,6 +128,30 @@
   </data>
   <data name="CalibrationIncorrectWarningInformationType" xml:space="preserve">
     <value>Onjuist type waarschuwingsinformatie.</value>
+  </data>
+  <data name="Calibration_Error_001" xml:space="preserve">
+    <value>Invoegen van spaties als placeholders mislukt.</value>
+  </data>
+  <data name="Calibration_Error_002" xml:space="preserve">
+    <value>Ongeldig argument geleverd aan de Replace-methode van reguliere expressies.</value>
+  </data>
+  <data name="Calibration_Error_003" xml:space="preserve">
+    <value>De reguliere expressie time-out tijdens het uitvoeren van een match.</value>
+  </data>
+  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
+    <value>Kan geen geschikt teken vinden voor tijdelijke placeholder. Alle uitgebreide ASCII-tekens zijn al gebruikt in de invoerstring.</value>
+  </data>
+  <data name="CalibrateDeadKeyIncorrectBarcodeProvenance" xml:space="preserve">
+    <value>Onjuiste barcode-oorsprong.</value>
+  </data>
+  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
+    <value>Ongeldig informatieniveau.</value>
+  </data>
+  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
+    <value>Ongeldig adviesitem.</value>
+  </data>
+  <data name="Barcodes_Error_100" xml:space="preserve">
+    <value>Achtervoegsel {0} komt niet overeen met verwacht achtervoegsel {1}.</value>
   </data>
   <data name="CalibrationInformation_130" xml:space="preserve">
     <value>AIM-identifiers worden ondersteund.</value>
@@ -152,12 +170,6 @@
   </data>
   <data name="CalibrationInformation_161" xml:space="preserve">
     <value>Recordscheidingstekens worden ondersteund.</value>
-  </data>
-  <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-scheidingskarakters worden ondersteund.</value>
-  </data>
-  <data name="CalibrationInformation_163" xml:space="preserve">
-    <value>Eenheidsscheidingstekens worden ondersteund.</value>
   </data>
   <data name="CalibrationInformation_170" xml:space="preserve">
     <value>De barcode scanner kan geconfigureerd zijn om te compenseren voor Caps Lock.</value>
@@ -216,17 +228,11 @@
   <data name="CalibrationInformation_253" xml:space="preserve">
     <value>Sommige gerapporteerde niet-invariante ASCII-karakters zijn dubbelzinnig: {0}</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Het gerapporteerde karakter {0} is dubbelzinnig. Barcodes die ISO/IEC 15434-syntax gebruiken om EDI-gegevens te vertegenwoordigen, kunnen niet betrouwbaar gelezen worden.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Sommige gerapporteerde karakterreeksen zijn dubbelzinnig. Deze karakters vertegenwoordigen geen invariante karakters: {0}</value>
-  </data>
   <data name="CalibrationInformation_256" xml:space="preserve">
     <value>De gerapporteerde karakterreeks {0} is dubbelzinnig. Dit kan het lezen van eventuele extra gegevenselementen in een barcode verhinderen.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Het gerapporteerde teken {0} is dubbelzinnig. Barcodes die ASCII 28 of ASCII 31 gebruiken, kunnen mogelijk niet betrouwbaar worden gelezen.</value>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Sommige gerapporteerde karakterreeksen zijn dubbelzinnig. Deze karakters vertegenwoordigen geen invariante karakters: {0}</value>
   </data>
   <data name="CalibrationInformation_260" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen.</value>
@@ -243,14 +249,8 @@
   <data name="CalibrationInformation_264" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van recordscheiders.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van EDI-scheiders.</value>
-  </data>
   <data name="CalibrationInformation_266" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van AIM-identifiers.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
-    <value>De overeenkomst van de barcode scanner en computer toetsenbordindelingen kan niet bepaald worden.</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Caps Lock staat aan.</value>
@@ -284,9 +284,6 @@
   </data>
   <data name="CalibrationInformation_304" xml:space="preserve">
     <value>De gerapporteerde gegevens zijn voor de verkeerde kalibratiebarcode.</value>
-  </data>
-  <data name="CalibrationInformation_305" xml:space="preserve">
-    <value>Er is geprobeerd een barcode te kalibreren, maar er is geen kalibratietoken verstrekt.</value>
   </data>
   <data name="CalibrationInformation_310" xml:space="preserve">
     <value>Sommige invariante karakters kunnen niet gedetecteerd worden.</value>
@@ -333,28 +330,43 @@
   <data name="CalibrationInformation_390" xml:space="preserve">
     <value>Kalibratie mislukt. {0}</value>
   </data>
-  <data name="CalibrationInformation_391" xml:space="preserve">
-    <value>Kalibratie mislukt. {0}</value>
+  <data name="CalibrationInformation_162" xml:space="preserve">
+    <value>EDI-scheidingskarakters worden ondersteund.</value>
   </data>
-  <data name="CalibrationInvalidAdviceItem" xml:space="preserve">
-    <value>Ongeldig adviesitem.</value>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Het gerapporteerde karakter {0} is dubbelzinnig. Barcodes die ISO/IEC 15434-syntax gebruiken om EDI-gegevens te vertegenwoordigen, kunnen niet betrouwbaar gelezen worden.</value>
   </data>
-  <data name="CalibrationInvalidInformationLevel" xml:space="preserve">
-    <value>Ongeldig informatieniveau.</value>
+  <data name="CalibrationInformation_265" xml:space="preserve">
+    <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van EDI-scheiders.</value>
   </data>
-  <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Invoegen van spaties als placeholders mislukt.</value>
-  </data>
-  <data name="Calibration_Error_002" xml:space="preserve">
-    <value>Ongeldig argument geleverd aan de Replace-methode van reguliere expressies.</value>
-  </data>
-  <data name="Calibration_Error_003" xml:space="preserve">
-    <value>De reguliere expressie time-out tijdens het uitvoeren van een match.</value>
+  <data name="CalibrationInformation_267" xml:space="preserve">
+    <value>De overeenkomst van de barcode scanner en computer toetsenbordindelingen kan niet bepaald worden.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
     <value>Niet gespecificeerd.</value>
   </data>
-  <data name="UnusedExtendedAsciiCharacterNotFound" xml:space="preserve">
-    <value>Kan geen geschikt teken vinden voor tijdelijke placeholder. Alle uitgebreide ASCII-tekens zijn al gebruikt in de invoerstring.</value>
+  <data name="CalibrationInformation_391" xml:space="preserve">
+    <value>Kalibratie mislukt. {0}</value>
+  </data>
+  <data name="CalibrationInformation_305" xml:space="preserve">
+    <value>Er is geprobeerd een barcode te kalibreren, maar er is geen kalibratietoken verstrekt.</value>
+  </data>
+  <data name="CalibrationInformation_163" xml:space="preserve">
+    <value>Eenheidsscheidingstekens worden ondersteund.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} is dubbelzinnig. Barcodes die ASCII 28 of ASCII 31 gebruiken, kunnen mogelijk niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_164" xml:space="preserve">
+    <value>Einde-van-de-transmissie-tekens worden ondersteund.</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Het scheidingsteken voor bestanden kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Het scheidingsteken voor eenheden kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Het einde-van-de-transmissie-teken kan niet betrouwbaar worden gelezen.</value>
   </data>
 </root>

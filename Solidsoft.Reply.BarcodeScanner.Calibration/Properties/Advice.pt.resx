@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Você pode precisar inserir dados manualmente em seu software para códigos de barras que contenham dados formatados de acordo com caracteres ISO/IEC 15434.</value>
   </data>
@@ -199,7 +196,22 @@
     <value>Se você escanear códigos de barras que contenham dados EDI e tiver dificuldades, tente configurar seu scanner de código de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_276" xml:space="preserve">
-    <value>Se você tiver dificuldade ao escanear códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
   </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Tente novamente, certificando-se de digitalizar o(s) código(s) de barras correto(s).</value>
@@ -349,7 +361,22 @@
     <value>Seu sistema não pode ler códigos de barras de forma confiável se contiverem dados para Intercâmbio Eletrônico de Dados (EDI).</value>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Seu sistema não consegue distinguir entre certos caracteres normais e caracteres especiais.</value>
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de ficheiros (ASCII 28).</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>O seu sistema não consegue ler os caracteres de separador de ficheiros (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de fim de transmissão (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>O seu sistema não consegue ler os caracteres de fim de transmissão (ASCII 04).</value>
   </data>
   <data name="Condition_300" xml:space="preserve">
     <value>O teste falhou.</value>
@@ -490,7 +517,22 @@
     <value>Alguns códigos de barras podem conter dados EDI.</value>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>Na maioria dos casos, esses caracteres não aparecem juntos em códigos de barras.</value>
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
     <value>Você pode ter digitalizado um código de barras errado ou inserido dados incorretos usando o teclado. Seu scanner de código de barras ou sistema pode estar lento, ou algum problema inesperado ou intermitente pode ter ocorrido.</value>

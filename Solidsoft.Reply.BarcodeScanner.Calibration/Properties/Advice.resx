@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-    <comment>Low</comment>
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters.</value>
     <comment>Low</comment>
@@ -414,19 +410,19 @@
     <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Intechange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
     <comment>High</comment>
   </data>
   <data name="Condition_276" xml:space="preserve">
-    <value>Your system cannot distinguish between certain normal characters and special characters.</value>
+    <value>Your system may not read File Separator (ASCII 28) characters correctly.</value>
     <comment>Medium</comment>
   </data>
   <data name="Condition_300" xml:space="preserve">
@@ -614,7 +610,7 @@
     <comment>High</comment>
   </data>
   <data name="Description_276" xml:space="preserve">
-    <value>In most cases, these characters don't appear together in barcodes.</value>
+    <value>These characters are not used widely in barcodes.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_300" xml:space="preserve">
@@ -676,5 +672,53 @@
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Error while resolving keyboard scripts: {0}</value>
     <comment>High</comment>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Adv ice_278" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Your system cannot read File Separator (ASCII 28) characters.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Your system may not read Unit Separator (ASCII 31) characters correctly.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Your system cannot read Unit Separator (ASCII 31) characters.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Your system may not read End-of-Transmission (ASCII 04) characters correctly.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Your system cannot read End-of-Transmission (ASCII 04) characters.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>These characters are not used widely in barcodes.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>These characters are not used widely in barcodes.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>These characters are not used widely in barcodes.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
   </data>
 </root>
