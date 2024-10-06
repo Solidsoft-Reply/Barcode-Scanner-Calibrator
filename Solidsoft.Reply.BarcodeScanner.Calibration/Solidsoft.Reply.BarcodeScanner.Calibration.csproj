@@ -19,7 +19,9 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Improved recording of ambiguities involving AIM identifers.
+		1) Introduction of handling for EOT (ASCII 04) characters in ISO/IEC 15434-encoded barcodes (Format 05 and Format 06).  This was originally omitted over fears of possible network issues when transmitting EOT characters. These fears have proved unfounded, and the lack of EOT analysis conflicted with reliable detection of suffixes.
+		2) Improved handling for File and Unit separator characters used in EDI data in ISO/IEC 15434-encoded barcodes (Format 05 and Format 06).  These are now handled individually, inproving the advice given in certain circumstances.
+		3) Fixes to various issues with localised resource.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +31,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.10</Version>
+	<Version>2.2.11</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
