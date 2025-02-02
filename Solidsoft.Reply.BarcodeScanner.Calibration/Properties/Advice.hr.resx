@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Pokušajte ponovno, pobrinite se da skenirate ispravan bar kod.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Vaš sustav ne može čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Vaš sustav ne može čitati znakove za kraj prijenosa (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nije uspio.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Možda ste skenirali krivi bar kod ili unijeli netočne podatke koristeći tipkovnicu. Vaš skener bar kodova ili sustav može biti spor, ili se može pojaviti neki neočekivani ili povremeni problem.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Pogreška prilikom razrješavanja skripti tipkovnice: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Vaš sustav ne može čitati znakove za odjeljivanje datoteka (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za odjeljivanje jedinica (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ovi znakovi nisu široko korišteni u crtičnim kodovima.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ako imate poteškoća pri skeniranju crtičnih kodova, pokušajte konfigurirati svoj skener crtičnih kodova tako da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ručno unesite podatke u svoj softver za provjeru kako biste provjerili jedinstvene PPN identifikatore.;;Ako je potrebno, konfigurirajte čitač barkoda da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ako imate problema sa skeniranjem njemačkih PPN barkodova, ručno unesite podatke u svoj softver za provjeru.;;Ako je potrebno, konfigurirajte čitač barkoda da oponaša numeričku tipkovnicu.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Vaš sustav možda neće pravilno čitati znakove za kraj prijenosa (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Neke vrste crtičnih kodova koriste ovaj znak za označavanje kraja podataka crtičnog koda. Vaš softver možda neće ispravno pročitati bilo koji sufiks koji je dodao skener crtičnog koda.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Provjerite da li se rasporedi tipki na vašoj tipkovnici i tipkovnici skenera bar kodova podudaraju.;;Ako je potrebno, konfigurirajte vaš skener bar kodova da oponaša numeričku tipkovnicu i prenosi AIM identifikatore.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Vaš sustav ne može pouzdano pročitati identifikator vrste barkoda.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikatori AIM predstavljaju tip bar koda. Vaš softver ih može koristiti za eliminaciju nepotrebnih upozorenja.</value>
   </data>
 </root>

@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Essayez à nouveau, en vous assurant de scanner le(s) bon(s) code(s)-barres.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Votre système peut ne pas lire correctement les caractères de séparation de fichier (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Votre système ne peut pas lire les caractères de séparation de fichier (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Votre système peut ne pas lire correctement les caractères de fin de transmission (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Votre système ne peut pas lire les caractères de fin de transmission (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Le test a échoué.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Vous avez peut-être scanné un mauvais code-barres ou saisi des données incorrectes à l'aide du clavier. Votre lecteur de code-barres ou système peut être lent, ou un problème inattendu ou intermittent peut être survenu.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Erreur lors de la résolution des scripts clavier : {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de séparation de fichier (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de séparation d'unité (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ces caractères ne sont pas largement utilisés dans les codes-barres.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Si vous rencontrez des difficultés lors de la numérisation de codes-barres, essayez de configurer votre lecteur de codes-barres pour qu'il émule un pavé numérique.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Entrez les données manuellement dans votre logiciel de vérification pour vérifier les identifiants uniques PPN.;;Si nécessaire, configurez votre lecteur de codes-barres pour émuler un pavé numérique.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Si vous rencontrez des problèmes lors de la numérisation des codes-barres PPN allemands, entrez les données manuellement dans votre logiciel de vérification.;;Si nécessaire, configurez votre lecteur de codes-barres pour émuler un pavé numérique.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Votre système peut ne pas lire correctement les caractères de fin de transmission (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Votre système ne peut pas lire les caractères de fin de transmission (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Certains types de codes-barres utilisent ce caractère pour marquer la fin des données du code-barres. Votre logiciel peut ne pas lire correctement tout suffixe ajouté par le lecteur de codes-barres.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Assurez-vous que vos dispositions de clavier correspondent.;;Si nécessaire, configurez votre lecteur de code-barres pour émuler un pavé numérique et transmettre les identifiants AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Votre système ne peut pas lire de manière fiable l'identifiant du type de code-barres.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Les identifiants AIM représentent le type de code-barres. Votre logiciel peut les utiliser pour éliminer les alertes inutiles.</value>
   </data>
 </root>

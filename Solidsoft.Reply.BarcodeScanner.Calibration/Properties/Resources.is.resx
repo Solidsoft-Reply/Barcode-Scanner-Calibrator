@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Skýrður stafur {0} er tvíræður. Strikamerki sem nota ISO/IEC 15434 málskipan er ekki hægt að lesa áreiðanlega.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Strikamerkjalesarinn sendir ekki AIM auðkennara.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Ekki er hægt að þekkja AIM auðkennarann.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Strikamerkjalesarinn sendir forskeyti: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Strikamerkjalesarinn sendir kóða: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Strikamerkjalesarinn sendir viðskeyti: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Strikamerkjalesarinn sendir ekki enda-línu stafaröð (t.d. carriage return).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Skýrður stafur {0} er tvíræður. Það eru margar lyklar fyrir sama stafinn, hver tákna mismunandi væntanlega staf. Hins vegar, að hámarki, er aðeins einn af væntanlegum stöfum óbreytanlegur.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Sumir skýrðir stafir eru tvíræðir. Það eru margar lyklar fyrir sama stafinn, hver tákna ólíka óbreytanlega væntanlega ASCII staf: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Ekki er hægt að þekkja AIM auðkennara. Skráður stafur {0} er tvíræður. Það eru margar lyklar fyrir þennan staf sem tákna AIM flaggstafinn sem og aðra væntanlega stafi/staf.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Sumir skýrðir óbreytanlegir ASCII stafir eru tvíræðir: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Skýrð stafaröð {0} er tvíræð. Þetta gæti komið í veg fyrir lestur á frekari gögnum sem innifalin eru í strikamerki.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Sumar skýrðar stafaraðir eru tvíræðar. Þessir stafir tákna ekki óbreytanlega stafi: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman fyrir óbreytanlega stafi.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman fyrir óbreytanlega ASCII stafi.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman þegar kemur að framsetningu Group Separator stafa.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman þegar kemur að framsetningu Record Separator stafa.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman þegar kemur að framsetningu AIM auðkennara.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock er virkjað.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock gæti verið virkjað.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Strikamerkjalesarinn gæti verið stilltur til að breyta stöfum í hástafi.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Strikamerkjalesarinn gæti verið stilltur til að breyta stöfum í lágstafi.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Strikamerkjalesarinn gæti verið stilltur til að snúa við stafaröð.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Best skýrð innsláttartími lyklaborðsins á meðan justun gefur til kynna að strikamerkjalesarinn skilar ekki bestum árangri.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Stafurinn {0} getur ekki verið sýndur áreiðanlega vegna ósamræmis við lyklaborðsuppsetningu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Skýrð stafaröð {0} er tvíræð. Þetta tákna hópaskiljara stafinn.</value>
+    <value>Ekki er hægt að lesa hópgreini.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Sumir skýrðir stafir eru tvíræðir. Þeir geta verið skýrðir sérstaklega en eru einnig notuð til að mynda samstæður: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Justun mistókst. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI skiljastafi eru studdir.</value>
+    <value>Skilmerki fyrir skrár eru studd.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Skýrður stafur {0} er tvíræður. Strikamerki sem nota ISO/IEC 15434 málskipan til að tákna EDI gögn er ekki hægt að lesa áreiðanlega.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Strikamerkjaskanni og lyklaborðsútlit tölvunnar samsvara ekki við framsetningu á einingar aðskiljum.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Strikamerkjalesarinn og lyklaborðsuppsetning tölvunnar passa ekki saman þegar kemur að framsetningu EDI aðskilnaðarstafa.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Ekki er hægt að ákvarða samsvörun strikamerkjalesarans og lyklaborðsuppsetningar tölvunnar.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Einingarskilamerki eru studd.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Táknið {0} sem tilkynnt var er tvírætt. Strikamerki sem nota ASCII 28 eða ASCII 31 gætu ekki lesist áreiðanlega.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Ekki er hægt að lesa skráarskil tákn á áreiðanlegan hátt.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Ekki er hægt að lesa einingaskil tákn á áreiðanlegan hátt.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Ekki er hægt að lesa lok sendingar tákn á áreiðanlegan hátt.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Lok sendingar tákn eru studd.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Strikamerkjalesarinn sendir ekki röð af táknum fyrir línulok (t.d. vagnskil).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Skýrði stafurinn {0} er tvíræður. Það eru nokkrir lyklar fyrir sama stafinn, hver þeirra táknar mismunandi væntanlegan staf. Hins vegar er í hæsta lagi aðeins einn af væntanlegu stöfunum fastur.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Sumir tilkynntir stafir eru tvíræðir. Það eru nokkrir lyklar fyrir sama stafinn, hver þeirra táknar annan ekki-fastan væntanlegan ASCII staf: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Ekki er hægt að þekkja AIM auðkenni. Skýrði stafurinn {0} er tvíræður. Það eru nokkrir lyklar fyrir þennan staf sem tákna AIM fánatákn og aðra væntanlega stafi.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Sumir tilkynntir ekki-fastir ASCII stafir eru tvíræðir: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir skrárskilja er tvíræður. Strikamerki sem nota ISO/IEC 15434 setningafræði til að tákna EDI gögn er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir einingaskilja er tvíræður. Strikamerki sem nota ISO/IEC 15434 setningafræði til að tákna EDI gögn er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir tákn um lok sendingar er tvíræður. Strikamerki sem nota ISO/IEC 15434 setningafræði er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Sumar tilkynntar röðir tákna eru tvíræðar. Þessir stafir tákna ekki fasta stafi: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Skýrða táknröðin {0} er tvíræð. Þetta getur komið í veg fyrir lestur viðbótargagna sem eru innifalin í strikamerki.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir skrárskilja er tvíræður. Strikamerki sem nota ASCII 28 stjórnmerki er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir einingaskilja er tvíræður. Strikamerki sem nota ASCII 31 stjórnmerki er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Skýrði stafurinn {0} fyrir tákn um lok sendingar er tvíræður. Strikamerki sem nota ASCII04 stjórnmerki er hugsanlegt að ekki verði lesin áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Skýrða táknröðin {0} er tvíræð. Þetta táknar skráarskiljann.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Skýrði stafurinn fyrir fastan staf er sá sami og stafurinn sem tilkynnt var um fyrir sendingarenda stafinn.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Ekki er hægt að lesa skráarskil tákn á áreiðanlegan hátt.</value>
+    <value>Ekki er hægt að lesa skráarflokksgreini.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Ekki er hægt að lesa einingaskil tákn á áreiðanlegan hátt.</value>
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa skráarflokksgreini áreiðanlega.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Ekki er hægt að lesa lok sendingar tákn á áreiðanlegan hátt.</value>
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa skráarflokksgreini áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Ekki er hægt að lesa skráargreini.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa skráargreini áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa skráargreini áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Ekki er hægt að lesa einingarflokksgreini.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa einingarflokksgreini áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa einingarflokksgreini áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Ekki er hægt að lesa sendingarlokamerki.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa sendingarlokamerki áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Tilgreind röð tákna {0} er óljós. Ekki er hægt að lesa sendingarlokamerki áreiðanlega.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Skýrð stafaröð {0} er tvíræð. Þetta tákna hópaskiljara stafinn.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Ekki er hægt að lesa AIM auðkennið á áreiðanlegan hátt.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Strikamerkjaskanni og lyklaborðsútlit tölvunnar samsvara ekki við framsetningu á skráar aðskiljum.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Strikamerkjaskanni og lyklaborðsútlit tölvunnar samsvara ekki við framsetningu á sendingarlokastöfum.</value>
   </data>
 </root>

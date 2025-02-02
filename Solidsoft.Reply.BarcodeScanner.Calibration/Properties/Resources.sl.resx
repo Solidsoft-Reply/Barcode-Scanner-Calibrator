@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Poročani znak {0} je dvoumen. Črtnih kod, ki uporabljajo sintakso ISO/IEC 15434, ni mogoče zanesljivo brati.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Čitalnik črtnih kod ne prenaša AIM identifikatorja.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM identifikatorja ni mogoče prepoznati.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Čitalnik črtnih kod prenaša predpono: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Čitalnik črtnih kod prenaša kodo: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Čitalnik črtnih kod prenaša pripono: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Čitalnik črtnih kod ne prenaša zaporedja znakov za konec vrstice (npr. vračanje vozička).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Poročani znak {0} je dvoumen. Obstaja več tipk za isti znak, vsaka predstavlja drugačen pričakovan znak. Vendar pa je največ en pričakovan znak invarianten.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Nekateri poročani znaki so dvoumni. Obstaja več tipk za isti znak, vsaka predstavlja drugačen pričakovan neinvariantni ASCII znak: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM identifikatorjev ni mogoče prepoznati. Poročani znak {0} je dvoumen. Obstaja več tipk za ta znak, ki predstavlja zastavico AIM in druge pričakovane znake.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Nekateri poročani neinvariantni ASCII znaki so dvoumni: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Poročano zaporedje znakov {0} je dvoumno. To lahko prepreči branje dodatnih podatkovnih elementov, vključenih v črtno kodo.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Nekatera poročana zaporedja znakov so dvoumna. Ti znaki ne predstavljajo invariantnih znakov: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata za invariantne znake.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata za neinvariantne ASCII znake.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil skupin.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil zapisov.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju AIM identifikatorjev.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock je vklopljen.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock je morda vklopljen.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Čitalnik črtnih kod je morda nastavljen za pretvorbo znakov v velike črke.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Čitalnik črtnih kod je morda nastavljen za pretvorbo znakov v male črke.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Čitalnik črtnih kod je morda nastavljen za inverzijo velikosti znakov.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Najboljši poročani čas vnosa podatkov z tipkovnico med kalibracijo kaže, da čitalnik črtnih kod ne deluje optimalno.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Znak {0} ni mogoče zanesljivo predstaviti zaradi nekompatibilnosti z razporeditvijo tipk na tipkovnici.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Poročano zaporedje znakov {0} je dvoumno. To predstavlja znak ločila skupin.</value>
+    <value>Znaka ločila skupin ni mogoče prebrati.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Nekateri poročani znaki so dvoumni. Lahko se poročajo posamezno, vendar se uporabljajo tudi za sestavljanje ligatur: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibracija ni uspela. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Podprti so znaki ločila EDI.</value>
+    <value>Podprti so znaki ločila datotek.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Poročani znak {0} je dvoumen. Črtnih kod, ki uporabljajo sintakso ISO/IEC 15434 za prikaz podatkov EDI, ni mogoče zanesljivo brati.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Optični bralnik črtnih kod in razporeditve tipkovnice računalnika ne ustrezajo pri prikazu ločil enot.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Razporeditev tipkovnice čitalnika črtnih kod in računalnika se ne ujemata pri prikazovanju ločil EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Ujemanja razporeditev tipkovnic čitalnika črtnih kod in računalnika ni mogoče določiti.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Podprti so ločevalni znaki enote.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvoumen. Črtne kode, ki uporabljajo ASCII 28 ali ASCII 31, morda ne bodo zanesljivo prebrane.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Znaka ločilnika datotek ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Znaka ločilnika enot ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Znaka za konec prenosa ni mogoče zanesljivo prebrati.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Znaki za konec prenosa so podprti.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Čitalnik črtne kode ne pošilja zaporedja znakov za konec vrstice (npr. povratek vozička).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvoumen. Obstaja več tipk za isti znak, vsaka predstavlja drug pričakovan znak. Vendar je največ eden od pričakovanih znakov invarianten.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Nekateri prijavljeni znaki so dvoumni. Obstaja več tipk za isti znak, vsaka predstavlja drug ne-invarianten pričakovan ASCII znak: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Identifikatorjev AIM ni mogoče prepoznati. Prijavljeni znak {0} je dvoumen. Obstaja več tipk za ta znak, ki predstavljajo AIM zastavo ter druge pričakovane znake.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Nekateri prijavljeni ne-invariantni ASCII znaki so dvoumni: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Prijavljeni znak {0} za ločilo datoteke je dvoumen. Črtne kode, ki uporabljajo sintakso ISO/IEC 15434 za predstavitev podatkov EDI, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Prijavljeni znak {0} za ločilo enote je dvoumen. Črtne kode, ki uporabljajo sintakso ISO/IEC 15434 za predstavitev podatkov EDI, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Prijavljeni znak {0} za znak konca prenosa je dvoumen. Črtne kode, ki uporabljajo sintakso ISO/IEC 15434, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Nekatera prijavljena zaporedja znakov so dvoumna. Ti znaki ne predstavljajo invariantnih znakov: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Prijavljeno zaporedje znakov {0} je dvoumno. To lahko prepreči branje dodatnih podatkovnih elementov, vključenih v črtno kodo.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Prijavljeni znak {0} za ločilo datoteke je dvoumen. Črtne kode, ki uporabljajo nadzorne znake ASCII 28, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Prijavljeni znak {0} za ločilo enote je dvoumen. Črtne kode, ki uporabljajo nadzorne znake ASCII 31, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Prijavljeni znak {0} za znak konca prenosa je dvoumen. Črtne kode, ki uporabljajo nadzorne znake ASCII04, morda ne bodo zanesljivo prebrane.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Prijavljeno zaporedje znakov {0} je dvoumno. To predstavlja znak za ločevanje zapisov.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Prijavljeni znak za nespremenljiv znak je enak kot znak prijavljen za znak konec prenosa.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Znaka ločilnika datotek ni mogoče zanesljivo prebrati.</value>
+    <value>Znaka ločila zapisov ni mogoče prebrati.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Znaka ločilnika enot ni mogoče zanesljivo prebrati.</value>
+    <value>The reported character sequence {0} is ambiguous. The record separator character cannot be reliably read.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Znaka za konec prenosa ni mogoče zanesljivo prebrati.</value>
+    <value>The reported character sequence {0} is ambiguous. The record separator character cannot be reliably read.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Znaka ločila datotek ni mogoče prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka ločila datotek ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka ločila datotek ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Znaka ločila enote ni mogoče prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka ločila enote ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka ločila enote ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Znaka konca prenosa ni mogoče prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka konca prenosa ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Prijavljena zaporedja znakov {0} so dvoumna. Znaka konca prenosa ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Poročano zaporedje znakov {0} je dvoumno. To predstavlja znak ločila skupin.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Identifikator AIM ni mogoče zanesljivo prebrati.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Optični bralnik črtnih kod in razporeditve tipkovnice računalnika ne ustrezajo pri prikazu ločil datotek.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Optični bralnik črtnih kod in razporeditve tipkovnice računalnika ne ustrezajo pri prikazu znakov za konec prenosa.</value>
   </data>
 </root>

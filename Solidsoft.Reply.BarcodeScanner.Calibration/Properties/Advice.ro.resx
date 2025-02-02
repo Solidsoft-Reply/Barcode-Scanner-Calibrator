@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Încearcă din nou, asigurându-te că scanezi codul de bare corect.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de fișiere (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Sistemul dvs. nu poate citi caracterele de separator de fișiere (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Sistemul dvs. este posibil să nu citească corect caracterele de sfârșit de transmisie (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Sistemul dvs. nu poate citi caracterele de sfârșit de transmisie (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testul a eșuat.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Unele tipuri de coduri de bare folosesc acest caracter pentru a marca sfârșitul datelor codului de bare. Este posibil ca software-ul dvs. să nu citească corect niciun sufix adăugat de cititorul de coduri de bare.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Unele tipuri de coduri de bare folosesc acest caracter pentru a marca sfârșitul datelor codului de bare. Este posibil ca software-ul dvs. să nu citească corect niciun sufix adăugat de cititorul de coduri de bare.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Ai putea fi scanat un cod de bare greșit sau ai introdus date incorecte folosind tastatura. Scanerul tău de coduri de bare sau sistemul poate fi lent, sau pot apărea probleme neașteptate sau intermitente.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Błąd podczas rozwiązywania skryptów klawiatury: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Sistemul dvs. nu poate citi caracterele de separator de fișiere (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de separator de unități (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Aceste caractere nu sunt utilizate pe scară largă în codurile de bare.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Dacă întâmpinați dificultăți la scanarea codurilor de bare, încercați să configurați cititorul de coduri de bare pentru a emula un tastatură numerică.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Introduceți manual datele în software-ul dvs. de verificare pentru a verifica identificatorii unici PPN.;;Dacă este necesar, configurați scannerul dvs. de coduri de bare pentru a emula o tastatură numerică.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Dacă întâmpinați probleme la scanarea codurilor de bare PPN germane, introduceți datele manual în software-ul dvs. de verificare.;;Dacă este necesar, configurați scannerul dvs. de coduri de bare pentru a emula o tastatură numerică.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de sfârșit de transmisie (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Sistemul dvs. este posibil să nu citească corect caracterele de sfârșit de transmisie (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Unele tipuri de coduri de bare folosesc acest caracter pentru a marca sfârșitul datelor codului de bare. Este posibil ca software-ul dvs. să nu citească corect niciun sufix adăugat de cititorul de coduri de bare.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Unele tipuri de coduri de bare folosesc acest caracter pentru a marca sfârșitul datelor codului de bare. Este posibil ca software-ul dvs. să nu citească corect niciun sufix adăugat de cititorul de coduri de bare.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Upewnij się, że układy klawiatury pasują do siebie.;;W razie potrzeby skonfiguruj skaner kodów kreskowych, aby emulował klawiaturę numeryczną i przesyłał identyfikatory AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Sistemul dvs. nu poate citi în mod fiabil identificatorul tipului de cod de bare.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identyfikatory AIM reprezentują typ kodu kreskowego. Twoje oprogramowanie może ich użyć, aby wyeliminować niepotrzebne alerty.</value>
   </data>
 </root>

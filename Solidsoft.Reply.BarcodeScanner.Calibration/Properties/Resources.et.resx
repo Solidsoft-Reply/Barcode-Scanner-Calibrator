@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Teatatud tähemärk {0} on mitmetähenduslik. Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit, ei saa usaldusväärselt lugeda.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Vöötkoodiskanner ei edasta AIM identifikaatorit.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM identifikaatorit ei tunnustata.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Vöötkoodiskanner edastab prefiksi: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Vöötkoodiskanner edastab koodi: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Vöötkoodiskanner edastab sufiksi: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Vöötkoodiskanner ei edasta rea lõpu tähemärkide järjestust (nt kärusõidu tagastust).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Teatatud tähemärk {0} on mitmetähenduslik. Sama tähemärgi jaoks on mitu klahvi, igaüks esindades erinevat oodatavat tähemärki. Siiski on maksimaalselt üks oodatavatest tähemärkidest invariantne.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Mõningaid teatatud tähemärke on mitmetähenduslikud. Sama tähemärgi jaoks on mitu klahvi, igaüks esindades erinevat mitteinvariantset eeldatavat ASCII tähemärki: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM identifikaatoreid ei tunnustata. Teatatud tähemärk {0} on mitmetähenduslik. Sellele tähemärgile, mis esindab AIM lipu tähemärki ja ka muid oodatavaid tähemärke, vastab mitu klahvi.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Mõningaid teatatud mitteinvariantseid ASCII tähemärke on mitmetähenduslikud: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See võib takistada vöötkoodis sisalduvate täiendavate andmeelementide lugemist.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Mõningaid teatatud tähemärkide järjestusi on mitmetähenduslikud. Need tähemärgid ei esinda invariante tähemärke: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti invariante tähemärkide puhul.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti mitteinvariantsete ASCII tähemärkide puhul.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti grupi eraldajate esitamisel.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti rekordi eraldajate esitamisel.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti AIM identifikaatorite esitamisel.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock on sisse lülitatud.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock võib olla sisse lülitatud.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Vöötkoodiskanner võib olla konfigureeritud tähemärke suurtähtedeks teisendama.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Vöötkoodiskanner võib olla konfigureeritud tähemärke väiketähtedeks teisendama.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Vöötkoodiskanner võib olla konfigureeritud tähemärkide tähemärkide pööramiseks.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Kalibreerimise käigus teatatud parim klaviatuuri andmesisestuse aeg näitab, et vöötkoodiskanner ei tööta optimaalselt.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Tähemärki {0} ei saa usaldusväärselt esitada klaviatuuri paigutuse mittevastavuse tõttu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See esindab grupi eraldaja tähemärki.</value>
+    <value>Grupieraldusmärki ei saa lugeda.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Mõningaid teatatud tähemärke on mitmetähenduslikud. Neid saab teatada individuaalselt, kuid neid kasutatakse ka liitumistähtede koostamiseks: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibreerimine ebaõnnestus. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI eraldaja tähemärgid on toetatud.</value>
+    <value>Failide eraldusmärgid on toetatud.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Teatatud tähemärk {0} on mitmetähenduslik. Vöötkoode, mis kasutavad ISO/IEC 15434 süntaksit EDI andmete esitamiseks, ei saa usaldusväärselt lugeda.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Triipkoodilugeja ja arvuti klaviatuuri paigutused ei vasta üksuse eraldajate kujutamisel.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutused ei ühti EDI eraldajate esitamisel.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Vöötkoodiskanneri ja arvuti klaviatuuri paigutuste vastavust ei saa kindlaks määrata.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Ühikueraldusmärgid on toetatud.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Teatatud märk {0} on mitmetähenduslik. Vöötkoodid, mis kasutavad ASCII 28 või ASCII 31, ei pruugi olla usaldusväärselt loetavad.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Failieraldaja märki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Ühikueraldaja märki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Edastamise lõpumärki ei saa usaldusväärselt lugeda.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Edastamise lõpumärke toetatakse.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Vöötkoodilugeja ei edasta rea lõpu märgijada (nt käigu tagastus).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Teatatud märk {0} on mitmetähenduslik. Sama märgi jaoks on mitu klahvi, millest igaüks tähistab erinevat oodatavat märki. Kuid, maksimaalselt, ainult üks oodatavatest märkidest on invariaatne.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Mõned teatatud märgid on mitmetähenduslikud. Sama märgi jaoks on mitu klahvi, millest igaüks tähistab erinevat mitte-invariaatset oodatavat ASCII märki: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-identifikaatoreid ei saa tuvastada. Teatatud märk {0} on mitmetähenduslik. Selle märgi jaoks on mitu klahvi, mis tähistavad nii AIM-lipu märki kui ka muid oodatavaid märke.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Mõned teatatud mitte-invariaatsed ASCII märgid on mitmetähenduslikud: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Teatatud märk {0} failijaoturi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ISO/IEC 15434 süntaksit EDI andmete esitamiseks, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Teatatud märk {0} ühikujaoturi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ISO/IEC 15434 süntaksit EDI andmete esitamiseks, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Teatatud märk {0} edastuse lõpu märgi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ISO/IEC 15434 süntaksit, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Mõned teatatud märgijadad on mitmetähenduslikud. Need märgid ei esinda invariaatseid märke: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. See võib takistada mis tahes täiendavate andmeelementide lugemist, mis on vöötkoodis sisalduvad.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Teatatud märk {0} failijaoturi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ASCII 28 juhtmärke, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Teatatud märk {0} ühikujaoturi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ASCII 31 juhtmärke, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Teatatud märk {0} edastuse lõpu märgi jaoks on mitmetähenduslik. Vöötkoodid, mis kasutavad ASCII04 juhtmärke, ei pruugi olla usaldusväärselt loetavad.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. See esindab kirje eraldusmärki.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Teatatud märk invariaadi jaoks on sama, mis edastuse lõpu märgi jaoks teatatud märk.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Failieraldaja märki ei saa usaldusväärselt lugeda.</value>
+    <value>Kirjeseparaatori märki ei saa lugeda.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Ühikueraldaja märki ei saa usaldusväärselt lugeda.</value>
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Kirjeseparaatori märki ei saa usaldusväärselt lugeda.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Edastamise lõpumärki ei saa usaldusväärselt lugeda.</value>
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Kirjeseparaatori märki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Faili eraldusmärki ei saa lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Faili eraldusmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Faili eraldusmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Ühikueraldusmärki ei saa lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Ühikueraldusmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Ühikueraldusmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Edastuse lõppmärki ei saa lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Edastuse lõppmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Teatatud märgijada {0} on mitmetähenduslik. Edastuse lõppmärki ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Teatatud tähemärkide järjestus {0} on mitmetähenduslik. See esindab grupi eraldaja tähemärki.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM-identifikaatorit ei saa usaldusväärselt lugeda.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Triipkoodilugeja ja arvuti klaviatuuri paigutused ei vasta faili eraldajate kujutamisel.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Triipkoodilugeja ja arvuti klaviatuuri paigutused ei vasta edastuse lõpu märkide kujutamisel.</value>
   </data>
 </root>

@@ -246,7 +246,7 @@ public readonly record struct Token(
                                        DeadKeyCharacterMap = new Dictionary<string, char>(),
                                        LigatureMap = new Dictionary<string, char>(),
                                        ScannerDeadKeysMap = new Dictionary<string, string>(),
-                                       ScannerUnassignedKeys = new List<string>()
+                                       ScannerUnassignedKeys = []
                                    };
 
         if (CalibrationData is not null) {
@@ -270,7 +270,7 @@ public readonly record struct Token(
                 CalibrationData.ScannerDeadKeysMap?.Add(key, value);
             }
 
-            foreach (var value in oldToken.CalibrationData?.ScannerUnassignedKeys ?? new List<string>()) {
+            foreach (var value in oldToken.CalibrationData?.ScannerUnassignedKeys ?? []) {
                 CalibrationData.ScannerUnassignedKeys?.Add(value);
             }
         }
@@ -286,24 +286,25 @@ public readonly record struct Token(
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespond,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForInvariants,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForNonInvariantCharacters,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping,
-                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEotWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping,
+                                          oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEotCharactersWithoutMapping,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping,
                                           oldToken.SystemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier,
                                           oldToken.SystemCapabilities.CanReadInvariantsReliably,
-                                          oldToken.SystemCapabilities.CanReadFormat05AndFormat06Reliably,
+                                          oldToken.SystemCapabilities.CanReadNonInvariantsReliably,
+                                          oldToken.SystemCapabilities.CanReadIsoIec15434EnvelopeReliably,
                                           oldToken.SystemCapabilities.CanReadEdiReliably,
-                                          //oldToken.SystemCapabilities.CanReadAscii28Ascii31Reliably,
-                                          oldToken.SystemCapabilities.CanReadGroupSeparatorReliably,
-                                          oldToken.SystemCapabilities.CanReadRecordSeparatorReliably,
+                                          oldToken.SystemCapabilities.CanReadGroupSeparatorsReliably,
+                                          oldToken.SystemCapabilities.CanReadRecordSeparatorsReliably,
                                           oldToken.SystemCapabilities.CanReadFileSeparatorsReliably,
                                           oldToken.SystemCapabilities.CanReadUnitSeparatorsReliably,
-                                          oldToken.SystemCapabilities.CanReadEotReliably,
+                                          oldToken.SystemCapabilities.CanReadEotCharactersReliably,
+                                          oldToken.SystemCapabilities.AmbiguousInvariantForEotSeparator,
+                                          oldToken.SystemCapabilities.CanReadAimIdentifiersWithoutMapping,
                                           oldToken.SystemCapabilities.CanReadAimIdentifiersReliably,
-                                          oldToken.SystemCapabilities.CanReadAdditionalAsciiCharactersReliably,
                                           oldToken.SystemCapabilities.ScannerTransmitsAimIdentifiers,
                                           oldToken.SystemCapabilities.ScannerTransmitsEndOfLineSequence,
                                           oldToken.SystemCapabilities.ScannerTransmitsAdditionalPrefix,
@@ -343,10 +344,10 @@ public readonly record struct Token(
                                       new Dictionary<string, char>(),
                                       new Dictionary<string, string>(),
                                       new Dictionary<string, string>(),
-                                      new List<string>(),
+                                      [],
                                       new Dictionary<char, char>(),
                                       new Dictionary<string, char>(),
-                                      new List<char>(),
+                                      [],
                                       oldToken.ExtendedData?.Prefix ?? string.Empty,
                                       oldToken.ExtendedData?.Code ?? string.Empty,
                                       oldToken.ExtendedData?.Suffix ?? string.Empty,
@@ -365,8 +366,8 @@ public readonly record struct Token(
                                       oldToken.ExtendedData?.AssessFormat06Support ?? false,
                                       oldToken.ExtendedData?.NonInvariantAmbiguities ?? new Dictionary<string, IList<string>>(),
                                       oldToken.ExtendedData?.InvariantGs1Ambiguities ?? new Dictionary<string, IList<string>>(),
-                                      oldToken.ExtendedData?.NonInvariantUnrecognisedCharacters ?? new List<string>(),
-                                      oldToken.ExtendedData?.InvariantGs1UnrecognisedCharacters ?? new List<string>());
+                                      oldToken.ExtendedData?.NonInvariantUnrecognisedCharacters ?? [],
+                                      oldToken.ExtendedData?.InvariantGs1UnrecognisedCharacters ?? []);
 
         if (extendedData is null && oldToken.ExtendedData is not null && ExtendedData is not null) {
             foreach (var (key, value) in oldToken.ExtendedData.DeadKeysMap) {
@@ -609,10 +610,10 @@ public readonly record struct Token(
             new Dictionary<string, char>(),
             new Dictionary<string, string>(),
             new Dictionary<string, string>(),
-            new List<string>(),
+            [],
             new Dictionary<char, char>(),
             new Dictionary<string, char>(),
-            new List<char>(),
+            [],
             prefix,
             code,
             suffix,

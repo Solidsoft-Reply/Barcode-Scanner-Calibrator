@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Yritä uudelleen varmistaen, että skannaat oikean viivakoodin tai viivakoodit.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Järjestelmäsi ei välttämättä lue tiedoston erotinmerkkejä (ASCII 28) oikein.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty lukemaan tiedoston erotinmerkkejä (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Järjestelmäsi ei välttämättä lue siirron lopetusmerkkejä (ASCII 04) oikein.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Järjestelmäsi ei pysty lukemaan siirron lopetusmerkkejä (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testi epäonnistui.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Jotkut viivakoodityypit käyttävät tätä merkkiä viivakoodin tietojen päättymisen merkitsemiseen. Ohjelmistosi ei ehkä lue oikein viivakoodinlukijan lisäämää liitettä.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Jotkut viivakoodityypit käyttävät tätä merkkiä viivakoodin tietojen päättymisen merkitsemiseen. Ohjelmistosi ei ehkä lue oikein viivakoodinlukijan lisäämää liitettä.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Saatat olla skannannut väärän viivakoodin tai syöttänyt virheellisiä tietoja näppäimistöllä. Viivakoodinlukijasi tai järjestelmäsi saattaa olla hidas, tai jokin odottamaton tai satunnainen ongelma saattaa olla ilmennyt.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Virhe näppäimistöskriptien selvittämisessä: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Järjestelmäsi ei pysty lukemaan tiedoston erotinmerkkejä (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue yksikön erotinmerkkejä (ASCII 31) oikein.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Näitä merkkejä ei käytetä laajalti viivakoodeissa.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jos kohtaat vaikeuksia viivakoodien skannaamisessa, yritä määrittää viivakoodinlukijasi jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Syötä tiedot manuaalisesti varmennusohjelmistoon varmistaaksesi PPN-yksilölliset tunnisteet.;;Tarvittaessa määritä viivakoodinlukija jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jos kohtaat ongelmia skannatessasi saksalaisia PPN-viivakoodeja, syötä tiedot manuaalisesti varmennusohjelmistoon.;;Tarvittaessa määritä viivakoodinlukija jäljittelemään numeronäppäimistöä.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue siirron lopetusmerkkejä (ASCII 04) oikein.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Järjestelmäsi ei välttämättä lue siirron lopetusmerkkejä (ASCII 04) oikein.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Jotkut viivakoodityypit käyttävät tätä merkkiä viivakoodin tietojen päättymisen merkitsemiseen. Ohjelmistosi ei ehkä lue oikein viivakoodinlukijan lisäämää liitettä.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Jotkut viivakoodityypit käyttävät tätä merkkiä viivakoodin tietojen päättymisen merkitsemiseen. Ohjelmistosi ei ehkä lue oikein viivakoodinlukijan lisäämää liitettä.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Varmista, että näppäimistöasettelusi vastaavat toisiaan.;;Tarvittaessa konfiguroi viivakoodinlukijasi toimimaan numeerisen näppäimistön emulaattorina ja lähettämään AIM-tunnisteita.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Järjestelmäsi ei pysty luotettavasti lukemaan viivakoodityypin tunnistetta.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-tunnisteet edustavat viivakoodityyppiä. Ohjelmistosi voi käyttää niitä tarpeettomien hälytysten poistamiseen.</value>
   </data>
 </root>

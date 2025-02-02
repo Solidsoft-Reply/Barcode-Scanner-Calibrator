@@ -4,7 +4,6 @@ using FluentAssertions;
 namespace Solidsoft.Reply.BarcodeScanner.Calibration.Tests.StepDefinitions;
 
 using System;
-using TechTalk.SpecFlow;
 
 [Binding]
 public sealed class AdviceStepDefinitions
@@ -27,27 +26,44 @@ public sealed class AdviceStepDefinitions
         return input switch
         {
             "The United States" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    \x0004    {lineTerminator}",
+            "The United States with no Format 05/06 assessment" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    {lineTerminator}",
+            "The United States with no GS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}        \x001C    \x001E    \x001F    \x0004    {lineTerminator}",
+            "The United States with no RS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C        \x001F    \x0004    {lineTerminator}",
             "The United States with no FS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D        \x001E    \x001F    \x0004    {lineTerminator}",
             "The United States with no US" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E        \x0004    {lineTerminator}",
             "The United States with no EOT" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F        {lineTerminator}",
+            "The United States with null GS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \0    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with null RS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \0   \x001F    \x0004    {lineTerminator}",
             "The United States with null FS" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \0    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with null US" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \0   \x0004    {lineTerminator}",
             "The United States with null EOT" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    \0    {lineTerminator}",
+            "The United States with GS as different character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001B    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as different character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001B   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as different character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001B    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as different character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001B   \x0004    {lineTerminator}",
             "The United States with EOT as different character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    \x001B    {lineTerminator}",
+            "The United States with GS as ambiguous invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    Z    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as ambiguous invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    Z   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as ambiguous invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    Z    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as ambiguous invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    Z   \x0004    {lineTerminator}",
             "The United States with EOT as ambiguous invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    Z    {lineTerminator}",
+            "The United States with GS as ambiguous non-invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    @    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as ambiguous non-invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    @   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as ambiguous non-invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    @    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as ambiguous non-invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    @   \x0004    {lineTerminator}",
             "The United States with EOT as ambiguous non-invariant character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    @    {lineTerminator}",
+            "The United States with GS as AIM flag character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    ]    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as AIM flag character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    ]   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as AIM flag character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    ]    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as AIM flag character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    ]    \x0004    {lineTerminator}",
             "The United States with EOT as AIM flag character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    ]    {lineTerminator}",
+            "The United States with GS as dead key character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \0é    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as dead key character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \0é   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as dead key character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \0é    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as dead key character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \0é    \x0004    {lineTerminator}",
             "The United States with EOT as dead key character" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    \0é    {lineTerminator}",
+            "The United States with GS as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    óé    \x001C    \x001E   \x001F    \x0004    {lineTerminator}",
+            "The United States with RS as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    óé   \x001F    \x0004    {lineTerminator}",
             "The United States with FS as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    óé    \x001E   \x001F    \x0004    {lineTerminator}",
             "The United States with US as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    óé    \x0004    {lineTerminator}",
             "The United States with EOT as ligature" => $"{aimIdD2}  {invariantUs}   {nonInvariantUs}    \x001D    \x001C    \x001E    \x001F    óé    {lineTerminator}",
@@ -60,11 +76,21 @@ public sealed class AdviceStepDefinitions
         _baselineInput = GetBaselineInput(input);
     }
 
-    [When("the baseline input to submitted to an agnostic calibrator")]
+    [When("the baseline input is submitted to an agnostic calibrator")]
     public void WhenTheBaselineInputIsSubmittedToTheAgnosticCalibrator() {
         _currentAssumption = Assumption.Agnostic;
         _currentCalibrator = new Calibrator(assumption: _currentAssumption);
         _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault()  );
+    }
+
+    [When("the baseline input is submitted to an agnostic calibrator with no Format 05 or 06 assessment")]
+    public void WhenTheBaselineInputIsSubmittedToTheAgnosticCalibratorWithNoFormatAssessment() {
+        _currentAssumption = Assumption.Agnostic;
+        _currentCalibrator = new Calibrator(assumption: _currentAssumption)
+        {
+            AssessFormatSupport = false
+        };
+        _currentToken = _currentCalibrator.Calibrate(_baselineInput, _currentCalibrator.CalibrationTokens().FirstOrDefault());
     }
 
     [When("the baseline input to submitted to a calibration calibrator")]

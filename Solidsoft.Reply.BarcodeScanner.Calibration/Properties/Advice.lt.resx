@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Bandykite dar kartą, įsitikindami, kad nuskenuojate teisingą brūkšninį kodą(-us).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Jūsų sistema gali netinkamai nuskaityti failo skyriklio (ASCII 28) simbolius.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Jūsų sistema negali nuskaityti failo skyriklio (ASCII 28) simbolių.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Jūsų sistema gali netinkamai nuskaityti vieneto skyriklio (ASCII 31) simbolius.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Jūsų sistema gali netinkamai nuskaityti vieneto skyriklio (ASCII 31) simbolius.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Jūsų sistema gali netinkamai nuskaityti perdavimo pabaigos (ASCII 04) simbolius.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Jūsų sistema negali nuskaityti perdavimo pabaigos (ASCII 04) simbolių.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testas nepavyko.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Kai kurios brūkšninių kodų rūšys naudoja šį simbolį brūkšninio kodo duomenų pabaigai žymėti. Jūsų programinė įranga gali neteisingai nuskaityti bet kokią priesagą, pridėtą brūkšninių kodų skaitytuvo.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Kai kurios brūkšninių kodų rūšys naudoja šį simbolį brūkšninio kodo duomenų pabaigai žymėti. Jūsų programinė įranga gali neteisingai nuskaityti bet kokią priesagą, pridėtą brūkšninių kodų skaitytuvo.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Galbūt nuskenuotas neteisingas brūkšninis kodas arba neteisingai įvesti duomenys naudojant klaviatūrą. Jūsų brūkšninių kodų skaitytuvas ar sistema gali veikti lėtai, arba gali kilti netikėtų ar laikinų problemų.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Klaida sprendžiant klaviatūros scenarijus: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Jūsų sistema negali nuskaityti failo skyriklio (ASCII 28) simbolių.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Jūsų sistema gali netinkamai nuskaityti vieneto skyriklio (ASCII 31) simbolius.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Jūsų sistema gali netinkamai nuskaityti vieneto skyriklio (ASCII 31) simbolius.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Šie simboliai nėra plačiai naudojami brūkšniniuose koduose.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jei kyla sunkumų skenuojant brūkšninius kodus, pabandykite sukonfigūruoti brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Įveskite duomenis rankiniu būdu į patvirtinimo programą, kad patvirtintumėte unikalius PPN identifikatorius.;;Jei reikia, sukonfigūruokite brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jei kyla problemų skenuojant vokiškus PPN brūkšninius kodus, duomenis įveskite rankiniu būdu į patvirtinimo programą.;;Jei reikia, sukonfigūruokite brūkšninių kodų skaitytuvą, kad jis imituotų skaitmeninę klaviatūrą.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Jūsų sistema gali netinkamai nuskaityti perdavimo pabaigos (ASCII 04) simbolius.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Jūsų sistema gali netinkamai nuskaityti perdavimo pabaigos (ASCII 04) simbolius.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Kai kurios brūkšninių kodų rūšys naudoja šį simbolį brūkšninio kodo duomenų pabaigai žymėti. Jūsų programinė įranga gali neteisingai nuskaityti bet kokią priesagą, pridėtą brūkšninių kodų skaitytuvo.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Kai kurios brūkšninių kodų rūšys naudoja šį simbolį brūkšninio kodo duomenų pabaigai žymėti. Jūsų programinė įranga gali neteisingai nuskaityti bet kokią priesagą, pridėtą brūkšninių kodų skaitytuvo.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Įsitikinkite, kad jūsų klaviatūros išdėstymai sutampa.;;Jei reikia, nustatykite savo brūkšninių kodų skaitytuvą imituoti skaitmeninį klavišų bloką ir siųsti AIM identifikatorius.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Jūsų sistema negali patikimai nuskaityti brūkšninio kodo tipo identifikatoriaus.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM identifikatoriai atspindi brūkšninio kodo tipą. Jūsų programinė įranga gali juos naudoti nereikalingų įspėjimų šalinimui.</value>
   </data>
 </root>

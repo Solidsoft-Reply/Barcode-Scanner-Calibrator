@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Caracterul raportat {0} este ambiguu. Codurile de bare care utilizează sintaxa ISO/IEC 15434 nu pot fi citite în mod fiabil.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Scanerul de coduri de bare nu transmite un identificator AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Identificatorul AIM nu poate fi recunoscut.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Scanerul de coduri de bare transmite un prefix: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Scanerul de coduri de bare transmite un cod: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Scanerul de coduri de bare transmite un sufix: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Scanerul de coduri de bare nu transmite o secvență de caractere de sfârșit de linie (de exemplu, un return de car).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Caracterul raportat {0} este ambiguu. Există mai multe taste pentru același caracter, fiecare reprezentând un caracter așteptat diferit. Cu toate acestea, cel mult, doar unul dintre caracterele așteptate este invariant.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Unele caractere raportate sunt ambigue. Există mai multe taste pentru același caracter, fiecare reprezentând un alt caracter ASCII non-invariant așteptat: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Identificatorii AIM nu pot fi recunoscuți. Caracterul raportat {0} este ambiguu. Există mai multe taste pentru acest caracter care reprezintă atât caracterul steag AIM, cât și alte caractere așteptate.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Unele caractere ASCII non-invariante raportate sunt ambigue: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Secvența de caractere raportată {0} este ambiguă. Acest lucru poate împiedica citirea oricăror elemente de date suplimentare incluse într-un cod de bare.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Unele secvențe de caractere raportate sunt ambigue. Aceste caractere nu reprezintă caractere invariante: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund pentru caractere invariante.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund pentru caractere ASCII non-invariante.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund atunci când reprezintă separatorii de grup.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund atunci când reprezintă separatorii de înregistrare.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund atunci când reprezintă identificatorii AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock este activat.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock s-ar putea să fie activat.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Scanerul de coduri de bare poate fi configurat pentru a converti caracterele în litere mari.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Scanerul de coduri de bare poate fi configurat pentru a converti caracterele în litere mici.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Scanerul de coduri de bare poate fi configurat pentru a inversa cazul caracterelor.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Cel mai bun timp raportat de introducere a datelor de la tastatură în timpul calibrării indică faptul că scanerul de coduri de bare nu funcționează optim.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Caracterul {0} nu poate fi reprezentat în mod fiabil din cauza incompatibilității cu configurația tastaturii.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Secvența de caractere raportată {0} este ambiguă. Aceasta reprezintă caracterul separator de grup.</value>
+    <value>Caracterul separator de grup nu poate fi citit.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Unele caractere raportate sunt ambigue. Pot fi raportate individual, dar sunt de asemenea folosite pentru a compune ligaturi: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Calibrarea a eșuat. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Caracterele separator EDI sunt suportate.</value>
+    <value>Caracterele separator de fișiere sunt acceptate.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Caracterul raportat {0} este ambiguu. Codurile de bare care utilizează sintaxa ISO/IEC 15434 pentru a reprezenta datele EDI nu pot fi citite în mod fiabil.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Scannerul de coduri de bare și configurațiile tastaturii computerului nu corespund la reprezentarea separatoarelor de unități.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund atunci când reprezintă separatorii EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Corespondența dintre configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu poate fi determinată.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Caracterele separatoare de unitate sunt acceptate.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Caracterul raportat {0} este ambiguu. Codurile de bare care folosesc ASCII 28 sau ASCII 31 pot să nu fie citite în mod fiabil.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Caracterul separator de fișiere nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Caracterul separator de unitate nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Caracterul de sfârșit de transmisie nu poate fi citit fiabil.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Caracterele de sfârșit de transmisie sunt acceptate.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Scannerul de coduri de bare nu transmite o secvență de caractere de sfârșit de linie (de exemplu, o revenire de linie).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Caracterele raportate {0} sunt ambigue. Există mai multe taste pentru același caracter, fiecare reprezentând un caracter așteptat diferit. Cu toate acestea, cel mult, doar unul dintre caracterele așteptate este invariant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Unele caractere raportate sunt ambigue. Există mai multe taste pentru același caracter, fiecare reprezentând un caracter ASCII așteptat ne-invariant: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Identificatorii AIM nu pot fi recunoscuți. Caracterul raportat {0} este ambiguu. Există mai multe taste pentru acest caracter, care reprezintă caracterul de semnal AIM, precum și alte caractere așteptate.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Unele caractere ASCII ne-invariante raportate sunt ambigue: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un separator de fișiere este ambiguu. Codurile de bare care folosesc sintaxa ISO/IEC 15434 pentru a reprezenta date EDI nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un separator de unități este ambiguu. Codurile de bare care folosesc sintaxa ISO/IEC 15434 pentru a reprezenta date EDI nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un caracter de sfârșit de transmisie este ambiguu. Codurile de bare care folosesc sintaxa ISO/IEC 15434 nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Unele secvențe de caractere raportate sunt ambigue. Aceste caractere nu reprezintă caractere invariante: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Aceasta poate împiedica citirea oricăror elemente de date suplimentare incluse într-un cod de bare.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un separator de fișiere este ambiguu. Codurile de bare care utilizează caractere de control ASCII 28 nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un separator de unități este ambiguu. Codurile de bare care utilizează caractere de control ASCII 31 nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Caracterul raportat {0} pentru un caracter de sfârșit de transmisie este ambiguu. Codurile de bare care utilizează caractere de control ASCII04 nu pot fi citite fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Aceasta reprezintă caracterul separatorului de înregistrări.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Caracterele raportate pentru un caracter invariant sunt aceleași cu cele raportate pentru caracterul de sfârșit de transmisie.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Caracterul separator de fișiere nu poate fi citit fiabil.</value>
+    <value>Caracterul separator de înregistrare nu poate fi citit.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Caracterul separator de unitate nu poate fi citit fiabil.</value>
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de înregistrare nu poate fi citit fiabil.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Caracterul de sfârșit de transmisie nu poate fi citit fiabil.</value>
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de înregistrare nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Caracterul separator de fișier nu poate fi citit.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de fișier nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de fișier nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Caracterul separator de unitate nu poate fi citit.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de unitate nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul separator de unitate nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Caracterul de sfârșit de transmisie nu poate fi citit.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul de sfârșit de transmisie nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Caracterul de sfârșit de transmisie nu poate fi citit fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Secvența de caractere raportată {0} este ambiguă. Aceasta reprezintă caracterul separator de grup.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Identificatorul AIM nu poate fi citit în mod fiabil.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Scannerul de coduri de bare și configurațiile tastaturii computerului nu corespund la reprezentarea separatoarelor de fișiere.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Scannerul de coduri de bare și configurațiile tastaturii computerului nu corespund la reprezentarea caracterelor de sfârșit de transmisie.</value>
   </data>
 </root>

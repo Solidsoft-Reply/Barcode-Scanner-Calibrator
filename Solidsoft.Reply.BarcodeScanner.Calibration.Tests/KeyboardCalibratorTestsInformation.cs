@@ -101,7 +101,7 @@ public class KeyboardCalibratorTestsInformation {
     private const string NoCalibrationDataReportedD3 = "]d1 M N O P Q R S T U V W X Y Z _ a b c d e f\r";
     private const string NoCalibrationDataReportedD4 = "]d1 g h i j k l m n o p q r s t u v w x y z\r";
     private const string NoCalibrationDataReportedD5 = "]d1   £ $ \" [ # ] ^ \0`{ ~ }\r";
-    private const string NoCalibrationDataReportedD6 = "]d1 ¬    \0    \0    \0       \r";
+    private const string NoCalibrationDataReportedD6 = "]d1 ¬    \0    \0    \0        \r";
     private const string NoCalibrationDataReportedDeadKey11 = "]d1";
     private const string NoCalibrationDataReportedDeadKey12 = "]d1";
     private const string NoCalibrationDataReportedDeadKey13 = "]d1";
@@ -231,16 +231,16 @@ public class KeyboardCalibratorTestsInformation {
     public void ErrorGroupSeparatorMapping() {
         // Calibration fails
         var token = PerformCalibrationTest("GroupSeparatorMappingA");
-        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorNotReliablyReadableInvariant);
 
         token = PerformCalibrationTest("GroupSeparatorMappingB");
-        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorNotReliablyReadableInvariant);
 
         token = PerformCalibrationTest("GroupSeparatorMappingC");
-        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorNotReliablyReadableInvariant);
 
         token = PerformCalibrationTest("GroupSeparatorMappingD");
-        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorMapping);
+        Assert.Contains(token.Errors, e => e.InformationType == InformationType.GroupSeparatorNotReliablyReadableInvariant);
     }
 
     /// <summary>
@@ -279,19 +279,19 @@ public class KeyboardCalibratorTestsInformation {
     [Fact]
     public void WarningControlCharacterMapping() {
         var token = PerformCalibrationTest("ControlCharacterMappingA");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("ControlCharacterMappingB");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("ControlCharacterMappingC");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("ControlCharacterMappingD");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("ControlCharacterMappingE");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingAdditionalDataElements);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
     }
 
     /// <summary>
@@ -321,13 +321,13 @@ public class KeyboardCalibratorTestsInformation {
     [Fact]
     public void WarningFormat06GroupSeparatorMapping() {
         var token = PerformCalibrationTest("Format06GroupSeparatorMappingA");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("Format06GroupSeparatorMappingB");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
         token = PerformCalibrationTest("Format06GroupSeparatorMappingC");
-        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.IsoIec15434RecordSeparatorMapping);
+        Assert.Contains(token.Warnings, e => e.InformationType == InformationType.ControlCharacterMappingNonInvariants);
 
     }
 

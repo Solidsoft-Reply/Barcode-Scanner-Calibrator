@@ -401,7 +401,7 @@ public class KeyboardCalibratorTestsFromUnitedStatesMh10 {
     public void ToCzech() {
         var token = PerformCalibrationTest("Czech");
         // Check warning for German PPN packs not recognised.
-        Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434SyntaxNotRecognised);
+        Assert.Contains(token.Warnings, ci => ci.InformationType == InformationType.IsoIec15434EdiNotReliablyReadable);
     }
 
     /// <summary>

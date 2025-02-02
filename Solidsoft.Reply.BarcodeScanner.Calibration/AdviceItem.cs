@@ -18,6 +18,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+// Ignore Spelling: Json
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;

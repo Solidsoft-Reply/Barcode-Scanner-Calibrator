@@ -264,6 +264,13 @@ public enum AdviceType {
     CannotReadAim = 235,
 
     /// <summary>
+    /// <p>Your system cannot reliably read the barcode type identifier.</p>
+    /// <p>Make sure your keyboard layouts match. If necessary, configure your barcode scanner to
+    ///   emulate a numeric keypad and to transmit AIM identifiers.</p>
+    /// </summary>
+    CannotReadAimReliably = 236,
+
+    /// <summary>
     /// <p>Your system may not be able to read Format 05 or Format 06 barcodes reliably.</p>
     /// <p>If you experience problems when scanning barcodes that contain Format 05 or Format 06 data,
     /// enter data manually into your software. If necessary, configure your barcode scanner to emulate a
@@ -328,7 +335,7 @@ public enum AdviceType {
     /// <p>If you scan other barcodes, and experience difficulty, try configuring your barcode scanner to
     /// emulate a numeric keypad.</p>
     /// </summary>
-    CannotReadNonInvariantCharacters = 265,
+    CannotReadNonInvariantCharactersReliably = 265,
 
     /// <summary>
     /// <p>Your system cannot read EDI data reliably.</p>
@@ -422,7 +429,7 @@ public enum AdviceType {
 
     /// <summary>
     /// <p>Your system reads GS1 barcodes reliably.</p>
-    /// <p>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</p>
+    /// <p>However, it cannot read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</p>
     /// <p>Enter data manually into your software for barcodes that contain Format 05 or Format 06 data. If
     /// necessary, configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>

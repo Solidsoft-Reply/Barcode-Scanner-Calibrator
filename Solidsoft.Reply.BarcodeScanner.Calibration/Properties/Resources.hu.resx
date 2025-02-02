@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>A jelentett {0} karakter kétértelmű. Az ISO/IEC 15434 szintaxist használó vonalkódokat nem lehet megbízhatóan olvasni.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>A vonalkódolvasó nem küld AIM azonosítót.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Az AIM azonosító nem ismerhető fel.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>A vonalkódolvasó a következő előtagot küldi: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>A vonalkódolvasó a következő kódot küldi: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>A vonalkódolvasó a következő utótagot küldi: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>A vonalkódolvasó nem küld sorvégi karakter sorozatot (pl. kocsivissza).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>A jelentett {0} karakter kétértelmű. Ugyanaz a karakter több különböző várható karaktert képvisel. Azonban legfeljebb csak az egyik várható karakter invariáns.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Néhány jelentett karakter kétértelmű. Ugyanaz a karakter több különböző nem invariáns várható ASCII karaktert képvisel: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Az AIM azonosítók nem ismerhetők fel. A jelentett karakter {0} kétértelmű. Több kulcs is létezik ehhez a karakterhez, amely az AIM zászló karaktert és más várt karakter(ek)et képvisel.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Néhány jelentett nem invariáns ASCII karakter kétértelmű: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>A jelentett {0} karakter sorozat kétértelmű. Ez megakadályozhatja a vonalkódban található további adatelemek olvasását.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Néhány jelentett karakter sorozat kétértelmű. Ezek a karakterek nem reprezentálják az invariáns karaktereket: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az invariáns karakterek esetében nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése a nem invariáns ASCII karakterek esetében nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése a csoportelválasztók reprezentálásakor nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése a rekordelválasztók reprezentálásakor nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az AIM azonosítók reprezentálásakor nem egyezik meg.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>A Caps Lock be van kapcsolva.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Lehet, hogy a Caps Lock be van kapcsolva.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>A vonalkódolvasó beállítható karakterek nagybetűssé alakítására.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>A vonalkódolvasó beállítható karakterek kisbetűssé alakítására.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>A vonalkódolvasó beállítható a karakterek betűképének inverzére.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>A kalibrálás során jelentett legjobb billentyűzet adatbeviteli idő arra utal, hogy a vonalkódolvasó nem optimális teljesítményű.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>A {0} karakter a billentyűzet elrendezése miatt nem reprezentálható megbízhatóan.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>A jelentett {0} karakter sorozat kétértelmű. Ez a csoportelválasztó karaktert képviseli.</value>
+    <value>A csoportelválasztó karakter nem olvasható.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Néhány jelentett karakter kétértelmű. Ezeket a karaktereket egyénileg jelentik, de ligatúrák összeállítására is használják: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibrálás sikertelen. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Az Edi Separator karakterek támogatottak.</value>
+    <value>A fájlelválasztó karakterek támogatottak.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>A jelentett {0} karakter kétértelmű. Az ISO/IEC 15434 szintaxist használó, EDI adatokat reprezentáló vonalkódokat nem lehet megbízhatóan olvasni.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>A vonalkódolvasó és a számítógép billentyűzetkiosztásai nem felelnek meg egymásnak az egységelválasztók ábrázolásakor.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>A vonalkódolvasó és a számítógép billentyűzetének elrendezése az EDI elválasztók reprezentálásakor nem egyezik meg.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetének megfeleltetése nem állapítható meg.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Az egységelválasztó karakterek támogatottak.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>A jelentett karakter {0} nem egyértelmű. Az ASCII 28 vagy ASCII 31 használatával készült vonalkódok megbízható olvasása nem garantált.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>A fájlelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Az egységelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Az átvitel vége karakter nem olvasható megbízhatóan.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Az átvitel vége karakterek támogatottak.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>A vonalkódolvasó nem továbbít sorvége karakterláncot (pl. kocsi visszatérítés).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>A jelentett {0} karakter kétértelmű. Ugyanahhoz a karakterhez több billentyű tartozik, mindegyik más-más elvárt karaktert képvisel. Azonban legfeljebb csak egy elvárt karakter invariáns.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Néhány jelentett karakter kétértelmű. Ugyanahhoz a karakterhez több billentyű tartozik, mindegyik más-más nem-invariáns ASCII karaktert képvisel: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Az AIM azonosítókat nem lehet felismerni. A jelentett {0} karakter kétértelmű. Ugyanahhoz a karakterhez több billentyű tartozik, amelyek az AIM zászló karaktert és más várt karaktereket képviselnek.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Néhány jelentett nem-invariáns ASCII karakter kétértelmű: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>A jelentett {0} karakter fájlelválasztóhoz kétértelmű. Azok a vonalkódok, amelyek az ISO/IEC 15434 szintaxist használják az EDI adatok megjelenítésére, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>A jelentett {0} karakter egységelválasztóhoz kétértelmű. Azok a vonalkódok, amelyek az ISO/IEC 15434 szintaxist használják az EDI adatok megjelenítésére, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>A jelentett {0} karakter átvitelvég karakterhez kétértelmű. Azok a vonalkódok, amelyek az ISO/IEC 15434 szintaxist használják, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Néhány jelentett karakterlánc kétértelmű. Ezek a karakterek nem invariáns karaktereket képviselnek: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>A jelentett {0} karakterlánc kétértelmű. Ez megakadályozhatja bármely további adatelem olvasását, amelyet a vonalkód tartalmaz.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>A jelentett {0} karakter fájlelválasztóhoz kétértelmű. Azok a vonalkódok, amelyek ASCII 28 vezérlőkaraktereket használnak, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>A jelentett {0} karakter egységelválasztóhoz kétértelmű. Azok a vonalkódok, amelyek ASCII 31 vezérlőkaraktereket használnak, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>A jelentett {0} karakter átvitelvég karakterhez kétértelmű. Azok a vonalkódok, amelyek ASCII04 vezérlőkaraktereket használnak, nem olvashatók megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>A jelentett {0} karakterlánc kétértelmű. Ez a rekordelválasztó karaktert képviseli.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>A jelentett karakter egy invariáns karakterhez ugyanaz, mint a jelentett karakter a továbbítás vége karakterhez.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>A fájlelválasztó karakter nem olvasható megbízhatóan.</value>
+    <value>A rekordelválasztó karakter nem olvasható.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Az egységelválasztó karakter nem olvasható megbízhatóan.</value>
+    <value>A megadott karakterlánc {0} kétértelmű. A rekordelválasztó karakter nem olvasható megbízhatóan.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Az átvitel vége karakter nem olvasható megbízhatóan.</value>
+    <value>A megadott karakterlánc {0} kétértelmű. A rekordelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>A fájlelválasztó karakter nem olvasható.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. A fájlelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. A fájlelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Az egységelválasztó karakter nem olvasható.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. Az egységelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. Az egységelválasztó karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Az átvitel vége karakter nem olvasható.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. Az átvitel vége karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>A megadott karakterlánc {0} kétértelmű. Az átvitel vége karakter nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>A jelentett {0} karakter sorozat kétértelmű. Ez a csoportelválasztó karaktert képviseli.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Az AIM-azonosító nem olvasható megbízhatóan.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>A vonalkódolvasó és a számítógép billentyűzetkiosztásai nem felelnek meg egymásnak a fájlelválasztók ábrázolásakor.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>A vonalkódolvasó és a számítógép billentyűzetkiosztásai nem felelnek meg egymásnak az átvitelvége jelek ábrázolásakor.</value>
   </data>
 </root>

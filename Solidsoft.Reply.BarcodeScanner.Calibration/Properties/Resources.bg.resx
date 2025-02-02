@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Докладваният символ {0} е двусмислен. Баркодове, използващи синтаксиса ISO/IEC 15434, не могат да бъдат надеждно прочетени.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Баркод скенерът не предава идентификатор AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Идентификаторът AIM не може да бъде разпознат.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Баркод скенерът предава префикс: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Баркод скенерът предава код: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Баркод скенерът предава суфикс: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Баркод скенерът не предава последователност от символи за край на реда (напр. знак за връщане на количката).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Докладваният символ {0} е двусмислен. Има множество клавиши за един и същ символ, всеки представляващ различен очакван символ. Въпреки това, най-много само един от очакваните символи е постоянен.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Някои докладвани символи са двусмислени. Има множество клавиши за един и същ символ, всеки представляващ различен очакван непостоянен символ ASCII: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Идентификаторите AIM не могат да бъдат разпознати. Докладваният символ {0} е двусмислен. Има множество клавиши за този символ, които представят символа на знамето AIM, както и други очаквани символ(и).</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Някои докладвани непостоянни символи ASCII са двусмислени: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Докладваната редица от символи {0} е двусмислена. Това може да попречи на четенето на допълнителни елементи от данни, включени в баркода.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Някои докладвани редици от символи са двусмислени. Тези символи не представляват постоянни символи: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват за постоянни символи.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват за непостоянни символи ASCII.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на групови разделители.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на записващи разделители.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на идентификатори AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock е включен.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock може да е включен.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Баркод скенерът може да бъде конфигуриран да преобразува символите в главни букви.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Баркод скенерът може да бъде конфигуриран да преобразува символите в малки букви.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Баркод скенерът може да бъде конфигуриран да инвертира регистъра на символите.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Най-доброто докладвано време за въвеждане на данни от клавиатурата по време на калибриране показва, че баркод скенерът не работи оптимално.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Символът {0} не може да бъде представен надеждно поради несъответствие с подредбата на клавиатурата.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Докладваната редица от символи {0} е двусмислена. Това представлява символа за групов разделител.</value>
+    <value>Не може да бъде прочетен символът за разделяне на групи.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Някои докладвани символи са двусмислени. Те могат да бъдат докладвани индивидуално, но се използват и за съставяне на лигатури: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Калибрирането е неуспешно. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Поддържат се символи за разделител EDI.</value>
+    <value>Поддържат се символи за разделяне на файлове.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Докладваният символ {0} е двусмислен. Баркодове, използващи синтаксиса ISO/IEC 15434 за представяне на данни EDI, не могат да бъдат надеждно прочетени.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Скенерът за баркодове и подредбите на клавиатурата на компютъра не съответстват при представяне на разделители на единици.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Подредбите на клавиатурите на баркод скенера и компютъра не съответстват при представяне на разделители EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Кореспонденцията между подредбите на клавиатурите на баркод скенера и компютъра не може да бъде определена.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Поддържат се знаци за разделяне на единици.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Символът {0}, за който е съобщено, е двусмислен. Баркодове, които използват ASCII 28 или ASCII 31, може да не бъдат четени надеждно.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Символът за разделител на файлове не може да бъде прочетен надеждно.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Символът за разделител на единици не може да бъде прочетен надеждно.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Символът за край на предаването не може да бъде прочетен надеждно.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Поддържат се символи за край на предаването.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Скенерът за баркодове не предава последователност от символи за край на ред (напр. връщане на каретка).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Докладваният символ {0} е нееднозначен. Има множество клавиши за същия символ, всеки представляващ различен очакван символ. Въпреки това, най-много един от очакваните символи е инвариантен.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Някои докладвани символи са нееднозначни. Има множество клавиши за същия символ, всеки представляващ различен неинвариантен очакван ASCII символ: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM идентификаторите не могат да бъдат разпознати. Докладваният символ {0} е нееднозначен. Има множество клавиши за този символ, който представлява символа на флага AIM, както и други очаквани символи.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Някои докладвани неинвариантни ASCII символи са нееднозначни: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Докладваният символ {0} за разделител на файлове е нееднозначен. Баркодовете, които използват синтаксиса на ISO/IEC 15434 за представяне на EDI данни, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Докладваният символ {0} за разделител на единици е нееднозначен. Баркодовете, които използват синтаксиса на ISO/IEC 15434 за представяне на EDI данни, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Докладваният символ {0} за символ за край на предаването е нееднозначен. Баркодовете, които използват синтаксиса на ISO/IEC 15434, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Някои докладвани последователности от символи са нееднозначни. Тези символи не представляват инвариантни символи: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Докладваната последователност от символи {0} е нееднозначна. Това може да попречи на четенето на допълнителни елементи от данни, включени в баркод.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Докладваният символ {0} за разделител на файлове е нееднозначен. Баркодовете, които използват контролни символи ASCII 28, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Докладваният символ {0} за разделител на единици е нееднозначен. Баркодовете, които използват контролни символи ASCII 31, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Докладваният символ {0} за символ за край на предаването е нееднозначен. Баркодовете, които използват контролни символи ASCII04, не могат да бъдат надеждно прочетени.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Докладваната последователност от символи {0} е нееднозначна. Това представлява символа за разделител на записи.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Съобщеният символ за инвариантен символ е същият като символът, съобщен за символа за край на предаването.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Символът за разделител на файлове не може да бъде прочетен надеждно.</value>
+    <value>Не може да бъде прочетен символът за разделяне на записи.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Символът за разделител на единици не може да бъде прочетен надеждно.</value>
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на записи не може да бъде надеждно прочетен.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Символът за край на предаването не може да бъде прочетен надеждно.</value>
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на записи не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Не може да бъде прочетен символът за разделяне на файлове.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на файлове не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на файлове не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Не може да бъде прочетен символът за разделяне на единици.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на единици не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за разделяне на единици не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Не може да бъде прочетен символът за край на предаване.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за край на предаване не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Посочената последователност от символи {0} е двусмислена. Символът за край на предаване не може да бъде надеждно прочетен.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Докладваната редица от символи {0} е двусмислена. Това представлява символа за групов разделител.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Идентификаторът AIM не може да бъде прочетен надеждно.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Скенерът за баркодове и подредбите на клавиатурата на компютъра не съответстват при представяне на разделители на файлове.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Скенерът за баркодове и подредбите на клавиатурата на компютъра не съответстват при представяне на знаци за край на предаване.</value>
   </data>
 </root>

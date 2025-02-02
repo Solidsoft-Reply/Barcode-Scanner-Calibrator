@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę, negali būti patikimai nuskaityti.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas nesiunčia AIM identifikatoriaus.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM identifikatorius negali būti atpažintas.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas siunčia priešdėlį: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas siunčia kodą: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas siunčia priesagą: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Brūkšninių kodų skaitytuvas nesiunčia eilutės pabaigos simbolių sekos (pvz., krepšelio grąžinimo).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Praneštas simbolis {0} yra dviprasmiškas. Yra keletas klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam simboliui. Tačiau daugiausiai tik vienas iš laukiamų simbolių yra invariantinis.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Kai kurių praneštų simbolių prasmė yra dviprasmiška. Yra keletas klavišų tokiems patiems simboliams, kiekvienas atstovauja skirtingam laukiamam neinvariantiniam ASCII simboliui: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM identifikatorius negali būti atpažintas. Praneštas simbolis {0} yra dviprasmiškas. Yra keletas klavišų šiam simboliui, kuris atstovauja AIM vėliavos simboliui, taip pat ir kitiems laukiamiems simboliams.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Kai kurie pranešti neinvariantiniai ASCII simboliai yra dviprasmiški: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai gali sutrukdyti bet kokių papildomų duomenų elementų, įtrauktų į brūkšninį kodą, nuskaitymui.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Kai kurių praneštų simbolių sekų prasmė yra dviprasmiška. Šie simboliai neatstovauja invariantiniams simboliams: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa invariantiniams simboliams.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa neinvariantiniams ASCII simboliams.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant grupės skyrikliams.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant įrašų skyrikliams.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant AIM identifikatoriams.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock įjungtas.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Gali būti įjungtas Caps Lock.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas gali būti nustatytas versti simbolius į didžiąsias raides.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas gali būti nustatytas versti simbolius į mažąsias raides.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas gali būti nustatytas invertyti simbolių registrą.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Geriausias praneštas klaviatūros duomenų įvedimo laikas kalibravimo metu rodo, kad brūkšninių kodų skaitytuvas neveikia optimaliai.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Simbolis {0} negali būti patikimai atstovaujamas dėl nesuderinamumo su klaviatūros išdėstymu.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai atstovauja grupės skyriklio simboliui.</value>
+    <value>Grupės skyriklio simbolio nepavyko perskaityti.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Kai kurie pranešti simboliai yra dviprasmiški. Jie gali būti pranešti atskirai, tačiau taip pat naudojami komponuoti ligatūroms: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibravimas nepavyko. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Palaikomi EDI skyrikliai.</value>
+    <value>Palaikomi failų skyriklių simboliai.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę EDI duomenų atvaizdavimui, negali būti patikimai nuskaityti.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Brūkšninių kodų skaitytuvas ir kompiuterio klaviatūros išdėstymai nesutampa, kai vaizduojami vienetų skyrikliai.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa atstovaujant EDI skyrikliams.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Negalima nustatyti brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymų atitikimo.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Palaikomi vienetų skyrimo simboliai.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Praneštas simbolis {0} yra dviprasmiškas. Brūkšniniai kodai, naudojantys ASCII 28 arba ASCII 31, gali būti neskaitomi patikimai.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Failo skyriklio simbolis negali būti patikimai perskaitytas.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Vieneto skyriklio simbolis negali būti patikimai perskaitytas.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Perdavimo pabaigos simbolis negali būti patikimai perskaitytas.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Palaikomi perdavimo pabaigos simboliai.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Brūkšninių kodų skaitytuvas neperduoda eilutės pabaigos simbolių sekos (pvz., vežimėlio grįžimo).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Praneštas simbolis {0} yra dviprasmiškas. Yra kelios klavišų kombinacijos tam pačiam simboliui, kiekviena reiškia skirtingą laukiamą simbolį. Tačiau daugiausia tik vienas iš laukiamų simbolių yra invariantas.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Kai kurie pranešti simboliai yra dviprasmiški. Yra kelios klavišų kombinacijos tam pačiam simboliui, kiekviena reiškia skirtingą ne invariantinį laukiamą ASCII simbolį: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM identifikatoriai negali būti atpažinti. Praneštas simbolis {0} yra dviprasmiškas. Yra kelios klavišų kombinacijos šiam simboliui, kuris reiškia AIM vėliavos simbolį ir kitus laukiamus simbolius.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Kai kurie pranešti ne invariantiniai ASCII simboliai yra dviprasmiški: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Praneštas simbolis {0} failo skyriklyje yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę EDI duomenims pateikti, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Praneštas simbolis {0} vieneto skyriklyje yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę EDI duomenims pateikti, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Praneštas simbolis {0} perdavimo pabaigos simboliui yra dviprasmiškas. Brūkšniniai kodai, naudojantys ISO/IEC 15434 sintaksę, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Kai kurios praneštos simbolių sekos yra dviprasmiškos. Šie simboliai nevaizduoja invariantinių simbolių: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai gali neleisti nuskaityti kitų papildomų duomenų elementų, esančių brūkšniniame kode.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Praneštas simbolis {0} failo skyriklyje yra dviprasmiškas. Brūkšniniai kodai, naudojantys ASCII 28 valdymo simbolius, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Praneštas simbolis {0} vieneto skyriklyje yra dviprasmiškas. Brūkšniniai kodai, naudojantys ASCII 31 valdymo simbolius, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Praneštas simbolis {0} perdavimo pabaigos simboliui yra dviprasmiškas. Brūkšniniai kodai, naudojantys ASCII04 valdymo simbolius, gali būti nepatikimai nuskaitomi.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai reiškia įrašo skyriklio simbolį.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Praneštas simbolis dėl nekintamo simbolio yra tas pats, kaip praneštas simbolis dėl perdavimo pabaigos simbolio.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Failo skyriklio simbolis negali būti patikimai perskaitytas.</value>
+    <value>Įrašo skyriklio simbolio nepavyko perskaityti.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Vieneto skyriklio simbolis negali būti patikimai perskaitytas.</value>
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Įrašo skyriklio simbolio patikimai perskaityti nepavyksta.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Perdavimo pabaigos simbolis negali būti patikimai perskaitytas.</value>
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Įrašo skyriklio simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Failo skyriklio simbolio nepavyko perskaityti.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Failo skyriklio simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Failo skyriklio simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Vieneto skyriklio simbolio nepavyko perskaityti.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Vieneto skyriklio simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Vieneto skyriklio simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Perdavimo pabaigos simbolio nepavyko perskaityti.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Perdavimo pabaigos simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Pateikta simbolių seka {0} yra dviprasmiška. Perdavimo pabaigos simbolio patikimai perskaityti nepavyksta.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai atstovauja grupės skyriklio simboliui.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM identifikatorius negali būti patikimai perskaitytas.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Brūkšninių kodų skaitytuvas ir kompiuterio klaviatūros išdėstymai nesutampa, kai vaizduojami failų skyrikliai.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Brūkšninių kodų skaitytuvas ir kompiuterio klaviatūros išdėstymai nesutampa, kai vaizduojami perdavimo pabaigos simboliai.</value>
   </data>
 </root>

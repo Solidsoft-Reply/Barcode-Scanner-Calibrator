@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Försök igen, se till att du skannar rätt streckkod(er).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Ditt system kanske inte läser filseparator-tecken (ASCII 28) korrekt.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Ditt system kan inte läsa filseparator-tecken (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Ditt system kanske inte läser enhetsseparator-tecken (ASCII 31) korrekt.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Ditt system kanske inte läser enhetsseparator-tecken (ASCII 31) korrekt.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Ditt system kanske inte läser överföringsavslutning-tecken (ASCII 04) korrekt.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Ditt system kan inte läsa överföringsavslutning-tecken (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testet misslyckades.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Dessa tecken används inte allmänt i streckkoder.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Dessa tecken används inte allmänt i streckkoder.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Dessa tecken används inte allmänt i streckkoder.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Dessa tecken används inte allmänt i streckkoder.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Vissa typer av streckkoder använder detta tecken för att markera slutet på streckkodens data. Din programvara kanske inte korrekt läser ett eventuellt suffix som lagts till av streckkodsläsaren.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Vissa typer av streckkoder använder detta tecken för att markera slutet på streckkodens data. Din programvara kanske inte korrekt läser ett eventuellt suffix som lagts till av streckkodsläsaren.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du kan ha skannat en felaktig streckkod eller matat in felaktiga uppgifter med tangentbordet. Din streckkodsläsare eller system kan vara långsam, eller något oväntat eller intermittenta problem kan ha inträffat.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Fel vid lösning av tangentbordsskript: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Ditt system kan inte läsa filseparator-tecken (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Ditt system kanske inte läser enhetsseparator-tecken (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Ditt system kanske inte läser enhetsseparator-tecken (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Dessa tecken används inte allmänt i streckkoder.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Dessa tecken används inte allmänt i streckkoder.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Dessa tecken används inte allmänt i streckkoder.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Om du har problem med att skanna streckkoder, försök att konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ange data manuellt i din verifieringsprogramvara för att verifiera unika PPN-identifierare.;;Om det behövs, konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Om du upplever problem när du skannar tyska PPN-streckkoder, ange data manuellt i din verifieringsprogramvara.;;Om det behövs, konfigurera din streckkodsläsare för att efterlikna ett numeriskt tangentbord.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Ditt system kanske inte läser överföringsavslutning-tecken (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ditt system kanske inte läser överföringsavslutning-tecken (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Vissa typer av streckkoder använder detta tecken för att markera slutet på streckkodens data. Din programvara kanske inte korrekt läser ett eventuellt suffix som lagts till av streckkodsläsaren.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Vissa typer av streckkoder använder detta tecken för att markera slutet på streckkodens data. Din programvara kanske inte korrekt läser ett eventuellt suffix som lagts till av streckkodsläsaren.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Se till att dina tangentbordslayouter matchar.;;Om nödvändigt, konfigurera din streckkodsläsare för att emulera ett numeriskt tangentbord och sända AIM-identifier.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Ditt system kan inte läsa identifieraren för streckkodstypen pålitligt.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-identifier representerar streckkodstypen. Din programvara kan använda dem för att eliminera onödiga varningar.</value>
   </data>
 </root>

@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Zgłoszony znak {0} jest niejednoznaczny. Kody kreskowe używające składni ISO/IEC 15434 nie mogą być wiarygodnie odczytywane.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Skaner kodów kreskowych nie transmituje identyfikatora AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Identyfikator AIM nie może być rozpoznany.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Skaner kodów kreskowych transmituje prefix: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Skaner kodów kreskowych transmituje kod: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Skaner kodów kreskowych transmituje suffix: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Skaner kodów kreskowych nie transmituje sekwencji znaków końca linii (np. powrotu karetki).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Zgłoszony znak {0} jest niejednoznaczny. Istnieją wielokrotne klawisze dla tego samego znaku, z których każdy reprezentuje inny oczekiwany znak. Jednakże, co najwyżej jeden z oczekiwanych znaków jest niezmienniczy.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Niektóre zgłoszone znaki są niejednoznaczne. Istnieją wielokrotne klawisze dla tego samego znaku, z których każdy reprezentuje inny oczekiwany niezmienniczy znak ASCII: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Identyfikatory AIM nie mogą być rozpoznane. Zgłoszony znak {0} jest niejednoznaczny. Istnieją wielokrotne klawisze dla tego znaku, który reprezentuje znak flagowy AIM oraz inne oczekiwane znaki.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Niektóre zgłoszone niezmiennicze znaki ASCII są niejednoznaczne: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Może to uniemożliwić odczyt jakichkolwiek dodatkowych elementów danych zawartych w kodzie kreskowym.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Niektóre zgłoszone sekwencje znaków są niejednoznaczne. Te znaki nie reprezentują niezmiennych znaków: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie dla niezmiennych znaków.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie dla niezmiennych znaków ASCII.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie podczas reprezentowania separatorów grupy.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie podczas reprezentowania separatorów rekordów.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie podczas reprezentowania identyfikatorów AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock jest włączony.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock może być włączony.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Skaner kodów kreskowych może być skonfigurowany do konwersji znaków na wielkie litery.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Skaner kodów kreskowych może być skonfigurowany do konwersji znaków na małe litery.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Skaner kodów kreskowych może być skonfigurowany do odwracania wielkości liter.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Najlepszy zgłoszony czas wprowadzania danych klawiaturą podczas kalibracji wskazuje, że skaner kodów kreskowych nie działa optymalnie.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Znak {0} nie może być wiarygodnie reprezentowany ze względu na niekompatybilność z układem klawiatury.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Reprezentuje ona znak separatora grupy.</value>
+    <value>Nie można odczytać znaku separatora grup.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Niektóre zgłoszone znaki są niejednoznaczne. Mogą być zgłaszane indywidualnie, ale są także używane do tworzenia ligatur: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibracja nie powiodła się. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Znaki separatora EDI są obsługiwane.</value>
+    <value>Obsługiwane są znaki separatora plików.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Zgłoszony znak {0} jest niejednoznaczny. Kody kreskowe używające składni ISO/IEC 15434 do reprezentowania danych EDI nie mogą być wiarygodnie odczytywane.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Skaner kodów kreskowych i układy klawiatury komputera nie odpowiadają sobie podczas przedstawiania separatorów jednostek.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Układ klawiatury skanera kodów kreskowych i komputera nie odpowiada sobie podczas reprezentowania separatorów EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Nie można określić zgodności układu skanera kodów kreskowych i klawiatury komputera.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Znaki separatora jednostki są obsługiwane.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Zgłoszony znak {0} jest niejednoznaczny. Kody kreskowe używające ASCII 28 lub ASCII 31 mogą być odczytywane nieprawidłowo.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Znak separatora pliku nie może być niezawodnie odczytany.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Znak separatora jednostki nie może być niezawodnie odczytany.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Znak zakończenia transmisji nie może być niezawodnie odczytany.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Znaki zakończenia transmisji są obsługiwane.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Skaner kodów kreskowych nie przesyła sekwencji znaków końca linii (np. powrót karetki).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Zgłoszony znak {0} jest niejednoznaczny. Istnieje wiele klawiszy dla tego samego znaku, z których każdy reprezentuje inny oczekiwany znak. Jednak najwyżej jeden z oczekiwanych znaków jest niezmienny.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Niektóre zgłoszone znaki są niejednoznaczne. Istnieje wiele klawiszy dla tego samego znaku, z których każdy reprezentuje inny niezmienny oczekiwany znak ASCII: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Identyfikatory AIM nie mogą być rozpoznane. Zgłoszony znak {0} jest niejednoznaczny. Istnieje wiele klawiszy dla tego znaku, który reprezentuje znak flagi AIM oraz inne oczekiwane znaki.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Niektóre zgłoszone niezmienne znaki ASCII są niejednoznaczne: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla separatora plików jest niejednoznaczny. Kody kreskowe wykorzystujące składnię ISO/IEC 15434 do przedstawiania danych EDI nie mogą być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla separatora jednostek jest niejednoznaczny. Kody kreskowe wykorzystujące składnię ISO/IEC 15434 do przedstawiania danych EDI nie mogą być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla znaku końca transmisji jest niejednoznaczny. Kody kreskowe wykorzystujące składnię ISO/IEC 15434 nie mogą być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Niektóre zgłoszone sekwencje znaków są niejednoznaczne. Te znaki nie reprezentują niezmiennych znaków: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Może to uniemożliwić odczytanie dodatkowych elementów danych zawartych w kodzie kreskowym.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla separatora plików jest niejednoznaczny. Kody kreskowe wykorzystujące znaki kontrolne ASCII 28 mogą nie być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla separatora jednostek jest niejednoznaczny. Kody kreskowe wykorzystujące znaki kontrolne ASCII 31 mogą nie być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Zgłoszony znak {0} dla znaku końca transmisji jest niejednoznaczny. Kody kreskowe wykorzystujące znaki kontrolne ASCII04 mogą nie być niezawodnie odczytywane.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Reprezentuje ona znak separatora rekordów.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Zgłoszony znak dla znaku niezmiennego jest taki sam, jak zgłoszony znak dla znaku końca transmisji.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Znak separatora pliku nie może być niezawodnie odczytany.</value>
+    <value>Nie można odczytać znaku separatora rekordu.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Znak separatora jednostki nie może być niezawodnie odczytany.</value>
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora rekordu nie można odczytać wiarygodnie.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Znak zakończenia transmisji nie może być niezawodnie odczytany.</value>
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora rekordu nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Nie można odczytać znaku separatora pliku.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora pliku nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora pliku nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Nie można odczytać znaku separatora jednostki.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora jednostki nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku separatora jednostki nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Nie można odczytać znaku końca transmisji.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku końca transmisji nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Podana sekwencja znaków {0} jest niejednoznaczna. Znaku końca transmisji nie można odczytać wiarygodnie.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Reprezentuje ona znak separatora grupy.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Identyfikator AIM nie może być odczytany w sposób wiarygodny.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Skaner kodów kreskowych i układy klawiatury komputera nie odpowiadają sobie podczas przedstawiania separatorów plików.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Skaner kodów kreskowych i układy klawiatury komputera nie odpowiadają sobie podczas przedstawiania znaków końca transmisji.</value>
   </data>
 </root>

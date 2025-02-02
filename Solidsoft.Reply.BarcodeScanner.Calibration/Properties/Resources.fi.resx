@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä viivakoodeja ei voida lukea luotettavasti.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Viivakoodinlukija ei lähetä AIM-tunnistetta.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM-tunnistetta ei voida tunnistaa.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Viivakoodinlukija lähettää etuliitteen: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Viivakoodinlukija lähettää koodin: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Viivakoodinlukija lähettää jälkiliitteen: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Viivakoodinlukija ei lähetä rivin lopetusmerkkijonoa (esim. rivinvaihtoa).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Raportoitu merkki {0} on epäselvä. Samalle merkille on useita näppäimiä, joista jokainen edustaa eri odotettua merkkiä. Kuitenkin korkeintaan vain yksi odotetuista merkeistä on invariantti.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Joitakin raportoituja merkkejä on epäselviä. Samalle merkille on useita näppäimiä, joista jokainen edustaa eri ei-invarianttia odotettua ASCII-merkkiä: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-tunnisteita ei voida tunnistaa. Raportoitu merkki {0} on epäselvä. Tälle merkille on useita näppäimiä, jotka edustavat AIM-lippumerkkiä sekä muita odotettuja merkkejä.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Joitakin raportoituja ei-invariantteja ASCII-merkkejä on epäselviä: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Raportoitu merkkijono {0} on epäselvä. Tämä saattaa estää viivakoodissa olevien lisädatan elementtien lukemisen.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Joitakin raportoituja merkkijonoja on epäselviä. Nämä merkit eivät edusta invarianteja merkkejä: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan invarianteille merkeille.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan ei-invarianteille ASCII-merkeille.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan ryhmän erottajaa esitettäessä.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan tallenteen erottajaa esitettäessä.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan AIM-tunnisteita esitettäessä.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock on kytketty päälle.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock saattaa olla kytketty päälle.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Viivakoodinlukija voidaan konfiguroida muuntamaan merkit isoiksi kirjaimiksi.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Viivakoodinlukija voidaan konfiguroida muuntamaan merkit pieniksi kirjaimiksi.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Viivakoodinlukija voidaan konfiguroida kääntämään merkkien kirjainkoko.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Kalibroinnin aikana raportoidut parhaat näppäimistön syöttöajat osoittavat, että viivakoodinlukija ei toimi optimaalisesti.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Merkkiä {0} ei voida esittää luotettavasti näppäimistöasettelun yhteensopimattomuuden vuoksi.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Raportoitu merkkijono {0} on epäselvä. Tämä edustaa ryhmän erottajamerkkiä.</value>
+    <value>Ryhmän erottimen merkkiä ei voida lukea.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Joitakin raportoituja merkkejä on epäselviä. Ne voidaan raportoida yksittäin, mutta niitä käytetään myös ligatuurien muodostamiseen: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibrointi epäonnistui. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-erotinmerkit ovat tuettuja.</value>
+    <value>Tiedostojen erotinmerkit ovat tuettuja.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Raportoitu merkki {0} on epäselvä. ISO/IEC 15434 -syntaksia käyttäviä EDI-tietoja sisältäviä viivakoodeja ei voida lukea luotettavasti.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan yksikköerottimien esittämisessä.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan EDI-erotinta esitettäessä.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelujen yhteenkuuluvuutta ei voida määrittää.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,112 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Yksikön erottimet ovat tuettuja.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Ilmoitettu merkki {0} on epäselvä. Viivakoodeja, jotka käyttävät ASCII 28:aa tai ASCII 31:tä, ei välttämättä voida lukea luotettavasti.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Tiedoston erottimen merkkiä ei voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Yksikön erottimen merkkiä ei voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Siirron päättymismerkkiä ei voida lukea luotettavasti.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Siirron päättymismerkit tuetaan.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Viivakoodinlukija ei lähetä rivinlopun merkkijonoa (esim. vaunun palautus).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} on epäselvä. Samalle merkille on useita näppäimiä, joista kukin edustaa eri odotettua merkkiä. Kuitenkin vain yksi odotetuista merkeistä on invariantti.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Jotkin ilmoitetut merkit ovat epäselviä. Samalle merkille on useita näppäimiä, joista kukin edustaa eri ei-invarianttia odotettua ASCII-merkkiä: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-tunnisteita ei voida tunnistaa. Ilmoitettu merkki {0} on epäselvä. Tälle merkille on useita näppäimiä, jotka edustavat sekä AIM-lippumerkkiä että muita odotettuja merkkejä.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Jotkin ilmoitetut ei-invariantit ASCII-merkit ovat epäselviä: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} tiedoston erottimelle on epäselvä. Viivakoodit, jotka käyttävät ISO/IEC 15434-syntaksia EDI-tietojen esittämiseen, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} yksikön erottimelle on epäselvä. Viivakoodit, jotka käyttävät ISO/IEC 15434-syntaksia EDI-tietojen esittämiseen, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} siirron lopetukselle on epäselvä. Viivakoodit, jotka käyttävät ISO/IEC 15434-syntaksia, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Jotkin ilmoitetut merkkijonot ovat epäselviä. Nämä merkit eivät edusta invariantteja merkkejä: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Ilmoitettu merkkijono {0} on epäselvä. Tämä voi estää viivakoodin sisältämien lisätietoelementtien lukemisen.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} tiedoston erottimelle on epäselvä. Viivakoodit, jotka käyttävät ASCII 28 -ohjausmerkkejä, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} yksikön erottimelle on epäselvä. Viivakoodit, jotka käyttävät ASCII 31 -ohjausmerkkejä, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Ilmoitettu merkki {0} siirron lopetukselle on epäselvä. Viivakoodit, jotka käyttävät ASCII04 -ohjausmerkkejä, eivät ehkä ole luettavissa luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Ilmoitettu merkkijono {0} on epäselvä. Tämä edustaa tietueen erottimista merkkiä.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Raportoitu merkki invariantille merkille on sama kuin merkki, joka raportoitiin siirron päättymismerkiksi.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Tiedoston erottimen merkkiä ei voida lukea luotettavasti.</value>
+    <value>Tietueen erottimen merkkiä ei voida lukea.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Yksikön erottimen merkkiä ei voida lukea luotettavasti.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Tietueen erottimen merkkiä ei voida luotettavasti lukea.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Siirron päättymismerkkiä ei voida lukea luotettavasti.</value>
+    <value>Raportoitu merkkijono {0} on epäselvä. Tietueen erottimen merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Tiedoston erottimen merkkiä ei voida lukea.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Tiedoston erottimen merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Tiedoston erottimen merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Yksikön erottimen merkkiä ei voida lukea.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Yksikön erottimen merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Yksikön erottimen merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Lähetyksen lopun merkkiä ei voida lukea.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Lähetyksen lopun merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Lähetyksen lopun merkkiä ei voida luotettavasti lukea.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Raportoitu merkkijono {0} on epäselvä. Tämä edustaa ryhmän erottajamerkkiä.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM-tunnistetta ei voida lukea luotettavasti.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan tiedoston erotinten esittämisessä.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan siirron lopun merkkien esittämisessä.
+
+</value>
   </data>
 </root>

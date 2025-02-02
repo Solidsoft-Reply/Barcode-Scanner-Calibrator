@@ -71,6 +71,11 @@ public enum InformationType {
     UnitSeparatorSupported = 163,
 
     /// <summary>
+    ///   INFORMATION: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+    /// </summary>
+    InvariantAmbiguityForEotCharacter = 165,
+
+    /// <summary>
     ///   INFORMATION: End-of-Transmission characters are supported.
     /// </summary>
     EndOfTransmissionSupported = 164,
@@ -116,70 +121,120 @@ public enum InformationType {
     IsoIec15434EdiNotReliablyReadable = 211,
 
     /// <summary>
-    ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
+    ///   WARNING: The record separator character cannot be read.
     /// </summary>
-    IsoIec15434RecordSeparatorMapping = 212,
+    RecordSeparatorNotReadable = 213,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The record separator character cannot be reliably read.
+    /// </summary>
+    RecordSeparatorNotReliablyReadableInvariant = 214,
+
+    /// <summary>
+    ///   WARNING: The file separator character cannot be read.
+    /// </summary>
+    FileSeparatorNotReadable = 216,
 
     /// <summary>
     ///   WARNING: The file separator character cannot be reliably read.
     /// </summary>
-    IsoIec15434FsNotReliablyReadable = 213,
+    FileSeparatorNotReliablyReadable = 217,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The file separator character cannot be reliably read.
+    /// </summary>
+    FileSeparatorNotReliablyReadableInvariant = 218,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The file separator character cannot be reliably read.
+    /// </summary>
+    FileSeparatorNotReliablyReadableNonInvariant = 219,
+
+    /// <summary>
+    ///   WARNING: The unit separator character cannot be read.
+    /// </summary>
+    UnitSeparatorNotReadable = 220,
 
     /// <summary>
     ///   WARNING: The unit separator character cannot be reliably read.
     /// </summary>
-    IsoIec15434UsNotReliablyReadable = 214,
+    UnitSeparatorNotReliablyReadable = 221,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The unit separator character cannot be reliably read.
+    /// </summary>
+    UnitSeparatorNotReliablyReadableInvariant = 222,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The unit separator character cannot be reliably read.
+    /// </summary>
+    UnitSeparatorNotReliablyReadableNonInvariant = 223,
+
+    /// <summary>
+    ///   WARNING: The end-of-transmission character cannot be read.
+    /// </summary>
+    EotCharacterNotReadable = 224,
 
     /// <summary>
     ///   WARNING: The end-of-transmission character cannot be reliably read.
     /// </summary>
-    IsoIec15434EotNotReliablyReadable = 215,
+    EotNotReliablyReadable = 225,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous.The end-of-transmission character cannot be reliably read.
+    /// </summary>
+    EotCharacterNotReliablyReadableInvariant = 226,
 
     /// <summary>
     ///   WARNING: The barcode scanner is not transmitting an AIM Identifier.
     /// </summary>
-    AimNotTransmitted = 220,
+    AimNotTransmitted = 230,
 
     /// <summary>
     ///   WARNING: The AIM Identifier cannot be recognised.
     /// </summary>
-    AimNotRecognised = 221,
+    AimNotRecognised = 231,
+
+    /// <summary>
+    ///   WARNING: The AIM Identifier cannot be read reliably.
+    /// </summary>
+    AimNotReadReliably = 232,
 
     /// <summary>
     ///   WARNING: The barcode scanner is transmitting a prefix: {0}
     /// </summary>
-    PrefixTransmitted = 230,
+    PrefixTransmitted = 240,
 
     /// <summary>
     ///   WARNING: The barcode scanner is transmitting a code: {0}
     /// </summary>
-    CodeTransmitted = 231,
+    CodeTransmitted = 241,
 
     /// <summary>
     ///   WARNING: The barcode scanner is transmitting a suffix: {0}
     /// </summary>
-    SuffixTransmitted = 232,
+    SuffixTransmitted = 242,
 
     /// <summary>
     ///   WARNING: The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return).
     /// </summary>
-    EndOfLineNotTransmitted = 240,
+    EndOfLineNotTransmitted = 245,
 
     /// <summary>
-    ///   WARNING: The reported character {0} is ambiguous. There are multiple keys for the same character, each representing
-    ///   a different expected character. However, at most, only one of the expected characters is invariant.
+    ///   WARNING: The reported character {0} is ambiguous. There are multiple keys for the same character, each
+    ///   representing a different expected character. However, at most, only one of the expected characters is invariant.
     /// </summary>
     MultipleKeysNonInvariantCharacters = 250,
 
     /// <summary>
-    ///   WARNING: Some reported characters are ambiguous. There are multiple keys for the same character, each representing a
-    ///   different non-invariant expected ASCII character: {0}
+    ///   WARNING: Some reported characters are ambiguous. There are multiple keys for the same character, each representing
+    ///   a different non-invariant expected ASCII character: {0}
     /// </summary>
     MultipleKeysMultipleNonInvariantCharacters = 251,
 
     /// <summary>
-    ///   Warning: AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys
-    ///   for this character which represents the AIM flag character as well as other expected character(s).
+    ///   Warning: AIM Identifiers cannot be recognised. The reported character {0} is ambiguous. There are multiple keys for
+    ///   this character which represents the AIM flag character as well as other expected character(s).
     /// </summary>
     MultipleKeysAimFlagCharacter = 252,
 
@@ -189,104 +244,129 @@ public enum InformationType {
     DeadKeyMultiMappingNonInvariantCharacters = 253,
 
     /// <summary>
-    ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+    ///   WARNING: The reported character {0} for a File Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
     /// </summary>
-    ControlCharacterMappingIsoIec15434EdiNotReliablyReadable = 254,
+    FileSeparatorMappingIsoIec15434EdiNotReliablyReadable = 254,
+
+    /// <summary>
+    ///   WARNING: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
+    /// </summary>
+    UnitSeparatorMappingIsoIec15434EdiNotReliablyReadable = 255,
+
+    /// <summary>
+    ///   WARNING: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be reliably read.
+    /// </summary>
+    EotCharacterMappingIsoIec15434EdiNotReliablyReadable = 256,
 
     /// <summary>
     ///   WARNING: Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}
     /// </summary>
-    NonInvariantCharacterSequence = 255,
+    NonInvariantCharacterSequence = 257,
 
     /// <summary>
     ///   WARNING: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
     /// </summary>
-    ControlCharacterMappingAdditionalDataElements = 256,
+    ControlCharacterMappingNonInvariants = 258,
 
     /// <summary>
-    ///   WARNING: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read.
+    ///   WARNING: The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control characters may not be reliably read.
     /// </summary>
-    ControlCharacterMappingNotReliablyReadable = 257,
+    FileSeparatorMappingNotReliablyReadable = 259,
+
+    /// <summary>
+    ///   WARNING: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control characters may not be reliably read.
+    /// </summary>
+    UnitSeparatorMappingNotReliablyReadable = 260,
+
+    /// <summary>
+    ///   WARNING: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII04 control characters may not be reliably read.
+    /// </summary>
+    EotCharacterMappingNotReliablyReadable = 261,
+
+    /// <summary>
+    ///   WARNING: The reported character sequence {0} is ambiguous. This represents the record separator character.
+    /// </summary>
+    RecordSeparatorMappingNotReliablyReadable = 262,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond.
     /// </summary>
-    NonCorrespondingKeyboardLayouts = 260,
+    NonCorrespondingKeyboardLayouts = 270,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond for invariant characters.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsForInvariants = 261,
+    NonCorrespondingKeyboardLayoutsForInvariants = 271,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsForNonInvariantCharacters = 262,
+    NonCorrespondingKeyboardLayoutsForNonInvariantCharacters = 272,
+
+    /// <summary>
+    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing File Separators.
+    /// </summary>
+    NonCorrespondingKeyboardLayoutsFileSeparator = 273,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsFileSeparator = 263,
-
-    /// <summary>
-    ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-    /// </summary>
-    NonCorrespondingKeyboardLayoutsGroupSeparator = 264,  //263
+    NonCorrespondingKeyboardLayoutsGroupSeparator = 274,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsRecordSeparator = 265,  //264
+    NonCorrespondingKeyboardLayoutsRecordSeparator = 275,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsUnitSeparator = 266,
+    NonCorrespondingKeyboardLayoutsUnitSeparator = 276,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsEoT = 267,
+    NonCorrespondingKeyboardLayoutsEotCharacter = 277,
 
     /// <summary>
     ///   WARNING: The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers.
     /// </summary>
-    NonCorrespondingKeyboardLayoutsForAimIdentifier = 268,  // 266
+    NonCorrespondingKeyboardLayoutsForAimIdentifier = 278,
 
     /// <summary>
     ///   Warning - The correspondence of the barcode scanner and computer keyboard layouts cannot be determined.
     /// </summary>
-    NonDeterminableKeyboardLayoutCorrespondence = 269,
+    NonDeterminableKeyboardLayoutCorrespondence = 279,
 
     /// <summary>
     ///   WARNING: Caps Lock is switched on.
     /// </summary>
-    CapsLockOn = 270,
+    CapsLockOn = 280,
 
     /// <summary>
     ///   WARNING: Caps Lock may be switched on.
     /// </summary>
-    CapsLockProbablyOn = 271,
+    CapsLockProbablyOn = 281,
 
     /// <summary>
     ///   WARNING: Scanner may be configured to convert characters to upper case.
     /// </summary>
-    ScannerMayConvertToUpperCase = 272,
+    ScannerMayConvertToUpperCase = 282,
 
     /// <summary>
     ///   WARNING: Scanner may be configured to convert characters to lower case.
     /// </summary>
-    ScannerMayConvertToLowerCase = 273,
+    ScannerMayConvertToLowerCase = 283,
 
     /// <summary>
     ///   WARNING: Scanner may be configured to invert character case.
     /// </summary>
-    ScannerMayInvertCase = 274,
+    ScannerMayInvertCase = 284,
 
     /// <summary>
     ///   WARNING: The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally.
     /// </summary>
-    SubOptimalScannerKeyboardPerformance = 280,
+    SubOptimalScannerKeyboardPerformance = 290,
 
     /// <summary>
     /// WARNING: A pre-processing reported a warning during calibration.
@@ -379,14 +459,19 @@ public enum InformationType {
     IncompatibleScannerDeadKey = 365,
 
     /// <summary>
-    ///   ERROR: The reported character sequence {0} is ambiguous. This represents the group separator character.
+    ///   ERROR: The group separator character cannot be read.
     /// </summary>
-    GroupSeparatorMapping = 366,
+    GroupSeparatorNotReadable = 366,
+
+    /// <summary>
+    ///   ERROR: The reported character sequence {0} is ambiguous.The group separator character cannot be reliably read.
+    /// </summary>
+    GroupSeparatorNotReliablyReadableInvariant = 367,
 
     /// <summary>
     ///   ERROR: Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}
     /// </summary>
-    LigatureCharacters = 367,
+    LigatureCharacters = 368,
 
     /// <summary>
     ///   ERROR: The reported calibration data cannot be processed. It does not include expected delimiters.

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Advice_100" xml:space="preserve">
-    <value />
-  </data>
   <data name="Advice_105" xml:space="preserve">
     <value>Möglicherweise müssen Sie Daten manuell in Ihre Software für Barcodes eingeben, die Daten im Format gemäß ISO/IEC 15434 enthalten.</value>
   </data>
@@ -543,12 +540,6 @@
   <data name="Advice_279" xml:space="preserve">
     <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
   </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
-  </data>
   <data name="Condition_277" xml:space="preserve">
     <value>Ihr System kann Dateitrennzeichen (ASCII 28) nicht lesen.</value>
   </data>
@@ -557,12 +548,6 @@
   </data>
   <data name="Condition_279" xml:space="preserve">
     <value>Ihr System kann möglicherweise Einheitentrennzeichen (ASCII 31) nicht korrekt lesen.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Ihr System kann möglicherweise Übertragungsendzeichen (ASCII 04) nicht korrekt lesen.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Ihr System kann Übertragungsendzeichen (ASCII 04) nicht lesen.</value>
   </data>
   <data name="Description_277" xml:space="preserve">
     <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
@@ -573,13 +558,34 @@
   <data name="Description_279" xml:space="preserve">
     <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
   </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Geben Sie die Daten manuell in Ihre Verifizierungssoftware ein, um PPN-eindeutige Kennungen zu verifizieren.;;Wenn nötig, konfigurieren Sie Ihren Barcodescanner so, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Wenn Sie Probleme beim Scannen deutscher PPN-Barcodes haben, geben Sie die Daten manuell in Ihre Verifizierungssoftware ein.;;Wenn nötig, konfigurieren Sie Ihren Barcodescanner so, dass er eine numerische Tastatur emuliert.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Ihr System kann möglicherweise Übertragungsendzeichen (ASCII 04) nicht korrekt lesen.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Ihr System kann Übertragungsendzeichen (ASCII 04) nicht lesen.</value>
+  </data>
   <data name="Description_280" xml:space="preserve">
     <value>Einige Barcode-Typen verwenden dieses Zeichen, um das Ende der Barcode-Daten zu markieren. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
   </data>
   <data name="Description_281" xml:space="preserve">
     <value>Einige Barcode-Typen verwenden dieses Zeichen, um das Ende der Barcode-Daten zu markieren. Ihre Software kann möglicherweise kein Suffix korrekt lesen, das vom Barcode-Scanner hinzugefügt wurde.</value>
   </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Wenn Sie Schwierigkeiten beim Scannen von Barcodes haben, versuchen Sie, Ihren Barcode-Scanner so zu konfigurieren, dass er eine numerische Tastatur emuliert.</value>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Stellen Sie sicher, dass Ihre Tastaturlayouts übereinstimmen.;;Falls notwendig, konfigurieren Sie Ihren Barcodescanner so, dass er ein numerisches Tastenfeld emuliert und AIM-Identifikatoren überträgt.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Ihr System kann den Barcode-Typ-Identifikator nicht zuverlässig lesen.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-Identifikatoren repräsentieren den Barcode-Typ. Ihre Software kann sie verwenden, um unnötige Alarme zu eliminieren.</value>
   </data>
 </root>

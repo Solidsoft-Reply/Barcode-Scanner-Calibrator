@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Het gerapporteerde karakter {0} is dubbelzinnig. Barcodes die ISO/IEC 15434-syntax gebruiken, kunnen niet betrouwbaar gelezen worden.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>De barcode scanner verzendt geen AIM-identifier.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>De AIM-identifier kan niet herkend worden.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>De barcode scanner verzendt een voorvoegsel: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>De barcode scanner verzendt een code: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>De barcode scanner verzendt een achtervoegsel: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>De barcode scanner verzendt geen end-of-line tekensequentie (bijvoorbeeld een carriage return).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Het gerapporteerde karakter {0} is dubbelzinnig. Er zijn meerdere toetsen voor hetzelfde karakter, elk een ander verwacht karakter vertegenwoordigend. Echter, hoogstens is slechts één van de verwachte karakters invariant.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Sommige gerapporteerde karakters zijn dubbelzinnig. Er zijn meerdere toetsen voor hetzelfde karakter, elk een ander niet-invariant verwacht ASCII-karakter vertegenwoordigend: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-identifiers kunnen niet herkend worden. Het gerapporteerde karakter {0} is dubbelzinnig. Er zijn meerdere toetsen voor dit karakter dat het AIM-vlagkarakter vertegenwoordigt, evenals andere verwachte karakter(s).</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Sommige gerapporteerde niet-invariante ASCII-karakters zijn dubbelzinnig: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>De gerapporteerde karakterreeks {0} is dubbelzinnig. Dit kan het lezen van eventuele extra gegevenselementen in een barcode verhinderen.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Sommige gerapporteerde karakterreeksen zijn dubbelzinnig. Deze karakters vertegenwoordigen geen invariante karakters: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen voor invariante karakters.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen voor niet-invariante ASCII-karakters.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van groepsscheiders.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van recordscheiders.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van AIM-identifiers.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock staat aan.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock kan aanstaan.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>De barcode scanner kan geconfigureerd zijn om karakters naar hoofdletters te converteren.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>De barcode scanner kan geconfigureerd zijn om karakters naar kleine letters te converteren.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>De barcode scanner kan geconfigureerd zijn om het teken van karakters om te keren.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>De beste gerapporteerde toetsenbord gegevensinvoertijd tijdens de kalibratie geeft aan dat de barcode scanner niet optimaal presteert.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Het karakter {0} kan niet betrouwbaar worden weergegeven vanwege incompatibiliteit met de toetsenbordindeling.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>De gerapporteerde karakterreeks {0} is dubbelzinnig. Dit vertegenwoordigt het groepsscheidingsteken.</value>
+    <value>Het groepsscheidingsteken kan niet worden gelezen.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Sommige gerapporteerde karakters zijn dubbelzinnig. Ze kunnen afzonderlijk gerapporteerd worden, maar worden ook gebruikt om ligaturen samen te stellen: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibratie mislukt. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-scheidingskarakters worden ondersteund.</value>
+    <value>Bestandsscheidingstekens worden ondersteund.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Het gerapporteerde karakter {0} is dubbelzinnig. Barcodes die ISO/IEC 15434-syntax gebruiken om EDI-gegevens te vertegenwoordigen, kunnen niet betrouwbaar gelezen worden.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>De barcodescanner en de toetsenbordindelingen van de computer komen niet overeen bij het weergeven van scheidingstekens voor eenheden.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>De barcode scanner en computer toetsenbordindelingen komen niet overeen bij het vertegenwoordigen van EDI-scheiders.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>De overeenkomst van de barcode scanner en computer toetsenbordindelingen kan niet bepaald worden.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Eenheidsscheidingstekens worden ondersteund.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Het gerapporteerde teken {0} is dubbelzinnig. Barcodes die ASCII 28 of ASCII 31 gebruiken, kunnen mogelijk niet betrouwbaar worden gelezen.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Het scheidingsteken voor bestanden kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Het scheidingsteken voor eenheden kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Het einde-van-de-transmissie-teken kan niet betrouwbaar worden gelezen.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Einde-van-de-transmissie-tekens worden ondersteund.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>De barcodescanner verzendt geen reeksen van eindkarakters (bijv. een regeleinde).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} is dubbelzinnig. Er zijn meerdere toetsen voor hetzelfde teken, die elk een ander verwacht teken vertegenwoordigen. Van de verwachte tekens is er echter maximaal één invariant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Sommige gerapporteerde tekens zijn dubbelzinnig. Er zijn meerdere toetsen voor hetzelfde teken, die elk een ander niet-invariant verwacht ASCII-teken vertegenwoordigen: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-identificatoren kunnen niet worden herkend. Het gerapporteerde teken {0} is dubbelzinnig. Er zijn meerdere toetsen voor dit teken die zowel het AIM-vlagteken als andere verwachte tekens vertegenwoordigen.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Sommige gerapporteerde niet-invariante ASCII-tekens zijn dubbelzinnig: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een scheidingsteken van bestanden is dubbelzinnig. Barcodes die ISO/IEC 15434-syntaxis gebruiken om EDI-gegevens weer te geven, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een scheidingsteken van eenheden is dubbelzinnig. Barcodes die ISO/IEC 15434-syntaxis gebruiken om EDI-gegevens weer te geven, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een einde-van-transmissieteken is dubbelzinnig. Barcodes die ISO/IEC 15434-syntaxis gebruiken, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Sommige gerapporteerde tekenreeksen zijn dubbelzinnig. Deze tekens vertegenwoordigen geen invariante tekens: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Dit kan voorkomen dat extra gegevens in een barcode worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een scheidingsteken van bestanden is dubbelzinnig. Barcodes die ASCII 28-besturingstekens gebruiken, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een scheidingsteken van eenheden is dubbelzinnig. Barcodes die ASCII 31-besturingstekens gebruiken, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Het gerapporteerde teken {0} voor een einde-van-transmissieteken is dubbelzinnig. Barcodes die ASCII04-besturingstekens gebruiken, kunnen niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Dit vertegenwoordigt het recordscheidingsteken.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Het gerapporteerde teken voor een invariante teken is hetzelfde als het gerapporteerde teken voor het einde van transmissie-teken.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Het scheidingsteken voor bestanden kan niet betrouwbaar worden gelezen.</value>
+    <value>Het recordscheidingsteken kan niet worden gelezen.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Het scheidingsteken voor eenheden kan niet betrouwbaar worden gelezen.</value>
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het recordscheidingsteken kan niet betrouwbaar worden gelezen.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Het einde-van-de-transmissie-teken kan niet betrouwbaar worden gelezen.</value>
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het recordscheidingsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Het bestandscheidingsteken kan niet worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het bestandscheidingsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het bestandscheidingsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Het eenheidsscheidingsteken kan niet worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het eenheidsscheidingsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het eenheidsscheidingsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Het einde-overdrachtsteken kan niet worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het einde-overdrachtsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Het einde-overdrachtsteken kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>De gerapporteerde karakterreeks {0} is dubbelzinnig. Dit vertegenwoordigt het groepsscheidingsteken.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>De AIM-identificatie kan niet betrouwbaar worden gelezen.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>De barcodescanner en de toetsenbordindelingen van de computer komen niet overeen bij het weergeven van scheidingstekens voor bestanden.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>De barcodescanner en de toetsenbordindelingen van de computer komen niet overeen bij het weergeven van einde-overdrachtstekens.</value>
   </data>
 </root>

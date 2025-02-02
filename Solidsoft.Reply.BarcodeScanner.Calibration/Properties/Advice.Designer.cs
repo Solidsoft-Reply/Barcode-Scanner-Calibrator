@@ -61,15 +61,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad..
-        /// </summary>
-        internal static string Adv_ice_278 {
-            get {
-                return ResourceManager.GetString("Adv ice_278", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You may need to enter data manually into your software for barcodes that contain data formatted according to ISO/IEC 15434 characters..
         /// </summary>
         internal static string Advice_105 {
@@ -192,6 +183,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Advice_235 {
             get {
                 return ResourceManager.GetString("Advice_235", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers..
+        /// </summary>
+        internal static string Advice_236 {
+            get {
+                return ResourceManager.GetString("Advice_236", resourceCulture);
             }
         }
         
@@ -691,6 +691,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your system cannot reliably read the barcode type identifier..
+        /// </summary>
+        internal static string Condition_236 {
+            get {
+                return ResourceManager.GetString("Condition_236", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your system may not be able to read Format 05 or Format 06 barcodes reliably..
         /// </summary>
         internal static string Condition_240 {
@@ -1069,7 +1078,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434..
+        ///   Looks up a localized string similar to However, it cannot read barcodes reliably if they contain data formatted according to ISO/IEC 15434..
         /// </summary>
         internal static string Description_115 {
             get {
@@ -1173,6 +1182,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Description_235 {
             get {
                 return ResourceManager.GetString("Description_235", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts..
+        /// </summary>
+        internal static string Description_236 {
+            get {
+                return ResourceManager.GetString("Description_236", resourceCulture);
             }
         }
         

@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Tá an carachtar tuairiscithe {0} doiléir. Ní féidir barcódanna a úsáideann sintéis ISO/IEC 15434 a léamh go hiontaofa.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Níl an scanóir baracóid ag craoladh Aitheantóir AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Ní féidir an tAitheantóir AIM a aithint.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Tá an scanóir baracóid ag craoladh réamhrá: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Tá an scanóir baracóid ag craoladh cód: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Tá an scanóir baracóid ag craoladh síneadh: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Níl an scanóir baracóid ag craoladh seicheamh carachtar deireadh-líne (e.g. carráiste ar ais).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Tá an carachtar tuairiscithe {0} doiléir. Tá iolrú eochracha ann don charachtar céanna, gach ceann acu ag léiriú carachtar ionchasaigh difriúil. Ach, ag an am céanna, níl ach ceann amháin de na carachtair ionchasaigh inbhuanaithe.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Tá roinnt carachtair tuairiscithe doiléir. Tá iolrú eochracha ann don charachtar céanna, gach ceann acu ag léiriú carachtar ASCII neamh-inbhuanaithe difriúil ionchasach: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Ní féidir aitheantóirí AIM a aithint. Tá an carachtar tuairiscithe {0} doiléir. Tá iolrú eochracha ann don charachtar seo a léiríonn carachtar bratach AIM chomh maith le carachtar(anna) eile ionchais.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Tá roinnt carachtair ASCII neamh-inbhuanaithe tuairiscithe doiléir: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Tá an seicheamh carachtar tuairiscithe {0} doiléir. D'fhéadfadh sé seo cosc a chur ar léamh aon eilimintí sonraí breise san áireamh i mbarcód.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Tá roinnt seichimh carachtair tuairiscithe doiléir. Ní léiríonn na carachtair seo carachtair inbhuanaithe: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire do charachtair inbhuanaithe.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire do charachtair ASCII neamh-inbhuanaithe.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire agus iad ag léiriú Scarthóirí Grúpa.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire agus iad ag léiriú Scarthóirí Taifead.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire agus iad ag léiriú aitheantóirí AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Tá Caps Lock ar siúl.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>D'fhéadfadh Caps Lock a bheith ar siúl.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>D'fhéadfadh an scanóir baracóid a bheith cumraithe chun carachtair a athrú go litreacha móra.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>D'fhéadfadh an scanóir baracóid a bheith cumraithe chun carachtair a athrú go litreacha beaga.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>D'fhéadfadh an scanóir baracóid a bheith cumraithe chun casadh carachtar a athrú.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Léiríonn an t-am iontrála sonraí méarchláir is fearr tuairiscithe le linn an chalabrúcháin nach bhfuil an scanóir baracóid ag feidhmiú go hoptúil.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Ní féidir an carachtar {0} a léiriú go hiontaofa mar gheall ar neamh-chomhoiriúnacht le leagan amach an mhéarchláir.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Tá an seicheamh carachtar tuairiscithe {0} doiléir. Léiríonn sé seo an carachtar scartha grúpa.</value>
+    <value>Ní féidir an carachtar scartha grúpa a léamh.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Tá roinnt carachtair tuairiscithe doiléir. Is féidir iad a thuairisciú ina n-aonar ach úsáidtear iad freisin chun líogáití a chumadh: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Theip ar an gcalabrú. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Tacaítear le carachtair scartha EDI.</value>
+    <value>Les caractères séparateurs de fichiers sont pris en charge.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Tá an carachtar tuairiscithe {0} doiléir. Ní féidir barcódanna a úsáideann sintéis ISO/IEC 15434 chun sonraí EDI a léiriú a léamh go hiontaofa.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Ní fhreagraíonn an scanóir cóid bharra agus leagan amach méarchláir an ríomhaire dá chéile nuair a léirítear scarthaí aonaid.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire agus iad ag léiriú scarthóirí EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Ní féidir comhfhreagras leagan amach méarchláir an scanóra baracóid agus an ríomhaire a chinneadh.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Tacaítear le carachtair deighilte aonad.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Tá an carachtar a thuairiscítear {0} débhríoch. Ní féidir códanna barra a úsáideann ASCII 28 nó ASCII 31 a léamh go hiontaofa.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Ní féidir an carachtar scartha comhad a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Ní féidir an carachtar scartha aonad a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Ní féidir an carachtar deireadh an tSeolta a léamh go hiontaofa.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Tacaítear le carachtair Deireadh an tSeolta.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Níl an scanóir barrachóid ag traschur seicheamh carachtar deireadh líne (m.sh. filleadh cairr).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} débhríoch. Tá eochracha iolracha ann don charachtar céanna, gach ceann acu ag léiriú carachtar difriúil a bhfuiltear ag súil leis. Mar sin féin, ar a mhéad, níl ach ceann amháin de na carachtair a bhfuiltear ag súil leis neamh-inathraitheach.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Tá roinnt carachtair a tuairiscíodh débhríoch. Tá eochracha iolracha ann don charachtar céanna, gach ceann acu ag léiriú carachtar ASCII neamh-inathraitheach a bhfuiltear ag súil leis: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Ní féidir Aitheantóirí AIM a aithint. Tá an carachtar a tuairiscíodh {0} débhríoch. Tá eochracha iolracha ann don charachtar seo a léiríonn carachtar bratach AIM chomh maith le carachtair eile a bhfuiltear ag súil leo.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Tá roinnt carachtair ASCII neamh-inathraitheach a tuairiscíodh débhríoch: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh scaradh comhaid débhríoch. Ní féidir barraí cóid a úsáideann comhréir ISO/IEC 15434 chun sonraí EDI a léiriú a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh scaradh aonad débhríoch. Ní féidir barraí cóid a úsáideann comhréir ISO/IEC 15434 chun sonraí EDI a léiriú a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh carachtar deireadh tarchurtha débhríoch. Ní féidir barraí cóid a úsáideann comhréir ISO/IEC 15434 a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Tá roinnt seichimh carachtar a tuairiscíodh débhríoch. Ní léiríonn na carachtair seo carachtair neamh-inathraitheacha: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Tá an seicheamh carachtar a tuairiscíodh {0} débhríoch. Féadfaidh sé seo cosc a chur ar léamh aon eilimintí sonraí breise atá san áireamh i barra cóid.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh scaradh comhaid débhríoch. Ní féidir barraí cóid a úsáideann carachtair rialaithe ASCII 28 a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh scaradh aonad débhríoch. Ní féidir barraí cóid a úsáideann carachtair rialaithe ASCII 31 a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Tá an carachtar a tuairiscíodh {0} le haghaidh carachtar deireadh tarchurtha débhríoch. Ní féidir barraí cóid a úsáideann carachtair rialaithe ASCII04 a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Tá an seicheamh carachtar a tuairiscíodh {0} débhríoch. Léiríonn sé seo an carachtar scaradh taifeadta.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Is ionann an carachtar a tuairiscíodh do charachtar neamh-inathraithe agus an carachtar a tuairiscíodh don charachtar Deireadh an tarchuir.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Ní féidir an carachtar scartha comhad a léamh go hiontaofa.</value>
+    <value>Ní féidir an carachtar scartha taifead a léamh.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Ní féidir an carachtar scartha aonad a léamh go hiontaofa.</value>
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha taifead a léamh go hiontaofa.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Ní féidir an carachtar deireadh an tSeolta a léamh go hiontaofa.</value>
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha taifead a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Ní féidir an carachtar scartha comhaid a léamh.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha comhaid a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha comhaid a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Ní féidir an carachtar scartha aonad a léamh.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha aonad a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar scartha aonad a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Ní féidir an carachtar deireadh tarchurtha a léamh.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar deireadh tarchurtha a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Tá an t-eagar carachtar tuairiscithe {0} neamhchinnte. Ní féidir an carachtar deireadh tarchurtha a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Tá an seicheamh carachtar tuairiscithe {0} doiléir. Léiríonn sé seo an carachtar scartha grúpa.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Ní féidir an t-aitheantóir AIM a léamh go hiontaofa.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Ní fhreagraíonn an scanóir cóid bharra agus leagan amach méarchláir an ríomhaire dá chéile nuair a léirítear scarthaí comhad.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Ní fhreagraíonn an scanóir cóid bharra agus leagan amach méarchláir an ríomhaire dá chéile nuair a léirítear carachtair deiridh tarchurtha.</value>
   </data>
 </root>

@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Rapportert tegn {0} er tvetydig. Strekkoder som bruker ISO/IEC 15434-syntaksen kan ikke leses pålitelig.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Strekkodeskanneren sender ikke en AIM-identifikator.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM-identifikatoren kan ikke gjenkjennes.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Strekkodeskanneren sender et prefiks: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Strekkodeskanneren sender en kode: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Strekkodeskanneren sender et suffiks: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Strekkodeskanneren sender ikke en slutten-av-linje-tegnsekvens (f.eks. en vognretur).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Rapportert tegn {0} er tvetydig. Det er flere nøkler for det samme tegnet, hver som representerer en annen forventet tegn. Imidlertid er det på det meste bare ett av de forventede tegnene som er invariant.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Noen rapporterte tegn er tvetydige. Det er flere nøkler for det samme tegnet, hver som representerer en annen forventet ikke-invariant ASCII-tegn: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-identifikatorer kan ikke gjenkjennes. Rapportert tegn {0} er tvetydig. Det er flere nøkler for dette tegnet som representerer AIM-flaggtegnet samt andre forventede tegn.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Noen rapporterte ikke-invariante ASCII-tegn er tvetydige: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Rapportert tegnsekvens {0} er tvetydig. Dette kan forhindre lesing av eventuelle tilleggsdataelementer inkludert i en strekkode.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Noen rapporterte tegnsekvenser er tvetydige. Disse tegnene representerer ikke invariante tegn: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke for invariante tegn.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke for ikke-invariante ASCII-tegn.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke når de representerer gruppeseparatorer.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke når de representerer rekordseparatorer.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke når de representerer AIM-identifikatorer.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock er på.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock kan være på.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Strekkodeskanneren kan være konfigurert til å konvertere tegn til store bokstaver.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Strekkodeskanneren kan være konfigurert til å konvertere tegn til små bokstaver.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Strekkodeskanneren kan være konfigurert til å invertere tegnfall.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Den beste rapporterte tastaturdatainngangstiden under kalibrering indikerer at strekkodeskanneren ikke fungerer optimalt.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Tegnet {0} kan ikke representeres pålitelig på grunn av inkompatibilitet med tastaturoppsettet.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Rapportert tegnsekvens {0} er tvetydig. Dette representerer gruppeseparator-tegnet.</value>
+    <value>Gruppeseparator-tegnet kan ikke leses.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Noen rapporterte tegn er tvetydige. De kan rapporteres individuelt, men brukes også til å lage ligaturer: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibrering mislyktes. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Støtte for EDI-separator-tegn.</value>
+    <value>Filseparator-tegn støttes.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Rapportert tegn {0} er tvetydig. Strekkoder som bruker ISO/IEC 15434-syntaksen for å representere EDI-data kan ikke leses pålitelig.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Strekkodeskanneren og tastaturoppsettene på datamaskinen samsvarer ikke når enhetsskillelinjer representeres.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Strekkodeskannerens og datamaskinens tastaturoppsett samsvarer ikke når de representerer EDI-separatorer.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Samsvar mellom strekkodeskannerens og datamaskinens tastaturoppsett kan ikke fastslås.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Enhetsseparator-tegn støttes.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Tegnet {0} som ble rapportert er tvetydig. Strekkoder som bruker ASCII 28 eller ASCII 31 kan kanskje ikke leses pålitelig.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Filseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Enhetsseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Slutt-på-overføring-tegnet kan ikke leses pålitelig.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Slutt-på-overføring-tegn støttes.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Strekkodeskanneren overfører ikke en end-of-line-tegnsekvens (f.eks. en vognretur).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Den rapporterte tegnet {0} er tvetydig. Det er flere taster for det samme tegnet, hver representerer et annet forventet tegn. Men, på det meste er bare ett av de forventede tegnene invariant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Noen rapporterte tegn er tvetydige. Det er flere taster for det samme tegnet, hver representerer et annet ikke-invariant forventet ASCII-tegn: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-identifikatorer kan ikke gjenkjennes. Den rapporterte tegnet {0} er tvetydig. Det er flere taster for dette tegnet som representerer AIM-flaggetegnet samt andre forventede tegn.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Noen rapporterte ikke-invariante ASCII-tegn er tvetydige: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for en filseparator er tvetydig. Strekkoder som bruker ISO/IEC 15434-syntaks for å representere EDI-data, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for en enhetsseparator er tvetydig. Strekkoder som bruker ISO/IEC 15434-syntaks for å representere EDI-data, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for et slutten-av-overføring-tegn er tvetydig. Strekkoder som bruker ISO/IEC 15434-syntaks, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Noen rapporterte tegnsekvenser er tvetydige. Disse tegnene representerer ikke invariante tegn: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Dette kan forhindre lesing av eventuelle ekstra dataelementer inkludert i en strekkode.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for en filseparator er tvetydig. Strekkoder som bruker ASCII 28-kontrolltegn, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for en enhetsseparator er tvetydig. Strekkoder som bruker ASCII 31-kontrolltegn, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Det rapporterte tegnet {0} for et slutten-av-overføring-tegn er tvetydig. Strekkoder som bruker ASCII04-kontrolltegn, kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Dette representerer postseparator-tegnet.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Det rapporterte tegnet for et invariant tegn er det samme som tegnet rapportert for slutten av overføring.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Filseparator-tegnet kan ikke leses pålitelig.</value>
+    <value>Postseparator-tegnet kan ikke leses.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Enhetsseparator-tegnet kan ikke leses pålitelig.</value>
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Postseparator-tegnet kan ikke leses pålitelig.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Slutt-på-overføring-tegnet kan ikke leses pålitelig.</value>
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Postseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Filseparator-tegnet kan ikke leses.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Filseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Filseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Enhetsseparator-tegnet kan ikke leses.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Enhetsseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Enhetsseparator-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Overføringsslutt-tegnet kan ikke leses.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Overføringsslutt-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Den rapporterte tegnsekvensen {0} er tvetydig. Overføringsslutt-tegnet kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Rapportert tegnsekvens {0} er tvetydig. Dette representerer gruppeseparator-tegnet.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM-identifikatoren kan ikke leses pålitelig.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Strekkodeskanneren og tastaturoppsettene på datamaskinen samsvarer ikke når filskillelinjer representeres.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Strekkodeskanneren og tastaturoppsettene på datamaskinen samsvarer ikke når overføringens sluttkarakterer representeres.</value>
   </data>
 </root>

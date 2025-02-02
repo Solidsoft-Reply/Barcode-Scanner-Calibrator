@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Próbálja meg újra, és ügyeljen arra, hogy a megfelelő vonalkódot olvassa be.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>A rendszer nem biztos, hogy helyesen olvassa be a fájlelválasztó (ASCII 28) karaktereket.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>A rendszer nem tudja beolvasni a fájlelválasztó (ASCII 28) karaktereket.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>A rendszer nem biztos, hogy helyesen olvassa be az egységelválasztó (ASCII 31) karaktereket.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>A rendszer nem biztos, hogy helyesen olvassa be az egységelválasztó (ASCII 31) karaktereket.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>A rendszer nem biztos, hogy helyesen olvassa be az átviteli vége (ASCII 04) karaktereket.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>A rendszer nem tudja beolvasni az átviteli vége (ASCII 04) karaktereket.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>A teszt sikertelen volt.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Néhány vonalkódtípus ezt a karaktert használja a vonalkódadatok végének megjelölésére. A szoftver nem biztos, hogy helyesen olvassa be a vonalkódolvasó által hozzáadott bármilyen utótagot.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Néhány vonalkódtípus ezt a karaktert használja a vonalkódadatok végének megjelölésére. A szoftver nem biztos, hogy helyesen olvassa be a vonalkódolvasó által hozzáadott bármilyen utótagot.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Lehet, hogy rossz vonalkódot olvasott be, vagy helytelen adatokat adott meg a billentyűzeten. A vonalkódolvasó vagy a rendszer lassú lehet, vagy váratlan vagy időszakos probléma léphetett fel.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Hiba a billentyűzet szkriptek feloldásakor: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>A rendszer nem tudja beolvasni a fájlelválasztó (ASCII 28) karaktereket.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>A rendszer nem biztos, hogy helyesen olvassa be az egységelválasztó (ASCII 31) karaktereket.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>A rendszer nem biztos, hogy helyesen olvassa be az egységelválasztó (ASCII 31) karaktereket.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Ezeket a karaktereket nem használják széles körben a vonalkódokban.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ha nehézségekbe ütközik a vonalkódok beolvasása során, próbálja meg a vonalkódolvasót úgy beállítani, hogy numerikus billentyűzetet emuláljon.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Írja be manuálisan az adatokat az ellenőrző szoftverébe, hogy ellenőrizze a PPN egyedi azonosítókat.;;Szükség esetén állítsa be a vonalkódolvasót, hogy numerikus billentyűzetet emuláljon.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ha problémái vannak a német PPN vonalkódok beolvasásakor, írja be manuálisan az adatokat az ellenőrző szoftverébe.;;Szükség esetén állítsa be a vonalkódolvasót, hogy numerikus billentyűzetet emuláljon.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>A rendszer nem biztos, hogy helyesen olvassa be az átviteli vége (ASCII 04) karaktereket.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>A rendszer nem biztos, hogy helyesen olvassa be az átviteli vége (ASCII 04) karaktereket.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Néhány vonalkódtípus ezt a karaktert használja a vonalkódadatok végének megjelölésére. A szoftver nem biztos, hogy helyesen olvassa be a vonalkódolvasó által hozzáadott bármilyen utótagot.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Néhány vonalkódtípus ezt a karaktert használja a vonalkódadatok végének megjelölésére. A szoftver nem biztos, hogy helyesen olvassa be a vonalkódolvasó által hozzáadott bármilyen utótagot.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Győződjön meg arról, hogy a billentyűzet elrendezések megfelelnek egymásnak.;;Szükség esetén állítsa be a vonalkódolvasóját úgy, hogy numerikus billentyűzetként működjön és továbbítsa az AIM azonosítókat.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>A rendszer nem képes megbízhatóan elolvasni a vonalkód típusazonosítóját.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM azonosítók a vonalkód típusát jelölik. A szoftverük használhatja őket a felesleges riasztások kiküszöbölésére.</value>
   </data>
 </root>

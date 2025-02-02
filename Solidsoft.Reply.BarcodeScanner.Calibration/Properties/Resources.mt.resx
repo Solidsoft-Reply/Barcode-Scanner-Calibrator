@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Il-karattru rrappurtat {0} huwa ambigwu. Barcodes li jużaw is-sintassi ISO/IEC 15434 ma jistgħux jiġu aqra b'mod affidabbli.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>L-iskanner tal-barcode mhu qed jittrasmetti l-ebda Identifikatur AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>L-Identifikatur AIM ma jistax jiġi rrikonoxxut.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>L-iskanner tal-barcode qed jittrasmetti prefiss: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>L-iskanner tal-barcode qed jittrasmetti kodiċi: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>L-iskanner tal-barcode qed jittrasmetti suffiss: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>L-iskanner tal-barcode mhu qed jittrasmetti l-ebda sekwenza ta' karattri ta' tmiem tal-linja (eż. carriage return).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Il-karattru rrappurtat {0} huwa ambigwu. Hemm ċwievet multipli għall-istess karattru, kull wieħed jirrappreżenta karattru mistenni differenti. Madankollu, massimu wieħed biss mill-karattri mistennija huwa invarianti.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Xi karattri rrappurtati huma ambigwi. Hemm ċwievet multipli għall-istess karattru, kull wieħed jirrappreżenta karattru ASCII mhux invarianti mistenni differenti: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Ma jistgħux jiġu rrikonoxxuti Identifikaturi AIM. Il-karattru rrappurtat {0} huwa ambigwu. Hemm ċwievet multipli għal dan il-karattru li jirrappreżentaw il-karattru tal-bandiera AIM kif ukoll karattru/i mistenni/a oħra/jn.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Xi karattri ASCII mhux invarianti rrappurtati huma ambigwi: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Is-sekwenza tal-karattri rrappurtata {0} hija ambigwa. Dan jista' jipprevjeni l-qari ta' kwalunkwe elementi addizzjonali ta' data inklużi f'barcode.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Xi sekwenzi ta' karattri rrappurtati huma ambigwi. Dawn il-karattri ma jirrappreżentawx karattri invarianti: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux għal karattri invarianti.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux għal karattri ASCII mhux invarianti.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw Separatori tal-Grupp.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw Separatori tar-Rekord.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw identifikaturi AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Il-Caps Lock huwa mixgħul.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Il-Caps Lock jista' jkun mixgħul.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>L-iskanner tal-barcode jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri kbar.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>L-iskanner tal-barcode jista' jkun ikkonfigurat biex jikkonverti karattri għal ittri żgħar.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>L-iskanner tal-barcode jista' jkun ikkonfigurat biex jinverteċi l-kas tal-karattri.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>L-aħjar ħin irrappurtat ta' dħul tad-data mill-keyboard matul il-kalibrazzjoni jindika li l-iskanner tal-barcode ma jaħdimx b'mod ottimali.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Il-karattru {0} ma jistax jiġi rrappreżentat b'mod affidabbli minħabba inkompatibilità mal-layout tal-keyboard.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Is-sekwenza tal-karattri rrappurtata {0} hija ambigwa. Dan jirrappreżenta l-karattru tas-separatur tal-grupp.</value>
+    <value>Il-karattru tal-firda tal-grupp ma jistax jinqara.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Xi karattri rrappurtati huma ambigwi. Dawn jistgħu jiġu rrappurtati individwalment imma jintużaw ukoll biex jiffurmaw ligatures: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Il-kalibrazzjoni falliet. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Karattri separatori Edi huma appoġġjati.</value>
+    <value>Il-karattri ta' separatur tal-fajls huma appoġġjati.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Il-karattru rrappurtat {0} huwa ambigwu. Barcodes li jużaw is-sintassi ISO/IEC 15434 biex jirrappreżentaw data EDI ma jistgħux jiġu aqra b'mod affidabbli.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>L-iskaner tal-kodiċi tal-barra u l-layouts tal-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw separaturi tal-unità.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw separatori EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Ma jistax jiġi ddeterminat jekk il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter jaqblux.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Il-karattri ta' separazzjoni ta' unità huma appoġġjati.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Il-karattru rrappurtat {0} huwa ambigwu. Il-codes tal-bar li jużaw ASCII 28 jew ASCII 31 jistgħu ma jinqrawx b’mod affidabbli.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Il-karattru ta' separatur tal-fajls ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Il-karattru ta' separatur tal-unità ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara b'mod affidabbli.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Karattri tat-tmiem tat-trasmissjoni huma appoġġati.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Is-skaner tal-barkod ma jkunx qed jittrasmetti sekwenza ta’ karattri ta’ tmiem ta’ linja (eż. ritorn tal-karru).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} huwa ambigwu. Hemm diversi ċwievet għall-istess karattru, kull wieħed jirrappreżenta karattru differenti mistenni. Madankollu, fil-biċċa l-kbira, wieħed biss mill-karattri mistennija huwa invarjant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Xi karattri rrappurtati huma ambigwi. Hemm diversi ċwievet għall-istess karattru, kull wieħed jirrappreżenta karattru ASCII mhux invarjant mistenni differenti: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>L-identifikaturi AIM ma jistgħux jiġu rikonoxxuti. Il-karattru rrappurtat {0} huwa ambigwu. Hemm diversi ċwievet għal dan il-karattru li jirrappreżentaw kemm il-karattru tal-bandiera AIM kif ukoll karattri oħra mistennija.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Xi karattri ASCII mhux invarjanti rrappurtati huma ambigwi: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għas-separatur tal-fajls huwa ambigwu. Il-barkodi li jużaw sintassi ISO/IEC 15434 biex jirrappreżentaw dejta EDI ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għas-separatur tal-unità huwa ambigwu. Il-barkodi li jużaw sintassi ISO/IEC 15434 biex jirrappreżentaw dejta EDI ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għall-karattru ta’ Tmiem it-Trasmissjoni huwa ambigwu. Il-barkodi li jużaw sintassi ISO/IEC 15434 ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Xi sekwenzi ta’ karattri rrappurtati huma ambigwi. Dawn il-karattri ma jirrappreżentawx karattri invarjanti: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Is-sekwenza ta’ karattri rrappurtata {0} hija ambigwa. Dan jista’ jżomm milli jinqraw kwalunkwe elementi tad-dejta addizzjonali inklużi f’barkod.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għas-separatur tal-fajls huwa ambigwu. Il-barkodi li jużaw karattri ta’ kontroll ASCII 28 ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għas-separatur tal-unità huwa ambigwu. Il-barkodi li jużaw karattri ta’ kontroll ASCII 31 ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Il-karattru rrappurtat {0} għall-karattru ta’ Tmiem it-Trasmissjoni huwa ambigwu. Il-barkodi li jużaw karattri ta’ kontroll ASCII04 ma jistgħux jinqraw b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Is-sekwenza ta’ karattri rrappurtata {0} hija ambigwa. Dan jirrappreżenta l-karattru tas-separatur tar-rekords.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Il-karattru rrappurtat għal karattru invarjant huwa l-istess bħal dak irrapportat għall-karattru ta’ Tmiem it-Trasmissjoni.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Il-karattru ta' separatur tal-fajls ma jistax jinqara b'mod affidabbli.</value>
+    <value>Il-karattru tal-firda tar-rekord ma jistax jinqara.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Il-karattru ta' separatur tal-unità ma jistax jinqara b'mod affidabbli.</value>
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tar-rekord ma jistax jinqara b'mod affidabbli.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara b'mod affidabbli.</value>
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tar-rekord ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Il-karattru tal-firda tal-fajl ma jistax jinqara.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tal-fajl ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tal-fajl ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Il-karattru tal-firda tal-unità ma jistax jinqara.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tal-unità ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tal-firda tal-unità ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Is-sekwenza tar-rappurtar tal-karattri {0} hija ambigwa. Il-karattru tat-tmiem tat-trasmissjoni ma jistax jinqara b'mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Is-sekwenza tal-karattri rrappurtata {0} hija ambigwa. Dan jirrappreżenta l-karattru tas-separatur tal-grupp.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>L-identifikatur AIM ma jistax jinqara b’mod affidabbli.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>L-iskaner tal-kodiċi tal-barra u l-layouts tal-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw separaturi tal-fajl.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>L-iskaner tal-kodiċi tal-barra u l-layouts tal-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw karattri ta’ tmiem it-trasmissjoni.</value>
   </data>
 </root>

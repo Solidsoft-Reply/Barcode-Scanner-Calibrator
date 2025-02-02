@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Опитайте отново, като се уверите, че сканирате правилния баркод(ове).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Вашата система може да не чете правилно знаците за разделител на файлове (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Вашата система не може да чете знаците за разделител на файлове (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Вашата система може да не чете правилно знаците за край на предаването (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Вашата система не може да чете знаците за край на предаването (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Тестът се провали.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Тези знаци не се използват широко в баркодове.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Тези знаци не се използват широко в баркодове.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Тези знаци не се използват широко в баркодове.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Тези знаци не се използват широко в баркодове.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Може да сте сканирали грешен баркод или сте въвели неправилни данни с клавиатурата. Вашият баркод скенер или система може да са бавни, или е възникнал някакъв неочакван или прекъсващ проблем.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Грешка при разрешаването на клавиатурни скриптове: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Вашата система не може да чете знаците за разделител на файлове (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за разделител на единици (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Тези знаци не се използват широко в баркодове.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ако изпитвате затруднения при сканиране на баркодове, опитайте да конфигурирате вашия баркод скенер да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Въведете данните ръчно в софтуера си за проверка, за да потвърдите уникалните идентификатори на PPN.;;Ако е необходимо, конфигурирайте четеца на баркодове да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ако срещнете проблеми при сканирането на немските PPN баркодове, въведете данните ръчно в софтуера си за проверка.;;Ако е необходимо, конфигурирайте четеца на баркодове да емулира цифрова клавиатура.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за край на предаването (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Вашата система може да не чете правилно знаците за край на предаването (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Някои типове баркодове използват този знак, за да отбележат края на данните от баркода. Вашият софтуер може да не прочете правилно всеки добавен от баркод скенера суфикс.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Уверете се, че подредбите на клавиатурите съвпадат.;;Ако е необходимо, конфигурирайте вашия баркод скенер да имитира числова клавиатура и да предава идентификатори AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Вашата система не може надеждно да прочете идентификатора на типа баркод.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Идентификаторите AIM представляват типа на баркода. Вашият софтуер може да ги използва, за да елиминира ненужни сигнали.</value>
   </data>
 </root>

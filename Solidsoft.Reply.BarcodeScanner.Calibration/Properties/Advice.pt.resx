@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Tente novamente, certificando-se de digitalizar o(s) código(s) de barras correto(s).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>O seu sistema pode não ler corretamente os caracteres de separador de ficheiros (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>O seu sistema não consegue ler os caracteres de separador de ficheiros (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>O seu sistema pode não ler corretamente os caracteres de fim de transmissão (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>O seu sistema não consegue ler os caracteres de fim de transmissão (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>O teste falhou.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Você pode ter digitalizado um código de barras errado ou inserido dados incorretos usando o teclado. Seu scanner de código de barras ou sistema pode estar lento, ou algum problema inesperado ou intermitente pode ter ocorrido.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Erro ao resolver scripts de teclado: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>O seu sistema não consegue ler os caracteres de separador de ficheiros (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de separador de unidade (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Esses caracteres não são amplamente utilizados em códigos de barras.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Se tiver dificuldades ao digitalizar códigos de barras, tente configurar o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Insira os dados manualmente no seu software de verificação para verificar identificadores exclusivos PPN.;;Se necessário, configure o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Se você tiver problemas ao escanear códigos de barras PPN alemães, insira os dados manualmente no seu software de verificação.;;Se necessário, configure o seu leitor de códigos de barras para emular um teclado numérico.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de fim de transmissão (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>O seu sistema pode não ler corretamente os caracteres de fim de transmissão (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Alguns tipos de códigos de barras utilizam este caractere para marcar o fim dos dados do código de barras. O seu software pode não ler corretamente qualquer sufixo adicionado pelo leitor de códigos de barras.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Certifique-se de que os layouts do seu teclado combinam.;;Se necessário, configure seu scanner de código de barras para emular um teclado numérico e transmitir identificadores AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>O seu sistema não consegue ler de forma confiável o identificador do tipo de código de barras.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identificadores AIM representam o tipo de código de barras. Seu software pode usá-los para eliminar alertas desnecessários.</value>
   </data>
 </root>

@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>El carácter reportado {0} es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 no pueden leerse de manera confiable.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>El escáner de códigos de barras no está transmitiendo un Identificador AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>El Identificador AIM no puede ser reconocido.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>El escáner de códigos de barras está transmitiendo un prefijo: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>El escáner de códigos de barras está transmitiendo un código: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>El escáner de códigos de barras está transmitiendo un sufijo: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>El escáner de códigos de barras no está transmitiendo una secuencia de caracteres de fin de línea (por ejemplo, un retorno de carro).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>El carácter reportado {0} es ambiguo. Hay múltiples teclas para el mismo carácter, cada una representando un carácter esperado diferente. Sin embargo, como máximo, solo uno de los caracteres esperados es invariante.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Algunos caracteres reportados son ambiguos. Hay múltiples teclas para el mismo carácter, cada una representando un diferente carácter ASCII no invariante esperado: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Los Identificadores AIM no pueden ser reconocidos. El carácter reportado {0} es ambiguo. Hay múltiples teclas para este carácter que representa el carácter de bandera AIM así como otros carácter(es) esperados.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Algunos caracteres ASCII no invariantes reportados son ambiguos: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>La secuencia de caracteres reportada {0} es ambigua. Esto puede impedir la lectura de cualquier elemento de datos adicional incluido en un código de barras.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Algunas secuencias de caracteres reportadas son ambiguas. Estos caracteres no representan caracteres invariantes: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden para caracteres invariantes.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden para caracteres ASCII no invariantes.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar Separadores de Grupo.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar Separadores de Registro.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar identificadores AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>El bloqueo de mayúsculas está activado.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>El bloqueo de mayúsculas puede estar activado.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>El escáner de códigos de barras puede estar configurado para convertir caracteres a mayúsculas.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>El escáner de códigos de barras puede estar configurado para convertir caracteres a minúsculas.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>El escáner de códigos de barras puede estar configurado para invertir el caso de los caracteres.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>El mejor tiempo de entrada de datos de teclado reportado durante la calibración indica que el escáner de códigos de barras no funciona de manera óptima.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>El carácter {0} no puede representarse de manera confiable debido a la incompatibilidad con la disposición del teclado.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>La secuencia de caracteres reportada {0} es ambigua. Esto representa el carácter separador de grupo.</value>
+    <value>El carácter separador de grupos no se puede leer.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Algunos caracteres reportados son ambiguos. Pueden ser informados individualmente pero también se utilizan para componer ligaduras: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>La calibración falló. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Los caracteres separadores EDI son compatibles.</value>
+    <value>Los caracteres separadores de archivos son compatibles.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>El carácter reportado {0} es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 para representar datos EDI no pueden leerse de manera confiable.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>El escáner de códigos de barras y las distribuciones del teclado de la computadora no coinciden al representar los separadores de unidades.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Los diseños del escáner de códigos de barras y del teclado de la computadora no corresponden al representar separadores EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>No se puede determinar la correspondencia de los diseños del escáner de códigos de barras y del teclado de la computadora.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Se admiten caracteres de separador de unidad.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>El carácter informado {0} es ambiguo. Los códigos de barras que utilizan ASCII 28 o ASCII 31 pueden no leerse de manera confiable.</value>
-  </data>
-  <data name="CalibrationInformation_213" xml:space="preserve">
+  <data name="CalibrationInformation_217" xml:space="preserve">
     <value>El carácter separador de archivo no se puede leer de manera confiable.</value>
   </data>
-  <data name="CalibrationInformation_214" xml:space="preserve">
+  <data name="CalibrationInformation_221" xml:space="preserve">
     <value>El carácter separador de unidad no se puede leer de manera confiable.</value>
   </data>
-  <data name="CalibrationInformation_215" xml:space="preserve">
+  <data name="CalibrationInformation_225" xml:space="preserve">
     <value>El carácter de fin de transmisión no se puede leer de manera confiable.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Los caracteres de fin de transmisión son compatibles.</value>
+  </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>El escáner de códigos de barras no transmite una secuencia de caracteres de fin de línea (por ejemplo, un retorno de carro).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>El carácter informado {0} es ambiguo. Hay varias teclas para el mismo carácter, cada una representando un carácter esperado diferente. Sin embargo, como máximo, solo uno de los caracteres esperados es invariante.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Algunos caracteres informados son ambiguos. Hay varias teclas para el mismo carácter, cada una representando un carácter ASCII esperado no invariante: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>No se pueden reconocer los identificadores AIM. El carácter informado {0} es ambiguo. Hay varias teclas para este carácter, que representan el carácter de bandera AIM, así como otros caracteres esperados.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Algunos caracteres ASCII no invariantes informados son ambiguos: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>El carácter informado {0} para un separador de archivos es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 para representar datos EDI no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>El carácter informado {0} para un separador de unidades es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 para representar datos EDI no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>El carácter informado {0} para un carácter de fin de transmisión es ambiguo. Los códigos de barras que utilizan la sintaxis ISO/IEC 15434 no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Algunas secuencias de caracteres informadas son ambiguas. Estos caracteres no representan caracteres invariantes: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>La secuencia de caracteres informada {0} es ambigua. Esto puede evitar la lectura de cualquier elemento de datos adicional incluido en un código de barras.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>El carácter informado {0} para un separador de archivos es ambiguo. Los códigos de barras que utilizan caracteres de control ASCII 28 no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>El carácter informado {0} para un separador de unidades es ambiguo. Los códigos de barras que utilizan caracteres de control ASCII 31 no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>El carácter informado {0} para un carácter de fin de transmisión es ambiguo. Los códigos de barras que utilizan caracteres de control ASCII04 no se pueden leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>La secuencia de caracteres informada {0} es ambigua. Esto representa el carácter de separador de registros.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>El carácter reportado para un carácter invariante es el mismo que el carácter reportado para el carácter de fin de transmisión.
+</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>El carácter separador de registros no se puede leer.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de registros no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de registros no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>El carácter separador de archivos no se puede leer.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de archivos no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de archivos no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>El carácter separador de unidades no se puede leer.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de unidades no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter separador de unidades no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>El carácter de fin de transmisión no se puede leer.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter de fin de transmisión no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. El carácter de fin de transmisión no se puede leer de manera confiable.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>La secuencia de caracteres reportada {0} es ambigua. Esto representa el carácter separador de grupo.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>El identificador AIM no se puede leer de manera fiable.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>El escáner de códigos de barras y las distribuciones del teclado de la computadora no coinciden al representar los separadores de archivos.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>El escáner de códigos de barras y las distribuciones del teclado de la computadora no coinciden al representar los caracteres de fin de transmisión.</value>
   </data>
 </root>

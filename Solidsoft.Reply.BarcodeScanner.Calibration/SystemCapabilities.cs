@@ -60,11 +60,12 @@ using Properties;
 ///   indicates generally if any keyboard non-correspondence has been detected that could affect
 ///   reading of barcodes.
 /// </param>
+/// <param name="KeyboardLayoutsCorrespondForInvariants"></param>
 /// <remarks>
 ///   Even if the keyboard layouts do not correspond, it can still be possible to read barcodes
 ///   reliably using a map. See the MappingPossible property.
 /// </remarks>
-/// <param name="KeyboardLayoutsCorrespondForInvariants">
+/// <param name="KeyboardLayoutsCorrespondForNonInvariantCharacters">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard correspond
 ///   for invariant characters.
 /// </param>
@@ -72,19 +73,11 @@ using Properties;
 ///   Even if the keyboard layouts do not correspond, it can still be possible to read barcodes
 ///   reliably using a map. See the MappingPossible property.
 /// </remarks>
-/// <param name="KeyboardLayoutsCorrespondForNonInvariantCharacters">
-///   Gets a value indicating whether the barcode scanner and the computer keyboard correspond
-///   for non-invariant characters.
-/// </param>
-/// <remarks>
-///   Even if the keyboard layouts do not correspond, it can still be possible to read additional
-///   reliably using a map. See the MappingPossible property.
-/// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping">
+/// <param name="KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Group Separator control characters without mapping.
 /// </param>
-/// <param name="KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping">
+/// <param name="KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Group Separator control characters without mapping.
 /// </param>
@@ -99,15 +92,15 @@ using Properties;
 ///   sufficient information in those messages to explicitly record an ASCII
 ///   29 without the need for character-mapping.
 /// </remarks>
-/// <param name="KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping">
+/// <param name="KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Record Separator control characters without mapping.
 /// </param>
-/// <param name="KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping">
+/// <param name="KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Record Separator control characters without mapping.
 /// </param>
-/// <param name="KeyboardLayoutsCanRepresentEotWithoutMapping">
+/// <param name="KeyboardLayoutsCanRepresentEotCharactersWithoutMapping">
 ///   Gets a value indicating whether the barcode scanner and the computer keyboard can represent
 ///   Record Separator control characters without mapping.
 /// </param>
@@ -143,7 +136,7 @@ using Properties;
 /// </param>
 /// <param name="CanReadInvariantsReliably">
 ///   Gets a value indicating whether it is possible to map from the barcode scanner
-///   to the computer keyboard to read invariant-only barcodes reliably, using a mapping
+///   to the computer keyboard to read invariant characters reliably, using a mapping
 ///   if necessary.
 /// </param>
 /// <remarks>
@@ -153,18 +146,26 @@ using Properties;
 ///   barcodes as long as ASCII 30 and ASCII 04 characters can be read reliably. See
 ///   the CanReadFormat05AndFormat06Reliably property.
 /// </remarks>
-/// <param name="CanReadFormat05AndFormat06Reliably">
-///   Gets a value indicating whether the calibrated system can read Format 05 and
-///   Format 06 barcodes reliably, using a mapping if necessary.
+/// <param name="CanReadNonInvariantsReliably">
+///   Gets a value indicating whether it is possible to map from the barcode scanner
+///   to the computer keyboard to read non-invariant characters reliably, using a mapping
+///   if necessary.
+/// </param>
+/// <remarks>
+///   The Calibration library only tests additional non-invariant ASCII characters.
+/// </remarks>
+/// <param name="CanReadIsoIec15434EnvelopeReliably">
+///   Gets a value indicating whether the calibrated system can read ISO/IEC 15434
+///   envelopes reliably, using a mapping if necessary.
 /// </param>
 /// <param name="CanReadEdiReliably">
 ///   Gets a value indicating whether the calibrated system can read EDI barcode data
 ///   formatted in accordance with ISO/IEC 15434 reliably, using a mapping if necessary.
 /// </param>
-/// <param name="CanReadGroupSeparatorReliably">
+/// <param name="CanReadGroupSeparatorsReliably">
 ///   Gets a value indicating whether the calibrated system can read Group Separator characters reliably, using a mapping if necessary.
 /// </param>
-/// <param name="CanReadRecordSeparatorReliably">
+/// <param name="CanReadRecordSeparatorsReliably">
 ///   Gets a value indicating whether the calibrated system can read Record Separator characters reliably, using a mapping if necessary.
 /// </param>
 /// <param name="CanReadFileSeparatorsReliably">
@@ -173,14 +174,17 @@ using Properties;
 /// <param name="CanReadUnitSeparatorsReliably">
 ///   Gets a value indicating whether the calibrated system can read Unit separator characters reliably, using a mapping if necessary.
 /// </param>
-/// <param name="CanReadEotReliably">
+/// <param name="CanReadEotCharactersReliably">
 ///   Gets a value indicating whether the calibrated system can read EOT characters reliably, using a mapping if necessary.
+/// </param>
+/// <param name="AmbiguousInvariantForEotSeparator">
+///   Gets a value indicating whether there is an ambiguous invariant character for the EOT separator.
+/// </param>
+/// <param name="CanReadAimIdentifiersWithoutMapping">
+///   Gets a value indicating whether the calibrated system can read AIM identifiers without using a mapping.
 /// </param>
 /// <param name="CanReadAimIdentifiersReliably">
 ///   Gets a value indicating whether the calibrated system can read AIM identifiers reliably, using a mapping if necessary.
-/// </param>
-/// <param name="CanReadAdditionalAsciiCharactersReliably">
-///   Gets a value indicating whether the calibrated system can read non-invariant characters reliably, using a mapping if necessary.
 /// </param>
 /// <param name="ScannerTransmitsAimIdentifiers">
 ///   Gets a value indicating whether the scanner transmits AIM identifiers.
@@ -278,50 +282,52 @@ public sealed record SystemCapabilities(
     [property: JsonProperty("keyboardLayoutsCorrespond", Order = 5)] bool? KeyboardLayoutsCorrespond = true,
     [property: JsonProperty("keyboardLayoutsCorrespondForInvariants", Order = 6)] bool? KeyboardLayoutsCorrespondForInvariants = true,
     [property: JsonProperty("keyboardLayoutsCorrespondForNonInvariantCharacters", Order = 7)] bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentFileSeparatorWithoutMapping", Order = 8)] bool? KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping", Order = 9)] bool? KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparatorWithoutMapping", Order = 10)] bool? KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping", Order = 11)] bool? KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = true,
-    [property: JsonProperty("keyboardLayoutsCanRepresentEotSeparatorWithoutMapping", Order = 12)] bool? KeyboardLayoutsCanRepresentEotWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentFileSeparatorsWithoutMapping", Order = 8)] bool? KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping", Order = 9)] bool? KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping", Order = 10)] bool? KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping", Order = 11)] bool? KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping = true,
+    [property: JsonProperty("keyboardLayoutsCanRepresentEotCharactersWithoutMapping", Order = 12)] bool? KeyboardLayoutsCanRepresentEotCharactersWithoutMapping = true,
     [property: JsonProperty("keyboardLayoutsCanRepresentEdiSeparatorWithoutMapping", Order = 13)] bool? KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = true,
     [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 14)] bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
     [property: JsonProperty("canReadInvariantsReliably", Order = 15)] bool? CanReadInvariantsReliably = true,
-    [property: JsonProperty("canReadFormat05AndFormat06Reliably", Order = 16)] bool? CanReadFormat05AndFormat06Reliably = true,
-    [property: JsonProperty("canReadEdiReliably", Order = 17)] bool? CanReadEdiReliably = true,
-    [property: JsonProperty("canReadGroupSeparatorReliably", Order = 18)] bool? CanReadGroupSeparatorReliably = null,
-    [property: JsonProperty("canReadRecordSeparatorReliably", Order = 19)] bool? CanReadRecordSeparatorReliably = null,
-    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 20)] bool? CanReadFileSeparatorsReliably = null,
-    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 21)] bool? CanReadUnitSeparatorsReliably = null,
-    [property: JsonProperty("canReadEotReliably", Order = 22)] bool? CanReadEotReliably = null,
-    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 23)] bool? CanReadAimIdentifiersReliably = true,
-    [property: JsonProperty("canReadAdditionalAsciiCharactersReliably", Order = 24)] bool? CanReadAdditionalAsciiCharactersReliably = true,
-    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 25)] bool? ScannerTransmitsAimIdentifiers = true,
-    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 26)] bool? ScannerTransmitsEndOfLineSequence = true,
-    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 27)] bool ScannerTransmitsAdditionalPrefix = false,
-    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 28)] bool ScannerTransmitsAdditionalCode = false,
-    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 29)] bool ScannerTransmitsAdditionalSuffix = false,
-    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 30)] bool? ScannerMayConvertToUpperCase = null,
-    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 31)] bool? ScannerMayConvertToLowerCase = null,
-    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 32)] bool? KeyboardScriptDoesNotSupportCase = null,
-    [property: JsonProperty("capsLockIndicator", Order = 33)] bool CapsLockIndicator = false,
-    [property: JsonProperty("scannerKeyboardPerformance", Order = 34)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
-    [property: JsonProperty("scannerCharactersPerSecond", Order = 35)] int ScannerCharactersPerSecond = 0,
-    [property: JsonProperty("formatSupportAssessed", Order = 36)] bool FormatSupportAssessed = false,
-    [property: JsonProperty("aimIdentifier", Order = 37)] string? AimIdentifier = null,
-    [property: JsonProperty("aimIdentifierUncertain", Order = 38)] bool AimIdentifierUncertain = false,
-    [property: JsonProperty("endOfLineSequence", Order = 39)] string? EndOfLineSequence = null,
-    [property: JsonProperty("additionalPrefix", Order = 40)] string AdditionalPrefix = "",
-    [property: JsonProperty("additionalCode", Order = 41)] string AdditionalCode = "",
-    [property: JsonProperty("additionalSuffix", Order = 42)] string AdditionalSuffix = "",
-    [property: JsonProperty("keyboardScript", Order = 43)] string KeyboardScript = "",
-    [property: JsonProperty("platform", Order = 44)] SupportedPlatform Platform = SupportedPlatform.Windows,
-    [property: JsonProperty("deadKeys", Order = 45)] bool DeadKeys = false,
-    [property: JsonProperty("characterMappings", Order = 46)] IList<CharacterMapping>? CharacterMappings = null,
-    [property: JsonProperty("deadKeyMappings", Order = 47)] IList<DeadKeyMapping>? DeadKeyMappings = null,
-    [property: JsonProperty("ambiguities", Order = 48)] IList<Ambiguity>? Ambiguities = null,
-    [property: JsonProperty("unrecognisedCharacters", Order = 49)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
-    [property: JsonProperty("ligatureMappings", Order = 50)] IList<LigatureMapping>? LigatureMappings = null,
-    [property: JsonProperty("calibrationAssumption", Order = 51)] Assumption Assumption = Assumption.Agnostic)
+    [property: JsonProperty("canReadNonInvariantsReliably", Order = 16)] bool? CanReadNonInvariantsReliably = true,
+    [property: JsonProperty("canReadIsoIec15434EnvelopeReliably", Order = 17)] bool? CanReadIsoIec15434EnvelopeReliably = null,
+    [property: JsonProperty("canReadEdiReliably", Order = 18)] bool? CanReadEdiReliably = true,
+    [property: JsonProperty("canReadGroupSeparatorsReliably", Order = 19)] bool? CanReadGroupSeparatorsReliably = false,
+    [property: JsonProperty("canReadRecordSeparatorsReliably", Order = 20)] bool? CanReadRecordSeparatorsReliably = false,
+    [property: JsonProperty("canReadFileSeparatorsReliably", Order = 21)] bool? CanReadFileSeparatorsReliably = null,
+    [property: JsonProperty("canReadUnitSeparatorsReliably", Order = 22)] bool? CanReadUnitSeparatorsReliably = null,
+    [property: JsonProperty("canReadEotCharactersReliably", Order = 23)] bool? CanReadEotCharactersReliably = null,
+    [property: JsonProperty("ambiguousInvariantForEotSeparator", Order = 24)] bool AmbiguousInvariantForEotSeparator = false,
+    [property: JsonProperty("canReadAimIdentifiersWithoutMapping", Order = 25)] bool? CanReadAimIdentifiersWithoutMapping = true,
+    [property: JsonProperty("canReadAimIdentifiersReliably", Order = 25)] bool? CanReadAimIdentifiersReliably = true,
+    [property: JsonProperty("scannerTransmitsAimIdentifiers", Order = 26)] bool? ScannerTransmitsAimIdentifiers = true,
+    [property: JsonProperty("scannerTransmitsEndOfLineSequence", Order = 27)] bool? ScannerTransmitsEndOfLineSequence = true,
+    [property: JsonProperty("scannerTransmitsAdditionalPrefix", Order = 28)] bool? ScannerTransmitsAdditionalPrefix = false,
+    [property: JsonProperty("scannerTransmitsAdditionalCode", Order = 29)] bool? ScannerTransmitsAdditionalCode = false,
+    [property: JsonProperty("scannerTransmitsAdditionalSuffix", Order = 30)] bool? ScannerTransmitsAdditionalSuffix = false,
+    [property: JsonProperty("scannerMayConvertToUpperCase", Order = 31)] bool? ScannerMayConvertToUpperCase = null,
+    [property: JsonProperty("scannerMayConvertToLowerCase", Order = 32)] bool? ScannerMayConvertToLowerCase = null,
+    [property: JsonProperty("keyboardScriptDoesNotSupportCase", Order = 33)] bool? KeyboardScriptDoesNotSupportCase = null,
+    [property: JsonProperty("capsLockIndicator", Order = 34)] bool CapsLockIndicator = false,
+    [property: JsonProperty("scannerKeyboardPerformance", Order = 35)] ScannerKeyboardPerformance ScannerKeyboardPerformance = ScannerKeyboardPerformance.High,
+    [property: JsonProperty("scannerCharactersPerSecond", Order = 36)] int ScannerCharactersPerSecond = 0,
+    [property: JsonProperty("formatSupportAssessed", Order = 37)] bool FormatSupportAssessed = false,
+    [property: JsonProperty("aimIdentifier", Order = 38)] string? AimIdentifier = null,
+    [property: JsonProperty("aimIdentifierUncertain", Order = 39)] bool? AimIdentifierUncertain = false,
+    [property: JsonProperty("endOfLineSequence", Order = 40)] string EndOfLineSequence = "",
+    [property: JsonProperty("additionalPrefix", Order = 41)] string AdditionalPrefix = "",
+    [property: JsonProperty("additionalCode", Order = 42)] string AdditionalCode = "",
+    [property: JsonProperty("additionalSuffix", Order = 43)] string AdditionalSuffix = "",
+    [property: JsonProperty("keyboardScript", Order = 44)] string KeyboardScript = "",
+    [property: JsonProperty("platform", Order = 45)] SupportedPlatform Platform = SupportedPlatform.Windows,
+    [property: JsonProperty("deadKeys", Order = 46)] bool DeadKeys = false,
+    [property: JsonProperty("characterMappings", Order = 47)] IList<CharacterMapping>? CharacterMappings = null,
+    [property: JsonProperty("deadKeyMappings", Order = 48)] IList<DeadKeyMapping>? DeadKeyMappings = null,
+    [property: JsonProperty("ambiguities", Order = 49)] IList<Ambiguity>? Ambiguities = null,
+    [property: JsonProperty("unrecognisedCharacters", Order = 50)] IList<UnrecognisedCharacter>? UnrecognisedCharacters = null,
+    [property: JsonProperty("ligatureMappings", Order = 51)] IList<LigatureMapping>? LigatureMappings = null,
+    [property: JsonProperty("calibrationAssumption", Order = 52)] Assumption Assumption = Assumption.Agnostic)
 : BaseRecord {
     /// <summary>
     ///   Indicates whether the keyboard Caps Lock key is on or off.
@@ -381,10 +387,10 @@ public sealed record SystemCapabilities(
                     KeyboardScript = ParameterValue(info);
                     break;
                 case InformationType.GroupSeparatorSupported:
-                    CanReadGroupSeparatorReliably = true;
+                    CanReadGroupSeparatorsReliably = true;
                     break;
                 case InformationType.RecordSeparatorSupported:
-                    CanReadRecordSeparatorReliably = true;
+                    CanReadRecordSeparatorsReliably = true;
                     break;
                 case InformationType.FileSeparatorSupported:
                     CanReadFileSeparatorsReliably = true;
@@ -392,8 +398,12 @@ public sealed record SystemCapabilities(
                 case InformationType.UnitSeparatorSupported:
                     CanReadUnitSeparatorsReliably = true;
                     break;
+                case InformationType.InvariantAmbiguityForEotCharacter:
+                    AmbiguousInvariantForEotSeparator = true;
+                    CanReadEotCharactersReliably = false;
+                    break;
                 case InformationType.EndOfTransmissionSupported:
-                    CanReadEotReliably = true;
+                    CanReadEotCharactersReliably = true;
                     break;
                 case InformationType.ScannerMayCompensateForCapsLock:
                     ScannerMayCompensateForCapsLock = true;
@@ -422,9 +432,9 @@ public sealed record SystemCapabilities(
                 case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 case InformationType.IsoIec15434SyntaxNotRecognised:
                 case InformationType.IsoIec15434EdiNotReliablyReadable:
-                case InformationType.IsoIec15434RecordSeparatorMapping:
                 case InformationType.AimNotTransmitted:
                 case InformationType.AimNotRecognised:
+                case InformationType.AimNotReadReliably:
                 case InformationType.PrefixTransmitted:
                 case InformationType.CodeTransmitted:
                 case InformationType.SuffixTransmitted:
@@ -433,9 +443,8 @@ public sealed record SystemCapabilities(
                 case InformationType.MultipleKeysMultipleNonInvariantCharacters:
                 case InformationType.MultipleKeysAimFlagCharacter:
                 case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-                case InformationType.ControlCharacterMappingNotReliablyReadable:
-                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.ControlCharacterMappingNonInvariants:
                 case InformationType.NonInvariantCharacterSequence:
                 case InformationType.NonCorrespondingKeyboardLayouts:
                 case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
@@ -443,7 +452,7 @@ public sealed record SystemCapabilities(
                 case InformationType.NonCorrespondingKeyboardLayoutsFileSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
-                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
+                case InformationType.NonCorrespondingKeyboardLayoutsEotCharacter:
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
@@ -468,12 +477,18 @@ public sealed record SystemCapabilities(
                 case InformationType.MultipleSequences:
                 case InformationType.MultipleSequencesForScannerDeadKey:
                 case InformationType.IncompatibleScannerDeadKey:
-                case InformationType.GroupSeparatorMapping:
                 case InformationType.LigatureCharacters:
                 case InformationType.NoDelimiters:
                 case InformationType.NoTemporaryDelimiterCandidate:
                 case InformationType.CalibrationFailed:
                 case InformationType.CalibrationFailedUnexpectedly:
+                case InformationType.RecordSeparatorNotReliablyReadableInvariant:
+                case InformationType.GroupSeparatorNotReliablyReadableInvariant:
+                case InformationType.EotCharacterNotReliablyReadableInvariant:
+                case InformationType.FileSeparatorNotReliablyReadableInvariant:
+                case InformationType.FileSeparatorNotReliablyReadableNonInvariant:
+                case InformationType.UnitSeparatorNotReliablyReadableInvariant:
+                case InformationType.UnitSeparatorNotReliablyReadableNonInvariant:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
@@ -483,6 +498,7 @@ public sealed record SystemCapabilities(
             }
         }
 
+        // Process warnings
         foreach (var info in token.Warnings) {
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (info.InformationType) {
@@ -491,44 +507,101 @@ public sealed record SystemCapabilities(
                 case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 case InformationType.MultipleKeysMultipleNonInvariantCharacters:
                 case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.ControlCharacterMappingNonInvariants:
                 case InformationType.NonInvariantCharacterSequence:
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
                     KeyboardLayoutsCorrespond = false;
-                    CanReadAdditionalAsciiCharactersReliably = false;
+                    CanReadNonInvariantsReliably = false;
+                    break;
+                case InformationType.RecordSeparatorNotReadable:
+                    CanReadRecordSeparatorsReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = false;
+                    break;
+                case InformationType.FileSeparatorNotReadable:
+                    CanReadFileSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.UnitSeparatorNotReadable:
+                    CanReadUnitSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.EotCharacterNotReadable:
+                    CanReadEotCharactersReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = false;
+                    break;
+                case InformationType.RecordSeparatorNotReliablyReadableInvariant:
+                    CanReadInvariantsReliably = false;
+                    CanReadRecordSeparatorsReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = false;
+                    break;
+                case InformationType.FileSeparatorNotReliablyReadableInvariant:
+                    CanReadFileSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.UnitSeparatorNotReliablyReadableInvariant:
+                    CanReadUnitSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.EotCharacterNotReliablyReadableInvariant:
+                    CanReadInvariantsReliably = false;
+                    CanReadEotCharactersReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = false;
+                    break;
+                case InformationType.FileSeparatorNotReliablyReadableNonInvariant:
+                    CanReadNonInvariantsReliably = false;
+                    CanReadFileSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
+                    break;
+                case InformationType.UnitSeparatorNotReliablyReadableNonInvariant:
+                    CanReadNonInvariantsReliably = false;
+                    CanReadUnitSeparatorsReliably = false;
+                    CanReadEdiReliably = false;
                     break;
                 case InformationType.IsoIec15434SyntaxNotRecognised:
-                case InformationType.IsoIec15434RecordSeparatorMapping:
-                    CanReadFormat05AndFormat06Reliably = false;
+                case InformationType.RecordSeparatorMappingNotReliablyReadable:
+                    CanReadIsoIec15434EnvelopeReliably = false;
                     break;
                 case InformationType.IsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;
                     break;
-                case InformationType.IsoIec15434FsNotReliablyReadable:
+                case InformationType.FileSeparatorNotReliablyReadable:
                     CanReadEdiReliably = false;
                     CanReadFileSeparatorsReliably = false;
                     break;
-                case InformationType.IsoIec15434UsNotReliablyReadable:
+                case InformationType.UnitSeparatorNotReliablyReadable:
                     CanReadEdiReliably = false;
                     CanReadUnitSeparatorsReliably = false;
                     break;
-                case InformationType.IsoIec15434EotNotReliablyReadable:
-                    CanReadEotReliably = false;
+                case InformationType.EotNotReliablyReadable:
+                    CanReadEotCharactersReliably = false;
                     break;
-                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;
-                    //CanReadAscii28Ascii31Reliably = false;
-                    CanReadFileSeparatorsReliably = CanReadFileSeparatorsReliably ?? false;
-                    CanReadUnitSeparatorsReliably = CanReadUnitSeparatorsReliably ?? false;
+                    CanReadFileSeparatorsReliably = false;
                     break;
-                case InformationType.ControlCharacterMappingNotReliablyReadable:
-                    //CanReadAscii28Ascii31Reliably = false;
+                case InformationType.UnitSeparatorMappingIsoIec15434EdiNotReliablyReadable:
+                    CanReadEdiReliably = false;
+                    CanReadUnitSeparatorsReliably = false;
+                    break;
+                case InformationType.FileSeparatorMappingNotReliablyReadable:
+                    CanReadFileSeparatorsReliably = false;
+                    break;
+                case InformationType.UnitSeparatorMappingNotReliablyReadable:
+                    CanReadUnitSeparatorsReliably = false;
+                    break;
+                case InformationType.EotCharacterMappingIsoIec15434EdiNotReliablyReadable:
+                    CanReadEotCharactersReliably = false;
                     break;
                 case InformationType.AimNotTransmitted:
                     ScannerTransmitsAimIdentifiers = false;
                     break;
                 case InformationType.AimNotRecognised:
                 case InformationType.MultipleKeysAimFlagCharacter:
+                    KeyboardLayoutsCorrespondForAimIdentifier = false;
+                    KeyboardLayoutsCorrespond = false;
+                    CanReadAimIdentifiersWithoutMapping = false;
+                    break;
+                case InformationType.AimNotReadReliably:
                     KeyboardLayoutsCorrespondForAimIdentifier = false;
                     KeyboardLayoutsCorrespond = false;
                     CanReadAimIdentifiersReliably = false;
@@ -561,25 +634,27 @@ public sealed record SystemCapabilities(
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsFileSeparator:
-                    KeyboardLayoutsCanRepresentFileSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
+                    CanReadEdiReliably = null;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
-                    KeyboardLayoutsCanRepresentGroupSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
-                    KeyboardLayoutsCanRepresentRecordSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
-                    KeyboardLayoutsCanRepresentUnitSeparatorWithoutMapping = false;
+                    KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
+                    CanReadEdiReliably = null;
                     break;
-                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
-                    KeyboardLayoutsCanRepresentEotWithoutMapping = false;
+                case InformationType.NonCorrespondingKeyboardLayoutsEotCharacter:
+                    KeyboardLayoutsCanRepresentEotCharactersWithoutMapping = false;
                     KeyboardLayoutsCorrespond = false;
                     break;
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
@@ -630,12 +705,12 @@ public sealed record SystemCapabilities(
                 case InformationType.MultipleSequences:
                 case InformationType.MultipleSequencesForScannerDeadKey:
                 case InformationType.IncompatibleScannerDeadKey:
-                case InformationType.GroupSeparatorMapping:
                 case InformationType.LigatureCharacters:
                 case InformationType.NoDelimiters:
                 case InformationType.NoTemporaryDelimiterCandidate:
                 case InformationType.CalibrationFailed:
                 case InformationType.CalibrationFailedUnexpectedly:
+                case InformationType.GroupSeparatorNotReliablyReadableInvariant:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(
@@ -645,32 +720,21 @@ public sealed record SystemCapabilities(
             }
         }
 
+        var capabilitiesUnknown = false;
+
+        // Process errors
         foreach (var informationType in token.Errors.Select(info => info.InformationType)) {
 #pragma warning disable S907
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (informationType) {
-                // We got a partial result, so retain all the knowledge we have gained.
+                // We received partial data.  We cannot determine the system capabilities.
                 case InformationType.PartialCalibrationDataReported:
                     CompleteDataReported = false;
-                    KeyboardLayoutsCorrespond = null;
-                    KeyboardLayoutsCorrespondForInvariants = null;
-                    KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
-                    CanReadInvariantsReliably = null;
-                    CanReadFormat05AndFormat06Reliably = null;
-                    CanReadEdiReliably = null;
-                    //CanReadAscii28Ascii31Reliably = null;
-                    CanReadAdditionalAsciiCharactersReliably = null;
+                    capabilitiesUnknown = true;
                     break;
                 case InformationType.IncorrectCalibrationDataReported:
                     CorrectSequenceReported = false;
-                    KeyboardLayoutsCorrespond = null;
-                    KeyboardLayoutsCorrespondForInvariants = null;
-                    KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
-                    CanReadInvariantsReliably = null;
-                    CanReadFormat05AndFormat06Reliably = null;
-                    CanReadEdiReliably = null;
-                    //CanReadAscii28Ascii31Reliably = null;
-                    CanReadAdditionalAsciiCharactersReliably = null;
+                    capabilitiesUnknown = true;
                     break;
                 case InformationType.NoCalibrationDataReported:
                     DataReported = false;
@@ -683,10 +747,10 @@ public sealed record SystemCapabilities(
                 case InformationType.NoTemporaryDelimiterCandidate:
                 case InformationType.NoDelimiters:
                     CompleteDataReported = false;
+                    capabilitiesUnknown = true;
                     goto case InformationType.CalibrationFailed;
                 case InformationType.CalibrationFailed:
                     TestsSucceeded = false;
-                    CorrectSequenceReported = true;
                     break;
 
                 // The following all indicate that reliable scanning is not possible, even with mapping
@@ -700,11 +764,14 @@ public sealed record SystemCapabilities(
                 case InformationType.MultipleSequences:
                 case InformationType.MultipleSequencesForScannerDeadKey:
                 case InformationType.IncompatibleScannerDeadKey:
-                case InformationType.GroupSeparatorMapping:
                 case InformationType.LigatureCharacters:
                     KeyboardLayoutsCorrespond = false;
                     KeyboardLayoutsCorrespondForInvariants = false;
                     CanReadInvariantsReliably = false;
+                    break;
+                case InformationType.GroupSeparatorNotReliablyReadableInvariant:
+                    CanReadInvariantsReliably = false;
+                    CanReadGroupSeparatorsReliably = false;
                     break;
                 case InformationType.None:
                 case InformationType.AimSupported:
@@ -724,9 +791,9 @@ public sealed record SystemCapabilities(
                 case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 case InformationType.IsoIec15434SyntaxNotRecognised:
                 case InformationType.IsoIec15434EdiNotReliablyReadable:
-                case InformationType.IsoIec15434RecordSeparatorMapping:
                 case InformationType.AimNotTransmitted:
                 case InformationType.AimNotRecognised:
+                case InformationType.AimNotReadReliably:
                 case InformationType.PrefixTransmitted:
                 case InformationType.CodeTransmitted:
                 case InformationType.SuffixTransmitted:
@@ -735,9 +802,11 @@ public sealed record SystemCapabilities(
                 case InformationType.MultipleKeysMultipleNonInvariantCharacters:
                 case InformationType.MultipleKeysAimFlagCharacter:
                 case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-                case InformationType.ControlCharacterMappingNotReliablyReadable:
-                case InformationType.ControlCharacterMappingAdditionalDataElements:
+                case InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable:
+                case InformationType.FileSeparatorMappingNotReliablyReadable:
+                case InformationType.UnitSeparatorMappingNotReliablyReadable:
+                case InformationType.EotCharacterNotReliablyReadableInvariant:
+                case InformationType.ControlCharacterMappingNonInvariants:
                 case InformationType.NonInvariantCharacterSequence:
                 case InformationType.NonCorrespondingKeyboardLayouts:
                 case InformationType.NonCorrespondingKeyboardLayoutsForInvariants:
@@ -746,7 +815,7 @@ public sealed record SystemCapabilities(
                 case InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator:
                 case InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator:
-                case InformationType.NonCorrespondingKeyboardLayoutsEoT:
+                case InformationType.NonCorrespondingKeyboardLayoutsEotCharacter:
                 case InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier:
                 case InformationType.NonDeterminableKeyboardLayoutCorrespondence:
                 case InformationType.CapsLockOn:
@@ -763,6 +832,42 @@ public sealed record SystemCapabilities(
                         Resources.CalibrationIncorrectErrorInformationType);
             }
 #pragma warning restore S907
+        }
+
+        if (capabilitiesUnknown) {
+            KeyboardLayoutsCorrespond = null;
+            KeyboardLayoutsCorrespondForInvariants = null;
+            KeyboardLayoutsCorrespondForNonInvariantCharacters = null;
+            KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping = null;
+            KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping = null;
+            KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping = null;
+            KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping = null;
+            KeyboardLayoutsCanRepresentEotCharactersWithoutMapping = null;
+            KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = null;
+            KeyboardLayoutsCorrespondForAimIdentifier = null;
+            CanReadInvariantsReliably = null;
+            CanReadNonInvariantsReliably = null;
+            CanReadIsoIec15434EnvelopeReliably = null;
+            CanReadEdiReliably = null;
+            CanReadGroupSeparatorsReliably = null;
+            CanReadRecordSeparatorsReliably = null;
+            CanReadFileSeparatorsReliably = null;
+            CanReadUnitSeparatorsReliably = null;
+            CanReadEotCharactersReliably = null;
+            CanReadAimIdentifiersWithoutMapping = null;
+            CanReadAimIdentifiersReliably = null;
+            if (ScannerTransmitsAimIdentifiers ?? true) ScannerTransmitsAimIdentifiers = null;
+            if (ScannerTransmitsEndOfLineSequence ?? true) ScannerTransmitsEndOfLineSequence = null;
+            if (!(ScannerTransmitsAdditionalPrefix ?? false)) ScannerTransmitsAdditionalPrefix = null;
+            if (!(ScannerTransmitsAdditionalCode ?? false)) ScannerTransmitsAdditionalCode = null;
+            if (!(ScannerTransmitsAdditionalSuffix ?? false)) ScannerTransmitsAdditionalSuffix = null;
+            if (!AimIdentifierUncertain ?? false) AimIdentifierUncertain = null;
+            DeadKeys = false;
+            CharacterMappings = null;
+            DeadKeyMappings = null;
+            Ambiguities = null;
+            UnrecognisedCharacters = null;
+            LigatureMappings = null;
         }
 
         if (capsLock.GetValueOrDefault()) {

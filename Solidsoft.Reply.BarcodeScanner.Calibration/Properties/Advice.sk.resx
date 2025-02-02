@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Skúste to znova a uistite sa, že skenujete správny čiarový kód (čiarové kódy).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Váš systém nemusí správne čítať znaky oddeľovača súborov (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Váš systém nedokáže čítať znaky oddeľovača súborov (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Váš systém nemusí správne čítať znaky oddeľovača jednotiek (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Váš systém nemusí správne čítať znaky oddeľovača jednotiek (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Váš systém nemusí správne čítať znaky konca prenosu (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Váš systém nedokáže čítať znaky konca prenosu (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test zlyhal.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Niektoré typy čiarových kódov používajú tento znak na označenie konca údajov čiarového kódu. Váš softvér nemusí správne prečítať akúkoľvek príponu pridanú čítačkou čiarových kódov.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Niektoré typy čiarových kódov používajú tento znak na označenie konca údajov čiarového kódu. Váš softvér nemusí správne prečítať akúkoľvek príponu pridanú čítačkou čiarových kódov.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Mohli ste naskenovať nesprávny čiarový kód alebo zadať nesprávne údaje pomocou klávesnice. Váš čítač čiarových kódov alebo systém môže byť pomalý, alebo sa mohol vyskytnúť nejaký neočakávaný alebo prerušovaný problém.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Chyba pri riešení skriptov klávesnice: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Váš systém nedokáže čítať znaky oddeľovača súborov (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Váš systém nemusí správne čítať znaky oddeľovača jednotiek (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Váš systém nemusí správne čítať znaky oddeľovača jednotiek (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Tieto znaky nie sú v čiarových kódoch široko používané.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Ak máte problémy pri skenovaní čiarových kódov, skúste nakonfigurovať svoju čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Zadajte údaje ručne do svojho overovacieho softvéru na overenie jedinečných identifikátorov PPN.;;Ak je to potrebné, nakonfigurujte svoj čítačku čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Ak pri skenovaní nemeckých PPN čiarových kódov narazíte na problémy, zadajte údaje ručne do svojho overovacieho softvéru.;;Ak je to potrebné, nakonfigurujte svoj čítačku čiarových kódov tak, aby emuloval numerickú klávesnicu.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Váš systém nemusí správne čítať znaky konca prenosu (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Váš systém nemusí správne čítať znaky konca prenosu (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Niektoré typy čiarových kódov používajú tento znak na označenie konca údajov čiarového kódu. Váš softvér nemusí správne prečítať akúkoľvek príponu pridanú čítačkou čiarových kódov.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Niektoré typy čiarových kódov používajú tento znak na označenie konca údajov čiarového kódu. Váš softvér nemusí správne prečítať akúkoľvek príponu pridanú čítačkou čiarových kódov.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Uistite sa, že rozloženia vašich klávesníc zodpovedajú.;;Ak je to potrebné, nakonfigurujte vašu čítačku čiarových kódov tak, aby emulovala numerickú klávesnicu a prenášala identifikátory AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Váš systém nedokáže spoľahlivo prečítať identifikátor typu čiarového kódu.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikátory AIM reprezentujú typ čiarového kódu. Váš softvér ich môže využiť na elimináciu zbytočných upozornení.</value>
   </data>
 </root>

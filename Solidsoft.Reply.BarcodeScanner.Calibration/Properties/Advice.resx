@@ -522,7 +522,7 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_115" xml:space="preserve">
-    <value>However, it cannot read barcodes reliably if the contain data formatted according to ISO/IEC 15434.</value>
+    <value>However, it cannot read barcodes reliably if they contain data formatted according to ISO/IEC 15434.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_200" xml:space="preserve">
@@ -675,50 +675,74 @@
   </data>
   <data name="Advice_277" xml:space="preserve">
     <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
-  </data>
-  <data name="Adv ice_278" xml:space="preserve">
-    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Advice_279" xml:space="preserve">
     <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Condition_277" xml:space="preserve">
     <value>Your system cannot read File Separator (ASCII 28) characters.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Condition_278" xml:space="preserve">
     <value>Your system may not read Unit Separator (ASCII 31) characters correctly.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Condition_279" xml:space="preserve">
     <value>Your system cannot read Unit Separator (ASCII 31) characters.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Your system may not read End-of-Transmission (ASCII 04) characters correctly.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Your system cannot read End-of-Transmission (ASCII 04) characters.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Description_277" xml:space="preserve">
     <value>These characters are not used widely in barcodes.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Description_278" xml:space="preserve">
     <value>These characters are not used widely in barcodes.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Description_279" xml:space="preserve">
     <value>These characters are not used widely in barcodes.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
+    <comment>Medium</comment>
   </data>
   <data name="Advice_278" xml:space="preserve">
     <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>If you experience difficulty when scanning barcodes, try configuring your barcode scanner to emulate a numeric keypad.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Your system may not read End-of-Transmission (ASCII 04) characters correctly.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Your system cannot read End-of-Transmission (ASCII 04) characters.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Some barcode types use this character to mark the end of barcode data. Your software may not correctly read any suffix added by the barcode scanner.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Make sure your keyboard layouts match.;;If necessary, configure your barcode scanner to emulate a numeric keypad and transmit AIM identifiers.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Your system cannot reliably read the barcode type identifier.</value>
+    <comment>Medium</comment>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM identifiers represent the barcode type. Your software may use them to eliminate unnecessary alerts.</value>
+    <comment>Medium</comment>
   </data>
 </root>

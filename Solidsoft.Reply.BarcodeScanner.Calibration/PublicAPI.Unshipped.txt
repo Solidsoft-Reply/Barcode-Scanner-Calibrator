@@ -25,11 +25,14 @@ Solidsoft.Reply.BarcodeScanner.Calibration.AdviceItem.ToJson(Newtonsoft.Json.For
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAim = 235 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAimNoCalibration = 231 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAimReliably = 236 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAnsiMh1082Reliably = 245 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
-Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAscii28Ascii31Characters = 276 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAscii04Characters = 281 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAscii28Characters = 277 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadAscii31Characters = 279 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadBarcodesReliably = 320 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadEdiCharacters = 275 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
-Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadNonInvariantCharacters = 265 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CannotReadNonInvariantCharactersReliably = 265 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CapsLockCompensation = 205 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CapsLockOn = 325 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.CapsLockOnConvertsToLowerCase = 328 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
@@ -49,6 +52,9 @@ Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.LayoutsDoNotMatch = 307 ->
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.LayoutsDoNotMatchNoCalibration = 308 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.LayoutsDoNotMatchNoFormat0506 = 315 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadAim = 230 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadAscii04Characters = 280 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadAscii28Characters = 276 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
+Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadAscii31Characters = 278 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadEdiCharactersNoCalibration = 271 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadEdiCharactersReliably = 270 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
 Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType.MayNotReadFormat0506 = 240 -> Solidsoft.Reply.BarcodeScanner.Calibration.AdviceType
@@ -227,36 +233,45 @@ Solidsoft.Reply.BarcodeScanner.Calibration.InformationLevel.Information = 0 -> S
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationLevel.Warning = 1 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationLevel
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimMayBeTransmitted = 132 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimNotRecognised = 221 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimNotTransmitted = 220 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimNotReadReliably = 232 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimNotRecognised = 231 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimNotTransmitted = 230 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimSupported = 130 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.AimTransmitted = 131 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CalibrationFailed = 390 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CalibrationFailedUnexpectedly = 391 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CapsLockOn = 270 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CapsLockProbablyOn = 271 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CodeTransmitted = 231 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ControlCharacterMappingAdditionalDataElements = 256 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable = 254 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ControlCharacterMappingNotReliablyReadable = 257 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CapsLockOn = 280 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CapsLockProbablyOn = 281 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.CodeTransmitted = 241 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ControlCharacterMappingNonInvariants = 258 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.DeadKeyMultiMapping = 361 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.DeadKeyMultiMappingNonInvariantCharacters = 253 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.DeadKeyMultipleKeys = 362 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EndOfLineNotTransmitted = 240 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EndOfLineNotTransmitted = 245 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EndOfLineTransmitted = 150 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EndOfTransmissionSupported = 164 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EotCharacterMappingIsoIec15434EdiNotReliablyReadable = 256 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EotCharacterMappingNotReliablyReadable = 261 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EotCharacterNotReadable = 224 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EotCharacterNotReliablyReadableInvariant = 226 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.EotNotReliablyReadable = 225 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable = 254 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorMappingNotReliablyReadable = 259 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorNotReadable = 216 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorNotReliablyReadable = 217 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorNotReliablyReadableInvariant = 218 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorNotReliablyReadableNonInvariant = 219 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.FileSeparatorSupported = 162 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.GroupSeparatorMapping = 366 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.GroupSeparatorNotReadable = 366 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.GroupSeparatorNotReliablyReadableInvariant = 367 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.GroupSeparatorSupported = 160 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IncompatibleScannerDeadKey = 365 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IncorrectCalibrationDataReported = 304 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.InvariantAmbiguityForEotCharacter = 165 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434EdiNotReliablyReadable = 211 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434EotNotReliablyReadable = 215 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434FsNotReliablyReadable = 213 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434RecordSeparatorMapping = 212 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434SyntaxNotRecognised = 210 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.IsoIec15434UsNotReliablyReadable = 214 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.KeyboardScript = 180 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.LigatureCharacters = 367 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.LigatureCharacters = 368 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.MultipleKeys = 360 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.MultipleKeysAimFlagCharacter = 252 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.MultipleKeysMultipleNonInvariantCharacters = 251 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
@@ -267,36 +282,47 @@ Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NoCalibrationDataRepo
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NoCalibrationTokenProvided = 305 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NoDelimiters = 370 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NoGroupSeparatorMapping = 320 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayouts = 260 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsEdiSeparators = 265 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier = 266 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForInvariants = 261 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters = 262 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator = 263 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator = 264 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonDeterminableKeyboardLayoutCorrespondence = 267 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayouts = 270 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsEotCharacter = 277 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsFileSeparator = 273 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForAimIdentifier = 278 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForInvariants = 271 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsForNonInvariantCharacters = 272 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator = 274 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator = 275 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator = 276 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonDeterminableKeyboardLayoutCorrespondence = 279 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.None = 0 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonInvariantCharacterSequence = 255 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NonInvariantCharacterSequence = 257 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.NoTemporaryDelimiterCandidate = 371 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.PartialCalibrationDataReported = 303 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.Platform = 190 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.PrefixTransmitted = 230 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.PrefixTransmitted = 240 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.PreProcessorError = 399 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.PreProcessorWarning = 299 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.RecordSeparatorMappingNotReliablyReadable = 262 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.RecordSeparatorNotReadable = 213 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.RecordSeparatorNotReliablyReadableInvariant = 214 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.RecordSeparatorSupported = 161 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayCompensateForCapsLock = 170 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayConvertToLowerCase = 273 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayConvertToUpperCase = 272 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayInvertCase = 274 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayConvertToLowerCase = 283 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayConvertToUpperCase = 282 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.ScannerMayInvertCase = 284 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SomeDeadKeyCombinationsUnrecognisedForInvariants = 312 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SomeInvariantCharactersUnrecognised = 311 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SomeNonInvariantCharacterCombinationsUnrecognised = 202 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SomeNonInvariantCharactersUnrecognised = 201 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SomeNonInvariantCharactersUnreported = 200 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SubOptimalScannerKeyboardPerformance = 280 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
-Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SuffixTransmitted = 232 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SubOptimalScannerKeyboardPerformance = 290 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.SuffixTransmitted = 242 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.TooManyCharactersDetected = 302 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UndetectedInvariantCharacters = 310 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorMappingIsoIec15434EdiNotReliablyReadable = 255 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorMappingNotReliablyReadable = 260 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorNotReadable = 220 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorNotReliablyReadable = 221 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorNotReliablyReadableInvariant = 222 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
+Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorNotReliablyReadableNonInvariant = 223 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnitSeparatorSupported = 163 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.InformationType.UnrecognisedData = 301 -> Solidsoft.Reply.BarcodeScanner.Calibration.InformationType
 Solidsoft.Reply.BarcodeScanner.Calibration.LigatureMapping
@@ -365,30 +391,34 @@ Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AdditionalSuffix.g
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AdditionalSuffix.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AimIdentifier.get -> string?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AimIdentifier.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AimIdentifierUncertain.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AimIdentifierUncertain.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AimIdentifierUncertain.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.Ambiguities.get -> System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.Ambiguity!>?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.Ambiguities.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AmbiguousInvariantForEotSeparator.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.AmbiguousInvariantForEotSeparator.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.Assumption.get -> Solidsoft.Reply.BarcodeScanner.Calibration.Assumption
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.Assumption.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAdditionalAsciiCharactersReliably.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAdditionalAsciiCharactersReliably.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAimIdentifiersReliably.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAimIdentifiersReliably.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAscii28Ascii31Reliably.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAscii28Ascii31Reliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAimIdentifiersWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadAimIdentifiersWithoutMapping.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadEdiReliably.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadEdiReliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadEotCharactersReliably.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadEotCharactersReliably.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadFileSeparatorsReliably.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadFileSeparatorsReliably.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadFormat05AndFormat06Reliably.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadFormat05AndFormat06Reliably.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadGroupSeparatorReliably.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadGroupSeparatorReliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadGroupSeparatorsReliably.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadGroupSeparatorsReliably.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadInvariantsReliably.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadInvariantsReliably.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadRecordSeparatorReliably.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadRecordSeparatorReliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadIsoIec15434EnvelopeReliably.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadIsoIec15434EnvelopeReliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadNonInvariantsReliably.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadNonInvariantsReliably.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadRecordSeparatorsReliably.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadRecordSeparatorsReliably.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadUnitSeparatorsReliably.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CanReadUnitSeparatorsReliably.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.CapsLock.get -> bool
@@ -407,16 +437,22 @@ Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.DeadKeyMappings.ge
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.DeadKeyMappings.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.DeadKeys.get -> bool
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.DeadKeys.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.EndOfLineSequence.get -> string?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.EndOfLineSequence.get -> string!
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.EndOfLineSequence.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.FormatSupportAssessed.get -> bool
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.FormatSupportAssessed.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparators.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparators.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparator.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparator.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparator.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparator.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEotCharactersWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentEotCharactersWithoutMapping.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping.get -> bool?
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCorrespond.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCorrespond.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.KeyboardLayoutsCorrespondForAimIdentifier.get -> bool?
@@ -443,17 +479,17 @@ Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerMayConvertT
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerMayConvertToUpperCase.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerMayConvertToUpperCase.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerMayInvertCase.get -> bool?
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalCode.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalCode.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalCode.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalPrefix.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalPrefix.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalPrefix.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalSuffix.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalSuffix.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAdditionalSuffix.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAimIdentifiers.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsAimIdentifiers.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsEndOfLineSequence.get -> bool?
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.ScannerTransmitsEndOfLineSequence.init -> void
-Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.SystemCapabilities(bool UnexpectedError = false, bool TestsSucceeded = true, bool DataReported = true, bool CorrectSequenceReported = true, bool CompleteDataReported = true, bool? KeyboardLayoutsCorrespond = true, bool? KeyboardLayoutsCorrespondForInvariants = true, bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true, bool? KeyboardLayoutsCanRepresentGroupSeparator = true, bool? KeyboardLayoutsCanRepresentRecordSeparator = true, bool? KeyboardLayoutsCanRepresentEdiSeparators = true, bool? KeyboardLayoutsCorrespondForAimIdentifier = true, bool? CanReadInvariantsReliably = true, bool? CanReadFormat05AndFormat06Reliably = true, bool? CanReadEdiReliably = true, bool? CanReadAscii28Ascii31Reliably = true, bool? CanReadGroupSeparatorReliably = true, bool? CanReadRecordSeparatorReliably = true, bool? CanReadFileSeparatorsReliably = true, bool? CanReadUnitSeparatorsReliably = true, bool? CanReadAimIdentifiersReliably = true, bool? CanReadAdditionalAsciiCharactersReliably = true, bool? ScannerTransmitsAimIdentifiers = true, bool? ScannerTransmitsEndOfLineSequence = true, bool ScannerTransmitsAdditionalPrefix = false, bool ScannerTransmitsAdditionalCode = false, bool ScannerTransmitsAdditionalSuffix = false, bool? ScannerMayConvertToUpperCase = null, bool? ScannerMayConvertToLowerCase = null, bool? KeyboardScriptDoesNotSupportCase = null, bool CapsLockIndicator = false, Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance ScannerKeyboardPerformance = Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance.High, int ScannerCharactersPerSecond = 0, bool FormatSupportAssessed = false, string? AimIdentifier = null, bool AimIdentifierUncertain = false, string? EndOfLineSequence = null, string! AdditionalPrefix = "", string! AdditionalCode = "", string! AdditionalSuffix = "", string! KeyboardScript = "", Solidsoft.Reply.BarcodeScanner.Calibration.SupportedPlatform Platform = Solidsoft.Reply.BarcodeScanner.Calibration.SupportedPlatform.Windows, bool DeadKeys = false, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.CharacterMapping!>? CharacterMappings = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.DeadKeyMapping!>? DeadKeyMappings = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.Ambiguity!>? Ambiguities = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.UnrecognisedCharacter!>? UnrecognisedCharacters = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.LigatureMapping!>? LigatureMappings = null, Solidsoft.Reply.BarcodeScanner.Calibration.Assumption Assumption = Solidsoft.Reply.BarcodeScanner.Calibration.Assumption.Agnostic) -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.SystemCapabilities(bool UnexpectedError = false, bool TestsSucceeded = true, bool DataReported = true, bool CorrectSequenceReported = true, bool CompleteDataReported = true, bool? KeyboardLayoutsCorrespond = true, bool? KeyboardLayoutsCorrespondForInvariants = true, bool? KeyboardLayoutsCorrespondForNonInvariantCharacters = true, bool? KeyboardLayoutsCanRepresentFileSeparatorsWithoutMapping = true, bool? KeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping = true, bool? KeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping = true, bool? KeyboardLayoutsCanRepresentUnitSeparatorsWithoutMapping = true, bool? KeyboardLayoutsCanRepresentEotCharactersWithoutMapping = true, bool? KeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping = true, bool? KeyboardLayoutsCorrespondForAimIdentifier = true, bool? CanReadInvariantsReliably = true, bool? CanReadNonInvariantsReliably = true, bool? CanReadIsoIec15434EnvelopeReliably = null, bool? CanReadEdiReliably = true, bool? CanReadGroupSeparatorsReliably = false, bool? CanReadRecordSeparatorsReliably = false, bool? CanReadFileSeparatorsReliably = null, bool? CanReadUnitSeparatorsReliably = null, bool? CanReadEotCharactersReliably = null, bool AmbiguousInvariantForEotSeparator = false, bool? CanReadAimIdentifiersWithoutMapping = true, bool? CanReadAimIdentifiersReliably = true, bool? ScannerTransmitsAimIdentifiers = true, bool? ScannerTransmitsEndOfLineSequence = true, bool? ScannerTransmitsAdditionalPrefix = false, bool? ScannerTransmitsAdditionalCode = false, bool? ScannerTransmitsAdditionalSuffix = false, bool? ScannerMayConvertToUpperCase = null, bool? ScannerMayConvertToLowerCase = null, bool? KeyboardScriptDoesNotSupportCase = null, bool CapsLockIndicator = false, Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance ScannerKeyboardPerformance = Solidsoft.Reply.BarcodeScanner.Calibration.ScannerKeyboardPerformance.High, int ScannerCharactersPerSecond = 0, bool FormatSupportAssessed = false, string? AimIdentifier = null, bool? AimIdentifierUncertain = false, string! EndOfLineSequence = "", string! AdditionalPrefix = "", string! AdditionalCode = "", string! AdditionalSuffix = "", string! KeyboardScript = "", Solidsoft.Reply.BarcodeScanner.Calibration.SupportedPlatform Platform = Solidsoft.Reply.BarcodeScanner.Calibration.SupportedPlatform.Windows, bool DeadKeys = false, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.CharacterMapping!>? CharacterMappings = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.DeadKeyMapping!>? DeadKeyMappings = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.Ambiguity!>? Ambiguities = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.UnrecognisedCharacter!>? UnrecognisedCharacters = null, System.Collections.Generic.IList<Solidsoft.Reply.BarcodeScanner.Calibration.LigatureMapping!>? LigatureMappings = null, Solidsoft.Reply.BarcodeScanner.Calibration.Assumption Assumption = Solidsoft.Reply.BarcodeScanner.Calibration.Assumption.Agnostic) -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.TestsSucceeded.get -> bool
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.TestsSucceeded.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.SystemCapabilities.UnexpectedError.get -> bool
@@ -551,6 +587,8 @@ Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec1543
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434EdiUnreadableFs.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434EdiUnreadableUs.get -> bool
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434EdiUnreadableUs.init -> void
+Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434EotUnreadable.get -> bool
+Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434EotUnreadable.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434Unreadable30.get -> bool
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.PotentialIsoIec15434Unreadable30.init -> void
 Solidsoft.Reply.BarcodeScanner.Calibration.TokenExtendedData.Prefix.get -> string!

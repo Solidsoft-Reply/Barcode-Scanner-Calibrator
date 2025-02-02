@@ -38,12 +38,12 @@ internal static class CalibrationExtensions {
     /// <summary>
     ///   Returns a regular expression for matching line terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex LineTerminators = new(@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
+    private static readonly Regex LineTerminators = new (@"^(?<strippedData>.*?)(?<lineTerminators>[\r\n]+)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for matching Control Character terminators and providing a stripped string.
     /// </summary>
-    private static readonly Regex ControlCharTerminators = new(@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
+    private static readonly Regex ControlCharTerminators = new (@"^(?<strippedData>.*?) {4}(?<lineTerminators>[\x01..\x1F]+)$", RegexOptions.None);
 #endif
 
     /// <summary>
@@ -208,9 +208,7 @@ internal static class CalibrationExtensions {
                         if (endIndex >= characters.Length) endIndex = characters.Length - 1;
                         if (deadkeyMap.Key != characters[idx..endIndex]) continue;
 
-#pragma warning disable S127 // "for" loop stop conditions should be invariant
                         idx += map.Key.Length - 1;
-#pragma warning restore S127 // "for" loop stop conditions should be invariant
                         character = deadkeyMap.Value[0];
                     }
                 }
@@ -288,7 +286,7 @@ internal static class CalibrationExtensions {
     /// <returns>A string containing Unicode Control Pictures for any ASCII control characters.</returns>
     [Pure]
     public static string ToControlPictures(this string originalString) =>
-        new(originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
+        new (originalString.ToCharArray().Select(c => c.ToControlPicture()).ToArray());
 
 #if NET7_0_OR_GREATER
     /// <summary>

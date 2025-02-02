@@ -61,7 +61,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Advice items remaining mismatch..
         /// </summary>
         internal static string AdviceItemRemainingMismatch {
             get {
@@ -196,7 +196,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EDI separator characters are supported..
+        ///   Looks up a localized string similar to File separator characters are supported..
         /// </summary>
         internal static string CalibrationInformation_162 {
             get {
@@ -219,6 +219,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string CalibrationInformation_164 {
             get {
                 return ResourceManager.GetString("CalibrationInformation_164", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character for an invariant character is the same as the character reported for the End-of-Transmission character..
+        /// </summary>
+        internal static string CalibrationInformation_165 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_165", resourceCulture);
             }
         }
         
@@ -295,7 +304,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably..
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The group separator character cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_212 {
             get {
@@ -304,7 +313,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The file separator character cannot be reliably read..
+        ///   Looks up a localized string similar to The record separator character cannot be read..
         /// </summary>
         internal static string CalibrationInformation_213 {
             get {
@@ -313,7 +322,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The unit separator character cannot be reliably read..
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The record separator character cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_214 {
             get {
@@ -322,7 +331,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The end-of-transmission character cannot be reliably read..
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The record separator character cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_215 {
             get {
@@ -331,7 +340,43 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner is not transmitting an AIM Identifier..
+        ///   Looks up a localized string similar to The file separator character cannot be read..
+        /// </summary>
+        internal static string CalibrationInformation_216 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_216", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The file separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_217 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_217", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The file separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_218 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_218", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The file separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_219 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_219", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The unit separator character cannot be read..
         /// </summary>
         internal static string CalibrationInformation_220 {
             get {
@@ -340,7 +385,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The AIM Identifier cannot be recognised..
+        ///   Looks up a localized string similar to The unit separator character cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_221 {
             get {
@@ -349,7 +394,61 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner is transmitting a prefix: {0}.
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The unit separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_222 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_222", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The unit separator character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_223 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_223", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The end-of-transmission character cannot be read..
+        /// </summary>
+        internal static string CalibrationInformation_224 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_224", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The end-of-transmission character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_225 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_225", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The end-of-transmission character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_226 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_226", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The end-of-transmission character cannot be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_227 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_227", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner is not transmitting an AIM Identifier..
         /// </summary>
         internal static string CalibrationInformation_230 {
             get {
@@ -358,7 +457,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner is transmitting a code: {0}.
+        ///   Looks up a localized string similar to The AIM Identifier cannot be recognised..
         /// </summary>
         internal static string CalibrationInformation_231 {
             get {
@@ -367,7 +466,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner is transmitting a suffix: {0}.
+        ///   Looks up a localized string similar to The AIM identifier cannot be read reliably..
         /// </summary>
         internal static string CalibrationInformation_232 {
             get {
@@ -376,11 +475,38 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return)..
+        ///   Looks up a localized string similar to The barcode scanner is transmitting a prefix: {0}.
         /// </summary>
         internal static string CalibrationInformation_240 {
             get {
                 return ResourceManager.GetString("CalibrationInformation_240", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner is transmitting a code: {0}.
+        /// </summary>
+        internal static string CalibrationInformation_241 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_241", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner is transmitting a suffix: {0}.
+        /// </summary>
+        internal static string CalibrationInformation_242 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_242", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner is not transmitting an end-of-line character sequence (e.g. a carriage return)..
+        /// </summary>
+        internal static string CalibrationInformation_245 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_245", resourceCulture);
             }
         }
         
@@ -421,7 +547,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read..
+        ///   Looks up a localized string similar to The reported character {0} for a File Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_254 {
             get {
@@ -430,7 +556,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}.
+        ///   Looks up a localized string similar to The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_255 {
             get {
@@ -439,7 +565,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode..
+        ///   Looks up a localized string similar to The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_256 {
             get {
@@ -448,7 +574,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control characters may not be reliably read..
+        ///   Looks up a localized string similar to Some reported character sequences are ambiguous. These characters do not represent invariant characters: {0}.
         /// </summary>
         internal static string CalibrationInformation_257 {
             get {
@@ -457,7 +583,25 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond.
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode..
+        /// </summary>
+        internal static string CalibrationInformation_258 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_258", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control characters may not be reliably read..
+        /// </summary>
+        internal static string CalibrationInformation_259 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_259", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control characters may not be reliably read..
         /// </summary>
         internal static string CalibrationInformation_260 {
             get {
@@ -466,7 +610,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond for invariant characters..
+        ///   Looks up a localized string similar to The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII04 control characters may not be reliably read..
         /// </summary>
         internal static string CalibrationInformation_261 {
             get {
@@ -475,7 +619,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters..
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. This represents the record separator character..
         /// </summary>
         internal static string CalibrationInformation_262 {
             get {
@@ -484,52 +628,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators..
-        /// </summary>
-        internal static string CalibrationInformation_263 {
-            get {
-                return ResourceManager.GetString("CalibrationInformation_263", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators..
-        /// </summary>
-        internal static string CalibrationInformation_264 {
-            get {
-                return ResourceManager.GetString("CalibrationInformation_264", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing EDI separators..
-        /// </summary>
-        internal static string CalibrationInformation_265 {
-            get {
-                return ResourceManager.GetString("CalibrationInformation_265", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers..
-        /// </summary>
-        internal static string CalibrationInformation_266 {
-            get {
-                return ResourceManager.GetString("CalibrationInformation_266", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The correspondence of the barcode scanner and computer keyboard layouts cannot be determined..
-        /// </summary>
-        internal static string CalibrationInformation_267 {
-            get {
-                return ResourceManager.GetString("CalibrationInformation_267", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Caps Lock is switched on..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond.
         /// </summary>
         internal static string CalibrationInformation_270 {
             get {
@@ -538,7 +637,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Caps Lock may be switched on..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond for invariant characters..
         /// </summary>
         internal static string CalibrationInformation_271 {
             get {
@@ -547,7 +646,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner may be configured to convert characters to upper case..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond for non-invariant ASCII characters..
         /// </summary>
         internal static string CalibrationInformation_272 {
             get {
@@ -556,7 +655,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner may be configured to convert characters to lower case..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing File Separators..
         /// </summary>
         internal static string CalibrationInformation_273 {
             get {
@@ -565,7 +664,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner may be configured to invert character case..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators..
         /// </summary>
         internal static string CalibrationInformation_274 {
             get {
@@ -574,11 +673,101 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally..
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators..
+        /// </summary>
+        internal static string CalibrationInformation_275 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing Unit Separators..
+        /// </summary>
+        internal static string CalibrationInformation_276 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing End-of-Transmission characters..
+        /// </summary>
+        internal static string CalibrationInformation_277 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_277", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond when representing AIM identifiers..
+        /// </summary>
+        internal static string CalibrationInformation_278 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_278", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The correspondence of the barcode scanner and computer keyboard layouts cannot be determined..
+        /// </summary>
+        internal static string CalibrationInformation_279 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_279", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caps Lock is switched on..
         /// </summary>
         internal static string CalibrationInformation_280 {
             get {
                 return ResourceManager.GetString("CalibrationInformation_280", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caps Lock may be switched on..
+        /// </summary>
+        internal static string CalibrationInformation_281 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_281", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner may be configured to convert characters to upper case..
+        /// </summary>
+        internal static string CalibrationInformation_282 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_282", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner may be configured to convert characters to lower case..
+        /// </summary>
+        internal static string CalibrationInformation_283 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_283", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The barcode scanner may be configured to invert character case..
+        /// </summary>
+        internal static string CalibrationInformation_284 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_284", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The best reported keyboard data entry time during calibration indicates that the barcode scanner does not perform optimally..
+        /// </summary>
+        internal static string CalibrationInformation_290 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_290", resourceCulture);
             }
         }
         
@@ -727,7 +916,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. This represents the group separator character..
+        ///   Looks up a localized string similar to The group separator character cannot be read..
         /// </summary>
         internal static string CalibrationInformation_366 {
             get {
@@ -736,11 +925,20 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}.
+        ///   Looks up a localized string similar to The reported character sequence {0} is ambiguous. The group separator character cannot be reliably read..
         /// </summary>
         internal static string CalibrationInformation_367 {
             get {
                 return ResourceManager.GetString("CalibrationInformation_367", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some reported characters are ambiguous. They can be reported individually but are also used to compose ligatures: {0}.
+        /// </summary>
+        internal static string CalibrationInformation_368 {
+            get {
+                return ResourceManager.GetString("CalibrationInformation_368", resourceCulture);
             }
         }
         
@@ -795,15 +993,6 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string CalibrationInvalidInformationLevel {
             get {
                 return ResourceManager.GetString("CalibrationInvalidInformationLevel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string String {
-            get {
-                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

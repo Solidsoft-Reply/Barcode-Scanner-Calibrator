@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net7.0;net6.0;</TargetFrameworks>
-	<LangVersion>12.0</LangVersion>
+    <TargetFrameworks>net9.0;net8.0;net7.0;net6.0;</TargetFrameworks>
+	<LangVersion>13.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -19,9 +19,8 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Introduction of handling for EOT (ASCII 04) characters in ISO/IEC 15434-encoded barcodes (Format 05 and Format 06).  This was originally omitted over fears of possible network issues when transmitting EOT characters. These fears have proved unfounded, and the lack of EOT analysis conflicted with reliable detection of suffixes.
-		2) Improved handling for File and Unit separator characters used in EDI data in ISO/IEC 15434-encoded barcodes (Format 05 and Format 06).  These are now handled individually, inproving the advice given in certain circumstances.
-		3) Fixes to various issues with localised resource.
+		1) Implemented support for detecting issues with EOT characters.
+		2) Improved handling for ASCII control characters used in ISO/IEC 15434 messages.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -31,7 +30,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.11</Version>
+	<Version>2.2.13</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
@@ -61,12 +60,12 @@
 	</PackageReference>
 	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+    <PackageReference Include="ZXing.Net" Version="0.16.10" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' ">

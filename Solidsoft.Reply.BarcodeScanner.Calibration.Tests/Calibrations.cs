@@ -124,7 +124,7 @@ public static class Calibrations {
                                              "EFGHIJKLMNOPQRSTUVWXYZ?abcdefghijklmnopqrstuvwxyz\\u00b7$\\\"\\u00e7+&\\u00ba\\u00c7*\\" +
                                              "u00aa\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"+\",\"keyboardScript\":\"Latin\"}";
 
-    public const string CzechProgrammersCalibration = """{"characterMap":{"\u001b":"\u001d"},"reportedCharacters":"!\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\]^`{|}~\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
+    public const string CzechProgrammersCalibration = """{"characterMap":{"\u001b":"\u001d","\u0000":"\u0004"},"reportedCharacters":"!\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\]^`{|}~\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 
     public const string GermanCalibration = """{"characterMap":{"\u00c4":"\"","/":"&","\u00e4":"'",")":"(","=":")","(":"*","\u00df":"-","-":"/","\u00d6":":","\u00f6":";",";":"<",":":">","_":"?","Z":"Y","Y":"Z","?":"_","z":"y","y":"z","\u00a7":"#","\"":"@","\u00fc":"[","#":"\\","+":"]","&":"^","\u00dc":"{","'":"|","*":"}","\u00b0":"~","\u0000":"\u001e","`":"+","\u00b4":"=","^":"`"},"deadKeysMap":{"`":"+","\u00b4":"=","^":"`","\u00c0":"+A","\u00c8":"+E","\u00cc":"+I","\u00d2":"+O","\u00d9":"+U","\u00e0":"+a","\u00e8":"+e","\u00ec":"+i","\u00f2":"+o","\u00f9":"+u","\u00c1":"=A","\u00c9":"=E","\u00cd":"=I","\u00d3":"=O","\u00da":"=U","\u00dd":"=Z","\u00e1":"=a","\u00e9":"=e","\u00ed":"=i","\u00f3":"=o","\u00fa":"=u","\u00fd":"=z","\u00c2":"`A","\u00ca":"`E","\u00ce":"`I","\u00d4":"`O","\u00db":"`U","\u00e2":"`a","\u00ea":"`e","\u00ee":"`i","\u00f4":"`o","\u00fb":"`u"},"deadKeyCharacterMap":{"`":"+","\u00b4":"=","^":"`"},"reportedCharacters":"!\u00c4%/\u00e4)=(,\u00df.-0123456789\u00d6\u00f6;:_ABCDEFGHIJKLMNOPQRSTUVWXZY?abcdefghijklmnopqrstuvwxzy\u00a7$\"\u00fc#+&\u00dc'*\u00b0\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"+","keyboardScript":"Latin"}""";
 
@@ -133,7 +133,7 @@ public static class Calibrations {
                                                   "\"\\u013e\":\"2\",\"\\u0161\":\"3\",\"\\u010d\":\"4\",\"\\u0165\":\"5\",\"\\u017e\":\"6\",\"\\u00fd\":\"7\",\"\\" +
                                                   "u00e1\":\"8\",\"\\u00ed\":\"9\",\"\\\"\":\":\",\"\\u00f4\":\";\",\"?\":\"<\",\":\":\">\",\"_\":\"?\",\"%\":\"_\",\"3" +
                                                   "\":\"#\",\"4\":\"$\",\"2\":\"@\",\"\\u00fa\":\"[\",\"\\u0148\":\"\\\\\",\"\\u00e4\":\"]\",\"6\":\"^\",\";\":\"`\",\"/\":\"{\",\")\":\"|\"" +
-                                                  ",\"(\":\"}\",\"\\u001b\":\"\\u001d\",\"\\u0000\":\"\\u001f\",\"\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00b0\":\"~\"},\"deadKeysMap\"" +
+                                                  ",\"(\":\"}\",\"\\u001b\":\"\\u001d\",\"\\u0000\":\"\\u0004\",\"\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00b0\":\"~\"},\"deadKeysMap\"" +
                                                   ":{\"\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00b0\":\"~\",\"\\u010c\":\"+C\",\"" +
                                                   "\\u010e\":\"+D\",\"\\u011a\":\"+E\",\"\\u013d\":\"+L\",\"\\u0147\":\"+N\",\"" +
                                                   "\\u0158\":\"+R\",\"\\u0160\":\"+S\",\"\\u0164\":\"+T\",\"\\u017d\":\"+Z\",\"" +
@@ -155,9 +155,10 @@ public static class Calibrations {
 
     public const string LexonErrorACalibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"\u001d","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 
+    ////public const string LexonErrorBCalibration = """{"characterMap":{"\u0000":"\u001e"},"reportedCharacters":"!\"%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz#$@[\\]^`{|}~\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
     public const string LexonErrorBCalibration = "";
 
-    public const string LexonErrorCCalibration = "{\"characterMap\":{\"\\u0000\":\"\\u001e\"},\"reportedCharacters" +
+    public const string LexonErrorCCalibration = "{\"characterMap\":{\"@\":\"\\u001d\",\"\\u0000\":\"\\u001e\"},\"reportedCharacters" +
                                                  "\":\"!\\\"%&\'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijkl" +
                                                  "mnopqrstuvwxyz#$@[\\\\]^`{|}~\\u0000\\u001c\\u001d\\u001e\\u001f\\u0004\",\"aimFlagCharacterSequence\":\"]\"," +
                                                  "\"keyboardScript\":\"Latin\"}";
@@ -328,7 +329,7 @@ public static class Calibrations {
                                                  "1b\":\"2\",\"\\u0161\":\"3\",\"\\u010d\":\"4\",\"\\u0159\":\"5\",\"\\u017e\":\"6\",\"\\u00fd\":\"7\",\"\\u00e1" +
                                                  "\":\"8\",\"\\u00ed\":\"9\",\"\\\"\":\":\",\"\\u016f\":\";\",\"?\":\"<\",\":\":\">\",\"_\":\"?\",\"%\":\"_\",\"3\":\"#\"" +
                                                  ",\"4\":\"$\",\"2\":\"@\",\"\\u00fa\":\"[\",\")\":\"]\",\"6\":\"^\",\";\":\"`\",\"/\":\"{\",\"\'\":\"|\",\"(\":\"}\",\"\\u001b\":\"" +
-                                                 "\\u001d\",\"\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00a8\":\"\\\\\",\"\\u00b0\":\"~\"},\"deadKeysMap\":{\"" +
+                                                 "\\u001d\",\"\\u0000\":\"\\u0004\",\"\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00a8\":\"\\\\\",\"\\u00b0\":\"~\"},\"deadKeysMap\":{\"" +
                                                  "\\u02c7\":\"+\",\"\\u00b4\":\"=\",\"\\u00a8\":\"\\\\\",\"\\u00b0\":\"~\",\"" +
                                                  "\\u010c\":\"+C\",\"\\u010e\":\"+D\",\"\\u011a\":\"+E\",\"\\u013d\":\"+L\",\"" +
                                                  "\\u0147\":\"+N\",\"\\u0158\":\"+R\",\"\\u0160\":\"+S\",\"\\u0164\":\"+T\",\"" +
@@ -552,11 +553,11 @@ public static class Calibrations {
 
     public const string LithuanianIbmCalibration = """{"characterMap":{"1":"!","\u0116":"\"","5":"%","7":"&","\u0117":"'","9":"(","0":")","8":"*","=":"+","\u010d":",","_":"-","\u0161":".","\u0119":"/",")":"0","!":"1","\"":"2","/":"3",";":"4",":":"5",",":"6",".":"7","?":"8","(":"9","\u0172":":","\u0173":";","\u010c":"<","+":"=","\u0160":">","\u0118":"?","\u0104":"Q","\u017d":"W","\u016a":"X","-":"_","\u0105":"q","\u017e":"w","\u016b":"x","3":"#","4":"$","2":"@","\u012f":"[","|":"\\","\u201c":"]","6":"^","\u012e":"{","\\":"|","\u201d":"}","\u0000":"\u001e"},"reportedCharacters":"1\u011657\u0117908=\u010d_\u0161\u0119)!\"/;:,.?(\u0172\u0173\u010c+\u0160\u0118ABCDEFGHIJKLMNOP\u0104RSTUV\u017d\u016aYZ-abcdefghijklmnop\u0105rstuv\u017e\u016byz342\u012f|\u201c6`\u012e\\\u201d~\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"\u201c","keyboardScript":"Latin"}""";
 
-    public const string LexonPpnErrorCalibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
+    public const string LexonPpnErrorCalibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~","\u0000":"\u0004"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 
-    public const string UnitedKingdomVariant1Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
+    public const string UnitedKingdomVariant1Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~","\u0000":"\u0004"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 
-    public const string UnitedKingdomVariant2Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"\u001e","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
+    public const string UnitedKingdomVariant2Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"\u001e","#":"\\","~":"|","\u00ac":"~","\u0000":"\u0004"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 
-    public const string UnitedKingdomVariant3Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
+    public const string UnitedKingdomVariant3Calibration = """{"characterMap":{"@":"\"","\u00a3":"#","\"":"@","#":"\\","~":"|","\u00ac":"~","\u0000":"\u0004"},"reportedCharacters":"!@%&'()*+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz\u00a3$\"[#]^`{~}\u00ac\u0000\u001c\u001d\u001e\u001f\u0004","aimFlagCharacterSequence":"]","keyboardScript":"Latin"}""";
 }

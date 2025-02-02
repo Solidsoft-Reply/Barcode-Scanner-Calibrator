@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Proovige uuesti, veendudes, et skaneerite õiget vöötkoodi(de).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Teie süsteem ei pruugi failieraldaja (ASCII 28) märke õigesti lugeda.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Teie süsteem ei saa lugeda failieraldaja (ASCII 28) märke.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Teie süsteem ei pruugi edastamise lõpu (ASCII 04) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Teie süsteem ei saa lugeda edastamise lõpu (ASCII 04) märke.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Test nurjus.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Võib-olla skaneerisite vale vöötkoodi või sisestasite klaviatuuriga vale andme. Teie vöötkoodiskanner või süsteem võib olla aeglane või võis esineda mõni ootamatu või katkendlik probleem.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Viga klaviatuuri skriptide lahendamisel: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Teie süsteem ei saa lugeda failieraldaja (ASCII 28) märke.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Sisestage andmed käsitsi oma kontrollimistarkvarasse, et kontrollida PPN-ainulaadseid identifikaatoreid.;;Kui vaja, konfigureerige oma vöötkoodilugeja numbriklaviatuuri jäljendamiseks.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Kui teil tekib probleeme Saksa PPN-vöötkoodide skannimisel, sisestage andmed käsitsi oma kontrollimistarkvarasse.;;Kui vaja, konfigureerige oma vöötkoodilugeja numbriklaviatuuri jäljendamiseks.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Teie süsteem ei pruugi edastamise lõpu (ASCII 04) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Teie süsteem ei pruugi edastamise lõpu (ASCII 04) märke õigesti lugeda.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Veenduge, et teie klaviatuuri paigutused ühtivad.;;Vajadusel seadistage oma vöötkoodiskanner numbrilise klaviatuuri emuleerimiseks ja edastage AIM-i identifikaatoreid.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Teie süsteem ei suuda usaldusväärselt lugeda vöötkoodi tüübi identifikaatorit.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-i identifikaatorid esindavad vöötkoodi tüüpi. Teie tarkvara võib neid kasutada mittevajalike hoiatuste kõrvaldamiseks.</value>
   </data>
 </root>

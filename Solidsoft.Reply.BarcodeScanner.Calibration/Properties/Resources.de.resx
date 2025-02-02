@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, können nicht zuverlässig gelesen werden.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Der Barcode-Scanner überträgt keinen AIM-Identifier.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Der AIM-Identifier kann nicht erkannt werden.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Der Barcode-Scanner überträgt ein Präfix: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Der Barcode-Scanner überträgt einen Code: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Der Barcode-Scanner überträgt ein Suffix: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Der Barcode-Scanner überträgt keine Zeichenfolge für das Zeilenende (z.B. ein Wagenrücklauf).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, von denen jede ein anderes erwartetes Zeichen darstellt. Allerdings ist höchstens eines der erwarteten Zeichen invariant.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Einige gemeldete Zeichen sind mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, von denen jede ein anderes nicht invariantes erwartetes ASCII-Zeichen darstellt: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-Identifikatoren können nicht erkannt werden. Der gemeldete Charakter {0} ist mehrdeutig. Es gibt mehrere Tasten für diesen Charakter, der sowohl den AIM-Flag-Charakter als auch andere erwartete Charakter(e) darstellt.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Einige gemeldete nicht invariante ASCII-Zeichen sind mehrdeutig: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies kann das Lesen von zusätzlichen Datenelementen in einem Barcode verhindern.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Einige gemeldete Zeichenfolgen sind mehrdeutig. Diese Zeichen stellen keine invarianten Zeichen dar: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht für invariante Zeichen.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht für nicht invariante ASCII-Zeichen.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von Gruppentrennzeichen.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von Datensatztrennzeichen.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von AIM-Identifikatoren.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps-Lock ist eingeschaltet.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps-Lock könnte eingeschaltet sein.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Der Barcode-Scanner könnte konfiguriert sein, um Zeichen in Großbuchstaben umzuwandeln.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Der Barcode-Scanner könnte konfiguriert sein, um Zeichen in Kleinbuchstaben umzuwandeln.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Der Barcode-Scanner könnte konfiguriert sein, um die Zeichenkassierung umzukehren.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Die beste berichtete Tastatureingabezeit während der Kalibrierung deutet darauf hin, dass der Barcode-Scanner nicht optimal funktioniert.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Das Zeichen {0} kann wegen Inkompatibilität mit der Tastaturbelegung nicht zuverlässig dargestellt werden.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies stellt das Gruppentrennzeichen dar.</value>
+    <value>Das Gruppentrennzeichen kann nicht gelesen werden.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Einige gemeldete Zeichen sind mehrdeutig. Sie können einzeln gemeldet werden, werden aber auch zur Bildung von Ligaturen verwendet: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibrierung fehlgeschlagen. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>EDI-Trennzeichen werden unterstützt.</value>
+    <value>Dateitrennzeichen werden unterstützt.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, um EDI-Daten darzustellen, können nicht zuverlässig gelesen werden.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Der Barcode-Scanner und die Computertastaturlayouts entsprechen sich nicht bei der Darstellung von Einheitentrennzeichen.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Die Tastaturbelegungen des Barcode-Scanners und des Computers entsprechen sich nicht bei der Darstellung von EDI-Trennzeichen.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Die Übereinstimmung der Tastaturbelegungen von Barcode-Scanner und Computer kann nicht festgestellt werden.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Einheitstrennzeichen werden unterstützt.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Barcodes, die ASCII 28 oder ASCII 31 verwenden, können möglicherweise nicht zuverlässig gelesen werden.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Das Dateitrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Das Einheitentrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Das Ende-der-Übertragung-Zeichen kann nicht zuverlässig gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Ende-der-Übertragung-Zeichen werden unterstützt.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Der Barcodescanner überträgt keine Zeichenfolge für das Zeilenende (z.B. einen Wagenrücklauf).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, die jeweils ein anderes erwartetes Zeichen darstellen. Jedoch ist höchstens nur eines der erwarteten Zeichen invariant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Einige gemeldete Zeichen sind mehrdeutig. Es gibt mehrere Tasten für dasselbe Zeichen, die jeweils ein anderes nicht-invariantes erwartetes ASCII-Zeichen darstellen: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-Identifikatoren können nicht erkannt werden. Das gemeldete Zeichen {0} ist mehrdeutig. Es gibt mehrere Tasten für dieses Zeichen, das sowohl das AIM-Flag-Zeichen als auch andere erwartete Zeichen repräsentiert.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Einige gemeldete nicht-invariante ASCII-Zeichen sind mehrdeutig: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein Dateitrennzeichen ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, um EDI-Daten darzustellen, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein Einheitentrennzeichen ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, um EDI-Daten darzustellen, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein End-of-Transmission-Zeichen ist mehrdeutig. Barcodes, die die ISO/IEC 15434-Syntax verwenden, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Einige gemeldete Zeichenfolgen sind mehrdeutig. Diese Zeichen repräsentieren keine invarianten Zeichen: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies könnte das Lesen zusätzlicher Datenelemente in einem Barcode verhindern.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein Dateitrennzeichen ist mehrdeutig. Barcodes, die ASCII 28-Steuerzeichen verwenden, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein Einheitentrennzeichen ist mehrdeutig. Barcodes, die ASCII 31-Steuerzeichen verwenden, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Das gemeldete Zeichen {0} für ein End-of-Transmission-Zeichen ist mehrdeutig. Barcodes, die ASCII04-Steuerzeichen verwenden, können nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies stellt das Datensatztrennzeichen dar.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Das gemeldete Zeichen für ein unveränderliches Zeichen ist dasselbe wie das gemeldete Zeichen für das End-of-Transmission-Zeichen.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Das Dateitrennzeichen kann nicht zuverlässig gelesen werden.</value>
+    <value>Das Datensatz-Trennzeichen kann nicht gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Das Einheitentrennzeichen kann nicht zuverlässig gelesen werden.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Datensatz-Trennzeichen kann nicht zuverlässig gelesen werden.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Das Ende-der-Übertragung-Zeichen kann nicht zuverlässig gelesen werden.</value>
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Datensatz-Trennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Das Dateitrennzeichen kann nicht gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Dateitrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Dateitrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Das Einheitentrennzeichen kann nicht gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Einheitentrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Einheitentrennzeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Das Ende-der-Übertragung-Zeichen kann nicht gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Ende-der-Übertragung-Zeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Das Ende-der-Übertragung-Zeichen kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies stellt das Gruppentrennzeichen dar.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Der AIM-Bezeichner kann nicht zuverlässig gelesen werden.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Der Barcode-Scanner und die Computertastaturlayouts entsprechen sich nicht bei der Darstellung von Dateitrennzeichen.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Der Barcode-Scanner und die Computertastaturlayouts entsprechen sich nicht bei der Darstellung von Übertragungsendzeichen.</value>
   </data>
 </root>

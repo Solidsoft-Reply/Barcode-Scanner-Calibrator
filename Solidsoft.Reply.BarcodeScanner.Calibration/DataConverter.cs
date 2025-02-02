@@ -41,21 +41,21 @@ internal class DataConverter : JsonConverter<Data> {
         if (value.DeadKeysMap?.Count != 0) {
             // Compact by removing ASCII 0
             var compactDeadKeysMap = value.DeadKeysMap?.ToDictionary(kvp => kvp.Key.Length > 1 && kvp.Key[0] == char.MinValue ? kvp.Key[1..] : kvp.Key, kvp => kvp.Value);
-            obj["deadKeysMap"] = JToken.FromObject(compactDeadKeysMap ?? new Dictionary<string, string>(), serializer);
+            obj["deadKeysMap"] = JToken.FromObject(compactDeadKeysMap ?? [], serializer);
         }
 
         if (value.DeadKeyCharacterMap?.Count != 0) {
             // Compact by removing ASCII 0
             var compactDeadKeyCharacterMap = value.DeadKeyCharacterMap?.ToDictionary(kvp => kvp.Key.Length > 1 && kvp.Key[0] == char.MinValue ? kvp.Key[1..] : kvp.Key, kvp => kvp.Value);
 #pragma warning disable SA1010 // Opening square brackets should be spaced correctly
-            obj["deadKeyCharacterMap"] = JToken.FromObject(compactDeadKeyCharacterMap ?? new Dictionary<string, char>(), serializer);
+            obj["deadKeyCharacterMap"] = JToken.FromObject(compactDeadKeyCharacterMap ?? [], serializer);
 #pragma warning restore SA1010 // Opening square brackets should be spaced correctly
         }
 
         if (value.LigatureMap?.Count != 0) obj["ligatureMap"] = JToken.FromObject(value.LigatureMap ?? new Dictionary<string, char>(), serializer);
         if (value.ScannerDeadKeysMap?.Count != 0) obj["scannerDeadKeysMap"] = JToken.FromObject(value.ScannerDeadKeysMap ?? new Dictionary<string, string>(), serializer);
         if (value.ScannerUnassignedKeys?.Count != 0)
-            obj["scannerUnassignedKeys"] = JToken.FromObject(value.ScannerUnassignedKeys ?? new List<string>(), serializer);
+            obj["scannerUnassignedKeys"] = JToken.FromObject(value.ScannerUnassignedKeys ?? [], serializer);
         if (!string.IsNullOrWhiteSpace(value.ReportedCharacters))
             obj["reportedCharacters"] = JToken.FromObject(value.ReportedCharacters, serializer);
         if (!string.IsNullOrWhiteSpace(value.AimFlagCharacterSequence))

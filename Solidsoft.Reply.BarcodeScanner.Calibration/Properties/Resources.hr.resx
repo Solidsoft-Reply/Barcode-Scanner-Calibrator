@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Prijavljeni znak {0} je dvosmislen. Bar kodovi koji koriste sintaksu ISO/IEC 15434 se ne mogu pouzdano čitati.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Skener bar kodova ne prenosi AIM identifikator.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM identifikator se ne može prepoznati.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Skener bar kodova prenosi prefiks: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Skener bar kodova prenosi kod: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Skener bar kodova prenosi sufiks: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Skener bar kodova ne prenosi sekvencu znakova za kraj linije (npr. povratak kola).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvosmislen. Postoje više tipki za isti znak, svaka predstavlja drugačiji očekivani znak. Međutim, najviše samo jedan od očekivanih znakova je invarijantan.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Neki prijavljeni znakovi su dvosmisleni. Postoji više tipki za isti znak, svaka predstavlja drugačiji očekivani neinvarijantni ASCII znak: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM identifikatori se ne mogu prepoznati. Prijavljeni znak {0} je dvosmislen. Postoji više tipki za ovaj znak koji predstavlja AIM zastavicu kao i druge očekivane znakove.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Neki prijavljeni neinvarijantni ASCII znakovi su dvosmisleni: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Prijavljena sekvencija znakova {0} je dvosmislena. To može spriječiti čitanje bilo kojih dodatnih elemenata podataka uključenih u bar kod.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Neke prijavljene sekvence znakova su dvosmislene. Ti znakovi ne predstavljaju invarijantne znakove: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju za invarijantne znakove.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju za neinvarijantne ASCII znakove.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja grupnih separatora.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja rekordnih separatora.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja AIM identifikatora.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock je uključen.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock možda je uključen.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Skener bar kodova može biti konfiguriran za pretvorbu znakova u velika slova.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Skener bar kodova može biti konfiguriran za pretvorbu znakova u mala slova.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Skener bar kodova može biti konfiguriran za inverziju veličine slova.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Najbolje prijavljeno vrijeme unos podataka tipkovnicom tijekom kalibracije ukazuje na to da skener bar kodova ne radi optimalno.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Znak {0} se ne može pouzdano predstaviti zbog nespojivosti s konfiguracijom tipkovnice.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Prijavljena sekvencija znakova {0} je dvosmislena. To predstavlja znak grupnog separatora.</value>
+    <value>Znak za razdvajanje grupa ne može se pročitati.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Neki prijavljeni znakovi su dvosmisleni. Mogu se prijaviti pojedinačno, ali se također koriste za sastavljanje ligatura: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibracija nije uspjela. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Podržani su znakovi EDI separatora.</value>
+    <value>Podržani su znakovi razdjelnika datoteka.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvosmislen. Bar kodovi koji koriste sintaksu ISO/IEC 15434 za prikazivanje EDI podataka se ne mogu pouzdano čitati.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Skenator barkodova i raspored tipkovnice računala ne odgovaraju pri prikazu razdjelnika jedinica.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju prilikom prikazivanja EDI separatora.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Ne može se utvrditi podudarnost konfiguracije skenera bar kodova i tipkovnice računala.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Podržani su znakovi razdvajanja jedinica.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Prijavljeni znak {0} je dvosmislen. Barkodovi koji koriste ASCII 28 ili ASCII 31 možda neće biti pouzdano pročitani.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Znak za odvajanje datoteka ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Znak za odvajanje jedinica ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Znak za kraj prijenosa ne može se pouzdano pročitati.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Podržani su znakovi za kraj prijenosa.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Skenir za barkodove ne prenosi niz znakova za kraj linije (npr. povratak kolica).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Prijavljeni znak {0} je dvosmislen. Postoji više tipki za isti znak, a svaka predstavlja različit očekivani znak. Međutim, u većini slučajeva samo jedan od očekivanih znakova je invarijantan.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Neki prijavljeni znakovi su dvosmisleni. Postoji više tipki za isti znak, a svaka predstavlja različiti ne-invarijantni očekivani ASCII znak: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM identifikatori se ne mogu prepoznati. Prijavljeni znak {0} je dvosmislen. Postoji više tipki za ovaj znak, koji predstavlja AIM zastavicu, kao i druge očekivane znakove.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Neki prijavljeni ne-invarijantni ASCII znakovi su dvosmisleni: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Prijavljeni znak {0} za razdjelnik datoteka je dvosmislen. Barkodovi koji koriste sintaksu ISO/IEC 15434 za predstavljanje EDI podataka možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Prijavljeni znak {0} za razdjelnik jedinica je dvosmislen. Barkodovi koji koriste sintaksu ISO/IEC 15434 za predstavljanje EDI podataka možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Prijavljeni znak {0} za znak kraja prijenosa je dvosmislen. Barkodovi koji koriste sintaksu ISO/IEC 15434 možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Neki prijavljeni nizovi znakova su dvosmisleni. Ovi znakovi ne predstavljaju invarijantne znakove: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je dvosmislen. Ovo može spriječiti čitanje bilo kojeg dodatnog podatka uključenog u barkod.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Prijavljeni znak {0} za razdjelnik datoteka je dvosmislen. Barkodovi koji koriste ASCII 28 kontrolne znakove možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Prijavljeni znak {0} za razdjelnik jedinica je dvosmislen. Barkodovi koji koriste ASCII 31 kontrolne znakove možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Prijavljeni znak {0} za znak kraja prijenosa je dvosmislen. Barkodovi koji koriste ASCII04 kontrolne znakove možda neće biti pouzdano pročitani.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je dvosmislen. Ovo predstavlja znak za razdvajanje zapisa.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Prijavljeni znak za invarijantni znak isti je kao prijavljeni znak za znak kraja prijenosa.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Znak za odvajanje datoteka ne može se pouzdano pročitati.</value>
+    <value>Znak za razdvajanje zapisa ne može se pročitati.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Znak za odvajanje jedinica ne može se pouzdano pročitati.</value>
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje zapisa ne može se pouzdano pročitati.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Znak za kraj prijenosa ne može se pouzdano pročitati.</value>
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje zapisa ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Znak za razdvajanje datoteka ne može se pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje datoteka ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje datoteka ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Znak za razdvajanje jedinica ne može se pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje jedinica ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za razdvajanje jedinica ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Znak za kraj prijenosa ne može se pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za kraj prijenosa ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Prijavljeni niz znakova {0} je nejasan. Znak za kraj prijenosa ne može se pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Prijavljena sekvencija znakova {0} je dvosmislena. To predstavlja znak grupnog separatora.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM identifikator se ne može pouzdano pročitati.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Skenator barkodova i raspored tipkovnice računala ne odgovaraju pri prikazu razdjelnika datoteka.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Skenator barkodova i raspored tipkovnice računala ne odgovaraju pri prikazu znakova za kraj prijenosa.</value>
   </data>
 </root>

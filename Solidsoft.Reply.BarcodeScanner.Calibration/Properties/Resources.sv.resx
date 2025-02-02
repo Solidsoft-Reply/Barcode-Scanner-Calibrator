@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Den rapporterade karaktären {0} är tvetydig. Streckkoder som använder ISO/IEC 15434-syntax kan inte läsas pålitligt.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Streckkodsläsaren sänder inte en AIM-identifierare.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>AIM-identifieraren kan inte identifieras.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Streckkodsläsaren sänder ett prefix: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Streckkodsläsaren sänder en kod: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Streckkodsläsaren sänder ett suffix: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Streckkodsläsaren sänder inte en radslutssekvens (t.ex. radbrytning).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Den rapporterade karaktären {0} är tvetydig. Det finns flera tangenter för samma tecken, var och en representerar en annan förväntad karaktär. Men endast en av de förväntade karaktärerna är invariant.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Vissa rapporterade tecken är tvetydiga. Det finns flera tangenter för samma tecken, var och en representerar en annan icke-invariant förväntad ASCII-karaktär: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>AIM-identifierare kan inte identifieras. Den rapporterade karaktären {0} är tvetydig. Det finns flera tangenter för denna karaktär som representerar AIM-flaggkaraktären samt andra förväntade karaktär(er).</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Vissa rapporterade icke-invarianta ASCII-tecken är tvetydiga: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta kan förhindra avläsning av eventuella ytterligare datadelar som ingår i en streckkod.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Vissa rapporterade teckensekvenser är tvetydiga. Dessa tecken representerar inte invarianter: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens för invarianter.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens för icke-invarianta ASCII-tecken.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens vid representation av gruppseparatorer.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens vid representation av skiljereferenser.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens vid representation av AIM-identifierare.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock är aktiverat.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock kan vara aktiverat.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Streckkodsläsaren kan vara konfigurerad för att konvertera tecken till versaler.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Streckkodsläsaren kan vara konfigurerad för att konvertera tecken till gemener.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Streckkodsläsaren kan vara konfigurerad för att invertera teckenskift.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Den bästa rapporterade tangentbordsdatainmatningstiden under kalibrering indikerar att streckkodsläsaren inte presterar optimalt.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Tecknet {0} kan inte representeras pålitligt på grund av inkompatibilitet med tangentbordslayouten.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta representerar gruppseparatortecknet.</value>
+    <value>Gruppseparatorstecknet kan inte läsas.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Vissa rapporterade tecken är tvetydiga. De kan rapporteras individuellt men används också för att skapa ligaturer: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,12 @@
     <value>Kalibrering misslyckades. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Tecken för EDI-separatorer stöds.</value>
+    <value>Filavgränsningstecken stöds.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Den rapporterade karaktären {0} är tvetydig. Streckkoder som använder ISO/IEC 15434-syntax för att representera EDI-data kan inte läsas pålitligt.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Streckkodsläsaren och datorns tangentbordslayouter stämmer inte överens vid representation av enhetsavgränsare.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens vid representation av EDI-separatorer.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Överensstämmelsen mellan streckkodsläsarens och datorns tangentbordslayouter kan inte fastställas.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +330,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Enhetsavgränsningstecken stöds.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Tecknet {0} som rapporterats är tvetydigt. Streckkoder som använder ASCII 28 eller ASCII 31 kanske inte kan läsas till förlitligt.</value>
-  </data>
-  <data name="CalibrationInformation_213" xml:space="preserve">
+  <data name="CalibrationInformation_217" xml:space="preserve">
     <value>Tecknet för filavgränsare kan inte läsas på ett tillförlitligt sätt.</value>
   </data>
-  <data name="CalibrationInformation_214" xml:space="preserve">
+  <data name="CalibrationInformation_221" xml:space="preserve">
     <value>Tecknet för enhetsavgränsare kan inte läsas på ett tillförlitligt sätt.</value>
   </data>
-  <data name="CalibrationInformation_215" xml:space="preserve">
+  <data name="CalibrationInformation_225" xml:space="preserve">
     <value>Tecknet för slut på överföring kan inte läsas på ett tillförlitligt sätt.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Tecken för slut på överföring stöds.</value>
+  </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Streckkodsläsaren överför inte en radslutssekvens (t.ex. en vagnretur).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Den rapporterade tecknet {0} är tvetydigt. Det finns flera tangenter för samma tecken, var och en representerar ett annat förväntat tecken. Dock är högst ett av de förväntade tecknen invariant.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Vissa rapporterade tecken är tvetydiga. Det finns flera tangenter för samma tecken, var och en representerar ett annat icke-invariant förväntat ASCII-tecken: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>AIM-identifierare kan inte kännas igen. Det rapporterade tecknet {0} är tvetydigt. Det finns flera tangenter för detta tecken som representerar AIM-flaggan samt andra förväntade tecken.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Vissa rapporterade icke-invarianta ASCII-tecken är tvetydiga: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för en filavgränsare är tvetydigt. Streckkoder som använder ISO/IEC 15434-syntax för att representera EDI-data kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för en enhetsavgränsare är tvetydigt. Streckkoder som använder ISO/IEC 15434-syntax för att representera EDI-data kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för ett slut på överföringstecken är tvetydigt. Streckkoder som använder ISO/IEC 15434-syntax kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Vissa rapporterade teckensekvenser är tvetydiga. Dessa tecken representerar inte invarianta tecken: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta kan förhindra läsning av ytterligare dataelement som ingår i en streckkod.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för en filavgränsare är tvetydigt. Streckkoder som använder ASCII 28-kontrolltecken kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för en enhetsavgränsare är tvetydigt. Streckkoder som använder ASCII 31-kontrolltecken kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Det rapporterade tecknet {0} för ett slut på överföringstecken är tvetydigt. Streckkoder som använder ASCII04-kontrolltecken kan inte läsas tillförlitligt.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta representerar tecknet för avgränsning av poster.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Den rapporterade tecknet för ett invariant tecken är detsamma som tecknet rapporterat för slutet-av-överföring-tecknet.
+</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Postseparatorstecknet kan inte läsas.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Postseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Postseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Filseparatorstecknet kan inte läsas.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Filseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Filseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Enhetsseparatorstecknet kan inte läsas.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Enhetsseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Enhetsseparatorstecknet kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Tecknet för överföringsslut kan inte läsas.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Tecknet för överföringsslut kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Den rapporterade teckenföljden {0} är tvetydig. Tecknet för överföringsslut kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta representerar gruppseparatortecknet.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>AIM-identifieraren kan inte läsas pålitligt.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Streckkodsläsaren och datorns tangentbordslayouter stämmer inte överens vid representation av filavgränsare.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Streckkodsläsaren och datorns tangentbordslayouter stämmer inte överens vid representation av tecken för överföringsslut.</value>
   </data>
 </root>

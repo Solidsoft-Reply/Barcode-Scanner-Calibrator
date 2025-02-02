@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Intente de nuevo, asegurándose de escanear el(los) código(s) de barras correcto(s).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Teie süsteem ei pruugi failieraldaja (ASCII 28) märke õigesti lugeda.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Teie süsteem ei saa lugeda failieraldaja (ASCII 28) märke.</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Teie süsteem ei pruugi edastamise lõpu (ASCII 04) märke õigesti lugeda.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Teie süsteem ei saa lugeda edastamise lõpu (ASCII 04) märke.</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>La prueba falló.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Mõned vöötkooditüübid kasutavad seda märki vöötkoodiandmete lõpu tähistamiseks. Teie tarkvara ei pruugi korrektselt lugeda mis tahes järelliidet, mille on lisanud vöötkoodilugeja.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Puede haber escaneado un código de barras incorrecto o ingresado datos incorrectos usando el teclado. Su escáner de códigos de barras o sistema puede ser lento, o puede haber ocurrido algún problema inesperado o intermitente.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Error al resolver scripts de teclado: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Teie süsteem ei saa lugeda failieraldaja (ASCII 28) märke.</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Teie süsteem ei pruugi ühikueraldaja (ASCII 31) märke õigesti lugeda.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Neid märke ei kasutata laialdaselt vöötkoodides.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Kui teil on vöötkoodide skannimisel raskusi, proovige konfigureerida oma vöötkoodilugeja nii, et see emuleeriks numbriklaviatuuri.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Ingrese los datos manualmente en su software de verificación para verificar los identificadores únicos PPN.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Si experimenta problemas al escanear códigos de barras PPN alemanes, ingrese los datos manualmente en su software de verificación.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Su sistema puede no leer correctamente los caracteres de fin de transmisión (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Su sistema no puede leer los caracteres de fin de transmisión (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Algunos tipos de códigos de barras usan este carácter para marcar el final de los datos del código de barras. Su software puede no leer correctamente cualquier sufijo añadido por el escáner de códigos de barras.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Algunos tipos de códigos de barras usan este carácter para marcar el final de los datos del código de barras. Su software puede no leer correctamente cualquier sufijo añadido por el escáner de códigos de barras.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Asegúrese de que las disposiciones de su teclado coincidan.;;Si es necesario, configure su escáner de códigos de barras para emular un teclado numérico y transmitir identificadores AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Su sistema no puede leer de manera fiable el identificador del tipo de código de barras.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Los identificadores AIM representan el tipo de código de barras. Su software puede usarlos para eliminar alertas innecesarias.</value>
   </data>
 </root>

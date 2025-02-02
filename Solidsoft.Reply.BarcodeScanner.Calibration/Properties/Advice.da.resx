@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Prøv igen og sørg for at scanne den korrekte stregkode(r).</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Dit system læser muligvis ikke filseparator-tegnene (ASCII 28) korrekt.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Dit system kan ikke læse filseparator-tegnene (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Dit system læser muligvis ikke enhedseparator-tegnene (ASCII 31) korrekt.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Dit system læser muligvis ikke enhedseparator-tegnene (ASCII 31) korrekt.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Dit system læser muligvis ikke slutningen-af-transmission-tegnene (ASCII 04) korrekt.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Dit system kan ikke læse slutningen-af-transmission-tegnene (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Testen mislykkedes.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Disse tegn bruges ikke meget i stregkoder.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Disse tegn bruges ikke meget i stregkoder.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Disse tegn bruges ikke meget i stregkoder.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Disse tegn bruges ikke meget i stregkoder.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Nogle typer stregkoder bruger dette tegn til at markere slutningen af stregkodedataene. Din software læser muligvis ikke korrekt nogen suffix tilføjet af stregkodescanneren.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Nogle typer stregkoder bruger dette tegn til at markere slutningen af stregkodedataene. Din software læser muligvis ikke korrekt nogen suffix tilføjet af stregkodescanneren.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Du har muligvis scannet en forkert stregkode eller indtastet forkerte data ved hjælp af tastaturet. Din stregkodescanner eller system kan være langsomt, eller der kan være opstået et uventet eller periodisk problem.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Fejl ved løsning af tastaturscripts: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Dit system kan ikke læse filseparator-tegnene (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Dit system læser muligvis ikke enhedseparator-tegnene (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Dit system læser muligvis ikke enhedseparator-tegnene (ASCII 31) korrekt.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Disse tegn bruges ikke meget i stregkoder.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Disse tegn bruges ikke meget i stregkoder.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Disse tegn bruges ikke meget i stregkoder.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Hvis du oplever problemer, når du scanner stregkoder, så prøv at konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Indtast data manuelt i din verificeringssoftware for at verificere unikke PPN-identifikatorer.;;Om nødvendigt skal du konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Hvis du oplever problemer, når du scanner tyske PPN-stregkoder, skal du indtaste data manuelt i din verificeringssoftware.;;Om nødvendigt skal du konfigurere din stregkodescanner til at emulere et numerisk tastatur.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Dit system læser muligvis ikke slutningen-af-transmission-tegnene (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Dit system læser muligvis ikke slutningen-af-transmission-tegnene (ASCII 04) korrekt.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Nogle typer stregkoder bruger dette tegn til at markere slutningen af stregkodedataene. Din software læser muligvis ikke korrekt nogen suffix tilføjet af stregkodescanneren.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Nogle typer stregkoder bruger dette tegn til at markere slutningen af stregkodedataene. Din software læser muligvis ikke korrekt nogen suffix tilføjet af stregkodescanneren.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Sørg for at dine tastaturlayout matcher.;;Hvis nødvendigt, konfigurer din stregkodescanner til at emulere et numerisk tastatur og sende AIM-identifikatorer.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Dit system kan ikke pålideligt læse stregkodetype-identifikatoren.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>AIM-identifikatorer repræsenterer stregkodetypen. Din software kan bruge dem til at eliminere unødvendige alarmer.</value>
   </data>
 </root>

@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Ipprova mill-ġdid, kun żgur li tiskennja l-barcode(s) korretta/i.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Fajl (ASCII 28) b'mod korrett.</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Separator tal-Fajl (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04) b'mod korrett.</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>It-test falla.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Xi tipi ta' codes tal-barra jużaw dan il-karattru biex jimmarkaw it-tmiem tad-data tal-barcode. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Xi tipi ta' codes tal-barra jużaw dan il-karattru biex jimmarkaw it-tmiem tad-data tal-barcode. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Jista' jkun li skannejt barcode ħażin jew daħħalt data żbaljata bl-użu tal-keyboard. L-iskanner tal-barcode tiegħek jew is-sistema jistgħu jkunu bil-mod, jew jista' jkun seħħ xi problema mhux mistennija jew intermittenti.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Żball waqt li qed tissolva skripts tal-keyboard: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra l-karattri ta' Separator tal-Fajl (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Separator tal-Unità (ASCII 31) b'mod korrett.</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Dawn il-karattri mhumiex użati ħafna fil-codes tal-barra.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Jekk tesperjenza diffikultajiet meta tiskannja l-codes tal-barra, ipprova kkonfigura l-iskaner tal-codes tal-barra tiegħek biex jimitaw tastiera numerika.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Daħħal id-dejta manwalment fis-softwer tal-verifika tiegħek biex tivverifika l-identifikaturi uniċi PPN.;;Jekk meħtieġ, ikkonfigura l-iskaner tal-barra tiegħek biex jimmudella tastiera numerika.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Jekk tesperjenza problemi meta tskannja kodiċijiet tal-barra PPN Ġermaniżi, daħħal id-dejta manwalment fis-softwer tal-verifika tiegħek.;;Jekk meħtieġ, ikkonfigura l-iskaner tal-barra tiegħek biex jimmudella tastiera numerika.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04) b'mod korrett.</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Is-sistema tiegħek tista' ma taqrax il-karattri ta' Tmiem tat-Trasmissjoni (ASCII 04) b'mod korrett.</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Xi tipi ta' codes tal-barra jużaw dan il-karattru biex jimmarkaw it-tmiem tad-data tal-barcode. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Xi tipi ta' codes tal-barra jużaw dan il-karattru biex jimmarkaw it-tmiem tad-data tal-barcode. Is-software tiegħek jista' ma jaqrax b'mod korrett kull suffiss miżjud mill-iskaner tal-barcode.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Kun żgur li l-layouts tal-keyboard tiegħek jaqblu.;;Jekk ikun meħtieġ, kkonfigura l-iskanner tal-barcode tiegħek biex jimita keypad numeriku u jittrasmetti identifikaturi AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Is-sistema tiegħek ma tistax taqra b’mod affidabbli l-identifikatur tat-tip tal-kodiċi tal-linji.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Identifikaturi AIM jirrappreżentaw it-tip ta' barcode. Is-softwer tiegħek jista' jużahom biex jeħles minn twissijiet mhux meħtieġa.</value>
   </data>
 </root>

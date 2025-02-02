@@ -198,76 +198,55 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Τα barcodes που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 δεν μπορούν να διαβαστούν αξιόπιστα.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Ο σαρωτής barcode δεν μεταδίδει αναγνωριστικό AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Δεν μπορεί να αναγνωριστεί το αναγνωριστικό AIM.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Ο σаρωτής barcode мεταδίδει ένα префикс: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Ο σαрωτής barcode μεταδίδει έναν κωδικό: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Ο саρωτής barcode мεταδίδει ένα епίθημα: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Ο σαρωτής barcode δεν μεταδίδει ακολουθία χαρακτήρων τέλους γραμμής (π.χ. ένα carriage return).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Ο αναφερόμενος χаρακτήρας {0} είναι ασαφής. Υπάρχουν πολλαπλά κλειδιά για τον ίδιο χаρακτήρα, καθένα αντιπροσωπεύοντας έναν διαφορετικό αναμενόμενο χαρακτήρα. Ωστόσο, το πολύ μόνο ένας από τους αναμενόμενους χαρακτήρες είναι αμετάβλητος.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Κάποιοι αναφερόμενοι χαρακτήρες είναι ασαφείς. Υπάρχουν πολλαπλά κλειδιά για τον ίδιο χαρακτήρα, κάθε ένα αντιπροσωπεύοντας έναν διαφορετικό μη αμετάβλητο αναμενόμενο χαρακτήρα ASCII: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Δεν μπορούν να αναγνωριστούν τα αναγνωριστικά AIM. Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Υπάρχουν πολλαπλά κλειδιά για αυτόν τον χαρακτήρα που αντιπροσωπεύει τον χαρακτήρα σημαίας AIM καθώς και άλλους αναμενόμενους χαρακτήρες.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Κάποιοι αναφερόμενοι μη αμετάβλητοι χαρακτήρες ASCII είναι ασαφείς: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι ασαφής. Αυτό μπορεί να εμποδίσει την ανάγνωση οποιωνδήποτε επιπλέον στοιχείων δεδομένων που περιλαμβάνονται σε ένα barcode.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Κάποιες αναφερόμενες ακολουθίες χαρακτήρων είναι ασαφείς. Αυτοί οι χαρακτήρες δεν αντιπροσωπεύουν αμετάβλητους χαρακτήρες: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν αντιστοιχούν</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν αντιστοιχούν για αμετάβλητους χαρακτήρες.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν αντιστοιχούν για μη αμετάβλητους χαρακτήρες ASCII.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Οι διατάξεις πληκтροлογίου του σαρωτή barcode και του υпολογιστή δεν αντιστοιχούν ката την αναπαράσταση διαχωριστών ομάδων.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου тου σαρωτή barcode και του υпολογиστή δεν αντιστοιχούν κατά την αναπαράσταση διαχωριστών εγγραφών.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υпολογιστή δεν αнτιсτοιχούν κατά την αναπαράσταση αναγνωριστικών AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Το Caps Lock είναι ενεργοποιημένο.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Μπορεί να είναι ενεργοποιημένο το Caps Lock.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Ο саρωτής barcode μπορεί να είναι διαμορфωμένος για να μετατρέπει χαρακτήρες σε κεφαλαία.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Ο σаρωτής barcode μπορεί να είναι διαμορφωμένος για να μετατρέπει χаρακτήρες σε πεζά.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Ο σаρωτής barcode мπορεί να είναι διαμορфωμένος για να αντιστρέφει την περίπτωση των χαρακτήρων.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
+  <data name="CalibrationInformation_290" xml:space="preserve">
     <value>Το καλύτερο αναφερόμενο χρόνο εισαγωγής δεδομένων πληκτρολογίου κατά τη διάρκεια της βαθμονόμησης υποδηλώνει ότι ο σαρωτής barcode δεν λειτουργεί βέλτιστα.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
@@ -316,9 +295,9 @@
     <value>Ο χαρακτήρας {0} δεν μπορεί να αναπαρασταθεί αξιόπιστα λόγω ασυμβατότητας με τη διάταξη του πληκτρολογίου.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι ασαφής. Αυτή αντιπροσωπεύει τον χαρακτήρα διαχωριστή ομάδας.</value>
+    <value>Δεν είναι δυνατή η ανάγνωση του χαρακτήρα διαχωρισμού ομάδων.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Κάποιοι αναφερόμενοι χαρακτήρες είναι ασαφείς. Μπορούν να αναφερθούν μεμονωμένα αλλά χρησιμοποιούνται επίσης για να συνθέσουν πολυσύνθετους: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +310,13 @@
     <value>Η βαθμονόμηση απέτυχε. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Υποστηρίζονται οι χαρακτήρες διαχωριστή EDI.</value>
+    <value>Οι χαρακτήρες διαχωρισμού αρχείων υποστηρίζονται.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Ο αναφερόμενος χаρακτήρας {0} είναι ασαφής. Τα barcodes που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 για να αναπαραστήσουν δεδομένα EDI δεν μπορούν να διαβαστούν αξιόπιστα.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Ο σαρωτής γραμμωτού κώδικα και οι διατάξεις πληκτρολογίου του υπολογιστή δεν αντιστοιχούν κατά την αναπαράσταση των διαχωριστικών μονάδων.
+</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Οι διατάξεις πληκτρολογίου του σαρωτή barcode και του υпολογιστή δεν αнτιστοιχούν κατά την αναπαράσταση διαχωριστών EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Η αντιστοιχία των διατάξεων πληκτρολογίου του σαρωτή barcode και του υπολογιστή δεν μπορεί να καθοριστεί.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +331,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Οι χαρακτήρες διαχωρισμού μονάδων υποστηρίζονται.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Ο αναφερόμενος χαρακτήρας {0} είναι ασαφής. Οι γραμμωτοί κώδικες που χρησιμοποιούν ASCII 28 ή ASCII 31 ενδέχεται να μην διαβάζονται αξιόπιστα.</value>
-  </data>
-  <data name="CalibrationInformation_213" xml:space="preserve">
+  <data name="CalibrationInformation_217" xml:space="preserve">
     <value>Ο χαρακτήρας διαχωρισμού αρχείων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
   </data>
-  <data name="CalibrationInformation_214" xml:space="preserve">
+  <data name="CalibrationInformation_221" xml:space="preserve">
     <value>Ο χαρακτήρας διαχωρισμού μονάδας δεν μπορεί να διαβαστεί αξιόπιστα.</value>
   </data>
-  <data name="CalibrationInformation_215" xml:space="preserve">
+  <data name="CalibrationInformation_225" xml:space="preserve">
     <value>Ο χαρακτήρας τέλους μετάδοσης δεν μπορεί να διαβαστεί αξιόπιστα.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Οι χαρακτήρες τέλους μετάδοσης υποστηρίζονται.</value>
+  </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Ο σαρωτής γραμμωτού κώδικα δεν μεταδίδει ακολουθία χαρακτήρων τέλους γραμμής (π.χ. επιστροφή καροτσιού).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} είναι διφορούμενος. Υπάρχουν πολλαπλά πλήκτρα για τον ίδιο χαρακτήρα, το καθένα αντιπροσωπεύει διαφορετικό αναμενόμενο χαρακτήρα. Ωστόσο, το πολύ μόνο ένας από τους αναμενόμενους χαρακτήρες είναι αμετάβλητος.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Ορισμένοι αναφερόμενοι χαρακτήρες είναι διφορούμενοι. Υπάρχουν πολλαπλά πλήκτρα για τον ίδιο χαρακτήρα, το καθένα αντιπροσωπεύει έναν διαφορετικό μη αμετάβλητο αναμενόμενο χαρακτήρα ASCII: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Οι αναγνωριστικοί κωδικοί AIM δεν μπορούν να αναγνωριστούν. Ο αναφερόμενος χαρακτήρας {0} είναι διφορούμενος. Υπάρχουν πολλαπλά πλήκτρα για αυτόν τον χαρακτήρα που αντιπροσωπεύει τον χαρακτήρα σημαίας AIM καθώς και άλλους αναμενόμενους χαρακτήρες.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Ορισμένοι αναφερόμενοι μη αμετάβλητοι χαρακτήρες ASCII είναι διφορούμενοι: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν διαχωριστή αρχείων είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 για να αναπαραστήσουν δεδομένα EDI δεν μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν διαχωριστή μονάδων είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 για να αναπαραστήσουν δεδομένα EDI δεν μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν χαρακτήρα τέλους μετάδοσης είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν τη σύνταξη ISO/IEC 15434 δεν μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Ορισμένες ακολουθίες χαρακτήρων που αναφέρθηκαν είναι διφορούμενες. Αυτοί οι χαρακτήρες δεν αντιπροσωπεύουν αμετάβλητους χαρακτήρες: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Αυτό μπορεί να αποτρέψει την ανάγνωση οποιωνδήποτε πρόσθετων στοιχείων δεδομένων που περιλαμβάνονται σε έναν γραμμωτό κώδικα.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν διαχωριστή αρχείων είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν χαρακτήρες ελέγχου ASCII 28 ενδέχεται να μην μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν διαχωριστή μονάδων είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν χαρακτήρες ελέγχου ASCII 31 ενδέχεται να μην μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας {0} για έναν χαρακτήρα τέλους μετάδοσης είναι διφορούμενος. Οι γραμμωτοί κώδικες που χρησιμοποιούν χαρακτήρες ελέγχου ASCII04 ενδέχεται να μην μπορούν να διαβαστούν αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Αυτή αντιπροσωπεύει τον χαρακτήρα διαχωρισμού εγγραφής.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Ο αναφερόμενος χαρακτήρας για έναν αμετάβλητο χαρακτήρα είναι ο ίδιος με τον χαρακτήρα που αναφέρεται για το τέλος της μετάδοσης.
+</value>
+  </data>
+  <data name="CalibrationInformation_213" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση του χαρακτήρα διαχωρισμού εγγραφών.</value>
+  </data>
+  <data name="CalibrationInformation_214" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού εγγραφών δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_215" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού εγγραφών δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση του χαρακτήρα διαχωρισμού αρχείων.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού αρχείων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού αρχείων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση του χαρακτήρα διαχωρισμού μονάδων.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού μονάδων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας διαχωρισμού μονάδων δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Δεν είναι δυνατή η ανάγνωση του χαρακτήρα τέλους μετάδοσης.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας τέλους μετάδοσης δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι διφορούμενη. Ο χαρακτήρας τέλους μετάδοσης δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Η αναφερόμενη ακολουθία χαρακτήρων {0} είναι ασαφής. Αυτή αντιπροσωπεύει τον χαρακτήρα διαχωριστή ομάδας.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Ο αναγνωριστικός κωδικός AIM δεν μπορεί να διαβαστεί αξιόπιστα.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Ο σαρωτής γραμμωτού κώδικα και οι διατάξεις πληκτρολογίου του υπολογιστή δεν αντιστοιχούν κατά την αναπαράσταση των διαχωριστικών αρχείων.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Ο σαρωτής γραμμωτού κώδικα και οι διατάξεις πληκτρολογίου του υπολογιστή δεν αντιστοιχούν κατά την αναπαράσταση των χαρακτήρων τέλους μετάδοσης.</value>
   </data>
 </root>

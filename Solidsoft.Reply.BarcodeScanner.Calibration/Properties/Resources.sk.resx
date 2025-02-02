@@ -198,77 +198,57 @@
   <data name="CalibrationInformation_212" xml:space="preserve">
     <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 nie je možné spoľahlivo čítať.</value>
   </data>
-  <data name="CalibrationInformation_220" xml:space="preserve">
+  <data name="CalibrationInformation_230" xml:space="preserve">
     <value>Čítačka čiarových kódov neprenáša identifikátor AIM.</value>
   </data>
-  <data name="CalibrationInformation_221" xml:space="preserve">
+  <data name="CalibrationInformation_231" xml:space="preserve">
     <value>Identifikátor AIM nie je možné rozpoznať.</value>
   </data>
-  <data name="CalibrationInformation_230" xml:space="preserve">
+  <data name="CalibrationInformation_240" xml:space="preserve">
     <value>Čítačka čiarových kódov prenáša predponu: {0}</value>
   </data>
-  <data name="CalibrationInformation_231" xml:space="preserve">
+  <data name="CalibrationInformation_241" xml:space="preserve">
     <value>Čítačka čiarových kódov prenáša kód: {0}</value>
   </data>
-  <data name="CalibrationInformation_232" xml:space="preserve">
+  <data name="CalibrationInformation_242" xml:space="preserve">
     <value>Čítačka čiarových kódov prenáša príponu: {0}</value>
   </data>
-  <data name="CalibrationInformation_240" xml:space="preserve">
-    <value>Čítačka čiarových kódov neprenáša sekvenciu znakov konca riadka (napr. návrat vozíka).</value>
-  </data>
-  <data name="CalibrationInformation_250" xml:space="preserve">
-    <value>Nahlásený znak {0} je nejednoznačný. Existujú viaceré klávesy pre ten istý znak, každá reprezentuje iný očakávaný znak. Avšak maximálne iba jeden z očakávaných znakov je invariantný.</value>
-  </data>
-  <data name="CalibrationInformation_251" xml:space="preserve">
-    <value>Niektoré nahlásené znaky sú nejednoznačné. Existujú viaceré klávesy pre ten istý znak, každá reprezentuje iný očakávaný neinvariantný znak ASCII: {0}</value>
-  </data>
-  <data name="CalibrationInformation_252" xml:space="preserve">
-    <value>Identifikátory AIM nie je možné rozpoznať. Nahlásený znak {0} je nejednoznačný. Existuje viacero klávesov pre tento znak, ktorý reprezentuje znak vlajky AIM aj ďalšie očakávané znaky.</value>
-  </data>
-  <data name="CalibrationInformation_253" xml:space="preserve">
-    <value>Niektoré nahlásené neinvariantné znaky ASCII sú nejednoznačné: {0}</value>
-  </data>
-  <data name="CalibrationInformation_256" xml:space="preserve">
-    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To môže zabrániť čítaniu akýchkoľvek ďalších údajových prvkov zahrnutých v čiarovom kóde.</value>
-  </data>
-  <data name="CalibrationInformation_255" xml:space="preserve">
-    <value>Niektoré nahlásené postupnosti znakov sú nejednoznačné. Tieto znaky nezastupujú invariantné znaky: {0}</value>
-  </data>
-  <data name="CalibrationInformation_260" xml:space="preserve">
+  <data name="CalibrationInformation_270" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá.</value>
   </data>
-  <data name="CalibrationInformation_261" xml:space="preserve">
+  <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pre invariantné znaky.</value>
   </data>
-  <data name="CalibrationInformation_262" xml:space="preserve">
+  <data name="CalibrationInformation_272" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pre neinvariantné znaky ASCII.</value>
   </data>
-  <data name="CalibrationInformation_263" xml:space="preserve">
+  <data name="CalibrationInformation_274" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii skupinových oddeľovačov.</value>
   </data>
-  <data name="CalibrationInformation_264" xml:space="preserve">
+  <data name="CalibrationInformation_275" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii oddeľovačov záznamov.</value>
   </data>
-  <data name="CalibrationInformation_266" xml:space="preserve">
+  <data name="CalibrationInformation_278" xml:space="preserve">
     <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii identifikátorov AIM.</value>
   </data>
-  <data name="CalibrationInformation_270" xml:space="preserve">
+  <data name="CalibrationInformation_280" xml:space="preserve">
     <value>Caps Lock je zapnutý.</value>
   </data>
-  <data name="CalibrationInformation_271" xml:space="preserve">
+  <data name="CalibrationInformation_281" xml:space="preserve">
     <value>Caps Lock môže byť zapnutý.</value>
   </data>
-  <data name="CalibrationInformation_272" xml:space="preserve">
+  <data name="CalibrationInformation_282" xml:space="preserve">
     <value>Čítačka čiarových kódov môže byť nakonfigurovaná na prevod znakov na veľké písmená.</value>
   </data>
-  <data name="CalibrationInformation_273" xml:space="preserve">
+  <data name="CalibrationInformation_283" xml:space="preserve">
     <value>Čítačka čiarových kódov môže byť nakonfigurovaná na prevod znakov na malé písmená.</value>
   </data>
-  <data name="CalibrationInformation_274" xml:space="preserve">
+  <data name="CalibrationInformation_284" xml:space="preserve">
     <value>Čítačka čiarových kódov môže byť nakonfigurovaná na inverziu veľkosti písmen.</value>
   </data>
-  <data name="CalibrationInformation_280" xml:space="preserve">
-    <value>Najlepší nahlásený čas zadávania údajov z klávesnice počas kalibrácie naznačuje, že čítačka čiarových kódov nepracuje optimálne.</value>
+  <data name="CalibrationInformation_290" xml:space="preserve">
+    <value>Najlepší nahlásený čas zadávania údajov z klávesnice počas kalibrácie naznačuje, že čítačka čiarových kódov nepracuje optimálne.
+</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
     <value>Neboli nahlásené žiadne údaje o kalibrácii.</value>
@@ -316,9 +296,9 @@
     <value>Znak {0} nie je možné spoľahlivo reprezentovať kvôli nekompatibilite s rozložením klávesnice.</value>
   </data>
   <data name="CalibrationInformation_366" xml:space="preserve">
-    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To predstavuje znak skupinového oddeľovača.</value>
+    <value>Znak oddeľovača skupín nie je možné prečítať.</value>
   </data>
-  <data name="CalibrationInformation_367" xml:space="preserve">
+  <data name="CalibrationInformation_368" xml:space="preserve">
     <value>Niektoré nahlásené znaky sú nejednoznačné. Môžu byť nahlásené samostatne, ale sú tiež použité na tvorbu ligatúr: {0}</value>
   </data>
   <data name="CalibrationInformation_370" xml:space="preserve">
@@ -331,15 +311,12 @@
     <value>Kalibrácia zlyhala. {0}</value>
   </data>
   <data name="CalibrationInformation_162" xml:space="preserve">
-    <value>Podporované sú znaky oddeľovača EDI.</value>
+    <value>Znaky oddeľovača súborov sú podporované.</value>
   </data>
-  <data name="CalibrationInformation_254" xml:space="preserve">
-    <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 na reprezentáciu EDI údajov nie je možné spoľahlivo čítať.</value>
+  <data name="CalibrationInformation_276" xml:space="preserve">
+    <value>Čítačka čiarových kódov a rozloženie klávesnice počítača sa nezhodujú pri zobrazovaní oddeľovačov jednotiek.</value>
   </data>
-  <data name="CalibrationInformation_265" xml:space="preserve">
-    <value>Rozloženie klávesnice čítačky čiarových kódov a počítača nezodpovedá pri reprezentácii oddeľovačov EDI.</value>
-  </data>
-  <data name="CalibrationInformation_267" xml:space="preserve">
+  <data name="CalibrationInformation_279" xml:space="preserve">
     <value>Zodpovedajúce rozloženie čítačky čiarových kódov a klávesnice počítača nie je možné určiť.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
@@ -354,19 +331,110 @@
   <data name="CalibrationInformation_163" xml:space="preserve">
     <value>Znak oddelovača jednotiek je podporovaný.</value>
   </data>
-  <data name="CalibrationInformation_257" xml:space="preserve">
-    <value>Nahlásený znak {0} je nejednoznačný. Čiarové kódy, ktoré používajú ASCII 28 alebo ASCII 31, nemusia byť spoľahlivo čítané.</value>
+  <data name="CalibrationInformation_217" xml:space="preserve">
+    <value>Znak oddeľovača súborov sa nedá spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_221" xml:space="preserve">
+    <value>Znak oddeľovača jednotiek sa nedá spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_225" xml:space="preserve">
+    <value>Znak konca prenosu sa nedá spoľahlivo prečítať.</value>
   </data>
   <data name="CalibrationInformation_164" xml:space="preserve">
     <value>Znaky konca prenosu sú podporované.</value>
   </data>
+  <data name="CalibrationInformation_245" xml:space="preserve">
+    <value>Snímač čiarových kódov neprenáša sekvenciu znakov konca riadka (napr. návrat vozíka).</value>
+  </data>
+  <data name="CalibrationInformation_250" xml:space="preserve">
+    <value>Hlásený znak {0} je nejednoznačný. Existuje viacero kláves pre ten istý znak, z ktorých každý predstavuje iný očakávaný znak. Avšak, najviac iba jeden z očakávaných znakov je nemenný.</value>
+  </data>
+  <data name="CalibrationInformation_251" xml:space="preserve">
+    <value>Niektoré hlásené znaky sú nejednoznačné. Existuje viacero kláves pre ten istý znak, z ktorých každý predstavuje iný neočakávaný nemenný znak ASCII: {0}</value>
+  </data>
+  <data name="CalibrationInformation_252" xml:space="preserve">
+    <value>Identifikátory AIM nie je možné rozpoznať. Hlásený znak {0} je nejednoznačný. Existuje viacero kláves pre tento znak, ktorý predstavuje znak vlajky AIM, ako aj ďalšie očakávané znaky.</value>
+  </data>
+  <data name="CalibrationInformation_253" xml:space="preserve">
+    <value>Niektoré hlásené nemenné znaky ASCII sú nejednoznačné: {0}</value>
+  </data>
+  <data name="CalibrationInformation_254" xml:space="preserve">
+    <value>Hlásený znak {0} pre oddeľovač súborov je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 na reprezentáciu dát EDI nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_255" xml:space="preserve">
+    <value>Hlásený znak {0} pre oddeľovač jednotiek je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 na reprezentáciu dát EDI nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_256" xml:space="preserve">
+    <value>Hlásený znak {0} pre znak konca prenosu je nejednoznačný. Čiarové kódy používajúce syntax ISO/IEC 15434 nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_257" xml:space="preserve">
+    <value>Niektoré hlásené sekvencie znakov sú nejednoznačné. Tieto znaky nepredstavujú nemenné znaky: {0}</value>
+  </data>
+  <data name="CalibrationInformation_258" xml:space="preserve">
+    <value>Hlásená sekvencia znakov {0} je nejednoznačná. Môže to zabrániť čítaniu akýchkoľvek ďalších údajových prvkov obsiahnutých v čiarovom kóde.</value>
+  </data>
+  <data name="CalibrationInformation_259" xml:space="preserve">
+    <value>Hlásený znak {0} pre oddeľovač súborov je nejednoznačný. Čiarové kódy používajúce riadiace znaky ASCII 28 nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_260" xml:space="preserve">
+    <value>Hlásený znak {0} pre oddeľovač jednotiek je nejednoznačný. Čiarové kódy používajúce riadiace znaky ASCII 31 nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_261" xml:space="preserve">
+    <value>Hlásený znak {0} pre znak konca prenosu je nejednoznačný. Čiarové kódy používajúce riadiace znaky ASCII04 nemusia byť spoľahlivo čitateľné.</value>
+  </data>
+  <data name="CalibrationInformation_262" xml:space="preserve">
+    <value>Hlásená sekvencia znakov {0} je nejednoznačná. Predstavuje znak oddeľovača záznamov.</value>
+  </data>
+  <data name="CalibrationInformation_165" xml:space="preserve">
+    <value>Hlásený znak pre invariantný znak je rovnaký ako znak hlásený pre znak konca prenosu.
+</value>
+  </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
-    <value>Znak oddeľovača súborov sa nedá spoľahlivo prečítať.</value>
+    <value>Znak oddeľovača záznamov nie je možné prečítať.</value>
   </data>
   <data name="CalibrationInformation_214" xml:space="preserve">
-    <value>Znak oddeľovača jednotiek sa nedá spoľahlivo prečítať.</value>
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača záznamov nie je možné spoľahlivo prečítať.</value>
   </data>
   <data name="CalibrationInformation_215" xml:space="preserve">
-    <value>Znak konca prenosu sa nedá spoľahlivo prečítať.</value>
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača záznamov nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_216" xml:space="preserve">
+    <value>Znak oddeľovača súborov nie je možné prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_218" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača súborov nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_219" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača súborov nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_220" xml:space="preserve">
+    <value>Znak oddeľovača jednotiek nie je možné prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_222" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača jednotiek nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_223" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak oddeľovača jednotiek nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_224" xml:space="preserve">
+    <value>Znak konca prenosu nie je možné prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_226" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak konca prenosu nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_227" xml:space="preserve">
+    <value>Ohlásený reťazec znakov {0} je nejednoznačný. Znak konca prenosu nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_367" xml:space="preserve">
+    <value>Nahlásená postupnosť znakov {0} je nejednoznačná. To predstavuje znak skupinového oddeľovača.</value>
+  </data>
+  <data name="CalibrationInformation_232" xml:space="preserve">
+    <value>Identifikátor AIM nie je možné spoľahlivo prečítať.</value>
+  </data>
+  <data name="CalibrationInformation_273" xml:space="preserve">
+    <value>Čítačka čiarových kódov a rozloženie klávesnice počítača sa nezhodujú pri zobrazovaní oddeľovačov súborov.</value>
+  </data>
+  <data name="CalibrationInformation_277" xml:space="preserve">
+    <value>Čítačka čiarových kódov a rozloženie klávesnice počítača sa nezhodujú pri zobrazovaní znakov konca prenosu.</value>
   </data>
 </root>

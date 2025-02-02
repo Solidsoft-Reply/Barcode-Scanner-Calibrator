@@ -124,81 +124,81 @@ public class Calibrator {
     /// <summary>
     ///   Returns a regular expression for matching AIM identifiers.
     /// </summary>
-    private static readonly Regex AimIdentifierMatchRegex = new(@"^(?<prefix>.*)(?<characters>][A-Za-z][1-9A-Za-z])(?<code>.*)$", RegexOptions.None);
+    private static readonly Regex AimIdentifierMatchRegex = new (@"^(?<prefix>.*)(?<characters>][A-Za-z][1-9A-Za-z])(?<code>.*)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for matching AIM identifiers with unrecognised flag characters.
     /// </summary>
-    private static readonly Regex AimIdentifierUnrecognisedFlagMatchRegex = new(@"^(?<prefix>.*)(?<characters>\u0000[A-Za-z][1-9A-Za-z])(?<code>.*)$", RegexOptions.None);
+    private static readonly Regex AimIdentifierUnrecognisedFlagMatchRegex = new (@"^(?<prefix>.*)(?<characters>\u0000[A-Za-z][1-9A-Za-z])(?<code>.*)$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for invariant character strings of variable length.
     /// </summary>
-    private static readonly Regex InvariantsMatchRegex = new(@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]+$", RegexOptions.None);
+    private static readonly Regex InvariantsMatchRegex = new (@"^[-!""%&'()*+,./0-9:;<=>?A-Z_a-z]+$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for invariant character strings of variable length.
     /// </summary>
-    private static readonly Regex DeadKeyAsciiControlCharacterSequenceRegex = new(@"\u0000(\u0000*\u0004)([^\u0000\u0020\u0040])$", RegexOptions.None);
+    private static readonly Regex DeadKeyAsciiControlCharacterSequenceRegex = new (@"\u0000(\u0000*\u0004)([^\u0000\u0020\u0040])$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for dead key candidates.
     /// </summary>
-    private static readonly Regex DeadKeysRegex = new(@"\0.", RegexOptions.None);
+    private static readonly Regex DeadKeysRegex = new (@"\0.", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for temporary space holder insertion for case 1.
     /// </summary>
-    private static readonly Regex Case1TempSpaceHolderRegex = new(@"(?<a>\u0000[^\u0020])\u0020(?=[^\u0020])", RegexOptions.None);
+    private static readonly Regex Case1TempSpaceHolderRegex = new (@"(?<a>\u0000[^\u0020])\u0020(?=[^\u0020])", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for temporary space holder insertion for case 2.
     /// </summary>
-    private static readonly Regex Case2TempSpaceHolderRegex = new(@"(?<a>\u0000[^\u0020]{0,1})\u0020{4}", RegexOptions.None);
+    private static readonly Regex Case2TempSpaceHolderRegex = new (@"(?<a>\u0000[^\u0020]{0,1})\u0020{4}", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for reported dead key sequences where the key is not a dead key on the
     ///   scanner keyboard.
     /// </summary>
     /// <returns>A regular expression.</returns>
-    private static readonly Regex NonMatchingDeadKeyComputerKeyboardCandidatesRegex = new(@"(?<a>\u0000[^\u0020])((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
+    private static readonly Regex NonMatchingDeadKeyComputerKeyboardCandidatesRegex = new (@"(?<a>\u0000[^\u0020])((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression for reported dead key sequences where the key is not a dead key on the
     ///   scanner keyboard.
     /// </summary>
-    private static readonly Regex MatchingDeadKeyComputerKeyboardRegex = new(@"(?<a>\u0000[^\u0020])\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
+    private static readonly Regex MatchingDeadKeyComputerKeyboardRegex = new (@"(?<a>\u0000[^\u0020])\u0020((?=[^\u0020])|(?=(\u0020){2}))", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect sequences of six or more spaces in multiples
     ///   of three and mark each capture except the last.
     /// </summary>
-    private static readonly Regex ThreeSpaceTempSpaceHolderRegex = new(@"(?<c>^|[^\u0020])(?<s>\u0020{3}){2,}?(?!\u0020)", RegexOptions.None);
+    private static readonly Regex ThreeSpaceTempSpaceHolderRegex = new (@"(?<c>^|[^\u0020])(?<s>\u0020{3}){2,}?(?!\u0020)", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect each occurrence of exactly two spaces.
     /// </summary>
-    private static readonly Regex TwoSpaceTempSpaceHolderRegex = new(@"(?<c>^|[^\u0020])\u0020{2}(?!\u0020)", RegexOptions.None);
+    private static readonly Regex TwoSpaceTempSpaceHolderRegex = new (@"(?<c>^|[^\u0020])\u0020{2}(?!\u0020)", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect unassigned keys.
     /// </summary>
-    private static readonly Regex UnassignedKeysRegex = new(@"^\u0000\u0020?$", RegexOptions.None);
+    private static readonly Regex UnassignedKeysRegex = new (@"^\u0000\u0020?$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to filter dead key sequences (case 1).
     /// </summary>
-    private static readonly Regex BarcodeScannerDeadKeysFilter1Regex = new(@"(^|\0)[^\u0020]\u0020$", RegexOptions.None);
+    private static readonly Regex BarcodeScannerDeadKeysFilter1Regex = new (@"(^|\0)[^\u0020]\u0020$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to filter dead key sequences (case 2).
     /// </summary>
-    private static readonly Regex BarcodeScannerDeadKeysFilter2Regex = new(@"^\0[^\u0020]\u0020$", RegexOptions.None);
+    private static readonly Regex BarcodeScannerDeadKeysFilter2Regex = new (@"^\0[^\u0020]\u0020$", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect chained dead key sequences.
     /// </summary>
-    private static readonly Regex ChainedDeadKeysFilter2Regex = new(@"\u0000{2,}(\w|[!""#$%&'()*+,./:;<=>?@\^_`{|}~-])", RegexOptions.None);
+    private static readonly Regex ChainedDeadKeysFilter2Regex = new (@"\u0000{2,}(\w|[!""#$%&'()*+,./:;<=>?@\^_`{|}~-])", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect suffixes. This is relevant during small barcode processing where
@@ -207,18 +207,18 @@ public class Calibrator {
     ///   that in some cases, an ASCII 0 may not be reported for a Control Character that the barcodes scanner
     ///   does not support. It assumes that Control Characters never result in Dead Key activations.
     /// </summary>
-    private static readonly Regex SuffixRegex = new(@"(([^\s]\s{4})|([^\s]\s{8})|([^\s]\s{12})|([^\s]\s{16})|([^\s]\s{19})|([^\s]\s{20}))(?!.*\s{4})(?<s>\s{0,3}.*)$", RegexOptions.None);
+    private static readonly Regex SuffixRegex = new (@"(([^\s]\s{4})|([^\s]\s{8})|([^\s]\s{12})|([^\s]\s{16})|([^\s]\s{19})|([^\s]\s{20}))(?!.*\s{4})(?<s>\s{0,3}.*)$", RegexOptions.None);
 
     /// <summary>
     /// Return a regular expression to detect any character except a space.
     /// </summary>
-    private static readonly Regex AllSpaces = new(@"[^ ]", RegexOptions.None);
+    private static readonly Regex AllSpaces = new (@"[^ ]", RegexOptions.None);
 
     /// <summary>
     ///   Returns a regular expression to detect prefixes.  It is a best-endeavours approach that
     ///   assumes that the prefix never contains a sequence of two or more spaces, unless they appear at the end of prefix.
     /// </summary>
-    private static readonly Regex PrefixRegex = new(@"^(?<prefix>.*?)(?=\u0020\u0020[^\u0020]).*$", RegexOptions.None);
+    private static readonly Regex PrefixRegex = new (@"^(?<prefix>.*?)(?=\u0020\u0020[^\u0020]).*$", RegexOptions.None);
 #endif
 
     /// <summary>
@@ -510,17 +510,17 @@ public class Calibrator {
     /// <summary>
     ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 28 character.
     /// </summary>
-    private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs;
+    private bool _tokenExtendedDataUnreadableFs;
 
     /// <summary>
     ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 31 character.
     /// </summary>
-    private bool _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs;
+    private bool _tokenExtendedDataUnreadableUs;
 
     /// <summary>
     ///   Indicates whether EDI data in an ISO/IEC 15434 barcode may be unreadable due to non-representation of ASCII 04 character.
     /// </summary>
-    private bool _tokenExtendedDataPotentialIsoIec15434EotUnreadable;
+    private bool _tokenExtendedDataEotUnreadable;
 
     /// <summary>
     /// Any suffix and end-of-line sequence recorded while processing small barcodes.
@@ -1021,7 +1021,7 @@ public class Calibrator {
 
                     LogCalibrationInformation(
                         @out,
-                        InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
+                        InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable,
                         char.MinValue.ToControlPictureString(),
                         $"] {existingMap.ToControlPictureString()}");
 
@@ -1030,7 +1030,7 @@ public class Calibrator {
                         existingMap switch {
                             '\u001C' => InformationType.NonCorrespondingKeyboardLayoutsFileSeparator,
                             '\u001F' => InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator,
-                            '\u0004' => InformationType.NonCorrespondingKeyboardLayoutsEoT,
+                            '\u0004' => InformationType.NonCorrespondingKeyboardLayoutsEotCharacter,
                             _ => throw new ArgumentOutOfRangeException(nameof(existingMap))
                         });
 
@@ -2816,11 +2816,11 @@ public class Calibrator {
          * a non-space character (first case), or a delimiter sequence of at least two spaces (second case). No space is consumed
          * because the barcode scanner types in an additional space to enter the literal dead key character.
          *
-         * First, we need to detect all candidate reported dead keys for which the expected character is not entered using a dead key. This is
-         * necessary because, if the key on the barcode scanner keyboard layout is not a dead key, this indicates a keyboard mismatch
-         * which we need to report here.  Consider the case where the ' key on the scanner keyboard layout matches the ' dead key on
-         * the computer keyboard layout.  If the ' key on the scanner keyboard layout is, itself, a dead key, the keyboard layouts
-         * may well be identical.  If it is not a dead key, the keyboard layouts clearly do not match.
+         * First, we need to detect all candidate reported dead keys for which the expected character is not entered using a dead key.
+         * This is necessary because, if the key on the barcode scanner keyboard layout is not a dead key, this indicates a keyboard
+         * mismatch which we need to report here.  Consider the case where the ' key on the scanner keyboard layout matches the ' dead
+         * key on the computer keyboard layout.  If the ' key on the scanner keyboard layout is, itself, a dead key, the keyboard
+         * layouts may well be identical.  If it is not a dead key, the keyboard layouts clearly do not match.
          * */
 #if NET7_0_OR_GREATER
         var candidateNonMatches = NonMatchingDeadKeyComputerKeyboardCandidatesRegex().Matches(data);
@@ -2845,8 +2845,8 @@ public class Calibrator {
             token = LogCalibrationInformation(token, InformationType.NonCorrespondingKeyboardLayouts);
         }
 
-        /* Next, for matching dead keys, we will replace the single space in the first case with a space holder. In the case that the
-         * second key 'pressed' on the scanner maps to an unassigned key
+        /* Next, for matching dead keys, we will replace the single space in the first case with a space holder. In the case
+         * that the second key 'pressed' on the scanner maps to an unassigned key
          * */
 #if NET7_0_OR_GREATER
         data = Case1TempSpaceHolderRegex().Replace(data, $"${{a}}{tempSpaceHolder}");
@@ -2855,8 +2855,8 @@ public class Calibrator {
 #endif
 
         /* Next, we will replace the first space in the second case. We need to preserve a single space in the last position,
-         * but we are about to normalise all sequences of fours spaces to three. So we detect matched dead keys immediately before
-         * a sequence of four spaces and replace the first space with a space holder.
+         * but we are about to normalise all sequences of fours spaces to three. So we detect matched dead keys immediately
+         * before a sequence of four spaces and replace the first space with a space holder.
          * */
 #if NET7_0_OR_GREATER
         data = Case2TempSpaceHolderRegex().Replace(data, $"${{a}}{tempSpaceHolder}{new string('\u0020', 3)}");
@@ -2914,7 +2914,7 @@ public class Calibrator {
                     continue;
                 }
 
-                if (idx >= 7) {
+                if (idx >= 8) {
                     var addSpace = new string(' ', segment == tempSpaceHolder.ToString() ? 1 : 2);
                     segments[idx] = segment.Replace(tempSpaceHolder.ToString(), addSpace, StringComparison.Ordinal);
                     continue;
@@ -2948,7 +2948,7 @@ public class Calibrator {
                                     $"{processedExpectedPrefix}{tempSpaceHolder}",
                                     StringComparison.Ordinal)
                                     /* The expected reported prefix only needs to be set if the barcode scanner is configured to transmit a prefix that
-                                     * includes onε or more spaces. We have probably found the prefix, although this is not 100% reliable. We are
+                                     * includes one or more spaces. We have probably found the prefix, although this is not 100% reliable. We are
                                      * forced to take a best-endeavours approach here
                                      * */
                                     ? segments[0].IndexOf(
@@ -3756,11 +3756,17 @@ public class Calibrator {
                                         var expectedCharacterReportedAsDeadKey = _tokenDataValue.ToControlPictureString();
                                         var expectedSequence =
                                             $"{expectedCharacterReportedAsDeadKey}{'\u001D'.ToControlPictureString()}{conflictingExpectedCharacter} {expectedCharacterReportedAsDeadKey}{conflictingExpectedCharacter}";
+                                        var ambiguousInvariant =
+#if NET7_0_OR_GREATER
+                                            InvariantsMatchRegex().IsMatch(conflictingExpectedCharacter.ToInvariantString());
+#else
+                                            InvariantsMatchRegex.IsMatch(conflictingExpectedCharacter.ToInvariantString());
+#endif
 
                                         /* ASCII 29 characters are not being emitted. This is only treated as an error if the conflict
                                          * maps to the first character of a data element identifier for a given syntax (GS1 AIs or ASC MH
-                                         * 10.8.2 DIs) provided via the ReportedDataElements property, or if no data elements are specified
-                                         * via the ReportedDataElements property. Otherwise, if a list reported data elements is provided,
+                                         * 10.8.2 DIs) provided via the RecognisedDataElements property, or if no data elements are specified
+                                         * via the RecognisedDataElements property. Otherwise, if a list of reported data elements is provided,
                                          * but the conflict does mot map to the first character of any stated data element identifiers,
                                          * a warning is provided stating that it may not be possible to reliably read barcodes containing
                                          * other data elements.
@@ -3776,31 +3782,37 @@ public class Calibrator {
                                          * this makes no difference in this scenario, it is an example of the way that characters
                                          * can logically be reported out of sequence in certain dead key scenarios.
                                          * */
-                                        if (RecognisedDataElements is { Count: > 0 }) {
+                                        if (RecognisedDataElements is { Count: > 0 })
+                                        {
                                             if (RecognisedDataElements.Any(e =>
                                                     conflictingExpectedCharacter ==
-                                                    e.Identifier[0])) {
+                                                    e.Identifier[0]))
+                                            {
                                                 // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                                 return LogCalibrationInformation(
+                                                InitializeTokenData(),
+                                                InformationType.GroupSeparatorNotReliablyReadableInvariant,
+                                                reportedSequence,
+                                                expectedSequence);
+                                            }
+
+                                            if (!ambiguousInvariant) {
+                                                // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data
+                                                // elements included in a barcode.
+                                                token = LogCalibrationInformation(
                                                     InitializeTokenData(),
-                                                    InformationType.GroupSeparatorMapping,
+                                                    InformationType.ControlCharacterMappingNonInvariants,
                                                     reportedSequence,
                                                     expectedSequence);
                                             }
-
-                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data
-                                            // elements included in a barcode.
-                                            token = LogCalibrationInformation(
-                                                InitializeTokenData(),
-                                                InformationType.ControlCharacterMappingAdditionalDataElements,
-                                                reportedSequence,
-                                                expectedSequence);
                                         }
                                         else {
                                             // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                             return LogCalibrationInformation(
                                                 InitializeTokenData(),
-                                                InformationType.GroupSeparatorMapping,
+                                                ambiguousInvariant
+                                                    ? InformationType.GroupSeparatorNotReliablyReadableInvariant
+                                                    : InformationType.ControlCharacterMappingNonInvariants,
                                                 reportedSequence,
                                                 expectedSequence);
                                         }
@@ -3815,10 +3827,16 @@ public class Calibrator {
                                     else if (RecognisedDataElements.Any(e =>
                                                  reportedCharacterSequence[1] ==
                                                  e.Identifier[0])) {
+                                        var ambiguousInvariant =
+#if NET7_0_OR_GREATER
+                                            InvariantsMatchRegex().IsMatch(expectedCharacter[0].ToInvariantString());
+#else
+                                            InvariantsMatchRegex.IsMatch(expectedCharacter[0].ToInvariantString());
+#endif
                                         // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                         return LogCalibrationInformation(
                                             InitializeTokenData(),
-                                            InformationType.GroupSeparatorMapping,
+                                            InformationType.GroupSeparatorNotReliablyReadableInvariant,
                                             reportedCharacterSequence.ToControlPictures(),
                                             $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {'\u001D'.ToControlPictureString()}{reportedCharacterSequence[1].ToControlPictureString()}");
                                     }
@@ -3835,7 +3853,7 @@ public class Calibrator {
                                         // included in a barcode.
                                         token = LogCalibrationInformation(
                                             InitializeTokenData(),
-                                            InformationType.ControlCharacterMappingAdditionalDataElements,
+                                            InformationType.ControlCharacterMappingNonInvariants,
                                             reportedCharacterSequence.ToControlPictures(),
                                             $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter[0].ToControlPictureString()} {'\u001D'.ToControlPictureString()}{reportedCharacterSequence[1].ToControlPictureString()}");
                                     }
@@ -3977,7 +3995,7 @@ public class Calibrator {
                 // included in a barcode.
                 : LogCalibrationInformation(
                     InitializeTokenData(),
-                    InformationType.ControlCharacterMappingAdditionalDataElements,
+                    InformationType.ControlCharacterMappingNonInvariants,
                     reportedCharacterSequence[1].ToControlPictureString(),
                     $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {_tokenExtendedDataCharacterMap[reportedCharacterSequence[1]]}");
 
@@ -4008,8 +4026,8 @@ public class Calibrator {
         string reportedCharacterSequence,
         string expectedCharacter) {
         // If ASCII 28 and/or ASCII 31 characters are not being emitted, there may be a warning.
-        return _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs ||
-               _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs
+        return _tokenExtendedDataUnreadableFs ||
+               _tokenExtendedDataUnreadableUs
 
                    // Is there a potential conflict with the character map?
                    ? TestPotentialConflictWithCharacterMap()
@@ -4044,7 +4062,7 @@ public class Calibrator {
                 // included in a barcode.
                 : LogCalibrationInformation(
                     InitializeTokenData(),
-                    InformationType.ControlCharacterMappingAdditionalDataElements,
+                    InformationType.ControlCharacterMappingNonInvariants,
                     reportedCharacterSequence[1].ToControlPictureString(),
                     $"{_tokenDataValue.ToControlPictureString()}{expectedCharacter.ToControlPictures()} {_tokenExtendedDataCharacterMap[reportedCharacterSequence[1]]}");
 
@@ -5597,9 +5615,9 @@ public class Calibrator {
             _tokenExtendedDataDeadKeyCharacterMap = new Dictionary<string, char>();
             _tokenExtendedDataDeadKeyFixUp = [];
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = default;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = default;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = default;
-            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = default;
+            _tokenExtendedDataUnreadableFs = default;
+            _tokenExtendedDataUnreadableUs = default;
+            _tokenExtendedDataEotUnreadable = default;
             AssessFormatSupport = true;
             _tokenExtendedDataUnrecognisedKeys = [];
         }
@@ -5624,9 +5642,9 @@ public class Calibrator {
             _tokenExtendedDataDeadKeyCharacterMap = token.ExtendedData.DeadKeyCharacterMap;
             _tokenExtendedDataDeadKeyFixUp = token.ExtendedData.DeadKeyFixUp;
             _tokenExtendedDataPotentialIsoIec15434Unreadable30 = token.ExtendedData.PotentialIsoIec15434Unreadable30;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs;
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs;
-            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = token.ExtendedData.PotentialIsoIec15434EotUnreadable;
+            _tokenExtendedDataUnreadableFs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableFs;
+            _tokenExtendedDataUnreadableUs = token.ExtendedData.PotentialIsoIec15434EdiUnreadableUs;
+            _tokenExtendedDataEotUnreadable = token.ExtendedData.PotentialIsoIec15434EotUnreadable;
             AssessFormatSupport = token.ExtendedData.AssessFormat06Support;
             _tokenExtendedDataUnrecognisedKeys = token.ExtendedData.UnrecognisedKeys;
         }
@@ -5686,9 +5704,9 @@ public class Calibrator {
             _tokenExtendedDataAimFlagCharacterSequence ?? string.Empty,
             _tokenExtendedDataReportedCharacters ?? string.Empty,
             _tokenExtendedDataPotentialIsoIec15434Unreadable30,
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs,
-            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs,
-            _tokenExtendedDataPotentialIsoIec15434EotUnreadable,
+            _tokenExtendedDataUnreadableFs,
+            _tokenExtendedDataUnreadableUs,
+            _tokenExtendedDataEotUnreadable,
             AssessFormatSupport,
             _tokenExtendedDataNonInvariantAmbiguities,
             _tokenExtendedDataInvariantGs1Ambiguities,
@@ -5724,18 +5742,22 @@ public class Calibrator {
         {
             case InformationType.KeyboardScript:
             case InformationType.Platform:
-            case InformationType.IsoIec15434RecordSeparatorMapping:
             case InformationType.MultipleKeysNonInvariantCharacters:
             case InformationType.MultipleKeysMultipleNonInvariantCharacters:
-            case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-            case InformationType.ControlCharacterMappingAdditionalDataElements:
-            case InformationType.ControlCharacterMappingNotReliablyReadable:
+            case InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable:
+            case InformationType.ControlCharacterMappingNonInvariants:
             case InformationType.MultipleKeys:
             case InformationType.DeadKeyMultiMapping:
             case InformationType.DeadKeyMultipleKeys:
             case InformationType.MultipleSequences:
             case InformationType.MultipleSequencesForScannerDeadKey:
-            case InformationType.GroupSeparatorMapping:
+            case InformationType.GroupSeparatorNotReliablyReadableInvariant:
+            case InformationType.RecordSeparatorNotReliablyReadableInvariant:
+            case InformationType.EotCharacterNotReliablyReadableInvariant:
+            case InformationType.FileSeparatorNotReliablyReadableInvariant:
+            case InformationType.FileSeparatorNotReliablyReadableNonInvariant:
+            case InformationType.UnitSeparatorNotReliablyReadableInvariant:
+            case InformationType.UnitSeparatorNotReliablyReadableNonInvariant:
             case InformationType.LigatureCharacters:
                 description = string.Format(CultureInfo.InvariantCulture, description ?? string.Empty, reportedData);
                 break;
@@ -5865,13 +5887,15 @@ public class Calibrator {
         // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
         // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
         switch (type) {
-            case InformationType.IsoIec15434RecordSeparatorMapping:
             case InformationType.MultipleKeysNonInvariantCharacters:
             case InformationType.MultipleKeysMultipleNonInvariantCharacters:
             case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
-            case InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable:
-            case InformationType.ControlCharacterMappingAdditionalDataElements:
-            case InformationType.ControlCharacterMappingNotReliablyReadable:
+            case InformationType.RecordSeparatorNotReliablyReadableInvariant:
+            case InformationType.EotCharacterNotReliablyReadableInvariant:
+            case InformationType.FileSeparatorNotReliablyReadableInvariant:
+            case InformationType.FileSeparatorNotReliablyReadableNonInvariant:
+            case InformationType.UnitSeparatorNotReliablyReadableInvariant:
+            case InformationType.UnitSeparatorNotReliablyReadableNonInvariant:
             case InformationType.NonInvariantCharacterSequence:
                 AddAmbiguity(_tokenExtendedDataNonInvariantAmbiguities);
                 break;
@@ -5880,7 +5904,7 @@ public class Calibrator {
             case InformationType.DeadKeyMultipleKeys:
             case InformationType.MultipleSequences:
             case InformationType.MultipleSequencesForScannerDeadKey:
-            case InformationType.GroupSeparatorMapping:
+            case InformationType.GroupSeparatorNotReliablyReadableInvariant:
                 AddAmbiguity(_tokenExtendedDataInvariantGs1Ambiguities);
                 break;
             case InformationType.LigatureCharacters:
@@ -6395,415 +6419,750 @@ public class Calibrator {
         Token token,
         IList<List<string>> reportedSegments,
         IReadOnlyList<List<string>> expectedSegments) {
-
-        for (var idx = Segments.GroupSeparatorSegment; idx < Segments.SuffixSegment; idx++) {
-            if (reportedSegments[(int)idx].Count == 0) {
-                continue;
-            }
-
-            var reportedControl = reportedSegments[(int)idx][0];
-            var expectedControl = expectedSegments[(int)idx][0];
-            var correspondence = true;
-
-            if (reportedControl.StartsWith('\0')) {
-                if (reportedControl.Length > 1) {
-                    if (!_tokenExtendedDataDeadKeysMap.ContainsKey(reportedControl)) {
-                        _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedSegments[(int)idx][0]);
-                        token = LogIsoIec15434SeparatorSupport(token, idx);
-                    }
-                    else {
-                        token = idx > Segments.GroupSeparatorSegment
-                                    ? LogCalibrationInformation(
-                                        token,
-                                        NotRecognisedInformationType())
-                                    : token;
-
-                        InformationType NotRecognisedInformationType() =>
-
-                        idx switch {
-                            Segments.RecordSeparatorSegment => InformationType.IsoIec15434SyntaxNotRecognised,
-                            Segments.FileSeparatorSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434FsNotReliablyReadable),
-                            Segments.UnitSeparatorSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434UsNotReliablyReadable),
-                            Segments.EndOfTransmissionSegment => SetEdiNotReliablyReadable(InformationType.IsoIec15434EotNotReliablyReadable),
+            for (var idx = Segments.GroupSeparatorSegment; idx < Segments.SuffixSegment; idx++) {
+                if (reportedSegments[(int)idx].Count == 0) {
+                    token = LogCalibrationInformation(
+                        token,
+                        idx switch
+                        {
+                            Segments.GroupSeparatorSegment => InformationType.GroupSeparatorNotReadable,
+                            Segments.RecordSeparatorSegment => InformationType.RecordSeparatorNotReadable,
+                            Segments.FileSeparatorSegment => InformationType.FileSeparatorNotReadable,
+                            Segments.UnitSeparatorSegment => InformationType.UnitSeparatorNotReadable,
+                            Segments.EndOfTransmissionSegment => InformationType.EotCharacterNotReadable,
                             _ => InformationType.IsoIec15434EdiNotReliablyReadable
-                        };
+                        });
 
-                        InformationType SetEdiNotReliablyReadable(InformationType informationType) {
+                    continue;
+                }
+
+                var reportedControl = reportedSegments[(int)idx][0];
+                var expectedControl = expectedSegments[(int)idx][0];
+                var correspondence = true;
+
+                if (reportedControl.StartsWith('\0')) {
+                    if (reportedControl.Length > 1) {
+                        // we need to account for any conflict with a previously logged 'null' mapping
+                        if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out char value)) {
+    #if NET7_0_OR_GREATER
+                            var ambiguousInvariant = InvariantsMatchRegex().IsMatch(value.ToInvariantString());
+    #else
+                            var ambiguousInvariant = InvariantsMatchRegex.IsMatch(_tokenExtendedDataCharacterMap['\0'].ToInvariantString());
+    #endif
+    #pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
                             token = LogCalibrationInformation(
                                 token,
-                                InformationType.IsoIec15434EdiNotReliablyReadable);
+                                idx switch {
+                                    Segments.GroupSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.GroupSeparatorNotReliablyReadableInvariant
+                                        : InformationType.ControlCharacterMappingNonInvariants,
+                                    Segments.RecordSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.RecordSeparatorNotReliablyReadableInvariant
+                                        : InformationType.ControlCharacterMappingNonInvariants,
+                                    Segments.FileSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.FileSeparatorNotReliablyReadableInvariant
+                                        : InformationType.FileSeparatorNotReliablyReadableNonInvariant,
+                                    Segments.UnitSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.UnitSeparatorNotReliablyReadableInvariant
+                                        : InformationType.UnitSeparatorNotReliablyReadableNonInvariant,
+                                    Segments.EndOfTransmissionSegment => ambiguousInvariant
+                                        ? InformationType.EotCharacterNotReliablyReadableInvariant
+                                        : InformationType.ControlCharacterMappingNonInvariants,
+                                },
+                                reportedControl.ToControlPictures(),
+                                $"{expectedControl.ToControlPictures()} {value.ToControlPicture()}");
 
-                            return informationType;
+                            token = LogAnyIsoIec54345SyntaxIssue(ambiguousInvariant);
+                        }
+
+                        if (!_tokenExtendedDataDeadKeysMap.ContainsKey(reportedControl))
+                        {
+                            _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
+                            token = LogIsoIec15434SeparatorSupport(token, idx);
+                        }
+                        else
+                        {
+    #if NET7_0_OR_GREATER
+                            var ambiguousInvariant = InvariantsMatchRegex().IsMatch(_tokenExtendedDataDeadKeysMap[reportedControl]);
+    #else
+                            var ambiguousInvariant = InvariantsMatchRegex.IsMatch(_tokenExtendedDataDeadKeysMap[reportedControl]);
+    #endif
+                            token = LogCalibrationInformation(
+                                token,
+                                idx switch {
+                                    Segments.GroupSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.GroupSeparatorNotReliablyReadableInvariant
+                                        : ReplaceDeadKeyMap(),
+                                    Segments.RecordSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.RecordSeparatorNotReliablyReadableInvariant
+                                        : ReplaceDeadKeyMap(),
+                                    Segments.FileSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.FileSeparatorNotReliablyReadableInvariant
+                                        : InformationType.FileSeparatorNotReliablyReadableNonInvariant,
+                                    Segments.UnitSeparatorSegment => ambiguousInvariant
+                                        ? InformationType.UnitSeparatorNotReliablyReadableInvariant
+                                        : InformationType.UnitSeparatorNotReliablyReadableNonInvariant,
+                                    Segments.EndOfTransmissionSegment => ambiguousInvariant
+                                        ? InformationType.EotCharacterNotReliablyReadableInvariant
+                                        : ReplaceDeadKeyMap(),
+                                },
+                                reportedControl.ToControlPictures(),
+                                $"{expectedControl.ToControlPictures()} {_tokenExtendedDataDeadKeysMap[reportedControl].ToControlPictures()}");
+
+                            token = LogAnyIsoIec54345SyntaxIssue(ambiguousInvariant);
+
+                            InformationType ReplaceDeadKeyMap() {
+                                _tokenExtendedDataDeadKeysMap.Remove(reportedControl);
+                                _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
+                                return InformationType.ControlCharacterMappingNonInvariants;
+                            }
+    #pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
+                        }
+                    }
+                    else
+                    {
+                        // The control character is represented as a null character. Is this ambiguous?
+                        if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out var nullMapCharacter)) {
+    #if NET7_0_OR_GREATER
+                            var ambiguousInvariant = InvariantsMatchRegex().IsMatch(nullMapCharacter.ToInvariantString());
+    #else
+                            var ambiguousInvariant = InvariantsMatchRegex.IsMatch(nullMapCharacter.ToInvariantString());
+    #endif
+
+                            // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
+                            switch (idx) {
+                                case Segments.GroupSeparatorSegment:
+                                    // If the existing character represented by a reported null is not an invariant, then
+                                    // replace the mapping with a mapping to the GS.
+                                    if (!ambiguousInvariant) {
+                                        if (_tokenExtendedDataAimFlagCharacterSequence?[0] == '\0') {
+                                            token = LogCalibrationInformation(
+                                                token,
+                                                InformationType.AimNotReadReliably);
+                                        }
+
+                                        _tokenExtendedDataCharacterMap.Remove('\0');
+                                        _tokenExtendedDataCharacterMap.Add('\0', '\u001D');
+                                    }
+
+                                    token = AssessFormatSupport
+
+                                        // Error: The reported character sequence {0} is ambiguous.This represents the group separator character.
+                                        ? LogCalibrationInformation(
+                                            token,
+                                            ambiguousInvariant
+                                                ? InformationType.GroupSeparatorNotReliablyReadableInvariant
+                                                : InformationType.ControlCharacterMappingNonInvariants,
+                                            '\0'.ToControlPictureString(),
+                                            $"{'\u001D'.ToControlPictureString()} {nullMapCharacter.ToControlPictureString()}")
+                                        : token;
+                                    break;
+                                case Segments.RecordSeparatorSegment:
+                                    // If the existing character represented by a reported null is not an invariant and is not the GS,
+                                    // then replace the mapping with a mapping to the RS.
+                                    if (!ambiguousInvariant && nullMapCharacter is not '\u001D') {
+                                        if (_tokenExtendedDataAimFlagCharacterSequence?[0] == '\0') {
+                                            token = LogCalibrationInformation(
+                                                token,
+                                                InformationType.AimNotReadReliably);
+                                        }
+
+                                        _tokenExtendedDataCharacterMap.Remove('\0');
+                                        _tokenExtendedDataCharacterMap.Add('\0', '\u001E');
+                                    }
+
+                                    // WARNING - The reported character sequence {0} is ambiguous. This represents the record separator character.
+                                    token = AssessFormatSupport
+                                            ? LogCalibrationInformation(
+                                                token,
+                                                ambiguousInvariant
+                                                    ? InformationType.RecordSeparatorNotReliablyReadableInvariant
+                                                    : InformationType.ControlCharacterMappingNonInvariants,
+                                                '\0'.ToControlPictureString(),
+                                                $"{'\u001E'.ToControlPictureString()} {nullMapCharacter.ToControlPictureString()}")
+                                            : token;
+
+                                    _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
+                                    break;
+                                case Segments.FileSeparatorSegment:
+                                    // The ambiguous character always takes precedence.
+                                    _tokenExtendedDataUnreadableFs = true;
+
+                                    // Warning: The file separator character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        ambiguousInvariant
+                                            ? InformationType.FileSeparatorNotReliablyReadableInvariant
+                                            : InformationType.FileSeparatorNotReliablyReadableNonInvariant,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u001C'.ToControlPictureString()}");
+                                    break;
+                                case Segments.UnitSeparatorSegment:
+                                    // The ambiguous character always takes precedence.
+                                    _tokenExtendedDataUnreadableUs = true;
+
+                                    // Warning: The unit separator character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        ambiguousInvariant
+                                            ? InformationType.UnitSeparatorNotReliablyReadableInvariant
+                                            : InformationType.UnitSeparatorNotReliablyReadableNonInvariant,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u001F'.ToControlPictureString()}");
+                                    break;
+                                case Segments.EndOfTransmissionSegment:
+                                    // If the existing character represented by a reported null is not an invariant and is not the GS or RS, then replace the mapping with a mapping to the EOT.
+                                    if (!ambiguousInvariant && nullMapCharacter is not '\u001D' && nullMapCharacter is not '\u001E') {
+                                        if (_tokenExtendedDataAimFlagCharacterSequence?[0] == '\0')
+                                        {
+                                            token = LogCalibrationInformation(
+                                                token,
+                                                InformationType.AimNotReadReliably);
+                                        }
+
+                                        _tokenExtendedDataCharacterMap.Remove('\0');
+                                        _tokenExtendedDataCharacterMap.Add('\0', '\u0004');
+                                    }
+
+                                    // Warning: The end-of-transmission character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        ambiguousInvariant
+                                            ? InformationType.EotCharacterNotReliablyReadableInvariant
+                                            : InformationType.ControlCharacterMappingNonInvariants,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u0004'.ToControlPictureString()}");
+                                    break;
+                            }
+                        }
+                        else {
+                            _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
+                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
                         }
                     }
                 }
                 else {
-                    // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
-                    switch (idx) {
-                        case Segments.GroupSeparatorSegment:
-                            // If the keyboard represents ASCII 29s as \0, we will use this in thе map.
-                            _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
-                            break;
-                        case Segments.RecordSeparatorSegment:
-                            var key = _tokenExtendedDataCharacterMap.FirstOrDefault(x => x.Value == '\u001D').Key;
+                    switch (reportedControl.Length) {
+                        case 0:
+                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
 
-                            if (key == '\0' && _tokenExtendedDataCharacterMap.ContainsKey(key)) {
-                                // WARNING - The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
-                                token = AssessFormatSupport
-                                    ? LogCalibrationInformation(
+                            // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
+                            switch (idx) {
+                                case Segments.GroupSeparatorSegment:
+                                    // Error - No group separator is reported.
+                                    return LogCalibrationInformation(
                                         token,
-                                        InformationType.IsoIec15434RecordSeparatorMapping,
-                                        '\0'.ToControlPictureString(),
-                                        $"{'\u001D'.ToControlPictureString()} {'\u001E'.ToControlPictureString()}")
-                                    : token;
-                            }
-                            else {
-                                // If the keyboard represents ASCII 30s as \0, we will use this in thе map.
-                                _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
-                            }
-
-                            _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
-                            break;
-                        case Segments.FileSeparatorSegment:
-                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
-                            token = LogCalibrationInformation(
-                                token,
-                                InformationType.IsoIec15434FsNotReliablyReadable,
-                                '\0'.ToControlPictureString(),
-                                $"{'\u001C'.ToControlPictureString()}");
-                            break;
-                        case Segments.UnitSeparatorSegment:
-                            _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
-                            token = LogCalibrationInformation(
-                                token,
-                                InformationType.IsoIec15434UsNotReliablyReadable,
-                                '\0'.ToControlPictureString(),
-                                $"{'\u001F'.ToControlPictureString()}");
-                            break;
-                        case Segments.EndOfTransmissionSegment:
-                            _tokenExtendedDataPotentialIsoIec15434EotUnreadable = true;
-                            token = LogCalibrationInformation(
-                                token,
-                                InformationType.IsoIec15434EotNotReliablyReadable,
-                                '\0'.ToControlPictureString(),
-                                $"{'\u0004'.ToControlPictureString()}");
-                            break;
-                    }
-                }
-            }
-            else {
-                switch (reportedControl.Length) {
-                    case 0:
-                        // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
-                        switch (idx) {
-                            case Segments.GroupSeparatorSegment:
-                                // Error - No group separator is reported.
-                                return LogCalibrationInformation(
-                                    token,
-                                    InformationType.NoGroupSeparatorMapping);
-                            case Segments.RecordSeparatorSegment:
-                                _tokenExtendedDataPotentialIsoIec15434Unreadable30 = true;
-                                break;
-                            case Segments.FileSeparatorSegment:
-                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = true;
-                                token = LogCalibrationInformation(
-                                    token,
-                                    InformationType.IsoIec15434FsNotReliablyReadable,
-                                    '\0'.ToControlPictureString(),
-                                    $"{'\u001C'.ToControlPictureString()}");
-                                break;
-                            case Segments.UnitSeparatorSegment:
-                                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = true;
-                                token = LogCalibrationInformation(
-                                    token,
-                                    InformationType.IsoIec15434UsNotReliablyReadable,
-                                    '\0'.ToControlPictureString(),
-                                    $"{'\u001F'.ToControlPictureString()}");
-                                break;
-                            case Segments.EndOfTransmissionSegment:
-                                _tokenExtendedDataPotentialIsoIec15434EotUnreadable = true;
-                                token = LogCalibrationInformation(
-                                    token,
-                                    InformationType.IsoIec15434EotNotReliablyReadable,
-                                    '\0'.ToControlPictureString(),
-                                    $"{'\u0004'.ToControlPictureString()}");
-                                break;
-                        }
-
-                        break;
-                    case 1: {
-                            var key = reportedControl.First();
-
-                            if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue)) {
-#if NET7_0_OR_GREATER
-                                if (InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString()))
-#else
-                                if (InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString()))
-#endif
-                                {
-                                    // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
-                                    switch (idx) {
-                                        case Segments.GroupSeparatorSegment:
-                                            // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
-                                            return LogCalibrationInformation(
+                                        InformationType.NoGroupSeparatorMapping);
+                                case Segments.RecordSeparatorSegment:
+                                    token = LogCalibrationInformation(
                                                 token,
-                                                InformationType.GroupSeparatorMapping,
-                                                key.ToControlPictureString(),
-                                                $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
-                                        case Segments.RecordSeparatorSegment:
-                                            // The ambiguity is resolved by the parser by inferring the ASCII 30.
-                                            break;
-                                        default:
-                                            token = IsEdiCharacter(characterMapValue)
+                                                InformationType.RecordSeparatorNotReadable);
+                                    break;
+                                case Segments.FileSeparatorSegment:
+                                    _tokenExtendedDataUnreadableFs = true;
 
-                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                                // EDI data cannot be reliably read.
-                                                ? LogCalibrationInformation(
+                                    // Warning: The file separator character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        InformationType.FileSeparatorNotReliablyReadable,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u001C'.ToControlPictureString()}");
+                                    break;
+                                case Segments.UnitSeparatorSegment:
+                                    _tokenExtendedDataUnreadableUs = true;
+
+                                    // Warning: The unit separator character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        InformationType.UnitSeparatorNotReliablyReadable,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u001F'.ToControlPictureString()}");
+                                    break;
+                                case Segments.EndOfTransmissionSegment:
+                                    _tokenExtendedDataEotUnreadable = true;
+
+                                    // Warning: The end-of-transmission character cannot be reliably read.
+                                    token = LogCalibrationInformation(
+                                        token,
+                                        InformationType.EotNotReliablyReadable,
+                                        '\0'.ToControlPictureString(),
+                                        $"{'\u0004'.ToControlPictureString()}");
+                                    break;
+                            }
+
+                            break;
+                        case 1: {
+                                var key = reportedControl.First();
+                                correspondence = key == expectedControl.First();
+
+                                if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue))
+                                {
+    #if NET7_0_OR_GREATER
+                                    var ambiguousInvariant = InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString());
+    #else
+                                    var ambiguousInvariant = InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString());
+    #endif
+                                    if (ambiguousInvariant)
+                                    {
+                                        // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
+                                        switch (idx) {
+                                            case Segments.GroupSeparatorSegment:
+                                                // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
+                                                return LogCalibrationInformation(
                                                     token,
-                                                    InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                                    key.ToControlPictureString(),
-                                                    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}")
- 
-                                                // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 04, ASCII 28 or ASCII 31 control
-                                                // characters may not be reliably read.
-                                                : LogCalibrationInformation(
-                                                    token,
-                                                    InformationType.ControlCharacterMappingNotReliablyReadable,
+                                                    InformationType.GroupSeparatorNotReliablyReadableInvariant,
                                                     key.ToControlPictureString(),
                                                     $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
-                                            break;
+                                            case Segments.RecordSeparatorSegment:
+                                                // The ambiguity can be resolved by a parser by inferring the ASCII 30.
+                                                // Warning: The reported character sequence { 0} is ambiguous.This represents the record separator character.
+                                                token = LogCalibrationInformation(
+                                                    token,
+                                                    InformationType.RecordSeparatorNotReliablyReadableInvariant,
+                                                    key.ToControlPictureString(),
+                                                    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+                                                break;
+                                            case Segments.FileSeparatorSegment:
+                                                token = IsEdiCharacter(characterMapValue)
+
+                                                    // Warning: The reported character {0} for a File Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                    // EDI data cannot be reliably read.
+                                                    ? LogCalibrationInformation(
+                                                        token,
+                                                        InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable,
+                                                        key.ToControlPictureString(),
+                                                        $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}")
+
+                                                    // Warning: The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control
+                                                    // characters may not be reliably read.
+                                                    : LogCalibrationInformation(
+                                                        token,
+                                                        InformationType.FileSeparatorNotReliablyReadableInvariant,
+                                                        key.ToControlPictureString(),
+                                                        $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+                                                break;
+                                            case Segments.UnitSeparatorSegment:
+                                                token = IsEdiCharacter(characterMapValue)
+
+                                                    // Warning: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                    // EDI data cannot be reliably read.
+                                                    ? LogCalibrationInformation(
+                                                        token,
+                                                        InformationType.UnitSeparatorMappingIsoIec15434EdiNotReliablyReadable,
+                                                        key.ToControlPictureString(),
+                                                        $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}")
+
+                                                    // Warning: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control
+                                                    // characters may not be reliably read.
+                                                    : LogCalibrationInformation(
+                                                        token,
+                                                        InformationType.UnitSeparatorNotReliablyReadableInvariant,
+                                                        key.ToControlPictureString(),
+                                                        $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+                                                break;
+                                            case Segments.EndOfTransmissionSegment:
+                                                // Warning: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII 04 control
+                                                // characters may not be reliably read.
+                                                token = LogCalibrationInformation(
+                                                    token,
+                                                    InformationType.EotCharacterNotReliablyReadableInvariant,
+                                                    key.ToControlPictureString(),
+                                                    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+
+                                                // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+                                                token = LogCalibrationInformation(
+                                                    token,
+                                                    InformationType.InvariantAmbiguityForEotCharacter);
+
+                                                break;
+                                        }
+                                    }
+                                    else {
+                                        /* The ambiguity is for a non-invariant character. We will resolve it by omitting the
+                                         * opportunity to resolve the non-invariant character. Replace the mapping in the
+                                         * character map with one for the control character.
+                                         * */
+                                        var localToken = token;
+
+                                        _tokenExtendedDataCharacterMap[key] = idx switch {
+                                            Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30
+                                                                           && _tokenExtendedDataCharacterMap[key] != 04
+                                                ? RaiseWarningAscii29((char)29)
+                                                : ResolveForGs1(),
+                                            Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29
+                                                                            && _tokenExtendedDataCharacterMap[key] != 04
+                                                ? RaiseWarningAscii30((char)30)
+                                                : ResolveForGs1(),
+                                            Segments.EndOfTransmissionSegment => _tokenExtendedDataCharacterMap[key] != 29
+                                                                              && _tokenExtendedDataCharacterMap[key] != 30
+                                                ? RaiseWarningAscii04((char)04)
+                                                : ResolveForGs1(),
+                                            _ => RaiseWarningIsoIec15434(_tokenExtendedDataCharacterMap[key])
+                                        };
+
+                                        token = localToken;
+
+                                        Token LogAimNoRead(Token localToken)                                    {
+                                            if (key == _tokenExtendedDataAimFlagCharacterSequence?[0])                                        {
+                                                localToken = LogCalibrationInformation(
+                                                    localToken,
+                                                    InformationType.AimNotReadReliably);
+                                            }
+
+                                            return localToken;
+                                        }
+
+                                        char RaiseWarningAscii29(char controlCharacter) {
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            localToken = LogAimNoRead(
+                                                            LogCalibrationInformation(
+                                                                        localToken,
+                                                                        InformationType.ControlCharacterMappingNonInvariants,
+                                                                        key.ToControlPictureString(),
+                                                                        $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}"));
+                                            return controlCharacter;
+                                        }
+
+                                        char RaiseWarningAscii30(char controlCharacter) {
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            localToken = LogAimNoRead(LogCalibrationInformation(
+                                                            localToken,
+                                                            InformationType.ControlCharacterMappingNonInvariants,
+                                                            key.ToControlPictureString(),
+                                                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}"));
+                                            return controlCharacter;
+                                        }
+
+                                        char RaiseWarningAscii04(char controlCharacter) {
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            localToken = LogAimNoRead(LogCalibrationInformation(
+                                                localToken,
+                                                InformationType.ControlCharacterMappingNonInvariants,
+                                                key.ToControlPictureString(),
+                                                $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}"));
+
+                                            return controlCharacter;
+                                        }
+
+                                        char RaiseWarningIsoIec15434(char controlCharacter) {
+                                            // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                            // EDI data cannot be reliably read.
+                                            localToken = AssessFormatSupport
+                                                ? IsEdiCharacter(characterMapValue)
+
+                                                   // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                   // EDI data cannot be reliably read.
+                                                   ? LogCalibrationInformation(
+                                                       token,
+                                                       InformationType.IsoIec15434EdiNotReliablyReadable,
+                                                       key.ToControlPictureString(),
+                                                       $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+
+                                                   : LogCalibrationInformation(
+                                                             token,
+                                                             idx switch {
+                                                                 // Warning: The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control characters may not be reliably read.
+                                                                 Segments.FileSeparatorSegment => InformationType.FileSeparatorNotReliablyReadableNonInvariant,
+
+                                                                 // Warning: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control characters may not be reliably read.
+                                                                 Segments.UnitSeparatorSegment => InformationType.UnitSeparatorNotReliablyReadableNonInvariant,
+                                                                 _ => throw new IndexOutOfRangeException("Segment index is out of range.")
+                                                             },
+                                                             key.ToControlPictureString(),
+                                                             $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
+                                                : localToken;
+
+                                            return controlCharacter;
+                                        }
+
+                                        char ResolveForGs1() {
+                                            /* A combination of ASCII 29, ASCII 30 and ASCII 04 map to the same character. We will resolve
+                                             * in favour of ASCII 29 (used in both GS1 and ANSI MH 10.8.2 barcodes). The map entry may
+                                             * already be for ASCII 29, but we will set it again to ensure the correct outcome.
+                                             * */
+                                            _tokenExtendedDataCharacterMap[key] = '\u001d';
+
+                                            return _tokenExtendedDataCharacterMap[key];
+                                        }
+                                    }
+                                }
+                                else if (key != expectedControl.First()) {
+                                    correspondence = false;
+
+                                    token = AsciiChars.Contains(key, StringComparison.Ordinal)
+    #if NET7_0_OR_GREATER
+                                        ? InvariantsMatchRegex().IsMatch(key.ToInvariantString())
+    #else
+                                        ? InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString())
+    #endif
+                                            ? LogAmbiguityInvariant()
+                                            : LogAmbiguityNonInvariant()
+                                        : AddMapping();
+
+                                    Token LogAmbiguityInvariant() =>
+                                        idx switch {
+                                            // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
+                                            Segments.GroupSeparatorSegment => LogCalibrationInformation(
+                                                                                token,
+                                                                                InformationType.GroupSeparatorNotReliablyReadableInvariant,
+                                                                                key.ToControlPictureString(),
+                                                                                $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
+
+                                            // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax cannot be read reliably.
+                                            Segments.RecordSeparatorSegment => LogCalibrationInformation(
+                                                                                token,
+                                                                                InformationType.RecordSeparatorNotReliablyReadableInvariant,
+                                                                                key.ToControlPictureString(),
+                                                                                $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
+                                            Segments.EndOfTransmissionSegment => LogCalibrationInformationForEot(token),
+
+                                            _ when AssessFormatSupport => IsEdiCharacter(characterMapValue)
+
+                                                   // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                   // EDI data cannot be reliably read.
+                                                   ? LogCalibrationInformation(
+                                                       token,
+                                                       InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable,
+                                                       key.ToControlPictureString(),
+                                                       $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")
+
+                                                   : LogCalibrationInformation(
+                                                       token,
+                                                       idx switch {
+                                                           // Warning: The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control characters may not be reliably read.
+                                                           Segments.FileSeparatorSegment =>  InformationType.FileSeparatorNotReliablyReadableInvariant,
+
+                                                           // Warning: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control characters may not be reliably read.
+                                                           Segments.UnitSeparatorSegment => InformationType.UnitSeparatorNotReliablyReadableInvariant,
+                                                          _ => throw new IndexOutOfRangeException("Segment index is out of range.")
+                                                       },
+                                                       key.ToControlPictureString(),
+                                                       $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
+                                            _ => token
+                                        };
+
+                                    // For GS, RS and EoT, we will log the non-invariant ASCII character as the ambiguity, favouring control
+                                    // characters used in Format 05/06 barcodes. For FS and US, we will log the control character as ambiguous.
+                                    Token MapControlCharacter(Token localToken) {
+                                        _tokenExtendedDataCharacterMap.Add(key, expectedControl.First());
+                                        return LogIsoIec15434SeparatorSupport(LogAimNoRead(localToken), idx);
+                                    }
+
+                                    Token LogAmbiguityNonInvariant() =>
+                                        idx switch {
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            Segments.GroupSeparatorSegment => MapControlCharacter(
+                                                                                LogCalibrationInformation(
+                                                                                    token,
+                                                                                    InformationType.ControlCharacterMappingNonInvariants,
+                                                                                    key.ToControlPictureString(),
+                                                                                    $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")),
+
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            Segments.RecordSeparatorSegment => MapControlCharacter(
+                                                                                LogCalibrationInformation(
+                                                                                    token,
+                                                                                    InformationType.ControlCharacterMappingNonInvariants,
+                                                                                    key.ToControlPictureString(),
+                                                                                    $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")),
+                                            Segments.EndOfTransmissionSegment => MapControlCharacter(LogCalibrationInformationForEot(token)),
+                                            _ when AssessFormatSupport => IsEdiCharacter(characterMapValue)
+
+                                                   // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
+                                                   // EDI data cannot be reliably read.
+                                                   ? LogCalibrationInformation(
+                                                       token,
+                                                       InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable,
+                                                       key.ToControlPictureString(),
+                                                       $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")
+
+                                                   : LogCalibrationInformation(
+                                                       token,
+                                                       idx switch {
+                                                           // Warning: The reported character {0} for a File Separator is ambiguous. Barcodes that use ASCII 28 control characters may not be reliably read.
+                                                           Segments.FileSeparatorSegment => InformationType.FileSeparatorNotReliablyReadableNonInvariant,
+
+                                                           // Warning: The reported character {0} for a Unit Separator is ambiguous. Barcodes that use ASCII 31 control characters may not be reliably read.
+                                                           Segments.UnitSeparatorSegment => InformationType.UnitSeparatorNotReliablyReadableNonInvariant,
+                                                           _ => throw new IndexOutOfRangeException("Segment index is out of range.")
+                                                       },
+                                                       key.ToControlPictureString(),
+                                                       $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
+                                            _ => token
+                                        };
+
+                                    Token LogCalibrationInformationForEot(Token localToken)
+                                    {
+    #if NET7_0_OR_GREATER
+                                        if (InvariantsMatchRegex().IsMatch(key.ToString()))
+    #else
+                                        if (InvariantsMatchRegex.IsMatch(expectedControl))
+    #endif
+                                        {
+                                            // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+                                            localToken = LogCalibrationInformation(
+                                                localToken,
+                                                InformationType.InvariantAmbiguityForEotCharacter);
+                                        }
+                                        else
+                                        {
+                                            // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
+                                            localToken = LogAimNoRead(
+                                                            LogCalibrationInformation(
+                                                            localToken,
+                                                            InformationType.ControlCharacterMappingNonInvariants,
+                                                            key.ToControlPictureString(),
+                                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"));
+                                        }
+
+                                        return localToken;
+                                    }
+
+                                    Token LogAimNoRead(Token localToken) {
+                                        if (key == _tokenExtendedDataAimFlagCharacterSequence?[0]) {
+                                            localToken = LogCalibrationInformation(
+                                                localToken,
+                                                InformationType.AimNotReadReliably);
+                                        }
+
+                                        return localToken;
+                                    }
+
+                                    Token AddMapping() {
+                                        _tokenExtendedDataCharacterMap.Add(key, expectedControl.First());
+                                        token = LogIsoIec15434SeparatorSupport(token, idx);
+                                        return token;
                                     }
                                 }
                                 else {
-                                    /* The ambiguity is for a non-invariant character. We will resolve it by omitting the
-                                     * opportunity to resolve the non-invariant character. Replace the mapping in the
-                                     * character map with one for the ASCII 30.
-                                     * */
-                                    var localToken = token;
-
-                                    _tokenExtendedDataCharacterMap[key] = idx switch {
-                                        Segments.GroupSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 30
-                                            ? RaiseWarning((char)29)
-                                            : ResolveForGs1(),
-                                        Segments.RecordSeparatorSegment => _tokenExtendedDataCharacterMap[key] != 29
-                                            ? RaiseWarning((char)30)
-                                            : ResolveForGs1(),
-                                        Segments.EndOfTransmissionSegment => RaiseWarning((char)04),
-                                        _ => RaiseWarningIsoIec15434(_tokenExtendedDataCharacterMap[key])
-                                    };
-
-                                    token = localToken;
-
-                                    char RaiseWarning(char controlCharacter) {
-                                        // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
-                                        localToken = LogCalibrationInformation(
-                                            localToken,
-                                            InformationType.ControlCharacterMappingAdditionalDataElements,
-                                            key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}");
-
-                                        return controlCharacter;
-                                    }
-
-                                    char RaiseWarningIsoIec15434(char controlCharacter) {
-
-                                        // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                        // EDI data cannot be reliably read.
-                                        localToken = AssessFormatSupport
-                                            ? IsEdiCharacter(characterMapValue)
-
-                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                               // EDI data cannot be reliably read.
-                                               ? LogCalibrationInformation(
-                                                   token,
-                                                   InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                                   key.ToControlPictureString(),
-                                                   $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
-
-                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 28 or ASCII 31 control
-                                               // characters may not be reliably read.
-                                               : LogCalibrationInformation(
-                                                   token,
-                                                   InformationType.ControlCharacterMappingNotReliablyReadable,
-                                                   key.ToControlPictureString(),
-                                                   $"{expectedControl.ToControlPictures()} {_tokenExtendedDataCharacterMap[key].ToControlPictureString()}")
-
-                                            : localToken;
-
-                                        return controlCharacter;
-                                    }
-
-                                    char ResolveForGs1() {
-                                        /* Both ASCII 29 and ASCII 30 map to the same character. We will resolve
-                                         * in favour of ASCII 29 (used in both GS1 and ANSI MH 10.8.2 barcodes).
-                                         * The map entry should already be for ASCII 29, but we will set it again
-                                         * to ensure the correct outcome.
-                                         * */
-                                        _tokenExtendedDataCharacterMap[key] = '\u001d';
-
-                                        return _tokenExtendedDataCharacterMap[key];
-                                    }
-                                }
-                            }
-                            else if (key != expectedControl.First()) {
-#if NET7_0_OR_GREATER
-                                if (InvariantsMatchRegex().IsMatch(key.ToInvariantString()))
-#else
-                                if (InvariantsMatchRegex.IsMatch(key.ToInvariantString()))
-#endif
-                                {
-                                    // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
-                                    return LogCalibrationInformation(
-                                        token,
-                                        InformationType.GroupSeparatorMapping,
-                                        key.ToControlPictureString(),
-                                        $"{key.ToControlPictureString()} {expectedControl.First().ToControlPictureString()}");
+                                    token = LogIsoIec15434SeparatorSupport(token, idx);
                                 }
 
-                                correspondence = false;
-
-                                token = AsciiChars.Contains(key, StringComparison.Ordinal)
-                                    ? LogAmbiguity()
-                                    : AddMapping();
-
-                                token = LogIsoIec15434SeparatorSupport(token, idx);
-
-                                Token LogAmbiguity() =>
-                                    idx switch {
-                                        Segments.GroupSeparatorSegment or Segments.RecordSeparatorSegment => LogCalibrationInformation(
-                                            token,
-                                            InformationType.ControlCharacterMappingAdditionalDataElements,
-                                            key.ToControlPictureString(),
-                                            $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"), // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
-                                        _ when AssessFormatSupport => IsEdiCharacter(characterMapValue)
-
-                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ISO/IEC 15434 syntax to represent
-                                               // EDI data cannot be reliably read.
-                                               ? LogCalibrationInformation(
-                                                   token,
-                                                   InformationType.ControlCharacterMappingIsoIec15434EdiNotReliablyReadable,
-                                                   key.ToControlPictureString(),
-                                                   $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}")
-
-                                               // Warning: The reported character {0} is ambiguous. Barcodes that use ASCII 04, ASCII 28 or ASCII 31 control
-                                               // characters may not be reliably read.
-                                               : LogCalibrationInformation(
-                                                   token,
-                                                   InformationType.ControlCharacterMappingNotReliablyReadable,
-                                                   key.ToControlPictureString(),
-                                                   $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}"),
-                                        _ => token
-                                    };
-
-                                Token AddMapping() {
-                                    _tokenExtendedDataCharacterMap.Add(key, expectedControl.First());
-                                    return token;
-                                }
-                            }
-                            else {
-                                token = LogIsoIec15434SeparatorSupport(token, idx);
+                                break;
                             }
 
+                        default:
+                            // The control character has been reported as a ligature.  It must be added to the ligature map
+                            _tokenExtendedDataLigatureMap.Add(reportedControl, expectedControl.First());
+                            token = LogIsoIec15434SeparatorSupport(token, idx);
                             break;
-                        }
-
-                    default:
-                        // The control character has been reported as a ligature.  It must be added to the ligature map
-                        _tokenExtendedDataLigatureMap.Add(reportedControl, expectedControl.First());
-                        token = LogIsoIec15434SeparatorSupport(token, idx);
-                        break;
+                    }
                 }
+
+                token = !correspondence
+                            ? LogNonCorrespondenceForIsoIec15434Separators(token, idx)
+                            : token;
+
+#pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
+                Token LogAnyIsoIec54345SyntaxIssue(bool ambiguousInvariant) =>
+                    idx switch
+                    {
+                        Segments.RecordSeparatorSegment => LogForSeparator(ambiguousInvariant, InformationType.IsoIec15434SyntaxNotRecognised),
+                        Segments.FileSeparatorSegment => LogForSeparator(ambiguousInvariant, InformationType.IsoIec15434EdiNotReliablyReadable),
+                        Segments.UnitSeparatorSegment => LogForSeparator(ambiguousInvariant, InformationType.IsoIec15434EdiNotReliablyReadable),
+                        Segments.EndOfTransmissionSegment => LogForSeparator(ambiguousInvariant, InformationType.IsoIec15434SyntaxNotRecognised)
+                    };
+#pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
+
+                Token LogForSeparator(bool ambiguousInvariant, InformationType informationType) => ambiguousInvariant
+                    ? LogCalibrationInformation(
+                        token,
+                        informationType,
+                        reportedControl.ToControlPictures(),
+                        $"{expectedControl.ToControlPictures()} {_tokenExtendedDataDeadKeysMap[reportedControl].ToControlPictures()}")
+                    : _tokenExtendedDataDeadKeysMap[reportedControl] == "["
+                        ? LogCalibrationInformation(
+                            token,
+                            informationType,
+                            reportedControl.ToControlPictures(),
+                            $"{expectedControl.ToControlPictures()} {_tokenExtendedDataDeadKeysMap[reportedControl].ToControlPictures()}")
+                        : token;
             }
 
-            token = !correspondence
-                        ? LogNonCorrespondenceForIsoIec15434Separators(token, idx)
-                        : token;
-        }
+            return token;
 
-        return token;
+            Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
+                idx switch {
+                    // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
+                    Segments.GroupSeparatorSegment => AssessFormatSupport
+                        ? LogCalibrationInformation(
+                            calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
+                        : calibrationToken,
 
-        Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
-            idx switch {
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-                Segments.GroupSeparatorSegment => AssessFormatSupport
-                    ? LogCalibrationInformation(
+                    // Information: The barcode scanner and computer keyboard layouts do not correspond when representing File separators.
+                    Segments.FileSeparatorSegment => AssessFormatSupport
+                        ? LogCalibrationInformation(
+                            calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsFileSeparator)
+                        : calibrationToken,
+
+                    // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
+                    Segments.RecordSeparatorSegment => AssessFormatSupport
+                        ? LogCalibrationInformation(
+                            calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator)
+                        : calibrationToken,
+
+                    // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Unit separators.
+                    Segments.UnitSeparatorSegment => AssessFormatSupport
+                        ? LogCalibrationInformation(
+                            calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator)
+                        : calibrationToken,
+
+                    // Information: The barcode scanner and computer keyboard layouts do not correspond when representing End-of-Transmission characters.
+                    Segments.EndOfTransmissionSegment => AssessFormatSupport
+                        ? LogCalibrationInformation(
+                            calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsEotCharacter)
+                        : calibrationToken,
+
+                    _ => calibrationToken
+                };
+
+            Token LogIsoIec15434SeparatorSupport(Token calibrationToken, Segments idx) =>
+                idx switch {
+                    // Information: Group Separator characters are supported.
+                    Segments.GroupSeparatorSegment => LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
-                    : calibrationToken,
+                        InformationType.GroupSeparatorSupported),
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing File separators.
-                Segments.FileSeparatorSegment => AssessFormatSupport
-                    ? LogCalibrationInformation(
+                    // Information: File separator characters are supported.
+                    Segments.FileSeparatorSegment => LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsFileSeparator)
-                    : calibrationToken,
+                        InformationType.FileSeparatorSupported),
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Record Separators.
-                Segments.RecordSeparatorSegment => AssessFormatSupport
-                    ? LogCalibrationInformation(
+                    // Information: Record Separator characters are supported.
+                    Segments.RecordSeparatorSegment => LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsRecordSeparator)
-                    : calibrationToken,
+                        InformationType.RecordSeparatorSupported),
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Unit separators.
-                Segments.UnitSeparatorSegment => AssessFormatSupport
-                    ? LogCalibrationInformation(
+                    // Information: Unit separator characters are supported.
+                    Segments.UnitSeparatorSegment => LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator)
-                    : calibrationToken,
+                        InformationType.UnitSeparatorSupported),
 
-                // Information: The barcode scanner and computer keyboard layouts do not correspond when representing End-of-Transmission characters.
-                Segments.EndOfTransmissionSegment => AssessFormatSupport
-                    ? LogCalibrationInformation(
+                    // Information: End-of-Transmission characters are supported.
+                    Segments.EndOfTransmissionSegment => LogCalibrationInformation(
                         calibrationToken,
-                        InformationType.NonCorrespondingKeyboardLayoutsEoT)
-                    : calibrationToken,
+                        InformationType.EndOfTransmissionSupported),
 
-                _ => calibrationToken
-            };
+                    _ => calibrationToken
+                };
 
-        Token LogIsoIec15434SeparatorSupport(Token calibrationToken, Segments idx) =>
-            idx switch {
-                // Information: Group Separator characters are supported.
-                Segments.GroupSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.GroupSeparatorSupported),
-
-                // Information: File separator characters are supported.
-                Segments.FileSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.FileSeparatorSupported),
-
-                // Information: Record Separator characters are supported.
-                Segments.RecordSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.RecordSeparatorSupported),
-
-                // Information: Unit separator characters are supported.
-                Segments.UnitSeparatorSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.UnitSeparatorSupported),
-
-                // Information: End-of-Transmission characters are supported.
-                Segments.EndOfTransmissionSegment => LogCalibrationInformation(
-                    calibrationToken,
-                    InformationType.EndOfTransmissionSupported),
-
-                _ => calibrationToken
-            };
-
-        bool IsEdiCharacter(char character) =>
-            ((int)character) switch {
-                > 64 and <= 90 => true,
-                > 47 and <= 57 => true,
-                32 => true,
-                > 38 and <= 41 => true,
-                > 42 and <= 47 => true,
-                58 => true,
-                61 => true,
-                63 => true,
-                _ => false
-            };
+            bool IsEdiCharacter(char character) =>
+                ((int)character) switch {
+                    > 64 and <= 90 => true,
+                    > 47 and <= 57 => true,
+                    32 => true,
+                    > 38 and <= 41 => true,
+                    > 42 and <= 47 => true,
+                    58 => true,
+                    61 => true,
+                    63 => true,
+                    _ => false
+                };
     }
 
     /// <summary>
@@ -6830,12 +7189,12 @@ public class Calibrator {
     /// <param name="token">The current calibration token.</param>
     /// <returns>The calibration token.</returns>
     private Token DoProcessForIsoIec15434EdiIncompatibility(Token token) {
-        switch (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs) {
+        switch (_tokenExtendedDataUnreadableFs) {
             case false when
-                !_tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs:
+                !_tokenExtendedDataUnreadableUs:
                 return token;
             case true when
-                _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs:
+                _tokenExtendedDataUnreadableUs:
                 // Warning - Barcodes that use ISO/IEC 15434 syntax to represent EDI data cannot be reliably read.
                 return AssessFormatSupport
                     ? LogCalibrationInformation(
@@ -6856,18 +7215,18 @@ public class Calibrator {
         }
 
         // Add mapping for ASCII 28 or ASCII 31
-        _tokenExtendedDataCharacterMap.Add('\0', _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs ? '\u001c' : '\u001f');
+        _tokenExtendedDataCharacterMap.Add('\0', _tokenExtendedDataUnreadableFs ? '\u001c' : '\u001f');
 
         return token;
     }
 
     private Token DoProcessForIsoIec15434FsIncompatibility(Token token) {
-        if (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs) {
+        if (_tokenExtendedDataUnreadableFs) {
             // Warning - The file separator character cannot be reliably read.
             return AssessFormatSupport
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    InformationType.IsoIec15434FsNotReliablyReadable)
+                    InformationType.FileSeparatorNotReliablyReadable)
                 : token;
         }
 
@@ -6875,12 +7234,12 @@ public class Calibrator {
     }
 
     private Token DoProcessForIsoIec15434UsIncompatibility(Token token) {
-        if (_tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs) {
+        if (_tokenExtendedDataUnreadableUs) {
             // Warning - The unit separator character cannot be reliably read.
             return AssessFormatSupport
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    InformationType.IsoIec15434UsNotReliablyReadable)
+                    InformationType.UnitSeparatorNotReliablyReadable)
                 : token;
         }
 
@@ -6888,12 +7247,12 @@ public class Calibrator {
     }
 
     private Token DoProcessForIsoIec15434EotIncompatibility(Token token) {
-        if (_tokenExtendedDataPotentialIsoIec15434EotUnreadable) {
+        if (_tokenExtendedDataEotUnreadable) {
             // Warning - The end-of-transmission character cannot be reliably read.
             return AssessFormatSupport
                 ? LogCalibrationInformation(
                     InitializeTokenData(),
-                    InformationType.IsoIec15434EotNotReliablyReadable)
+                    InformationType.EotNotReliablyReadable)
                 : token;
         }
 
@@ -7027,9 +7386,9 @@ public class Calibrator {
         _tokenExtendedDataReportedSuffix = default;
         _tokenExtendedDataKeyboardScript = default;
         _tokenExtendedDataPotentialIsoIec15434Unreadable30 = false;
-        _tokenExtendedDataPotentialIsoIec15434EdiUnreadableFs = false;
-        _tokenExtendedDataPotentialIsoIec15434EdiUnreadableUs = false;
-        _tokenExtendedDataPotentialIsoIec15434EotUnreadable = false;
+        _tokenExtendedDataUnreadableFs = false;
+        _tokenExtendedDataUnreadableUs = false;
+        _tokenExtendedDataEotUnreadable = false;
         _tokenCalibrationData = null;
         _tokenSystemCapabilities = null;
         _invariantMappedCharacters = null;

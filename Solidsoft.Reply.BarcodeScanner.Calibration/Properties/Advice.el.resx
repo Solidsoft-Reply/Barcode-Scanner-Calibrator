@@ -198,21 +198,6 @@
   <data name="Advice_276" xml:space="preserve">
     <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
   </data>
-  <data name="Advice_277" xml:space="preserve">
-    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
-  </data>
-  <data name="Advice_278" xml:space="preserve">
-    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
-  </data>
-  <data name="Advice_279" xml:space="preserve">
-    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
-  </data>
-  <data name="Advice_280" xml:space="preserve">
-    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
-  </data>
-  <data name="Advice_281" xml:space="preserve">
-    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
-  </data>
   <data name="Advice_300" xml:space="preserve">
     <value>Δοκιμάστε ξανά, βεβαιωθείτε ότι σαρώνετε τα σωστά barcodes.</value>
   </data>
@@ -363,21 +348,6 @@
   <data name="Condition_276" xml:space="preserve">
     <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες διαχωριστή αρχείου (ASCII 28).</value>
   </data>
-  <data name="Condition_277" xml:space="preserve">
-    <value>Το σύστημά σας δεν μπορεί να διαβάσει τους χαρακτήρες διαχωριστή αρχείου (ASCII 28).</value>
-  </data>
-  <data name="Condition_278" xml:space="preserve">
-    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες διαχωριστή μονάδας (ASCII 31).</value>
-  </data>
-  <data name="Condition_279" xml:space="preserve">
-    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες διαχωριστή μονάδας (ASCII 31).</value>
-  </data>
-  <data name="Condition_280" xml:space="preserve">
-    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες τέλους μετάδοσης (ASCII 04).</value>
-  </data>
-  <data name="Condition_281" xml:space="preserve">
-    <value>Το σύστημά σας δεν μπορεί να διαβάσει τους χαρακτήρες τέλους μετάδοσης (ASCII 04).</value>
-  </data>
   <data name="Condition_300" xml:space="preserve">
     <value>Η δοκιμή απέτυχε.</value>
   </data>
@@ -519,21 +489,6 @@
   <data name="Description_276" xml:space="preserve">
     <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
   </data>
-  <data name="Description_277" xml:space="preserve">
-    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
-  </data>
-  <data name="Description_278" xml:space="preserve">
-    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
-  </data>
-  <data name="Description_279" xml:space="preserve">
-    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
-  </data>
-  <data name="Description_280" xml:space="preserve">
-    <value>Ορισμένοι τύποι barcodes χρησιμοποιούν αυτόν τον χαρακτήρα για να υποδείξουν το τέλος των δεδομένων του barcode. Το λογισμικό σας ενδέχεται να μην διαβάσει σωστά οποιοδήποτε επίθημα προσθέσει ο σαρωτής barcode.</value>
-  </data>
-  <data name="Description_281" xml:space="preserve">
-    <value>Ορισμένοι τύποι barcodes χρησιμοποιούν αυτόν τον χαρακτήρα για να υποδείξουν το τέλος των δεδομένων του barcode. Το λογισμικό σας ενδέχεται να μην διαβάσει σωστά οποιοδήποτε επίθημα προσθέσει ο σαρωτής barcode.</value>
-  </data>
   <data name="Description_300" xml:space="preserve">
     <value>Μπορεί να σαρώσατε ένα λάθος barcode ή να εισάγατε λάθος δεδομένα χρησιμοποιώντας το πληκτρολόγιο. Ο σαρωτής barcode ή το σύστημά σας μπορεί να είναι αργό, ή να έχει συμβεί κάποιο απροσδόκητο ή περιστασιακό πρόβλημα.</value>
   </data>
@@ -578,5 +533,59 @@
   </data>
   <data name="ErrorWhileResolvingKeyboardScripts" xml:space="preserve">
     <value>Σφάλμα κατά την επίλυση των script πληκτρολογίου: {0}</value>
+  </data>
+  <data name="Advice_277" xml:space="preserve">
+    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
+  </data>
+  <data name="Advice_279" xml:space="preserve">
+    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
+  </data>
+  <data name="Condition_277" xml:space="preserve">
+    <value>Το σύστημά σας δεν μπορεί να διαβάσει τους χαρακτήρες διαχωριστή αρχείου (ASCII 28).</value>
+  </data>
+  <data name="Condition_278" xml:space="preserve">
+    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες διαχωριστή μονάδας (ASCII 31).</value>
+  </data>
+  <data name="Condition_279" xml:space="preserve">
+    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες διαχωριστή μονάδας (ASCII 31).</value>
+  </data>
+  <data name="Description_277" xml:space="preserve">
+    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
+  </data>
+  <data name="Description_278" xml:space="preserve">
+    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
+  </data>
+  <data name="Description_279" xml:space="preserve">
+    <value>Αυτοί οι χαρακτήρες δεν χρησιμοποιούνται ευρέως στα barcodes.</value>
+  </data>
+  <data name="Advice_278" xml:space="preserve">
+    <value>Εάν αντιμετωπίζετε δυσκολίες κατά τη σάρωση barcodes, δοκιμάστε να διαμορφώσετε τον σαρωτή barcodes ώστε να εξομοιώνει ένα αριθμητικό πληκτρολόγιο.</value>
+  </data>
+  <data name="Advice_280" xml:space="preserve">
+    <value>Εισάγετε τα δεδομένα με μη αυτόματο τρόπο στο λογισμικό επαλήθευσής σας για να επαληθεύσετε μοναδικούς αναγνωριστικούς κωδικούς PPN.;;Εάν χρειάζεται, ρυθμίστε τον σαρωτή γραμμωτού κώδικα να εξομοιώνει αριθμητικό πληκτρολόγιο.</value>
+  </data>
+  <data name="Advice_281" xml:space="preserve">
+    <value>Εάν αντιμετωπίζετε προβλήματα κατά τη σάρωση γερμανικών γραμμωτών κωδικών PPN, εισάγετε τα δεδομένα με μη αυτόματο τρόπο στο λογισμικό επαλήθευσής σας.;;Εάν χρειάζεται, ρυθμίστε τον σαρωτή γραμμωτού κώδικα να εξομοιώνει αριθμητικό πληκτρολόγιο.</value>
+  </data>
+  <data name="Condition_280" xml:space="preserve">
+    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες τέλους μετάδοσης (ASCII 04).</value>
+  </data>
+  <data name="Condition_281" xml:space="preserve">
+    <value>Το σύστημά σας ενδέχεται να μην διαβάζει σωστά τους χαρακτήρες τέλους μετάδοσης (ASCII 04).</value>
+  </data>
+  <data name="Description_280" xml:space="preserve">
+    <value>Ορισμένοι τύποι barcodes χρησιμοποιούν αυτόν τον χαρακτήρα για να υποδείξουν το τέλος των δεδομένων του barcode. Το λογισμικό σας ενδέχεται να μην διαβάσει σωστά οποιοδήποτε επίθημα προσθέσει ο σαρωτής barcode.</value>
+  </data>
+  <data name="Description_281" xml:space="preserve">
+    <value>Ορισμένοι τύποι barcodes χρησιμοποιούν αυτόν τον χαρακτήρα για να υποδείξουν το τέλος των δεδομένων του barcode. Το λογισμικό σας ενδέχεται να μην διαβάσει σωστά οποιοδήποτε επίθημα προσθέσει ο σαρωτής barcode.</value>
+  </data>
+  <data name="Advice_236" xml:space="preserve">
+    <value>Βεβαιωθείτε ότι οι διατάξεις των πληκτρολογίων σας ταιριάζουν.;;Αν είναι απαραίτητο, ρυθμίστе τον σαρωτή barcode σας να μιμείται ένα αριθμητικό πληκτρολόγιο και να μεταδίδει αναγνωριστικούς AIM.</value>
+  </data>
+  <data name="Condition_236" xml:space="preserve">
+    <value>Το σύστημά σας δεν μπορεί να διαβάσει αξιόπιστα τον αναγνωριστικό τύπου γραμμικού κώδικα.</value>
+  </data>
+  <data name="Description_236" xml:space="preserve">
+    <value>Οι αναγνωριστικοί AIM αντιπροσωπεύουν τον τύπο του barcode. Το λογισμικό σας μπορεί να τα χρησιμοποιήσει για να εξαλείψει περιττές ειδοποιήσεις.</value>
   </data>
 </root>

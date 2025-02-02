@@ -23,7 +23,6 @@
 ////#define Diagnostics
 
 // ReSharper disable UnusedMember.Global
-
 namespace Solidsoft.Reply.BarcodeScanner.Calibration;
 
 using System;
