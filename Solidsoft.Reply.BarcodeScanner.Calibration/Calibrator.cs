@@ -6479,8 +6479,9 @@ public class Calibrator {
                         {
                             _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
                             token = LogIsoIec15434SeparatorSupport(token, idx);
+                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
                         }
-                        else
+                    else
                         {
     #if NET7_0_OR_GREATER
                             var ambiguousInvariant = InvariantsMatchRegex().IsMatch(_tokenExtendedDataDeadKeysMap[reportedControl]);
@@ -6714,8 +6715,7 @@ public class Calibrator {
                                                     key.ToControlPictureString(),
                                                     $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                             case Segments.RecordSeparatorSegment:
-                                                // The ambiguity can be resolved by a parser by inferring the ASCII 30.
-                                                // Warning: The reported character sequence { 0} is ambiguous.This represents the record separator character.
+                                                // Warning: The reported character sequence {0} is ambiguous.This represents the record separator character.
                                                 token = LogCalibrationInformation(
                                                     token,
                                                     InformationType.RecordSeparatorNotReliablyReadableInvariant,
@@ -6761,20 +6761,28 @@ public class Calibrator {
                                                         $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                                 break;
                                             case Segments.EndOfTransmissionSegment:
-                                                // Warning: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII 04 control
-                                                // characters may not be reliably read.
+                                                // Warning: The reported character sequence {0} is ambiguous. The end-of-transmission character cannot be reliably read.
                                                 token = LogCalibrationInformation(
                                                     token,
                                                     InformationType.EotCharacterNotReliablyReadableInvariant,
                                                     key.ToControlPictureString(),
                                                     $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
-
-                                                // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
-                                                token = LogCalibrationInformation(
-                                                    token,
-                                                    InformationType.InvariantAmbiguityForEotCharacter);
-
                                                 break;
+                                            
+                                                //////////// Warning: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII 04 control
+                                                //////////// characters may not be reliably read.
+                                                //////////token = LogCalibrationInformation(
+                                                //////////    token,
+                                                //////////    InformationType.EotCharacterNotReliablyReadableInvariant,
+                                                //////////    key.ToControlPictureString(),
+                                                //////////    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
+
+                                                //////////// Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+                                                //////////token = LogCalibrationInformation(
+                                                //////////    token,
+                                                //////////    InformationType.InvariantAmbiguityForEotCharacter);
+
+                                                //////////break;                                              
                                         }
                                     }
                                     else {
@@ -6991,21 +6999,21 @@ public class Calibrator {
                                             _ => token
                                         };
 
-                                    Token LogCalibrationInformationForEot(Token localToken)
-                                    {
+                                    Token LogCalibrationInformationForEot(Token localToken) {
     #if NET7_0_OR_GREATER
-                                        if (InvariantsMatchRegex().IsMatch(key.ToString()))
+                                        if (InvariantsMatchRegex().IsMatch(key.ToString())) {
     #else
-                                        if (InvariantsMatchRegex.IsMatch(expectedControl))
+                                        if (InvariantsMatchRegex.IsMatch(expectedControl)) {
     #endif
-                                        {
                                             // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
                                             localToken = LogCalibrationInformation(
                                                 localToken,
-                                                InformationType.InvariantAmbiguityForEotCharacter);
+                                                InformationType.EotCharacterNotReliablyReadableInvariant,
+                                                key.ToControlPictureString(),
+                                                $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}");
+                                                //////InformationType.InvariantAmbiguityForEotCharacter);
                                         }
-                                        else
-                                        {
+                                        else {
                                             // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.
                                             localToken = LogAimNoRead(
                                                             LogCalibrationInformation(
@@ -7045,6 +7053,7 @@ public class Calibrator {
                             // The control character has been reported as a ligature.  It must be added to the ligature map
                             _tokenExtendedDataLigatureMap.Add(reportedControl, expectedControl.First());
                             token = LogIsoIec15434SeparatorSupport(token, idx);
+                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
                             break;
                     }
                 }

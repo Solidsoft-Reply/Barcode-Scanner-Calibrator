@@ -291,7 +291,7 @@ public sealed record SystemCapabilities(
     [property: JsonProperty("keyboardLayoutsCorrespondForAimIdentifier", Order = 14)] bool? KeyboardLayoutsCorrespondForAimIdentifier = true,
     [property: JsonProperty("canReadInvariantsReliably", Order = 15)] bool? CanReadInvariantsReliably = true,
     [property: JsonProperty("canReadNonInvariantsReliably", Order = 16)] bool? CanReadNonInvariantsReliably = true,
-    [property: JsonProperty("canReadIsoIec15434EnvelopeReliably", Order = 17)] bool? CanReadIsoIec15434EnvelopeReliably = null,
+    [property: JsonProperty("canReadIsoIec15434EnvelopeReliably", Order = 17)] bool? CanReadIsoIec15434EnvelopeReliably = true,
     [property: JsonProperty("canReadEdiReliably", Order = 18)] bool? CanReadEdiReliably = true,
     [property: JsonProperty("canReadGroupSeparatorsReliably", Order = 19)] bool? CanReadGroupSeparatorsReliably = false,
     [property: JsonProperty("canReadRecordSeparatorsReliably", Order = 20)] bool? CanReadRecordSeparatorsReliably = false,
@@ -507,11 +507,16 @@ public sealed record SystemCapabilities(
                 case InformationType.SomeNonInvariantCharacterCombinationsUnrecognised:
                 case InformationType.MultipleKeysMultipleNonInvariantCharacters:
                 case InformationType.DeadKeyMultiMappingNonInvariantCharacters:
-                case InformationType.ControlCharacterMappingNonInvariants:
                 case InformationType.NonInvariantCharacterSequence:
                     KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
                     KeyboardLayoutsCorrespond = false;
                     CanReadNonInvariantsReliably = false;
+                    break;
+                case InformationType.ControlCharacterMappingNonInvariants:
+                    KeyboardLayoutsCorrespondForNonInvariantCharacters = false;
+                    KeyboardLayoutsCorrespond = false;
+                    CanReadNonInvariantsReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = null;
                     break;
                 case InformationType.RecordSeparatorNotReadable:
                     CanReadRecordSeparatorsReliably = false;
@@ -574,6 +579,7 @@ public sealed record SystemCapabilities(
                     break;
                 case InformationType.EotNotReliablyReadable:
                     CanReadEotCharactersReliably = false;
+                    CanReadIsoIec15434EnvelopeReliably = false;
                     break;
                 case InformationType.FileSeparatorMappingIsoIec15434EdiNotReliablyReadable:
                     CanReadEdiReliably = false;

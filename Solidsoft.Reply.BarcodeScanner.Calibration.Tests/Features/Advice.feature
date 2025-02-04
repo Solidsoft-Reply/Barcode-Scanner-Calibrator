@@ -8,7 +8,7 @@ Scenario: System reads Invariant Characters reliably
 	Given the baseline input is for The United States
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 		And the advice should contain no other advice items
 
 Scenario: System reads Invariant Characters reliably with no Format 05/06 assessment
@@ -41,7 +41,7 @@ Scenario: No FS character reported
 	Given the baseline input is for The United States with no FS
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -51,7 +51,7 @@ Scenario: No US character reported
 	Given the baseline input is for The United States with no US
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -61,7 +61,8 @@ Scenario: No EOT character reported
 	Given the baseline input is for The United States with no EOT
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyExceptFormat0506
+	    And the advice should contain an advice item for CannotReadAnsiMh1082Reliably
 	    And the advice should contain an advice item for CannotReadAscii04Characters
 		And the advice should contain no other advice items
 
@@ -86,7 +87,7 @@ Scenario: Null FS character reported
 	Given the baseline input is for The United States with null FS
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
 	    And the advice should contain an advice item for MayNotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -96,7 +97,7 @@ Scenario: Null US character reported
 	Given the baseline input is for The United States with null US
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
 	    And the advice should contain an advice item for MayNotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -131,7 +132,7 @@ Scenario: FS character reported as different control character - agnostic
 	Given the baseline input is for The United States with FS as different character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
 	    And the advice should contain an advice item for MayNotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -141,7 +142,7 @@ Scenario: US character reported as different control character - agnostic
 	Given the baseline input is for The United States with US as different character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
 	    And the advice should contain an advice item for MayNotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -209,6 +210,7 @@ Scenario: RS character reported as different control character - no calibration
 	When the baseline input to submitted to a no calibration calibrator
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyExceptFormat0506
+    	And the advice should contain an advice item for MayNotReadFormat0506NoCalibration
 		And the advice should contain no other advice items
 
 Scenario: FS character reported as different control character - no calibration
@@ -216,7 +218,7 @@ Scenario: FS character reported as different control character - no calibration
 	Given the baseline input is for The United States with FS as different character
 	When the baseline input to submitted to a no calibration calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -226,7 +228,7 @@ Scenario: US character reported as different control character - no calibration
 	Given the baseline input is for The United States with US as different character
 	When the baseline input to submitted to a no calibration calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -262,7 +264,7 @@ Scenario: FS character reported as ambiguous invariant character
 	Given the baseline input is for The United States with FS as ambiguous invariant character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -272,7 +274,7 @@ Scenario: US character reported as ambiguous invariant character
 	Given the baseline input is for The United States with US as ambiguous invariant character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -282,8 +284,9 @@ Scenario: EOT character reported as ambiguous invariant character
 	Given the baseline input is for The United States with EOT as ambiguous invariant character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
-	And the advice should contain an advice item for CannotReadAscii04Characters
+	Then the advice should contain an advice item for CannotReadBarcodesReliably
+	    And the advice should contain an advice item for CannotReadAnsiMh1082Reliably
+		And the advice should contain an advice item for CannotReadAscii04Characters
 		And the advice should contain no other advice items
 
 Scenario: GS character reported as ambiguous non-invariant character
@@ -309,7 +312,7 @@ Scenario: FS character reported as ambiguous non-invariant character
 	Given the baseline input is for The United States with FS as ambiguous non-invariant character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -319,7 +322,7 @@ Scenario: US character reported as ambiguous non-invariant character
 	Given the baseline input is for The United States with US as ambiguous non-invariant character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -359,7 +362,7 @@ Scenario: FS character reported as AIM flag character
 	Given the baseline input is for The United States with FS as AIM flag character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii28Characters
 		And the advice should contain no other advice items
@@ -369,7 +372,7 @@ Scenario: US character reported as AIM flag character
 	Given the baseline input is for The United States with US as AIM flag character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
 	    And the advice should contain an advice item for CannotReadEdiCharacters
 	    And the advice should contain an advice item for CannotReadAscii31Characters
 		And the advice should contain no other advice items
@@ -390,7 +393,7 @@ Scenario: GS character reported as dead key character
 	Given the baseline input is for The United States with GS as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
 		And the advice should contain no other advice items
 
 Scenario: RS character reported as dead key character
@@ -406,7 +409,9 @@ Scenario: FS character reported as dead key character
 	Given the baseline input is for The United States with FS as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
+	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
+	    And the advice should contain an advice item for MayNotReadAscii28Characters
 		And the advice should contain no other advice items
 
 Scenario: US character reported as dead key character
@@ -414,7 +419,9 @@ Scenario: US character reported as dead key character
 	Given the baseline input is for The United States with US as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
+	    And the advice should contain an advice item for MayNotReadEdiCharactersReliably
+	    And the advice should contain an advice item for MayNotReadAscii31Characters
 		And the advice should contain no other advice items
 
 Scenario: EOT character reported as dead key character
@@ -423,6 +430,7 @@ Scenario: EOT character reported as dead key character
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	    And the advice should contain an advice item for MayNotReadAscii04Characters
 		And the advice should contain no other advice items
 
 Scenario: GS character reported as ligature
@@ -430,7 +438,7 @@ Scenario: GS character reported as ligature
 	Given the baseline input is for The United States with GS as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for HiddenCharactersNotRepresentedCorrectly
 		And the advice should contain no other advice items
 
 Scenario: RS character reported as ligature
@@ -446,7 +454,9 @@ Scenario: FS character reported as ligature
 	Given the baseline input is for The United States with FS as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
+		And the advice should contain an advice item for MayNotReadEdiCharactersReliably
+		And the advice should contain an advice item for MayNotReadAscii28Characters
 		And the advice should contain no other advice items
 
 Scenario: US character reported as ligature
@@ -454,7 +464,9 @@ Scenario: US character reported as ligature
 	Given the baseline input is for The United States with US as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
-	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+	Then the advice should contain an advice item for ReadsInvariantCharactersReliably
+		And the advice should contain an advice item for MayNotReadEdiCharactersReliably
+		And the advice should contain an advice item for MayNotReadAscii31Characters
 		And the advice should contain no other advice items
 
 Scenario: EOT character reported as ligature
@@ -463,4 +475,5 @@ Scenario: EOT character reported as ligature
 	When the baseline input is submitted to an agnostic calibrator
 	    And advice is generated from the calculated system capabilities
 	Then the advice should contain an advice item for ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+		And the advice should contain an advice item for MayNotReadAscii04Characters
 		And the advice should contain no other advice items

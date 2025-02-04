@@ -71,14 +71,14 @@ public enum InformationType {
     UnitSeparatorSupported = 163,
 
     /// <summary>
-    ///   INFORMATION: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
-    /// </summary>
-    InvariantAmbiguityForEotCharacter = 165,
-
-    /// <summary>
     ///   INFORMATION: End-of-Transmission characters are supported.
     /// </summary>
     EndOfTransmissionSupported = 164,
+
+    /// <summary>
+    ///   INFORMATION: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+    /// </summary>
+    InvariantAmbiguityForEotCharacter = 165,
 
     /// <summary>
     ///   INFORMATION: The barcode scanner may be configured to compensate for Caps Lock.

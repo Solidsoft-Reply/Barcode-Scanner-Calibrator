@@ -122,6 +122,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
                     : IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                         ? IfWeCanReadFormat05AndFormat06Reliably()
                             ? IfTheKeyboardLayoutsCanRepresentRecordSeparatorsWithoutMapping()
+                            && IfTheKeyboardLayoutsCanRepresentEotWithoutMapping()
                                 ? ReportThatInvariantCharactersAreReadReliably() // 100
                                 : IfWeAssumeAgnosticism()
                                     ? ReportThatInvariantCharactersAreReadReliablyButFormat05OrFormat06MayNotBeReadReliably() // 110
@@ -458,9 +459,12 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             highSeverity.Find(a => a.AdviceType == AdviceType.LayoutsDoNotMatchNoFormat0506);
         var hiddenCharactersNotRepresentedCorrectlyForGs1Only = highSeverity.Find(a =>
             a.AdviceType == AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506);
+        var readsInvariantCharactersReliablyMayNotReadFormat0506Reliably = highSeverity.Find(a =>
+            a.AdviceType == AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
 
-        if (layoutsDoNotMatchForGs1Only is not null ||
-            hiddenCharactersNotRepresentedCorrectlyForGs1Only is not null) {
+        if (layoutsDoNotMatchForGs1Only is not null
+            || hiddenCharactersNotRepresentedCorrectlyForGs1Only is not null
+            || readsInvariantCharactersReliablyMayNotReadFormat0506Reliably is not null) {
             var cannotReadAnsiMh1082Reliably =
                 mediumSeverity.Find(a => a.AdviceType == AdviceType.CannotReadAnsiMh1082Reliably);
 
@@ -690,6 +694,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         bool IfTheKeyboardLayoutsCanRepresentGroupSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentGroupSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentFileSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentFileSeparatorWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentUnitSeparatorsWithoutMapping() => !keyboardLayoutsCanRepresentUnitSeparatorWithoutMapping ?? false;
+        bool IfTheKeyboardLayoutsCanRepresentEotWithoutMapping() => keyboardLayoutsCanRepresentEotWithoutMapping ?? false;
         bool IfTheKeyboardLayoutsCannotRepresentEotWithoutMapping() => !keyboardLayoutsCanRepresentEotWithoutMapping ?? false;
         bool IfWeDoNotAscertainThatTheKeyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping() => !(keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping ?? false);
         bool IfTheKeyboardLayoutsCannotRepresentEdiSeparatorsWithoutMapping() => keyboardLayoutsCanRepresentEdiSeparatorsWithoutMapping is false;
