@@ -337,9 +337,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             && IfTheKeyboardLayoutsDoNotCorrespondForInvariantCharacters()
                 ? IfWeAssumeAgnosticism()
                     ? IfWeKnowIfWeCanReadInvariantCharactersReliably()
-                      || IfWeKnowIfWeCanReadFormat05AndFormat06Reliably()
                         ? IfWeCanReadInvariantCharactersReliably()
-                          && IfWeCanReadFormat05AndFormat06Reliably()
                             ? ReportThatLayoutsDoNotMatch() // 307
                             : IfWeAssumeNoCalibration()
                                 ? ReportThatLayoutsDoNotMatchForNoCalibrationAssumption() // 308

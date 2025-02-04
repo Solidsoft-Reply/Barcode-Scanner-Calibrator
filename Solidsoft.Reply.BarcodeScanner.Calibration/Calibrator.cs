@@ -6479,7 +6479,7 @@ public class Calibrator {
                         {
                             _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
                             token = LogIsoIec15434SeparatorSupport(token, idx);
-                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
+                            token = LogNonCorrespondenceForSeparators(token, idx);
                         }
                     else
                         {
@@ -6638,14 +6638,15 @@ public class Calibrator {
                         }
                         else {
                             _tokenExtendedDataCharacterMap.Add(reportedControl.First(), expectedControl.First());
-                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
+                            token = LogNonCorrespondenceForSeparators(token, idx);
+                            token = LogIsoIec15434SeparatorSupport(token, idx);
                         }
                     }
                 }
                 else {
                     switch (reportedControl.Length) {
                         case 0:
-                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
+                            token = LogNonCorrespondenceForSeparators(token, idx);
 
                             // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                             switch (idx) {
@@ -7053,13 +7054,13 @@ public class Calibrator {
                             // The control character has been reported as a ligature.  It must be added to the ligature map
                             _tokenExtendedDataLigatureMap.Add(reportedControl, expectedControl.First());
                             token = LogIsoIec15434SeparatorSupport(token, idx);
-                            token = LogNonCorrespondenceForIsoIec15434Separators(token, idx);
+                            token = LogNonCorrespondenceForSeparators(token, idx);
                             break;
                     }
                 }
 
                 token = !correspondence
-                            ? LogNonCorrespondenceForIsoIec15434Separators(token, idx)
+                            ? LogNonCorrespondenceForSeparators(token, idx)
                             : token;
 
 #pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
@@ -7090,14 +7091,13 @@ public class Calibrator {
 
             return token;
 
-            Token LogNonCorrespondenceForIsoIec15434Separators(Token calibrationToken, Segments idx) =>
+            Token LogNonCorrespondenceForSeparators(Token calibrationToken, Segments idx) =>
                 idx switch {
                     // Information: The barcode scanner and computer keyboard layouts do not correspond when representing Group Separators.
-                    Segments.GroupSeparatorSegment => AssessFormatSupport
-                        ? LogCalibrationInformation(
+                    Segments.GroupSeparatorSegment =>
+                        LogCalibrationInformation(
                             calibrationToken,
-                            InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator)
-                        : calibrationToken,
+                            InformationType.NonCorrespondingKeyboardLayoutsGroupSeparator),
 
                     // Information: The barcode scanner and computer keyboard layouts do not correspond when representing File separators.
                     Segments.FileSeparatorSegment => AssessFormatSupport
