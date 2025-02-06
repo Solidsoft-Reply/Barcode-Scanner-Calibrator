@@ -363,6 +363,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // AdviceType: 315, 316
         AddAdviceItemToList(
             IfDataWasFullyReported()
+            && IfWeIncludedTheFormatTest()
             && IfWeAssumeAgnosticism()
             && IfWeCanReadInvariantCharactersReliably()
             && IfWeCannotReadFormat05AndFormat06Reliably()
@@ -432,22 +433,20 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
         // didn't run the ANSI MH10.8.2 tests. So, we will remove the warning if this occurs.
         if ((from ansiMh1082TestWarning in mediumSeverity
              let isAnsiMh1082Error = (from ansiMh1082Error in highSeverity
-                                      where ansiMh1082Error.AdviceType is
-                                          AdviceType.LayoutsDoNotMatchNoFormat0506
-                                          or AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506
+                                      where ansiMh1082Error.AdviceType is AdviceType.LayoutsDoNotMatchNoFormat0506
+                                                                       or AdviceType.HiddenCharactersNotReportedCorrectlyNoFormat0506
                                       select ansiMh1082Error).Any()
              let isAnsiMh1082Warning = (from ansiMh1082Warning in mediumSeverity
                                         where ansiMh1082Warning.AdviceType is AdviceType.MayNotReadFormat0506
-                                            or AdviceType.MayNotReadFormat0506NoCalibration
-                                            or AdviceType.CannotReadAnsiMh1082Reliably
+                                                                           or AdviceType.MayNotReadFormat0506NoCalibration
+                                                                           or AdviceType.CannotReadAnsiMh1082Reliably
                                         select ansiMh1082Warning).Any()
              let isAnsiMh1082Info = (from ansiMh1082Info in lowSeverity
                                      where ansiMh1082Info.AdviceType is AdviceType.ReadsInvariantCharactersReliablyNoFormatTest
-                                         or AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
-                                         or AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506
+                                                                     or AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably
+                                                                     or AdviceType.ReadsInvariantCharactersReliablyExceptFormat0506
                                      select ansiMh1082Info).Any()
-             where (isAnsiMh1082Error || isAnsiMh1082Warning || isAnsiMh1082Info) &&
-                   ansiMh1082TestWarning.AdviceType == AdviceType.Gs1OnlyTest
+             where (isAnsiMh1082Error || isAnsiMh1082Warning || isAnsiMh1082Info) && ansiMh1082TestWarning.AdviceType == AdviceType.Gs1OnlyTest
              select ansiMh1082TestWarning).Any()) {
             mediumSeverity.RemoveAll(item => item.AdviceType == AdviceType.Gs1OnlyTest);
         }
@@ -473,7 +472,7 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
 
         var gs1ButNotFormat0506 = lowSeverity.Find(a => a.AdviceType == AdviceType.ReadsInvariantCharactersReliablyMayNotReadFormat0506Reliably);
         var gs1ButNoFormatTest = lowSeverity.Find(a => a.AdviceType == AdviceType.ReadsInvariantCharactersReliablyNoFormatTest);
-        var noGroupSeparator = highSeverity.Find(a => a.AdviceType == AdviceType.HiddenCharactersNotRepresentedCorrectly);
+        var noGroupSeparator = highSeverity.Find(a => a.AdviceType == AdviceType.HiddenCharactersNotReportedCorrectly);
         var cannotReadBarcodesReliably = highSeverity.Find(a => a.AdviceType == AdviceType.CannotReadBarcodesReliably);
 
         if (gs1ButNotFormat0506 is not null
@@ -648,13 +647,25 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
             if (adviceItem?.AdviceType == AdviceType.None) return;
             switch (adviceItem?.Severity) {
                 case ConditionSeverity.Low:
-                    lowSeverity.Add(adviceItem);
+                    if (!lowSeverity.Contains(adviceItem))
+                    {
+                        lowSeverity.Add(adviceItem);
+                    }
+
                     break;
                 case ConditionSeverity.Medium:
-                    mediumSeverity.Add(adviceItem);
+                    if (!mediumSeverity.Contains(adviceItem))
+                    {
+                        mediumSeverity.Add(adviceItem);
+                    }
+
                     break;
                 case ConditionSeverity.High:
-                    highSeverity.Add(adviceItem);
+                    if (!highSeverity.Contains(adviceItem))
+                    {
+                        highSeverity.Add(adviceItem);
+                    }
+
                     break;
                 case ConditionSeverity.None:
                 case null:
@@ -895,11 +906,11 @@ public class Advice : IAdvice<AdviceItem, AdviceType> {
 
         // 309
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectly() =>
-            new (AdviceType.HiddenCharactersNotRepresentedCorrectly);
+            new (AdviceType.HiddenCharactersNotReportedCorrectly);
 
         // 310
         AdviceItem ReportThatHiddenCharactersAreNotRepresentedCorrectlyAssumingNoCalibration() =>
-            new (AdviceType.HiddenCharactersNotRepresentedCorrectlyNoCalibration);
+            new (AdviceType.HiddenCharactersNotReportedCorrectlyNoCalibration);
 
         // 315
         AdviceItem ReportThatLayoutsDoNotMatchAndFormat05AndFormat06CannotBeReadReliably() =>

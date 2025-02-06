@@ -727,7 +727,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You did not test compatibility for compatibility with ISO/IEC 15434..
+        ///   Looks up a localized string similar to You did not test compatibility with ISO/IEC 15434..
         /// </summary>
         internal static string Condition_250 {
             get {

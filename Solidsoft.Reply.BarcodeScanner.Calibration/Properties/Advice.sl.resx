@@ -319,7 +319,7 @@
     <value>Vaš sistem ne more zanesljivo brati črtnih kod formata 05 ali formata 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Niste preizkusili združljivosti za združljivost z ISO/IEC 15434.</value>
+    <value>Niste preizkusili združljivosti z ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Hitrost vnosa podatkov je počasnejša od pričakovane.</value>

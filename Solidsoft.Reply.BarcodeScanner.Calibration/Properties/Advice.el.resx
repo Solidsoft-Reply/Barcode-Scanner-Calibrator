@@ -319,7 +319,7 @@
     <value>Το σύστημά σας δεν μπορεί να διαβάσει αξιόπιστα barcodes Format 05 ή Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Δεν δοκιμάσατε τη συμβατότητα για συμβατότητα με το ISO/IEC 15434.</value>
+    <value>Δεν δοκιμάσατε τη συμβατότητα με το ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Η απόδοση της εισαγωγής δεδομένων είναι πιο αργή από ό,τι αναμενόταν.</value>

@@ -319,7 +319,7 @@
     <value>Kerfið þitt getur ekki lesið Format 05 eða Format 06 strikamerki áreiðanlega.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Þú prófaðir ekki samhæfni við ISO/IEC 15434.</value>
+    <value>Þú hefur ekki prófað samhæfni við ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Gagnainntak er hægara en búist var við.</value>

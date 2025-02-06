@@ -319,7 +319,7 @@
     <value>Ditt system kan inte pålitligt läsa Format 05 eller Format 06-streckkoder.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Du testade inte kompatibilitet med ISO/IEC 15434.</value>
+    <value>Du har inte testat kompatibiliteten med ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Datainmatningens prestanda är långsammare än förväntat.</value>

@@ -386,7 +386,7 @@
     <comment>High</comment>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>You did not test compatibility for compatibility with ISO/IEC 15434.</value>
+    <value>You did not test compatibility with ISO/IEC 15434.</value>
     <comment>High</comment>
   </data>
   <data name="Condition_255" xml:space="preserve">

@@ -319,7 +319,7 @@
     <value>Вашата система не може да чете надеждно баркодове от Формат 05 или Формат 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Не сте тествали съвместимост за съвместимост с ISO/IEC 15434.</value>
+    <value>Не сте тествали съвместимостта с ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Производителността на въвеждането на данни е по-бавна от очакваното.</value>

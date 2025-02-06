@@ -319,7 +319,7 @@
     <value>Jūsų sistema negali patikimai skaityti Formatas 05 arba Formatas 06 brūkšninių kodų.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Jūs nebandėte suderinamumo su ISO/IEC 15434.</value>
+    <value>Jūs neišbandėte suderinamumo su ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Duomenų įvedimo našumas yra lėtesnis nei tikėtasi.</value>

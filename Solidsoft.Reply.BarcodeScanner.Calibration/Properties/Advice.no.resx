@@ -319,7 +319,7 @@
     <value>Systemet ditt kan ikke lese Format 05 eller Format 06-strekkoder pålitelig.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Du testet ikke kompatibilitet med ISO/IEC 15434.</value>
+    <value>Du har ikke testet kompatibiliteten med ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Tietojen syöttönopeus on odotettua hitaampi.</value>

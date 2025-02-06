@@ -319,7 +319,7 @@
     <value>Is-sistema tiegħek ma tistax taqra barcodes tal-Format 05 jew Format 06 b'mod affidabbli.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Inti ma ttestjajtx il-kompatibilità għall-kompatibilità ma' ISO/IEC 15434.</value>
+    <value>Ma ttestjajtx il-kompatibilità ma' ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Il-prestazzjoni tad-dħul tad-data hija aktar bil-mod milli mistenni.</value>

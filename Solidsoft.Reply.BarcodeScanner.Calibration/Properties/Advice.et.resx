@@ -319,7 +319,7 @@
     <value>Teie süsteem ei suuda lugeda Formaat 05 või Formaat 06 vöötkoode usaldusväärselt.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Te ei testinud ühilduvust ISO/IEC 15434-ga.</value>
+    <value>Te ei ole testinud ühilduvust standardiga ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Andmesisestuse jõudlus on aeglasem kui oodatud.</value>

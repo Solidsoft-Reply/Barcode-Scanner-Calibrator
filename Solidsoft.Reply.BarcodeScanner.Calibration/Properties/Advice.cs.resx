@@ -319,7 +319,7 @@
     <value>Váš systém nemůže spolehlivě číst čárové kódy formátu 05 nebo 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Nebyla provedena kompatibilita pro kompatibilitu s ISO/IEC 15434.</value>
+    <value>Netestovali jste kompatibilitu s ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Výkon zadávání dat je pomalejší než se očekávalo.</value>

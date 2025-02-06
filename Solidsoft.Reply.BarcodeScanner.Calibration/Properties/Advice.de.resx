@@ -319,7 +319,7 @@
     <value>Ihr System kann Format 05 oder Format 06 Barcodes nicht zuverlässig lesen.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Sie haben die Kompatibilität für die Kompatibilität mit ISO/IEC 15434 nicht getestet.</value>
+    <value>Sie haben die Kompatibilität mit ISO/IEC 15434 nicht getestet.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Die Leistung der Dateneingabe ist langsamer als erwartet.</value>

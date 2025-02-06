@@ -319,7 +319,7 @@
     <value>Ní féidir le do chóras barcodes Format 05 nó Format 06 a léamh go hiontaofa.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Níor thástáil tú comhoiriúnacht le haghaidh comhoiriúnacht le ISO/IEC 15434.</value>
+    <value>Níor thástáil tú comhoiriúnacht le ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Tá feidhmíocht ionchuir sonraí níos moille ná mar a bhíothas ag súil.</value>

@@ -4753,7 +4753,7 @@ public class Calibrator {
          */
         var twoSpacesIdx = testData.LastIndexOf(new string(' ', 2), StringComparison.Ordinal);
 
-        // If this is greater tha 140, look for the previous two consecutive spaces.
+        // If this is greater than 140, look for the previous two consecutive spaces.
         if (twoSpacesIdx > 140) {
             hypotheticalMean = 1.958762886597938;
             hypotheticalStdDev = 0.19987109247774507;
@@ -6769,21 +6769,6 @@ public class Calibrator {
                                                     key.ToControlPictureString(),
                                                     $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
                                                 break;
-                                            
-                                                //////////// Warning: The reported character {0} for an End-of-Transmission character is ambiguous. Barcodes that use ASCII 04 control
-                                                //////////// characters may not be reliably read.
-                                                //////////token = LogCalibrationInformation(
-                                                //////////    token,
-                                                //////////    InformationType.EotCharacterNotReliablyReadableInvariant,
-                                                //////////    key.ToControlPictureString(),
-                                                //////////    $"{expectedControl.ToControlPictures()} {characterMapValue.ToControlPictureString()}");
-
-                                                //////////// Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
-                                                //////////token = LogCalibrationInformation(
-                                                //////////    token,
-                                                //////////    InformationType.InvariantAmbiguityForEotCharacter);
-
-                                                //////////break;                                              
                                         }
                                     }
                                     else {
@@ -7012,7 +6997,6 @@ public class Calibrator {
                                                 InformationType.EotCharacterNotReliablyReadableInvariant,
                                                 key.ToControlPictureString(),
                                                 $"{expectedControl.ToControlPictures()} {key.ToControlPictureString()}");
-                                                //////InformationType.InvariantAmbiguityForEotCharacter);
                                         }
                                         else {
                                             // Warning: The reported character sequence {0} is ambiguous. This may prevent reading of any additional data elements included in a barcode.

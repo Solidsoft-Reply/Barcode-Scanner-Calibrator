@@ -85,14 +85,14 @@ public enum AdviceType {
     /// <p>Your software may not be able to compensate. Configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     /// <remarks>This indicates problems with Group Separators, only.</remarks>
-    HiddenCharactersNotRepresentedCorrectly = 309,
+    HiddenCharactersNotReportedCorrectly = 309,
 
     /// <summary>
     /// <p>Hidden characters in barcodes are not reported correctly.</p>
     /// <p>Configure your barcode scanner to emulate a numeric keypad.</p>
     /// </summary>
     /// <remarks>This indicates problems with Group Separators, only.</remarks>
-    HiddenCharactersNotRepresentedCorrectlyNoCalibration = 310,
+    HiddenCharactersNotReportedCorrectlyNoCalibration = 310,
 
     /// <summary>
     /// <p>Your barcode scanner and computer keyboard layouts are different.</p>
@@ -293,7 +293,7 @@ public enum AdviceType {
     CannotReadAnsiMh1082Reliably = 245,
 
     /// <summary>
-    /// <p>You did not test compatibility for compatibility with ISO/IEC 15434.</p>
+    /// <p>You did not test compatibility with ISO/IEC 15434.</p>
     /// <p>If you expect to scan barcodes that contain data formatted according to ISO/IEC 15434,
     /// run the test again, this time including the ISO/IEC 15434 data compatibility test.</p>
     /// </summary>

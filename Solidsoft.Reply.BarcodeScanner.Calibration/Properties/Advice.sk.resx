@@ -319,7 +319,7 @@
     <value>Váš systém nemusí spoľahlivo čítať čiarové kódy vo Formáte 05 alebo Formáte 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Neotestovali ste kompatibilitu s ISO/IEC 15434.</value>
+    <value>Netestovali ste kompatibilitu s ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Výkon zadávania dát je pomalší, než sa očakávalo.</value>

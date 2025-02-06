@@ -319,7 +319,7 @@
     <value>Il tuo sistema non può leggere in modo affidabile i codici a barre Formato 05 o Formato 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Non hai testato la compatibilità con ISO/IEC 15434.</value>
+    <value>Non ha testato la compatibilità con ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Le prestazioni di inserimento dei dati sono più lente del previsto.</value>

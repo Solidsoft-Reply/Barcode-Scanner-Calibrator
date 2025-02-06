@@ -319,7 +319,7 @@
     <value>Sistemul tău nu poate citi în mod fiabil codurile de bare Format 05 sau Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Nu ai testat compatibilitatea pentru compatibilitate cu ISO/IEC 15434.</value>
+    <value>Nu ați testat compatibilitatea cu ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Wydajność wprowadzania danych jest wolniejsza niż oczekiwano.</value>

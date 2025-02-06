@@ -319,7 +319,7 @@
     <value>Twój system nie może niezawodnie odczytywać kodów kreskowych Format 05 lub Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Nie przetestowano zgodności zgodności z ISO/IEC 15434.</value>
+    <value>Nie przetestowano zgodności z ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Wydajność wprowadzania danych jest wolniejsza niż oczekiwano.</value>

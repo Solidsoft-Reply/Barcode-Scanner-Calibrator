@@ -319,7 +319,7 @@
     <value>Uw systeem kan Format 05 of Format 06 barcodes niet betrouwbaar lezen.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>U heeft geen compatibiliteitstest gedaan voor compatibiliteit met ISO/IEC 15434.</value>
+    <value>U heeft de compatibiliteit met ISO/IEC 15434 niet getest.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>De prestaties van gegevensinvoer zijn langzamer dan verwacht.</value>

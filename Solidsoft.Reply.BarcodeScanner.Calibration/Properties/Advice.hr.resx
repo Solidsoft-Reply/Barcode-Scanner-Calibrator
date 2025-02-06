@@ -319,7 +319,7 @@
     <value>Vaš sustav ne može pouzdano čitati bar kodove Format 05 ili Format 06.</value>
   </data>
   <data name="Condition_250" xml:space="preserve">
-    <value>Niste testirali kompatibilnost za kompatibilnost s ISO/IEC 15434.</value>
+    <value>Niste testirali kompatibilnost s ISO/IEC 15434.</value>
   </data>
   <data name="Condition_255" xml:space="preserve">
     <value>Performanse unosa podataka su sporije od očekivanih.</value>
