@@ -1505,10 +1505,15 @@ public class Calibrator {
                     : TestForReportedCharacters());
             continue;
 
+            string TestForCrLfCharacters() =>
+                reportedChar == '\r' || reportedChar == '\n'
+                    ? reportedChar.ToInvariantString()
+                    : "\u25a1";
+
             string TestForSpaceCharacter() =>
                 reportedChar == ' '
                     ? " "
-                    : "\u25a1";
+                    : TestForCrLfCharacters();
 
             string TestIfNoMappingRequired() =>
                 _tokenExtendedDataCharacterMap.Count == 0

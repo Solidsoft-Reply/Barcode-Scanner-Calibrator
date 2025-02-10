@@ -19,7 +19,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Further improvements to advice reporting.
+		1) Fixed pre-processor issue that prematurely processed carriage return and line feed characters.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +29,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.15</Version>
+	<Version>2.2.16</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
