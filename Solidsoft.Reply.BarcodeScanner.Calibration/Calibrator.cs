@@ -4198,7 +4198,7 @@ public class Calibrator {
         var duplicateKeys =
             from pairGroup in from pair in characterKeyValuePairs
                               group pair by pair.Key
-                into pairGroup
+                              into pairGroup
                               select pairGroup
             where pairGroup.Count() > 1
             select pairGroup.Key;
