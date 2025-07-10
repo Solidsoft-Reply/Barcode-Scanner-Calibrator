@@ -6451,11 +6451,11 @@ public class Calibrator {
                         if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out char value)) {
     #if NET7_0_OR_GREATER
                             var ambiguousInvariant = InvariantsMatchRegex().IsMatch(value.ToInvariantString());
-    #else
-                            var ambiguousInvariant = InvariantsMatchRegex.IsMatch(_tokenExtendedDataCharacterMap['\0'].ToInvariantString());
-    #endif
-    #pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
-                            token = LogCalibrationInformation(
+#else
+                            var ambiguousInvariant = InvariantsMatchRegex.IsMatch(value.ToInvariantString());
+#endif
+#pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
+                        token = LogCalibrationInformation(
                                 token,
                                 idx switch {
                                     Segments.GroupSeparatorSegment => ambiguousInvariant
@@ -6892,7 +6892,7 @@ public class Calibrator {
     #if NET7_0_OR_GREATER
                                         ? InvariantsMatchRegex().IsMatch(key.ToInvariantString())
     #else
-                                        ? InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString())
+                                        ? InvariantsMatchRegex.IsMatch(key.ToInvariantString())
     #endif
                                             ? LogAmbiguityInvariant()
                                             : LogAmbiguityNonInvariant()
@@ -6993,11 +6993,11 @@ public class Calibrator {
                                     Token LogCalibrationInformationForEot(Token localToken) {
     #if NET7_0_OR_GREATER
                                         if (InvariantsMatchRegex().IsMatch(key.ToString())) {
-    #else
-                                        if (InvariantsMatchRegex.IsMatch(expectedControl)) {
-    #endif
-                                            // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
-                                            localToken = LogCalibrationInformation(
+#else
+                                        if (InvariantsMatchRegex.IsMatch(key.ToString())) {
+#endif
+                                        // Information: The reported character for an invariant character is the same as the character reported for the End-of-Transmission character.
+                                        localToken = LogCalibrationInformation(
                                                 localToken,
                                                 InformationType.EotCharacterNotReliablyReadableInvariant,
                                                 key.ToControlPictureString(),

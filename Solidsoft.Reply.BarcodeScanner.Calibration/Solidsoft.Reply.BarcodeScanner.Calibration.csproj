@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net9.0;net8.0;net7.0;net6.0;</TargetFrameworks>
+    <TargetFrameworks>net7.0;net6.0</TargetFrameworks>
 	<LangVersion>13.0</LangVersion>
 	<ImplicitUsings>enable</ImplicitUsings>
 	<Nullable>enable</Nullable>
@@ -19,7 +19,7 @@
 	<PackageReleaseNotes>
 		The following changes were made in this release.
 
-		1) Fixed pre-processor issue that prematurely processed carriage return and line feed characters.
+		1) Fixed incompatibilitis between with versions for .NET 6.0 and .NET 7.0 or later.
 
 	</PackageReleaseNotes>
 	<Description>
@@ -29,7 +29,7 @@
 		--------------
 		$(PackageReleaseNotes)
 	</Description>
-	<Version>2.2.16</Version>
+	<Version>2.2.17</Version>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	<NeutralLanguage>en</NeutralLanguage>
