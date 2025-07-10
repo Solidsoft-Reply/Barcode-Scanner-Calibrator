@@ -3,7 +3,8 @@
 dotnet add package Solidsoft.Reply.BarcodeScanner.Calibration
 
 ---
-﻿#Barcode Scanner Calibration
+
+#Barcode SCanner Calibration
  
 We often attach barcode scanners to computers as keyboard input devices.  We used to do this using keyboard wedges – e.g., a ‘Y’ cables.  Today, we generally connect a barcode scanner via a USB port using the USB-HID (Human Interface Device) class.  Other options may exist.  In each case, the scanner acts as a keyboard device, reporting scan codes to the computer in accordance with a keyboard layout supported by the scanner.  The operating system then maps these codes to characters in accordance with the current keyboard configuration.  
   
