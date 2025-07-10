@@ -4,6 +4,7 @@ dotnet add package Solidsoft.Reply.BarcodeScanner.Calibration
 
 ---
 ﻿# Barcode Scanner Calibration
+ 
 We often attach barcode scanners to computers as keyboard input devices.  We used to do this using keyboard wedges – e.g., a ‘Y’ cables.  Today, we generally connect a barcode scanner via a USB port using the USB-HID (Human Interface Device) class.  Other options may exist.  In each case, the scanner acts as a keyboard device, reporting scan codes to the computer in accordance with a keyboard layout supported by the scanner.  The operating system then maps these codes to characters in accordance with the current keyboard configuration.  
   
 This is problematic.  Any incompatibility between the scanner’s internal keyboard layout and the operating system’s keyboard layout may lead to incorrect representation of the barcode data.  In addition, the scanner may be configured to change or invert the case of alphabetic characters, substitute certain characters for other characters, add prefixes and suffixes to the reported data or report control characters using one of several conventions.  Most barcode scanners support Microsoft Windows keyboard layouts and report control characters using Microsoft DOS conventions.  If the scanner does not support a given keyboard layout, or if it is used on other platforms such as macOS or Linux, it may be impossible to configure the barcode scanner to be compatible with the operating system.  
