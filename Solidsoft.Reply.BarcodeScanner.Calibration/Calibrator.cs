@@ -68,7 +68,7 @@ public delegate string? Preprocessor(string? input, out IList<PreprocessorExcept
  *
  * If a dead key does not modify the next typed character, the result is the literal dead key character, preceded by an ASCII 0, followed
  * by the next character. So, if ' is a dead key character, but does not modify e, the resulting sequence will be \u0000\u0039\u0101 (\0'e).
- * Typing the same dead key twice will output thw dead key characters e.g., \u0000\u0039\u0039 (\0'')
+ * Typing the same dead key twice will output the dead key characters e.g., \u0000\u0039\u0039 (\0'')
  *
  * To type the literal dead key character, keyboards generally support the convention of pressing the dead key character followed by the space
  * So, if ' is a dead key, to type a literal ', press ' followed by the space bar. The resulting sequence will be \u0000\u0039 (\0').
