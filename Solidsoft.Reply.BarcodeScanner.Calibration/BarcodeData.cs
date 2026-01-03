@@ -46,7 +46,7 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
     /// <summary>
     ///   A collection of strings representing individual characters in the barcode.
     /// </summary>
-    private readonly string[] _parsedData = ParseData(data).ToArray();
+    private readonly string[] _parsedData = [.. ParseData(data)];
 
     /// <summary>
     ///   A collection of calibration data segments for individual barcodes.

@@ -757,7 +757,7 @@ public class Calibrator {
         return SegmentStreams(new BarcodeData(barcodeDataEx, size.MaxCapacity()));
 
         static IList<string> SegmentStreams(BarcodeData barcodeSegments) {
-            return barcodeSegments.Segments.ToList();
+            return [.. barcodeSegments.Segments];
         }
     }
 
@@ -1291,7 +1291,7 @@ public class Calibrator {
                     new BarcodeData(CreateDeadKeyCalibration(value), size.MaxCapacity())));
 
         static IList<string> SegmentStreams(BarcodeData barcodeSegments) {
-            return barcodeSegments.Segments.ToList();
+            return [.. barcodeSegments.Segments];
         }
     }
 
@@ -3271,10 +3271,9 @@ public class Calibrator {
         // Gets a string containing each ambiguous ligature character.
         string AmbiguousLigatureText() =>
             new string(
-                    (from c in ambiguousLigatureStrings.Aggregate((s1, s2) => $"{s1}{s2}")
+                    [.. (from c in ambiguousLigatureStrings.Aggregate((s1, s2) => $"{s1}{s2}")
                      select c)
-                    .Distinct()
-                    .ToArray())
+                    .Distinct()])
                 .Aggregate(
                     string.Empty,
                     (current, ambiguousCharacter) =>
@@ -3469,13 +3468,15 @@ public class Calibrator {
             () => {
                 // Create a collection of dictionary entries for all processed characters.
                 selectedCharacterKeyValuePairs =
-                    (_processedInvariantCharacters ?? new Dictionary<char, char>())
-                    .Where(m => m.Key != '\0')
-                    .Select(m => m)
-                    .Concat(
-                        (_processedNonInvariantCharacters ?? new Dictionary<char, char>())
+                    [
+                        .. (_processedInvariantCharacters ?? new Dictionary<char, char>())
                         .Where(m => m.Key != '\0')
-                        .Select(m => m)).ToList();
+                        .Select(m => m)
+,
+                        .. (_processedNonInvariantCharacters ?? new Dictionary<char, char>())
+                        .Where(m => m.Key != '\0')
+                        .Select(m => m),
+                    ];
 
                 return new Lazy<Token>(localToken);
             };
@@ -3484,11 +3485,11 @@ public class Calibrator {
         EnvToken CheckForAmbiguitiesBetweenCharacterAndLigatureMaps(Token localToken) =>
             () => {
                 ambiguousLigatureStrings =
-                    (from k in
+                    [.. (from k in
                          from key in _tokenExtendedDataLigatureMap.Keys
                          select key
                      where k.All(c => _tokenExtendedDataCharacterMap.ContainsKey(c))
-                     select k).ToList<string>();
+                     select k)];
 
                 return new Lazy<Token>(localToken);
             };
@@ -4185,7 +4186,7 @@ public class Calibrator {
         IEnumerable<KeyValuePair<char, char>> selectedCharacterKeyValuePairs) {
         var characterKeyValuePairs =
             selectedCharacterKeyValuePairs as KeyValuePair<char, char>[] ??
-            selectedCharacterKeyValuePairs.ToArray();
+            [.. selectedCharacterKeyValuePairs];
 
         var keyValuePairs =
             selectedCharacterKeyValuePairs as KeyValuePair<char, char>[]
@@ -4210,7 +4211,7 @@ public class Calibrator {
 
         var nonInvariantPairs =
             duplicateNonInvariantPairs as KeyValuePair<char, char>[]
-         ?? duplicateNonInvariantPairs.ToArray();
+         ?? [.. duplicateNonInvariantPairs];
 
         if (nonInvariantPairs.Length != 0) {
             // Remove the duplicates from the processed non-invariant characters
@@ -4227,7 +4228,7 @@ public class Calibrator {
 
             keyValuePairs =
                 selectedCharacterKeyValuePairs as KeyValuePair<char, char>[]
-             ?? selectedCharacterKeyValuePairs.ToArray();
+             ?? [.. selectedCharacterKeyValuePairs];
         }
 
         // Create the character map and detect ambiguous characters
@@ -4996,10 +4997,9 @@ public class Calibrator {
 
         // If any chained dead key sequences have been detected, we will normalize them by removing multiple ASCII 0 characters.
         if (chainedSequences.Count > 0) {
-            segmentOut = segment.Select((t, sequenceIdx) => chainedSequences.TryGetValue(sequenceIdx, out var value)
+            segmentOut = [.. segment.Select((t, sequenceIdx) => chainedSequences.TryGetValue(sequenceIdx, out var value)
                     ? $"\u0000{value[value.IndexOf(value.First(c => c != '\u0000'), StringComparison.Ordinal)..]}"
-                    : t)
-                .ToList();
+                    : t)];
 
             // Update the reported segment with normalized content.
             reportedSegments[reportedSegmentsIndex] = segmentOut;
@@ -5845,7 +5845,7 @@ public class Calibrator {
 
         void AppendDescription(IEnumerable<Information> information, string? data = null)
         {
-            var calibrationInformation = information as Information[] ?? information.ToArray();
+            var calibrationInformation = information as Information[] ?? [.. information];
             var descriptionData = string.IsNullOrEmpty(data) ? reportedData : data;
 
             if (!string.IsNullOrWhiteSpace(descriptionData) && calibrationInformation.Length == 1)
@@ -7357,8 +7357,7 @@ public class Calibrator {
                     if (characters[idx] == duplicateReportedCharacter) indexes.Add(idx);
                 }
 
-                return indexes.Select(t => allExpectedCharacters[t])
-                    .Select(dummy => dummy.ToControlPicture()).ToList();
+                return [.. indexes.Select(t => allExpectedCharacters[t]).Select(dummy => dummy.ToControlPicture())];
             }
         }
 
