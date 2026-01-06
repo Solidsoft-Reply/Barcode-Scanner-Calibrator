@@ -214,7 +214,7 @@
     <value>Tá an scanóir baracóid ag craoladh síneadh: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire</value>
+    <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Ní mheaitseálann leagan amach méarchláir an scanóra baracóid agus an ríomhaire do charachtair inbhuanaithe.</value>
@@ -385,8 +385,7 @@
     <value>Tá an seicheamh carachtar a tuairiscíodh {0} débhríoch. Léiríonn sé seo an carachtar scaradh taifeadta.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Is ionann an carachtar a tuairiscíodh do charachtar neamh-inathraithe agus an carachtar a tuairiscíodh don charachtar Deireadh an tarchuir.
-</value>
+    <value>Is ionann an carachtar a tuairiscíodh do charachtar neamh-inathraithe agus an carachtar a tuairiscíodh don charachtar Deireadh an tarchuir.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Ní féidir an carachtar scartha taifead a léamh.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Ní fhreagraíonn an scanóir cóid bharra agus leagan amach méarchláir an ríomhaire dá chéile nuair a léirítear carachtair deiridh tarchurtha.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Luach gan choinne don eochair 'existing map'</value>
   </data>
 </root>

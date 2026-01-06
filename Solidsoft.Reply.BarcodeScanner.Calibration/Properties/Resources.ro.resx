@@ -214,7 +214,7 @@
     <value>Scanerul de coduri de bare transmite un sufix: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund</value>
+    <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu corespund pentru caractere invariante.</value>
@@ -319,7 +319,7 @@
     <value>Corespondența dintre configurațiile tastaturii scanerului de coduri de bare și a calculatorului nu poate fi determinată.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>Nespecificat.</value>
+    <value>Nespecificat</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
     <value>Calibrarea a eșuat. {0}</value>
@@ -385,8 +385,7 @@
     <value>Secvența de caractere raportată {0} este ambiguă. Aceasta reprezintă caracterul separatorului de înregistrări.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Caracterele raportate pentru un caracter invariant sunt aceleași cu cele raportate pentru caracterul de sfârșit de transmisie.
-</value>
+    <value>Caracterele raportate pentru un caracter invariant sunt aceleași cu cele raportate pentru caracterul de sfârșit de transmisie.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Caracterul separator de înregistrare nu poate fi citit.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Scannerul de coduri de bare și configurațiile tastaturii computerului nu corespund la reprezentarea caracterelor de sfârșit de transmisie.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valoare neașteptată pentru cheia „existing map”</value>
   </data>
 </root>

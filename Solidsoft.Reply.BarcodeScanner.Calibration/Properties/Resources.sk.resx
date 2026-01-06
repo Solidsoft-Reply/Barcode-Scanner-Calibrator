@@ -247,8 +247,7 @@
     <value>Čítačka čiarových kódov môže byť nakonfigurovaná na inverziu veľkosti písmen.</value>
   </data>
   <data name="CalibrationInformation_290" xml:space="preserve">
-    <value>Najlepší nahlásený čas zadávania údajov z klávesnice počas kalibrácie naznačuje, že čítačka čiarových kódov nepracuje optimálne.
-</value>
+    <value>Najlepší nahlásený čas zadávania údajov z klávesnice počas kalibrácie naznačuje, že čítačka čiarových kódov nepracuje optimálne.</value>
   </data>
   <data name="CalibrationInformation_300" xml:space="preserve">
     <value>Neboli nahlásené žiadne údaje o kalibrácii.</value>
@@ -386,8 +385,7 @@
     <value>Hlásená sekvencia znakov {0} je nejednoznačná. Predstavuje znak oddeľovača záznamov.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Hlásený znak pre invariantný znak je rovnaký ako znak hlásený pre znak konca prenosu.
-</value>
+    <value>Hlásený znak pre invariantný znak je rovnaký ako znak hlásený pre znak konca prenosu.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Znak oddeľovača záznamov nie je možné prečítať.</value>
@@ -436,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Čítačka čiarových kódov a rozloženie klávesnice počítača sa nezhodujú pri zobrazovaní znakov konca prenosu.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Neočakávaná hodnota pre kľúč „existing map“</value>
   </data>
 </root>

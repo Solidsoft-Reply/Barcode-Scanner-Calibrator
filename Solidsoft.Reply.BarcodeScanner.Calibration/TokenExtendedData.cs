@@ -34,7 +34,6 @@ public sealed record TokenExtendedData {
     ///   Initializes a new instance of the <see cref="TokenExtendedData" /> class.
     /// </summary>
     internal TokenExtendedData() {
-#pragma warning disable SA1010 // Opening square brackets should be spaced correctly
 #pragma warning disable IDE0028 // Simplify collection initialization
         DeadKeysMap = [];
         DeadKeyCharacterMap = [];
@@ -65,7 +64,6 @@ public sealed record TokenExtendedData {
         NonInvariantUnrecognisedCharacters = new List<string>();
         InvariantGs1UnrecognisedCharacters = new List<string>();
 #pragma warning restore IDE0028 // Simplify collection initialization
-#pragma warning restore SA1010 // Opening square brackets should be spaced correctly
     }
 
     /// <summary>

@@ -47,9 +47,7 @@ internal class DataConverter : JsonConverter<Data> {
         if (value.DeadKeyCharacterMap?.Count != 0) {
             // Compact by removing ASCII 0
             var compactDeadKeyCharacterMap = value.DeadKeyCharacterMap?.ToDictionary(kvp => kvp.Key.Length > 1 && kvp.Key[0] == char.MinValue ? kvp.Key[1..] : kvp.Key, kvp => kvp.Value);
-#pragma warning disable SA1010 // Opening square brackets should be spaced correctly
             obj["deadKeyCharacterMap"] = JToken.FromObject(compactDeadKeyCharacterMap ?? [], serializer);
-#pragma warning restore SA1010 // Opening square brackets should be spaced correctly
         }
 
         if (value.LigatureMap?.Count != 0) obj["ligatureMap"] = JToken.FromObject(value.LigatureMap ?? new Dictionary<string, char>(), serializer);

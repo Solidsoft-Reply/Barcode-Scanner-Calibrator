@@ -319,7 +319,7 @@
     <value>Nie można określić zgodności układu skanera kodów kreskowych i klawiatury komputera.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>Nieokreślony.</value>
+    <value>Nieokreślony</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
     <value>Kalibracja nie powiodła się. {0}</value>
@@ -385,8 +385,7 @@
     <value>Zgłoszona sekwencja znaków {0} jest niejednoznaczna. Reprezentuje ona znak separatora rekordów.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Zgłoszony znak dla znaku niezmiennego jest taki sam, jak zgłoszony znak dla znaku końca transmisji.
-</value>
+    <value>Zgłoszony znak dla znaku niezmiennego jest taki sam, jak zgłoszony znak dla znaku końca transmisji.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Nie można odczytać znaku separatora rekordu.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Skaner kodów kreskowych i układy klawiatury komputera nie odpowiadają sobie podczas przedstawiania znaków końca transmisji.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Nieoczekiwana wartość dla klucza „existing map”</value>
   </data>
 </root>

@@ -385,8 +385,7 @@
     <value>La secuencia de caracteres informada {0} es ambigua. Esto representa el carácter de separador de registros.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>El carácter reportado para un carácter invariante es el mismo que el carácter reportado para el carácter de fin de transmisión.
-</value>
+    <value>El carácter reportado para un carácter invariante es el mismo que el carácter reportado para el carácter de fin de transmisión.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>El carácter separador de registros no se puede leer.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>El escáner de códigos de barras y las distribuciones del teclado de la computadora no coinciden al representar los caracteres de fin de transmisión.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valor inesperado para la clave "existing map"</value>
   </data>
 </root>

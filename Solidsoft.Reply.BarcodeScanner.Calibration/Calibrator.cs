@@ -21,10 +21,6 @@
 ////#define Diagnostics
 
 using System.Diagnostics;
-#pragma warning disable RS0016
-
-#pragma warning disable S1751
-#pragma warning disable S3626
 
 [assembly: CLSCompliant(true)]
 
@@ -774,7 +770,6 @@ public class Calibrator {
     /// <param name="trace">Indicates whether the calibrator should trace the data it receives. This supports debugging.</param>
     /// <returns>The updated calibration token.</returns>
     // ReSharper disable once UnusedMember.Global
-#pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
     public Token Calibrate(
         int[] data,
         Token token,
@@ -908,9 +903,7 @@ public class Calibrator {
             }
 
             // ReSharper disable once RedundantAssignment
-#pragma warning disable S1854 // Unused assignments should be removed
             tempDataForTrace = string.Empty;
-#pragma warning restore S1854 // Unused assignments should be removed
         }
 
         // Set the current calibration barcode type.
@@ -1031,7 +1024,11 @@ public class Calibrator {
                             '\u001C' => InformationType.NonCorrespondingKeyboardLayoutsFileSeparator,
                             '\u001F' => InformationType.NonCorrespondingKeyboardLayoutsUnitSeparator,
                             '\u0004' => InformationType.NonCorrespondingKeyboardLayoutsEotCharacter,
-                            _ => throw new ArgumentOutOfRangeException(nameof(existingMap))
+#if NET7_0_OR_GREATER
+                            _ => throw new UnreachableException($"{Resources.Calibration_Error_004}: {existingMap.ToControlPictureString()}")
+#else
+                            _ => throw new InvalidOperationException($"{Resources.Calibration_Error_004}: {existingMap.ToControlPictureString()}")
+#endif
                         });
 
                     return ']';
@@ -1427,7 +1424,6 @@ public class Calibrator {
                         : TestSuffixBeforeEoT();
         }
 
-#pragma warning disable S127 // "for" loop stop conditions should be invariant
         for (var idx = 0; idx < input.Length; idx++) {
             if (idx < _tokenExtendedDataAimFlagCharacterSequence?.Length + 2 && !string.IsNullOrEmpty(aimId)) {
                 if (idx < 3) {
@@ -1447,7 +1443,6 @@ public class Calibrator {
                 _tokenExtendedDataDeadKeysMap.TryGetValue(key, out var extendedDataDeadKeyValue)) {
                 builder.Append(extendedDataDeadKeyValue);
                 idx++;
-#pragma warning restore S127 // "for" loop stop conditions should be invariant
                 continue;
             }
 
@@ -1461,7 +1456,6 @@ public class Calibrator {
              * The likelihood that a falsified serial number, which contains spaces and that is then
              * resolved by this code, will be the same length is low.
              * */
-#pragma warning disable S127 // "for" loop stop conditions should be invariant
             if (_tokenExtendedDataScannerDeadKeysMap.TryGetValue($"{reportedChar}", out var extendedDataScannerDeadKeyValue) &&
                 input.Length > idx + 1 &&
                 input[idx + 1] == '\u0020') {
@@ -1489,7 +1483,6 @@ public class Calibrator {
                 builder.Append(c);
                 continue;
             }
-#pragma warning restore S127 // "for" loop stop conditions should be invariant
 
             /* If the barcode scanner and OS layouts do not match, it is not possible to determine what
              * character actually exists in the barcode unless the character is in the calibration
@@ -1916,10 +1909,7 @@ public class Calibrator {
             var lowerCaseSequences = Enumerable.Range(1, 26).Select(idx => segmentCharacters[idx + 55 - adjustment]);
 
             return capsLockIndicator
-                ? UnicodeBlocks.ResolveScript(upperCaseSequences, lowerCaseSequences)
-#pragma warning disable S2234
-                : UnicodeBlocks.ResolveScript(lowerCaseSequences, upperCaseSequences);
-#pragma warning restore S2234
+                ? UnicodeBlocks.ResolveScript(upperCaseSequences, lowerCaseSequences) : UnicodeBlocks.ResolveScript(lowerCaseSequences, upperCaseSequences);
         }
         catch (ArgumentOutOfRangeException argEx) {
             Console.WriteLine(Properties.Advice.ErrorWhileResolvingKeyboardScripts, argEx.Message);
@@ -3471,8 +3461,7 @@ public class Calibrator {
                     [
                         .. (_processedInvariantCharacters ?? new Dictionary<char, char>())
                         .Where(m => m.Key != '\0')
-                        .Select(m => m)
-,
+                        .Select(m => m),
                         .. (_processedNonInvariantCharacters ?? new Dictionary<char, char>())
                         .Where(m => m.Key != '\0')
                         .Select(m => m),
@@ -3485,11 +3474,11 @@ public class Calibrator {
         EnvToken CheckForAmbiguitiesBetweenCharacterAndLigatureMaps(Token localToken) =>
             () => {
                 ambiguousLigatureStrings =
-                    [.. (from k in
+                    [.. from k in
                          from key in _tokenExtendedDataLigatureMap.Keys
                          select key
                      where k.All(c => _tokenExtendedDataCharacterMap.ContainsKey(c))
-                     select k)];
+                     select k];
 
                 return new Lazy<Token>(localToken);
             };
@@ -3839,6 +3828,7 @@ public class Calibrator {
 #else
                                             InvariantsMatchRegex.IsMatch(expectedCharacter[0].ToInvariantString());
 #endif
+
                                         // Error: The reported character sequence {0} is ambiguous. This represents the group separator character.
                                         return LogCalibrationInformation(
                                             InitializeTokenData(),
@@ -6241,15 +6231,12 @@ public class Calibrator {
             if (aimIdentifier[idx] == _tokenExtendedDataAimFlagCharacterSequence[0]) {
                 var flagCharacterSequence = _tokenExtendedDataAimFlagCharacterSequence;
                 initialIndex = idx;
-
-#pragma warning disable S127 // "for" loop stop conditions should be invariant
                 for (var fcIdx = 1; fcIdx < _tokenExtendedDataAimFlagCharacterSequence.Length; fcIdx++) {
                     if (idx < aimIdentifier.Length - 1 && aimIdentifier[++idx] == _tokenExtendedDataAimFlagCharacterSequence[fcIdx]) continue;
 
                     flagCharacterSequence = string.Empty;
                     idx = initialIndex;
                 }
-#pragma warning restore S127 // "for" loop stop conditions should be invariant
 
                 detectedAimFlagSequence = !string.IsNullOrEmpty(flagCharacterSequence);
                 builder.Append(flagCharacterSequence);
@@ -6449,13 +6436,13 @@ public class Calibrator {
                     if (reportedControl.Length > 1) {
                         // we need to account for any conflict with a previously logged 'null' mapping
                         if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out char value)) {
-    #if NET7_0_OR_GREATER
+#if NET7_0_OR_GREATER
                             var ambiguousInvariant = InvariantsMatchRegex().IsMatch(value.ToInvariantString());
 #else
                             var ambiguousInvariant = InvariantsMatchRegex.IsMatch(value.ToInvariantString());
 #endif
 #pragma warning disable CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
-                        token = LogCalibrationInformation(
+                            token = LogCalibrationInformation(
                                 token,
                                 idx switch {
                                     Segments.GroupSeparatorSegment => ambiguousInvariant
@@ -6480,7 +6467,7 @@ public class Calibrator {
                             token = LogAnyIsoIec54345SyntaxIssue(ambiguousInvariant);
                         }
 
-                        if (!_tokenExtendedDataDeadKeysMap.ContainsKey(reportedControl))
+                        if (!_tokenExtendedDataDeadKeysMap.TryGetValue(reportedControl, out string? value1))
                         {
                             _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
                             token = LogIsoIec15434SeparatorSupport(token, idx);
@@ -6488,11 +6475,11 @@ public class Calibrator {
                         }
                     else
                         {
-    #if NET7_0_OR_GREATER
-                            var ambiguousInvariant = InvariantsMatchRegex().IsMatch(_tokenExtendedDataDeadKeysMap[reportedControl]);
-    #else
+#if NET7_0_OR_GREATER
+                            var ambiguousInvariant = InvariantsMatchRegex().IsMatch(value1);
+#else
                             var ambiguousInvariant = InvariantsMatchRegex.IsMatch(_tokenExtendedDataDeadKeysMap[reportedControl]);
-    #endif
+#endif
                             token = LogCalibrationInformation(
                                 token,
                                 idx switch {
@@ -6513,7 +6500,7 @@ public class Calibrator {
                                         : ReplaceDeadKeyMap(),
                                 },
                                 reportedControl.ToControlPictures(),
-                                $"{expectedControl.ToControlPictures()} {_tokenExtendedDataDeadKeysMap[reportedControl].ToControlPictures()}");
+                                $"{expectedControl.ToControlPictures()} {value1.ToControlPictures()}");
 
                             token = LogAnyIsoIec54345SyntaxIssue(ambiguousInvariant);
 
@@ -6522,18 +6509,18 @@ public class Calibrator {
                                 _tokenExtendedDataDeadKeysMap.Add(reportedControl, expectedControl);
                                 return InformationType.ControlCharacterMappingNonInvariants;
                             }
-    #pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
+#pragma warning restore CS8509 // The switch expression does not handle all possible values of its input type (it is not exhaustive).
                         }
                     }
                     else
                     {
                         // The control character is represented as a null character. Is this ambiguous?
                         if (_tokenExtendedDataCharacterMap.TryGetValue('\0', out var nullMapCharacter)) {
-    #if NET7_0_OR_GREATER
+#if NET7_0_OR_GREATER
                             var ambiguousInvariant = InvariantsMatchRegex().IsMatch(nullMapCharacter.ToInvariantString());
-    #else
+#else
                             var ambiguousInvariant = InvariantsMatchRegex.IsMatch(nullMapCharacter.ToInvariantString());
-    #endif
+#endif
 
                             // ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
                             switch (idx) {
@@ -6704,11 +6691,11 @@ public class Calibrator {
 
                                 if (_tokenExtendedDataCharacterMap.TryGetValue(key, out var characterMapValue))
                                 {
-    #if NET7_0_OR_GREATER
+#if NET7_0_OR_GREATER
                                     var ambiguousInvariant = InvariantsMatchRegex().IsMatch(characterMapValue.ToInvariantString());
-    #else
+#else
                                     var ambiguousInvariant = InvariantsMatchRegex.IsMatch(characterMapValue.ToInvariantString());
-    #endif
+#endif
                                     if (ambiguousInvariant)
                                     {
                                         // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
@@ -6889,11 +6876,11 @@ public class Calibrator {
                                     correspondence = false;
 
                                     token = AsciiChars.Contains(key, StringComparison.Ordinal)
-    #if NET7_0_OR_GREATER
+#if NET7_0_OR_GREATER
                                         ? InvariantsMatchRegex().IsMatch(key.ToInvariantString())
-    #else
+#else
                                         ? InvariantsMatchRegex.IsMatch(key.ToInvariantString())
-    #endif
+#endif
                                             ? LogAmbiguityInvariant()
                                             : LogAmbiguityNonInvariant()
                                         : AddMapping();
@@ -6991,7 +6978,7 @@ public class Calibrator {
                                         };
 
                                     Token LogCalibrationInformationForEot(Token localToken) {
-    #if NET7_0_OR_GREATER
+#if NET7_0_OR_GREATER
                                         if (InvariantsMatchRegex().IsMatch(key.ToString())) {
 #else
                                         if (InvariantsMatchRegex.IsMatch(key.ToString())) {

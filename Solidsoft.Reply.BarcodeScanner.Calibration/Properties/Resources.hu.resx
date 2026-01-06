@@ -385,8 +385,7 @@
     <value>A jelentett {0} karakterlánc kétértelmű. Ez a rekordelválasztó karaktert képviseli.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>A jelentett karakter egy invariáns karakterhez ugyanaz, mint a jelentett karakter a továbbítás vége karakterhez.
-</value>
+    <value>A jelentett karakter egy invariáns karakterhez ugyanaz, mint a jelentett karakter a továbbítás vége karakterhez.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>A rekordelválasztó karakter nem olvasható.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>A vonalkódolvasó és a számítógép billentyűzetkiosztásai nem felelnek meg egymásnak az átvitelvége jelek ábrázolásakor.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Váratlan érték a(z) „existing map” kulcshoz</value>
   </data>
 </root>

@@ -130,7 +130,7 @@
     <value>Incorrect warning information type.</value>
   </data>
   <data name="Calibration_Error_001" xml:space="preserve">
-    <value>Failed to insert space placeholders. </value>
+    <value>Failed to insert space placeholders.</value>
     <comment>Error</comment>
   </data>
   <data name="Calibration_Error_002" xml:space="preserve">
@@ -219,7 +219,7 @@
     <value>The barcode scanner is transmitting a suffix: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>The barcode scanner and computer keyboard layouts do not correspond</value>
+    <value>The barcode scanner and computer keyboard layouts do not correspond.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>The barcode scanner and computer keyboard layouts do not correspond for invariant characters.</value>
@@ -440,5 +440,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>The barcode scanner and computer keyboard layouts do not correspond when representing End-of-Transmission characters.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Unexpected value for 'existing map' key</value>
   </data>
 </root>

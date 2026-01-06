@@ -385,8 +385,7 @@
     <value>Teatatud märgijada {0} on mitmetähenduslik. See esindab kirje eraldusmärki.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Teatatud märk invariaadi jaoks on sama, mis edastuse lõpu märgi jaoks teatatud märk.
-</value>
+    <value>Teatatud märk invariaadi jaoks on sama, mis edastuse lõpu märgi jaoks teatatud märk.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Kirjeseparaatori märki ei saa lugeda.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Triipkoodilugeja ja arvuti klaviatuuri paigutused ei vasta edastuse lõpu märkide kujutamisel.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Ootamatu väärtus võtme „existing map” jaoks</value>
   </data>
 </root>

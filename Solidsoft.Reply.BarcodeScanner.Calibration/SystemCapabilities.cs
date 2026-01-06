@@ -730,7 +730,6 @@ public sealed record SystemCapabilities(
 
         // Process errors
         foreach (var informationType in token.Errors.Select(info => info.InformationType)) {
-#pragma warning disable S907
             // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
             switch (informationType) {
                 // We received partial data.  We cannot determine the system capabilities.
@@ -837,7 +836,6 @@ public sealed record SystemCapabilities(
                         informationType,
                         Resources.CalibrationIncorrectErrorInformationType);
             }
-#pragma warning restore S907
         }
 
         if (capabilitiesUnknown) {
@@ -1019,9 +1017,7 @@ public sealed record SystemCapabilities(
              select dkm).ToList();
 #pragma warning restore IDE0305 // Simplify collection initialization
 
-#pragma warning disable S3626
         return;
-#pragma warning restore S3626
 
         static string ParameterValue(Information info) {
             var msgSplit = info.Description?.Split(':');

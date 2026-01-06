@@ -385,8 +385,7 @@
     <value>Nahlášená sekvence znaků {0} je nejednoznačná. Představuje znak oddělovače záznamu.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Nahlášený znak pro invariantní znak je stejný jako znak nahlášený pro znak konce přenosu.
-</value>
+    <value>Nahlášený znak pro invariantní znak je stejný jako znak nahlášený pro znak konce přenosu.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Znak oddělovače záznamů nelze přečíst.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Snímač čárových kódů a rozložení klávesnice počítače neodpovídají při zobrazování znaků konce přenosu.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Neočekávaná hodnota pro klíč „existing map“</value>
   </data>
 </root>

@@ -345,7 +345,6 @@ public class KeyboardCalibratorTestsInformation {
     /// Test calibration for a malformed barcode that uses every extended ASCII character.
     /// </summary>
     [Fact]
-    [SuppressMessage("Blocker Code Smell", "S2699:Tests should include assertions", Justification = "<Pending>")]
     public void ErrorNoTemporaryDelimiterCandidate() {
         /* This test is no longer valid because improvements to the analysis of barcode data means that the malformed barcode
          * will be detected early and the calibrator will not attempt to continue.  The analysis performed on barcode data

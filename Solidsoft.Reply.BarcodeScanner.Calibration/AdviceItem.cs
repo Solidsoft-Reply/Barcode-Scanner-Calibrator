@@ -30,7 +30,7 @@ using Newtonsoft.Json.Serialization;
 /// <summary>
 ///   Represents an individual item of advice for a given condition.
 /// </summary>
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Approved>")]
 [method: JsonConstructor]
 public sealed record AdviceItem(
     [property: JsonProperty("adviceType", Order = 0)] AdviceType AdviceType,

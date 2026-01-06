@@ -165,12 +165,7 @@ internal class CaseConversionCharacteristics(
 
                 upperToLowerLetterCount += upper ? increment : 0;
                 lowerToUpperLetterCount += upper ? 0 : increment;
-#pragma warning disable S3626
-#pragma warning disable S1751
                 continue;
-#pragma warning restore S1751
-#pragma warning restore S3626
-
                 bool TestIfEven() =>
                     isEven
                         ? letter[0] % 2 == 0

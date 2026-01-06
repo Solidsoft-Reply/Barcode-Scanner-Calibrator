@@ -214,7 +214,7 @@
     <value>Stregkodescanneren transmitterer et suffiks: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens</value>
+    <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Stregkodescannerens og computerens tastaturlayouts stemmer ikke overens for invariante tegn.</value>
@@ -385,8 +385,7 @@
     <value>Den rapporterede tegnsekvens {0} er tvetydig. Dette repræsenterer tegnadskillelsestegnet.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Det rapporterede tegn for et invariante tegn er det samme som det rapporterede tegn for slut-på-overførsel tegnet.
-</value>
+    <value>Det rapporterede tegn for et invariante tegn er det samme som det rapporterede tegn for slut-på-overførsel tegnet.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Tegnet for recordsseparatoren kan ikke læses.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Stregkodescanneren og computerens tastaturlayout stemmer ikke overens ved gengivelse af slut-overførselstegn.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Uventet værdi for nøglen 'existing map'</value>
   </data>
 </root>

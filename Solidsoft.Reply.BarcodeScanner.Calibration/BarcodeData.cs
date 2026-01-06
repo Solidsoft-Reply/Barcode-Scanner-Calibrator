@@ -105,9 +105,7 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
                         if (remainingLength >= workingMaxCharacter * 2) {
                             yield return DoIt();
                         }
-#pragma warning disable S2589
                         else if (remainingLength <= 0) {
-#pragma warning restore S2589
                             break;
                         }
                         else if (!adjustingLastSegments && remainingLength < workingMaxCharacter * 2) {
@@ -123,10 +121,7 @@ public class BarcodeData(string data, int maximumCharacters = -1) {
                             yield return DoIt();
                         }
 
-#pragma warning disable S1751
                         continue;
-#pragma warning restore S1751
-
                         string DoIt() {
                             var terminateIndex = currentSegmentStartIndex + workingMaxCharacter;
                             terminateIndex = terminateIndex > totalLength

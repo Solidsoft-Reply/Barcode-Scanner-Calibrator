@@ -214,7 +214,7 @@
     <value>Brūkšninių kodų skaitytuvas siunčia priesagą: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa</value>
+    <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvo ir kompiuterio klaviatūros išdėstymai nesutampa invariantiniams simboliams.</value>
@@ -385,8 +385,7 @@
     <value>Pranešta simbolių seka {0} yra dviprasmiška. Tai reiškia įrašo skyriklio simbolį.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Praneštas simbolis dėl nekintamo simbolio yra tas pats, kaip praneštas simbolis dėl perdavimo pabaigos simbolio.
-</value>
+    <value>Praneštas simbolis dėl nekintamo simbolio yra tas pats, kaip praneštas simbolis dėl perdavimo pabaigos simbolio.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Įrašo skyriklio simbolio nepavyko perskaityti.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Brūkšninių kodų skaitytuvas ir kompiuterio klaviatūros išdėstymai nesutampa, kai vaizduojami perdavimo pabaigos simboliai.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Netikėta reikšmė raktui „esamas žemėlapis“</value>
   </data>
 </root>

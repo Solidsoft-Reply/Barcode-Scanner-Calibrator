@@ -385,8 +385,7 @@
     <value>Skýrða táknröðin {0} er tvíræð. Þetta táknar skráarskiljann.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Skýrði stafurinn fyrir fastan staf er sá sami og stafurinn sem tilkynnt var um fyrir sendingarenda stafinn.
-</value>
+    <value>Skýrði stafurinn fyrir fastan staf er sá sami og stafurinn sem tilkynnt var um fyrir sendingarenda stafinn.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Ekki er hægt að lesa skráarflokksgreini.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Strikamerkjaskanni og lyklaborðsútlit tölvunnar samsvara ekki við framsetningu á sendingarlokastöfum.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Óvænt gildi fyrir lykilinn „existing map“</value>
   </data>
 </root>

@@ -385,8 +385,7 @@
     <value>Ziņotā rakstzīmju secība {0} ir neskaidra. Tas attēlo ierakstu atdalītāja rakstzīmi.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Ziņotā rakstzīme par nemainīgu rakstzīmi ir tāda pati kā ziņotā rakstzīme par pārsūtīšanas beigu rakstzīmi.
-</value>
+    <value>Ziņotā rakstzīme par nemainīgu rakstzīmi ir tāda pati kā ziņotā rakstzīme par pārsūtīšanas beigu rakstzīmi.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Nav iespējams nolasīt ieraksta atdalītāja rakstzīmi.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Svītrkodu skeneris un datora tastatūras izkārtojumi nesakrīt, attēlojot pārsūtīšanas beigu simbolus.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Negaidīta vērtība atslēgai “esošā karte”</value>
   </data>
 </root>

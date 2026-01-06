@@ -214,7 +214,7 @@
     <value>Skener bar kodova prenosi sufiks: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju</value>
+    <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Konfiguracije tipkovnice skenera bar kodova i računala se ne podudaraju za invarijantne znakove.</value>
@@ -385,8 +385,7 @@
     <value>Prijavljeni niz znakova {0} je dvosmislen. Ovo predstavlja znak za razdvajanje zapisa.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Prijavljeni znak za invarijantni znak isti je kao prijavljeni znak za znak kraja prijenosa.
-</value>
+    <value>Prijavljeni znak za invarijantni znak isti je kao prijavljeni znak za znak kraja prijenosa.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Znak za razdvajanje zapisa ne može se pročitati.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Skenator barkodova i raspored tipkovnice računala ne odgovaraju pri prikazu znakova za kraj prijenosa.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Neočekivana vrijednost za ključ 'existing map'</value>
   </data>
 </root>

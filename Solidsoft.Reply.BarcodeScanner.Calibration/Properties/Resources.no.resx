@@ -385,8 +385,7 @@
     <value>Den rapporterte tegnsekvensen {0} er tvetydig. Dette representerer postseparator-tegnet.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Det rapporterte tegnet for et invariant tegn er det samme som tegnet rapportert for slutten av overføring.
-</value>
+    <value>Det rapporterte tegnet for et invariant tegn er det samme som tegnet rapportert for slutten av overføring.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Postseparator-tegnet kan ikke leses.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Strekkodeskanneren og tastaturoppsettene på datamaskinen samsvarer ikke når overføringens sluttkarakterer representeres.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Uventet verdi for nøkkelen «existing map»</value>
   </data>
 </root>

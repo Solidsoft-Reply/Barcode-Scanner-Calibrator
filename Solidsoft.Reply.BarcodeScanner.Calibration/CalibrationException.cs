@@ -26,10 +26,7 @@ using System;
 ///   Represents a calibration exception.
 /// </summary>
 [Serializable]
-#pragma warning disable S3871
-internal class CalibrationException : Exception
-#pragma warning restore S3871
-{
+internal class CalibrationException : Exception {
     /// <summary>
     ///   Initializes a new instance of the <see cref="CalibrationException" /> class.
     /// </summary>

@@ -19,7 +19,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -88,7 +88,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to insert space placeholders. .
+        ///   Looks up a localized string similar to Failed to insert space placeholders..
         /// </summary>
         internal static string Calibration_Error_001 {
             get {
@@ -111,6 +111,15 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         internal static string Calibration_Error_003 {
             get {
                 return ResourceManager.GetString("Calibration_Error_003", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unexpected value for &apos;existing map&apos; key.
+        /// </summary>
+        internal static string Calibration_Error_004 {
+            get {
+                return ResourceManager.GetString("Calibration_Error_004", resourceCulture);
             }
         }
         
@@ -628,7 +637,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond.
+        ///   Looks up a localized string similar to The barcode scanner and computer keyboard layouts do not correspond..
         /// </summary>
         internal static string CalibrationInformation_270 {
             get {

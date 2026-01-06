@@ -385,8 +385,7 @@
     <value>Докладваната последователност от символи {0} е нееднозначна. Това представлява символа за разделител на записи.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Съобщеният символ за инвариантен символ е същият като символът, съобщен за символа за край на предаването.
-</value>
+    <value>Съобщеният символ за инвариантен символ е същият като символът, съобщен за символа за край на предаването.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Не може да бъде прочетен символът за разделяне на записи.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Скенерът за баркодове и подредбите на клавиатурата на компютъра не съответстват при представяне на знаци за край на предаване.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Неочаквана стойност за ключа „existing map“</value>
   </data>
 </root>

@@ -182,7 +182,6 @@ public class StatelessCalibrator {
     /// <param name="preProcessors">The pre-processor functions, provided as a delegate.</param>
     /// <returns>The updated calibration token.</returns>
     // ReSharper disable once UnusedMember.Global
-#pragma warning disable RS0026 // Do not add multiple public overloads with optional parameters
     public Token Calibrate(
         int[] data,
         Token token,
@@ -210,7 +209,6 @@ public class StatelessCalibrator {
         TimeSpan dataEntryTimeSpan = default,
         Preprocessor? preProcessors = null) =>
         _calibrator.Calibrate(data, token, capsLock, platform, dataEntryTimeSpan, preProcessors);
-#pragma warning restore RS0026 // Do not add multiple public overloads with optional parameters
 
     /// <summary>
     ///   Return the next calibration token.

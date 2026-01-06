@@ -294,7 +294,7 @@
     <comment>High</comment>
   </data>
   <data name="Advice_330" xml:space="preserve">
-    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary. </value>
+    <value>Check your scanner, keyboard and computer configuration and reconfigure them if necessary.</value>
     <comment>High</comment>
   </data>
   <data name="Advice_331" xml:space="preserve">
@@ -410,15 +410,15 @@
     <comment>High</comment>
   </data>
   <data name="Condition_270" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_271" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_275" xml:space="preserve">
-    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)</value>
+    <value>Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).</value>
     <comment>High</comment>
   </data>
   <data name="Condition_276" xml:space="preserve">
@@ -534,7 +534,7 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_206" xml:space="preserve">
-    <value>Your Caps Lock key may be disabled or remapped. </value>
+    <value>Your Caps Lock key may be disabled or remapped.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_210" xml:space="preserve">
@@ -546,11 +546,11 @@
     <comment>Medium</comment>
   </data>
   <data name="Description_220" xml:space="preserve">
-    <value>Your software may not recognise the prefix. </value>
+    <value>Your software may not recognise the prefix.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_225" xml:space="preserve">
-    <value>Your software may not recognise the suffix. </value>
+    <value>Your software may not recognise the suffix.</value>
     <comment>Medium</comment>
   </data>
   <data name="Description_230" xml:space="preserve">

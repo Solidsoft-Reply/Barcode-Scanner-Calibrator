@@ -385,8 +385,7 @@
     <value>La séquence de caractères signalée {0} est ambiguë. Cela représente le caractère de séparateur d'enregistrement.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Le caractère signalé pour un caractère invariant est le même que celui signalé pour le caractère de fin de transmission.
-</value>
+    <value>Le caractère signalé pour un caractère invariant est le même que celui signalé pour le caractère de fin de transmission.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Le caractère de séparateur d'enregistrement ne peut pas être lu.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Le lecteur de codes-barres et les dispositions des claviers d'ordinateur ne correspondent pas lors de la représentation des caractères de fin de transmission.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valeur inattendue pour la clé « existing map »</value>
   </data>
 </root>

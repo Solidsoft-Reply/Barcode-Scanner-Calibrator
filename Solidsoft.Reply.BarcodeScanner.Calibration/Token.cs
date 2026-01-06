@@ -76,7 +76,7 @@ using Newtonsoft.Json.Serialization;
 /// <param name="ReportedSuffix">
 ///   Gets a reported suffix.
 /// </param>
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Approved>")]
 [method: JsonConstructor]
 public readonly record struct Token(
     [property: JsonProperty("data", Order = 7)] TokenData? Data,
@@ -422,6 +422,10 @@ public readonly record struct Token(
     }
 #pragma warning restore SA1642 // Constructor summary documentation should begin with standard text
 
+#pragma warning disable IDE0028 // Simplify collection initialization
+
+    // We will keep the following properties as mutable lists.
+
     /// <summary>
     ///   Gets the collection or calibration errors.
     /// </summary>
@@ -439,6 +443,7 @@ public readonly record struct Token(
     /// </summary>
     [JsonProperty("information", Order = 6)]
     public IEnumerable<Information> Information { get; init; } = new List<Information>();
+#pragma warning restore IDE0028 // Simplify collection initialization
 
     /// <summary>
     ///   Gets extended token data that must be used in stateless interactions.

@@ -319,7 +319,7 @@
     <value>De overeenkomst van de barcode scanner en computer toetsenbordindelingen kan niet bepaald worden.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>Niet gespecificeerd.</value>
+    <value>Niet gespecificeerd</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
     <value>Kalibratie mislukt. {0}</value>
@@ -385,8 +385,7 @@
     <value>De gerapporteerde tekenreeks {0} is dubbelzinnig. Dit vertegenwoordigt het recordscheidingsteken.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Het gerapporteerde teken voor een invariante teken is hetzelfde als het gerapporteerde teken voor het einde van transmissie-teken.
-</value>
+    <value>Het gerapporteerde teken voor een invariante teken is hetzelfde als het gerapporteerde teken voor het einde van transmissie-teken.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Het recordscheidingsteken kan niet worden gelezen.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>De barcodescanner en de toetsenbordindelingen van de computer komen niet overeen bij het weergeven van einde-overdrachtstekens.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Onverwachte waarde voor de sleutel 'existing map'</value>
   </data>
 </root>

@@ -30,7 +30,7 @@ using Newtonsoft.Json.Serialization;
 /// </summary>
 /// <param name="Level">The calibration information level.</param>
 /// <param name="InformationType">The additional advisory information for the calibration information.</param>
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Approved>")]
 public sealed record Information(
     [JsonProperty("level", Order = 0)]
     InformationLevel Level,

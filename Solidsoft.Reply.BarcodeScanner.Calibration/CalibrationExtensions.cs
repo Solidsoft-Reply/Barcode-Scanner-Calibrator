@@ -191,9 +191,7 @@ internal static class CalibrationExtensions {
                     if (map.Key != characters[idx..endIndex]) continue;
 
                     foundDeadKey = true;
-#pragma warning disable S127 // "for" loop stop conditions should be invariant
                     idx += map.Key.Length - 1;
-#pragma warning restore S127 // "for" loop stop conditions should be invariant
                     character = map.Value;
                 }
 

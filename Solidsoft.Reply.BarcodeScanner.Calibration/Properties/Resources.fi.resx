@@ -214,7 +214,7 @@
     <value>Viivakoodinlukija lähettää jälkiliitteen: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan</value>
+    <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Viivakoodinlukijan ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan invarianteille merkeille.</value>
@@ -385,8 +385,7 @@
     <value>Ilmoitettu merkkijono {0} on epäselvä. Tämä edustaa tietueen erottimista merkkiä.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Raportoitu merkki invariantille merkille on sama kuin merkki, joka raportoitiin siirron päättymismerkiksi.
-</value>
+    <value>Raportoitu merkki invariantille merkille on sama kuin merkki, joka raportoitiin siirron päättymismerkiksi.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Tietueen erottimen merkkiä ei voida lukea.</value>
@@ -434,8 +433,9 @@
     <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan tiedoston erotinten esittämisessä.</value>
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
-    <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan siirron lopun merkkien esittämisessä.
-
-</value>
+    <value>Viivakoodinlukija ja tietokoneen näppäimistöasettelut eivät vastaa toisiaan siirron lopun merkkien esittämisessä.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Odottamaton arvo avaimelle 'existing map'</value>
   </data>
 </root>

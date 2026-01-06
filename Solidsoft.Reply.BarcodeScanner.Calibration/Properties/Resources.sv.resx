@@ -214,7 +214,7 @@
     <value>Streckkodsläsaren sänder ett suffix: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens</value>
+    <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Streckkodsläsarens och datorns tangentbordslayouter stämmer inte överens för invarianter.</value>
@@ -385,8 +385,7 @@
     <value>Den rapporterade teckensekvensen {0} är tvetydig. Detta representerar tecknet för avgränsning av poster.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Den rapporterade tecknet för ett invariant tecken är detsamma som tecknet rapporterat för slutet-av-överföring-tecknet.
-</value>
+    <value>Den rapporterade tecknet för ett invariant tecken är detsamma som tecknet rapporterat för slutet-av-överföring-tecknet.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Postseparatorstecknet kan inte läsas.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Streckkodsläsaren och datorns tangentbordslayouter stämmer inte överens vid representation av tecken för överföringsslut.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Oväntat värde för nyckeln ”existing map”</value>
   </data>
 </root>

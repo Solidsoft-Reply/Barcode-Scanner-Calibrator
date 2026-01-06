@@ -214,7 +214,7 @@
     <value>L-iskanner tal-barcode qed jittrasmetti suffiss: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux</value>
+    <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Il-layouts tal-iskanner tal-barcode u l-keyboard tal-kompjuter ma jaqblux għal karattri invarianti.</value>
@@ -385,8 +385,7 @@
     <value>Is-sekwenza ta’ karattri rrappurtata {0} hija ambigwa. Dan jirrappreżenta l-karattru tas-separatur tar-rekords.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Il-karattru rrappurtat għal karattru invarjant huwa l-istess bħal dak irrapportat għall-karattru ta’ Tmiem it-Trasmissjoni.
-</value>
+    <value>Il-karattru rrappurtat għal karattru invarjant huwa l-istess bħal dak irrapportat għall-karattru ta’ Tmiem it-Trasmissjoni.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Il-karattru tal-firda tar-rekord ma jistax jinqara.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>L-iskaner tal-kodiċi tal-barra u l-layouts tal-keyboard tal-kompjuter ma jaqblux meta jirrappreżentaw karattri ta’ tmiem it-trasmissjoni.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valur mhux mistenni għaċ-ċavetta 'existing map'</value>
   </data>
 </root>

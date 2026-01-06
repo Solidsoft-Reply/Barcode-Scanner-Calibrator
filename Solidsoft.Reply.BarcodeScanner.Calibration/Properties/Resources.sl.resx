@@ -385,8 +385,7 @@
     <value>Prijavljeno zaporedje znakov {0} je dvoumno. To predstavlja znak za ločevanje zapisov.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Prijavljeni znak za nespremenljiv znak je enak kot znak prijavljen za znak konec prenosa.
-</value>
+    <value>Prijavljeni znak za nespremenljiv znak je enak kot znak prijavljen za znak konec prenosa.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Znaka ločila zapisov ni mogoče prebrati.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Optični bralnik črtnih kod in razporeditve tipkovnice računalnika ne ustrezajo pri prikazu znakov za konec prenosa.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Nepričakovana vrednost za ključ »existing map«</value>
   </data>
 </root>

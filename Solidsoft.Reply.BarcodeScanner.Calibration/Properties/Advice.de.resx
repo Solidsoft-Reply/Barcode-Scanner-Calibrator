@@ -490,7 +490,7 @@
     <value>Diese Zeichen werden in Barcodes nicht weit verbreitet verwendet.</value>
   </data>
   <data name="Description_300" xml:space="preserve">
-    <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner</value>
+    <value>Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner.</value>
   </data>
   <data name="Description_303" xml:space="preserve">
     <value>Die Tastaturlayouts von Barcodescanner und Computer entsprechen möglicherweise nicht. Sie haben möglicherweise einen falschen Barcode gescannt oder falsche Daten über die Tastatur eingegeben. Ihr Barcodescanner oder System ist möglicherweise langsam, oder es ist ein unerwartetes oder intermittierendes Problem aufgetreten.</value>

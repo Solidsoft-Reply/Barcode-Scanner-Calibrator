@@ -385,8 +385,7 @@
     <value>Die gemeldete Zeichenfolge {0} ist mehrdeutig. Dies stellt das Datensatztrennzeichen dar.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Das gemeldete Zeichen für ein unveränderliches Zeichen ist dasselbe wie das gemeldete Zeichen für das End-of-Transmission-Zeichen.
-</value>
+    <value>Das gemeldete Zeichen für ein unveränderliches Zeichen ist dasselbe wie das gemeldete Zeichen für das End-of-Transmission-Zeichen.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Das Datensatz-Trennzeichen kann nicht gelesen werden.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Der Barcode-Scanner und die Computertastaturlayouts entsprechen sich nicht bei der Darstellung von Übertragungsendzeichen.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Unerwarteter Wert für den Schlüssel „existing map“</value>
   </data>
 </root>

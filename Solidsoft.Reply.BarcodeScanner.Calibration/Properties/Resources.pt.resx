@@ -214,7 +214,7 @@
     <value>O scanner de código de barras está transmitindo um sufixo: {0}</value>
   </data>
   <data name="CalibrationInformation_270" xml:space="preserve">
-    <value>Os layouts do teclado do scanner de código de barras e do computador não correspondem</value>
+    <value>Os layouts do teclado do scanner de código de barras e do computador não correspondem.</value>
   </data>
   <data name="CalibrationInformation_271" xml:space="preserve">
     <value>Os layouts do teclado do scanner de código de barras e do computador não correspondem para caracteres invariantes.</value>
@@ -319,7 +319,7 @@
     <value>A correspondência dos layouts do teclado do scanner de código de barras e do computador não pode ser determinada.</value>
   </data>
   <data name="Unspecified" xml:space="preserve">
-    <value>Não especificado.</value>
+    <value>Não especificado</value>
   </data>
   <data name="CalibrationInformation_391" xml:space="preserve">
     <value>Falha na calibração. {0}</value>
@@ -385,8 +385,7 @@
     <value>A sequência de caracteres reportada {0} é ambígua. Isso representa o caractere separador de registros.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>O carácter reportado para um carácter invariante é o mesmo que o carácter reportado para o carácter de fim de transmissão.
-</value>
+    <value>O carácter reportado para um carácter invariante é o mesmo que o carácter reportado para o carácter de fim de transmissão.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>O caractere separador de registros não pode ser lido.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>O scanner de código de barras e os layouts do teclado do computador não correspondem na representação de caracteres de fim de transmissão.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valor inesperado para a chave "mapa existente"</value>
   </data>
 </root>

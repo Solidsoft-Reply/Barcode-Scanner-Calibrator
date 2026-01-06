@@ -363,10 +363,7 @@ internal static class UnicodeBlocks {
 
         // Flatten the Unicode block name.
         static string Flatten(string scriptName) {
-#pragma warning disable S3220 // Method calls should not resolve ambiguously to overloads with "params"
             var firstWord = scriptName.Split(' ', '-')[0];
-#pragma warning restore S3220 // Method calls should not resolve ambiguously to overloads with "params"
-
             return firstWord switch {
                 "Latin" => "Latin",
                 "IPA" => "Latin",

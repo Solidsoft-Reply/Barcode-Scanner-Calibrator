@@ -19,7 +19,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Advice {
@@ -511,7 +511,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check your scanner, keyboard and computer configuration and reconfigure them if necessary. .
+        ///   Looks up a localized string similar to Check your scanner, keyboard and computer configuration and reconfigure them if necessary..
         /// </summary>
         internal static string Advice_330 {
             get {
@@ -781,7 +781,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         internal static string Condition_270 {
             get {
@@ -790,7 +790,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         internal static string Condition_271 {
             get {
@@ -799,7 +799,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI).
+        ///   Looks up a localized string similar to Your system cannot read barcodes reliably if they contain data for Electronic Data Interchange (EDI)..
         /// </summary>
         internal static string Condition_275 {
             get {
@@ -1105,7 +1105,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your Caps Lock key may be disabled or remapped. .
+        ///   Looks up a localized string similar to Your Caps Lock key may be disabled or remapped..
         /// </summary>
         internal static string Description_206 {
             get {
@@ -1132,7 +1132,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your software may not recognise the prefix. .
+        ///   Looks up a localized string similar to Your software may not recognise the prefix..
         /// </summary>
         internal static string Description_220 {
             get {
@@ -1141,7 +1141,7 @@ namespace Solidsoft.Reply.BarcodeScanner.Calibration.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your software may not recognise the suffix. .
+        ///   Looks up a localized string similar to Your software may not recognise the suffix..
         /// </summary>
         internal static string Description_225 {
             get {

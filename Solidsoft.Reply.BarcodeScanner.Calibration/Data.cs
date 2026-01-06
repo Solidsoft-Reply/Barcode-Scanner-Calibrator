@@ -80,7 +80,7 @@ using Newtonsoft.Json;
 /// <param name="LineFeedCharacter">
 ///   The control character that naps to the line feed character.
 /// </param>
-[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Pending>")]
+[SuppressMessage("StyleCop.CSharp.NamingRules", "SA1313:Parameter names should begin with lower-case letter", Justification = "<Approved>")]
 [method: JsonConstructor]
 public sealed record Data(
     [property: JsonProperty("characterMap", Order = 0)] IDictionary<char, char>? CharacterMap,
@@ -114,13 +114,9 @@ public sealed record Data(
 #pragma warning disable IDE0028 // Simplify collection initialization
             new List<string>()) {
         if (string.IsNullOrWhiteSpace(json) || json.Length <= 1) return;
-
-#pragma warning disable SA1010 // Opening square brackets should be spaced correctly
         var calibration = JsonConvert.DeserializeObject<Data>(json, new JsonSerializerSettings {
             Converters = [new DataConverter()],
         });
-#pragma warning restore SA1010 // Opening square brackets should be spaced correctly
-
         if (calibration is null) {
             return;
         }
@@ -150,13 +146,9 @@ public sealed record Data(
     // ReSharper disable once UnusedMember.Global
     public static Data FromJson(string json) {
         if (string.IsNullOrWhiteSpace(json)) return new Data(string.Empty);
-
-#pragma warning disable SA1010 // Opening square brackets should be spaced correctly
         var calibrationData = JsonConvert.DeserializeObject<Data>(json, new JsonSerializerSettings {
             Converters = [new DataConverter()],
         });
-#pragma warning restore SA1010 // Opening square brackets should be spaced correctly
-
         return calibrationData ?? new Data(string.Empty);
     }
 
@@ -172,7 +164,6 @@ public sealed record Data(
     /// </summary>
     /// <param name="formatting">Specifies the formatting to be applied to the JSON.</param>
     /// <returns>A JSON representation of the calibration data.</returns>
-#pragma warning disable SA1010 // Opening square brackets should be spaced correctly
     public string ToJson(Formatting formatting = Formatting.None) =>
         JsonConvert.SerializeObject(
             this,
@@ -184,5 +175,4 @@ public sealed record Data(
                 ConstructorHandling = ConstructorHandling.Default,
                 ContractResolver = new DataIgnoreEmptyEnumerableResolver { NamingStrategy = null },
             });
-#pragma warning restore SA1010 // Opening square brackets should be spaced correctly
 }

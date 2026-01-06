@@ -385,8 +385,7 @@
     <value>La sequenza di caratteri riportata {0} è ambigua. Questo rappresenta il carattere separatore di record.</value>
   </data>
   <data name="CalibrationInformation_165" xml:space="preserve">
-    <value>Il carattere segnalato per un carattere invariante è lo stesso del carattere segnalato per il carattere di fine trasmissione.
-</value>
+    <value>Il carattere segnalato per un carattere invariante è lo stesso del carattere segnalato per il carattere di fine trasmissione.</value>
   </data>
   <data name="CalibrationInformation_213" xml:space="preserve">
     <value>Il carattere separatore di record non può essere letto.</value>
@@ -435,5 +434,8 @@
   </data>
   <data name="CalibrationInformation_277" xml:space="preserve">
     <value>Lo scanner di codici a barre e le disposizioni della tastiera del computer non corrispondono nella rappresentazione dei caratteri di fine trasmissione.</value>
+  </data>
+  <data name="Calibration_Error_004" xml:space="preserve">
+    <value>Valore imprevisto per la chiave 'mappa esistente'</value>
   </data>
 </root>
